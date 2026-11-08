@@ -1,9 +1,10 @@
 import Link from 'next/link';
-import { Building2, MapPin, Phone, ShieldCheck, Users } from 'lucide-react';
+import { Building2, Map as MapIcon, MapPin, Phone, ShieldCheck, Users } from 'lucide-react';
 import { formatNumber } from '@elaka360/shared';
 import { api } from '@/lib/api';
 import { AreaCard, CategoryTile } from '@/components/cards';
 import { SearchBox } from '@/components/SearchBox';
+import { MapView } from '@/components/map/MapView';
 import { Section, StatTile } from '@/components/ui';
 
 export const dynamic = 'force-dynamic';
@@ -30,6 +31,7 @@ export default async function HomePage() {
             { href: '/explore?level=upazila', label: 'উপজেলা', Icon: Building2 },
             { href: '/explore?level=city_corporation', label: 'সিটি কর্পোরেশন', Icon: Users },
             { href: '/near-me', label: 'আমার কাছে', Icon: MapPin },
+            { href: '/map', label: 'মানচিত্র', Icon: MapIcon },
           ].map(({ href, label, Icon }) => (
             <Link key={href} href={href} className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 font-medium text-ink">
               <Icon className="h-4 w-4 text-primary" /> {label}
@@ -51,6 +53,10 @@ export default async function HomePage() {
             <AreaCard key={d.id} area={d} sub={`${formatNumber(districtCounts[i] ?? 0)} জেলা`} />
           ))}
         </div>
+      </Section>
+
+      <Section title="মানচিত্রে বাংলাদেশ" action={{ href: '/map', label: 'পূর্ণ মানচিত্র' }}>
+        <MapView className="h-80 md:h-[28rem]" />
       </Section>
 
       <Section title="কী খুঁজছেন?">

@@ -24,6 +24,18 @@ export class PlacesService {
     return this.db.many<PlaceSummary>(Q.PLACE_NEARBY_SQL, [lat, lon, radiusM, category ?? null, limit]);
   }
 
+  async geojson(areaId: number | undefined, category: string | undefined) {
+    const rows = await this.db.many<PlaceSummary>(Q.PLACE_GEO_SQL, [areaId ?? null, category ?? null]);
+    return {
+      type: 'FeatureCollection' as const,
+      features: rows.map(({ lat, lon, ...props }) => ({
+        type: 'Feature' as const,
+        geometry: { type: 'Point' as const, coordinates: [lon, lat] },
+        properties: props,
+      })),
+    };
+  }
+
   async bySlug(slug: string): Promise<Place> {
     const row = await this.db.one<Place & { area_id: number | null }>(Q.PLACE_DETAIL_SQL, [slug]);
     if (!row) throw new NotFoundException(`place not found: ${slug}`);

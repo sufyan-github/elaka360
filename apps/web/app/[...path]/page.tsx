@@ -6,6 +6,7 @@ import {
 } from '@elaka360/shared';
 import { ApiError, api } from '@/lib/api';
 import { AreaCard, CategoryTile, PlaceCard } from '@/components/cards';
+import { MapView } from '@/components/map/MapView';
 import { Breadcrumb, EmptyState, Section, SourceFooter, StatTile, VerifiedBadge } from '@/components/ui';
 
 export const dynamic = 'force-dynamic';
@@ -39,6 +40,8 @@ export default async function AreaPage({ params }: Props) {
   const { area, breadcrumb, children, descendant_counts, place_counts } = d;
   const [categories, places] = await Promise.all([api.categories(), api.places({ areaId: area.id, limit: 12 })]);
   const parent = breadcrumb.at(-2);
+  const district = area.level === 'district' ? area : breadcrumb.find((b) => b.level === 'district');
+  const mapFocus = area.level === 'division' ? { divisionId: area.id } : district ? { districtIds: [district.id] } : {};
   const childLevels = (CHILD_LEVELS[area.level] ?? []).filter((l) => children.some((c) => c.level === l));
 
   const stats: { label: string; value: string; sub?: string }[] = [];
@@ -92,6 +95,10 @@ export default async function AreaPage({ params }: Props) {
           </Section>
         );
       })}
+
+      <Section title="মানচিত্র" id="map" action={{ href: '/map', label: 'পূর্ণ মানচিত্র' }}>
+        <MapView {...mapFocus} areaId={area.id} className="h-72 md:h-96" />
+      </Section>
 
       <Section title="দ্রুত অনুসন্ধান" id="categories">
         <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-6">

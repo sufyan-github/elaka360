@@ -28,12 +28,13 @@ PARAMS = {
     "EMERGENCY_SQL": [],
     "AREA_SEARCH_SQL": ["'রাজশা'", "''"],
     "AREA_DOCS_SQL": [],
+    "PLACE_GEO_SQL": ["20015", "NULL"],
     "PLACE_DOCS_SQL": [],
 }
 EXPECT_ROWS = {  # minimum rows each statement must return on the v0.1 seed
     "AREA_DETAIL_SQL": 1, "CHILDREN_SQL": 9, "LIST_SQL": 8, "PLACE_NEARBY_SQL": 4,
     "PLACE_DETAIL_SQL": 1, "EMERGENCY_SQL": 10, "AREA_SEARCH_SQL": 1, "CATEGORIES_SQL": 95,
-    "BREADCRUMB_SQL": 5, "PLACE_LIST_SQL": 3, "AREA_DOCS_SQL": 5135, "PLACE_DOCS_SQL": 8,
+    "BREADCRUMB_SQL": 5, "PLACE_LIST_SQL": 3, "AREA_DOCS_SQL": 5135, "PLACE_GEO_SQL": 5, "PLACE_DOCS_SQL": 8,
 }
 
 consts = {}

@@ -51,3 +51,11 @@ SELECT ${PLACE_SUMMARY_COLS},
 ${PLACE_JOINS}
 LEFT JOIN data_sources s ON s.id = p.data_source_id
 WHERE p.slug = $1 AND p.status = 'active'`;
+
+/** Map pins. $1 area id | null, $2 category key | null */
+export const PLACE_GEO_SQL = `
+SELECT ${PLACE_SUMMARY_COLS} ${PLACE_JOINS}
+WHERE p.status = 'active' AND p.lat IS NOT NULL AND p.lon IS NOT NULL
+  AND ($1::bigint IS NULL OR $1 IN (p.division_id, p.district_id, p.upazila_id, p.union_id, p.city_corporation_id))
+  AND ($2::text IS NULL OR c.key = $2 OR sc.key = $2)
+LIMIT 5000`;

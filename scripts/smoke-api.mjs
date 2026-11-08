@@ -55,6 +55,12 @@ await check('nearby', '/v1/places/nearby?lat=24.37&lon=88.60&radius_m=5000', (b)
   assert.ok(b.items.length >= 4);
   assert.ok(b.items[0].distance_m <= b.items.at(-1).distance_m);
 });
+await check('places geojson', '/v1/places/geojson?area_id=20015', (b) => {
+  assert.equal(b.type, 'FeatureCollection');
+  assert.ok(b.features.length >= 5);
+  assert.equal(b.features[0].geometry.type, 'Point');
+  assert.ok(b.features[0].properties.slug);
+});
 await check('search bn', '/v1/search?q=' + encodeURIComponent('পবা'), (b) => assert.ok(b.areas.some((a) => a.name_en === 'Paba')));
 await check('search en', '/v1/search?q=puthia', (b) => {
   assert.ok(b.areas.some((a) => a.level === 'upazila'));

@@ -52,7 +52,7 @@ jobs:
       - name: Seed is reproducible from sources
         run: |
           python3 pipelines/build_seed.py > /dev/null
-          git diff --stat --exit-code -- data/seed db/seed
+          git diff --stat --exit-code -- data/seed db/seed apps/web/public/geo
 
       - name: Install
         run: pnpm install --no-frozen-lockfile

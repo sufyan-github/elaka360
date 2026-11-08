@@ -15,6 +15,7 @@ const pages = [
   ['/emergency', '999'],
   ['/near-me', 'আমার আশেপাশের সেবা'],
   ['/saved', 'শীঘ্রই আসছে'],
+  ['/map', 'মানচিত্রে বাংলাদেশ'],
 ];
 let failed = 0;
 for (const [path, text] of pages) {
@@ -32,5 +33,13 @@ const body = await api.json().catch(() => ({}));
 const apiOk = api.status === 200 && Array.isArray(body.items) && body.items.length > 0;
 console.log(`${apiOk ? 'ok  ' : 'FAIL'} /api/nearby proxy → ${api.status}`);
 if (!apiOk) failed++;
+const geo = await fetch(WEB + '/geo/districts.json').then((r) => r.json()).catch(() => null);
+const geoOk = geo?.features?.length === 64;
+console.log(`${geoOk ? 'ok  ' : 'FAIL'} /geo/districts.json (64 districts)`);
+if (!geoOk) failed++;
+const pins = await fetch(WEB + '/api/places-geo?area_id=20015').then((r) => r.json()).catch(() => null);
+const pinsOk = pins?.type === 'FeatureCollection' && pins.features.length >= 5;
+console.log(`${pinsOk ? 'ok  ' : 'FAIL'} /api/places-geo proxy`);
+if (!pinsOk) failed++;
 if (failed) { console.error(`\n${failed} web check(s) failed`); process.exit(1); }
 console.log('\nWeb smoke: all checks passed');

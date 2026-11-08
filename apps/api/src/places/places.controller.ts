@@ -40,6 +40,12 @@ export class PlacesController {
     return { items, next_cursor: null };
   }
 
+  /** GET /v1/places/geojson?area_id=20015&category=health — map pins as a GeoJSON FeatureCollection */
+  @Get('geojson')
+  geojson(@Query('area_id') areaId?: string, @Query('category') category?: string) {
+    return this.places.geojson(intParam(areaId, 'area_id'), category || undefined);
+  }
+
   @Get(':slug')
   bySlug(@Param('slug') slug: string) {
     return this.places.bySlug(slug);

@@ -87,7 +87,8 @@ for r in ds:
                      population_2022=DISTRICT_POP[en], population_basis="adjusted", population_source="CITYPOP_ADJ", verified=True)
     dis_map[i]["_src_en"] = en
     if feat:
-        feat["properties"].update(district_id=20000 + int(i), name_en=name, name_bn=bn, division_id=div_map[did]["id"])
+        feat["properties"].update(district_id=20000 + int(i), name_en=name, name_bn=bn, division_id=div_map[did]["id"],
+                                  path=dis_map[i]["path"])
 
 # Rajshahi district: prefer Wikipedia official area
 raj = next(d for d in dis_map.values() if d["_src_en"] == "Rajshahi")
@@ -181,6 +182,51 @@ def tree(node):
     return out
 write_json(f"{OUT}/geo/hierarchy_tree.json", tree(rows[0]))
 json.dump(gj, open(f"{OUT}/geo/districts.geojson", "w", encoding="utf-8"), ensure_ascii=False)
+
+# ---------- simplified boundaries for the web map ----------
+def _dp(pts, tol):
+    """Douglas–Peucker on a list of [x, y]."""
+    if len(pts) < 3:
+        return pts
+    (x1, y1), (x2, y2) = pts[0], pts[-1]
+    dx, dy = x2 - x1, y2 - y1
+    norm = math.hypot(dx, dy)
+    best, idx = -1.0, 0
+    for k in range(1, len(pts) - 1):
+        px, py = pts[k]
+        d = abs(dy * px - dx * py + x2 * y1 - y2 * x1) / norm if norm else math.hypot(px - x1, py - y1)
+        if d > best:
+            best, idx = d, k
+    if best <= tol:
+        return [pts[0], pts[-1]]
+    return _dp(pts[: idx + 1], tol)[:-1] + _dp(pts[idx:], tol)
+
+def _simplify_ring(ring, tol):
+    out = _dp(ring, tol)
+    out = [[round(x, 4), round(y, 4)] for x, y in out]
+    if out[0] != out[-1]:
+        out.append(out[0])
+    return out if len(out) >= 4 else None
+
+WEB_GEO = os.path.join(ROOT, "apps", "web", "public", "geo")
+os.makedirs(WEB_GEO, exist_ok=True)
+web_features = []
+for f in gj["features"]:
+    g = f["geometry"]
+    polys = g["coordinates"] if g["type"] == "MultiPolygon" else [g["coordinates"]]
+    kept = []
+    for poly in polys:
+        outer = _simplify_ring(poly[0], 0.004)
+        if outer and ring_area(outer) > 2.0:   # drop specks under ~2 km² (tiny char islands)
+            kept.append([outer] + [h for h in (_simplify_ring(r, 0.004) for r in poly[1:]) if h])
+    if not kept:   # never drop a whole district
+        kept = [[_simplify_ring(max((p[0] for p in polys), key=len), 0.001)]]
+    pr = f["properties"]
+    web_features.append({"type": "Feature", "id": pr["district_id"],
+                         "properties": {k: pr[k] for k in ("district_id", "division_id", "name_bn", "name_en", "path")},
+                         "geometry": {"type": "MultiPolygon", "coordinates": kept}})
+with open(os.path.join(WEB_GEO, "districts.json"), "w", encoding="utf-8") as fh:
+    json.dump({"type": "FeatureCollection", "features": web_features}, fh, ensure_ascii=False, separators=(",", ":"))
 
 # ---------- taxonomy ----------
 cats = []
