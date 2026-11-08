@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { ChevronRight, MapPin } from 'lucide-react';
 import type { AdminAreaSummary, Category, PlaceSummary } from '@elaka360/shared';
 import { formatDistance, formatNumber, nameOf } from '@elaka360/shared';
-import { areaHref } from '@/lib/api';
+import { areaHref } from '@/lib/links';
 import { categoryColor, categoryIcon } from '@/lib/icons';
 import { VerifiedBadge } from './ui';
 

@@ -36,8 +36,3 @@ export const api = {
   emergency: () => get<EmergencyNumber[]>('/v1/emergency-numbers', 3600),
   search: (q: string) => get<{ areas: AdminAreaSummary[]; places: PlaceSummary[] }>(`/v1/search${qs({ q })}`, 60),
 };
-
-/** URL of an area page in the web app. The country lives at /explore. */
-export function areaHref(a: { path: string; level: string }): string {
-  return a.level === 'country' ? '/explore' : `/${a.path}`;
-}

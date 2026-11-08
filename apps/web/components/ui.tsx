@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import { BadgeCheck, ChevronRight, Info } from 'lucide-react';
 import type { AdminAreaSummary, DataSourceRef } from '@elaka360/shared';
 import { formatDate, nameOf } from '@elaka360/shared';
-import { areaHref } from '@/lib/api';
+import { areaHref } from '@/lib/links';
 
 export function Section({ title, action, children, id }: { title: string; action?: { href: string; label: string }; children: ReactNode; id?: string }) {
   return (
