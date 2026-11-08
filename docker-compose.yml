@@ -12,13 +12,14 @@ services:
       interval: 5s
       retries: 10
 
-  # Used from Phase 1 (search) and Phase 2 (jobs). Not required to run the app yet.
+  # Search. Optional: without TYPESENSE_URL the API falls back to Postgres search.
   typesense:
     image: typesense/typesense:27.1
     command: --data-dir /data --api-key=dev-key --enable-cors
     ports: ["8108:8108"]
     volumes: [tsdata:/data]
-    profiles: ["full"]
+
+  # Jobs/cache (Phase 2).
 
   redis:
     image: redis:7-alpine

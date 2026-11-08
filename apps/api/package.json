@@ -8,7 +8,8 @@
     "start": "node dist/main.js",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "tsc -p tsconfig.build.json && node --test \"dist/**/*.test.js\"",
-    "smoke": "node ../../scripts/smoke-api.mjs"
+    "smoke": "node ../../scripts/smoke-api.mjs",
+    "search:reindex": "node dist/search/reindex.js"
   },
   "dependencies": {
     "@elaka360/shared": "workspace:*",

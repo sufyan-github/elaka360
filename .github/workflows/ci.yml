@@ -23,10 +23,20 @@ jobs:
         ports: ["5432:5432"]
         options: >-
           --health-cmd "pg_isready -U elaka360" --health-interval 5s --health-timeout 5s --health-retries 20
+      typesense:
+        image: typesense/typesense:27.1
+        env:
+          TYPESENSE_API_KEY: ci-key
+          TYPESENSE_DATA_DIR: /tmp
+          TYPESENSE_ENABLE_CORS: "true"
+        ports: ["8108:8108"]
     env:
       DATABASE_URL: postgres://elaka360:elaka360@localhost:5432/elaka360
       API_URL: http://localhost:4000
       WEB_URL: http://localhost:3000
+      TYPESENSE_URL: http://localhost:8108
+      TYPESENSE_API_KEY: ci-key
+      SEARCH_ENGINE_EXPECT: typesense
       TURBO_TELEMETRY_DISABLED: 1
       NEXT_TELEMETRY_DISABLED: 1
     steps:
@@ -67,6 +77,11 @@ jobs:
 
       - name: Database — check every API query
         run: python3 scripts/check_sql.py
+
+      - name: Search — build Typesense index
+        run: |
+          for i in $(seq 1 30); do curl -sf http://localhost:8108/health && break; sleep 1; done
+          pnpm --filter @elaka360/api search:reindex
 
       - name: API smoke test
         run: |

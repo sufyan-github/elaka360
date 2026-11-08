@@ -17,7 +17,11 @@ async function check(name, path, fn, expectStatus = 200) {
   }
 }
 
-await check('health', '/health', (b) => assert.equal(b.status, 'ok'));
+const EXPECT_ENGINE = process.env.SEARCH_ENGINE_EXPECT; // 'typesense' in CI
+await check('health', '/health', (b) => {
+  assert.equal(b.status, 'ok');
+  if (EXPECT_ENGINE) assert.equal(b.search, EXPECT_ENGINE);
+});
 await check('national stats', '/v1/stats/national', (b) => {
   assert.equal(b.division, 8);
   assert.equal(b.district, 64);
@@ -56,6 +60,15 @@ await check('search en', '/v1/search?q=puthia', (b) => {
   assert.ok(b.areas.some((a) => a.level === 'upazila'));
   assert.ok(b.places.some((p) => p.slug === 'puthia-rajbari'));
 });
+if (EXPECT_ENGINE === 'typesense') {
+  await check('search typo-tolerant', '/v1/search?q=rajshai', (b) => {
+    assert.equal(b.engine, 'typesense');
+    assert.equal(b.areas[0].name_en, 'Rajshahi');
+    assert.equal(b.areas[0].level, 'division');
+  });
+  await check('search banglish', '/v1/search?q=rajsahi+university', (b) => assert.ok(b.places.some((p) => p.slug === 'university-of-rajshahi')));
+  await check('search bn prefix', '/v1/search?q=' + encodeURIComponent('পুঠি'), (b) => assert.ok(b.places.some((p) => p.slug === 'puthia-rajbari')));
+}
 await check('emergency numbers', '/v1/emergency-numbers', (b) => {
   assert.equal(b[0].number, '999');
   assert.ok(b.some((n) => n.number === '102'));
