@@ -1,0 +1,75 @@
+{
+ "warning": "Names taken from the UI mockups. Not verified — use only as UI/dev fixtures, never import to production.",
+ "items": [
+  {
+   "name_en": "Durbin Cafe & Restaurant",
+   "name_bn": "ডারবিন ক্যাফে অ্যান্ড রেস্টুরেন্ট",
+   "category": "business",
+   "subcategory": "restaurant",
+   "area": "Motihar, Rajshahi"
+  },
+  {
+   "name_en": "Motihar Government High School",
+   "name_bn": "মতিহার সরকারি উচ্চ বিদ্যালয়",
+   "category": "education",
+   "subcategory": "secondary_school",
+   "area": "Motihar, Rajshahi"
+  },
+  {
+   "name_en": "Motihar Pharmacy",
+   "name_bn": "মতিহার ফার্মেসি",
+   "category": "health",
+   "subcategory": "pharmacy",
+   "area": "Motihar, Rajshahi"
+  },
+  {
+   "name_en": "City Super Shop",
+   "name_bn": "সিটি সুপার শপ",
+   "category": "business",
+   "subcategory": "supermarket",
+   "area": "Laxmipur, Rajshahi"
+  },
+  {
+   "name_en": "TechPoint IT Solution",
+   "name_bn": "টেকপয়েন্ট আইটি সলিউশন",
+   "category": "business",
+   "subcategory": "it_service",
+   "area": "Boalia, Rajshahi"
+  },
+  {
+   "name_en": "Rajshahi Auto Service",
+   "name_bn": "রাজশাহী অটো সার্ভিস",
+   "category": "business",
+   "subcategory": "vehicle_service",
+   "area": "Supura, Rajshahi"
+  },
+  {
+   "name_en": "Padma Restaurant",
+   "name_bn": "পদ্মা রেস্টুরেন্ট",
+   "category": "business",
+   "subcategory": "restaurant",
+   "area": "Motihar, Rajshahi"
+  },
+  {
+   "name_en": "Kazi Bazar",
+   "name_bn": "কাজী বাজার",
+   "category": "business",
+   "subcategory": "market",
+   "area": "Charghat, Rajshahi"
+  },
+  {
+   "name_en": "Balapara High School",
+   "name_bn": "বালাপাড়া উচ্চ বিদ্যালয়",
+   "category": "education",
+   "subcategory": "secondary_school",
+   "area": "Bagha, Rajshahi"
+  },
+  {
+   "name_en": "Darul Ulum Madrasa",
+   "name_bn": "দারুল উলুম মাদ্রাসা",
+   "category": "education",
+   "subcategory": "madrasa",
+   "area": "Paba, Rajshahi"
+  }
+ ]
+}

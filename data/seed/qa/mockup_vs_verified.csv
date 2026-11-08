@@ -1,0 +1,27 @@
+﻿topic,mockup_values,verified_value,source,source_url,action
+Total upazilas,"492+, 495, 495+, 496+, 500+",495,Wikipedia: Administrative geography of Bangladesh (Mar 2026 snapshot),https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/Subdivisions_of_Bangladesh,Use 495 everywhere (dataset has 495).
+Total unions,"4,500+, 4,550+, 4,554, 4,562, 4,571+, 4,600+, 8,554, 8,600+","4,571–4,578 official; 4,541 in this dataset",Wikipedia: Administrative geography of Bangladesh (Mar 2026 snapshot),https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/Subdivisions_of_Bangladesh,"8,554/8,600+ are wrong. Read the live count from the DB, don't hard-code it."
+City corporations,12,13 (Bogura added May 2026),"The Financial Express, 15 May 2026: Bogura becomes city corporation",https://today.thefinancialexpress.com.bd/last-page/bogura-becomes-city-corporation-1778866247,Update to 13.
+Pourashavas,"326, 329",330 (Wikipedia; may be 329 after Bogura's upgrade),Wikipedia: Administrative geography of Bangladesh (Mar 2026 snapshot),https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/Subdivisions_of_Bangladesh,Confirm with LGD before publishing.
+Fire service hotline,16163,102,"The Financial Express, 6 Jun 2024: Fire service launches new hotline 102",https://thefinancialexpress.com.bd/national/fire-service-launches-new-hotline-number-102,Replace 16163 with 102.
+Police helpline,100,999 (100 is not a Bangladesh police number),Wikipedia: Telephone numbers in Bangladesh,https://en.wikipedia.org/wiki/Telephone_numbers_in_Bangladesh,Remove 100.
+Rajshahi District — upazilas,"8, 9, 12",9,Wikipedia: Rajshahi District,https://en.wikipedia.org/wiki/Rajshahi_District,Use 9.
+Rajshahi District — unions,"68, 70, 86, 106",71,"nuhil/bangladesh-geocode (GitHub, MIT)",https://github.com/nuhil/bangladesh-geocode,Matches the v2.8 release table.
+Rajshahi District — area,"2,407 / 2,407.01 / 2,679 km²","2,425.37 km²",Wikipedia: Rajshahi District,https://en.wikipedia.org/wiki/Rajshahi_District,
+Rajshahi District — population,"25.7 lakh, 27.40 lakh, 27,66,363","29,15,009 enumerated / 29,78,156 adjusted (2022)","BBS Census 2022 (enumerated) via citypopulation.de, Rajshahi district page",https://citypopulation.de/en/bangladesh/admin/81__rajshahi/,Pick one basis (enumerated or adjusted) for the whole app.
+Rajshahi District — pourashavas,"2, 4, 7",14 (list unverified),General knowledge — not checked against a primary source in this build,,Confirm with LGD.
+Rajshahi District — BBS code,51 (admin panel),81,"BBS Census 2022 (enumerated) via citypopulation.de, Rajshahi district page",https://citypopulation.de/en/bangladesh/admin/81__rajshahi/,Use BBS geocode 81.
+'Rajshahi Sadar Upazila',Detail page with 12 unions,Does not exist — the city is Rajshahi City Corporation + metropolitan thanas,Wikipedia: Rajshahi District,https://en.wikipedia.org/wiki/Rajshahi_District,Drop the screen or replace it with the RCC page.
+Rajshahi Division — upazilas,"67, 70",67,"nuhil/bangladesh-geocode (GitHub, MIT)",https://github.com/nuhil/bangladesh-geocode,
+Rajshahi Division — population,"1,86,52,402 / ~2.0 crore","2,07,94,019 (2022 adjusted)",BBS Census 2022 (adjusted) via citypopulation.de,https://citypopulation.de/en/bangladesh/,
+Dhaka Division — upazilas,"101, 103",89,"nuhil/bangladesh-geocode (GitHub, MIT)",https://github.com/nuhil/bangladesh-geocode,
+Dhaka District — upazilas,20,"5 (Savar, Dhamrai, Keraniganj, Nawabganj, Dohar)","nuhil/bangladesh-geocode (GitHub, MIT)",https://github.com/nuhil/bangladesh-geocode,20 counts metropolitan thanas — keep thanas separate.
+Dhaka Division — population,~4.5 / 4.6 crore,"4,56,44,586 (2022 adjusted)",BBS Census 2022 (adjusted) via citypopulation.de,https://citypopulation.de/en/bangladesh/,
+Rajshahi City Corporation — established,2014,Municipal corporation 1987; city corporation later (confirm year),Wikipedia: Rajshahi District,https://en.wikipedia.org/wiki/Rajshahi_District,Fix 2014.
+RU — departments / students,"56–58 depts; ~34,000–38,000 students","59 depts; 25,000+ students",Wikipedia: University of Rajshahi,https://en.wikipedia.org/wiki/University_of_Rajshahi,
+RU — vice-chancellor,Prof. Saleh Hasan Naqib,Faridul Islam (since 16 Mar 2026),Wikipedia: University of Rajshahi,https://en.wikipedia.org/wiki/University_of_Rajshahi,
+RMCH — beds,"1,200+",530 (1965) → 862 (Wikipedia); current figure unconfirmed,Wikipedia: Rajshahi Medical College,https://en.wikipedia.org/wiki/Rajshahi_Medical_College,Get from hospital.
+Puthia Rajbari — distance,22 km,~30 km east of Rajshahi town,Wikipedia: Puthia Rajbari,https://en.wikipedia.org/wiki/Puthia_Rajbari,
+District grid — Sylhet,Listed under Rajshahi Division,Sylhet Division,"nuhil/bangladesh-geocode (GitHub, MIT)",https://github.com/nuhil/bangladesh-geocode,Mockup bug.
+Kantajew Temple,Popular place in Rajshahi District,Dinajpur District (Rangpur Division),General knowledge — not checked against a primary source in this build,,Mockup bug.
+Paba unions,"5 (Damkura, Hariyan, Parila, Naohata, Baya)",8 in dataset; Naohata is a pourashava,"nuhil/bangladesh-geocode (GitHub, MIT)",https://github.com/nuhil/bangladesh-geocode,

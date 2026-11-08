@@ -1,0 +1,33 @@
+{
+ "division": 8,
+ "district": 64,
+ "upazila": 495,
+ "union": 4541,
+ "city_corporation": 13,
+ "pourashava": 14,
+ "upazilas_without_unions": [
+  "Guimara",
+  "Naldanga",
+  "Eidgaon",
+  "Madhyanagar",
+  "Dasar"
+ ],
+ "rajshahi_district_unions_by_upazila": {
+  "Paba": 8,
+  "Durgapur": 7,
+  "Mohonpur": 6,
+  "Charghat": 6,
+  "Puthia": 6,
+  "Bagha": 6,
+  "Godagari": 9,
+  "Tanore": 7,
+  "Bagmara": 16
+ },
+ "rajshahi_district_unions_total": 71,
+ "district_area_check_rajshahi_computed_km2": 2443.3,
+ "sum_district_area_km2": 140166.0,
+ "categories": {
+  "top_level": 11,
+  "sub": 84
+ }
+}

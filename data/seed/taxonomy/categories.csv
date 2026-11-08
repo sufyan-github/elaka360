@@ -1,0 +1,96 @@
+﻿id,key,parent_id,name_bn,name_en,icon,color,sort_order
+1,education,,শিক্ষা প্রতিষ্ঠান,Education,graduation-cap,#16865B,1
+2,education.primary_school,1,প্রাথমিক বিদ্যালয়,Primary school,,#16865B,1
+3,education.secondary_school,1,মাধ্যমিক বিদ্যালয়,Secondary school,,#16865B,2
+4,education.college,1,কলেজ,College,,#16865B,3
+5,education.university,1,বিশ্ববিদ্যালয়,University,,#16865B,4
+6,education.medical_college,1,মেডিকেল কলেজ,Medical college,,#16865B,5
+7,education.madrasa,1,মাদ্রাসা,Madrasa,,#16865B,6
+8,education.technical,1,কারিগরি প্রতিষ্ঠান,Technical institute,,#16865B,7
+9,education.polytechnic,1,পলিটেকনিক,Polytechnic,,#16865B,8
+10,education.training_center,1,ট্রেনিং সেন্টার,Training center,,#16865B,9
+11,health,,স্বাস্থ্য সেবা,Health,hospital,#E5383B,2
+12,health.hospital,11,হাসপাতাল,Hospital,,#E5383B,1
+13,health.medical_college_hospital,11,মেডিকেল কলেজ হাসপাতাল,Medical college hospital,,#E5383B,2
+14,health.upazila_health_complex,11,উপজেলা স্বাস্থ্য কমপ্লেক্স,Upazila health complex,,#E5383B,3
+15,health.community_clinic,11,কমিউনিটি ক্লিনিক,Community clinic,,#E5383B,4
+16,health.clinic,11,ক্লিনিক,Clinic,,#E5383B,5
+17,health.diagnostic_center,11,ডায়াগনস্টিক সেন্টার,Diagnostic center,,#E5383B,6
+18,health.pharmacy,11,ফার্মেসি,Pharmacy,,#E5383B,7
+19,health.city_health_center,11,সিটি স্বাস্থ্য কেন্দ্র,City health center,,#E5383B,8
+20,government,,সরকারি অফিস,Government office,landmark,#1E5BD8,3
+21,government.divisional_commissioner,20,বিভাগীয় কমিশনারের কার্যালয়,Divisional Commissioner's office,,#1E5BD8,1
+22,government.dc_office,20,জেলা প্রশাসকের কার্যালয়,Deputy Commissioner's office,,#1E5BD8,2
+23,government.uno_office,20,উপজেলা নির্বাহী অফিস,Upazila Nirbahi Office,,#1E5BD8,3
+24,government.sp_office,20,পুলিশ সুপারের কার্যালয়,Superintendent of Police office,,#1E5BD8,4
+25,government.civil_surgeon,20,সিভিল সার্জন অফিস,Civil Surgeon office,,#1E5BD8,5
+26,government.passport_office,20,পাসপোর্ট অফিস,Passport office,,#1E5BD8,6
+27,government.city_corporation_office,20,সিটি কর্পোরেশন কার্যালয়,City corporation office,,#1E5BD8,7
+28,government.pourashava_office,20,পৌরসভা কার্যালয়,Pourashava office,,#1E5BD8,8
+29,government.union_parishad,20,ইউনিয়ন পরিষদ,Union parishad,,#1E5BD8,9
+30,government.land_office,20,ভূমি অফিস,Land office,,#1E5BD8,10
+31,government.post_office,20,ডাকঘর,Post office,,#1E5BD8,11
+32,government.court,20,আদালত,Court,,#1E5BD8,12
+33,religious,,ধর্মীয় প্রতিষ্ঠান,Religious,church,#7B3FC6,4
+34,religious.mosque,33,মসজিদ,Mosque,,#7B3FC6,1
+35,religious.temple,33,মন্দির,Temple,,#7B3FC6,2
+36,religious.church,33,গির্জা,Church,,#7B3FC6,3
+37,religious.buddhist_vihara,33,বৌদ্ধ বিহার / প্যাগোডা,Buddhist vihara / pagoda,,#7B3FC6,4
+38,religious.mazar,33,মাজার,Mazar / shrine,,#7B3FC6,5
+39,religious.eidgah,33,ঈদগাহ,Eidgah,,#7B3FC6,6
+40,emergency,,জরুরি সেবা,Emergency,shield-alert,#F2994A,5
+41,emergency.police_station,40,থানা,Police station,,#F2994A,1
+42,emergency.police_outpost,40,পুলিশ ফাঁড়ি,Police outpost,,#F2994A,2
+43,emergency.fire_station,40,ফায়ার স্টেশন,Fire station,,#F2994A,3
+44,emergency.ambulance,40,অ্যাম্বুলেন্স,Ambulance,,#F2994A,4
+45,emergency.emergency_department,40,জরুরি বিভাগ,Hospital emergency,,#F2994A,5
+46,emergency.disaster_shelter,40,দুর্যোগ আশ্রয়কেন্দ্র,Disaster shelter,,#F2994A,6
+47,emergency.rescue,40,উদ্ধার সেবা,Rescue,,#F2994A,7
+48,emergency.utility_emergency,40,গ্যাস/বিদ্যুৎ জরুরি সহায়তা,Gas/electricity emergency,,#F2994A,8
+49,emergency.water_sanitation,40,পানি ও স্যানিটেশন,Water & sanitation,,#F2994A,9
+50,tourism,,পর্যটন স্থান,Tourism,palmtree,#16865B,6
+51,tourism.hill,50,পাহাড়,Hill,,#16865B,1
+52,tourism.beach,50,সমুদ্রসৈকত,Beach,,#16865B,2
+53,tourism.natural,50,প্রাকৃতিক স্থান,Natural site,,#16865B,3
+54,tourism.historical,50,ঐতিহাসিক স্থান,Historical site,,#16865B,4
+55,tourism.archaeological,50,প্রত্নতাত্ত্বিক স্থান,Archaeological site,,#16865B,5
+56,tourism.waterfall,50,ঝর্ণা,Waterfall,,#16865B,6
+57,tourism.river_haor,50,নদী ও হাওর,River & haor,,#16865B,7
+58,tourism.park,50,পার্ক,Park,,#16865B,8
+59,tourism.religious_site,50,ধর্মীয় স্থান,Religious site,,#16865B,9
+60,tourism.museum,50,জাদুঘর,Museum,,#16865B,10
+61,tourism.tea_garden,50,চা বাগান,Tea garden,,#16865B,11
+62,business,,বাজার ও ব্যবসা,Business & market,store,#F2994A,7
+63,business.shop,62,দোকান,Shop,,#F2994A,1
+64,business.market,62,বাজার,Market,,#F2994A,2
+65,business.restaurant,62,রেস্টুরেন্ট,Restaurant,,#F2994A,3
+66,business.cafe,62,ক্যাফে,Cafe,,#F2994A,4
+67,business.shopping,62,শপিং,Shopping,,#F2994A,5
+68,business.supermarket,62,সুপার শপ,Supermarket,,#F2994A,6
+69,business.service,62,সেবা,Service,,#F2994A,7
+70,business.health_service,62,স্বাস্থ্যসেবা,Health service,,#F2994A,8
+71,business.education_service,62,শিক্ষা সেবা,Education service,,#F2994A,9
+72,business.home_service,62,গৃহসেবা,Home service,,#F2994A,10
+73,business.vehicle_service,62,গাড়ি সেবা,Vehicle service,,#F2994A,11
+74,business.it_service,62,আইটি সেবা,IT service,,#F2994A,12
+75,business.fashion,62,ফ্যাশন,Fashion,,#F2994A,13
+76,transport,,পরিবহন ও রুট,Transport,bus,#5B4FD6,8
+77,transport.bus_terminal,76,বাস টার্মিনাল,Bus terminal,,#5B4FD6,1
+78,transport.bus_stop,76,বাস স্টপ,Bus stop,,#5B4FD6,2
+79,transport.railway_station,76,রেল স্টেশন,Railway station,,#5B4FD6,3
+80,transport.launch_ghat,76,লঞ্চ ঘাট,Launch ghat,,#5B4FD6,4
+81,transport.airport,76,বিমানবন্দর,Airport,,#5B4FD6,5
+82,transport.fuel_station,76,ফিলিং স্টেশন,Fuel station,,#5B4FD6,6
+83,agriculture,,কৃষি ও প্রাকৃতিক সম্পদ,Agriculture & natural resources,leaf,#2F9E44,9
+84,agriculture.agri_office,83,কৃষি অফিস,Agriculture office,,#2F9E44,1
+85,agriculture.farm,83,খামার,Farm,,#2F9E44,2
+86,agriculture.nursery,83,নার্সারি,Nursery,,#2F9E44,3
+87,agriculture.haat,83,হাট,Haat (weekly market),,#2F9E44,4
+88,agriculture.cold_storage,83,হিমাগার,Cold storage,,#2F9E44,5
+89,finance,,ব্যাংক ও আর্থিক সেবা,Bank & finance,banknote,#1E5BD8,10
+90,finance.bank,89,ব্যাংক,Bank,,#1E5BD8,1
+91,finance.atm,89,এটিএম,ATM,,#1E5BD8,2
+92,finance.mobile_banking_agent,89,মোবাইল ব্যাংকিং এজেন্ট,Mobile banking agent,,#1E5BD8,3
+93,other,,অন্যান্য,Other,more-horizontal,#6B7A75,11
+94,other.ngo,93,এনজিও,NGO,,#6B7A75,1
+95,other.community_center,93,কমিউনিটি সেন্টার,Community center,,#6B7A75,2

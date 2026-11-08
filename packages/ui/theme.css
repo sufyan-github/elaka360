@@ -1,0 +1,24 @@
+/* Tailwind v4 theme mapping. Usage in an app's globals.css:
+     @import "tailwindcss";
+     @import "@elaka360/ui/tokens.css";
+     @import "@elaka360/ui/theme.css";                          */
+@theme inline {
+  --color-primary: var(--e360-primary);
+  --color-primary-hover: var(--e360-primary-hover);
+  --color-secondary: var(--e360-secondary);
+  --color-accent: var(--e360-accent);
+  --color-bg: var(--e360-bg);
+  --color-surface: var(--e360-surface);
+  --color-tint: var(--e360-surface-tint);
+  --color-line: var(--e360-border);
+  --color-ink: var(--e360-text);
+  --color-muted: var(--e360-text-muted);
+  --color-danger: var(--e360-danger);
+  --color-danger-tint: var(--e360-danger-tint);
+  --color-verified: var(--e360-verified);
+  --radius-card: var(--e360-radius);
+  --radius-chip: var(--e360-radius-sm);
+  --shadow-card: var(--e360-shadow);
+  --font-bn: var(--font-hind-siliguri), 'Hind Siliguri', system-ui, sans-serif;
+  --font-en: var(--font-inter), 'Inter', system-ui, sans-serif;
+}

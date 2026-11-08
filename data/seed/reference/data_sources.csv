@@ -1,0 +1,20 @@
+﻿id,key,name,url
+1,NUHIL,"nuhil/bangladesh-geocode (GitHub, MIT)",https://github.com/nuhil/bangladesh-geocode
+2,CITYPOP_ADJ,BBS Census 2022 (adjusted) via citypopulation.de,https://citypopulation.de/en/bangladesh/
+3,CITYPOP_RAJ,"BBS Census 2022 (enumerated) via citypopulation.de, Rajshahi district page",https://citypopulation.de/en/bangladesh/admin/81__rajshahi/
+4,WIKI_RAJ,Wikipedia: Rajshahi District,https://en.wikipedia.org/wiki/Rajshahi_District
+5,WIKI_CC,Wikipedia: List of city corporations in Bangladesh (Mar 2026 snapshot),https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/City_Councils_of_Bangladesh
+6,WIKI_ADMIN,Wikipedia: Administrative geography of Bangladesh (Mar 2026 snapshot),https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/Subdivisions_of_Bangladesh
+7,FE_BOGURA,"The Financial Express, 15 May 2026: Bogura becomes city corporation",https://today.thefinancialexpress.com.bd/last-page/bogura-becomes-city-corporation-1778866247
+8,WIKI_SHAY,Wikipedia: Shayestaganj Upazila,https://en.wikipedia.org/wiki/Shayestaganj_Upazila
+9,FE_102,"The Financial Express, 6 Jun 2024: Fire service launches new hotline 102",https://thefinancialexpress.com.bd/national/fire-service-launches-new-hotline-number-102
+10,WIKI_TEL,Wikipedia: Telephone numbers in Bangladesh,https://en.wikipedia.org/wiki/Telephone_numbers_in_Bangladesh
+11,WIKI_RU,Wikipedia: University of Rajshahi,https://en.wikipedia.org/wiki/University_of_Rajshahi
+12,WIKI_RUET,Wikipedia: RUET (Mar 2026 snapshot),https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/RUET
+13,WIKI_RMC,Wikipedia: Rajshahi Medical College,https://en.wikipedia.org/wiki/Rajshahi_Medical_College
+14,WIKI_PUTHIA,Wikipedia: Puthia Rajbari,https://en.wikipedia.org/wiki/Puthia_Rajbari
+15,BANGLAPEDIA_PUTHIA,Banglapedia: Puthia,https://en.banglapedia.org/index.php/Puthia
+16,WIKI_VRM,Wikipedia: Varendra Research Museum,https://en.wikipedia.org/wiki/Varendra_Research_Museum
+17,RU_VRM,University of Rajshahi: Varendra Research Museum,https://www.ru.ac.bd/facilities/varendra-research-museum/
+18,MOCKUP,"Elaka360 UI mockups (design placeholder, not a fact source)",
+19,UNVERIFIED,General knowledge — not checked against a primary source in this build,

@@ -1,0 +1,974 @@
+[
+ {
+  "id": 1,
+  "key": "education",
+  "parent_id": null,
+  "name_bn": "শিক্ষা প্রতিষ্ঠান",
+  "name_en": "Education",
+  "icon": "graduation-cap",
+  "color": "#16865B",
+  "sort_order": 1,
+  "children": [
+   {
+    "id": 2,
+    "key": "education.primary_school",
+    "parent_id": 1,
+    "name_bn": "প্রাথমিক বিদ্যালয়",
+    "name_en": "Primary school",
+    "icon": null,
+    "color": "#16865B",
+    "sort_order": 1
+   },
+   {
+    "id": 3,
+    "key": "education.secondary_school",
+    "parent_id": 1,
+    "name_bn": "মাধ্যমিক বিদ্যালয়",
+    "name_en": "Secondary school",
+    "icon": null,
+    "color": "#16865B",
+    "sort_order": 2
+   },
+   {
+    "id": 4,
+    "key": "education.college",
+    "parent_id": 1,
+    "name_bn": "কলেজ",
+    "name_en": "College",
+    "icon": null,
+    "color": "#16865B",
+    "sort_order": 3
+   },
+   {
+    "id": 5,
+    "key": "education.university",
+    "parent_id": 1,
+    "name_bn": "বিশ্ববিদ্যালয়",
+    "name_en": "University",
+    "icon": null,
+    "color": "#16865B",
+    "sort_order": 4
+   },
+   {
+    "id": 6,
+    "key": "education.medical_college",
+    "parent_id": 1,
+    "name_bn": "মেডিকেল কলেজ",
+    "name_en": "Medical college",
+    "icon": null,
+    "color": "#16865B",
+    "sort_order": 5
+   },
+   {
+    "id": 7,
+    "key": "education.madrasa",
+    "parent_id": 1,
+    "name_bn": "মাদ্রাসা",
+    "name_en": "Madrasa",
+    "icon": null,
+    "color": "#16865B",
+    "sort_order": 6
+   },
+   {
+    "id": 8,
+    "key": "education.technical",
+    "parent_id": 1,
+    "name_bn": "কারিগরি প্রতিষ্ঠান",
+    "name_en": "Technical institute",
+    "icon": null,
+    "color": "#16865B",
+    "sort_order": 7
+   },
+   {
+    "id": 9,
+    "key": "education.polytechnic",
+    "parent_id": 1,
+    "name_bn": "পলিটেকনিক",
+    "name_en": "Polytechnic",
+    "icon": null,
+    "color": "#16865B",
+    "sort_order": 8
+   },
+   {
+    "id": 10,
+    "key": "education.training_center",
+    "parent_id": 1,
+    "name_bn": "ট্রেনিং সেন্টার",
+    "name_en": "Training center",
+    "icon": null,
+    "color": "#16865B",
+    "sort_order": 9
+   }
+  ]
+ },
+ {
+  "id": 11,
+  "key": "health",
+  "parent_id": null,
+  "name_bn": "স্বাস্থ্য সেবা",
+  "name_en": "Health",
+  "icon": "hospital",
+  "color": "#E5383B",
+  "sort_order": 2,
+  "children": [
+   {
+    "id": 12,
+    "key": "health.hospital",
+    "parent_id": 11,
+    "name_bn": "হাসপাতাল",
+    "name_en": "Hospital",
+    "icon": null,
+    "color": "#E5383B",
+    "sort_order": 1
+   },
+   {
+    "id": 13,
+    "key": "health.medical_college_hospital",
+    "parent_id": 11,
+    "name_bn": "মেডিকেল কলেজ হাসপাতাল",
+    "name_en": "Medical college hospital",
+    "icon": null,
+    "color": "#E5383B",
+    "sort_order": 2
+   },
+   {
+    "id": 14,
+    "key": "health.upazila_health_complex",
+    "parent_id": 11,
+    "name_bn": "উপজেলা স্বাস্থ্য কমপ্লেক্স",
+    "name_en": "Upazila health complex",
+    "icon": null,
+    "color": "#E5383B",
+    "sort_order": 3
+   },
+   {
+    "id": 15,
+    "key": "health.community_clinic",
+    "parent_id": 11,
+    "name_bn": "কমিউনিটি ক্লিনিক",
+    "name_en": "Community clinic",
+    "icon": null,
+    "color": "#E5383B",
+    "sort_order": 4
+   },
+   {
+    "id": 16,
+    "key": "health.clinic",
+    "parent_id": 11,
+    "name_bn": "ক্লিনিক",
+    "name_en": "Clinic",
+    "icon": null,
+    "color": "#E5383B",
+    "sort_order": 5
+   },
+   {
+    "id": 17,
+    "key": "health.diagnostic_center",
+    "parent_id": 11,
+    "name_bn": "ডায়াগনস্টিক সেন্টার",
+    "name_en": "Diagnostic center",
+    "icon": null,
+    "color": "#E5383B",
+    "sort_order": 6
+   },
+   {
+    "id": 18,
+    "key": "health.pharmacy",
+    "parent_id": 11,
+    "name_bn": "ফার্মেসি",
+    "name_en": "Pharmacy",
+    "icon": null,
+    "color": "#E5383B",
+    "sort_order": 7
+   },
+   {
+    "id": 19,
+    "key": "health.city_health_center",
+    "parent_id": 11,
+    "name_bn": "সিটি স্বাস্থ্য কেন্দ্র",
+    "name_en": "City health center",
+    "icon": null,
+    "color": "#E5383B",
+    "sort_order": 8
+   }
+  ]
+ },
+ {
+  "id": 20,
+  "key": "government",
+  "parent_id": null,
+  "name_bn": "সরকারি অফিস",
+  "name_en": "Government office",
+  "icon": "landmark",
+  "color": "#1E5BD8",
+  "sort_order": 3,
+  "children": [
+   {
+    "id": 21,
+    "key": "government.divisional_commissioner",
+    "parent_id": 20,
+    "name_bn": "বিভাগীয় কমিশনারের কার্যালয়",
+    "name_en": "Divisional Commissioner's office",
+    "icon": null,
+    "color": "#1E5BD8",
+    "sort_order": 1
+   },
+   {
+    "id": 22,
+    "key": "government.dc_office",
+    "parent_id": 20,
+    "name_bn": "জেলা প্রশাসকের কার্যালয়",
+    "name_en": "Deputy Commissioner's office",
+    "icon": null,
+    "color": "#1E5BD8",
+    "sort_order": 2
+   },
+   {
+    "id": 23,
+    "key": "government.uno_office",
+    "parent_id": 20,
+    "name_bn": "উপজেলা নির্বাহী অফিস",
+    "name_en": "Upazila Nirbahi Office",
+    "icon": null,
+    "color": "#1E5BD8",
+    "sort_order": 3
+   },
+   {
+    "id": 24,
+    "key": "government.sp_office",
+    "parent_id": 20,
+    "name_bn": "পুলিশ সুপারের কার্যালয়",
+    "name_en": "Superintendent of Police office",
+    "icon": null,
+    "color": "#1E5BD8",
+    "sort_order": 4
+   },
+   {
+    "id": 25,
+    "key": "government.civil_surgeon",
+    "parent_id": 20,
+    "name_bn": "সিভিল সার্জন অফিস",
+    "name_en": "Civil Surgeon office",
+    "icon": null,
+    "color": "#1E5BD8",
+    "sort_order": 5
+   },
+   {
+    "id": 26,
+    "key": "government.passport_office",
+    "parent_id": 20,
+    "name_bn": "পাসপোর্ট অফিস",
+    "name_en": "Passport office",
+    "icon": null,
+    "color": "#1E5BD8",
+    "sort_order": 6
+   },
+   {
+    "id": 27,
+    "key": "government.city_corporation_office",
+    "parent_id": 20,
+    "name_bn": "সিটি কর্পোরেশন কার্যালয়",
+    "name_en": "City corporation office",
+    "icon": null,
+    "color": "#1E5BD8",
+    "sort_order": 7
+   },
+   {
+    "id": 28,
+    "key": "government.pourashava_office",
+    "parent_id": 20,
+    "name_bn": "পৌরসভা কার্যালয়",
+    "name_en": "Pourashava office",
+    "icon": null,
+    "color": "#1E5BD8",
+    "sort_order": 8
+   },
+   {
+    "id": 29,
+    "key": "government.union_parishad",
+    "parent_id": 20,
+    "name_bn": "ইউনিয়ন পরিষদ",
+    "name_en": "Union parishad",
+    "icon": null,
+    "color": "#1E5BD8",
+    "sort_order": 9
+   },
+   {
+    "id": 30,
+    "key": "government.land_office",
+    "parent_id": 20,
+    "name_bn": "ভূমি অফিস",
+    "name_en": "Land office",
+    "icon": null,
+    "color": "#1E5BD8",
+    "sort_order": 10
+   },
+   {
+    "id": 31,
+    "key": "government.post_office",
+    "parent_id": 20,
+    "name_bn": "ডাকঘর",
+    "name_en": "Post office",
+    "icon": null,
+    "color": "#1E5BD8",
+    "sort_order": 11
+   },
+   {
+    "id": 32,
+    "key": "government.court",
+    "parent_id": 20,
+    "name_bn": "আদালত",
+    "name_en": "Court",
+    "icon": null,
+    "color": "#1E5BD8",
+    "sort_order": 12
+   }
+  ]
+ },
+ {
+  "id": 33,
+  "key": "religious",
+  "parent_id": null,
+  "name_bn": "ধর্মীয় প্রতিষ্ঠান",
+  "name_en": "Religious",
+  "icon": "church",
+  "color": "#7B3FC6",
+  "sort_order": 4,
+  "children": [
+   {
+    "id": 34,
+    "key": "religious.mosque",
+    "parent_id": 33,
+    "name_bn": "মসজিদ",
+    "name_en": "Mosque",
+    "icon": null,
+    "color": "#7B3FC6",
+    "sort_order": 1
+   },
+   {
+    "id": 35,
+    "key": "religious.temple",
+    "parent_id": 33,
+    "name_bn": "মন্দির",
+    "name_en": "Temple",
+    "icon": null,
+    "color": "#7B3FC6",
+    "sort_order": 2
+   },
+   {
+    "id": 36,
+    "key": "religious.church",
+    "parent_id": 33,
+    "name_bn": "গির্জা",
+    "name_en": "Church",
+    "icon": null,
+    "color": "#7B3FC6",
+    "sort_order": 3
+   },
+   {
+    "id": 37,
+    "key": "religious.buddhist_vihara",
+    "parent_id": 33,
+    "name_bn": "বৌদ্ধ বিহার / প্যাগোডা",
+    "name_en": "Buddhist vihara / pagoda",
+    "icon": null,
+    "color": "#7B3FC6",
+    "sort_order": 4
+   },
+   {
+    "id": 38,
+    "key": "religious.mazar",
+    "parent_id": 33,
+    "name_bn": "মাজার",
+    "name_en": "Mazar / shrine",
+    "icon": null,
+    "color": "#7B3FC6",
+    "sort_order": 5
+   },
+   {
+    "id": 39,
+    "key": "religious.eidgah",
+    "parent_id": 33,
+    "name_bn": "ঈদগাহ",
+    "name_en": "Eidgah",
+    "icon": null,
+    "color": "#7B3FC6",
+    "sort_order": 6
+   }
+  ]
+ },
+ {
+  "id": 40,
+  "key": "emergency",
+  "parent_id": null,
+  "name_bn": "জরুরি সেবা",
+  "name_en": "Emergency",
+  "icon": "shield-alert",
+  "color": "#F2994A",
+  "sort_order": 5,
+  "children": [
+   {
+    "id": 41,
+    "key": "emergency.police_station",
+    "parent_id": 40,
+    "name_bn": "থানা",
+    "name_en": "Police station",
+    "icon": null,
+    "color": "#F2994A",
+    "sort_order": 1
+   },
+   {
+    "id": 42,
+    "key": "emergency.police_outpost",
+    "parent_id": 40,
+    "name_bn": "পুলিশ ফাঁড়ি",
+    "name_en": "Police outpost",
+    "icon": null,
+    "color": "#F2994A",
+    "sort_order": 2
+   },
+   {
+    "id": 43,
+    "key": "emergency.fire_station",
+    "parent_id": 40,
+    "name_bn": "ফায়ার স্টেশন",
+    "name_en": "Fire station",
+    "icon": null,
+    "color": "#F2994A",
+    "sort_order": 3
+   },
+   {
+    "id": 44,
+    "key": "emergency.ambulance",
+    "parent_id": 40,
+    "name_bn": "অ্যাম্বুলেন্স",
+    "name_en": "Ambulance",
+    "icon": null,
+    "color": "#F2994A",
+    "sort_order": 4
+   },
+   {
+    "id": 45,
+    "key": "emergency.emergency_department",
+    "parent_id": 40,
+    "name_bn": "জরুরি বিভাগ",
+    "name_en": "Hospital emergency",
+    "icon": null,
+    "color": "#F2994A",
+    "sort_order": 5
+   },
+   {
+    "id": 46,
+    "key": "emergency.disaster_shelter",
+    "parent_id": 40,
+    "name_bn": "দুর্যোগ আশ্রয়কেন্দ্র",
+    "name_en": "Disaster shelter",
+    "icon": null,
+    "color": "#F2994A",
+    "sort_order": 6
+   },
+   {
+    "id": 47,
+    "key": "emergency.rescue",
+    "parent_id": 40,
+    "name_bn": "উদ্ধার সেবা",
+    "name_en": "Rescue",
+    "icon": null,
+    "color": "#F2994A",
+    "sort_order": 7
+   },
+   {
+    "id": 48,
+    "key": "emergency.utility_emergency",
+    "parent_id": 40,
+    "name_bn": "গ্যাস/বিদ্যুৎ জরুরি সহায়তা",
+    "name_en": "Gas/electricity emergency",
+    "icon": null,
+    "color": "#F2994A",
+    "sort_order": 8
+   },
+   {
+    "id": 49,
+    "key": "emergency.water_sanitation",
+    "parent_id": 40,
+    "name_bn": "পানি ও স্যানিটেশন",
+    "name_en": "Water & sanitation",
+    "icon": null,
+    "color": "#F2994A",
+    "sort_order": 9
+   }
+  ]
+ },
+ {
+  "id": 50,
+  "key": "tourism",
+  "parent_id": null,
+  "name_bn": "পর্যটন স্থান",
+  "name_en": "Tourism",
+  "icon": "palmtree",
+  "color": "#16865B",
+  "sort_order": 6,
+  "children": [
+   {
+    "id": 51,
+    "key": "tourism.hill",
+    "parent_id": 50,
+    "name_bn": "পাহাড়",
+    "name_en": "Hill",
+    "icon": null,
+    "color": "#16865B",
+    "sort_order": 1
+   },
+   {
+    "id": 52,
+    "key": "tourism.beach",
+    "parent_id": 50,
+    "name_bn": "সমুদ্রসৈকত",
+    "name_en": "Beach",
+    "icon": null,
+    "color": "#16865B",
+    "sort_order": 2
+   },
+   {
+    "id": 53,
+    "key": "tourism.natural",
+    "parent_id": 50,
+    "name_bn": "প্রাকৃতিক স্থান",
+    "name_en": "Natural site",
+    "icon": null,
+    "color": "#16865B",
+    "sort_order": 3
+   },
+   {
+    "id": 54,
+    "key": "tourism.historical",
+    "parent_id": 50,
+    "name_bn": "ঐতিহাসিক স্থান",
+    "name_en": "Historical site",
+    "icon": null,
+    "color": "#16865B",
+    "sort_order": 4
+   },
+   {
+    "id": 55,
+    "key": "tourism.archaeological",
+    "parent_id": 50,
+    "name_bn": "প্রত্নতাত্ত্বিক স্থান",
+    "name_en": "Archaeological site",
+    "icon": null,
+    "color": "#16865B",
+    "sort_order": 5
+   },
+   {
+    "id": 56,
+    "key": "tourism.waterfall",
+    "parent_id": 50,
+    "name_bn": "ঝর্ণা",
+    "name_en": "Waterfall",
+    "icon": null,
+    "color": "#16865B",
+    "sort_order": 6
+   },
+   {
+    "id": 57,
+    "key": "tourism.river_haor",
+    "parent_id": 50,
+    "name_bn": "নদী ও হাওর",
+    "name_en": "River & haor",
+    "icon": null,
+    "color": "#16865B",
+    "sort_order": 7
+   },
+   {
+    "id": 58,
+    "key": "tourism.park",
+    "parent_id": 50,
+    "name_bn": "পার্ক",
+    "name_en": "Park",
+    "icon": null,
+    "color": "#16865B",
+    "sort_order": 8
+   },
+   {
+    "id": 59,
+    "key": "tourism.religious_site",
+    "parent_id": 50,
+    "name_bn": "ধর্মীয় স্থান",
+    "name_en": "Religious site",
+    "icon": null,
+    "color": "#16865B",
+    "sort_order": 9
+   },
+   {
+    "id": 60,
+    "key": "tourism.museum",
+    "parent_id": 50,
+    "name_bn": "জাদুঘর",
+    "name_en": "Museum",
+    "icon": null,
+    "color": "#16865B",
+    "sort_order": 10
+   },
+   {
+    "id": 61,
+    "key": "tourism.tea_garden",
+    "parent_id": 50,
+    "name_bn": "চা বাগান",
+    "name_en": "Tea garden",
+    "icon": null,
+    "color": "#16865B",
+    "sort_order": 11
+   }
+  ]
+ },
+ {
+  "id": 62,
+  "key": "business",
+  "parent_id": null,
+  "name_bn": "বাজার ও ব্যবসা",
+  "name_en": "Business & market",
+  "icon": "store",
+  "color": "#F2994A",
+  "sort_order": 7,
+  "children": [
+   {
+    "id": 63,
+    "key": "business.shop",
+    "parent_id": 62,
+    "name_bn": "দোকান",
+    "name_en": "Shop",
+    "icon": null,
+    "color": "#F2994A",
+    "sort_order": 1
+   },
+   {
+    "id": 64,
+    "key": "business.market",
+    "parent_id": 62,
+    "name_bn": "বাজার",
+    "name_en": "Market",
+    "icon": null,
+    "color": "#F2994A",
+    "sort_order": 2
+   },
+   {
+    "id": 65,
+    "key": "business.restaurant",
+    "parent_id": 62,
+    "name_bn": "রেস্টুরেন্ট",
+    "name_en": "Restaurant",
+    "icon": null,
+    "color": "#F2994A",
+    "sort_order": 3
+   },
+   {
+    "id": 66,
+    "key": "business.cafe",
+    "parent_id": 62,
+    "name_bn": "ক্যাফে",
+    "name_en": "Cafe",
+    "icon": null,
+    "color": "#F2994A",
+    "sort_order": 4
+   },
+   {
+    "id": 67,
+    "key": "business.shopping",
+    "parent_id": 62,
+    "name_bn": "শপিং",
+    "name_en": "Shopping",
+    "icon": null,
+    "color": "#F2994A",
+    "sort_order": 5
+   },
+   {
+    "id": 68,
+    "key": "business.supermarket",
+    "parent_id": 62,
+    "name_bn": "সুপার শপ",
+    "name_en": "Supermarket",
+    "icon": null,
+    "color": "#F2994A",
+    "sort_order": 6
+   },
+   {
+    "id": 69,
+    "key": "business.service",
+    "parent_id": 62,
+    "name_bn": "সেবা",
+    "name_en": "Service",
+    "icon": null,
+    "color": "#F2994A",
+    "sort_order": 7
+   },
+   {
+    "id": 70,
+    "key": "business.health_service",
+    "parent_id": 62,
+    "name_bn": "স্বাস্থ্যসেবা",
+    "name_en": "Health service",
+    "icon": null,
+    "color": "#F2994A",
+    "sort_order": 8
+   },
+   {
+    "id": 71,
+    "key": "business.education_service",
+    "parent_id": 62,
+    "name_bn": "শিক্ষা সেবা",
+    "name_en": "Education service",
+    "icon": null,
+    "color": "#F2994A",
+    "sort_order": 9
+   },
+   {
+    "id": 72,
+    "key": "business.home_service",
+    "parent_id": 62,
+    "name_bn": "গৃহসেবা",
+    "name_en": "Home service",
+    "icon": null,
+    "color": "#F2994A",
+    "sort_order": 10
+   },
+   {
+    "id": 73,
+    "key": "business.vehicle_service",
+    "parent_id": 62,
+    "name_bn": "গাড়ি সেবা",
+    "name_en": "Vehicle service",
+    "icon": null,
+    "color": "#F2994A",
+    "sort_order": 11
+   },
+   {
+    "id": 74,
+    "key": "business.it_service",
+    "parent_id": 62,
+    "name_bn": "আইটি সেবা",
+    "name_en": "IT service",
+    "icon": null,
+    "color": "#F2994A",
+    "sort_order": 12
+   },
+   {
+    "id": 75,
+    "key": "business.fashion",
+    "parent_id": 62,
+    "name_bn": "ফ্যাশন",
+    "name_en": "Fashion",
+    "icon": null,
+    "color": "#F2994A",
+    "sort_order": 13
+   }
+  ]
+ },
+ {
+  "id": 76,
+  "key": "transport",
+  "parent_id": null,
+  "name_bn": "পরিবহন ও রুট",
+  "name_en": "Transport",
+  "icon": "bus",
+  "color": "#5B4FD6",
+  "sort_order": 8,
+  "children": [
+   {
+    "id": 77,
+    "key": "transport.bus_terminal",
+    "parent_id": 76,
+    "name_bn": "বাস টার্মিনাল",
+    "name_en": "Bus terminal",
+    "icon": null,
+    "color": "#5B4FD6",
+    "sort_order": 1
+   },
+   {
+    "id": 78,
+    "key": "transport.bus_stop",
+    "parent_id": 76,
+    "name_bn": "বাস স্টপ",
+    "name_en": "Bus stop",
+    "icon": null,
+    "color": "#5B4FD6",
+    "sort_order": 2
+   },
+   {
+    "id": 79,
+    "key": "transport.railway_station",
+    "parent_id": 76,
+    "name_bn": "রেল স্টেশন",
+    "name_en": "Railway station",
+    "icon": null,
+    "color": "#5B4FD6",
+    "sort_order": 3
+   },
+   {
+    "id": 80,
+    "key": "transport.launch_ghat",
+    "parent_id": 76,
+    "name_bn": "লঞ্চ ঘাট",
+    "name_en": "Launch ghat",
+    "icon": null,
+    "color": "#5B4FD6",
+    "sort_order": 4
+   },
+   {
+    "id": 81,
+    "key": "transport.airport",
+    "parent_id": 76,
+    "name_bn": "বিমানবন্দর",
+    "name_en": "Airport",
+    "icon": null,
+    "color": "#5B4FD6",
+    "sort_order": 5
+   },
+   {
+    "id": 82,
+    "key": "transport.fuel_station",
+    "parent_id": 76,
+    "name_bn": "ফিলিং স্টেশন",
+    "name_en": "Fuel station",
+    "icon": null,
+    "color": "#5B4FD6",
+    "sort_order": 6
+   }
+  ]
+ },
+ {
+  "id": 83,
+  "key": "agriculture",
+  "parent_id": null,
+  "name_bn": "কৃষি ও প্রাকৃতিক সম্পদ",
+  "name_en": "Agriculture & natural resources",
+  "icon": "leaf",
+  "color": "#2F9E44",
+  "sort_order": 9,
+  "children": [
+   {
+    "id": 84,
+    "key": "agriculture.agri_office",
+    "parent_id": 83,
+    "name_bn": "কৃষি অফিস",
+    "name_en": "Agriculture office",
+    "icon": null,
+    "color": "#2F9E44",
+    "sort_order": 1
+   },
+   {
+    "id": 85,
+    "key": "agriculture.farm",
+    "parent_id": 83,
+    "name_bn": "খামার",
+    "name_en": "Farm",
+    "icon": null,
+    "color": "#2F9E44",
+    "sort_order": 2
+   },
+   {
+    "id": 86,
+    "key": "agriculture.nursery",
+    "parent_id": 83,
+    "name_bn": "নার্সারি",
+    "name_en": "Nursery",
+    "icon": null,
+    "color": "#2F9E44",
+    "sort_order": 3
+   },
+   {
+    "id": 87,
+    "key": "agriculture.haat",
+    "parent_id": 83,
+    "name_bn": "হাট",
+    "name_en": "Haat (weekly market)",
+    "icon": null,
+    "color": "#2F9E44",
+    "sort_order": 4
+   },
+   {
+    "id": 88,
+    "key": "agriculture.cold_storage",
+    "parent_id": 83,
+    "name_bn": "হিমাগার",
+    "name_en": "Cold storage",
+    "icon": null,
+    "color": "#2F9E44",
+    "sort_order": 5
+   }
+  ]
+ },
+ {
+  "id": 89,
+  "key": "finance",
+  "parent_id": null,
+  "name_bn": "ব্যাংক ও আর্থিক সেবা",
+  "name_en": "Bank & finance",
+  "icon": "banknote",
+  "color": "#1E5BD8",
+  "sort_order": 10,
+  "children": [
+   {
+    "id": 90,
+    "key": "finance.bank",
+    "parent_id": 89,
+    "name_bn": "ব্যাংক",
+    "name_en": "Bank",
+    "icon": null,
+    "color": "#1E5BD8",
+    "sort_order": 1
+   },
+   {
+    "id": 91,
+    "key": "finance.atm",
+    "parent_id": 89,
+    "name_bn": "এটিএম",
+    "name_en": "ATM",
+    "icon": null,
+    "color": "#1E5BD8",
+    "sort_order": 2
+   },
+   {
+    "id": 92,
+    "key": "finance.mobile_banking_agent",
+    "parent_id": 89,
+    "name_bn": "মোবাইল ব্যাংকিং এজেন্ট",
+    "name_en": "Mobile banking agent",
+    "icon": null,
+    "color": "#1E5BD8",
+    "sort_order": 3
+   }
+  ]
+ },
+ {
+  "id": 93,
+  "key": "other",
+  "parent_id": null,
+  "name_bn": "অন্যান্য",
+  "name_en": "Other",
+  "icon": "more-horizontal",
+  "color": "#6B7A75",
+  "sort_order": 11,
+  "children": [
+   {
+    "id": 94,
+    "key": "other.ngo",
+    "parent_id": 93,
+    "name_bn": "এনজিও",
+    "name_en": "NGO",
+    "icon": null,
+    "color": "#6B7A75",
+    "sort_order": 1
+   },
+   {
+    "id": 95,
+    "key": "other.community_center",
+    "parent_id": 93,
+    "name_bn": "কমিউনিটি সেন্টার",
+    "name_en": "Community center",
+    "icon": null,
+    "color": "#6B7A75",
+    "sort_order": 2
+   }
+  ]
+ }
+]

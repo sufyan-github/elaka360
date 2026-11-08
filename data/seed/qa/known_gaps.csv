@@ -1,0 +1,11 @@
+﻿area,gap,fix
+unions,"~30–37 unions missing vs the official 4,571–4,578 (dataset has 4,541).",Import the LGD/BBS union list and reconcile by geocode.
+unions,"New upazilas Eidgaon, Madhyanagar, Dasar, Guimara and Naldanga have 0 unions; their unions still sit under the parent upazilas.",Re-parent unions per the creation gazettes.
+unions,Shayestaganj union and Nurpur were moved to Shayestaganj Upazila; Brahmandura was added without a source id.,Confirm against LGD.
+upazilas,No coordinates or boundaries for upazilas/unions.,Use the BBS/HDX admin boundary sets (ADM3/ADM4).
+codes,BBS geocodes are filled for divisions only.,Add district/upazila/union geocodes from BBS.
+pourashavas,"Only Rajshahi District's 14 pourashavas are listed, and that list is unverified.",Import the LGD pourashava list (330).
+wards/villages,"No wards, mouzas or villages.",BBS mouza/village lists.
+area,District areas are computed from boundary polygons (approximate).,Replace with BBS official areas.
+population,District/division population uses the 2022 adjusted figures; Rajshahi upazilas use enumerated figures.,Choose one basis app-wide.
+places,Only 8 pilot places; 3 are unverified and have no coordinates.,Field verification + OSM import.

@@ -1,0 +1,20 @@
+{
+  "name": "elaka360",
+  "private": true,
+  "packageManager": "pnpm@10.28.0",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "db:up": "docker compose up -d postgres",
+    "db:reset": "bash scripts/db-reset.sh",
+    "seed:build": "python3 pipelines/build_seed.py"
+  },
+  "devDependencies": {
+    "turbo": "^2.5.0",
+    "typescript": "^5.8.0"
+  }
+}

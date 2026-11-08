@@ -1,0 +1,49 @@
+/* Elaka360 design tokens — source: mockup design-system panel (Primary #075B3B,
+   Secondary #16865B, Accent #F2C94C, Background #F7F9F6, Text #1F2D28). */
+:root {
+  --e360-primary: #075b3b;
+  --e360-primary-hover: #064c31;
+  --e360-secondary: #16865b;
+  --e360-accent: #f2c94c;
+  --e360-bg: #f7f9f6;
+  --e360-surface: #ffffff;
+  --e360-surface-tint: #e9f4ee;
+  --e360-border: #dfe7e2;
+  --e360-text: #1f2d28;
+  --e360-text-muted: #5c6b65;
+  --e360-danger: #d62828;
+  --e360-danger-tint: #fdecec;
+  --e360-verified: #16865b;
+
+  /* category colours (taxonomy/categories.json) */
+  --e360-cat-education: #16865b;
+  --e360-cat-health: #e5383b;
+  --e360-cat-government: #1e5bd8;
+  --e360-cat-religious: #7b3fc6;
+  --e360-cat-emergency: #f2994a;
+  --e360-cat-tourism: #16865b;
+  --e360-cat-business: #f2994a;
+  --e360-cat-transport: #5b4fd6;
+  --e360-cat-agriculture: #2f9e44;
+  --e360-cat-finance: #1e5bd8;
+  --e360-cat-other: #6b7a75;
+
+  --e360-radius: 14px;
+  --e360-radius-sm: 10px;
+  --e360-shadow: 0 1px 2px rgb(16 40 30 / 0.06), 0 4px 16px rgb(16 40 30 / 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --e360-primary: #3fb37f;
+    --e360-primary-hover: #56c391;
+    --e360-secondary: #3fb37f;
+    --e360-bg: #0f1714;
+    --e360-surface: #16211c;
+    --e360-surface-tint: #1c2c25;
+    --e360-border: #26372f;
+    --e360-text: #e6efe9;
+    --e360-text-muted: #9aaba3;
+    --e360-danger-tint: #3a1a1a;
+  }
+}

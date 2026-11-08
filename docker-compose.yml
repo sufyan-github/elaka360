@@ -1,0 +1,30 @@
+services:
+  postgres:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_USER: elaka360
+      POSTGRES_PASSWORD: elaka360
+      POSTGRES_DB: elaka360
+    ports: ["5432:5432"]
+    volumes: [pgdata:/var/lib/postgresql/data]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U elaka360"]
+      interval: 5s
+      retries: 10
+
+  # Used from Phase 1 (search) and Phase 2 (jobs). Not required to run the app yet.
+  typesense:
+    image: typesense/typesense:27.1
+    command: --data-dir /data --api-key=dev-key --enable-cors
+    ports: ["8108:8108"]
+    volumes: [tsdata:/data]
+    profiles: ["full"]
+
+  redis:
+    image: redis:7-alpine
+    ports: ["6379:6379"]
+    profiles: ["full"]
+
+volumes:
+  pgdata:
+  tsdata:

@@ -1,0 +1,9 @@
+﻿id,level,parent_id,name_bn,name_en,slug,path,bbs_code,source_ref,website,lat,lon,area_km2,area_basis,population_2022,population_basis,population_source,wards_count,established,verified,production_eligible,data_source,notes
+10001,division,1,চট্টগ্রাম,Chattogram,chattogram,chattogram,20,nuhil:division:1,http://www.chittagongdiv.gov.bd,,,,,34178612,adjusted,CITYPOP_ADJ,,,True,True,NUHIL,
+10002,division,1,রাজশাহী,Rajshahi,rajshahi,rajshahi,50,nuhil:division:2,http://www.rajshahidiv.gov.bd,,,,,20794019,adjusted,CITYPOP_ADJ,,,True,True,NUHIL,
+10003,division,1,খুলনা,Khulna,khulna,khulna,40,nuhil:division:3,http://www.khulnadiv.gov.bd,,,,,17813218,adjusted,CITYPOP_ADJ,,,True,True,NUHIL,
+10004,division,1,বরিশাল,Barishal,barishal,barishal,10,nuhil:division:4,http://www.barisaldiv.gov.bd,,,,,9325820,adjusted,CITYPOP_ADJ,,,True,True,NUHIL,
+10005,division,1,সিলেট,Sylhet,sylhet,sylhet,60,nuhil:division:5,http://www.sylhetdiv.gov.bd,,,,,11415113,adjusted,CITYPOP_ADJ,,,True,True,NUHIL,
+10006,division,1,ঢাকা,Dhaka,dhaka,dhaka,30,nuhil:division:6,http://www.dhakadiv.gov.bd,,,,,45644586,adjusted,CITYPOP_ADJ,,,True,True,NUHIL,
+10007,division,1,রংপুর,Rangpur,rangpur,rangpur,55,nuhil:division:7,http://www.rangpurdiv.gov.bd,,,,,18020071,adjusted,CITYPOP_ADJ,,,True,True,NUHIL,
+10008,division,1,ময়মনসিংহ,Mymensingh,mymensingh,mymensingh,45,nuhil:division:8,http://www.mymensinghdiv.gov.bd,,,,,12637472,adjusted,CITYPOP_ADJ,,,True,True,NUHIL,

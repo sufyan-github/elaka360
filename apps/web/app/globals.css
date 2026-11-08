@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@import "@elaka360/ui/tokens.css";
+@import "@elaka360/ui/theme.css";
+
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--e360-bg);
+  color: var(--e360-text);
+  font-family: var(--font-bn);
+  line-height: 1.55;
+}
+:focus-visible { outline: 2px solid var(--e360-secondary); outline-offset: 2px; }
+.hero-green {
+  background:
+    radial-gradient(120% 90% at 100% 0%, rgb(242 201 76 / 0.18), transparent 60%),
+    linear-gradient(160deg, #075b3b 0%, #0d6e48 55%, #16865b 100%);
+}
+.hero-red { background: linear-gradient(160deg, #b51d1d 0%, #d62828 60%, #e5383b 100%); }
+.scrollbar-none { scrollbar-width: none; }
+.scrollbar-none::-webkit-scrollbar { display: none; }

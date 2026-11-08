@@ -1,0 +1,87 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    services:
+      postgres:
+        image: postgis/postgis:16-3.4
+        env:
+          POSTGRES_USER: elaka360
+          POSTGRES_PASSWORD: elaka360
+          POSTGRES_DB: elaka360
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U elaka360" --health-interval 5s --health-timeout 5s --health-retries 20
+    env:
+      DATABASE_URL: postgres://elaka360:elaka360@localhost:5432/elaka360
+      API_URL: http://localhost:4000
+      WEB_URL: http://localhost:3000
+      TURBO_TELEMETRY_DISABLED: 1
+      NEXT_TELEMETRY_DISABLED: 1
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Seed is reproducible from sources
+        run: |
+          python3 pipelines/build_seed.py > /dev/null
+          git diff --stat --exit-code -- data/seed db/seed
+
+      - name: Install
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Upload lockfile (commit it once CI is green)
+        uses: actions/upload-artifact@v4
+        with:
+          name: pnpm-lock
+          path: pnpm-lock.yaml
+
+      - name: Build
+        run: pnpm build
+
+      - name: Typecheck
+        run: pnpm typecheck
+
+      - name: Unit tests
+        run: pnpm test
+
+      - name: Database — migrate + seed
+        run: bash scripts/db-reset.sh
+
+      - name: Database — check every API query
+        run: python3 scripts/check_sql.py
+
+      - name: API smoke test
+        run: |
+          node apps/api/dist/main.js > api.log 2>&1 &
+          for i in $(seq 1 30); do curl -sf $API_URL/health && break; sleep 1; done
+          node scripts/smoke-api.mjs
+
+      - name: Web smoke test
+        run: |
+          pnpm --filter @elaka360/web start > web.log 2>&1 &
+          for i in $(seq 1 40); do curl -sf -o /dev/null $WEB_URL/saved && break; sleep 1; done
+          node scripts/smoke-web.mjs
+
+      - name: Logs
+        if: always()
+        run: |
+          echo "--- api.log"; tail -n 80 api.log || true
+          echo "--- web.log"; tail -n 80 web.log || true
