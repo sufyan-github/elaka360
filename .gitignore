@@ -9,3 +9,11 @@ coverage/
 !.env.example
 __pycache__/
 .DS_Store
+
+# Large upstream data archives stay out of git (GitHub 100 MB limit)
+*.zip
+Elaka360/
+*.tsbuildinfo
+.env.local
+playwright-report/
+test-results/

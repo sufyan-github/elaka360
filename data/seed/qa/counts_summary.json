@@ -2,12 +2,11 @@
  "division": 8,
  "district": 64,
  "upazila": 495,
- "union": 4541,
+ "union": 4538,
  "city_corporation": 13,
  "pourashava": 14,
  "upazilas_without_unions": [
   "Guimara",
-  "Naldanga",
   "Eidgaon",
   "Madhyanagar",
   "Dasar"
@@ -29,5 +28,15 @@
  "categories": {
   "top_level": 11,
   "sub": 84
- }
+ },
+ "production_eligible_by_level": {
+  "country": 1,
+  "division": 8,
+  "district": 64,
+  "upazila": 10,
+  "union": 0,
+  "city_corporation": 13,
+  "pourashava": 0
+ },
+ "seed_vs_master_untracked": 0
 }

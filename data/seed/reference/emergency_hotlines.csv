@@ -1,11 +1,11 @@
-﻿number,name_bn,name_en,category,verified,source,source_url,notes,sort_order
-999,জাতীয় জরুরি সেবা,"National emergency service (police, fire, ambulance)",emergency,True,WIKI_TEL,https://en.wikipedia.org/wiki/Telephone_numbers_in_Bangladesh,,1
-102,ফায়ার সার্ভিস ও সিভিল ডিফেন্স,Fire Service & Civil Defence,fire,True,FE_102,https://thefinancialexpress.com.bd/national/fire-service-launches-new-hotline-number-102,"Replaced 16163, which was to be discontinued after 31 Dec 2024. Mockups still show 16163.",2
-333,জাতীয় তথ্য ও সেবা বাতায়ন,National helpline (information & services),government,True,WIKI_TEL,https://en.wikipedia.org/wiki/Telephone_numbers_in_Bangladesh,,3
-109,নারী ও শিশু নির্যাতন প্রতিরোধ,Violence against women & children helpline,protection,True,WIKI_TEL,https://en.wikipedia.org/wiki/Telephone_numbers_in_Bangladesh,,4
-106,দুর্নীতি দমন কমিশন,Anti-Corruption Commission,government,True,WIKI_TEL,https://en.wikipedia.org/wiki/Telephone_numbers_in_Bangladesh,,5
-105,জাতীয় পরিচয়পত্র সেবা,NID services,government,True,WIKI_TEL,https://en.wikipedia.org/wiki/Telephone_numbers_in_Bangladesh,,6
-131,বাংলাদেশ রেলওয়ে,Bangladesh Railway,transport,True,WIKI_TEL,https://en.wikipedia.org/wiki/Telephone_numbers_in_Bangladesh,,7
-16263,স্বাস্থ্য বাতায়ন,Shasthya Batayon (health helpline),health,False,UNVERIFIED,,"Shown in mockups; widely published, not checked here.",8
-1098,চাইল্ড হেল্পলাইন,Child Helpline,protection,False,UNVERIFIED,,,9
-16430,সরকারি আইনি সহায়তা,National Legal Aid helpline,legal,False,UNVERIFIED,,,10
+﻿number,name_bn,name_en,category,verified,evidence_level,source,source_url,notes,sort_order
+999,জাতীয় জরুরি সেবা,"National emergency service (police, fire, ambulance)",emergency,True,secondary,WIKI_TEL,https://en.wikipedia.org/wiki/Telephone_numbers_in_Bangladesh,,1
+102,ফায়ার সার্ভিস ও সিভিল ডিফেন্স,Fire Service & Civil Defence,fire,True,secondary,FE_102,https://thefinancialexpress.com.bd/national/fire-service-launches-new-hotline-number-102,"Replaced 16163, which was to be discontinued after 31 Dec 2024. Mockups still show 16163.",2
+333,জাতীয় তথ্য ও সেবা বাতায়ন,National helpline (information & services),government,True,secondary,WIKI_TEL,https://en.wikipedia.org/wiki/Telephone_numbers_in_Bangladesh,,3
+109,নারী ও শিশু নির্যাতন প্রতিরোধ,Violence against women & children helpline,protection,True,secondary,WIKI_TEL,https://en.wikipedia.org/wiki/Telephone_numbers_in_Bangladesh,,4
+106,দুর্নীতি দমন কমিশন,Anti-Corruption Commission,government,True,secondary,WIKI_TEL,https://en.wikipedia.org/wiki/Telephone_numbers_in_Bangladesh,,5
+105,জাতীয় পরিচয়পত্র সেবা,NID services,government,True,secondary,WIKI_TEL,https://en.wikipedia.org/wiki/Telephone_numbers_in_Bangladesh,,6
+131,বাংলাদেশ রেলওয়ে,Bangladesh Railway,transport,True,secondary,WIKI_TEL,https://en.wikipedia.org/wiki/Telephone_numbers_in_Bangladesh,,7
+16263,স্বাস্থ্য বাতায়ন,Shasthya Batayon (health helpline),health,False,unverified,UNVERIFIED,,"Shown in mockups; widely published, not checked here.",8
+1098,চাইল্ড হেল্পলাইন,Child Helpline,protection,False,unverified,UNVERIFIED,,,9
+16430,সরকারি আইনি সহায়তা,National Legal Aid helpline,legal,False,unverified,UNVERIFIED,,,10

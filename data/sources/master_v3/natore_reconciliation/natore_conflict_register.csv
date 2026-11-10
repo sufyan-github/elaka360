@@ -1,0 +1,7 @@
+﻿conflict_id,subject,official_district_admin,BBS_2011,secondary_atlas,status,notes
+NAT-COUNT-001,District total,52,52,52,aggregate_agreement,All sources show 52 total unions.
+NAT-COUNT-002,Singra,12,12,13,upazila_distribution_conflict,Official district aggregate and BBS list 12; secondary atlas says 13.
+NAT-COUNT-003,Lalpur,10,10,11,upazila_distribution_conflict,Official district aggregate and BBS list 10; secondary atlas says 11.
+NAT-COUNT-004,Gurudaspur,6,6,7,upazila_distribution_conflict,Official district aggregate and BBS list 6; secondary atlas says 7.
+NAT-COUNT-005,Bagatipara,5,5,6,upazila_distribution_conflict,Official district aggregate and BBS list 5; secondary atlas says 6.
+NAT-UPAZILA-001,Upazila structure,7,6,7,historical_boundary_change,BBS 2011 grouped Natore Sadar/Naldanga area under six upazilas; current official list has seven including Naldanga.

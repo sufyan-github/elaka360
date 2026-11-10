@@ -1,0 +1,6 @@
+﻿conflict_id,topic,claim_a,claim_b,sources,assessment,status
+RAJ-001,District total,71,72,Rajshahi Divisional Commissioner detailed page vs local district portal/news claims,Selected baseline remains 71; 72 is not adopted until official order/list reconciled,Open
+RAJ-002,Bagha unions,6,7,Divisional Commissioner page vs Bagha Upazila portal/news,Likely one additional/renamed/realigned union; exact identity and legal status unresolved,Open
+RAJ-003,Bagmara union count,16,16 (13 indexed BCC rows visible in partial excerpt),Rajshahi Divisional baseline vs BCC Connected Bangladesh indexed excerpt,BCC excerpt incomplete; visible rows do not prove total list,Open
+RAJ-004,BBS 2011 geocodes,2011 historical geocode components,Current IDs,BBS Statistical Pocket Book 2016 Table 3.01,Historical codes not to be treated as current identifiers,Resolved scope note
+RAJ-005,Urban units,Rajshahi City Corporation / municipalities,May be mixed with union lists,District and BBS sources,Municipal wards excluded from union count,Resolved scope note

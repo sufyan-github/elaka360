@@ -1,0 +1,47 @@
+[
+  {
+    "source_id": "SRC-BOG-DIST-109-2024",
+    "title": "বগুড়া জেলার ১০৯ টি ইউনিয়নের তালিকা",
+    "owner": "Bogura District Administration",
+    "url": "https://bogura.gov.bd/pages/static-pages/697fbb3f35ce18e1c06cd351",
+    "vintage": "Updated 2024-08-20",
+    "claim": "Official portal page title states 109; indexed page exposes upazila and Bangla/English union-name columns.",
+    "limitations": "Full page could not be retrieved in this run; complete row extraction/count audit pending."
+  },
+  {
+    "source_id": "SRC-BOG-DIST-108",
+    "title": "বগুড়া জেলার ১০৮ টি ইউনিয়নের তালিকা",
+    "owner": "Bogura District Administration",
+    "url": "https://www.bogra.gov.bd/bn/site/page/rrJ8",
+    "vintage": "Not confirmed",
+    "claim": "A separate official district portal page title states 108.",
+    "limitations": "Conflicts with the other official portal page; complete row extraction/count audit pending."
+  },
+  {
+    "source_id": "SRC-BOG-UP-2025",
+    "title": "ইউপি চেয়ারম্যানগণের নাম ও মোবাইল নাম্বার",
+    "owner": "Bogura District Administration",
+    "url": "https://bogura.gov.bd/pages/static-pages/697f800f35ce18e1c06b660b",
+    "vintage": "Updated 2025-11-19",
+    "claim": "Operational UP directory associates upazila and union names.",
+    "limitations": "Personal contact details excluded; completeness and name spelling need review."
+  },
+  {
+    "source_id": "SRC-LGD-BOG-UPAZILA",
+    "title": "উপজেলা পরিষদের তালিকা",
+    "owner": "Local Government Division",
+    "url": "https://lgd.gov.bd/pages/static-pages/6941401ec4774958d7b54a3f",
+    "vintage": "Crawled 2026",
+    "claim": "Lists 12 Bogura upazilas.",
+    "limitations": "Upazila list only, not union register."
+  },
+  {
+    "source_id": "SRC-BBS-BOG-2011",
+    "title": "BBS Statistical Pocket Book 2016, Table 3.01",
+    "owner": "Bangladesh Bureau of Statistics",
+    "url": "https://bbs.portal.gov.bd/",
+    "vintage": "2011 data; published March 2017",
+    "claim": "Historical baseline: Bogra code 50-10; 12 upazila/thana; 108 unions.",
+    "limitations": "Historical snapshot, not current union register."
+  }
+]

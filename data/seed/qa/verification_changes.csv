@@ -1,0 +1,10 @@
+﻿level,evidence_level,before_verified,before_production_eligible,after_verified,after_production_eligible,records
+city_corporation,secondary,True,True,False,True,13
+country,secondary,True,True,False,True,1
+district,secondary,True,True,False,True,64
+division,secondary,True,True,False,True,8
+pourashava,unverified,False,False,False,False,14
+union,community,True,True,False,False,4537
+union,secondary,False,False,False,False,1
+upazila,community,True,True,False,False,485
+upazila,secondary,True,True,False,True,10

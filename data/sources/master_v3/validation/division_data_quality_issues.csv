@@ -1,0 +1,11 @@
+﻿issue_id,district,dimension,observed_issue,severity,required_action
+DQ-001,Rajshahi,District/Bagha count,71 vs 72; Bagha 6 vs 7,Open,Obtain current district-wide official union roster and Bagha gazette/order.
+DQ-002,Natore,Upazila distribution,Official 52 total; secondary source redistributes counts,Open,Verify each union name and parent against current LGD/district list.
+DQ-003,Naogaon,Upazila distribution,99 total; Sadar/Badalgachhi 12/8 vs secondary 13/9,Open,Resolve current parent assignments; compare all 99 names.
+DQ-004,Chapainawabganj,District count,45 vs secondary 46; Gomastapur 8 vs 9,Open,Retrieve full current district/election office union schedule.
+DQ-005,Bogura,District count/restructuring,Official portal variants 108 vs 109; Mokamtala/new union reports,Critical,"Retrieve NICAR order, original gazette and final rename orders before current count."
+DQ-006,Joypurhat,District count,Official/BBS 32 vs secondary 34,Open,Resolve Kalai/Khetlal distribution from current official union list.
+DQ-007,Pabna,Census count,BBS 2011 73 vs BBS 2022 74; extra unit unallocated,Critical,Extract complete BBS 2022 schedule and current LGD list.
+DQ-008,Sirajganj,District count,Current baseline 83 vs BBS 2011 82; +1 unit identity unknown,Critical,Retrieve current official roster and identify legal change since 2011.
+DQ-009,All districts,Identifiers,Historical BBS codes and candidate records are not current LGD IDs,Critical,Do not load into production; map to current official IDs with source-backed crosswalk.
+DQ-010,All districts,Evidence completeness,No district in this audit has complete current name+parent+ID evidence for every union,Critical,Complete row-level official verification before production import.

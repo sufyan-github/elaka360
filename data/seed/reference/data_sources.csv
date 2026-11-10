@@ -3,14 +3,14 @@
 2,CITYPOP_ADJ,BBS Census 2022 (adjusted) via citypopulation.de,https://citypopulation.de/en/bangladesh/
 3,CITYPOP_RAJ,"BBS Census 2022 (enumerated) via citypopulation.de, Rajshahi district page",https://citypopulation.de/en/bangladesh/admin/81__rajshahi/
 4,WIKI_RAJ,Wikipedia: Rajshahi District,https://en.wikipedia.org/wiki/Rajshahi_District
-5,WIKI_CC,Wikipedia: List of city corporations in Bangladesh (Mar 2026 snapshot),https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/City_Councils_of_Bangladesh
-6,WIKI_ADMIN,Wikipedia: Administrative geography of Bangladesh (Mar 2026 snapshot),https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/Subdivisions_of_Bangladesh
+5,WIKI_CC,Wikipedia: List of city corporations in Bangladesh (Mar 2026 snapshot),https://en.wikipedia.org/wiki/List_of_city_corporations_in_Bangladesh
+6,WIKI_ADMIN,Wikipedia: Administrative geography of Bangladesh (Mar 2026 snapshot),https://en.wikipedia.org/wiki/Administrative_geography_of_Bangladesh
 7,FE_BOGURA,"The Financial Express, 15 May 2026: Bogura becomes city corporation",https://today.thefinancialexpress.com.bd/last-page/bogura-becomes-city-corporation-1778866247
 8,WIKI_SHAY,Wikipedia: Shayestaganj Upazila,https://en.wikipedia.org/wiki/Shayestaganj_Upazila
 9,FE_102,"The Financial Express, 6 Jun 2024: Fire service launches new hotline 102",https://thefinancialexpress.com.bd/national/fire-service-launches-new-hotline-number-102
 10,WIKI_TEL,Wikipedia: Telephone numbers in Bangladesh,https://en.wikipedia.org/wiki/Telephone_numbers_in_Bangladesh
 11,WIKI_RU,Wikipedia: University of Rajshahi,https://en.wikipedia.org/wiki/University_of_Rajshahi
-12,WIKI_RUET,Wikipedia: RUET (Mar 2026 snapshot),https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/RUET
+12,WIKI_RUET,Wikipedia: RUET (Mar 2026 snapshot),https://en.wikipedia.org/wiki/Rajshahi_University_of_Engineering_%26_Technology
 13,WIKI_RMC,Wikipedia: Rajshahi Medical College,https://en.wikipedia.org/wiki/Rajshahi_Medical_College
 14,WIKI_PUTHIA,Wikipedia: Puthia Rajbari,https://en.wikipedia.org/wiki/Puthia_Rajbari
 15,BANGLAPEDIA_PUTHIA,Banglapedia: Puthia,https://en.banglapedia.org/index.php/Puthia
@@ -18,3 +18,5 @@
 17,RU_VRM,University of Rajshahi: Varendra Research Museum,https://www.ru.ac.bd/facilities/varendra-research-museum/
 18,MOCKUP,"Elaka360 UI mockups (design placeholder, not a fact source)",
 19,UNVERIFIED,General knowledge — not checked against a primary source in this build,
+20,NATORE_DC_2026,Natore District Administration: এক নজরে নাটোর (52 unions; Naldanga 5),https://natore.gov.bd/pages/static-pages/697fbb1d35ce18e1c06cc346
+21,MASTER_V3,"Elaka360 Consolidated Master v3.0 (project reconciliation package, non-production)",
