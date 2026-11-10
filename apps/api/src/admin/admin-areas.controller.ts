@@ -83,11 +83,18 @@ export class AdminAreasController {
         await q.many(`UPDATE admin_areas SET production_eligible = false, evidence_level = 'unverified', verified = false,
                       verification_notes = 'Renamed; needs re-verification' WHERE id = $1 AND production_eligible`, [id]);
       }
+      // Optional fields: absent = keep, null or "" = clear, value = set.
+      const has = (k: string) => Object.prototype.hasOwnProperty.call(b, k);
+      if ((b.lat == null) !== (b.lon == null) && (has('lat') || has('lon'))) throw new BadRequestException('lat and lon go together');
       await q.many(
-        `UPDATE admin_areas SET name_bn = COALESCE($2, name_bn), name_en = COALESCE($3, name_en), bbs_code = COALESCE($4, bbs_code),
-           website = COALESCE($5, website), notes = COALESCE($6, notes), status = COALESCE($7::record_status, status),
-           lat = COALESCE($8, lat), lon = COALESCE($9, lon), updated_at = now() WHERE id = $1`,
-        [id, name_bn, name_en, bbs, website, notes, status, lat, lon]);
+        `UPDATE admin_areas SET name_bn = COALESCE($2, name_bn), name_en = COALESCE($3, name_en),
+           bbs_code = CASE WHEN $10::boolean THEN $4 ELSE bbs_code END,
+           website = CASE WHEN $11::boolean THEN $5 ELSE website END,
+           notes = CASE WHEN $12::boolean THEN $6 ELSE notes END,
+           status = COALESCE($7::record_status, status),
+           lat = CASE WHEN $13::boolean THEN $8 ELSE lat END, lon = CASE WHEN $13::boolean THEN $9 ELSE lon END,
+           updated_at = now() WHERE id = $1`,
+        [id, name_bn, name_en, bbs, website, notes, status, lat, lon, has('bbs_code'), has('website'), has('notes'), has('lat') || has('lon')]);
       if (b.parent_id !== undefined) {
         const parentId = idParam(String(b.parent_id), 'parent_id');
         const parent = await q.one<{ id: number; level: string; path: string }>('SELECT id::int, level::text, path FROM admin_areas WHERE id = $1', [parentId]);

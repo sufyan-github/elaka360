@@ -48,7 +48,7 @@ export const ADMIN_PLACE_COLS = `p.id::int, p.public_id, p.slug, p.name_bn, p.na
   p.address_bn, p.address_en, p.postcode, p.lat::float8, p.lon::float8, p.phones, p.email, p.website, p.established,
   p.description_bn, p.description_en, p.attributes, p.opening_hours, p.status::text, p.verification_status::text,
   p.evidence_level::text, p.production_eligible, p.evidence_source_id::int, es.key AS evidence_source_key, p.verification_notes,
-  p.source_notes, to_char(p.updated_at, 'YYYY-MM-DD"T"HH24:MI:SSZ') AS updated_at, a.path AS area_path`;
+  p.source_notes, p.data_source_id::int, to_char(p.updated_at, 'YYYY-MM-DD"T"HH24:MI:SSZ') AS updated_at, a.path AS area_path`;
 
 export const ADMIN_PLACE_JOINS = `
 FROM places p JOIN categories c ON c.id = p.category_id LEFT JOIN categories sc ON sc.id = p.subcategory_id
@@ -93,7 +93,7 @@ SELECT rr.id::int, rr.reason, rr.status, to_char(rr.created_at, 'YYYY-MM-DD"T"HH
        au.name AS author_name, ru.name AS reporter_name
 FROM review_reports rr JOIN reviews r ON r.id = rr.review_id JOIN places p ON p.id = r.place_id
 JOIN users au ON au.id = r.user_id JOIN users ru ON ru.id = rr.reporter_id
-WHERE ($1::text IS NULL OR rr.status = $1) ORDER BY rr.created_at LIMIT 200`;
+WHERE ($1::text IS NULL OR rr.status = $1) ORDER BY rr.created_at DESC LIMIT 200`;
 
 /** $1 q|null $2 role|null $3 limit $4 offset */
 export const ADMIN_USERS_SQL = `

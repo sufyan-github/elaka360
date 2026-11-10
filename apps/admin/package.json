@@ -1,0 +1,30 @@
+{
+  "name": "@elaka360/admin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "build": "next build",
+    "start": "next start -p 3001",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint app components lib middleware.ts",
+    "test": "echo 'admin: no unit tests yet'"
+  },
+  "dependencies": {
+    "@elaka360/shared": "workspace:*",
+    "@elaka360/ui": "workspace:*",
+    "lucide-react": "^0.460.0",
+    "next": "^15.3.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.8.0"
+  }
+}

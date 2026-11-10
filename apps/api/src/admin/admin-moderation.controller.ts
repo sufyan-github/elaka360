@@ -31,10 +31,12 @@ export class AdminModerationController {
   @Get('contributions/:id')
   @RequireAuth('contributions.moderate')
   async get(@CurrentUser() u: AuthUser, @Param('id') id: string) {
-    const scope = await this.db.one<{ area_path: string | null }>('SELECT area_path FROM contributions WHERE id = $1', [idParam(id)]);
-    if (!scope) throw new NotFoundException('contribution not found');
-    assertInScope(u, scope.area_path);
-    return this.contributions.get(idParam(id), null);
+    const meta = await this.db.one<{ area_path: string | null }>(
+      `SELECT c.area_path, c.priority, c.target_place_id::int, u.id::int AS submitter_id, u.name AS submitter_name
+       FROM contributions c JOIN users u ON u.id = c.user_id WHERE c.id = $1`, [idParam(id)]);
+    if (!meta) throw new NotFoundException('contribution not found');
+    assertInScope(u, meta.area_path);
+    return { ...(await this.contributions.get(idParam(id), null)), ...meta };
   }
 
   @Post('contributions/:id/decision')
@@ -101,7 +103,7 @@ export class AdminModerationController {
   @Get('review-reports')
   @RequireAuth('reviews.moderate')
   async reports(@Query('status') status?: string) {
-    return { items: await this.db.many(Q.ADMIN_REVIEW_REPORTS_SQL, [status || 'open']) };
+    return { items: await this.db.many(Q.ADMIN_REVIEW_REPORTS_SQL, [status === 'all' ? null : status || 'open']) };
   }
 
   @Post('review-reports/:id/decision')
