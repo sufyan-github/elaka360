@@ -1,6 +1,8 @@
 ﻿area,gap,fix
-unions,"~30–37 unions missing vs the official 4,571–4,578 (dataset has 4,541).",Import the LGD/BBS union list and reconcile by geocode.
-unions,"New upazilas Eidgaon, Madhyanagar, Dasar, Guimara and Naldanga have 0 unions; their unions still sit under the parent upazilas.",Re-parent unions per the creation gazettes.
+unions,"~33–40 unions missing vs the official 4,571–4,578 (seed has 4,538 after removing 3 duplicates). All unions are community data and not published.",Import the LGD/BBS union list and reconcile by geocode.
+verification,No record has official (Tier 1) evidence yet; published areas and places rest on secondary sources.,Verify against LGD/BBS/gazette sources in the admin verification centre.
+master v3.0,"Seed and Consolidated Master v3.0 differ in Sirajganj (82 vs 83), Bogura (Gabtali/Sonatala), Rajshahi Bagha (Chakrajapur) and Chapainawabganj (5 names each way).",See docs/data/UNRESOLVED_CONFLICTS.md; resolve with primary evidence.
+unions,"New upazilas Eidgaon, Madhyanagar, Dasar and Guimara have 0 unions; their unions still sit under the parent upazilas (Naldanga fixed Nov 2026 from the Natore district portal).",Re-parent unions per the creation gazettes.
 unions,Shayestaganj union and Nurpur were moved to Shayestaganj Upazila; Brahmandura was added without a source id.,Confirm against LGD.
 upazilas,No coordinates or boundaries for upazilas/unions.,Use the BBS/HDX admin boundary sets (ADM3/ADM4).
 codes,BBS geocodes are filled for divisions only.,Add district/upazila/union geocodes from BBS.
