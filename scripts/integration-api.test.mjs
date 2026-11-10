@@ -4,6 +4,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { execFileSync } from 'node:child_process';
+import { createHmac } from 'node:crypto';
 
 const API = process.env.API_URL ?? 'http://localhost:4000';
 const run = Date.now() % 100000;
@@ -28,6 +29,35 @@ async function login(p, name) {
   const v = await call('POST', '/v1/auth/otp/verify', { body: { phone: p, code: r.json.dev_code, name } });
   assert.equal(v.status, 200, JSON.stringify(v.json));
   return v.json;
+}
+
+/** RFC 6238 TOTP, as an authenticator app would compute it. */
+function totp(base32, offsetSteps = 0) {
+  const A = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ234567';
+  let bits = 0, value = 0;
+  const bytes = [];
+  for (const ch of base32) {
+    value = (value << 5) | A.indexOf(ch);
+    bits += 5;
+    if (bits >= 8) { bytes.push((value >>> (bits - 8)) & 255); bits -= 8; }
+  }
+  const counter = Buffer.alloc(8);
+  counter.writeBigUInt64BE(BigInt(Math.floor(Date.now() / 30000) + offsetSteps));
+  const h = createHmac('sha1', Buffer.from(bytes)).update(counter).digest();
+  const o = h[h.length - 1] & 15;
+  return String((((h[o] & 127) << 24) | (h[o + 1] << 16) | (h[o + 2] << 8) | h[o + 3]) % 1e6).padStart(6, '0');
+}
+
+/** Sign in as staff; completes 2FA enrolment when the server requires it. Returns tokens + the TOTP secret. */
+async function staffLogin(p, name, role, scope) {
+  await login(p, name);
+  grant(p, role, scope);
+  const t = await login(p, name);
+  if (!t.user.mfa_required) return { ...t, secret: null };
+  const setup = await call('POST', '/v1/me/2fa/setup', { token: t.access_token });
+  const en = await call('POST', '/v1/me/2fa/enable', { token: t.access_token, body: { code: totp(setup.json.secret) } });
+  assert.equal(en.status, 200, JSON.stringify(en.json));
+  return { ...t, secret: setup.json.secret };
 }
 
 function grant(p, role, scope) {
@@ -148,10 +178,7 @@ test('moderation + verification follow the trust policy and are audited', async 
   });
   assert.equal(c.status, 201, JSON.stringify(c.json));
 
-  const modPhone = phone(5);
-  await login(modPhone, 'Moderator');
-  grant(modPhone, 'data_admin', 'rajshahi');
-  const mod = await login(modPhone, 'Moderator');
+  const mod = await staffLogin(phone(5), 'Moderator', 'data_admin', 'rajshahi');
   assert.ok(mod.user.permissions.includes('contributions.moderate'));
 
   const queue = await call('GET', '/v1/admin/contributions?status=new', { token: mod.access_token });
@@ -189,4 +216,105 @@ test('moderation + verification follow the trust policy and are audited', async 
   assert.equal(dhaka.status, 403);
   // cannot moderate own contribution, cannot change own role
   assert.equal((await call('PATCH', `/v1/admin/users/${mod.user.id}`, { token: mod.access_token, body: { role: 'super_admin', reason: 'self promote' } })).status, 403);
+});
+
+test('staff two-factor authentication: enrol, verify per session, recovery codes, disable', async () => {
+  const p = phone(6);
+  await login(p, 'Two Factor');
+  grant(p, 'analyst');
+  const t = await login(p, 'Two Factor');
+  assert.equal(t.user.mfa_enabled, false);
+  const setup = await call('POST', '/v1/me/2fa/setup', { token: t.access_token });
+  assert.match(setup.json.secret, /^[A-Z2-7]{32}$/);
+  assert.match(setup.json.otpauth_uri, /^otpauth:\/\/totp\/Elaka360/);
+  assert.equal((await call('POST', '/v1/me/2fa/enable', { token: t.access_token, body: { code: '000000' } })).status, 401);
+  const en = await call('POST', '/v1/me/2fa/enable', { token: t.access_token, body: { code: totp(setup.json.secret) } });
+  assert.equal(en.status, 200);
+  assert.equal(en.json.recovery_codes.length, 8);
+
+  // A new session starts unverified; staff routes are refused when the server requires 2FA.
+  const t2 = await login(p, 'Two Factor');
+  assert.equal(t2.user.mfa_enabled, true);
+  assert.equal(t2.user.mfa_verified, false);
+  const stats = await call('GET', '/v1/admin/stats', { token: t2.access_token });
+  if (t2.user.mfa_required) {
+    assert.equal(stats.status, 403);
+    assert.equal(stats.json.type, 'urn:elaka360:mfa-required');
+  }
+  assert.equal((await call('POST', '/v1/auth/2fa/verify', { token: t2.access_token, body: { code: '123456' } })).status, 401);
+  const rc = en.json.recovery_codes[0];
+  assert.equal((await call('POST', '/v1/auth/2fa/verify', { token: t2.access_token, body: { code: rc } })).status, 200, 'recovery code works once');
+  assert.equal((await call('GET', '/v1/me', { token: t2.access_token })).json.mfa_verified, true);
+  assert.equal((await call('GET', '/v1/admin/stats', { token: t2.access_token })).status, 200);
+  const t3 = await login(p, 'Two Factor');
+  assert.equal((await call('POST', '/v1/auth/2fa/verify', { token: t3.access_token, body: { code: rc } })).status, 401, 'recovery codes are single-use');
+  const off = await call('POST', '/v1/me/2fa/disable', { token: t3.access_token, body: { code: en.json.recovery_codes[1] } });
+  assert.equal(off.json.enabled, false);
+});
+
+test('duplicate detection: flags lookalikes, blocks publishing ≥95, staff decide', async () => {
+  const staff = await staffLogin(phone(7), 'Data Manager', 'data_admin', 'rajshahi');
+  const T = staff.access_token;
+  const created = await call('POST', '/v1/admin/places', {
+    token: T,
+    body: { name_bn: 'রাজশাহী বিশ্ববিদ্যালয়', name_en: 'University of Rajshahi', category_key: 'education.university', area_id: 30134, lat: 24.3701, lon: 88.6371 },
+  });
+  assert.equal(created.status, 201, JSON.stringify(created.json));
+  const original = created.json.possible_duplicates.find((d) => d.slug === 'university-of-rajshahi');
+  assert.ok(original, JSON.stringify(created.json.possible_duplicates));
+  assert.ok(original.score >= 95, `score ${original.score}`);
+
+  const sources = await call('GET', '/v1/admin/sources', { token: T });
+  const wiki = sources.json.items.find((s) => s.key === 'WIKI_RU');
+  const blocked = await call('POST', `/v1/admin/places/${created.json.id}/verify`, {
+    token: T, body: { evidence_level: 'secondary', evidence_source_id: wiki.id, production_eligible: true, verification_notes: 'try to publish copy' },
+  });
+  assert.equal(blocked.status, 400);
+  assert.match(blocked.json.detail, /suspected duplicate/);
+
+  const open = await call('GET', '/v1/admin/duplicates', { token: T });
+  const pair = open.json.items.find((d) => d.place_b?.id === created.json.id);
+  assert.ok(pair, 'pair listed for review');
+  const merged = await call('POST', `/v1/admin/duplicates/${pair.id}/decision`, { token: T, body: { decision: 'merged', note: 'Same university, created twice' } });
+  assert.equal(merged.status, 200);
+  const archived = await call('GET', `/v1/admin/places/${created.json.id}`, { token: T });
+  assert.equal(archived.json.status, 'archived', 'the copy is archived, the original kept');
+
+  // A contribution that looks like RUET is flagged for the moderator.
+  const user = await login(phone(8), 'Suggester');
+  const c = await call('POST', '/v1/contributions', {
+    token: user.access_token,
+    body: { type: 'new_place', payload: { name_bn: 'রাজশাহী প্রকৌশল ও প্রযুক্তি বিশ্ববিদ্যালয়', name_en: 'Rajshahi University of Engineering & Technology', category_key: 'education.university' },
+            lat: 24.3636, lon: 88.6281, confirmed_accurate: true, submit: true },
+  });
+  const detail = await call('GET', `/v1/admin/contributions/${c.json.id}`, { token: T });
+  assert.ok(detail.json.duplicates.some((d) => d.slug === 'ruet' && d.match_score >= 80), JSON.stringify(detail.json.duplicates));
+});
+
+test('open data: keyed, sourced-only, CSV, per-key rate limit, revocation', async () => {
+  const admin = await staffLogin(phone(9), 'Open Data Admin', 'national_admin');
+  const created = await call('POST', '/v1/admin/api-keys', { token: admin.access_token, body: { name: 'integration test', rate_per_min: 4 } });
+  assert.equal(created.status, 201, JSON.stringify(created.json));
+  const key = created.json.key;
+  assert.match(key, /^e360_/);
+  const od = (path) => fetch(API + path, { headers: { 'X-API-Key': key } });
+
+  assert.equal((await fetch(API + '/v1/open-data/areas')).status, 401, 'key required');
+  const areas = await od('/v1/open-data/areas?limit=500');
+  assert.equal(areas.status, 200);
+  const body = await areas.json();
+  assert.ok(body.license_notice.includes('CC BY-SA'));
+  assert.ok(body.items.length >= 95);
+  assert.ok(body.items.every((a) => a.evidence_level === 'official' || a.evidence_level === 'secondary'), 'sourced only');
+  const unions = await (await od('/v1/open-data/areas?level=union')).json();
+  assert.equal(unions.items.length, 0, 'community unions never exported, in any visibility mode');
+  const csv = await od('/v1/open-data/places?format=csv');
+  assert.match(csv.headers.get('content-type'), /text\/csv/);
+  assert.ok((await csv.text()).split('\r\n')[0].includes('public_id'));
+  assert.equal((await od('/v1/open-data/sources')).status, 200, 'fourth request is within rate_per_min 4');
+  assert.equal((await od('/v1/open-data/sources')).status, 429, 'fifth request in the minute exceeds rate_per_min 4');
+
+  const revoked = await call('DELETE', `/v1/admin/api-keys/${created.json.id}`, { token: admin.access_token });
+  assert.equal(revoked.status, 200);
+  assert.equal((await od('/v1/open-data/sources')).status, 401, 'revoked keys stop working');
 });

@@ -6,6 +6,7 @@ import { Db, type Queryable } from '../db/db.service';
 import { PlacesService } from '../places/places.service';
 import { CurrentUser, RequireAuth, type AuthUser } from '../common/auth/auth.guard';
 import { body, cursor, idParam, intParam, textField } from '../common/params';
+import { scaled } from '../common/throttle';
 
 const REVIEWS_SQL = `
 SELECT r.id::int, $2::text AS place_slug, r.rating, r.body, u.name AS author_name, (r.user_id = $3) AS is_own,
@@ -42,7 +43,7 @@ export class ReviewsController {
 
   @Post('places/:slug/reviews')
   @RequireAuth()
-  @Throttle({ default: { limit: 5, ttl: 60_000 } })
+  @Throttle({ default: { limit: scaled(5), ttl: 60_000 } })
   @ApiOperation({ summary: 'Add your review (one per place; 10 per day)' })
   async create(@Param('slug') slug: string, @CurrentUser() u: AuthUser, @Body() raw: unknown) {
     const b = body(raw);
@@ -88,7 +89,7 @@ export class ReviewsController {
   @Post('reviews/:id/report')
   @HttpCode(200)
   @RequireAuth()
-  @Throttle({ default: { limit: 10, ttl: 60_000 } })
+  @Throttle({ default: { limit: scaled(10), ttl: 60_000 } })
   @ApiOperation({ summary: 'Report a review for moderation' })
   async report(@Param('id') id: string, @CurrentUser() u: AuthUser, @Body() raw: unknown) {
     const reason = textField(body(raw), 'reason', { max: 500, min: 3, required: true });

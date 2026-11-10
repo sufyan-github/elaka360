@@ -24,6 +24,9 @@ import { AdminPlacesController } from './admin/admin-places.controller';
 import { AdminModerationController } from './admin/admin-moderation.controller';
 import { AdminSourcesUsersController } from './admin/admin-sources-users.controller';
 import { ContactController } from './content/contact.controller';
+import { MfaController } from './auth/mfa.controller';
+import { DuplicatesController } from './quality/duplicates.controller';
+import { ApiKeyGuard, ApiKeysController, OpenDataController } from './opendata/opendata.controller';
 
 @Module({ controllers: [GeoController], providers: [GeoService], exports: [GeoService] })
 export class GeoModule {}
@@ -34,7 +37,10 @@ export class PlacesModule {}
 @Module({ controllers: [SearchController, HealthController], providers: [SearchService] })
 export class SearchModule {}
 
-@Module({ controllers: [AuthController, MeController, ContactController], providers: [AuthService], exports: [AuthService] })
+@Module({ controllers: [OpenDataController, ApiKeysController], providers: [ApiKeyGuard] })
+export class OpenDataModule {}
+
+@Module({ controllers: [AuthController, MeController, ContactController, MfaController], providers: [AuthService], exports: [AuthService] })
 export class AccountsModule {}
 
 @Module({ controllers: [ContributionsController], providers: [ContributionsService], exports: [ContributionsService] })
@@ -42,7 +48,7 @@ export class ContributionsModule {}
 
 @Module({
   imports: [ContributionsModule],
-  controllers: [AdminAreasController, AdminPlacesController, AdminModerationController, AdminSourcesUsersController],
+  controllers: [AdminAreasController, AdminPlacesController, AdminModerationController, AdminSourcesUsersController, DuplicatesController],
 })
 export class AdminModule {}
 
@@ -50,7 +56,7 @@ export class AdminModule {}
   imports: [
     DbModule,
     ThrottlerModule.forRoot([{ name: 'default', ttl: 60_000, limit: Number(process.env.RATE_LIMIT_PER_MIN ?? 240) }]),
-    GeoModule, PlacesModule, SearchModule, AccountsModule, ContributionsModule, AdminModule,
+    GeoModule, PlacesModule, SearchModule, AccountsModule, ContributionsModule, AdminModule, OpenDataModule,
   ],
   providers: [
     { provide: APP_GUARD, useClass: ThrottlerGuard },

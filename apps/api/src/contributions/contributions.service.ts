@@ -3,6 +3,7 @@ import type { Contribution, ContributionStatus, ContributionType } from '@elaka3
 import { Db, audit, type Queryable } from '../db/db.service';
 import { LOCATE_SQL } from '../geo/geo.sql';
 import { enumField, normalisePath, textField, urlField } from '../common/params';
+import { findDuplicates, recordDuplicates } from '../quality/duplicates';
 
 export const TYPES: ContributionType[] = ['new_place', 'new_business', 'new_tourist_spot', 'area_info', 'photo', 'correction', 'report'];
 
@@ -67,6 +68,17 @@ export function validateEvidence(raw: unknown): { url: string; note?: string }[]
   });
 }
 
+/** Flag likely duplicates of a submitted new-place suggestion for staff review. */
+async function flagDuplicates(q: Queryable, id: number) {
+  const c = await q.one<{ type: ContributionType; payload: Record<string, unknown>; lat: number | null; lon: number | null }>(
+    'SELECT type::text, payload, lat::float8, lon::float8 FROM contributions WHERE id = $1', [id]);
+  if (!c || !PLACE_TYPES.has(c.type) || typeof c.payload.name_bn !== 'string') return;
+  const cat = await q.one<{ top: number }>('SELECT COALESCE(parent_id, id) AS top FROM categories WHERE key = $1', [String(c.payload.category_key)]);
+  if (!cat) return;
+  const m = await findDuplicates(q, { name_bn: c.payload.name_bn, name_en: typeof c.payload.name_en === 'string' ? c.payload.name_en : null, categoryId: cat.top, lat: c.lat, lon: c.lon });
+  await recordDuplicates(q, m, { contributionId: id });
+}
+
 @Injectable()
 export class ContributionsService {
   constructor(private readonly db: Db) {}
@@ -91,6 +103,7 @@ export class ContributionsService {
         [userId, type, target.placeId, target.areaId, JSON.stringify(payload), JSON.stringify(evidence), lat, lon, confirmed, status, target.path]);
       await q.many(`INSERT INTO contribution_events(contribution_id, actor_id, from_status, to_status) VALUES ($1,$2,NULL,$3)`, [row!.id, userId, status]);
       await audit(q, { actor: userId, action: submit ? 'contribution.submit' : 'contribution.draft', entity: 'contribution', entityId: row!.id });
+      if (submit) await flagDuplicates(q, row!.id);
       return this.get(row!.id, userId, q);
     });
   }
@@ -124,6 +137,7 @@ export class ContributionsService {
       await q.many(`UPDATE contributions SET status = 'new', updated_at = now() WHERE id = $1`, [id]);
       await q.many(`INSERT INTO contribution_events(contribution_id, actor_id, from_status, to_status) VALUES ($1,$2,$3,'new')`, [id, userId, cur.status]);
       await audit(q, { actor: userId, action: 'contribution.submit', entity: 'contribution', entityId: id });
+      await flagDuplicates(q, id);
       return this.get(id, userId, q);
     });
   }

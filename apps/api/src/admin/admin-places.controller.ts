@@ -6,6 +6,8 @@ import { CurrentUser, RequireAuth, assertInScope, type AuthUser, type AuthedRequ
 import { body, floatParam, idParam, intParam, textField, urlField } from '../common/params';
 import * as Q from './admin.sql';
 import { EVIDENCE, boolQuery, page, paged, readVerify } from './admin.util';
+import { findDuplicates, recordDuplicates } from '../quality/duplicates';
+import { DUP_BLOCKING_SQL } from '../quality/duplicates.sql';
 
 const STATUSES = ['draft', 'active', 'inactive', 'closed', 'archived'];
 const OWNERSHIP = ['public', 'private', 'ngo', 'trust', 'autonomous'];
@@ -86,9 +88,12 @@ export class AdminPlacesController {
          f.area?.division_id ?? null, f.area?.district_id ?? null, f.area?.upazila_id ?? null, f.area?.union_id ?? null, f.area?.city_corporation_id ?? null,
          f.v.address_bn, f.v.address_en, f.v.postcode, f.v.lat, f.v.lon, f.v.phones ?? [], f.v.email, f.v.website, f.v.established,
          f.v.description_bn, f.v.description_en, f.v.opening_hours ? JSON.stringify(f.v.opening_hours) : null, f.v.data_source_id, f.v.source_notes, u.id]);
+      const dups = await findDuplicates(q, { name_bn: String(f.v.name_bn), name_en: (f.v.name_en as string | null) ?? null, categoryId: f.cat!.category_id,
+                                            lat: (f.v.lat as number | null) ?? null, lon: (f.v.lon as number | null) ?? null, excludeId: row!.id });
+      await recordDuplicates(q, dups, { placeId: row!.id });
       const after = await q.one(Q.ADMIN_PLACE_SQL, [row!.id]);
       await audit(q, { actor: u.id, action: 'place.create', entity: 'place', entityId: row!.id, after, requestId: req.id, ip: req.ip });
-      return after;
+      return { ...(after as object), possible_duplicates: dups };
     });
   }
 
@@ -136,6 +141,10 @@ export class AdminPlacesController {
       if (!before) throw new NotFoundException('place not found');
       assertInScope(u, before.area_path);
       const v = await readVerify(q, body(raw));
+      if (v.production_eligible) {
+        const blocking = await q.many<{ id: number; match_score: number }>(DUP_BLOCKING_SQL, [id]);
+        if (blocking.length) throw new BadRequestException(`suspected duplicate (score ${blocking[0]!.match_score}); resolve it under Duplicates before publishing`);
+      }
       await q.many(
         `UPDATE places SET evidence_level = $2::evidence_level, evidence_source_id = $3, production_eligible = $4, verification_notes = $5,
            verification_status = CASE WHEN $2::text IN ('official','secondary') THEN 'verified' ELSE 'pending' END::verification_status,

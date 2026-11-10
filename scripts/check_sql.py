@@ -41,7 +41,7 @@ PARAMS = {
     "AREA_DOCS_SQL": [],
     "PLACE_DOCS_SQL": [],
     # accounts
-    "ME_SQL": ["1"],
+    "ME_SQL": ["1", "NULL"],
     "MY_REVIEWS_SQL": ["1"],
     "EVENTS_SQL": ["1"],
     # admin
@@ -55,13 +55,22 @@ PARAMS = {
     "ADMIN_CONTRIBUTIONS_SQL": ["NULL", "NULL", "NULL", "50", "0"],
     "ADMIN_REVIEW_REPORTS_SQL": ["'open'"],
     "ADMIN_USERS_SQL": ["NULL", "NULL", "50", "0"],
+    # quality
+    "DUP_MATCH_SQL": ["'রাজশাহী বিশ্ববিদ্যালয়'", "'University of Rajshahi'", "1", "24.37", "88.637", "NULL"],
+    "DUP_LIST_SQL": ["NULL", "50", "0"],
+    "DUP_BLOCKING_SQL": ["1"],
+    # open data
+    "OD_AREAS_SQL": ["NULL", "1000", "0"],
+    "OD_PLACES_SQL": ["NULL", "1000", "0"],
+    "OD_SOURCES_SQL": [],
+    "OD_KEYS_LIST_SQL": [],
 }
 EXPECT_ROWS = {  # minimum rows each statement must return on the seed (public = production-eligible only)
     "AREA_DETAIL_SQL": 1, "CHILDREN_SQL": 9, "LIST_SQL": 8, "PLACE_NEARBY_SQL": 4, "PLACE_DETAIL_SQL": 1, "EMERGENCY_SQL": 7,
     "AREA_SEARCH_SQL": 1, "CATEGORIES_SQL": 95, "BREADCRUMB_SQL": 4, "PLACE_LIST_SQL": 2, "PLACE_COUNT_SQL": 1, "AREA_DOCS_SQL": 95,
     "PLACE_GEO_SQL": 5, "PLACE_DOCS_SQL": 5, "TREE_SQL": 73, "LOCATE_SQL": 1, "BOUNDARY_SQL": 1, "SUGGEST_SQL": 1,
     "ADMIN_STATS_SQL": 1, "ADMIN_AREA_LIST_SQL": 8, "ADMIN_AREA_SQL": 1, "ADMIN_PLACE_LIST_SQL": 8, "ADMIN_PLACE_SQL": 1, "ADMIN_SOURCES_SQL": 20,
-    "PLACE_ID_SQL": 1,
+    "PLACE_ID_SQL": 1, "DUP_MATCH_SQL": 1, "OD_AREAS_SQL": 95, "OD_PLACES_SQL": 5, "OD_SOURCES_SQL": 5,
 }
 
 consts = {}

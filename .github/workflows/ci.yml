@@ -41,6 +41,8 @@ jobs:
       # Test-only settings: OTP codes are returned in API responses (refused when NODE_ENV=production).
       SMS_PROVIDER: dev
       OTP_RATE_PER_MIN: "200"
+      OTP_PER_PHONE_15M: "20"
+      THROTTLE_SCALE: "20"
       AUTH_JWT_SECRET: ci-only-secret-ci-only-secret-0000000
       TURBO_TELEMETRY_DISABLED: 1
       NEXT_TELEMETRY_DISABLED: 1
@@ -104,9 +106,9 @@ jobs:
           node scripts/smoke-api.mjs
           node --test scripts/integration-api.test.mjs
 
-      - name: API smoke + integration tests (strict visibility)
+      - name: API smoke + integration tests (strict visibility, staff 2FA required)
         run: |
-          PUBLIC_INCLUDE_UNVERIFIED=false API_PORT=4001 node apps/api/dist/main.js > api-strict.log 2>&1 &
+          PUBLIC_INCLUDE_UNVERIFIED=false STAFF_REQUIRE_2FA=true API_PORT=4001 node apps/api/dist/main.js > api-strict.log 2>&1 &
           for i in $(seq 1 30); do curl -sf http://localhost:4001/health && break; sleep 1; done
           API_URL=http://localhost:4001 node scripts/smoke-api.mjs
           API_URL=http://localhost:4001 node --test scripts/integration-api.test.mjs

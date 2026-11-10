@@ -179,6 +179,49 @@ export async function decideReport(id: number, prev: ActionState, fd: FormData):
     decision === 'uphold' ? 'রিপোর্ট বহাল, রিভিউ লুকানো হয়েছে · upheld' : 'রিপোর্ট খারিজ · dismissed', '/review-reports');
 }
 
+/* ---------------- duplicates ---------------- */
+
+export async function decideDuplicate(id: number, prev: ActionState, fd: FormData): Promise<ActionState> {
+  const bad = await guard();
+  if (bad) return bad;
+  const decision = str(fd, 'decision');
+  const note = str(fd, 'note');
+  if (!['merged', 'kept_separate', 'not_duplicate', 'needs_more_review'].includes(decision)) return { ok: false, error: 'invalid decision' };
+  if (note.length < 3) return { ok: false, error: 'সিদ্ধান্তের নোট লিখুন (কমপক্ষে ৩ অক্ষর) · note is required' };
+  return done(await apiSend('POST', `/v1/admin/duplicates/${id}/decision`, { decision, note }), prev, 'সিদ্ধান্ত সংরক্ষিত · decision saved', '/duplicates');
+}
+
+export async function scanDuplicates(prev: ActionState): Promise<ActionState> {
+  const bad = await guard();
+  if (bad) return bad;
+  const r = await apiSend<{ scanned: number; new_pairs: number }>('POST', '/v1/admin/duplicates/scan', {});
+  if (!r.ok) return { ok: false, error: r.error, n: (prev.n ?? 0) + 1 };
+  revalidatePath('/duplicates');
+  return { ok: true, message: `${r.data.scanned}টি স্থান পরীক্ষা হয়েছে; নতুন সম্ভাব্য জোড়া ${r.data.new_pairs}টি`, n: (prev.n ?? 0) + 1 };
+}
+
+/* ---------------- open data keys ---------------- */
+
+export interface KeyState extends ActionState { key?: string }
+
+export async function createApiKey(prev: KeyState, fd: FormData): Promise<KeyState> {
+  const bad = await guard();
+  if (bad) return bad;
+  const name = str(fd, 'name');
+  const rate = Number(str(fd, 'rate_per_min') || 60);
+  if (name.length < 3) return { ok: false, error: 'নাম লিখুন (কমপক্ষে ৩ অক্ষর)' };
+  const r = await apiSend<{ key: string }>('POST', '/v1/admin/api-keys', { name, rate_per_min: rate });
+  if (!r.ok) return { ok: false, error: r.error, n: (prev.n ?? 0) + 1 };
+  revalidatePath('/api-keys');
+  return { ok: true, key: r.data.key, message: 'কী তৈরি হয়েছে — এখনই কপি করুন, আর দেখানো হবে না', n: (prev.n ?? 0) + 1 };
+}
+
+export async function revokeApiKey(id: number, prev: ActionState): Promise<ActionState> {
+  const bad = await guard();
+  if (bad) return bad;
+  return done(await apiSend('DELETE', `/v1/admin/api-keys/${id}`), prev, 'কী বাতিল হয়েছে · revoked', '/api-keys');
+}
+
 /* ---------------- sources ---------------- */
 
 const SOURCE_TEXT = ['name', 'url', 'license', 'organization', 'evidence_notes', 'access_date', 'publication_date', 'source_type'] as const;

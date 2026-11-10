@@ -4,6 +4,7 @@ import { Throttle } from '@nestjs/throttler';
 import { ContributionsService } from './contributions.service';
 import { CurrentUser, RequireAuth, type AuthUser } from '../common/auth/auth.guard';
 import { body, idParam } from '../common/params';
+import { scaled } from '../common/throttle';
 
 @ApiTags('contributions')
 @Controller('v1')
@@ -12,7 +13,7 @@ export class ContributionsController {
   constructor(private readonly svc: ContributionsService) {}
 
   @Post('contributions')
-  @Throttle({ default: { limit: 10, ttl: 60_000 } })
+  @Throttle({ default: { limit: scaled(10), ttl: 60_000 } })
   @ApiOperation({ summary: 'Create a contribution as a draft, or submit it (submit: true + confirmed_accurate: true)' })
   create(@CurrentUser() u: AuthUser, @Body() raw: unknown) {
     return this.svc.create(u.id, body(raw));

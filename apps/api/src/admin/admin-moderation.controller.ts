@@ -36,7 +36,10 @@ export class AdminModerationController {
        FROM contributions c JOIN users u ON u.id = c.user_id WHERE c.id = $1`, [idParam(id)]);
     if (!meta) throw new NotFoundException('contribution not found');
     assertInScope(u, meta.area_path);
-    return { ...(await this.contributions.get(idParam(id), null)), ...meta };
+    const duplicates = await this.db.many(
+      `SELECT d.id::int, d.match_score::float8, d.status::text, d.match_detail, p.id::int AS place_id, p.slug, p.name_bn, p.name_en
+       FROM duplicate_candidates d JOIN places p ON p.id = d.place_a_id WHERE d.contribution_id = $1 ORDER BY d.match_score DESC`, [idParam(id)]);
+    return { ...(await this.contributions.get(idParam(id), null)), ...meta, duplicates };
   }
 
   @Post('contributions/:id/decision')

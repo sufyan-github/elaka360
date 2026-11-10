@@ -2,6 +2,7 @@ import { Controller, Get, Header, ServiceUnavailableException } from '@nestjs/co
 import { SkipThrottle } from '@nestjs/throttler';
 import { Db, INCLUDE_UNVERIFIED } from '../db/db.service';
 import { SearchService } from '../search/search.service';
+import { STAFF_REQUIRE_2FA } from '../common/auth/totp';
 
 @Controller('health')
 @SkipThrottle()
@@ -22,6 +23,7 @@ export class HealthController {
       db: { ok: true, ms: Date.now() - started },
       search: this.search.health(),
       public_include_unverified: INCLUDE_UNVERIFIED,
+      staff_require_2fa: STAFF_REQUIRE_2FA,
       version: process.env.APP_VERSION ?? 'dev',
     };
   }

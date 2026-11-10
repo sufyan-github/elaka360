@@ -74,6 +74,20 @@ export class AdminSourcesUsersController {
     return paged(rows, limit, offset);
   }
 
+  @Get('users/:id')
+  @RequireAuth('users.manage')
+  async user(@Param('id') idRaw: string) {
+    const row = await this.db.one(
+      `SELECT u.id::int, u.name, u.phone, u.email, u.role::text, u.status, u.scope_area_id::int, a.path AS scope_path, u.points, u.level,
+              u.totp_enabled_at IS NOT NULL AS mfa_enabled, to_char(u.created_at, 'YYYY-MM-DD') AS created_at,
+              to_char(u.last_login_at, 'YYYY-MM-DD"T"HH24:MI:SSZ') AS last_login_at, to_char(u.deletion_requested_at, 'YYYY-MM-DD') AS deletion_requested_at,
+              (SELECT count(*)::int FROM contributions c WHERE c.user_id = u.id) AS contributions,
+              (SELECT count(*)::int FROM reviews r WHERE r.user_id = u.id) AS reviews
+       FROM users u LEFT JOIN admin_areas a ON a.id = u.scope_area_id WHERE u.id = $1`, [idParam(idRaw)]);
+    if (!row) throw new NotFoundException('user not found');
+    return row;
+  }
+
   @Patch('users/:id')
   @RequireAuth('users.manage')
   @ApiOperation({ summary: 'Change role, geographic scope or status (only a super admin can grant super admin)' })

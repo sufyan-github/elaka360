@@ -187,6 +187,12 @@ export interface Me {
   created_at: string;
   deletion_requested_at: string | null;
   permissions: string[];
+  /** Authenticator (TOTP) set up for this account. */
+  mfa_enabled: boolean;
+  /** This session passed two-factor authentication. */
+  mfa_verified: boolean;
+  /** Staff features need a 2FA-verified session on this server. */
+  mfa_required: boolean;
 }
 
 export interface AuthTokens {

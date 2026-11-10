@@ -3,6 +3,7 @@ import { ErrorPanel } from '@/components/ui';
 import { getMeResult } from '@/lib/api';
 import { ROLE_LABEL } from '@/lib/labels';
 import { NAV, has } from '@/lib/nav';
+import { TwoFactorGate } from '@/components/TwoFactorGate';
 
 export const dynamic = 'force-dynamic';
 
@@ -29,6 +30,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
       </main>
     );
   }
+  if (me.mfa_required && !me.mfa_verified) return <TwoFactorGate enrolled={me.mfa_enabled} name={me.name} />;
   const nav = NAV.filter((n) => has(me.permissions, n.perm));
   const role = ROLE_LABEL[me.role] ?? { bn: me.role, en: me.role };
   return (

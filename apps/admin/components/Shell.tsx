@@ -4,13 +4,13 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState, type ReactNode } from 'react';
 import {
-  BookMarked, ClipboardCheck, Flag, History, LayoutDashboard, LogOut, MapPinned, Menu, MessageSquareWarning, Shield, Store, Users, X,
+  BookMarked, ClipboardCheck, Copy, KeyRound, Flag, History, LayoutDashboard, LogOut, MapPinned, Menu, MessageSquareWarning, Shield, Store, Users, X,
 } from 'lucide-react';
 import type { NavItem } from '@/lib/nav';
 
 const ICONS: Record<string, typeof Menu> = {
   dashboard: LayoutDashboard, verify: ClipboardCheck, areas: MapPinned, places: Store, moderation: MessageSquareWarning,
-  reports: Flag, sources: BookMarked, audit: History, users: Users,
+  reports: Flag, sources: BookMarked, audit: History, users: Users, duplicates: Copy, keys: KeyRound,
 };
 
 export function Shell({ nav, user, children }: { nav: NavItem[]; user: { name: string; role: string; roleEn: string; scope: string | null }; children: ReactNode }) {

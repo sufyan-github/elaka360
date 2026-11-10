@@ -7,14 +7,18 @@ import {
   parseRefreshToken, safeEqualHex, signAccess,
 } from '../common/auth/tokens';
 import { smsFromEnv } from './sms';
+import { STAFF_REQUIRE_2FA } from '../common/auth/totp';
 
 export const ME_SQL = `
 SELECT id::int, name, phone, email, role::text, points, level, home_area_id::int, scope_area_id::int, profile_public,
        to_char(created_at, 'YYYY-MM-DD"T"HH24:MI:SSZ') AS created_at,
-       to_char(deletion_requested_at, 'YYYY-MM-DD"T"HH24:MI:SSZ') AS deletion_requested_at
+       to_char(deletion_requested_at, 'YYYY-MM-DD"T"HH24:MI:SSZ') AS deletion_requested_at,
+       totp_enabled_at IS NOT NULL AS mfa_enabled,
+       COALESCE((SELECT mfa_at IS NOT NULL FROM sessions WHERE id = $2::uuid AND user_id = users.id), false) AS mfa_verified
 FROM users WHERE id = $1`;
 
-const OTP_PER_PHONE_15M = 3;
+/** Codes per phone number per 15 minutes. Raise OTP_PER_PHONE_15M only in test environments. */
+const OTP_PER_PHONE_15M = Number(process.env.OTP_PER_PHONE_15M ?? 3);
 /** Seconds the previous refresh token stays valid after rotation. */
 const ROTATION_GRACE_S = Number(process.env.AUTH_ROTATION_GRACE_S ?? 30);
 
@@ -111,13 +115,14 @@ export class AuthService {
     return { ok: true };
   }
 
-  async me(userId: number, q = this.db as Pick<Db, 'one'>): Promise<Me> {
-    const row = await q.one<Omit<Me, 'permissions'>>(ME_SQL, [userId]);
+  async me(userId: number, q = this.db as Pick<Db, 'one'>, sessionId: string | null = null): Promise<Me> {
+    const row = await q.one<Omit<Me, 'permissions' | 'mfa_required'>>(ME_SQL, [userId, sessionId]);
     if (!row) throw new UnauthorizedException('account not found');
-    return { ...row, permissions: [...(ROLE_PERMISSIONS[row.role] ?? [])] };
+    const permissions = [...(ROLE_PERMISSIONS[row.role] ?? [])];
+    return { ...row, permissions, mfa_required: STAFF_REQUIRE_2FA && permissions.length > 0 };
   }
 
   private async tokens(q: Pick<Db, 'one'>, userId: number, role: string, sessionId: string, refresh: string): Promise<AuthTokens & { refresh_token: string }> {
-    return { access_token: signAccess(userId, role, sessionId), refresh_token: refresh, expires_in: ACCESS_TTL_S, user: await this.me(userId, q) };
+    return { access_token: signAccess(userId, role, sessionId), refresh_token: refresh, expires_in: ACCESS_TTL_S, user: await this.me(userId, q, sessionId) };
   }
 }

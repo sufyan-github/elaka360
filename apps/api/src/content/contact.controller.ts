@@ -4,6 +4,7 @@ import { Throttle } from '@nestjs/throttler';
 import { Db } from '../db/db.service';
 import { CurrentUser, type AuthUser } from '../common/auth/auth.guard';
 import { body, textField } from '../common/params';
+import { scaled } from '../common/throttle';
 
 @ApiTags('content')
 @Controller('v1/contact')
@@ -12,7 +13,7 @@ export class ContactController {
 
   @Post()
   @HttpCode(201)
-  @Throttle({ default: { limit: 3, ttl: 60_000 } })
+  @Throttle({ default: { limit: scaled(3), ttl: 60_000 } })
   @ApiOperation({ summary: 'Send a message to the Elaka360 team (subject ≤ 120, message ≤ 1,000 characters)' })
   async send(@Body() raw: unknown, @CurrentUser() u?: AuthUser) {
     const b = body(raw);

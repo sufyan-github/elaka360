@@ -7,9 +7,11 @@ export const NAV: NavItem[] = [
   { href: '/areas', bn: 'এলাকা', en: 'Areas', perm: 'areas.read', icon: 'areas' },
   { href: '/places', bn: 'স্থান', en: 'Places', perm: 'places.read', icon: 'places' },
   { href: '/moderation', bn: 'মডারেশন', en: 'Moderation', perm: 'contributions.moderate', icon: 'moderation' },
+  { href: '/duplicates', bn: 'ডুপ্লিকেট', en: 'Duplicates', perm: 'places.read', icon: 'duplicates' },
   { href: '/review-reports', bn: 'রিভিউ রিপোর্ট', en: 'Review reports', perm: 'reviews.moderate', icon: 'reports' },
   { href: '/sources', bn: 'উৎস', en: 'Sources', perm: 'sources.read', icon: 'sources' },
   { href: '/audit', bn: 'অডিট লগ', en: 'Audit log', perm: 'audit.read', icon: 'audit' },
+  { href: '/api-keys', bn: 'ওপেন ডেটা কী', en: 'Open Data keys', perm: 'users.manage', icon: 'keys' },
   { href: '/users', bn: 'ব্যবহারকারী', en: 'Users', perm: 'users.manage', icon: 'users' },
 ];
 

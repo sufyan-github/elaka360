@@ -74,10 +74,28 @@ export function refreshTokens(refreshToken: string): Promise<RefreshResult> {
 /** Problem body for when the API cannot be reached. */
 export const UNREACHABLE = { type: 'about:blank', title: 'Bad Gateway', status: 502, detail: 'API সার্ভারে পৌঁছানো যাচ্ছে না (API unreachable); একটু পরে আবার চেষ্টা করুন।' };
 
+/**
+ * The browser's IP as seen by this server: X-Real-IP from our proxy, else the last X-Forwarded-For entry
+ * (the one our own proxy appended; earlier entries can be forged by the client). Null outside a request.
+ */
+async function clientIp(): Promise<string | null> {
+  try {
+    const { headers } = await import('next/headers');
+    const h = await headers();
+    return h.get('x-real-ip') || h.get('x-forwarded-for')?.split(',').at(-1)?.trim() || null;
+  } catch {
+    return null; // outside a request (e.g. build)
+  }
+}
+
 /** fetch() to the API that turns a network failure into a 502 Response instead of throwing. */
 export async function apiFetchRaw(path: string, init: RequestInit): Promise<Response> {
   try {
-    return await fetch(`${API_URL}${path}`, { cache: 'no-store', ...init });
+    // Forward the client IP so the API's per-IP limits apply to the person, not to this server.
+    const ip = await clientIp();
+    const h = new Headers(init.headers);
+    if (ip && /^[0-9a-fA-F:.]{3,45}$/.test(ip)) h.set('x-forwarded-for', ip);
+    return await fetch(`${API_URL}${path}`, { cache: 'no-store', ...init, headers: h, signal: init.signal ?? AbortSignal.timeout(8000) });
   } catch {
     return new Response(JSON.stringify(UNREACHABLE), { status: 502, headers: { 'content-type': 'application/problem+json' } });
   }

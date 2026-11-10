@@ -126,6 +126,23 @@ export default async function ContributionPage({ params }: { params: Promise<{ i
             </Card>
           )}
 
+          {(() => {
+            const dups = (c as unknown as { duplicates?: { id: number; match_score: number; status: string; place_id: number; name_bn: string; name_en: string | null }[] }).duplicates ?? [];
+            return dups.length ? (
+              <Card title="সম্ভাব্য ডুপ্লিকেট" en="Possible duplicates">
+                <ul className="divide-y divide-line text-sm">
+                  {dups.map((d) => (
+                    <li key={d.id} className="flex flex-wrap items-center justify-between gap-2 px-4 py-2">
+                      <Link href={`/places/${d.place_id}`} className="text-secondary hover:underline">{d.name_bn}{d.name_en ? ` · ${d.name_en}` : ''}</Link>
+                      <span className={d.match_score >= 95 ? 'text-danger' : 'text-warning'}>স্কোর {d.match_score} · {d.status}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="px-4 pb-3 text-xs text-muted">অনুমোদনের আগে <Link href="/duplicates" className="underline">ডুপ্লিকেট</Link> পাতায় সিদ্ধান্ত নিন।</p>
+              </Card>
+            ) : null;
+          })()}
+
           <Card title="প্রমাণ ও অবস্থান" en="Evidence & location">
             <div className="space-y-3 p-4 text-sm">
               {c.evidence?.length ? (

@@ -43,7 +43,7 @@ export class MeController {
 
   @Get()
   me(@CurrentUser() u: AuthUser) {
-    return this.auth.me(u.id);
+    return this.auth.me(u.id, undefined, u.session_id);
   }
 
   @Patch()
