@@ -84,9 +84,16 @@ test('auth: OTP, wrong code, refresh rotation, reuse revokes the session', async
   assert.equal(t.user.role, 'user');
   const r1 = await call('POST', '/v1/auth/refresh', { body: { refresh_token: t.refresh_token } });
   assert.equal(r1.status, 200);
+  // A concurrent refresh with the token just replaced is tolerated (grace window)...
+  const race = await call('POST', '/v1/auth/refresh', { body: { refresh_token: t.refresh_token } });
+  assert.equal(race.status, 200, 'concurrent refresh within the grace window');
+  assert.equal(race.json.refresh_token, null, 'the racing response must not replace the refresh token');
+  // ...but a token two rotations old is theft: the whole session is revoked.
+  const r2 = await call('POST', '/v1/auth/refresh', { body: { refresh_token: r1.json.refresh_token } });
+  assert.equal(r2.status, 200);
   const reuse = await call('POST', '/v1/auth/refresh', { body: { refresh_token: t.refresh_token } });
   assert.equal(reuse.status, 401);
-  const me = await call('GET', '/v1/me', { token: r1.json.access_token });
+  const me = await call('GET', '/v1/me', { token: r2.json.access_token });
   assert.equal(me.status, 401, 'reuse must revoke the whole session');
 });
 

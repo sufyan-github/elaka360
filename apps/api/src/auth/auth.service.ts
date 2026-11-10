@@ -15,6 +15,8 @@ SELECT id::int, name, phone, email, role::text, points, level, home_area_id::int
 FROM users WHERE id = $1`;
 
 const OTP_PER_PHONE_15M = 3;
+/** Seconds the previous refresh token stays valid after rotation. */
+const ROTATION_GRACE_S = Number(process.env.AUTH_ROTATION_GRACE_S ?? 30);
 
 @Injectable()
 export class AuthService {
@@ -74,17 +76,29 @@ export class AuthService {
     const parsed = typeof raw === 'string' ? parseRefreshToken(raw) : null;
     if (!parsed) throw new UnauthorizedException('invalid refresh token');
     const out = await this.db.tx(async (q) => {
-      const s = await q.one<{ user_id: number; refresh_hash: string; role: string; status: string }>(
-        `SELECT s.user_id::int, s.refresh_hash, u.role::text, u.status FROM sessions s JOIN users u ON u.id = s.user_id
-         WHERE s.id = $1 AND s.revoked_at IS NULL AND s.expires_at > now() FOR UPDATE OF s`, [parsed.sessionId]);
+      const s = await q.one<{ user_id: number; refresh_hash: string; prev_refresh_hash: string | null; in_grace: boolean; role: string; status: string }>(
+        `SELECT s.user_id::int, s.refresh_hash, s.prev_refresh_hash, (s.rotated_at > now() - make_interval(secs => $2)) AS in_grace,
+                u.role::text, u.status
+         FROM sessions s JOIN users u ON u.id = s.user_id
+         WHERE s.id = $1 AND s.revoked_at IS NULL AND s.expires_at > now() FOR UPDATE OF s`, [parsed.sessionId, ROTATION_GRACE_S]);
       if (!s || s.status !== 'active') throw new UnauthorizedException('session expired');
-      if (!safeEqualHex(s.refresh_hash, parsed.hash)) {
+      const current = safeEqualHex(s.refresh_hash, parsed.hash);
+      const racing = !current && !!s.prev_refresh_hash && s.in_grace && safeEqualHex(s.prev_refresh_hash, parsed.hash);
+      if (!current && !racing) {
         // Revoke in its own committed statement; throwing here would roll it back.
         await q.many('UPDATE sessions SET revoked_at = now() WHERE id = $1', [parsed.sessionId]);
         return 'reused' as const;
       }
+      if (racing) {
+        // A concurrent refresh from the same browser with the token that was just replaced: hand out a new
+        // access token only. The refresh token is left alone so the browser keeps the one it received first.
+        await q.many('UPDATE sessions SET last_used_at = now() WHERE id = $1', [parsed.sessionId]);
+        return { ...(await this.tokens(q, s.user_id, s.role, parsed.sessionId, '')), refresh_token: null };
+      }
       const rt = newRefreshToken(parsed.sessionId);
-      await q.many('UPDATE sessions SET refresh_hash = $2, last_used_at = now() WHERE id = $1', [parsed.sessionId, rt.hash]);
+      await q.many(
+        `UPDATE sessions SET prev_refresh_hash = refresh_hash, refresh_hash = $2, rotated_at = now(), last_used_at = now() WHERE id = $1`,
+        [parsed.sessionId, rt.hash]);
       return this.tokens(q, s.user_id, s.role, parsed.sessionId, rt.token);
     });
     if (out === 'reused') throw new UnauthorizedException('refresh token reused; session revoked');
@@ -103,7 +117,7 @@ export class AuthService {
     return { ...row, permissions: [...(ROLE_PERMISSIONS[row.role] ?? [])] };
   }
 
-  private async tokens(q: Pick<Db, 'one'>, userId: number, role: string, sessionId: string, refresh: string): Promise<AuthTokens> {
+  private async tokens(q: Pick<Db, 'one'>, userId: number, role: string, sessionId: string, refresh: string): Promise<AuthTokens & { refresh_token: string }> {
     return { access_token: signAccess(userId, role, sessionId), refresh_token: refresh, expires_in: ACCESS_TTL_S, user: await this.me(userId, q) };
   }
 }

@@ -23,6 +23,7 @@ import { AdminAreasController } from './admin/admin-areas.controller';
 import { AdminPlacesController } from './admin/admin-places.controller';
 import { AdminModerationController } from './admin/admin-moderation.controller';
 import { AdminSourcesUsersController } from './admin/admin-sources-users.controller';
+import { ContactController } from './content/contact.controller';
 
 @Module({ controllers: [GeoController], providers: [GeoService], exports: [GeoService] })
 export class GeoModule {}
@@ -33,7 +34,7 @@ export class PlacesModule {}
 @Module({ controllers: [SearchController, HealthController], providers: [SearchService] })
 export class SearchModule {}
 
-@Module({ controllers: [AuthController, MeController], providers: [AuthService], exports: [AuthService] })
+@Module({ controllers: [AuthController, MeController, ContactController], providers: [AuthService], exports: [AuthService] })
 export class AccountsModule {}
 
 @Module({ controllers: [ContributionsController], providers: [ContributionsService], exports: [ContributionsService] })

@@ -189,7 +189,8 @@ export interface Me {
 
 export interface AuthTokens {
   access_token: string;
-  refresh_token: string;
+  /** null when a concurrent refresh was answered within the rotation grace window: keep the current cookie. */
+  refresh_token: string | null;
   expires_in: number;
   user: Me;
 }
