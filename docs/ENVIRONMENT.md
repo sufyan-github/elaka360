@@ -11,6 +11,11 @@
 | `AUTH_ACCESS_TTL_S` / `AUTH_REFRESH_TTL_S` | 900 / 2592000 | Access token 15 min, refresh 30 days |
 | `SMS_PROVIDER` | unset | Unset: OTP requests return 503. `dev`: the code is returned in the response; refused when `NODE_ENV=production` |
 | `OTP_RATE_PER_MIN` | 5 | Per-IP OTP requests per minute. Raise only in tests |
+| `OTP_PER_PHONE_15M` | 3 | Codes per phone number per 15 minutes. Raise only in tests |
+| `STAFF_REQUIRE_2FA` | `true` when `NODE_ENV=production`, else `false` | Staff permissions need a session that passed TOTP two-factor authentication |
+| `AUTH_TOTP_KEY` | derived from `AUTH_JWT_SECRET` | Key (≥ 32 chars) for encrypting TOTP secrets at rest. **Set it in production** so rotating the JWT secret does not lock staff out |
+| `AUTH_ROTATION_GRACE_S` | 30 | Seconds the previous refresh token is accepted (parallel requests) |
+| `THROTTLE_SCALE` | 1 | Multiplies every per-route rate limit. Tests only |
 | `RATE_LIMIT_PER_MIN` | 240 | Global per-IP limit |
 | `PUBLIC_INCLUDE_UNVERIFIED` | `true` | Unverified records are shown publicly with warnings (product decision). `false` = strict: only sourced records. Hotlines are sourced-only in both modes. See `docs/data/DATA_TRUST_POLICY.md` |
 | `TYPESENSE_URL`, `TYPESENSE_API_KEY` | unset | Search falls back to Postgres when unset or down |

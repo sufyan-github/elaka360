@@ -24,7 +24,8 @@ Production deployment has **not** been performed from this repository. This is t
 
 1. `python3 pipelines/validate_seed.py` passes: no unsupported verification.
 2. CI green: lint, typecheck, unit, SQL check, integration, smoke, Playwright.
-3. `AUTH_JWT_SECRET` set; `SMS_PROVIDER` is a real gateway (not `dev`); `NODE_ENV=production`.
+3. `AUTH_JWT_SECRET` and `AUTH_TOTP_KEY` set; `SMS_PROVIDER` is a real gateway (not `dev`); `NODE_ENV=production` (which turns on `STAFF_REQUIRE_2FA`); `THROTTLE_SCALE`, `OTP_*` limits left at their defaults.
 4. `CORS_ORIGINS` lists only the web and admin origins; HTTPS everywhere.
 5. `/emergency` loads with the API stopped.
-6. Open conflicts in `docs/data/UNRESOLVED_CONFLICTS.md` remain unpublished.
+6. Open conflicts in `docs/data/UNRESOLVED_CONFLICTS.md` remain unsourced (shown only with warnings).
+7. Every staff account has enrolled an authenticator; the first super admin enrols on first admin sign-in.
