@@ -1,4 +1,4 @@
-import type { AdminLevel, Named } from './types';
+import type { AdminLevel, ContributionStatus, EvidenceLevel, Named } from './types';
 import type { Locale } from './bangla';
 
 export const LEVEL_LABEL: Record<AdminLevel, { bn: string; en: string; plural_bn: string; plural_en: string }> = {
@@ -38,3 +38,36 @@ export function titleOf(x: Named & { level: AdminLevel }, locale: Locale): strin
   if (x.level === 'country' || name.endsWith(lvl) || /(City Corporation|Pourashava|পৌরসভা|সিটি কর্পোরেশন)$/.test(name)) return name;
   return `${name} ${lvl}`;
 }
+
+/** Public wording for each evidence tier. Only `official` may use the word "যাচাইকৃত" (verified) on its own. */
+export const EVIDENCE_LABEL: Record<EvidenceLevel, { bn: string; en: string; hint_bn: string; hint_en: string }> = {
+  official: {
+    bn: 'সরকারিভাবে যাচাইকৃত', en: 'Officially verified',
+    hint_bn: 'সরকারি গেজেট, এলজিডি বা বিবিএস-এর প্রাথমিক উৎসের সঙ্গে মিলিয়ে দেখা হয়েছে।',
+    hint_en: 'Checked against a government gazette, LGD or BBS primary source.',
+  },
+  secondary: {
+    bn: 'দ্বিতীয় উৎস থেকে নেওয়া', en: 'Secondary source',
+    hint_bn: 'নির্ভরযোগ্য দ্বিতীয় উৎস (যেমন উইকিপিডিয়া, সংবাদপত্র, আদমশুমারির সংকলন) থেকে নেওয়া; সরকারিভাবে যাচাই হয়নি।',
+    hint_en: 'From a reliable secondary source (e.g. Wikipedia, newspapers, census compilations); not officially verified.',
+  },
+  community: {
+    bn: 'কমিউনিটির তথ্য', en: 'Community data',
+    hint_bn: 'কমিউনিটি ডেটাসেট বা ব্যবহারকারীর দেওয়া তথ্য; যাচাই বাকি।',
+    hint_en: 'From a community dataset or a user submission; not yet verified.',
+  },
+  unverified: {
+    bn: 'যাচাই বাকি', en: 'Not verified',
+    hint_bn: 'এখনো কোনো উৎসের সঙ্গে মিলিয়ে দেখা হয়নি।',
+    hint_en: 'Not yet checked against any source.',
+  },
+};
+
+export const CONTRIBUTION_STATUS_LABEL: Record<ContributionStatus, { bn: string; en: string }> = {
+  draft: { bn: 'খসড়া', en: 'Draft' },
+  new: { bn: 'জমা দেওয়া হয়েছে', en: 'Submitted' },
+  in_review: { bn: 'পর্যালোচনায়', en: 'Under review' },
+  needs_changes: { bn: 'সংশোধন প্রয়োজন', en: 'Needs changes' },
+  approved: { bn: 'অনুমোদিত', en: 'Approved' },
+  rejected: { bn: 'বাতিল', en: 'Rejected' },
+};

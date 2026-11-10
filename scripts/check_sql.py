@@ -12,29 +12,56 @@ CONST_RE = re.compile(r"export const (\w+) = `(.*?)`;", re.S)
 
 # sample parameters per statement (strings are SQL literals)
 PARAMS = {
+    # geo
     "AREA_DETAIL_SQL": ["'rajshahi/rajshahi'"],
     "AREA_BY_ID_PATH_SQL": ["20015"],
-    "BREADCRUMB_SQL": ["40134"],
+    "BREADCRUMB_SQL": ["30134"],
     "CHILDREN_SQL": ["20015", "NULL"],
     "DESCENDANT_COUNTS_SQL": ["10002"],
     "PLACE_COUNTS_SQL": ["20015"],
     "NATIONAL_PLACE_COUNTS_SQL": [],
     "LIST_SQL": ["'district'", "10002", "100", "0"],
     "NATIONAL_STATS_SQL": [],
+    "TREE_SQL": ["1", "2"],
+    "LOCATE_SQL": ["24.37", "88.60"],
+    "BOUNDARY_LEVELS_SQL": [],
+    "BOUNDARY_SQL": ["20015"],
+    # places
     "CATEGORIES_SQL": [],
-    "PLACE_LIST_SQL": ["20015", "'education'", "NULL", "20", "0"],
+    "PLACE_LIST_SQL": ["20015", "'education'", "NULL", "20", "0", "'relevance'"],
+    "PLACE_COUNT_SQL": ["NULL", "NULL", "ARRAY['rajshahi','university']"],
     "PLACE_NEARBY_SQL": ["24.37", "88.60", "5000", "NULL", "30"],
     "PLACE_DETAIL_SQL": ["'university-of-rajshahi'"],
+    "PLACE_GEO_SQL": ["20015", "NULL", "NULL", "NULL", "NULL", "NULL"],
+    "PLACE_ID_SQL": ["'ruet'"],
     "EMERGENCY_SQL": [],
-    "AREA_SEARCH_SQL": ["'রাজশা'", "''"],
+    # search
+    "AREA_SEARCH_SQL": ["'rajsahi'", "'rajsahi'", "NULL", "NULL", "20"],
+    "SUGGEST_SQL": ["'raj'", "'raj'", "8"],
     "AREA_DOCS_SQL": [],
-    "PLACE_GEO_SQL": ["20015", "NULL"],
     "PLACE_DOCS_SQL": [],
+    # accounts
+    "ME_SQL": ["1"],
+    "MY_REVIEWS_SQL": ["1"],
+    "EVENTS_SQL": ["1"],
+    # admin
+    "ADMIN_STATS_SQL": [],
+    "AUDIT_LIST_SQL": ["NULL", "NULL", "NULL", "10", "0"],
+    "ADMIN_AREA_LIST_SQL": ["'union'", "NULL", "NULL", "'community'", "false", "'rajshahi/rajshahi'", "100", "0"],
+    "ADMIN_AREA_SQL": ["30134"],
+    "ADMIN_PLACE_LIST_SQL": ["NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "50", "0"],
+    "ADMIN_PLACE_SQL": ["1"],
+    "ADMIN_SOURCES_SQL": [],
+    "ADMIN_CONTRIBUTIONS_SQL": ["NULL", "NULL", "NULL", "50", "0"],
+    "ADMIN_REVIEW_REPORTS_SQL": ["'open'"],
+    "ADMIN_USERS_SQL": ["NULL", "NULL", "50", "0"],
 }
-EXPECT_ROWS = {  # minimum rows each statement must return on the v0.1 seed
-    "AREA_DETAIL_SQL": 1, "CHILDREN_SQL": 9, "LIST_SQL": 8, "PLACE_NEARBY_SQL": 4,
-    "PLACE_DETAIL_SQL": 1, "EMERGENCY_SQL": 10, "AREA_SEARCH_SQL": 1, "CATEGORIES_SQL": 95,
-    "BREADCRUMB_SQL": 5, "PLACE_LIST_SQL": 3, "AREA_DOCS_SQL": 5135, "PLACE_GEO_SQL": 5, "PLACE_DOCS_SQL": 8,
+EXPECT_ROWS = {  # minimum rows each statement must return on the seed (public = production-eligible only)
+    "AREA_DETAIL_SQL": 1, "CHILDREN_SQL": 9, "LIST_SQL": 8, "PLACE_NEARBY_SQL": 4, "PLACE_DETAIL_SQL": 1, "EMERGENCY_SQL": 7,
+    "AREA_SEARCH_SQL": 1, "CATEGORIES_SQL": 95, "BREADCRUMB_SQL": 4, "PLACE_LIST_SQL": 2, "PLACE_COUNT_SQL": 1, "AREA_DOCS_SQL": 95,
+    "PLACE_GEO_SQL": 5, "PLACE_DOCS_SQL": 5, "TREE_SQL": 73, "LOCATE_SQL": 1, "BOUNDARY_SQL": 1, "SUGGEST_SQL": 1,
+    "ADMIN_STATS_SQL": 1, "ADMIN_AREA_LIST_SQL": 8, "ADMIN_AREA_SQL": 1, "ADMIN_PLACE_LIST_SQL": 8, "ADMIN_PLACE_SQL": 1, "ADMIN_SOURCES_SQL": 20,
+    "PLACE_ID_SQL": 1,
 }
 
 consts = {}

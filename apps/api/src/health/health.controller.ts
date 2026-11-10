@@ -1,18 +1,28 @@
-import { Controller, Get, ServiceUnavailableException } from '@nestjs/common';
-import { Db } from '../db/db.service';
+import { Controller, Get, Header, ServiceUnavailableException } from '@nestjs/common';
+import { SkipThrottle } from '@nestjs/throttler';
+import { Db, INCLUDE_UNVERIFIED } from '../db/db.service';
 import { SearchService } from '../search/search.service';
 
 @Controller('health')
+@SkipThrottle()
 export class HealthController {
   constructor(private readonly db: Db, private readonly search: SearchService) {}
 
   @Get()
+  @Header('Cache-Control', 'no-store')
   async check() {
+    const started = Date.now();
     try {
       await this.db.one('SELECT 1');
-      return { status: 'ok', search: this.search.engine };
     } catch {
       throw new ServiceUnavailableException({ status: 'db_unavailable' });
     }
+    return {
+      status: 'ok',
+      db: { ok: true, ms: Date.now() - started },
+      search: this.search.health(),
+      public_include_unverified: INCLUDE_UNVERIFIED,
+      version: process.env.APP_VERSION ?? 'dev',
+    };
   }
 }
