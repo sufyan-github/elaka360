@@ -13,7 +13,10 @@
     "lint": "turbo run lint",
     "db:up": "docker compose up -d postgres",
     "db:reset": "bash scripts/db-reset.sh",
-    "seed:build": "python3 pipelines/build_seed.py"
+    "seed:build": "python3 pipelines/build_seed.py",
+    "lint:root": "eslint scripts",
+    "e2e": "playwright test",
+    "test:integration": "node --test scripts/integration-api.test.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",

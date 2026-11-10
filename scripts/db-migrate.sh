@@ -5,6 +5,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 : "${DATABASE_URL:?DATABASE_URL must be set}"
+export PGOPTIONS="${PGOPTIONS:-} -c client_min_messages=warning"
 PSQL=(psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -qAt)
 
 "${PSQL[@]}" -c "CREATE TABLE IF NOT EXISTS schema_migrations (file text PRIMARY KEY, sha256 text NOT NULL, applied_at timestamptz NOT NULL DEFAULT now());"
