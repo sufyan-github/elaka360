@@ -59,7 +59,7 @@ export default async function SearchPage({ searchParams }: { searchParams: Promi
           )}
           {!result.areas.length && !result.places.length && (
             <div className="mt-6">
-              <EmptyState title={`“${q}” এর জন্য কিছু পাওয়া যায়নি`} body="বানান পরীক্ষা করুন বা অন্য শব্দ দিয়ে চেষ্টা করুন। ইউনিয়ন ও বেশিরভাগ উপজেলার তথ্য যাচাই শেষে যুক্ত হবে।" />
+              <EmptyState title={`“${q}” এর জন্য কিছু পাওয়া যায়নি`} body="বানান পরীক্ষা করুন বা অন্য শব্দ দিয়ে চেষ্টা করুন।" />
             </div>
           )}
         </>

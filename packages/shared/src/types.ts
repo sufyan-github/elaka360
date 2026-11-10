@@ -156,6 +156,8 @@ export interface NationalStats {
   pourashava: number;
   places: number;
   verified_places: number;
+  /** The subset with official or secondary evidence (production-eligible), per level. */
+  sourced: { division: number; district: number; upazila: number; union: number; city_corporation: number; pourashava: number; places: number };
   /** How the numbers were counted (public = production-eligible records only, unless configured otherwise). */
   inclusion_rule: string;
 }

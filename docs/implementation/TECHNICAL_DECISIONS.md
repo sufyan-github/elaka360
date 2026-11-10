@@ -15,7 +15,7 @@
 | T11 | Hand-written service worker, no Serwist | Small, auditable; never caches `/api`, `/me`, `/saved`, `/login` | Serwist/Workbox: another build plugin |
 | T12 | Emergency page is static with a seed-generated hotline file as fallback | Must work when the API is down; only sourced numbers | — |
 | T13 | Secondary token `#137a52` instead of `#16865b` | AA contrast for link text (5.0:1 vs 4.3:1) | Keep mockup value: fails WCAG |
-| T14 | `production_eligible=false` for the whole nuhil hierarchy | Data trust policy; the master dataset blocks unions too. One env switch (`PUBLIC_INCLUDE_UNVERIFIED`) shows them with labels if product decides | Keep publishing: contradicts the policy |
+| T14 | `production_eligible=false` for the whole nuhil hierarchy, but **shown with warnings** (product decision, 11 Nov 2026) | Never called verified; people can still find and correct their area; `noindex` keeps unchecked facts out of search engines; hotlines stay sourced-only (migration 0007). Strict mode is one env switch | Hide everything unsourced: most of the country disappears from the site |
 | T15 | English locale **not** implemented; the fake language switch was removed | A real `/en` needs routing and translation of every string; a fake switch was worse than none | next-intl now: large change, see roadmap |
 | T16 | Google sign-in not implemented | No OAuth credentials; cannot be tested end to end | — |
 | T17 | Redis/BullMQ not introduced | Nothing needs a queue yet: reindex is a CLI, ratings are recomputed in the transaction | Add when image processing or outbox sync lands |

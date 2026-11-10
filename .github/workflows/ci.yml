@@ -99,10 +99,17 @@ jobs:
           node apps/api/dist/main.js > api.log 2>&1 &
           for i in $(seq 1 30); do curl -sf $API_URL/health && break; sleep 1; done
 
-      - name: API smoke + integration tests
+      - name: API smoke + integration tests (labelled visibility, the default)
         run: |
           node scripts/smoke-api.mjs
           node --test scripts/integration-api.test.mjs
+
+      - name: API smoke + integration tests (strict visibility)
+        run: |
+          PUBLIC_INCLUDE_UNVERIFIED=false API_PORT=4001 node apps/api/dist/main.js > api-strict.log 2>&1 &
+          for i in $(seq 1 30); do curl -sf http://localhost:4001/health && break; sleep 1; done
+          API_URL=http://localhost:4001 node scripts/smoke-api.mjs
+          API_URL=http://localhost:4001 node --test scripts/integration-api.test.mjs
 
       - name: Start web + admin
         run: |

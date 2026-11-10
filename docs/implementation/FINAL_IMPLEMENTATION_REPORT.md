@@ -13,7 +13,7 @@ The branch `claude/complete-audit-report-1016dc` turns the read-only Phase 1 sli
 
 **It is not production-ready yet, and that is deliberate:**
 
-- **No official evidence:** no record has official (Tier 1) evidence. All unions and 485 upazilas stay unpublished until they are verified against LGD/BBS sources.
+- **No official evidence:** no record has official (Tier 1) evidence. All unions and 485 upazilas come from a community dataset; by product decision (11 Nov 2026) they are shown with "not verified" warnings and `noindex` until verified against LGD/BBS sources.
 - **No SMS gateway:** the sign-in SMS gateway is not configured.
 - **Not deployed:** nothing has been deployed.
 
@@ -39,8 +39,8 @@ The branch `claude/complete-audit-report-1016dc` turns the read-only Phase 1 sli
 | Item | Before | After |
 |---|---|---|
 | Records marked verified + production-eligible on community data alone | 5,099 (unions, upazilas, districts) | 0 |
-| Published areas | everything | 109 (country, 8 divisions, 64 districts, 10 upazilas, 13 city corporations) on secondary evidence; 5,037 held back |
-| Published places / hotlines | 8 / 10 | 5 / 7 |
+| Sourced (eligible) areas | everything claimed | 109 (country, 8 divisions, 64 districts, 10 upazilas, 13 city corporations) on secondary evidence; 5,037 shown with warnings |
+| Sourced places / hotlines | 8 / 10 claimed | 5 / 7 (3 places shown with warnings; unsourced hotlines never shown) |
 | Duplicate unions | 3 | 0 |
 | Junk names | 5 | 0 |
 | Unicode | mixed forms | NFC everywhere |
@@ -105,9 +105,9 @@ Policy: [DATA_TRUST_POLICY.md](../data/DATA_TRUST_POLICY.md). Reconciliation: [D
 | Seed rebuild reproducible | Pass |
 | `check_sql.py` | 38/38 statements OK |
 | `db-migrate.sh` on an empty DB, rerun, and tampered file | Applies 0001–0006 / "up to date" / aborts with exit 3 |
-| API integration (`integration-api.test.mjs`) | 6/6 pass |
-| API smoke / web smoke | All checks pass |
-| Playwright (Pixel 7 + desktop) | 23 passed, 1 skipped (admin test on mobile, by design) |
+| API integration (`integration-api.test.mjs`) | 6/6 pass in labelled (default) mode and in strict mode |
+| API smoke / web smoke | All checks pass (API smoke in both modes) |
+| Playwright (Pixel 7 + desktop) | 25 passed, 1 skipped (admin test on mobile, by design) |
 | Lighthouse (mobile): home / place / emergency | Accessibility 100/100/100 · SEO 100/100/100 · Best practices 96/96/100. The two 96s come from a third-party basemap font 404 |
 | Typesense search path | **Not run locally** (no image available); runs in CI |
 | GitHub Actions | **Not yet run**; first run happens on push |
@@ -131,7 +131,7 @@ Bugs found and fixed by these tests:
 
 | Area | Status |
 |---|---|
-| Data trust enforcement | Complete |
+| Data trust enforcement | Complete (labelled visibility by default; strict mode available) |
 | Official verification of data | **Blocked** (needs LGD/BBS evidence work in the admin) |
 | Master reconciliation | Partially complete (16 open conflicts) |
 | Public API, search, geo | Complete (Typesense untested locally) |

@@ -106,7 +106,7 @@ export default function DataPolicyPage() {
       <h1 className="text-2xl font-bold">তথ্য ও যাচাই নীতি</h1>
       <p className="font-en text-sm text-muted">Data &amp; verification policy</p>
       <p className="mt-3 text-[15px]">
-        Elaka360-এ কোন তথ্য দেখানো হবে আর কোনটি হবে না, তা নিচের নিয়মে ঠিক হয়। মূল কথা: <strong>উৎস ছাড়া কোনো তথ্য প্রকাশ করা হয় না।</strong>
+        Elaka360-এ কোন তথ্য দেখানো হবে আর কোনটি হবে না, তা নিচের নিয়মে ঠিক হয়। মূল কথা: <strong>প্রতিটি তথ্যের পাশে লেখা থাকে সেটি কোন উৎস থেকে এসেছে এবং যাচাই হয়েছে কি না।</strong>
       </p>
 
       <Section title="প্রমাণের চারটি স্তর">
@@ -117,7 +117,7 @@ export default function DataPolicyPage() {
                 <span className="rounded-full bg-tint px-2.5 py-0.5 text-sm font-medium text-primary">{EVIDENCE_LABEL[k].bn}</span>
                 <span className="font-en text-xs text-muted">{EVIDENCE_LABEL[k].en}</span>
                 <span className={`ml-auto text-xs font-medium ${k === 'official' || k === 'secondary' ? 'text-verified' : 'text-muted'}`}>
-                  {k === 'official' || k === 'secondary' ? 'প্রকাশযোগ্য' : 'প্রকাশ করা হয় না'}
+                  {k === 'official' || k === 'secondary' ? 'উৎসসহ' : 'দেখানো হয়, “যাচাই করা হয়নি” লেখাসহ'}
                 </span>
               </div>
               <p className="mt-1 text-sm">{EVIDENCE_LABEL[k].hint_bn}</p>
@@ -129,28 +129,28 @@ export default function DataPolicyPage() {
         </p>
       </Section>
 
-      <Section title="&ldquo;প্রকাশিত&rdquo; মানে কী">
+      <Section title="উৎসসহ আর যাচাই-না-করা তথ্যের পার্থক্য">
         <Card className="space-y-2 p-4 text-[15px]">
-          <p>একটি তথ্য সাইটে, সার্চে, মানচিত্রে বা এপিআই-তে দেখানো হয় কেবল তখনই, যখন:</p>
+          <p>একটি তথ্যকে &ldquo;উৎসসহ&rdquo; (প্রকাশযোগ্য) ধরা হয় কেবল তখনই, যখন:</p>
           <ul className="list-disc space-y-1 pl-5">
             <li>
               তার প্রমাণের স্তর &ldquo;{EVIDENCE_LABEL.official.bn}&rdquo; অথবা &ldquo;{EVIDENCE_LABEL.secondary.bn}&rdquo;, <strong>এবং</strong>
             </li>
             <li>যে উৎস থেকে নেওয়া হয়েছে তার নাম (এবং যেখানে সম্ভব লিংক) রেকর্ড করা আছে।</li>
           </ul>
-          <p>বাকি তথ্য ডাটাবেসে পর্যালোচনার জন্য রাখা থাকে, কিন্তু সাধারণ ব্যবহারকারীদের দেখানো হয় না। এই নিয়ম ডাটাবেসের স্তরেই প্রয়োগ করা হয়।</p>
+          <p>বাকি তথ্যও দেখানো হয়, যাতে আপনি নিজের এলাকা খুঁজে পান এবং ভুল ধরিয়ে দিতে পারেন। তবে এমন প্রতিটি পাতার ওপরে &ldquo;যাচাই করা হয়নি&rdquo; সতর্কবার্তা থাকে এবং সার্চ ইঞ্জিনে সেগুলো ইনডেক্স করতে দেওয়া হয় না। জরুরি হটলাইন কখনোই উৎস ছাড়া দেখানো হয় না, আর ভবিষ্যতের উন্মুক্ত ডেটা (Open Data) রপ্তানিতেও শুধু উৎসসহ তথ্য থাকবে। এই নিয়মগুলো ডাটাবেসের স্তরেই প্রয়োগ করা হয়।</p>
         </Card>
       </Section>
 
-      <Section title="বেশিরভাগ উপজেলা ও ইউনিয়ন কেন দেখা যাচ্ছে না">
+      <Section title="বেশিরভাগ উপজেলা ও ইউনিয়ন কেন &ldquo;যাচাই করা হয়নি&rdquo;">
         <Card className="space-y-2 p-4 text-[15px]">
           <p>
             বিভাগ, জেলা ও সিটি কর্পোরেশনের তালিকা দ্বিতীয় উৎস থেকে মিলিয়ে প্রকাশ করা হয়েছে। কিন্তু জেলার নিচের স্তরের (উপজেলা, ইউনিয়ন) পূর্ণ তালিকা এসেছে
             একটি কমিউনিটি ডেটাসেট থেকে, যাতে কিছু নতুন উপজেলা ও ইউনিয়ন বাদ পড়েছে বা ভুল জায়গায় আছে। সরকারি তালিকার সঙ্গে মিলিয়ে না দেখা পর্যন্ত এগুলো
-            প্রকাশ করা হচ্ছে না।
+            &ldquo;যাচাই করা হয়নি&rdquo; হিসেবে দেখানো হয়।
           </p>
           <p>
-            ব্যতিক্রম: রাজশাহী পাইলটের অংশ হিসেবে রাজশাহী জেলার উপজেলাগুলো, এবং আলাদা উৎস পাওয়া অল্প কয়েকটি এলাকা প্রকাশিত হয়েছে।
+            ব্যতিক্রম: রাজশাহী পাইলটের অংশ হিসেবে রাজশাহী জেলার উপজেলাগুলো, এবং আলাদা উৎস পাওয়া অল্প কয়েকটি এলাকা উৎসসহ আছে।
           </p>
         </Card>
       </Section>
@@ -208,7 +208,7 @@ export default function DataPolicyPage() {
 
         {heldBack.length > 0 && (
           <>
-            <h3 className="mt-4 mb-2 font-semibold">পর্যালোচনার অপেক্ষায় (প্রকাশিত নয়)</h3>
+            <h3 className="mt-4 mb-2 font-semibold">যাচাইয়ের অপেক্ষায় থাকা তথ্যের উৎস</h3>
             <Card className="divide-y divide-line">
               {heldBack.map((s) => (
                 <a key={s.key} href={s.url} target="_blank" rel="noreferrer" className="flex items-start gap-2 px-4 py-2.5 hover:bg-tint">

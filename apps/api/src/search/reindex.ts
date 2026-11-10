@@ -38,7 +38,7 @@ export async function reindex(): Promise<void> {
   const pool = new Pool({
     connectionString: process.env.DATABASE_URL ?? 'postgres://elaka360:elaka360@localhost:5432/elaka360',
     // Same visibility rule as the API: the index holds only what the public views return.
-    options: `-c elaka360.include_unverified=${process.env.PUBLIC_INCLUDE_UNVERIFIED === 'true' ? 'on' : 'off'}`,
+    options: `-c elaka360.include_unverified=${process.env.PUBLIC_INCLUDE_UNVERIFIED !== 'false' ? 'on' : 'off'}`,
   });
   try {
     await ts.health();

@@ -4,7 +4,7 @@ test('home shows live counts, emergency entry and accurate sources', async ({ pa
   await page.goto('/');
   await expect(page.getByRole('heading', { level: 1 })).toContainText('বাংলাদেশের');
   await expect(page.getByRole('link', { name: /জরুরি সেবা ৯৯৯/ })).toBeVisible();   // header, on every screen size
-  await expect(page.getByText('যাচাই বাকি').first()).toBeVisible();              // pending unions are disclosed
+  await expect(page.getByText(/উৎসসহ/).first()).toBeVisible();                   // sourced vs total is disclosed
   await expect(page.getByText('nuhil/bangladesh-geocode')).toBeVisible();
 });
 
@@ -14,17 +14,24 @@ test('search finds Rajshahi from Banglish and opens the district', async ({ page
   await expect(page).toHaveURL(/\/rajshahi\/rajshahi$/);
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('রাজশাহী জেলা');
   await expect(page.getByText('দ্বিতীয় উৎস থেকে নেওয়া').first()).toBeVisible();
-  await expect(page.getByText(/ইউনিয়ন-এর তথ্য আছে|ইউনিয়ন.*দেখানো হচ্ছে না/)).toBeVisible();
 });
 
-test('place page shows evidence, source and report link; unverified places are hidden', async ({ page }) => {
+test('unverified areas are shown with a warning and are not indexed', async ({ page }) => {
+  await page.goto('/rajshahi/rajshahi/paba');
+  await expect(page.getByText('কমিউনিটির তথ্য').first()).toBeVisible();          // union cards carry their evidence
+  await page.goto('/dhaka/dhaka/savar');
+  await expect(page.getByRole('note')).toContainText('যাচাই করা হয়নি');
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/);
+});
+
+test('place page shows evidence, source and report link; unverified places are labelled', async ({ page }) => {
   await page.goto('/p/university-of-rajshahi');
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('রাজশাহী বিশ্ববিদ্যালয়');
   await expect(page.getByText('বিশ্ববিদ্যালয়', { exact: true })).toBeVisible();     // Bangla subcategory, not a raw slug
   await expect(page.getByRole('complementary', { name: 'তথ্যের উৎস ও যাচাই' })).toContainText('Wikipedia');
   await expect(page.getByRole('link', { name: /ভুল তথ্য জানান/ })).toBeVisible();
-  const hidden = await page.goto('/p/rajshahi-college');
-  expect(hidden?.status()).toBe(404);
+  await page.goto('/p/rajshahi-college');
+  await expect(page.getByRole('note')).toContainText('যাচাই করা হয়নি');
 });
 
 test('emergency page lists only sourced hotlines and never the retired fire number', async ({ page }) => {

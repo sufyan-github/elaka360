@@ -9,7 +9,7 @@ import { ApiError, api } from '@/lib/api';
 import { AreaCard, CategoryTile, PlaceCard } from '@/components/cards';
 import { MapView } from '@/components/map/MapView';
 import { SaveShare } from '@/components/client/SaveShare';
-import { Breadcrumb, EmptyState, EvidenceBadge, Section, SourceFooter, StatTile } from '@/components/ui';
+import { Breadcrumb, EmptyState, EvidenceBadge, Section, SourceFooter, StatTile, UnverifiedNotice } from '@/components/ui';
 
 export const revalidate = 300;
 /** Rendered on first request, then cached and revalidated (ISR). */
@@ -36,6 +36,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const parent = d.breadcrumb.at(-2);
   return {
     title: titleOf(d.area, 'bn'),
+    // Unverified records are public so people can correct them, but search engines should not index them.
+    ...(d.area.production_eligible ? {} : { robots: { index: false, follow: true } }),
     description: `${titleOf(d.area, 'bn')}${parent && parent.level !== 'country' ? `, ${nameOf(parent, 'bn')}` : ''} — প্রশাসনিক তথ্য, প্রতিষ্ঠান, সেবা ও দর্শনীয় স্থান, উৎসসহ।`,
   };
 }
@@ -81,6 +83,10 @@ export default async function AreaPage({ params }: Props) {
           </p>
         )}
       </section>
+
+      {!area.production_eligible && (
+        <UnverifiedNotice level={area.evidence_level} reportHref={`/contribute/new?type=correction&area=${encodeURIComponent(area.path)}`} />
+      )}
 
       <div className="mt-3 grid grid-cols-2 gap-2 sm:max-w-xs">
         <SaveShare areaPath={area.path} title={titleOf(area, 'bn')} />

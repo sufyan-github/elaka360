@@ -13,6 +13,7 @@ export function AreaCard({ area, sub }: { area: AdminAreaSummary; sub?: string }
         <span className="block truncate font-semibold">{nameOf(area, 'bn')}</span>
         <span className="block truncate font-en text-xs text-muted">{area.name_en}</span>
         {sub && <span className="mt-1 inline-block rounded-full bg-tint px-2 py-0.5 text-[11px] text-primary">{sub}</span>}
+        {!area.production_eligible && <span className="mt-1 block"><EvidenceBadge level={area.evidence_level} /></span>}
       </span>
       <span className="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-line group-hover:bg-tint">
         <ChevronRight className="h-4 w-4" />

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { connection } from 'next/server';
 import { Building2, Map as MapIcon, MapPin, Phone, PlusCircle, ShieldCheck, Users } from 'lucide-react';
 import { formatNumber } from '@elaka360/shared';
 import { api } from '@/lib/api';
@@ -7,9 +8,9 @@ import { SearchBox } from '@/components/SearchBox';
 import { MapView } from '@/components/map/MapView';
 import { Section, StatTile } from '@/components/ui';
 
-export const revalidate = 300;
-
+/* Rendered per request (so builds never depend on a running API); every API read below is cached for 5–60 minutes. */
 export default async function HomePage() {
+  await connection();
   // One tree call (divisions + their districts) instead of one detail call per division (finding C15).
   const [tree, categories, stats, national, places] = await Promise.all([
     api.tree(1, 2), api.categories(), api.nationalStats(), api.areaStats(1), api.places({ limit: 6 }),
@@ -69,7 +70,7 @@ export default async function HomePage() {
       </Section>
 
       {places.items.length > 0 && (
-        <Section title="উৎসসহ প্রকাশিত স্থান" action={{ href: '/search?q=রাজশাহী', label: 'আরও' }}>
+        <Section title="কিছু স্থান" action={{ href: '/search?q=রাজশাহী', label: 'আরও' }}>
           <div className="grid gap-3 md:grid-cols-2">
             {places.items.map((p) => <PlaceCard key={p.public_id} place={p} />)}
           </div>
@@ -88,19 +89,27 @@ export default async function HomePage() {
         </span>
       </Link>
 
-      <Section title="Elaka360-এ প্রকাশিত তথ্য">
+      <Section title="Elaka360-এ যা আছে">
         <div className="grid grid-cols-3 gap-3 md:grid-cols-6">
-          <StatTile label="বিভাগ" value={formatNumber(stats.division)} />
-          <StatTile label="জেলা" value={formatNumber(stats.district)} />
-          <StatTile label="উপজেলা" value={formatNumber(stats.upazila)} sub={pendingUpazilas ? `+${formatNumber(pendingUpazilas)} যাচাই বাকি` : undefined} />
-          <StatTile label="ইউনিয়ন" value={formatNumber(stats.union)} sub={pendingUnions ? `${formatNumber(pendingUnions)} যাচাই বাকি` : undefined} />
-          <StatTile label="সিটি কর্পোরেশন" value={formatNumber(stats.city_corporation)} />
-          <StatTile label="স্থান" value={formatNumber(stats.places)} sub="উৎসসহ" />
+          {([
+            ['বিভাগ', stats.division, stats.sourced.division],
+            ['জেলা', stats.district, stats.sourced.district],
+            ['উপজেলা', stats.upazila, stats.sourced.upazila],
+            ['ইউনিয়ন', stats.union, stats.sourced.union],
+            ['সিটি কর্পোরেশন', stats.city_corporation, stats.sourced.city_corporation],
+            ['স্থান', stats.places, stats.sourced.places],
+          ] as const).map(([label, total, sourced]) => (
+            <StatTile key={label} label={label} value={formatNumber(total)}
+              sub={sourced < total ? `উৎসসহ ${formatNumber(sourced)}` : 'সবগুলো উৎসসহ'} />
+          ))}
         </div>
+        {(pendingUnions > 0 || pendingUpazilas > 0) && (
+          <p className="mt-2 text-xs text-muted">আরও {formatNumber(pendingUnions + pendingUpazilas)}টি এলাকা যাচাইয়ের অপেক্ষায় আছে।</p>
+        )}
         <p className="mt-3 flex items-start gap-2 text-xs text-muted">
           <ShieldCheck className="h-4 w-4 shrink-0 text-secondary" aria-hidden />
           <span>
-            সংখ্যাগুলো সরাসরি ডেটাবেস থেকে আসে এবং শুধু উৎস যাচাই করা তথ্য গোনা হয়। উৎস: উইকিপিডিয়া, BBS জনশুমারি ২০২২ (citypopulation.de-এর সংকলন),
+            সংখ্যাগুলো সরাসরি ডেটাবেস থেকে আসে। “উৎসসহ” মানে উইকিপিডিয়া, আদমশুমারি বা সংবাদপত্রের মতো উৎসের সঙ্গে মেলানো; বাকিগুলো যাচাই হয়নি এবং পাতায় তা লেখা থাকে। উৎস: উইকিপিডিয়া, BBS জনশুমারি ২০২২ (citypopulation.de-এর সংকলন),
             The Financial Express; প্রশাসনিক কাঠামোর কমিউনিটি ডেটাসেট (nuhil/bangladesh-geocode) যাচাইয়ের অপেক্ষায়।{' '}
             <Link href="/data-policy" className="text-secondary underline">তথ্য ও যাচাই নীতি</Link>
           </span>

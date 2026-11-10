@@ -8,7 +8,7 @@ country → division → district → upazila ──→ union
                      upazila → pourashava → ward (planned)
 ```
 
-| Level | Rows | Public | Id range | Source |
+| Level | Rows | Sourced | Id range | Source |
 |---|---|---|---|---|
 | country | 1 | 1 | 1 | — |
 | division | 8 | 8 | 10001–10008 | nuhil + BBS geocodes; population citypopulation.de (BBS 2022 adjusted) |

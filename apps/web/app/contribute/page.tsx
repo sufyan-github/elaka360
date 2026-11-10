@@ -15,7 +15,7 @@ export default function ContributePage() {
   return (
     <div className="pt-6">
       <h1 className="text-2xl font-bold">আপনার এলাকার তথ্য যোগ করুন</h1>
-      <p className="mt-1 text-sm text-muted">প্রতিটি অবদান মডারেটর যাচাই করেন। অনুমোদনের পরও উৎস যাচাই না হওয়া পর্যন্ত তথ্য “কমিউনিটির তথ্য” হিসেবে থাকে এবং প্রকাশিত হয় না।</p>
+      <p className="mt-1 text-sm text-muted">প্রতিটি অবদান মডারেটর যাচাই করেন। অনুমোদনের পর তথ্যটি “কমিউনিটির তথ্য” লেখাসহ দেখানো হয়; উৎস যাচাই হলে “উৎসসহ” হয়।</p>
       <div className="mt-4 grid gap-3 md:grid-cols-3">
         {ACTIONS.map(({ type, title, body, Icon }) => (
           <Link key={type} href={`/contribute/new?type=${type}`} className="rounded-card border border-line bg-surface p-4 shadow-card hover:border-secondary">

@@ -30,9 +30,12 @@ for (const [path, text] of pages) {
   console.log(`${ok ? 'ok  ' : 'FAIL'} ${path} → ${res.status}${ok ? '' : ` (expected text: ${text})`}`);
 }
 const nf = await fetch(WEB + '/no-such/area-here');
-const hidden = await fetch(WEB + '/dhaka/dhaka/savar');   // community-only upazila: not public
-console.log(`${hidden.status === 404 ? 'ok  ' : 'FAIL'} unverified area hidden → ${hidden.status}`);
-if (hidden.status !== 404) failed++;
+// A community-only upazila: shown with an "unverified" warning (default), or 404 in strict mode.
+const hidden = await fetch(WEB + '/dhaka/dhaka/savar');
+const hiddenHtml = await hidden.text();
+const hiddenOk = hidden.status === 404 || (hidden.status === 200 && hiddenHtml.includes('যাচাই করা হয়নি') && hiddenHtml.includes('noindex'));
+console.log(`${hiddenOk ? 'ok  ' : 'FAIL'} unverified area labelled + noindex (or hidden) → ${hidden.status}`);
+if (!hiddenOk) failed++;
 console.log(`${nf.status === 404 ? 'ok  ' : 'FAIL'} 404 page → ${nf.status}`);
 if (nf.status !== 404) failed++;
 const api = await fetch(WEB + '/api/nearby?lat=24.37&lon=88.6&radius_m=5000');

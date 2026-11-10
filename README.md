@@ -2,21 +2,22 @@
 
 Bengali-first, mobile-first local-information platform for Bangladesh: the admin hierarchy (division → district →
 upazila → union, plus city corporations and pourashavas), institutions, tourist spots and emergency services,
-**published only with a named source**. See [docs/data/DATA_TRUST_POLICY.md](docs/data/DATA_TRUST_POLICY.md).
+**always shown with the evidence behind it**: sourced records are marked as such, and everything else carries a "not verified" warning. See [docs/data/DATA_TRUST_POLICY.md](docs/data/DATA_TRUST_POLICY.md).
 
 ## Status (November 2026)
 
 Rajshahi pilot. Public reads, accounts, contributions, moderation and an admin app are in place. Most of the
-national hierarchy is **held back** until it is verified against official sources:
+national hierarchy comes from a community dataset and is **shown with a "not verified" warning** until it is checked
+against official sources:
 
-| | Rows in database | Published |
+| | Rows in database | Sourced (secondary evidence) |
 |---|---|---|
 | Divisions / districts | 8 / 64 | 8 / 64 (secondary sources) |
 | Upazilas | 495 | 10 (Rajshahi's 9 + Shayestaganj) |
-| Unions | 4,538 | 0 (community dataset, awaiting verification) |
+| Unions | 4,538 | 0 (community dataset, shown with warnings) |
 | City corporations | 13 | 13 |
 | Places | 8 | 5 |
-| Hotlines | 10 | 7 |
+| Hotlines | 10 | 7 (only these are shown) |
 
 No record has official (Tier 1) evidence yet. The full feature status is in
 [docs/implementation/FINAL_IMPLEMENTATION_REPORT.md](docs/implementation/FINAL_IMPLEMENTATION_REPORT.md).

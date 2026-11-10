@@ -8,7 +8,7 @@ import { categoryColor, categoryIcon } from '@/lib/icons';
 import { MapView } from '@/components/map/MapView';
 import { SaveShare } from '@/components/client/SaveShare';
 import { ReviewForm } from '@/components/client/ReviewForm';
-import { Breadcrumb, Card, Chip, EvidenceBadge, Section, SourceFooter } from '@/components/ui';
+import { Breadcrumb, Card, Chip, EvidenceBadge, Section, SourceFooter, UnverifiedNotice } from '@/components/ui';
 
 export const revalidate = 300;
 /** Rendered on first request, then cached and revalidated (ISR). */
@@ -30,7 +30,12 @@ async function load(slug: string) {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const p = await load((await params).slug);
-  return p ? { title: p.name_bn, description: [p.name_en, p.area_label_bn].filter(Boolean).join(' · ') } : { title: 'পাওয়া যায়নি' };
+  if (!p) return { title: 'পাওয়া যায়নি' };
+  return {
+    title: p.name_bn,
+    description: [p.name_en, p.area_label_bn].filter(Boolean).join(' · '),
+    ...(p.production_eligible ? {} : { robots: { index: false, follow: true } }),
+  };
 }
 
 const ATTR_LABEL: Record<string, string> = {
@@ -64,6 +69,7 @@ export default async function PlacePage({ params }: Props) {
       <div className="pt-4">
         <Breadcrumb items={p.breadcrumb} />
       </div>
+      {!p.production_eligible && <UnverifiedNotice level={p.evidence_level} reportHref={`/contribute/new?type=correction&place=${p.slug}`} />}
       <Card className="mt-3 overflow-hidden">
         <div className="hero-green flex h-28 items-end px-5 pb-3">
           <span className="grid h-16 w-16 translate-y-8 place-items-center rounded-full border-4 border-surface bg-surface">

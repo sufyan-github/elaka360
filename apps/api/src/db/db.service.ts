@@ -1,7 +1,11 @@
 import { Injectable, Logger, OnModuleDestroy } from '@nestjs/common';
 import { Pool, PoolClient, QueryResultRow } from 'pg';
 
-export const INCLUDE_UNVERIFIED = process.env.PUBLIC_INCLUDE_UNVERIFIED === 'true';
+/**
+ * Public visibility of records that are not production-eligible. Product default: shown, labelled by evidence
+ * level (PUBLIC_INCLUDE_UNVERIFIED unset or true). Set it to "false" to serve only sourced records.
+ */
+export const INCLUDE_UNVERIFIED = process.env.PUBLIC_INCLUDE_UNVERIFIED !== 'false';
 
 export interface Queryable {
   many<T extends QueryResultRow>(sql: string, params?: unknown[]): Promise<T[]>;

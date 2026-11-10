@@ -4,7 +4,7 @@ import { Db, INCLUDE_UNVERIFIED } from '../db/db.service';
 import * as Q from './geo.sql';
 
 export const INCLUSION_RULE = INCLUDE_UNVERIFIED
-  ? 'All active records, including ones not yet verified (labelled by evidence level).'
+  ? 'All active records, including ones not yet verified (labelled by evidence level); `sourced` counts only records with official or secondary evidence.'
   : 'Only records that are production-eligible (official or secondary evidence with a named source).';
 
 @Injectable()

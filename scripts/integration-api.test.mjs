@@ -34,19 +34,38 @@ function grant(p, role, scope) {
   execFileSync('node', ['apps/api/dist/cli/grant-role.js', p, role, ...(scope ? [scope] : [])], { env: process.env, stdio: 'pipe' });
 }
 
-test('public reads only return production-eligible records', async () => {
+/** The API reports its visibility mode: labelled (default) shows unverified records, strict hides them. */
+async function labelledMode() {
+  return (await call('GET', '/health')).json.public_include_unverified === true;
+}
+
+test('public reads follow the visibility mode and always carry evidence', async () => {
+  const labelled = await labelledMode();
   const stats = await call('GET', '/v1/stats/national');
   assert.equal(stats.status, 200);
-  assert.equal(stats.json.union, 0, 'community-only unions must not be public');
+  assert.equal(stats.json.sourced.union, 0, 'community-only unions are never counted as sourced');
+  assert.equal(stats.json.sourced.upazila, 10);
+  assert.equal(stats.json.union, labelled ? stats.json.union : 0);
   assert.ok(stats.json.inclusion_rule);
-  assert.equal((await call('GET', '/v1/places/rajshahi-college')).status, 404, 'unverified place hidden');
-  assert.equal((await call('GET', '/v1/areas/by-path?path=dhaka/dhaka/savar')).status, 404, 'community upazila hidden');
+  const college = await call('GET', '/v1/places/rajshahi-college');
+  const savar = await call('GET', '/v1/areas/by-path?path=dhaka/dhaka/savar');
+  if (labelled) {
+    assert.ok(stats.json.union >= 4538);
+    assert.equal(college.status, 200);
+    assert.equal(college.json.production_eligible, false);
+    assert.equal(college.json.evidence_level, 'unverified');
+    assert.equal(savar.json.area.evidence_level, 'community');
+    assert.equal(savar.json.area.production_eligible, false);
+  } else {
+    assert.equal(college.status, 404, 'unverified place hidden in strict mode');
+    assert.equal(savar.status, 404, 'community upazila hidden in strict mode');
+  }
   const raj = await call('GET', '/v1/areas/by-path?path=rajshahi/rajshahi');
   assert.equal(raj.json.area.evidence_level, 'secondary');
-  assert.equal(raj.json.pending_counts.union, 71, 'pending unions are counted, not listed');
+  assert.equal(labelled ? raj.json.descendant_counts.union : raj.json.pending_counts.union, 71);
   const hot = await call('GET', '/v1/emergency-numbers');
-  assert.ok(hot.json.every((h) => h.evidence_level === 'official' || h.evidence_level === 'secondary'));
-  assert.ok(!hot.json.some((h) => h.number === '16163'), 'retired fire hotline never served');
+  assert.ok(hot.json.every((h) => h.evidence_level === 'official' || h.evidence_level === 'secondary'), 'hotlines are sourced in every mode');
+  assert.ok(!hot.json.some((h) => ['16163', '16263', '1098', '16430'].includes(h.number)));
 });
 
 test('errors are problem details; bad ids are 400 not 500', async () => {
@@ -100,7 +119,8 @@ test('auth: OTP, wrong code, refresh rotation, reuse revokes the session', async
 test('user features: save, review (one per place), contribution lifecycle', async () => {
   const t = await login(phone(2), 'Reviewer');
   assert.equal((await call('POST', '/v1/me/saved', { token: t.access_token, body: { place_slug: 'ruet' } })).status, 201);
-  assert.equal((await call('POST', '/v1/me/saved', { token: t.access_token, body: { place_slug: 'rajshahi-college' } })).status, 404, 'cannot save hidden place');
+  const hiddenSave = await call('POST', '/v1/me/saved', { token: t.access_token, body: { place_slug: 'rajshahi-college' } });
+  assert.equal(hiddenSave.status, (await labelledMode()) ? 201 : 404, 'only visible places can be saved');
   const saved = await call('GET', '/v1/me/saved', { token: t.access_token });
   assert.ok(saved.json.items.some((i) => i.place?.slug === 'ruet'));
   assert.equal((await call('POST', '/v1/places/puthia-rajbari/reviews', { token: t.access_token, body: { rating: 5, body: 'Beautiful' } })).status, 201);
@@ -144,8 +164,10 @@ test('moderation + verification follow the trust policy and are audited', async 
   const list = await call('GET', `/v1/admin/places?q=${createdId}`, { token: mod.access_token });
   const place = list.json.items[0];
   assert.equal(place.evidence_level, 'community');
-  assert.equal(place.production_eligible, false, 'approval alone does not publish');
-  assert.equal((await call('GET', `/v1/places/${place.slug}`)).status, 404);
+  assert.equal(place.production_eligible, false, 'approval alone does not make it sourced');
+  const before = await call('GET', `/v1/places/${place.slug}`);
+  if (await labelledMode()) assert.equal(before.json.production_eligible, false);
+  else assert.equal(before.status, 404);
 
   const bad = await call('POST', `/v1/admin/places/${place.id}/verify`, { token: mod.access_token, body: { evidence_level: 'community', production_eligible: true, verification_notes: 'try to publish' } });
   assert.equal(bad.status, 400, 'community evidence cannot be published');
@@ -155,7 +177,9 @@ test('moderation + verification follow the trust policy and are audited', async 
   assert.equal(offi.status, 400, 'official evidence needs a trust 4–5 source');
   const ok = await call('POST', `/v1/admin/places/${place.id}/verify`, { token: mod.access_token, body: { evidence_level: 'secondary', evidence_source_id: wiki.id, production_eligible: true, verification_notes: 'Listed on source page' } });
   assert.equal(ok.status, 201, JSON.stringify(ok.json));
-  assert.equal((await call('GET', `/v1/places/${place.slug}`)).status, 200, 'now public');
+  const after = await call('GET', `/v1/places/${place.slug}`);
+  assert.equal(after.status, 200);
+  assert.equal(after.json.production_eligible, true, 'now sourced');
 
   const audit = await call('GET', `/v1/admin/audit?entity=place&entity_id=${place.id}`, { token: mod.access_token });
   assert.ok(audit.json.items.some((a) => a.action === 'place.verify' && a.actor_name === 'Moderator'));

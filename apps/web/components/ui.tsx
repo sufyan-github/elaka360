@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
-import { BadgeCheck, BookOpen, ChevronRight, CircleDashed, Info, Users } from 'lucide-react';
+import { BadgeCheck, BookOpen, ChevronRight, CircleDashed, Info, TriangleAlert, Users } from 'lucide-react';
 import type { AdminAreaSummary, DataSourceRef, EvidenceLevel } from '@elaka360/shared';
 import { EVIDENCE_LABEL, formatDate, nameOf } from '@elaka360/shared';
 import { areaHref } from '@/lib/links';
@@ -44,6 +44,25 @@ export function EvidenceBadge({ level: raw, compact = false }: { level: Evidence
     <span className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium ${style}`} title={l.hint_bn}>
       <Icon className="h-3.5 w-3.5" aria-hidden /> {compact && level === 'secondary' ? 'উৎসসহ' : l.bn}
     </span>
+  );
+}
+
+/**
+ * Shown at the top of any area or place that is not production-eligible: the record is public so people can
+ * find and correct it, but it has not been checked against an official or reliable source.
+ */
+export function UnverifiedNotice({ level, reportHref }: { level: EvidenceLevel; reportHref: string }) {
+  const why = level === 'community'
+    ? 'কমিউনিটি ডেটাসেট বা ব্যবহারকারীর দেওয়া তথ্য থেকে নেওয়া'
+    : 'এখনো কোনো উৎসের সঙ্গে মিলিয়ে দেখা হয়নি';
+  return (
+    <div role="note" className="mt-3 flex items-start gap-2 rounded-card border border-line bg-warning-tint p-3 text-sm">
+      <TriangleAlert className="mt-0.5 h-4 w-4 shrink-0 text-warning" aria-hidden />
+      <p>
+        <strong className="text-warning">যাচাই করা হয়নি।</strong> এই তথ্য {why}; ভুল থাকতে পারে। গুরুত্বপূর্ণ কাজে সরকারি উৎস দেখে নিন।{' '}
+        <Link href={reportHref} className="font-medium text-secondary underline">সঠিক তথ্য জানান</Link>
+      </p>
+    </div>
   );
 }
 

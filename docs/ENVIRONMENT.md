@@ -12,7 +12,7 @@
 | `SMS_PROVIDER` | unset | Unset: OTP requests return 503. `dev`: the code is returned in the response; refused when `NODE_ENV=production` |
 | `OTP_RATE_PER_MIN` | 5 | Per-IP OTP requests per minute. Raise only in tests |
 | `RATE_LIMIT_PER_MIN` | 240 | Global per-IP limit |
-| `PUBLIC_INCLUDE_UNVERIFIED` | `false` | `true` also serves non-eligible records publicly (labelled); see `docs/data/DATA_TRUST_POLICY.md` |
+| `PUBLIC_INCLUDE_UNVERIFIED` | `true` | Unverified records are shown publicly with warnings (product decision). `false` = strict: only sourced records. Hotlines are sourced-only in both modes. See `docs/data/DATA_TRUST_POLICY.md` |
 | `TYPESENSE_URL`, `TYPESENSE_API_KEY` | unset | Search falls back to Postgres when unset or down |
 | `SEARCH_COOLDOWN_MS` | 30000 | Circuit-breaker pause after a Typesense failure |
 | `DB_POOL_MAX`, `DB_STATEMENT_TIMEOUT_MS` | 10, 8000 | |

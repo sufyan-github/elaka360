@@ -68,7 +68,15 @@ SELECT
   count(*) FILTER (WHERE level = 'city_corporation')::int AS city_corporation,
   count(*) FILTER (WHERE level = 'pourashava')::int AS pourashava,
   (SELECT count(*)::int FROM public_places) AS places,
-  (SELECT count(*)::int FROM public_places WHERE evidence_level = 'official') AS verified_places
+  (SELECT count(*)::int FROM public_places WHERE evidence_level = 'official') AS verified_places,
+  json_build_object(
+    'division', count(*) FILTER (WHERE level = 'division' AND production_eligible),
+    'district', count(*) FILTER (WHERE level = 'district' AND production_eligible),
+    'upazila', count(*) FILTER (WHERE level = 'upazila' AND production_eligible),
+    'union', count(*) FILTER (WHERE level = 'union' AND production_eligible),
+    'city_corporation', count(*) FILTER (WHERE level = 'city_corporation' AND production_eligible),
+    'pourashava', count(*) FILTER (WHERE level = 'pourashava' AND production_eligible),
+    'places', (SELECT count(*) FROM public_places WHERE production_eligible)) AS sourced
 FROM public_admin_areas`;
 
 /** Flat subtree to a depth (nested in the service). $1 root id, $2 max depth. */
