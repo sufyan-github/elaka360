@@ -4,11 +4,11 @@ import type { AdminAreaSummary, Category, PlaceSummary } from '@elaka360/shared'
 import { formatDistance, formatNumber, nameOf } from '@elaka360/shared';
 import { areaHref } from '@/lib/links';
 import { categoryColor, categoryIcon } from '@/lib/icons';
-import { VerifiedBadge } from './ui';
+import { EvidenceBadge } from './ui';
 
 export function AreaCard({ area, sub }: { area: AdminAreaSummary; sub?: string }) {
   return (
-    <Link href={areaHref(area)} className="group flex items-center justify-between gap-2 rounded-card border border-line bg-surface p-3 shadow-card hover:border-secondary">
+    <Link href={areaHref(area)} className="group flex min-w-0 items-center justify-between gap-2 rounded-card border border-line bg-surface p-3 shadow-card hover:border-secondary">
       <span className="min-w-0">
         <span className="block truncate font-semibold">{nameOf(area, 'bn')}</span>
         <span className="block truncate font-en text-xs text-muted">{area.name_en}</span>
@@ -35,7 +35,7 @@ export function CategoryTile({ category, count, href }: { category: Category; co
 export function PlaceCard({ place }: { place: PlaceSummary }) {
   const Icon = categoryIcon(place.category_key);
   return (
-    <Link href={`/p/${place.slug}`} className="flex items-center gap-3 rounded-card border border-line bg-surface p-3 shadow-card hover:border-secondary">
+    <Link href={`/p/${place.slug}`} className="flex min-w-0 items-center gap-3 rounded-card border border-line bg-surface p-3 shadow-card hover:border-secondary">
       <span className="grid h-14 w-14 shrink-0 place-items-center rounded-chip bg-tint">
         <Icon className="h-7 w-7" style={{ color: categoryColor(place.category_key) }} />
       </span>
@@ -51,7 +51,7 @@ export function PlaceCard({ place }: { place: PlaceSummary }) {
             </span>
           )}
           {place.distance_m !== undefined && <span>{formatDistance(place.distance_m)}</span>}
-          {place.verification_status === 'verified' && <VerifiedBadge />}
+          <EvidenceBadge level={place.evidence_level} compact />
         </span>
       </span>
       <ChevronRight className="h-4 w-4 shrink-0 text-muted" />

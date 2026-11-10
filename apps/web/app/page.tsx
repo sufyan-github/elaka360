@@ -1,27 +1,32 @@
 import Link from 'next/link';
-import { Building2, Map as MapIcon, MapPin, Phone, ShieldCheck, Users } from 'lucide-react';
+import { Building2, Map as MapIcon, MapPin, Phone, PlusCircle, ShieldCheck, Users } from 'lucide-react';
 import { formatNumber } from '@elaka360/shared';
 import { api } from '@/lib/api';
-import { AreaCard, CategoryTile } from '@/components/cards';
+import { AreaCard, CategoryTile, PlaceCard } from '@/components/cards';
 import { SearchBox } from '@/components/SearchBox';
 import { MapView } from '@/components/map/MapView';
 import { Section, StatTile } from '@/components/ui';
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 300;
 
 export default async function HomePage() {
-  const [divisions, categories, stats] = await Promise.all([api.areas('division'), api.categories(), api.nationalStats()]);
-  const districtCounts = await Promise.all(divisions.items.map((d) => api.areaByPath(d.path).then((x) => x.descendant_counts.district ?? 0)));
+  // One tree call (divisions + their districts) instead of one detail call per division (finding C15).
+  const [tree, categories, stats, national, places] = await Promise.all([
+    api.tree(1, 2), api.categories(), api.nationalStats(), api.areaStats(1), api.places({ limit: 6 }),
+  ]);
+  const divisions = tree.children ?? [];
+  const pendingUnions = national.pending_counts.union ?? 0;
+  const pendingUpazilas = national.pending_counts.upazila ?? 0;
 
   return (
     <>
-      <section className="hero-green -mx-4 px-4 pb-6 pt-8 text-white md:mx-0 md:mt-4 md:rounded-card md:px-8">
+      <section className="hero-green -mx-4 px-4 pb-6 pt-8 md:mx-0 md:mt-4 md:rounded-card md:px-8">
         <h1 className="text-[28px] leading-tight font-bold md:text-4xl">
           বাংলাদেশের প্রতিটি এলাকার
           <br />
-          সব তথ্য, <span className="text-accent">এক জায়গায়</span>
+          তথ্য, <span className="text-accent">উৎসসহ এক জায়গায়</span>
         </h1>
-        <p className="mt-2 max-w-xl text-[15px] text-white/90">জেলা, উপজেলা, ইউনিয়ন, প্রতিষ্ঠান, সেবা, ব্যবসা, পর্যটন স্থান ও আরও অনেক কিছু খুঁজে পান সহজেই।</p>
+        <p className="mt-2 max-w-xl text-[15px] text-white/90">বিভাগ, জেলা, সিটি কর্পোরেশন, প্রতিষ্ঠান, পর্যটন স্থান ও জরুরি সেবা — প্রতিটি তথ্যের উৎস দেখানো হয়।</p>
         <div className="mt-4 text-ink">
           <SearchBox />
         </div>
@@ -33,30 +38,26 @@ export default async function HomePage() {
             { href: '/near-me', label: 'আমার কাছে', Icon: MapPin },
             { href: '/map', label: 'মানচিত্র', Icon: MapIcon },
           ].map(({ href, label, Icon }) => (
-            <Link key={href} href={href} className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 font-medium text-ink">
-              <Icon className="h-4 w-4 text-primary" /> {label}
+            <Link key={href} href={href} className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 font-medium text-[#1f2d28]">
+              <Icon className="h-4 w-4 text-[#075b3b]" aria-hidden /> {label}
             </Link>
           ))}
         </div>
       </section>
 
-      <Link href="/emergency" className="mt-4 flex items-center justify-between rounded-card bg-danger px-4 py-3 text-white shadow-card">
+      <Link href="/emergency" className="mt-4 flex items-center justify-between rounded-card bg-danger px-4 py-3 text-on-danger shadow-card">
         <span className="flex items-center gap-2 font-semibold">
-          <Phone className="h-5 w-5" /> জরুরি সেবা — জাতীয় জরুরি নম্বর
+          <Phone className="h-5 w-5" aria-hidden /> জরুরি সেবা — জাতীয় জরুরি নম্বর
         </span>
         <span className="font-en text-2xl font-bold">999</span>
       </Link>
 
       <Section title="বাংলাদেশ ঘুরে দেখুন" action={{ href: '/explore', label: 'সব বিভাগ দেখুন' }}>
         <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
-          {divisions.items.map((d, i) => (
-            <AreaCard key={d.id} area={d} sub={`${formatNumber(districtCounts[i] ?? 0)} জেলা`} />
+          {divisions.map((d) => (
+            <AreaCard key={d.id} area={d} sub={`${formatNumber(d.children?.length ?? 0)} জেলা`} />
           ))}
         </div>
-      </Section>
-
-      <Section title="মানচিত্রে বাংলাদেশ" action={{ href: '/map', label: 'পূর্ণ মানচিত্র' }}>
-        <MapView className="h-80 md:h-[28rem]" />
       </Section>
 
       <Section title="কী খুঁজছেন?">
@@ -67,18 +68,42 @@ export default async function HomePage() {
         </div>
       </Section>
 
-      <Section title="Elaka360 সম্পর্কে">
+      {places.items.length > 0 && (
+        <Section title="উৎসসহ প্রকাশিত স্থান" action={{ href: '/search?q=রাজশাহী', label: 'আরও' }}>
+          <div className="grid gap-3 md:grid-cols-2">
+            {places.items.map((p) => <PlaceCard key={p.public_id} place={p} />)}
+          </div>
+        </Section>
+      )}
+
+      <Section title="মানচিত্রে বাংলাদেশ" action={{ href: '/map', label: 'পূর্ণ মানচিত্র' }}>
+        <MapView className="h-80 md:h-[28rem]" />
+      </Section>
+
+      <Link href="/contribute" className="mt-6 flex items-center gap-3 rounded-card border border-line bg-surface p-4 shadow-card hover:border-secondary">
+        <PlusCircle className="h-8 w-8 shrink-0 text-secondary" aria-hidden />
+        <span>
+          <span className="block font-semibold">আপনার এলাকার তথ্য যোগ করুন</span>
+          <span className="block text-sm text-muted">নতুন স্থান বা ভুল সংশোধন প্রস্তাব করুন — যাচাইয়ের পর প্রকাশিত হবে।</span>
+        </span>
+      </Link>
+
+      <Section title="Elaka360-এ প্রকাশিত তথ্য">
         <div className="grid grid-cols-3 gap-3 md:grid-cols-6">
           <StatTile label="বিভাগ" value={formatNumber(stats.division)} />
           <StatTile label="জেলা" value={formatNumber(stats.district)} />
-          <StatTile label="উপজেলা" value={formatNumber(stats.upazila)} />
-          <StatTile label="ইউনিয়ন" value={formatNumber(stats.union)} />
+          <StatTile label="উপজেলা" value={formatNumber(stats.upazila)} sub={pendingUpazilas ? `+${formatNumber(pendingUpazilas)} যাচাই বাকি` : undefined} />
+          <StatTile label="ইউনিয়ন" value={formatNumber(stats.union)} sub={pendingUnions ? `${formatNumber(pendingUnions)} যাচাই বাকি` : undefined} />
           <StatTile label="সিটি কর্পোরেশন" value={formatNumber(stats.city_corporation)} />
-          <StatTile label="যাচাইকৃত স্থান" value={formatNumber(stats.verified_places)} />
+          <StatTile label="স্থান" value={formatNumber(stats.places)} sub="উৎসসহ" />
         </div>
         <p className="mt-3 flex items-start gap-2 text-xs text-muted">
-          <ShieldCheck className="h-4 w-4 shrink-0 text-secondary" />
-          সংখ্যাগুলো সরাসরি ডেটাবেস থেকে আসে। তথ্যসূত্র: বাংলাদেশ পরিসংখ্যান ব্যুরো (BBS), জাতীয় তথ্য বাতায়ন ও উন্মুক্ত উৎস।
+          <ShieldCheck className="h-4 w-4 shrink-0 text-secondary" aria-hidden />
+          <span>
+            সংখ্যাগুলো সরাসরি ডেটাবেস থেকে আসে এবং শুধু উৎস যাচাই করা তথ্য গোনা হয়। উৎস: উইকিপিডিয়া, BBS জনশুমারি ২০২২ (citypopulation.de-এর সংকলন),
+            The Financial Express; প্রশাসনিক কাঠামোর কমিউনিটি ডেটাসেট (nuhil/bangladesh-geocode) যাচাইয়ের অপেক্ষায়।{' '}
+            <Link href="/data-policy" className="text-secondary underline">তথ্য ও যাচাই নীতি</Link>
+          </span>
         </p>
       </Section>
     </>

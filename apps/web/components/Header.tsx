@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Bell, Search } from 'lucide-react';
+import { Search, UserRound } from 'lucide-react';
+import { ThemeToggle } from './client/ThemeToggle';
 
 export function Logo() {
   return (
@@ -11,29 +12,31 @@ export function Logo() {
       </svg>
       <span className="leading-tight">
         <span className="block font-en text-xl font-bold text-primary">Elaka360</span>
-        <span className="block font-en text-[10px] text-muted">Every Place. Every Detail.</span>
+        <span className="hidden font-en text-[10px] text-muted sm:block">Every Place. Every Detail.</span>
       </span>
     </Link>
   );
 }
 
+/** Emergency is always one tap away, on every screen size (finding: the 999 button was hidden on phones). */
 export function Header() {
   return (
     <header className="sticky top-0 z-30 border-b border-line bg-surface/95 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4">
+      <div className="mx-auto flex h-16 max-w-5xl items-center justify-between gap-2 px-4">
         <Logo />
-        <div className="flex items-center gap-2">
-          <Link href="/search" className="grid h-10 w-10 place-items-center rounded-chip border border-line bg-surface" aria-label="খুঁজুন">
-            <Search className="h-5 w-5" />
+        <nav aria-label="দ্রুত লিংক" className="flex items-center gap-1.5 sm:gap-2">
+          <Link href="/emergency" className="flex h-10 items-center rounded-chip bg-danger px-3 text-sm font-semibold text-on-danger" aria-label="জরুরি সেবা ৯৯৯">
+            <span className="sm:hidden">৯৯৯</span>
+            <span className="hidden sm:inline">জরুরি ৯৯৯</span>
           </Link>
-          <span className="rounded-chip border border-line bg-surface px-3 py-2 text-sm" title="English version is coming">বাংলা</span>
-          <Link href="/emergency" className="hidden h-10 items-center rounded-chip bg-danger px-3 text-sm font-semibold text-white sm:flex">
-            জরুরি ৯৯৯
+          <Link href="/search" className="hidden h-10 w-10 place-items-center rounded-chip border border-line bg-surface sm:grid" aria-label="খুঁজুন">
+            <Search className="h-5 w-5" aria-hidden />
           </Link>
-          <span className="relative grid h-10 w-10 place-items-center rounded-chip border border-line bg-surface" aria-label="নোটিফিকেশন">
-            <Bell className="h-5 w-5" />
-          </span>
-        </div>
+          <ThemeToggle />
+          <Link href="/me" className="grid h-10 w-10 place-items-center rounded-chip border border-line bg-surface" aria-label="আমার অ্যাকাউন্ট">
+            <UserRound className="h-5 w-5" aria-hidden />
+          </Link>
+        </nav>
       </div>
     </header>
   );

@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import type { Map as MlMap, GeoJSONSource, LngLatBoundsLike } from 'maplibre-gl';
 import type { FeatureCollection, MultiPolygon } from 'geojson';
 import 'maplibre-gl/dist/maplibre-gl.css';
@@ -9,11 +10,18 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 const STYLE_URL = process.env.NEXT_PUBLIC_MAP_STYLE_URL ?? 'https://tiles.openfreemap.org/styles/positron';
 const BD_BOUNDS: LngLatBoundsLike = [[88.0, 20.6], [92.7, 26.7]];
 
-const CATEGORY_COLORS: [string, string][] = [
-  ['education', '#16865b'], ['health', '#e5383b'], ['government', '#1e5bd8'], ['religious', '#7b3fc6'],
-  ['emergency', '#f2994a'], ['tourism', '#0f9d7a'], ['business', '#f2994a'], ['transport', '#5b4fd6'],
-  ['agriculture', '#2f9e44'], ['finance', '#1e5bd8'],
-];
+const CATEGORIES = ['education', 'health', 'government', 'religious', 'emergency', 'tourism', 'business', 'transport', 'agriculture', 'finance', 'other'];
+
+/** Pin colours come from the design tokens (packages/ui/tokens.css), so map and UI never drift apart. */
+function tokenColors(): { pins: string[]; primary: string; secondary: string } {
+  const cs = getComputedStyle(document.documentElement);
+  const v = (name: string, fb: string) => cs.getPropertyValue(name).trim() || fb;
+  return {
+    pins: CATEGORIES.flatMap((c) => [c, v(`--e360-cat-${c}`, '#6b7a75')]),
+    primary: v('--e360-primary', '#075b3b'),
+    secondary: v('--e360-secondary', '#137a52'),
+  };
+}
 
 type DistrictFC = FeatureCollection<MultiPolygon, { district_id: number; division_id: number; name_bn: string; name_en: string; path: string }>;
 
@@ -28,6 +36,8 @@ export interface MapViewProps {
   className?: string;
   /** Click a district to open its page. */
   linkDistricts?: boolean;
+  /** Single-place mode: centre on this [lon, lat] with a marker (no pins layer). */
+  point?: [number, number];
 }
 
 function bboxOf(features: DistrictFC['features']): LngLatBoundsLike | null {
@@ -48,9 +58,12 @@ function placesUrl(areaId?: number, category?: string) {
   return `/api/places-geo?${p}`;
 }
 
-export function MapView({ districtIds, divisionId, areaId, category, className = 'h-80', linkDistricts = true }: MapViewProps) {
+export function MapView({ districtIds, divisionId, areaId, category, className = 'h-80', linkDistricts = true, point }: MapViewProps) {
   const el = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MlMap | null>(null);
+  const categoryRef = useRef(category);
+  categoryRef.current = category;
+  const router = useRouter();
   const [failed, setFailed] = useState(false);
 
   useEffect(() => {
@@ -65,11 +78,11 @@ export function MapView({ districtIds, divisionId, areaId, category, className =
         const focus = districts.features.filter(
           (f) => (districtIds?.includes(f.properties.district_id) ?? false) || f.properties.division_id === divisionId,
         );
+        const colors = tokenColors();
         const map = new maplibregl.Map({
           container: el.current,
           style: STYLE_URL,
-          bounds: bboxOf(focus) ?? BD_BOUNDS,
-          fitBoundsOptions: { padding: 24 },
+          ...(point ? { center: point, zoom: 14 } : { bounds: bboxOf(focus) ?? BD_BOUNDS, fitBoundsOptions: { padding: 24 } }),
           attributionControl: { compact: true },
           cooperativeGestures: true,
         });
@@ -77,22 +90,28 @@ export function MapView({ districtIds, divisionId, areaId, category, className =
         map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
         map.addControl(new maplibregl.GeolocateControl({ trackUserLocation: false }), 'top-right');
 
+        if (point) {
+          new maplibregl.Marker({ color: colors.primary }).setLngLat(point).addTo(map);
+          map.on('error', () => setFailed(true));
+          return;
+        }
         map.on('load', () => {
           const focusIds = focus.map((f) => f.properties.district_id);
           map.addSource('districts', { type: 'geojson', data: districts, promoteId: 'district_id' });
           map.addLayer({
             id: 'district-fill', type: 'fill', source: 'districts',
             paint: {
-              'fill-color': ['case', ['in', ['get', 'district_id'], ['literal', focusIds]], '#16865b', '#a8d5ba'],
+              'fill-color': ['case', ['in', ['get', 'district_id'], ['literal', focusIds]], colors.secondary, '#a8d5ba'],
               'fill-opacity': focusIds.length ? ['case', ['in', ['get', 'district_id'], ['literal', focusIds]], 0.28, 0.08] : 0.18,
             },
           });
-          map.addLayer({ id: 'district-line', type: 'line', source: 'districts', paint: { 'line-color': '#075b3b', 'line-width': 0.8, 'line-opacity': 0.7 } });
+          map.addLayer({ id: 'district-line', type: 'line', source: 'districts', paint: { 'line-color': colors.primary, 'line-width': 0.8, 'line-opacity': 0.7 } });
 
-          map.addSource('places', { type: 'geojson', data: placesUrl(areaId, category), cluster: true, clusterRadius: 40, clusterMaxZoom: 13 });
+          // Read the latest category on load: a chip picked before the map finished loading is not lost (finding C17).
+          map.addSource('places', { type: 'geojson', data: placesUrl(areaId, categoryRef.current), cluster: true, clusterRadius: 40, clusterMaxZoom: 13 });
           map.addLayer({
             id: 'clusters', type: 'circle', source: 'places', filter: ['has', 'point_count'],
-            paint: { 'circle-color': '#075b3b', 'circle-radius': ['step', ['get', 'point_count'], 14, 20, 18, 100, 24], 'circle-stroke-width': 2, 'circle-stroke-color': '#fff' },
+            paint: { 'circle-color': colors.primary, 'circle-radius': ['step', ['get', 'point_count'], 14, 20, 18, 100, 24], 'circle-stroke-width': 2, 'circle-stroke-color': '#fff' },
           });
           map.addLayer({
             id: 'cluster-count', type: 'symbol', source: 'places', filter: ['has', 'point_count'],
@@ -103,7 +122,7 @@ export function MapView({ districtIds, divisionId, areaId, category, className =
             id: 'pins', type: 'circle', source: 'places', filter: ['!', ['has', 'point_count']],
             paint: {
               'circle-radius': 7,
-              'circle-color': ['match', ['get', 'category_key'], ...CATEGORY_COLORS.flat(), '#6b7a75'] as never,
+              'circle-color': ['match', ['get', 'category_key'], ...colors.pins, '#6b7a75'] as never,
               'circle-stroke-width': 2, 'circle-stroke-color': '#fff',
             },
           });
@@ -117,6 +136,7 @@ export function MapView({ districtIds, divisionId, areaId, category, className =
             a.href = `/p/${p.slug}`;
             a.textContent = p.name_bn;
             a.style.cssText = 'font-weight:600;color:#075b3b;text-decoration:underline';
+            a.addEventListener('click', (ev) => { ev.preventDefault(); router.push(`/p/${p.slug}`); });
             box.append(a);
             if (p.area_label_bn) {
               const s = document.createElement('div');
@@ -136,7 +156,7 @@ export function MapView({ districtIds, divisionId, areaId, category, className =
             map.on('click', 'district-fill', (e) => {
               if (map.queryRenderedFeatures(e.point, { layers: ['pins', 'clusters'] }).length) return;
               const path = e.features?.[0]?.properties?.path as string | undefined;
-              if (path) window.location.href = `/${path}`;
+              if (path) router.push(`/${path}`);
             });
           }
           for (const layer of ['pins', 'clusters', ...(linkDistricts ? ['district-fill'] : [])]) {
@@ -144,7 +164,11 @@ export function MapView({ districtIds, divisionId, areaId, category, className =
             map.on('mouseleave', layer, () => (map.getCanvas().style.cursor = ''));
           }
         });
-        map.on('error', (e) => console.warn('map error', e.error?.message));
+        // A broken style or tile server should say so instead of leaving a blank box.
+        map.on('error', (e) => {
+          if (!map.isStyleLoaded()) setFailed(true);
+          console.warn('map error', e.error?.message);
+        });
       } catch (e) {
         console.warn('map failed to load', e);
         if (!cancelled) setFailed(true);
@@ -156,8 +180,7 @@ export function MapView({ districtIds, divisionId, areaId, category, className =
       mapRef.current = null;
     };
     // Re-create only when the focus changes; category updates are handled below.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [divisionId, areaId, districtIds?.join(',')]);
+  }, [divisionId, areaId, districtIds?.join(','), point?.join(',')]);
 
   useEffect(() => {
     const src = mapRef.current?.getSource('places') as GeoJSONSource | undefined;
@@ -167,7 +190,7 @@ export function MapView({ districtIds, divisionId, areaId, category, className =
   return (
     <div className={`relative overflow-hidden rounded-card border border-line bg-tint ${className}`}>
       <div ref={el} className="absolute inset-0" role="region" aria-label="মানচিত্র" />
-      {failed && <div className="absolute inset-0 grid place-items-center p-4 text-center text-sm text-muted">মানচিত্র লোড করা যায়নি।</div>}
+      {failed && <div className="absolute inset-0 grid place-items-center bg-tint p-4 text-center text-sm text-muted">মানচিত্র লোড করা যায়নি। ইন্টারনেট সংযোগ পরীক্ষা করুন।</div>}
     </div>
   );
 }

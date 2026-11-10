@@ -15,13 +15,13 @@ export function MapExplorer() {
     <>
       <div className="scrollbar-none -mx-4 mt-3 flex gap-2 overflow-x-auto px-4">
         {CATS.map((c) => (
-          <button key={c.key} onClick={() => setCategory(c.key)} className={`whitespace-nowrap rounded-full px-3 py-1.5 text-sm ${category === c.key ? 'bg-primary text-white' : 'border border-line bg-surface'}`}>
+          <button type="button" key={c.key} aria-pressed={category === c.key} onClick={() => setCategory(c.key)} className={`whitespace-nowrap rounded-full px-3 py-1.5 text-sm ${category === c.key ? 'bg-primary text-on-primary' : 'border border-line bg-surface'}`}>
             {c.label}
           </button>
         ))}
       </div>
       <MapView category={category || undefined} className="mt-3 h-[70dvh]" />
-      <p className="mt-2 text-xs text-muted">জেলায় চাপ দিলে জেলার পাতা খুলবে। পাইলট পর্যায়ে শুধু রাজশাহীর যাচাইকৃত স্থান দেখানো হচ্ছে।</p>
+      <p className="mt-2 text-xs text-muted">জেলায় চাপ দিলে জেলার পাতা খুলবে। পাইলট পর্যায়ে শুধু রাজশাহীর উৎসসহ প্রকাশিত স্থান দেখানো হচ্ছে।</p>
     </>
   );
 }

@@ -12,9 +12,11 @@ const TABS = [
   { href: '/me', label: 'প্রোফাইল', Icon: User },
 ] as const;
 
+const NON_AREA = ['/search', '/saved', '/me', '/emergency', '/near-me', '/login', '/contribute', '/map', '/p/', '/c/', '/about', '/contact', '/privacy', '/terms', '/data-policy', '/guidelines', '/offline'];
+
 function isActive(pathname: string, href: string) {
   if (href === '/') return pathname === '/';
-  if (href === '/explore') return pathname === '/explore' || (!['/search', '/saved', '/me', '/emergency', '/near-me'].some((p) => pathname.startsWith(p)) && !pathname.startsWith('/p/') && !pathname.startsWith('/c/') && pathname !== '/');
+  if (href === '/explore') return pathname === '/explore' || (!NON_AREA.some((p) => pathname.startsWith(p)) && pathname !== '/');
   return pathname.startsWith(href);
 }
 
@@ -30,12 +32,12 @@ export function BottomNav() {
             <li key={href}>
               <Link href={href} className="flex flex-col items-center gap-0.5 py-2 text-xs" aria-current={active ? 'page' : undefined}>
                 {center ? (
-                  <span className="-mt-6 grid h-12 w-12 place-items-center rounded-full bg-primary text-white shadow-card">
-                    <Icon className="h-6 w-6" />
+                  <span className="-mt-6 grid h-12 w-12 place-items-center rounded-full bg-primary text-on-primary shadow-card">
+                    <Icon className="h-6 w-6" aria-hidden />
                   </span>
                 ) : (
                   <span className={`grid h-8 w-12 place-items-center rounded-full ${active ? 'bg-tint text-primary' : 'text-ink'}`}>
-                    <Icon className="h-5 w-5" />
+                    <Icon className="h-5 w-5" aria-hidden />
                   </span>
                 )}
                 <span className={active ? 'font-semibold text-primary' : 'text-ink'}>{label}</span>
