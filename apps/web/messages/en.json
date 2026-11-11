@@ -156,7 +156,7 @@
     "reviews": "Reviews",
     "reviewsCount": "Reviews ({count})",
     "noReviews": "No reviews yet.",
-    "policyNote": "Under the <link>verification policy</link>, only sourced information is published."
+    "policyNote": "Under the <link>verification policy</link>, every fact shows its source and verification status."
   },
   "PlaceAttr": {
     "faculties": "Faculties",
@@ -182,7 +182,7 @@
   "Explore": {
     "metaTitle": "Explore — divisions, districts, upazilas",
     "title": "Explore Bangladesh",
-    "subtitle": "From divisions to districts, upazilas and city corporations — areas published with sources.",
+    "subtitle": "From divisions to districts, upazilas and city corporations — each area shown with its source and verification status.",
     "levelsNav": "Administrative level",
     "divisionNav": "Division",
     "allDivisions": "All divisions",
@@ -399,7 +399,7 @@
       "emergency": "Emergency",
       "transport": "Transport"
     },
-    "note": "Tap a district to open its page. In the pilot phase, only sourced places published in Rajshahi are shown."
+    "note": "Tap a district to open its page. In the pilot phase only a few places in Rajshahi have been added."
   },
   "NearMe": {
     "title": "Services near me",
@@ -498,7 +498,7 @@
     "plan1": "Check the lists of upazilas and unions against official sources, step by step.",
     "plan2": "Add information on institutions and services in districts beyond Rajshahi.",
     "plan3": "Review and publish users’ corrections and suggestions for new places.",
-    "plan4": "Launch an English version.",
+    "plan4": "Add upazila and union boundaries to the map.",
     "moreTitle": "Learn more",
     "more": {
       "dataPolicy": {

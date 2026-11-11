@@ -25,12 +25,12 @@ No record has official (Tier 1) evidence yet. The full feature status is in
 ## Repo layout
 
 ```
-apps/web         Next.js 15 public PWA (Bangla UI, ISR pages, httpOnly-cookie sessions)
-apps/admin       Next.js 15 staff app: dashboard, verification centre, areas, places, moderation, sources, audit, users
+apps/web         Next.js 15 public PWA (Bangla at /, English at /en; ISR pages, httpOnly-cookie sessions)
+apps/admin       Next.js 15 staff app (TOTP 2FA): dashboard, verification, areas, places, moderation, duplicates, sources, audit, users, Open Data keys
 apps/api         NestJS 11 modular monolith over PostgreSQL 16 + PostGIS (raw parameterised SQL), OpenAPI at /docs
 packages/shared  domain types, Bangla formatting (lakh/crore, ০-৯), labels, search keys
 packages/ui      design tokens (light/dark, category colours) + Tailwind v4 theme
-db/migrations    0001–0006, additive        db/seed/seed.sql   generated seed
+db/migrations    0001–0009, additive        db/seed/seed.sql   generated seed
 data/sources     nuhil/bangladesh-geocode (MIT) + compact copy of Consolidated Master v3.0
 data/seed        generated CSV/JSON/GeoJSON + QA reports      pipelines   seed builder, trust policy, reconciliation, validator
 scripts          db reset/migrate, SQL checker, smoke + integration tests     tests/e2e   Playwright

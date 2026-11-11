@@ -22,7 +22,7 @@ Status words: **Complete** (built, wired end to end, tested), **Partial** (works
 | Roles + geographic scope | Missing | Complete | Permission matrix; scope test in integration 6 | — |
 | Emergency | Partial | Complete | Static + fallback; Playwright | Nearby emergency map uses generic near-me |
 | PWA / offline | Missing | Partial | Manifest, SW, offline page | No district offline packs, no background sync |
-| i18n (English) | Missing | Not started | Fake switch removed | `/en` routes + translations |
+| i18n (English) | Missing | Complete | `/en` routes, message catalogs, hreflang, language switch; Playwright i18n spec | Record names without an English version show in Bangla |
 | Security baseline | Missing | Complete | Helmet/CSP, rate limits, problem details, CSRF, request ids | No CAPTCHA, no upload scanning (no uploads) |
 | Observability | Minimal | Partial | JSON access logs, request ids, `/health` | No Sentry/OTel/metrics backend |
 | CI | Partial | Complete | Lint, unit, SQL, integration, smoke, Playwright, migrations | Lighthouse not in CI (run manually) |

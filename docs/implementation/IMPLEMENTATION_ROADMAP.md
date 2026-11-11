@@ -22,6 +22,5 @@ Each phase ends at a gate (measurable), not a date.
 1. Official evidence: import the LGD union list and BBS geocodes, and verify Rajshahi Division first. Use the admin verification centre and close the 16 tracked conflicts.
 2. SMS gateway contract plus a provider adapter in `apps/api/src/auth/sms.ts` (staff 2FA is done).
 3. Upazila/union boundaries (BBS/HDX ADM3–4) so `/geo/locate` resolves below district level.
-4. English locale (`/en`) with next-intl.
-5. Media uploads (R2 + EXIF stripping).
-6. Release-pinned Open Data bulk files (the keyed live API is done).
+4. Media uploads (R2 + EXIF stripping).
+5. Release-pinned Open Data bulk files (the keyed live API is done).

@@ -1,4 +1,4 @@
-# Final implementation report (11 Nov 2026)
+# Final implementation report (11 Nov 2026, updated)
 
 ## A. Executive summary
 
@@ -8,7 +8,8 @@ The branch `claude/complete-audit-report-1016dc` turns the read-only Phase 1 sli
 - a reconciled seed;
 - accounts, contributions, moderation and verification;
 - a separate admin app;
-- a PWA public site with offline emergency information;
+- a bilingual (Bangla at `/`, English at `/en`) PWA public site with offline emergency information;
+- staff two-factor authentication, duplicate detection and a keyed Open Data API;
 - CI covering lint through browser tests.
 
 **It is not production-ready yet, and that is deliberate:**
@@ -20,7 +21,7 @@ The branch `claude/complete-audit-report-1016dc` turns the read-only Phase 1 sli
 ## B. Repository changes
 
 - 8 commits on top of `548bed0` (`main`): 274 files changed.
-- **New migrations (additive):** `0002_data_trust`, `0003_postgis_search`, `0004_accounts_workflow`, `0005_public_views`, `0006_session_rotation_grace`. `0001` is unchanged.
+- **New migrations (additive):** `0002_data_trust`, `0003_postgis_search`, `0004_accounts_workflow`, `0005_public_views`, `0006_session_rotation_grace`, `0007_hotlines_always_sourced`, `0008_staff_2fa`, `0009_open_data_keys`. `0001` is unchanged.
 - **New app:** `apps/admin`.
 - **New in `apps/api`:** auth, me, reviews, contributions, admin (4 controllers), contact, common (problem filter, request context, auth guard, permissions, tokens), CLI `grant-role`.
 - **Data:**
@@ -31,6 +32,7 @@ The branch `claude/complete-audit-report-1016dc` turns the read-only Phase 1 sli
 - **Dependencies added:**
   - API: `helmet`, `@nestjs/throttler`, `@nestjs/swagger`.
   - Root dev: `eslint`, `@eslint/js`, `typescript-eslint`, `globals`, `@playwright/test`.
+  - Web: `next-intl` (`~4.4`).
   - `pnpm-lock.yaml` is now committed.
 - **Removed:** the fake language switch and the static bell icon from the web header.
 
@@ -75,7 +77,7 @@ Policy: [DATA_TRUST_POLICY.md](../data/DATA_TRUST_POLICY.md). Reconciliation: [D
 - **Static pages:** About, Contact, Privacy, Terms, Data policy, Guidelines.
 - **Tokens:** AA contrast, a full dark theme with a toggle, distinct category colours.
 - **Caching:** ISR for public pages, with security headers.
-- **Not done:** English locale. The fake switch was removed instead.
+- **English:** every page at `/en/...` (next-intl message catalogs, hreflang, canonical URLs, a real language switch). Bangla stays at `/` with unchanged URLs, and caching is unchanged (ISR area/place pages, static `/emergency`).
 
 ## F. Admin (apps/admin)
 
@@ -85,12 +87,14 @@ Policy: [DATA_TRUST_POLICY.md](../data/DATA_TRUST_POLICY.md). Reconciliation: [D
 - **Moderation:** queue with decisions; approval creates an unpublished place.
 - **Other pages:** review reports, sources, audit log with field diffs, users (role, scope, status).
 - **Security:** httpOnly-cookie BFF and Origin-checked mutations.
-- **Not done:** 2FA for staff.
+- **Staff 2FA:** TOTP (RFC 6238) with encrypted secrets, replay protection, 8 single-use recovery codes and lockout. With `STAFF_REQUIRE_2FA` (on by default in production) the admin app shows an enrolment/code gate before any page.
+- **Duplicates:** name + 500 m distance scoring on new places, contributions and full re-scans. Scores ≥ 95 block publication until a staff decision; merging archives the copy and moves its reviews and saves.
+- **Open Data keys:** issue (shown once) and revoke.
 
 ## G. Security and performance
 
 - **Security:** see D. CSRF uses Origin checks in both Next apps, and tokens are never readable from JavaScript.
-- **Not done:** CAPTCHA, upload scanning (there are no uploads), admin 2FA.
+- **Not done:** CAPTCHA, upload scanning (there are no uploads).
 - **First-load JS:** 103–114 kB per public route, within the 170 kB budget. Area, place and home pages are ISR; the emergency page revalidates hourly.
 
 ## H. Testing (actual results from this session)
@@ -100,16 +104,16 @@ Policy: [DATA_TRUST_POLICY.md](../data/DATA_TRUST_POLICY.md). Reconciliation: [D
 | `pnpm install --frozen-lockfile` | Pass |
 | `pnpm build` (5 tasks) / `pnpm typecheck` (7) | Pass |
 | `pnpm lint` (4 packages) + `pnpm lint:root` | Pass, 0 problems |
-| Unit: shared 7, api 3, pipeline 6 | Pass |
+| Unit: shared 7, api 8 (incl. RFC 6238 TOTP vectors, duplicate thresholds), pipeline 6 | Pass |
 | `validate_seed.py` | 0 failures, 4 warnings (±1 population rounding) |
 | Seed rebuild reproducible | Pass |
-| `check_sql.py` | 38/38 statements OK |
-| `db-migrate.sh` on an empty DB, rerun, and tampered file | Applies 0001–0006 / "up to date" / aborts with exit 3 |
-| API integration (`integration-api.test.mjs`) | 6/6 pass in labelled (default) mode and in strict mode |
+| `check_sql.py` | 45/45 statements OK |
+| `db-migrate.sh` on an empty DB, rerun, and tampered file | Applies 0001–0009 / "up to date" / aborts with exit 3 |
+| API integration (`integration-api.test.mjs`) | 9/9 pass in labelled (default) mode with Typesense, and in strict mode with staff 2FA required |
 | API smoke / web smoke | All checks pass (API smoke in both modes) |
-| Playwright (Pixel 7 + desktop) | 25 passed, 1 skipped (admin test on mobile, by design) |
+| Playwright (Pixel 7 + desktop: public, account, English, admin incl. 2FA enrolment and key issuing) | 46 passed, 2 skipped (admin tests on mobile, by design) |
 | Lighthouse (mobile): home / place / emergency | Accessibility 100/100/100 · SEO 100/100/100 · Best practices 96/96/100. The two 96s come from a third-party basemap font 404 |
-| Typesense search path | **Not run locally** (no image available); runs in CI |
+| Typesense search path | Pass locally (typo-tolerant, Banglish, Bangla prefix); circuit breaker fails over to Postgres in < 70 ms and recovers |
 | GitHub Actions | **Not yet run**; first run happens on push |
 
 Bugs found and fixed by these tests:
@@ -135,10 +139,11 @@ Bugs found and fixed by these tests:
 | Official verification of data | **Blocked** (needs LGD/BBS evidence work in the admin) |
 | Master reconciliation | Partially complete (16 open conflicts) |
 | Public API, search, geo | Complete (Typesense untested locally) |
-| Auth | Partially complete. **Blocked** on an SMS gateway; Google sign-in not started; admin 2FA not started |
+| Auth | Partially complete. **Blocked** on an SMS gateway; Google sign-in not started (no OAuth credentials). Staff 2FA complete |
 | User features (saved, reviews, contributions) | Complete (collections UI and photo uploads not started) |
-| Admin + moderation + verification | Complete |
-| Public website | Complete for Bangla; English not started |
+| Admin + moderation + verification + duplicates | Complete |
+| Open Data API | Complete (live, keyed, sourced-only); release-pinned bulk files not started |
+| Public website | Complete in Bangla and English |
 | PWA/offline | Partially complete (no offline district packs, no background sync) |
 | Security baseline | Complete (CAPTCHA, upload scanning not started) |
 | Observability | Partially complete (logs, request ids, health; no Sentry/metrics) |
