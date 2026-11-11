@@ -1,0 +1,25 @@
+{
+  "key": "FSCD_STATIONS_RAJ_2026",
+  "name": "Fire Service & Civil Defence — Rajshahi Division station & office numbers",
+  "organization": "Fire Service and Civil Defence Directorate (FSCD), Bangladesh",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-fireservice/2026/7/3a7a810c-0608-4597-98b2-bdc6aab3e6c9.pdf",
+    "https://fireservice.gov.bd/pages/static-pages/6922e013933eb65569e25586",
+    "https://fireservice.gov.bd/pages/static-pages/6922e0b9933eb65569e28555",
+    "https://fireservice.rajshahi.gov.bd/pages/static-pages/697f93bf35ce18e1c06be88b"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": "2026-08-11",
+  "license": null,
+  "license_url": null,
+  "attribution": "Fire Service and Civil Defence Directorate, Bangladesh (fireservice.gov.bd)",
+  "notes": "No licence stated on fireservice.gov.bd. publication_date = creation date in the PDF metadata. Station names were transcribed from the rendered PDF because its text layer has broken Bangla glyph mapping; phone numbers come from the text layer. No addresses or coordinates are published.",
+  "files": {
+    "places.csv": "7169d06f74448c740a652233876ef83ebf230b0f133d134b2370095032a19395",
+    "facts.csv": "263df3b251f003304f3ce22ddc793d0affa63ac0614cf223521cda1a35c15a42",
+    "raw/fscd_rajshahi_division_numbers.pdf": "f3c8ee343cdd1cbb74a4924e6da51c897c975f526f290af66228672f59fb66d5"
+  }
+}

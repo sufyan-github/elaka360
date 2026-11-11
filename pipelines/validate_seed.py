@@ -29,7 +29,7 @@ def boolean(v):
 
 
 areas = read("geo/admin_areas.csv")
-places = read("pilot_rajshahi/places.csv")
+places = read("places/rajshahi_division_places.csv")
 sources = {r["key"]: r for r in read("reference/data_sources.csv")}
 by_id = {r["id"]: r for r in areas}
 
@@ -40,10 +40,10 @@ for r in areas + places:
             fail(f"not NFC: {r.get('id') or r.get('slug')} {k}={v!r}")
 
 # 2. stable id ranges and parents
-RANGES = {"division": (10001, 10008), "district": (20001, 20064), "upazila": (30001, 30495), "union": (40001, 44541),
+RANGES = {"division": (10001, 10008), "district": (20001, 20064), "upazila": (30001, 30495), "union": (40001, 44999), "ward": (70001, 79999),
           "city_corporation": (50001, 50013), "pourashava": (60001, 60999)}
 PARENT_LEVEL = {"division": {"country"}, "district": {"division"}, "upazila": {"district"}, "union": {"upazila"},
-                "city_corporation": {"district"}, "pourashava": {"upazila"}}
+                "city_corporation": {"district"}, "pourashava": {"upazila"}, "ward": {"city_corporation", "pourashava", "union"}}
 for r in areas:
     lvl = r["level"]
     if lvl in RANGES:
@@ -91,7 +91,7 @@ for r in areas:
             fail(f"source: area {r['id']} eligible but evidence source {r['evidence_source']!r} has no URL")
 for p in places:
     row = dict(evidence_level=p["evidence_level"], production_eligible=boolean(p["production_eligible"]),
-               evidence_source=p["source"] if p["evidence_level"] in ("official", "secondary") else None, verified=False)
+               evidence_source=p["evidence_source"] or None, verified=False)
     for e in check_row(row):
         fail(f"policy: place {p['slug']}: {e}")
     if p["evidence_level"] not in EVIDENCE_LEVELS:
@@ -132,6 +132,12 @@ for r in areas:
         diff = pop.get(r["id"], 0) - int(r["population_2022"])
         if diff:
             warnings.append(f"population: {r['name_en']} districts sum to {diff:+d} vs division total (source rounding)")
+
+# 9. collected sources: manifests complete, checksums current
+import import_collected
+for m in import_collected._manifests():
+    for e in __import__("collected").check_manifest(m):
+        fail(f"source: {e}")
 
 summary = json.load(open(os.path.join(SEED, "qa", "counts_summary.json"), encoding="utf-8"))
 print(json.dumps({"failures": len(failures), "warnings": len(warnings), "production_eligible_by_level": summary["production_eligible_by_level"]},

@@ -8,10 +8,9 @@ Every record touched by an open conflict stays non-production. Resolving one nee
 
 | Kind | District | Upazila | Detail | Note |
 |---|---|---|---|---|
-| count | Sirajganj | Ullapara | seed 13 vs master 14 | SIR-001/SIR-002: master selects 83 (Ullapara 14) from the district administration; BBS 2011 and the seed have 82. The 83rd union is not identified. |
-| count | Bogura | Gabtali | seed 11 vs master 12 | BOG-005: master baseline Gabtali 12 / Sonatala 6 vs seed 11 / 7; same district total 108. A union may sit under the other upazila in nuhil. |
-| count | Bogura | Sonatala | seed 7 vs master 6 | BOG-005: see Gabtali. |
-| name | Rajshahi | Bagha | master only: Chakrajapur | RAJ-001/RAJ-002: Bagha 6 vs 7. Chakrajapur appears in Rajshahi v1.7 from the Bagha upazila portal; not in the selected 71 baseline. |
+| count | Bogura | Sonatala | seed 7 vs master 6 | BOG-005: master baseline Sonatala 6; seed 7 matches the Bogura district list (2026-10-07) and BBS 2022. Gabtali is 12 in both after adding সুখানপুকুর. |
+| count | Rajshahi | Bagha | seed 7 vs master 6 | RAJ-001/RAJ-002 resolved by official evidence: Bagha has 7 unions incl. চকরাজাপুর (district union list 2026-06-25, Bagha and Chakrajapur portals, BBS 2022 geocode 50-81-10-182). The master's selected baseline still says 6. |
+| count | Pabna | Bhangura | seed 6 vs master 5 | PAB-001/PAB-006 resolved: Bhangura has 6 unions incl. মন্ডতোষ (Pabna এক নজরে 2023, Bhangura portal, BBS 2022 = 74 unions). The master's secondary distribution says 5. |
 | name | Naogaon | Raninagar | master only: Khateshwar Raninagar | Likely spelling variant of seed 'Khatteshawr' (খট্টেশ্বর রাণীনগর); master has no Bangla name for this row. |
 | name | Naogaon | Raninagar | seed only: Khatteshawr | See 'Khateshwar Raninagar'. |
 | name | Chapainawabganj | Chapainawabganj Sadar | master only: Parbatipur | CNB-003: master register repeats this name under Gomastapur with a copied geocode suffix; register not reliable here. |

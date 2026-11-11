@@ -1,0 +1,36 @@
+{
+  "key": "DOA_PROTECTED_MONUMENTS_RAJ_2026",
+  "name": "Department of Archaeology — gazetted protected monuments, Rajshahi Division (district PDF lists)",
+  "organization": "প্রত্নতত্ত্ব অধিদপ্তর (Department of Archaeology), Ministry of Cultural Affairs",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://archaeology.gov.bd/pages/static-pages/6922df29933eb65569e20433"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": "2026-08-31",
+  "license": null,
+  "license_url": null,
+  "attribution": "প্রত্নতত্ত্ব অধিদপ্তর (Department of Archaeology), Ministry of Cultural Affairs",
+  "files": {
+    "facts.csv": "865854974ce575eb8a8dbcec73bb057903929fc14f88e2406a6b243bb46d9a0d",
+    "places.csv": "cce97ac1be8c132182badf95aa549083bb42b2c01e334d0a065e93a231701e6f",
+    "raw/doa_bogura.pdf": "9eb3143a8dd050238a34a0d480f48d31282df9781fe5ce53f8a22e7148d1eee3",
+    "raw/doa_bogura.txt": "b12780d02f4b4a47783c38e3aee2fced2fdead86fccb010b397719e9653adfb6",
+    "raw/doa_chapainawabganj.pdf": "c3b21ce5ed48e25ef9412b7cff9e03dc9562b2db3ce04d581fa6d5ff761c89f2",
+    "raw/doa_chapainawabganj.txt": "662242d18201ce4b28799a1046889394da51efa1acff8681607e42e5463cc912",
+    "raw/doa_joypurhat.pdf": "bd0d9eaf7cc6be5613977a03c7dcc73593cfc2f80825c4196ebbb5459af5d63e",
+    "raw/doa_joypurhat.txt": "4ecb452e0ea7e31c535bef74765d54eadf1fd36117b12ad4237d8dbade8ac823",
+    "raw/doa_naogaon.pdf": "5e75cb1f240d52dcb1b778c4ced365315a2c9729dfe93169dba560032aa364a2",
+    "raw/doa_naogaon.txt": "55d6d1590b7416d2df293d2059ee3eae573381cd6cbda16cf1fcb171580fb2d2",
+    "raw/doa_natore.pdf": "87ad0a397c2afd7f8b122d20ce79b782075ee8329b5607fda7ffe0350736891b",
+    "raw/doa_natore.txt": "c50fd9cb3434cbc44ce42ee78cb75ad917df716ed6f2cc7490a6d2dd43e82c8a",
+    "raw/doa_pabna.pdf": "f84a62e2a7d0bb6d7e09b9a375f9b74188fcd5fc0c2f5409dfdcc29662d4aef9",
+    "raw/doa_pabna.txt": "95a50b9b2beeeb9bf004f2aafd72521bab5f8218b5ba7421fabe562b98eaa09e",
+    "raw/doa_rajshahi.pdf": "c3f8372b95d80ea56ab292100fb4b1ed37d2b596aac306d66c49f0e5e65c90fd",
+    "raw/doa_rajshahi.txt": "e6b416e97752e136672b8ff778717f23e870d0aa3c8ca3907f7b9bea63cc2835",
+    "raw/doa_sirajganj.pdf": "7e074598ceae587b75493647c2ff43e45d2c1014d1d5b14173c08326e76779a5",
+    "raw/doa_sirajganj.txt": "3c53e9a5384d74ba3515c95827f33d27e23f5db31deecaafbd8ec6cff1871c70"
+  },
+  "notes": "Page 'রাজশাহী বিভাগের সংরক্ষিত পুরাকীর্তি' links one PDF per district (published 2024-08-31 for 6 districts, Pabna 2026-06-25, Rajshahi 2026-08-31; 153 monuments). PDFs are Bijoy/SutonnyMJ-encoded Word exports; text converted to Unicode by fetch.py (bijoy2uni) and spot-checked against rendered pages. Coordinates are the DoA's own GPS column (DMS / decimal minutes / decimal degrees, parsed); out-of-range or out-of-district values are not used (kept in extra_json). Descriptions (column 7) are not copied; only a construction-date phrase is kept. No licence stated on the site. Licence: none stated on the source; treat as government public information, cite the source."
+}

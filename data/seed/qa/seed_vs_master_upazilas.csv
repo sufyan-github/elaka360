@@ -3,14 +3,14 @@ Bogura,Adamdighi,Adamdighi,6,6,bogura_reconciliation/bogura_upazila_distribution
 Bogura,Bogra Sadar,Bogura Sadar,11,11,bogura_reconciliation/bogura_upazila_distribution_baseline.csv:historical_selected_union_count,match,
 Bogura,Dhunot,Dhunat,10,10,bogura_reconciliation/bogura_upazila_distribution_baseline.csv:historical_selected_union_count,match,
 Bogura,Dupchanchia,Dhupchanchia,6,6,bogura_reconciliation/bogura_upazila_distribution_baseline.csv:historical_selected_union_count,match,
-Bogura,Gabtali,Gabtali,11,12,bogura_reconciliation/bogura_upazila_distribution_baseline.csv:historical_selected_union_count,known,BOG-005: master baseline Gabtali 12 / Sonatala 6 vs seed 11 / 7; same district total 108. A union may sit under the other upazila in nuhil.
+Bogura,Gabtali,Gabtali,12,12,bogura_reconciliation/bogura_upazila_distribution_baseline.csv:historical_selected_union_count,match,
 Bogura,Kahaloo,Kahaloo,9,9,bogura_reconciliation/bogura_upazila_distribution_baseline.csv:historical_selected_union_count,match,
 Bogura,Nondigram,Nandigram,5,5,bogura_reconciliation/bogura_upazila_distribution_baseline.csv:historical_selected_union_count,match,
 Bogura,Shajahanpur,Shajahanpur,9,9,bogura_reconciliation/bogura_upazila_distribution_baseline.csv:historical_selected_union_count,match,
 Bogura,Shariakandi,Sariakandi,12,12,bogura_reconciliation/bogura_upazila_distribution_baseline.csv:historical_selected_union_count,match,
 Bogura,Sherpur,Sherpur,10,10,bogura_reconciliation/bogura_upazila_distribution_baseline.csv:historical_selected_union_count,match,
 Bogura,Shibganj,Shibganj,12,12,bogura_reconciliation/bogura_upazila_distribution_baseline.csv:historical_selected_union_count,match,
-Bogura,Sonatala,Sonatala,7,6,bogura_reconciliation/bogura_upazila_distribution_baseline.csv:historical_selected_union_count,known,BOG-005: see Gabtali.
+Bogura,Sonatala,Sonatala,7,6,bogura_reconciliation/bogura_upazila_distribution_baseline.csv:historical_selected_union_count,known,BOG-005: master baseline Sonatala 6; seed 7 matches the Bogura district list (2026-10-07) and BBS 2022. Gabtali is 12 in both after adding সুখানপুকুর.
 Chapainawabganj,Bholahat,Bholahat,4,4,chapainawabganj_reconciliation/chapainawabganj_upazila_count_reconciliation.csv:selected_target_union_count,match,
 Chapainawabganj,Chapainawabganj Sadar,Chapainawabganj Sadar,14,14,chapainawabganj_reconciliation/chapainawabganj_upazila_count_reconciliation.csv:selected_target_union_count,match,
 Chapainawabganj,Gomostapur,Gomastapur,8,8,chapainawabganj_reconciliation/chapainawabganj_upazila_count_reconciliation.csv:selected_target_union_count,match,
@@ -41,14 +41,14 @@ Natore,Natore Sadar,Natore Sadar,7,7,natore_reconciliation/natore_upazila_count_
 Natore,Singra,Singra,12,12,natore_reconciliation/natore_upazila_count_reconciliation.csv:district_admin_current_count,match,
 Pabna,Atghoria,Atghoria,5,5,pabna_reconciliation/pabna_upazila_distribution_baseline.csv:secondary_73_distribution,match,
 Pabna,Bera,Bera,9,9,pabna_reconciliation/pabna_upazila_distribution_baseline.csv:secondary_73_distribution,match,
-Pabna,Bhangura,Bhangura,5,5,pabna_reconciliation/pabna_upazila_distribution_baseline.csv:secondary_73_distribution,match,
+Pabna,Bhangura,Bhangura,6,5,pabna_reconciliation/pabna_upazila_distribution_baseline.csv:secondary_73_distribution,known,"PAB-001/PAB-006 resolved: Bhangura has 6 unions incl. মন্ডতোষ (Pabna এক নজরে 2023, Bhangura portal, BBS 2022 = 74 unions). The master's secondary distribution says 5."
 Pabna,Chatmohar,Chatmohar,11,11,pabna_reconciliation/pabna_upazila_distribution_baseline.csv:secondary_73_distribution,match,
 Pabna,Faridpur,Faridpur,6,6,pabna_reconciliation/pabna_upazila_distribution_baseline.csv:secondary_73_distribution,match,
 Pabna,Ishurdi,Ishwardi,7,7,pabna_reconciliation/pabna_upazila_distribution_baseline.csv:secondary_73_distribution,match,
 Pabna,Pabna Sadar,Pabna Sadar,10,10,pabna_reconciliation/pabna_upazila_distribution_baseline.csv:secondary_73_distribution,match,
 Pabna,Santhia,Santhia,10,10,pabna_reconciliation/pabna_upazila_distribution_baseline.csv:secondary_73_distribution,match,
 Pabna,Sujanagar,Sujanagar,10,10,pabna_reconciliation/pabna_upazila_distribution_baseline.csv:secondary_73_distribution,match,
-Rajshahi,Bagha,Bagha,6,6,rajshahi_district_reconciliation/rajshahi_upazila_distribution_baseline.csv:selected_union_count,match,
+Rajshahi,Bagha,Bagha,7,6,rajshahi_district_reconciliation/rajshahi_upazila_distribution_baseline.csv:selected_union_count,known,"RAJ-001/RAJ-002 resolved by official evidence: Bagha has 7 unions incl. চকরাজাপুর (district union list 2026-06-25, Bagha and Chakrajapur portals, BBS 2022 geocode 50-81-10-182). The master's selected baseline still says 6."
 Rajshahi,Bagmara,Bagmara,16,16,rajshahi_district_reconciliation/rajshahi_upazila_distribution_baseline.csv:selected_union_count,match,
 Rajshahi,Charghat,Charghat,6,6,rajshahi_district_reconciliation/rajshahi_upazila_distribution_baseline.csv:selected_union_count,match,
 Rajshahi,Durgapur,Durgapur,7,7,rajshahi_district_reconciliation/rajshahi_upazila_distribution_baseline.csv:selected_union_count,match,
@@ -65,4 +65,4 @@ Sirajganj,Raigonj,Raiganj,9,9,sirajganj_reconciliation/sirajganj_upazila_distrib
 Sirajganj,Shahjadpur,Shahjadpur,13,13,sirajganj_reconciliation/sirajganj_upazila_distribution_baseline.csv:selected_union_count,match,
 Sirajganj,Sirajganj Sadar,Sirajganj Sadar,10,10,sirajganj_reconciliation/sirajganj_upazila_distribution_baseline.csv:selected_union_count,match,
 Sirajganj,Tarash,Tarash,8,8,sirajganj_reconciliation/sirajganj_upazila_distribution_baseline.csv:selected_union_count,match,
-Sirajganj,Ullapara,Ullapara,13,14,sirajganj_reconciliation/sirajganj_upazila_distribution_baseline.csv:selected_union_count,known,SIR-001/SIR-002: master selects 83 (Ullapara 14) from the district administration; BBS 2011 and the seed have 82. The 83rd union is not identified.
+Sirajganj,Ullapara,Ullapara,14,14,sirajganj_reconciliation/sirajganj_upazila_distribution_baseline.csv:selected_union_count,match,

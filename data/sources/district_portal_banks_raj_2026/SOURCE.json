@@ -1,0 +1,29 @@
+{
+  "key": "DISTRICT_PORTAL_BANKS_RAJ_2026",
+  "name": "District portals — bank branch/office phone lists (Rajshahi, Natore, Naogaon)",
+  "organization": "Deputy Commissioner's offices (district portals)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://rajshahi.gov.bd/pages/static-pages/697f99c635ce18e1c06c092f",
+    "https://natore.gov.bd/pages/static-pages/697f805835ce18e1c06b8698",
+    "https://naogaon.gov.bd/pages/static-pages/ব্যাংক-6d69cb-697f79d835ce18e1c06b6047",
+    "https://bogura.gov.bd/pages/static-pages/bank-6v4e4m-6a4f327012674831010d4193",
+    "https://joypurhat.gov.bd/pages/static-pages/bank-5ur527-6a8539dc2adbdef9eae8d663",
+    "https://sirajganj.gov.bd/pages/static-pages/697f79c035ce18e1c06b5572",
+    "https://chapainawabganj.gov.bd/pages/static-pages/697f8d8c35ce18e1c06bd993",
+    "https://pabnasadar.pabna.gov.bd/pages/static-pages/697f895b35ce18e1c06b9d78"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "District portals rajshahi.gov.bd, natore.gov.bd, naogaon.gov.bd",
+  "notes": "No licence stated; lists are undated and partly old (landlines in pre-2020 formats, e.g. '(০৭২১) ৭৭২২৭৪'). No addresses, routing numbers or coordinates. Bogura, Joypurhat and Sirajganj portals list bank names only (no branches/contacts); Chapainawabganj's page is an unnamed file attachment; Pabna Sadar's page is a copied Google-Maps listing — none used.",
+  "files": {
+    "places.csv": "9b4ac0c43b28083ebf6791dc596fa73158f80754366a3bf4496351c4330ceca3",
+    "raw/naogaon_banks.txt": "0ab5dc018d3a2a2c99c4311b75d680dc4054fa0e9164c9ddf73590c796586988",
+    "raw/natore_banks.txt": "4845d188d6b4957c4f9b11a9e888df5ac03aaab78daa8436c8c98d8e3bd8088b",
+    "raw/rajshahi_banks.txt": "b5f72e77cb407ba7793b19e0139f2169fbb0262334f80b41dbad7a7aaa0d0d8d"
+  }
+}

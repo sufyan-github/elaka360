@@ -1,0 +1,24 @@
+{
+  "key": "RMP_THANAS_2026",
+  "name": "Rajshahi Metropolitan Police — thanas and official numbers",
+  "organization": "Rajshahi Metropolitan Police (Bangladesh Police)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://rmp.gov.bd/pages/static-pages/695e3b08c4774958d7b7214e",
+    "https://rmp.gov.bd/pages/static-pages/695e3b0ac4774958d7b721f0",
+    "https://rmp.gov.bd/pages/static-pages/695e3b09c4774958d7b72177"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Rajshahi Metropolitan Police (rmp.gov.bd)",
+  "notes": "No licence stated. Only institutional numbers (OC official mobiles, HQ phone/fax) are collected; no officer names. No addresses (except HQ) or coordinates are published for thanas.",
+  "files": {
+    "places.csv": "04fb1b2d6294e47ec60d97286e335b2c481a3b8111b09e13a7653a5ab4b1a1af",
+    "facts.csv": "324b76a5b2de9c5947fac7831e7c47ea453e42f9f0783a68b75dcbf35e451b17",
+    "raw/rmp_units.txt": "52aef8f5ab6d1aac3805f65bd84be8c303a84773fdd2c84b4a833cb4d251bc43",
+    "raw/rmp_contact.txt": "1401471e768528513478886f1b01a593cc866aca9dc49a2e1721dd39ae7f4e21"
+  }
+}

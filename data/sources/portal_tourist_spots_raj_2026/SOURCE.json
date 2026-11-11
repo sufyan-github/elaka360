@@ -1,0 +1,21 @@
+{
+  "key": "PORTAL_TOURIST_SPOTS_RAJ_2026",
+  "name": "National portal 'দর্শনীয় স্থান' (tourist spot) lists — Rajshahi Division district and upazila portals",
+  "organization": "District / Upazila administrations (national portal framework, a2i/Cabinet Division)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://rajshahi.gov.bd/pages/tourist-spot",
+    "https://<upazila>.<district>.gov.bd/pages/tourist-spot"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "District / Upazila administrations (national portal framework, a2i/Cabinet Division)",
+  "files": {
+    "facts.csv": "54ed1bbef8ca0ebd9300e38fe703240cf2ad02ff10cc1dc365f4bdbe77da1ea1",
+    "places.csv": "dbb6e64f9a46881db1e9a952fde34a5e5c637804add643cd8611d039cdaaa9d3"
+  },
+  "notes": "Server-rendered list tables (/pages/tourist-spot, paginated with ?page=N) of 8 district + 67 upazila portals. Columns used: title, location; 'transportation' and descriptions not copied; the 'contact' column is mostly a UNO/OC contact or directions, so no phone is taken. No coordinates are published (some rows link Google Maps pages; links kept in extra_json, not used). Categories assigned by keyword rules. No licence stated. Licence: none stated on the source; treat as government public information, cite the source."
+}

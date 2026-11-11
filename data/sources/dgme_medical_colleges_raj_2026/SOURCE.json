@@ -1,0 +1,21 @@
+{
+  "key": "DGME_MEDICAL_COLLEGES_RAJ_2026",
+  "name": "DGME medical and dental college lists — Rajshahi Division",
+  "organization": "Directorate General of Medical Education (DGME), Ministry of Health and Family Welfare",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3",
+    "https://dgme.gov.bd/pages/static-pages/6922dfb1933eb65569e237f5",
+    "https://dgme.gov.bd/pages/static-pages/6922dcbc933eb65569e11be5"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": "2025-12-18",
+  "license": null,
+  "license_url": null,
+  "attribution": "Source: Directorate General of Medical Education (dgme.gov.bd)",
+  "notes": "HTML tables 'সরকারি/বেসরকারি মেডিকেল কলেজ' (college code, name, year established, MBBS seats; page updated 18 Dec 2025) and 'সরকারি/বেসরকারি ডেন্টাল কলেজ/ইউনিট' (updated 20 May 2024). Rows kept when the name's district suffix is in Rajshahi Division. Dental units are attached to their parent medical college in extra_json. English names/websites for government colleges come from the 'সরকারী মেডিকেল কলেজ (সকল)' page (matched by district). students.dgme.gov.bd and facilities.dgme.gov.bd (linked from DGME) were unreachable on access. No addresses, phones or coordinates. Licence not stated.",
+  "files": {
+    "places.csv": "0ef6e26dad1e1b986aff3b61c4997bdbccd05899e8a4b0d9c08ab5e283314900"
+  }
+}

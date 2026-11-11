@@ -1,0 +1,27 @@
+{
+  "key": "RAJSHAHI_DC_PORTAL_2026",
+  "name": "Rajshahi District Administration portal — upazila/union list, pourashava list, district at-a-glance",
+  "organization": "Office of the Deputy Commissioner, Rajshahi (Government of Bangladesh, a2i National Portal)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://rajshahi.gov.bd/pages/static-pages/697f79bb35ce18e1c06b5300",
+    "https://rajshahi.gov.bd/pages/static-pages/6a706a5b3a58d2277e320df7",
+    "https://rajshahi.gov.bd/pages/static-pages/697fb2f635ce18e1c06c9335",
+    "https://rajshahi.gov.bd/pages/static-pages/6a576e8a5adca3a8fa9671c8"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "রাজশাহী জেলা প্রশাসন, জাতীয় তথ্য বাতায়ন (rajshahi.gov.bd)",
+  "files": {
+    "areas.csv": "5045f91f4b01078a48bcfab49bdc7d555a4368bf29d8afb8cf2dde3bb05d21c6",
+    "facts.csv": "9051d7f0465dd9fab662de2562e811daed5298c8d5128845b0ea95f5f45580a3",
+    "raw/district_at_a_glance.txt": "38917adbc811c5135e2785a52e52cd3104f6cdf34614dc03b229a7c3dfecc344",
+    "raw/pourashava_list.txt": "7d7b88b940134f93411f98cde67c9dc8a32491d84adc32e920f1951d93423dd0",
+    "raw/upazila_parishad_list.txt": "2397b30b655069de4422fda70e02a7a49a96b8afb52346d0201396159dae74a7",
+    "raw/upazila_union_list.txt": "aeac15af33dd34ae5deac742131b3c342001a7c194d59793db295d561d5f35eb"
+  },
+  "notes": "Page update dates (content-update-block): union list 2026-06-25, at-a-glance 2026-06-30, pourashava list 2026-08-03, upazila parishad list 2026-07-15. No licence stated; only facts (names, counts) are extracted."
+}

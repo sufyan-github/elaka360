@@ -1,0 +1,23 @@
+{
+  "key": "GEOBOUNDARIES_BGD_ADM4",
+  "name": "geoBoundaries gbOpen Bangladesh ADM4 (unions, paurashavas, city wards), Rajshahi Division extract",
+  "organization": "geoBoundaries (William & Mary geoLab); original data: Bangladesh Bureau of Statistics (BBS), OCHA ROAP",
+  "source_type": "humanitarian_dataset",
+  "trust_level": 3,
+  "urls": [
+    "https://www.geoboundaries.org/api/current/gbOpen/BGD/ADM4/",
+    "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BGD/ADM4/geoBoundaries-BGD-ADM4.geojson",
+    "https://data.humdata.org/dataset/administrative-boundaries-of-bangladesh-as-of-2015"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": null,
+  "license": "CC-BY-IGO-3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/igo/legalcode",
+  "attribution": "geoBoundaries (Runfola et al. 2020, PLOS ONE); data: Bangladesh Bureau of Statistics (BBS), OCHA ROAP",
+  "files": {
+    "areas.csv": "1cd8f6ddb7a1baf8075b71b50e1bc2b95f917e5226bf8e9bf9add5b0232d9e96",
+    "boundaries.geojson": "bfa2132c9101c106cc739435d3649e538778a4f74192df9efbdf73fec6cb5070",
+    "facts.csv": "091635cea74daa4d25643aa0ca12bc5cea2915116e4f1be85c55165ac8f26661"
+  },
+  "notes": "geoBoundaries BGD-ADM4-29066614, year represented 2020, source update Thu Jan 19 07:31:04 2023, build Dec 12, 2023, licence as stated by geoBoundaries: Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO) (licence source data.humdata.org/dataset/administrative-boundaries-of-bangladesh-as-of-2015). P-codes (HDX_PCODE_2020) attached from HDX COD-AB bgd_adminpoints by point-in-polygon; 654 polygons kept, 0 label points/polygons not assigned. Polygons simplified (Douglas-Peucker 0.0002 deg, 5 decimals) ring by ring."
+}

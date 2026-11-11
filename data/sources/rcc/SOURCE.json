@@ -1,0 +1,30 @@
+{
+  "key": "RCC_PORTAL_2026",
+  "name": "Rajshahi City Corporation official portal (erajshahi.portal.gov.bd)",
+  "organization": "Rajshahi City Corporation",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://erajshahi.portal.gov.bd/",
+    "https://erajshahi.portal.gov.bd/pages/static-pages/6922e12c933eb65569e2aaf0",
+    "https://erajshahi.portal.gov.bd/pages/static-pages/6922df31933eb65569e207a2",
+    "https://erajshahi.portal.gov.bd/pages/static-pages/6922dbbc933eb65569e0c30c",
+    "https://erajshahi.portal.gov.bd/pages/static-pages/6922db93933eb65569e0af91",
+    "https://erajshahi.portal.gov.bd/pages/static-pages/6ae2c685e0cf99482934fec4"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Rajshahi City Corporation (erajshahi.portal.gov.bd), Bangladesh National Portal",
+  "files": {
+    "areas.csv": "24c1734fbc72755b6254c0dc9305a50db57e19ebdfd82ab2b2f95b2a8706b308",
+    "facts.csv": "45407fb233d155adc6caf7b46f3682ff572dd444992890e618ca5b7765bba4c3",
+    "raw/darpan.txt": "456b910c80c80d0567621f635b974e5d3844983b4b5daf327a6365c941dd8653",
+    "raw/ek_nojore_rcc.txt": "acf48481a30cce7318a2c0299f693694fdb4d741351ce26bbe36840ab7d441dd",
+    "raw/former_mayors_first_rows.txt": "94d87fed63af85556ad6ffdd15469a092ae54de1bf239a26b4fcce32082b73a1",
+    "raw/ward_officers_page.txt": "c0925b83beaa1222975f8f1110054dafb002fd28ce44c6078d220d42b002cb56",
+    "raw/ward_secretaries_page.txt": "324d73507266c133562b4ef4eba4288e03d69b86014c8a6c618b3ee24afa5d36"
+  },
+  "notes": "rcc.gov.bd and rcc.portal.gov.bd do not resolve; the RCC portal is erajshahi.portal.gov.bd. Key pages: রাজশাহী মহানগরী দর্পণ (updated 2026-03-04), রাজশাহীর ইতিহাস/লোকেশন/আয়তন incl. \"এক নজরে রাজশাহী সিটি কর্পোরেশন\" (updated 2024-10-14), পূর্বতন মেয়র ও প্রশাসক (2026-10-19). Ward lists are scanned PDFs of officials (names/phones not copied). No ward names or mahalla lists are published."
+}

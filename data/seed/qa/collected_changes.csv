@@ -1,0 +1,537 @@
+﻿record,change,detail,source
+division:10002,population,sum of BBS 2022 enumerated district populations = 20353116,BBS_CENSUS_2022
+city_corporation:50005,population,552791 -> 553288 (BBS 2022 C-01; RCC এক নজরে agrees),BBS_CENSUS_2022
+area:41155,name_bn,আদমদিঘি -> আদমিদিঘি (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41180,name_bn_review,seed ধুনট সদর vs portal ধুনট (similarity 0.73); not changed,RAJDIV_DISTRICT_PORTALS_2026
+area:41183,name_bn,দুর্গাহাটা -> দূর্গাহাটা (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:44542,union_added,Sukhanpukur / সুখানপুকুর in Gabtali (Bogura),BBS_CENSUS_2022
+area:41113,weak_match,Jamgaon = BBS Jamgram (similarity 0.71),BBS_CENSUS_2022
+area:41159,name_bn_review,seed বুড়ইল vs portal বুরইল (similarity 0.73); not changed,RAJDIV_DISTRICT_PORTALS_2026
+area:41126,name_bn,সারিয়াকান্দি সদর -> সারিয়াকান্দি (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41129,name_bn,চালুয়াবাড়ী -> চালুয়াবাড়ি (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41131,name_bn_review,seed হাটফুলবাড়ী vs portal ফুলবাড়ি (similarity 0.74); not changed,RAJDIV_DISTRICT_PORTALS_2026
+area:41133,name_bn,কর্ণিবাড়ী -> কর্নিবাড়ি (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41137,name_bn,ভেলাবাড়ী -> ভেলাবাড়ি (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41204,name_bn,আটমূল -> আটমুল (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41169,name_bn,পাকুল্ল্যা -> পাকুল্লা (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41338,name_bn,সোনামূখী -> সোনামুখী (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41362,name_bn,দোগাছি -> দোগাছী (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41363,name_bn,পুরানাপৈল -> পুরাণাপৈল (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41349,name_bn,তুলশীগংগা -> তুলশীগঙ্গা (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41353,name_bn_review,seed ধরঞ্জি vs portal ধরনজি (similarity 0.73); not changed,RAJDIV_DISTRICT_PORTALS_2026
+area:41355,name_bn,বালিঘাটা -> বালীঘাটা (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41474,name_bn,ভোঁপড়া -> ভোঁপাড়া (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41426,name_bn,পাহারপুর -> পাহাড়পুর (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41466,name_bn,কুসুম্বা -> কুশুম্বা (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41468,name_bn,নূরুল্যাবাদ -> নূরম্নল্যাবাদ (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41470,name_bn_review,seed কাঁশোকাপুর vs portal কাঁশোপাড়া (similarity 0.60); not changed,RAJDIV_DISTRICT_PORTALS_2026
+area:41472,name_bn,বিষ্ণপুর -> বিষ্ণুপুর (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41490,name_bn,কির্ত্তিপুর -> কীত্তিপুর (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41492,name_bn,তিলোকপুর -> তিলকপুর (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41494,name_bn,দুবলহাটী -> দুবলহাটি (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41456,name_bn,পাড়ইল -> পাঁড়ইল (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41457,name_bn_review,seed শ্রীমন্তপুর vs portal শ্রীমমত্মপুর (similarity 0.78); not changed,RAJDIV_DISTRICT_PORTALS_2026
+area:41433,name_bn,নিমইল -> নিরমইল (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41438,name_bn,পাটিচড়া -> পাটিচরা (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41440,name_bn,ঘষনগর -> ঘোষনগর (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41442,name_bn_review,seed শিহারা vs portal শিহাড়া (similarity 0.77); not changed,RAJDIV_DISTRICT_PORTALS_2026
+area:41504,name_bn,গাঙ্গুরিয়া -> গাংগুরিয়া (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41481,paired_by_count,Khatteshawr = BBS Raninagar (only unmatched pair in Raninagar),BBS_CENSUS_2022
+area:41481,name_bn_review,seed খট্টেশ্বর রাণীনগর vs portal রাণীনগর (similarity 0.61); not changed,RAJDIV_DISTRICT_PORTALS_2026
+area:41485,name_bn_review,seed বরগাছা vs portal বড়গাছা (similarity 0.77); not changed,RAJDIV_DISTRICT_PORTALS_2026
+area:41313,name_bn,মাঝগাও -> মাঝগাঁও (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41329,name_bn,অর্জুনপুর বরমহাটী -> অর্জুনপুর বরমহাটি (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41289,name_bn,বিপ্রবেলঘড়িয়া -> বিপ্রবেলঘরিয়া (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41293,name_bn,লক্ষীপুর খোলাবাড়িয়া -> লহ্মীপুর খোলাবাড়িয়া (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41302,name_bn,হাতিয়ানদহ -> হাতিয়ান্দহ (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41308,name_bn,রামান্দখাজুরা -> রামানন্দ খাজুরা (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41075,name_bn,চাঁদভা -> চাদভা (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41052,name_bn,অষ্টমণিষা -> অষ্টমনিষা (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:44543,union_added,Mandatosh / মন্ডতোষ in Bhangura (Pabna),BBS_CENSUS_2022
+area:41085,name_bn,মুলগ্রাম -> মূলগ্রাম (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41100,name_bn,বৃলাহিড়ীবাড়ী -> বৃলাড়ীবাড়ী (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41105,name_bn_review,seed ডেমড়া vs portal ডেমরা (similarity 0.73); not changed,RAJDIV_DISTRICT_PORTALS_2026
+area:41049,weak_match,Luxmikunda = BBS Lakkhikundi (similarity 0.69),BBS_CENSUS_2022
+area:41046,name_bn,দাশুরিয়া -> দাশুড়িয়া (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41047,name_bn,ছলিমপুর -> সলিমপুর (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41049,name_bn,লক্ষীকুন্ডা -> লক্ষিকুন্ডা (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41092,name_bn,ভুলবাড়ীয়া -> ভূলবাড়িয়া (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41252,name_bn,আড়ানী -> আড়ানি (official portal spelling),RAJSHAHI_DC_PORTAL_2026
+area:44544,union_added,Chak Rajapur / চকরাজাপুর in Bagha (Rajshahi),BBS_CENSUS_2022
+area:41270,name_bn,নরদাস -> নরদাশ (official portal spelling),RAJSHAHI_DC_PORTAL_2026
+area:41276,name_bn,কাচাড়ী কোয়লিপাড়া -> কাচাড়ী কোয়ালিপাড়া (official portal spelling),RAJSHAHI_DC_PORTAL_2026
+area:41240,name_bn,ভায়ালক্ষ্মীপুর -> ভায়ালক্ষীপুর (official portal spelling),RAJSHAHI_DC_PORTAL_2026
+area:41253,name_bn,গোদাগাড়ী -> গোদাগাড়ি (official portal spelling),RAJSHAHI_DC_PORTAL_2026
+area:41255,name_bn,পাকড়ী -> পাকড়ি (official portal spelling),RAJSHAHI_DC_PORTAL_2026
+area:41230,name_bn,ঘষিগ্রাম -> ঘাসিগ্রাম (official portal spelling),RAJSHAHI_DC_PORTAL_2026
+area:41220,name_bn,বড়্গাছি -> বড়গাছি (official portal spelling),RAJSHAHI_DC_PORTAL_2026
+area:40958,name_bn_review,seed ঘোরজান vs portal ঘোড়জান (similarity 0.77); not changed,RAJDIV_DISTRICT_PORTALS_2026
+area:40959,name_bn,খাসকাউলিয়া -> খাষকাউলিয়া (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:40960,name_bn,খাসপুকুরিয়া -> খাষপুকুরিয়া (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:40997,name_bn,হাবিবুল্লাহ নগর -> হাবিবুল্লা নগর (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41009,name_bn,কাওয়াখোলা -> কাওয়াকোলা (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41020,name_bn,উল্লাপাড়া সদর -> উল্লাপাড়া (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41025,name_bn_review,seed দুর্গা নগর vs portal দূগার্নগর (similarity 0.67); not changed,RAJDIV_DISTRICT_PORTALS_2026
+area:41026,name_bn,পূর্ণিমাগাতী -> পূনির্মাগাঁতী (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:41028,name_bn,হটিকুমরুল -> হাটিকুমরুল (official portal spelling),RAJDIV_DISTRICT_PORTALS_2026
+area:44545,union_added,Kayra / কয়ড়া in Ullapara (Sirajganj),BBS_CENSUS_2022
+area:60015,pourashava_added,Santahar Pourashava / সান্তাহার পৌরসভা in Adamdighi,BBS_CENSUS_2022
+area:60016,pourashava_added,Bogura Pourashava / — in Bogra Sadar,BBS_CENSUS_2022
+area:60017,pourashava_added,Dhunat Pourashava / ধুনট পৌরসভা in Dhunot,BBS_CENSUS_2022
+area:60018,pourashava_added,Dupchachia Pourashava / — in Dupchanchia,BBS_CENSUS_2022
+area:60019,pourashava_added,Talora Pourashava / — in Dupchanchia,BBS_CENSUS_2022
+area:60020,pourashava_added,Gabtali Pourashava / — in Gabtali,BBS_CENSUS_2022
+area:60021,pourashava_added,Kahaloo Pourashava / কাহালু পৌরসভা in Kahaloo,BBS_CENSUS_2022
+area:60022,pourashava_added,Nandigram Pourashava / — in Nondigram,BBS_CENSUS_2022
+area:60023,pourashava_added,Sariakandi Pourashava / — in Shariakandi,BBS_CENSUS_2022
+area:60024,pourashava_added,Bogura Pourashava / — in Shajahanpur,BBS_CENSUS_2022
+area:60025,pourashava_added,Sherpur Pourashava / — in Sherpur,BBS_CENSUS_2022
+area:60026,pourashava_added,Shibganj Pourashava / — in Shibganj,BBS_CENSUS_2022
+area:60027,pourashava_added,Sonatala Pourashava / সোনাতলা পৌরসভা in Sonatala,BBS_CENSUS_2022
+area:60028,pourashava_added,Akkelpur Pourashava / আক্কেলপুর পৌরসভা in Akkelpur,BBS_CENSUS_2022
+area:60029,pourashava_added,Joypurhat Pourashava / জয়পুরহাট পৌরসভা in Joypurhat Sadar,BBS_CENSUS_2022
+area:60030,pourashava_added,Kalai Pourashava / কালাই পৌরসভা in Kalai,BBS_CENSUS_2022
+area:60031,pourashava_added,Khetlal Pourashava / ক্ষেতলাল পৌরসভা in Khetlal,BBS_CENSUS_2022
+area:60032,pourashava_added,Panchbibi Pourashava / পাঁচবিবি পৌরসভা in Panchbibi,BBS_CENSUS_2022
+area:60033,pourashava_added,Dhamoirhat Pourashava / ধামইরহাট পৌরসভা in Dhamoirhat,BBS_CENSUS_2022
+area:60034,pourashava_added,Naogaon Pourashava / নওগাঁ পৌরসভা in Naogaon Sadar,BBS_CENSUS_2022
+area:60035,pourashava_added,Nazipur Pourashava / — in Patnitala,BBS_CENSUS_2022
+area:60036,pourashava_added,Bagatipara Pourashava / বাগাতিপাড়া পৌরসভা in Bagatipara,BBS_CENSUS_2022
+area:60037,pourashava_added,Banpara Pourashava / বড়াইগ্রাম পৌরসভা in Baraigram,BBS_CENSUS_2022
+area:60038,pourashava_added,Baraigram Pourashava / বড়াইগ্রাম পৌরসভা in Baraigram,BBS_CENSUS_2022
+area:60039,pourashava_added,Gurudaspur Pourashava / গুরুদাসপুর পৌরসভা in Gurudaspur,BBS_CENSUS_2022
+area:60040,pourashava_added,Gopalpur (Lalpur) Pourashava / গোপালপুর পৌরসভা in Lalpur,BBS_CENSUS_2022
+area:60041,pourashava_added,Naldanga Pourashava / নলডাঙ্গা পৌরসভা in Naldanga,BBS_CENSUS_2022
+area:60042,pourashava_added,Natore Pourashava / নাটোর পৌরসভা in Natore Sadar,BBS_CENSUS_2022
+area:60043,pourashava_added,Singra Pourashava / সিংড়া পৌরসভা in Singra,BBS_CENSUS_2022
+area:60044,pourashava_added,Rahanpur Pourashava / — in Gomostapur,BBS_CENSUS_2022
+area:60045,pourashava_added,Nachole Pourashava / নাচোল পৌরসভা in Nachol,BBS_CENSUS_2022
+area:60046,pourashava_added,Chapainawabganj Pourashava / চাঁপাইনবাবগঞ্জ পৌরসভা in Chapainawabganj Sadar,BBS_CENSUS_2022
+area:60047,pourashava_added,Shibganj Pourashava / শিবগঞ্জ পৌরসভা in Shibganj,BBS_CENSUS_2022
+area:60048,pourashava_added,Atgharia Pourashava / আটঘরিয়া পৌরসভা in Atghoria,BBS_CENSUS_2022
+area:60049,pourashava_added,Bera Pourashava / বেড়া পৌরসভা in Bera,BBS_CENSUS_2022
+area:60050,pourashava_added,Bhangura Pourashava / — in Bhangura,BBS_CENSUS_2022
+area:60051,pourashava_added,Chatmohar Pourashava / চাটমোহর পৌরসভা in Chatmohar,BBS_CENSUS_2022
+area:60052,pourashava_added,Faridpur Pourashava / — in Faridpur,BBS_CENSUS_2022
+area:60053,pourashava_added,Ishwardi Pourashava / ঈশ্বরদী পৌরসভা in Ishurdi,BBS_CENSUS_2022
+area:60054,pourashava_added,Pabna Pourashava / পাবনা পৌরসভা in Pabna Sadar,BBS_CENSUS_2022
+area:60055,pourashava_added,Santhia Pourashava / সাঁথিয়া পৌরসভা in Santhia,BBS_CENSUS_2022
+area:60056,pourashava_added,Sujanagar Pourashava / সুজানগর পৌরসভা in Sujanagar,BBS_CENSUS_2022
+area:60057,pourashava_added,Belkuchi Pourashava / বেলকুচি পৌরসভা in Belkuchi,BBS_CENSUS_2022
+area:60058,pourashava_added,Kazipur Pourashava / কাজিপুর পৌরসভা in Kazipur,BBS_CENSUS_2022
+area:60059,pourashava_added,Rayganj Pourashava / রায়গঞ্জ পৌরসভা in Raigonj,BBS_CENSUS_2022
+area:60060,pourashava_added,Shahjadpur Pourashava / শাহজাদপুর পৌরসভা in Shahjadpur,BBS_CENSUS_2022
+area:60061,pourashava_added,Sirajganj Pourashava / সিরাজগঞ্জ পৌরসভা in Sirajganj Sadar,BBS_CENSUS_2022
+area:60062,pourashava_added,Ullapara Pourashava / উল্লাপাড়া পৌরসভা in Ullapara,BBS_CENSUS_2022
+wards,wards_added,618 wards (pourashavas + Rajshahi City Corporation),BBS_CENSUS_2022
+boundaries,attached,"652 polygons attached (HDX COD-AB v03 upazilas, geoBoundaries 2020 unions/pourashavas/wards)",HDX_COD_AB_BGD
+ruet,place_evidence,secondary -> official via UGC_UNIVERSITIES_RAJ_2026:ugc:rajshahi-university-of-engineering-technology-ruet,UGC_UNIVERSITIES_RAJ_2026
+ruet,place_merged,UGC_UNIVERSITIES_RAJ_2026:ugc:rajshahi-university-of-engineering-technology-ruet (0.91),UGC_UNIVERSITIES_RAJ_2026
+university-of-rajshahi,place_evidence,secondary -> official via UGC_UNIVERSITIES_RAJ_2026:ugc:university-of-rajshahi,UGC_UNIVERSITIES_RAJ_2026
+university-of-rajshahi,place_merged,UGC_UNIVERSITIES_RAJ_2026:ugc:university-of-rajshahi (1.00),UGC_UNIVERSITIES_RAJ_2026
+puthia-rajbari,place_evidence,secondary -> official via DOA_PROTECTED_MONUMENTS_RAJ_2026:rajshahi-03,DOA_PROTECTED_MONUMENTS_RAJ_2026
+puthia-rajbari,place_merged,DOA_PROTECTED_MONUMENTS_RAJ_2026:rajshahi-03 (1.00),DOA_PROTECTED_MONUMENTS_RAJ_2026
+bagha-mosque,place_evidence,unverified -> official via DOA_PROTECTED_MONUMENTS_RAJ_2026:rajshahi-19,DOA_PROTECTED_MONUMENTS_RAJ_2026
+bagha-mosque,place_merged,DOA_PROTECTED_MONUMENTS_RAJ_2026:rajshahi-19 (1.00),DOA_PROTECTED_MONUMENTS_RAJ_2026
+DOA_PROTECTED_MONUMENTS_RAJ_2026:rajshahi-21,place_point_dropped,"24.667833,88.727967 is not inside Rajshahi district",DOA_PROTECTED_MONUMENTS_RAJ_2026
+CAAB_AIRPORTS_RAJ_2026:caab-ird,place_point_dropped,"24.152633,89.049431 is not inside Pabna district",CAAB_AIRPORTS_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:21540,place_point_dropped,"24.601874,88.36423 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:27858,place_point_dropped,"24.602989,89.118462 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:22255,place_point_dropped,"24.601874,88.36423 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:35779,place_point_dropped,"24.79155,88.844 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:38297,place_point_dropped,"24.875425,88.687925 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:28751,place_point_dropped,"24.417159,88.269861 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:26376,place_point_dropped,"24.619287,88.947232 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:38326,place_point_dropped,"24.103452,88.537921 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:22374,place_point_dropped,"24.602989,88.118462 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10370,place_point_dropped,"24.67334,88.73059 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:39407,place_point_dropped,"24.875425,88.687925 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:26502,place_point_dropped,"24.417159,88.269861 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:28803,place_point_dropped,"24.619287,88.947232 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:39637,place_point_dropped,"24.103452,88.537921 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:30955,place_point_dropped,"24.602989,88.118462 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:26045,place_point_dropped,"24.602989,89.118462 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:30593,place_point_dropped,"24.82872,89.58955 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:32873,place_point_dropped,"24.602989,88.118462 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:35328,place_point_dropped,"24.82993,88.28337 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:37071,place_point_dropped,"25.15676,89.39638 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10389,place_point_dropped,"24.27982,88.47487 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:27688,place_point_dropped,"24.77123,88.56775 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10447,place_point_dropped,"25.194409,88.626984 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10434,place_point_dropped,"24.49854,88.28573 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10433,place_point_dropped,"24.56832,88.251464 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:26105,place_point_dropped,"24.998336,88.140424 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:1532,place_point_dropped,"24.117624,88.452189 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:33177,place_point_dropped,"24.374,89.249298 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:26901,place_point_dropped,"24.374,89.249298 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:27760,place_point_dropped,"24.00038,89.24999 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:22260,place_point_dropped,"24.00038,89.24999 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:38976,place_point_dropped,"24.243,88.2541 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+rajshahi-medical-college-rajshahi,place_merged,DGHS_HRIS_FACILITIES_RAJ_2026:hris:1553 (1.00),DGHS_HRIS_FACILITIES_RAJ_2026
+rajshahi-medical-university-rajshahi,place_merged,DGHS_HRIS_FACILITIES_RAJ_2026:hris:24218 (1.00),DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:35394,place_point_dropped,"24.170862,88.990067 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:22282,place_point_dropped,"24.602989,89.118462 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:38061,place_point_dropped,"24.888878,88.254569 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:34194,place_point_dropped,"24.602989,89.118462 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:38487,place_point_dropped,"24.856858,88.545865 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:30003,place_point_dropped,"24.602989,89.118462 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:32015,place_point_dropped,"24.602989,89.118462 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:29017,place_point_dropped,"24.170862,88.990069 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:31174,place_point_dropped,"24.602989,89.118462 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:27378,place_point_dropped,"24.602989,89.118462 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:25950,place_point_dropped,"24.602989,89.118462 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:22281,place_point_dropped,"24.602989,88.118462 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:38585,place_point_dropped,"24.888878,88.254569 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:29703,place_point_dropped,"24.602989,89.118462 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:39772,place_point_dropped,"24.414171,88.986542 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:28697,place_point_dropped,"24.170862,88.990067 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:29130,place_point_dropped,"24.831883,88.41782 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:30878,place_point_dropped,"24.170862,88.990067 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:32898,place_point_dropped,"24.602989,89.118462 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:21158,place_point_dropped,"24.170862,88.990067 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:31352,place_point_dropped,"24.65482,88.40288 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:28199,place_point_dropped,"24.602989,89.118462 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:26178,place_point_dropped,"24.170862,88.990069 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:22289,place_point_dropped,"24.602989,89.118462 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:27927,place_point_dropped,"24.602989,89.118462 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:21186,place_point_dropped,"24.602989,89.118462 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:29114,place_point_dropped,"24.602989,89.118462 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:28288,place_point_dropped,"24.602989,88.118462 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:32448,place_point_dropped,"24.602989,89.118462 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:33522,place_point_dropped,"24.170862,88.990069 is not inside Rajshahi district",DGHS_HRIS_FACILITIES_RAJ_2026
+rajshahi-medical-college-hospital,place_evidence,secondary -> official via DGHS_HRIS_FACILITIES_RAJ_2026:hris:1554,DGHS_HRIS_FACILITIES_RAJ_2026
+rajshahi-medical-college-hospital,place_merged,DGHS_HRIS_FACILITIES_RAJ_2026:hris:1554 (1.00),DGHS_HRIS_FACILITIES_RAJ_2026
+isolami-byangk-medikel-kolej-rajshahi,place_merged,DGHS_HRIS_FACILITIES_RAJ_2026:hris:16823 (1.00),DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:35918,place_skipped,district '' not in Rajshahi Division,DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:35919,place_skipped,district '' not in Rajshahi Division,DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:23044,place_skipped,district '' not in Rajshahi Division,DGHS_HRIS_FACILITIES_RAJ_2026
+shaheed-ziaur-rahman-medical-college-bogura,place_merged,DGHS_HRIS_FACILITIES_RAJ_2026:hris:1104 (1.00),DGHS_HRIS_FACILITIES_RAJ_2026
+tiemeses-medikel-kolej-bogura,place_merged,DGHS_HRIS_FACILITIES_RAJ_2026:hris:16827 (1.00),DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:39345,place_point_dropped,"24.83911,89.83911 is not inside Bogura district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:28448,place_point_dropped,"24.602989,89.118462 is not inside Bogura district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:38314,place_point_dropped,"24.83911,89.83911 is not inside Bogura district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:9325,place_point_dropped,"24.03554,89.29266 is not inside Bogura district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:35622,place_point_dropped,"24.369945,88.605592 is not inside Bogura district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:13411,place_point_dropped,"24.0001,89.00024 is not inside Bogura district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:13421,place_point_dropped,"24.33667,89.37567 is not inside Bogura district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:38369,place_point_dropped,"24.478522,89.471544 is not inside Bogura district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:39512,place_point_dropped,"24.487512,89.254711 is not inside Bogura district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:9355,place_point_dropped,"25.0458,89.2021 is not inside Bogura district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:1150,place_point_dropped,"25.002,89.1901 is not inside Bogura district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:15851,place_point_dropped,"24.010183,89.49719 is not inside Bogura district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:9445,place_point_dropped,"25.2873,89.51596 is not inside Bogura district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:9447,place_point_dropped,"25.05815,89.4909 is not inside Bogura district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:9438,place_point_dropped,"25.281,89.51233 is not inside Bogura district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:9440,place_point_dropped,"25.2393,89.56316 is not inside Bogura district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:9441,place_point_dropped,"25.3061,89.5414 is not inside Bogura district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:34624,place_point_dropped,"23.809754,89.496299 is not inside Bogura district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:34705,place_point_dropped,"23.809754,89.496299 is not inside Bogura district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:29171,place_point_dropped,"24.37693,88.60307 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:22192,place_point_dropped,"24.68337,88.63587 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:22196,place_point_dropped,"24.44279,88.70212 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:36586,place_point_dropped,"24.423978,88.993471 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:17187,place_point_dropped,"24.37,88.12 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:38561,place_point_dropped,"24.253651,88.256985 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:30567,place_point_dropped,"24.126424,88.140735 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:30114,place_point_dropped,"24.37693,88.60307 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:25767,place_point_dropped,"24.68337,88.63587 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:26443,place_point_dropped,"24.44279,88.70212 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:33319,place_point_dropped,"24.37158,88.58165 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:32217,place_point_dropped,"24.37693,88.603073 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:31252,place_point_dropped,"24.87295,88.04495 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:30284,place_point_dropped,"24.358101,88.914576 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:28386,place_point_dropped,"24.819229,88.914576 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:36935,place_point_dropped,"24.598745,89.545865 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:21397,place_point_dropped,"24.87295,88.04495 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:27006,place_point_dropped,"24.819229,88.914578 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:15870,place_point_dropped,"24.7865,88.98928 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:26433,place_point_dropped,"24.157797,88.643571 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:9531,place_point_dropped,"24.72871,88.98928 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:9524,place_point_dropped,"24.43573,88.24585 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:26156,place_point_dropped,"24.923184,88.602265 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:30195,place_point_dropped,"24.157797,88.043571 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:30760,place_point_dropped,"24.923184,88.602265 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:37064,place_point_dropped,"24.00146,88.32266 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:1170,place_point_dropped,"24.5678,88.65322 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:9585,place_point_dropped,"24.38162,88.104047 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:17188,place_point_dropped,"24.382393,88.103802 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:9590,place_point_dropped,"24.5052,88.31621 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:9584,place_point_dropped,"24.3895,88.104071 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:27781,place_point_dropped,"24.84092,88.55574 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:27932,place_point_dropped,"24.43556,88.77204 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:38989,place_point_dropped,"24.00146,88.32266 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:28750,place_point_dropped,"24.43556,88.77204 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:22200,place_point_dropped,"24.84092,88.55574 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:22163,place_point_dropped,"24.43556,88.77204 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:26240,place_point_dropped,"24.43556,88.77204 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:2201,place_point_dropped,"24.719135,88.013223 is not inside Chapainawabganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:9602,place_point_dropped,"24.9923,89.01083 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:1285,place_point_dropped,"25.25769,89.598579 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:15882,place_point_dropped,"25.154589,89.973768 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:15884,place_point_dropped,"25.140921,89.973768 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:22203,place_point_dropped,"24.46294,88.06264 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:1290,place_point_dropped,"25.26719,88.168322 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:17485,place_point_dropped,"25.039921,88.908315 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:9625,place_point_dropped,"25.124311,88.90344 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:9619,place_point_dropped,"25.045042,88.954527 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:9626,place_point_dropped,"25.128331,88.123236 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:17214,place_point_dropped,"25.11712,88.099531 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:30493,place_point_dropped,"24.46294,88.062637 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:28775,place_point_dropped,"24.46294,88.06264 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:39951,place_point_dropped,"24.46294,88.062637 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:31205,place_point_dropped,"24.46294,88.06264 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:21674,place_point_dropped,"24.46294,88.062637 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:26627,place_point_dropped,"24.37693,88.60307 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:26119,place_point_dropped,"24.46294,88.062637 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:32710,place_point_dropped,"24.46294,88.062637 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:31694,place_point_dropped,"24.46294,88.06264 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:30344,place_point_dropped,"24.46294,88.062637 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:32916,place_point_dropped,"24.46294,88.062637 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:30850,place_point_dropped,"24.46294,88.062637 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:15886,place_point_dropped,"24.542,88.1652 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:1294,place_point_dropped,"25.0759,89.6451 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:15887,place_point_dropped,"24.152,89.2541 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:31515,place_point_dropped,"24.37693,88.60307 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:32611,place_point_dropped,"24.37693,88.60307 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:28693,place_point_dropped,"24.37693,88.60307 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:21463,place_point_dropped,"24.37693,88.60307 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:39612,place_point_dropped,"24.808119,88.98987 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:34796,place_point_dropped,"25.045874,88.751984 is not inside Joypurhat district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:36957,place_point_dropped,"24.312864,89.166353 is not inside Naogaon district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:39892,place_point_dropped,"24.9195,88.402 is not inside Naogaon district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:36998,place_point_dropped,"24.402593,88.942023 is not inside Naogaon district",DGHS_HRIS_FACILITIES_RAJ_2026
+naogaon-medical-college-naogaon,place_merged,DGHS_HRIS_FACILITIES_RAJ_2026:hris:24578 (1.00),DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:22172,place_point_dropped,"24.80934,88.97942 is not inside Naogaon district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:9879,place_point_dropped,"24.88927,88.9996 is not inside Naogaon district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:38345,place_point_dropped,"24.206954,88.902035 is not inside Naogaon district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:31506,place_point_dropped,"24.918611,88.475411 is not inside Naogaon district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:9905,place_point_dropped,"24.83094,88.4175 is not inside Naogaon district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:28508,place_point_dropped,"24.918611,88.475411 is not inside Naogaon district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:39331,place_point_dropped,"24.856357,88.437153 is not inside Naogaon district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:22729,place_point_dropped,"24.224536,88.002548 is not inside Natore district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10011,place_point_dropped,"24.30395,89.8555 is not inside Natore district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10047,place_point_dropped,"24.35597,89.31216 is not inside Natore district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:19221,place_point_dropped,"24.05,89.1 is not inside Natore district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10107,place_point_dropped,"24.4815,88.02702 is not inside Natore district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:28946,place_point_dropped,"25.482981,89.468269 is not inside Natore district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10080,place_point_dropped,"24.37256,89.98918 is not inside Natore district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:17238,place_point_dropped,"24.36688,88.86545 is not inside Natore district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:26723,place_point_dropped,"25.482981,89.468269 is not inside Natore district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:1427,place_point_dropped,"24.366285,88.594842 is not inside Natore district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:13031,place_point_dropped,"24.645,89.117 is not inside Natore district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10142,place_point_dropped,"24.88,89.77 is not inside Natore district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:21604,place_point_dropped,"24.683687,89.147974 is not inside Natore district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:16864,place_point_dropped,"24.385203,89.442394 is not inside Pabna district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:29341,place_point_dropped,"24.227574,89.152117 is not inside Pabna district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:39054,place_point_dropped,"24.227862,89.127386 is not inside Pabna district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:39000,place_point_dropped,"24.372054,89.234115 is not inside Pabna district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:1476,place_point_dropped,"25.44258,89.57428 is not inside Pabna district",DGHS_HRIS_FACILITIES_RAJ_2026
+pabna-medical-college-pabna,place_merged,DGHS_HRIS_FACILITIES_RAJ_2026:hris:2236 (1.00),DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:1479,place_point_dropped,"24.0006,89.0 is not inside Pabna district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:39543,place_point_dropped,"23.733648,89.249994 is not inside Pabna district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:30052,place_point_dropped,"24.848078,89.372963 is not inside Pabna district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:30868,place_point_dropped,"24.848078,89.372963 is not inside Pabna district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:37030,place_point_dropped,"24.646546,89.456464 is not inside Pabna district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10582,place_point_dropped,"24.56087,89.4452 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10562,place_point_dropped,"24.09873,89.44591 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10565,place_point_dropped,"24.5689,89.5648 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10559,place_point_dropped,"24.68973,89.45904 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10555,place_point_dropped,"24.56873,89.5754 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10584,place_point_dropped,"24.5687,89.44536 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10575,place_point_dropped,"24.5687,89.56487 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10585,place_point_dropped,"24.5698,89.85647 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10587,place_point_dropped,"24.56901,89.44536 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10581,place_point_dropped,"24.25904,89.45365 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10588,place_point_dropped,"24.59701,89.8654 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10564,place_point_dropped,"24.98012,89.88564 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10576,place_point_dropped,"24.5836,89.3421 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:22337,place_point_dropped,"24.845055,88.39962 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10598,place_point_dropped,"24.56824,89.7864 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10590,place_point_dropped,"24.02587,89.45364 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10589,place_point_dropped,"24.25687,89.34523 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10591,place_point_dropped,"24.9873,89.89954 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:21419,place_point_dropped,"24.845055,88.39962 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10615,place_point_dropped,"24.5687,89.78654 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10608,place_point_dropped,"24.9566,89.4533 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10613,place_point_dropped,"24.9863,89.78564 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10617,place_point_dropped,"24.9837,89.67548 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10640,place_point_dropped,"24.65897,89.45367 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10627,place_point_dropped,"24.68972,89.4537 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10631,place_point_dropped,"24.68979,89.44563 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10629,place_point_dropped,"24.89671,89.85443 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10642,place_point_dropped,"24.26598,89.1532 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10645,place_point_dropped,"24.06987,89.3426 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10628,place_point_dropped,"24.29346,89.98453 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10651,place_point_dropped,"24.87901,89.56641 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10658,place_point_dropped,"24.56489,89.34265 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10647,place_point_dropped,"24.76891,89.32154 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10656,place_point_dropped,"24.33526,89.78534 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10654,place_point_dropped,"24.87902,89.12514 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10657,place_point_dropped,"24.90563,89.1429 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10666,place_point_dropped,"24.6598,89.3265 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10650,place_point_dropped,"24.87609,89.45637 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10660,place_point_dropped,"24.33654,89.34552 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10672,place_point_dropped,"24.56897,89.34219 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10669,place_point_dropped,"24.55347,89.45734 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:22368,place_point_dropped,"24.0125,88.4788 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:31473,place_point_dropped,"24.88801,88.95124 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:17623,place_point_dropped,"24.56824,89.7864 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:22678,place_point_dropped,"24.56824,89.7864 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:28678,place_point_dropped,"24.888701,88.916791 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+khaja-iunus-ali-medikel-kolej-sirajagnj-sirajganj,place_merged,DGHS_HRIS_FACILITIES_RAJ_2026:hris:16830 (1.00),DGHS_HRIS_FACILITIES_RAJ_2026
+north-benggal-medikel-kolej-sirajagnj-sirajganj,place_merged,DGHS_HRIS_FACILITIES_RAJ_2026:hris:16824 (1.00),DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:27243,place_point_dropped,"24.91489,89.6817 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:34221,place_point_dropped,"24.3636,88.6241 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:26268,place_point_dropped,"24.563908,89.50457 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:29996,place_point_dropped,"24.276175,88.62846 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:36446,place_point_dropped,"24.42917,89.807432 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:31911,place_point_dropped,"24.563908,89.50457 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:22376,place_point_dropped,"24.276175,88.62846 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:17648,place_point_dropped,"24.97135,89.368032 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:35696,place_point_dropped,"24.558281,89.358415 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:25554,place_point_dropped,"23.97319,88.91679 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10810,place_point_dropped,"24.56987,89.11435 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10794,place_point_dropped,"24.25697,89.45362 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10793,place_point_dropped,"24.56893,89.57438 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10807,place_point_dropped,"24.36744,89.2374 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10817,place_point_dropped,"24.89765,89.1332 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10782,place_point_dropped,"24.56871,89.3874 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10802,place_point_dropped,"24.26987,89.8229 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10797,place_point_dropped,"24.56873,89.56439 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+DGHS_HRIS_FACILITIES_RAJ_2026:hris:10783,place_point_dropped,"24.56872,89.46528 is not inside Sirajganj district",DGHS_HRIS_FACILITIES_RAJ_2026
+rajshahi-college,place_evidence,unverified -> official via BANBEIS_INST_RAJ_2026:eiin:126490,BANBEIS_INST_RAJ_2026
+rajshahi-college,place_merged,BANBEIS_INST_RAJ_2026:eiin:126490 (0.90),BANBEIS_INST_RAJ_2026
+ahsania-mission-university-of-science-and-technology-rajshahi-city,place_merged,BANBEIS_INST_RAJ_2026:eiin:140224 (1.00),BANBEIS_INST_RAJ_2026
+ruet,place_merged,BANBEIS_INST_RAJ_2026:eiin:136625 (1.00),BANBEIS_INST_RAJ_2026
+north-bengal-international-university-rajshahi-city,place_merged,BANBEIS_INST_RAJ_2026:eiin:136710 (1.00),BANBEIS_INST_RAJ_2026
+university-of-rajshahi,place_merged,BANBEIS_INST_RAJ_2026:eiin:136586 (1.00),BANBEIS_INST_RAJ_2026
+varendra-university-paba,place_merged,BANBEIS_INST_RAJ_2026:eiin:136695 (1.00),BANBEIS_INST_RAJ_2026
+pundra-university-of-science-and-technology-bogura,place_merged,BANBEIS_INST_RAJ_2026:eiin:138260 (0.95),BANBEIS_INST_RAJ_2026
+exim-bank-agricultural-university-bangladesh-chapainawabganj,place_merged,BANBEIS_INST_RAJ_2026:eiin:136700 (1.00),BANBEIS_INST_RAJ_2026
+joypurhat-nursing-institute-joypurhat,place_merged,BANBEIS_INST_RAJ_2026:eiin:133769 (1.00),BANBEIS_INST_RAJ_2026
+bangladesh-army-university-of-engineering-and-technology-bauet-qadirabad-bagatipara,place_merged,BANBEIS_INST_RAJ_2026:eiin:138130 (0.88),BANBEIS_INST_RAJ_2026
+rajshahi-science-and-technology-university-rstu-natore-natore-sadar,place_merged,BANBEIS_INST_RAJ_2026:eiin:136711 (1.00),BANBEIS_INST_RAJ_2026
+pabna-university-of-science-and-technology-pabna,place_merged,BANBEIS_INST_RAJ_2026:eiin:136630 (1.00),BANBEIS_INST_RAJ_2026
+khwaja-yunus-ali-university-chauhali,place_merged,BANBEIS_INST_RAJ_2026:eiin:136707 (1.00),BANBEIS_INST_RAJ_2026
+rabindra-university-bangladesh-shahjadpur,place_merged,BANBEIS_INST_RAJ_2026:eiin:138248 (1.00),BANBEIS_INST_RAJ_2026
+ramrama-govt-primary-school-bagmara,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:7217 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+muhammadpur-tikapara-govt-primary-school-rajshahi-city,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:7322 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+batupara-govt-primary-school-mohonpur,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:7366 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+muraripur-govt-primary-school-paba,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:7128 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+gopalhati-model-govt-primary-school-puthia,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:7037 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+belail-govt-primary-school-bogra-sadar,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:5161 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+nimgachi-govt-primary-school-dhunot,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:4942 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+padmapara-govt-primary-school-gabtali,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:4837 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+gundishar-govt-primary-school-kahaloo,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:4714 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+nandinar-char-govt-primary-school-shariakandi,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:5456 (0.93),DPE_IPEMIS_PRIMARY_RAJ_2026
+bagra-govt-primary-school-sherpur,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:5373 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+horipur-gopinathpur-govt-primary-school-shibganj,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:5214 (0.91),DPE_IPEMIS_PRIMARY_RAJ_2026
+shampur-govt-primary-school-sonatala,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:5606 (0.89),DPE_IPEMIS_PRIMARY_RAJ_2026
+10no-chandpur-1-govt-primary-school-shibganj,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:6784 (0.86),DPE_IPEMIS_PRIMARY_RAJ_2026
+awalgari-govt-primary-school-akkelpur,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:4375 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+sawalpara-govt-primary-school-joypurhat-sadar,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:4495 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+modhuban-govt-primary-school-kalai,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:4427 (0.90),DPE_IPEMIS_PRIMARY_RAJ_2026
+atapara-govt-primary-school-panchbibi,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:4545 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+taratia-govt-primary-school-atrai,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:5615 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+enayetpur-govt-primary-school-mohadevpur,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:6197 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+shimulia-govt-primary-school-naogaon-sadar,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:5837 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+kashipur-govt-primary-school-patnitala,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:5966 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+bijoykandi-govt-primary-school-raninagar,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:6331 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+perabaria-model-govt-primary-school-bagatipara,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:7597 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+moshinda-govt-primary-school-baraigram,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:7557 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+dangapara-govt-govt-primary-school-natore-sadar,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:7476 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+majhgram-govt-primary-school-singra,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:7737 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+nogor-chachkia-govt-primary-school-atghoria,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:8858 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+haturia-jagonathpur-govt-primary-school-bera,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:8977 (0.91),DPE_IPEMIS_PRIMARY_RAJ_2026
+ramnagar-govt-primary-school-chatmohar,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:9306 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+khagor-baria-govt-primary-school-faridpur,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:8870 (0.88),DPE_IPEMIS_PRIMARY_RAJ_2026
+tilokpur-govt-primary-school-ishurdi,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:9045 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+93-no-kulonia-govt-primary-school-pabna-sadar,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:9202 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+noldaha-govt-primary-school-pabna-sadar,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:9216 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+shankaripara-govt-primary-school-pabna-sadar,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:9166 (0.93),DPE_IPEMIS_PRIMARY_RAJ_2026
+tarabaria-jm-govt-primary-school-pabna-sadar,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:9186 (0.87),DPE_IPEMIS_PRIMARY_RAJ_2026
+41no-char-bhawanipur-govt-primary-school-sujanagar,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:8695 (0.90),DPE_IPEMIS_PRIMARY_RAJ_2026
+bochargati-govt-primary-school-chauhali,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:8123 (0.92),DPE_IPEMIS_PRIMARY_RAJ_2026
+banshbaria-govt-primary-school-kamarkhand,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:8084 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+uzan-meowakhola-govt-primary-school-kazipur,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:8019 (0.89),DPE_IPEMIS_PRIMARY_RAJ_2026
+arandah-govt-primary-school-raigonj,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:8351 (0.90),DPE_IPEMIS_PRIMARY_RAJ_2026
+jogjibonpur-govt-primary-school-ullapara,place_merged,DPE_IPEMIS_PRIMARY_RAJ_2026:ipemis:7925 (1.00),DPE_IPEMIS_PRIMARY_RAJ_2026
+rajshahi-city-corporation-rajshahi-city,place_merged,RAJSHAHI_PORTAL_OFFICES_2026:erajshahi.portal.gov.bd (1.00),RAJSHAHI_PORTAL_OFFICES_2026
+pulish-suparer-karyalay-rajshahi,place_merged,RAJSHAHI_PORTAL_OFFICES_2026:police.rajshahi.gov.bd (1.00),RAJSHAHI_PORTAL_OFFICES_2026
+rajshahi-civil-surgeon-office-rajshahi-city,place_merged,RAJSHAHI_PORTAL_OFFICES_2026:cs.rajshahi.gov.bd (0.90),RAJSHAHI_PORTAL_OFFICES_2026
+office-of-the-superintendent-of-drugs-drug-administration-rajshahi,place_merged,RAJSHAHI_PORTAL_OFFICES_2026:da.rajshahi.gov.bd (1.00),RAJSHAHI_PORTAL_OFFICES_2026
+poba-thana-paba,place_merged,RAJSHAHI_PORTAL_OFFICES_2026:police.paba.rajshahi.gov.bd (1.00),RAJSHAHI_PORTAL_OFFICES_2026
+fayar-sarbhis-o-sibhil-difens-rajshahi-niyntran-koksh-rajshahi,place_merged,RAJSHAHI_PORTAL_OFFICES_2026:fireservice.paba.rajshahi.gov.bd (0.90),RAJSHAHI_PORTAL_OFFICES_2026
+paba-upazila-health-complex-paba,place_merged,RAJSHAHI_PORTAL_OFFICES_2026:health.paba.rajshahi.gov.bd (1.00),RAJSHAHI_PORTAL_OFFICES_2026
+durgapur-thana-durgapur,place_merged,RAJSHAHI_PORTAL_OFFICES_2026:police.durgapur.rajshahi.gov.bd (0.86),RAJSHAHI_PORTAL_OFFICES_2026
+durgapur-upazila-health-complex-durgapur,place_merged,RAJSHAHI_PORTAL_OFFICES_2026:health.durgapur.rajshahi.gov.bd (1.00),RAJSHAHI_PORTAL_OFFICES_2026
+mohanpur-thana-mohonpur,place_merged,RAJSHAHI_PORTAL_OFFICES_2026:police.mohonpur.rajshahi.gov.bd (0.86),RAJSHAHI_PORTAL_OFFICES_2026
+mohanpur-upazila-health-complex-mohonpur,place_merged,RAJSHAHI_PORTAL_OFFICES_2026:health.mohonpur.rajshahi.gov.bd (1.00),RAJSHAHI_PORTAL_OFFICES_2026
+charghat-thana-charghat,place_merged,RAJSHAHI_PORTAL_OFFICES_2026:police.charghat.rajshahi.gov.bd (0.86),RAJSHAHI_PORTAL_OFFICES_2026
+charghat-upazila-health-complex-charghat,place_merged,RAJSHAHI_PORTAL_OFFICES_2026:health.charghat.rajshahi.gov.bd (1.00),RAJSHAHI_PORTAL_OFFICES_2026
+puthiya-thana-puthia,place_merged,RAJSHAHI_PORTAL_OFFICES_2026:police.puthia.rajshahi.gov.bd (0.86),RAJSHAHI_PORTAL_OFFICES_2026
+puthia-upazila-health-complex-puthia,place_merged,RAJSHAHI_PORTAL_OFFICES_2026:health.puthia.rajshahi.gov.bd (1.00),RAJSHAHI_PORTAL_OFFICES_2026
+bagha-thana-bagha,place_merged,RAJSHAHI_PORTAL_OFFICES_2026:police.bagha.rajshahi.gov.bd (1.00),RAJSHAHI_PORTAL_OFFICES_2026
+bagha-upazila-health-complex-bagha,place_merged,RAJSHAHI_PORTAL_OFFICES_2026:health.bagha.rajshahi.gov.bd (1.00),RAJSHAHI_PORTAL_OFFICES_2026
+godgari-thana-godagari,place_merged,RAJSHAHI_PORTAL_OFFICES_2026:police.godagari.rajshahi.gov.bd (0.86),RAJSHAHI_PORTAL_OFFICES_2026
+tanor-thana-tanore,place_merged,RAJSHAHI_PORTAL_OFFICES_2026:police.tanore.rajshahi.gov.bd (1.00),RAJSHAHI_PORTAL_OFFICES_2026
+tanore-upazila-health-complex-tanore,place_merged,RAJSHAHI_PORTAL_OFFICES_2026:health.tanore.rajshahi.gov.bd (1.00),RAJSHAHI_PORTAL_OFFICES_2026
+bagmara-thana-bagmara,place_merged,RAJSHAHI_PORTAL_OFFICES_2026:police.bagmara.rajshahi.gov.bd (1.00),RAJSHAHI_PORTAL_OFFICES_2026
+bagmara-upazila-health-complex-bagmara,place_merged,RAJSHAHI_PORTAL_OFFICES_2026:health.bagmara.rajshahi.gov.bd (1.00),RAJSHAHI_PORTAL_OFFICES_2026
+rajshahi-krishi-unnayan-byangk-rajshahi,place_merged,DISTRICT_PORTAL_BANKS_RAJ_2026:dpb-raj-023 (1.00),DISTRICT_PORTAL_BANKS_RAJ_2026
+varendra-research-museum,place_evidence,secondary -> official via PORTAL_TOURIST_SPOTS_RAJ_2026:rajshahi.gov.bd:697f669035ce18e1c0678837,PORTAL_TOURIST_SPOTS_RAJ_2026
+varendra-research-museum,place_merged,PORTAL_TOURIST_SPOTS_RAJ_2026:rajshahi.gov.bd:697f669035ce18e1c0678837 (1.00),PORTAL_TOURIST_SPOTS_RAJ_2026
+university-of-rajshahi,place_merged,PORTAL_TOURIST_SPOTS_RAJ_2026:rajshahi.gov.bd:697f668b35ce18e1c0678596 (1.00),PORTAL_TOURIST_SPOTS_RAJ_2026
+rajshahi-college,place_merged,PORTAL_TOURIST_SPOTS_RAJ_2026:rajshahi.gov.bd:697f669235ce18e1c06788ed (1.00),PORTAL_TOURIST_SPOTS_RAJ_2026
+shah-makhdum-airport-paba,place_merged,PORTAL_TOURIST_SPOTS_RAJ_2026:paba.rajshahi.gov.bd:697f668b35ce18e1c067856d (1.00),PORTAL_TOURIST_SPOTS_RAJ_2026
+haoya-khana-puthia,place_merged,PORTAL_TOURIST_SPOTS_RAJ_2026:puthia.rajshahi.gov.bd:697f668e35ce18e1c06786ee (1.00),PORTAL_TOURIST_SPOTS_RAJ_2026
+puthia-rajbari,place_merged,PORTAL_TOURIST_SPOTS_RAJ_2026:puthia.rajshahi.gov.bd:697f668f35ce18e1c0678799 (1.00),PORTAL_TOURIST_SPOTS_RAJ_2026
+dighaptiya-rajbari-uttra-gonabhaban-natore-sadar,place_merged,PORTAL_TOURIST_SPOTS_RAJ_2026:natore.gov.bd:697f668c35ce18e1c06785e1 (0.90),PORTAL_TOURIST_SPOTS_RAJ_2026
+cholanbil-jadughar-gurudaspur,place_merged,PORTAL_TOURIST_SPOTS_RAJ_2026:natore.gov.bd:697f669235ce18e1c06788da (1.00),PORTAL_TOURIST_SPOTS_RAJ_2026
+kobiguru-robindrnath-thakurer-potisar-kachari-bari-o-totsanglgn-kirtismuh-atrai,place_merged,PORTAL_TOURIST_SPOTS_RAJ_2026:naogaon.gov.bd:697f668e35ce18e1c06786f7 (0.90),PORTAL_TOURIST_SPOTS_RAJ_2026
+paharpur-bouddh-bihar-sompur-mohabihar-badalgachi,place_merged,PORTAL_TOURIST_SPOTS_RAJ_2026:naogaon.gov.bd:697f668e35ce18e1c06786f5 (0.90),PORTAL_TOURIST_SPOTS_RAJ_2026
+badal-pilar-gorur-pilar-bhimer-panti-dhamoirhat,place_merged,PORTAL_TOURIST_SPOTS_RAJ_2026:naogaon.gov.bd:697f668e35ce18e1c0678702 (0.90),PORTAL_TOURIST_SPOTS_RAJ_2026
+mohasthanagar-mohasthanagar-durg-prachir-shibganj,place_merged,PORTAL_TOURIST_SPOTS_RAJ_2026:bogra.gov.bd:697f668e35ce18e1c0678721 (0.90),PORTAL_TOURIST_SPOTS_RAJ_2026
+gokul-medh-bogra-sadar,place_merged,PORTAL_TOURIST_SPOTS_RAJ_2026:bogra.gov.bd:697f668e35ce18e1c0678737 (0.90),PORTAL_TOURIST_SPOTS_RAJ_2026
+kheruya-mosjid-sherpur,place_merged,PORTAL_TOURIST_SPOTS_RAJ_2026:sherpur.bogra.gov.bd:697f668e35ce18e1c067873f (0.90),PORTAL_TOURIST_SPOTS_RAJ_2026
+gobind-dhap-mondir-gobind-bhita-shibganj,place_merged,PORTAL_TOURIST_SPOTS_RAJ_2026:shibganj.bogra.gov.bd:697f668d35ce18e1c0678640 (0.90),PORTAL_TOURIST_SPOTS_RAJ_2026
+pabna-mental-hospital-pabna-sadar,place_merged,PORTAL_TOURIST_SPOTS_RAJ_2026:pabna.gov.bd:697f668b35ce18e1c067856f (1.00),PORTAL_TOURIST_SPOTS_RAJ_2026
+ishwardi-airport-ishurdi,place_merged,PORTAL_TOURIST_SPOTS_RAJ_2026:ishurdi.pabna.gov.bd:697f668c35ce18e1c067860b (1.00),PORTAL_TOURIST_SPOTS_RAJ_2026
+boyaliya-thana-rajshahi-city,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RMP-66 (0.86),BD_POLICE_CONTACTS_2020
+rajpara-thana-rajshahi-city,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RMP-75 (0.86),BD_POLICE_CONTACTS_2020
+chondrima-thana-rajshahi-city,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RMP-84 (0.86),BD_POLICE_CONTACTS_2020
+motihar-thana-rajshahi-city,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RMP-100 (0.86),BD_POLICE_CONTACTS_2020
+katakhali-thana-paba,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RMP-109 (0.86),BD_POLICE_CONTACTS_2020
+belpukur-thana-paba,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RMP-118 (0.86),BD_POLICE_CONTACTS_2020
+shahamakhdum-thana-rajshahi-city,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RMP-134 (0.86),BD_POLICE_CONTACTS_2020
+eyarport-thana-rajshahi-city,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RMP-143 (0.86),BD_POLICE_CONTACTS_2020
+poba-thana-paba,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RMP-152 (0.86),BD_POLICE_CONTACTS_2020
+kashiyadangga-thana-rajshahi-city,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RMP-168 (0.86),BD_POLICE_CONTACTS_2020
+damkura-thana-paba,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RMP-177 (0.86),BD_POLICE_CONTACTS_2020
+kornhar-thana-paba,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RMP-186 (0.86),BD_POLICE_CONTACTS_2020
+godgari-thana-godagari,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-30 (0.86),BD_POLICE_CONTACTS_2020
+tanor-thana-tanore,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-37 (0.86),BD_POLICE_CONTACTS_2020
+mohanpur-thana-mohonpur,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-44 (0.86),BD_POLICE_CONTACTS_2020
+puthiya-thana-puthia,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-51 (0.86),BD_POLICE_CONTACTS_2020
+bagmara-thana-bagmara,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-58 (0.86),BD_POLICE_CONTACTS_2020
+durgapur-thana-durgapur,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-65 (0.86),BD_POLICE_CONTACTS_2020
+charghat-thana-charghat,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-72 (0.86),BD_POLICE_CONTACTS_2020
+bagha-thana-bagha,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-79 (0.86),BD_POLICE_CONTACTS_2020
+pabna-sodar-thana-pabna-sadar,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-28 (0.86),BD_POLICE_CONTACTS_2020
+ishbardi-thana-ishurdi,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-35 (0.86),BD_POLICE_CONTACTS_2020
+atoghriya-thana-atghoria,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-42 (0.86),BD_POLICE_CONTACTS_2020
+chatmohar-thana-chatmohar,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-49 (0.86),BD_POLICE_CONTACTS_2020
+bhanggura-thana-bhangura,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-56 (0.86),BD_POLICE_CONTACTS_2020
+foridpur-thana-faridpur,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-63 (0.86),BD_POLICE_CONTACTS_2020
+sujanagar-thana-sujanagar,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-70 (0.86),BD_POLICE_CONTACTS_2020
+bera-model-thana-bera,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-77 (0.86),BD_POLICE_CONTACTS_2020
+sathiya-thana-santhia,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-84 (0.86),BD_POLICE_CONTACTS_2020
+sirajagnj-thana-sirajganj-sadar,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-29 (0.86),BD_POLICE_CONTACTS_2020
+shahjadpur-thana-shahjadpur,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-36 (0.86),BD_POLICE_CONTACTS_2020
+ullapara-thana-ullapara,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-43 (0.86),BD_POLICE_CONTACTS_2020
+chouhali-thana-chauhali,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-50 (0.86),BD_POLICE_CONTACTS_2020
+tarash-thana-tarash,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-57 (0.86),BD_POLICE_CONTACTS_2020
+kajipur-thana-kazipur,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-64 (0.86),BD_POLICE_CONTACTS_2020
+kamarakhnd-thana-kamarkhand,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-71 (0.86),BD_POLICE_CONTACTS_2020
+rayagnj-thana-raigonj,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-78 (0.86),BD_POLICE_CONTACTS_2020
+belkuchi-thana-belkuchi,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-85 (0.86),BD_POLICE_CONTACTS_2020

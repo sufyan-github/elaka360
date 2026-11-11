@@ -1,0 +1,36 @@
+{
+  "key": "BANBEIS_INST_RAJ_2026",
+  "name": "BANBEIS institution lists (EIIN registry, e-survey 2024) — Rajshahi Division",
+  "organization": "Bangladesh Bureau of Educational Information and Statistics (BANBEIS), Ministry of Education",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637",
+    "https://banbeis.gov.bd/pages/files/6919975e933eb65569ddc579",
+    "https://banbeis.gov.bd/pages/files/69199763933eb65569ddc6e8",
+    "https://banbeis.gov.bd/pages/files/69568a64a31054345f1038ee",
+    "https://banbeis.gov.bd/pages/files/69199762933eb65569ddc6d1",
+    "https://banbeis.gov.bd/pages/files/6919975f933eb65569ddc5ce",
+    "https://banbeis.gov.bd/pages/files/69199761933eb65569ddc66f",
+    "https://institute-search.ieims.banbeis.gov.bd/",
+    "https://rajshahiboard.gov.bd/index.php/institute/"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Source: BANBEIS (banbeis.gov.bd), institution lists based on e-survey 2024",
+  "notes": "National XLSX lists (school; college & school-and-college; madrasa; government technical; independent technical; public/private university; professional) published on banbeis.gov.bd file pages (object-store links), filtered to DIVISION_NAME=Rajshahi and deduplicated by EIIN (the government-technical list is a subset of the technical list). Fields: division, district, thana, institute type, education level, EIIN, name (English only), post office, e-mail, management, MPO status, for-whom, geographical position, area status. No coordinates, no phone numbers, no Bangla names. source_url per row is the BANBEIS Institute Search detail page for that EIIN (a JavaScript app; its /api/ is disallowed by robots.txt, so it was NOT crawled). rajshahi_board_listed (schools/colleges only) is a cross-check against the Rajshahi Education Board's public institute list JSON (https://rajshahiboard.gov.bd/sonali/ins.php, EIIN + name only). Licence not stated on the portal.",
+  "files": {
+    "places.csv": "1e3caf7711c1cf46df7a11cf589267f44a1cf918e47d36f71f3fef66d57a6777",
+    "facts.csv": "3c1d7646128b29f3dec0321bcee3a1d6d5ba8f895bfa3933195dd82157e85131",
+    "raw/banbeis_college_rajshahi_division.csv": "c6d0a329ef7d0c4698afb7fd8bf84be436e49a531ee40a2faa14340f5d6cc7a6",
+    "raw/banbeis_govt_technical_rajshahi_division.csv": "ecb1b271b9a5f80e0760b81a28c45313157337720df7622283ec1ec67d4c4e6b",
+    "raw/banbeis_madrasa_rajshahi_division.csv": "fc23d4e77ea7ae9bb96e5b6cb99f359fb28e4e283a0c7c9fc950b2d13f918319",
+    "raw/banbeis_professional_rajshahi_division.csv": "0109fbed15190d44ac596ca78048ceddce70fa8646131abb9037ac0a73b97c2f",
+    "raw/banbeis_school_rajshahi_division.csv": "e4600fd1134bfb40f20949b839be8b3449038fb1b403cbfed1aac4f4c6465bda",
+    "raw/banbeis_technical_rajshahi_division.csv": "7a602dad15ddb935b952bfa7f809c225f8864b4367f368a48df911f2d9876f82",
+    "raw/banbeis_university_rajshahi_division.csv": "8ac5d278432994716f252b9a5553db6b165dfe1b0c2b9c0fc9aa20a2f4882906",
+    "raw/rajshahi_board_eiin_list.txt": "68f9bb95baf81bead9329091e524f6c4bb1d2c4a8f101100e872a6927f2e69aa"
+  }
+}

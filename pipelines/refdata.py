@@ -363,10 +363,9 @@ NALDANGA_UNION_IDS = {"1285", "1286", "1287", "1288", "1289"}
 # Known, tracked differences between the seed and Consolidated Master v3.0. The validator fails on any
 # difference not listed here, and on any entry here that no longer differs (so the list stays honest).
 KNOWN_MASTER_DIFFS = {
-    ("count", "Sirajganj", "Ullapara"): "SIR-001/SIR-002: master selects 83 (Ullapara 14) from the district administration; BBS 2011 and the seed have 82. The 83rd union is not identified.",
-    ("count", "Bogura", "Gabtali"): "BOG-005: master baseline Gabtali 12 / Sonatala 6 vs seed 11 / 7; same district total 108. A union may sit under the other upazila in nuhil.",
-    ("count", "Bogura", "Sonatala"): "BOG-005: see Gabtali.",
-    ("name", "Rajshahi", "Bagha", "master_only", "Chakrajapur"): "RAJ-001/RAJ-002: Bagha 6 vs 7. Chakrajapur appears in Rajshahi v1.7 from the Bagha upazila portal; not in the selected 71 baseline.",
+    ("count", "Bogura", "Sonatala"): "BOG-005: master baseline Sonatala 6; seed 7 matches the Bogura district list (2026-10-07) and BBS 2022. Gabtali is 12 in both after adding সুখানপুকুর.",
+    ("count", "Rajshahi", "Bagha"): "RAJ-001/RAJ-002 resolved by official evidence: Bagha has 7 unions incl. চকরাজাপুর (district union list 2026-06-25, Bagha and Chakrajapur portals, BBS 2022 geocode 50-81-10-182). The master's selected baseline still says 6.",
+    ("count", "Pabna", "Bhangura"): "PAB-001/PAB-006 resolved: Bhangura has 6 unions incl. মন্ডতোষ (Pabna এক নজরে 2023, Bhangura portal, BBS 2022 = 74 unions). The master's secondary distribution says 5.",
     ("name", "Naogaon", "Raninagar", "master_only", "Khateshwar Raninagar"): "Likely spelling variant of seed 'Khatteshawr' (খট্টেশ্বর রাণীনগর); master has no Bangla name for this row.",
     ("name", "Naogaon", "Raninagar", "seed_only", "Khatteshawr"): "See 'Khateshwar Raninagar'.",
     ("name", "Chapainawabganj", "Chapainawabganj Sadar", "master_only", "Parbatipur"): "CNB-003: master register repeats this name under Gomastapur with a copied geocode suffix; register not reliable here.",

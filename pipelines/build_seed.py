@@ -36,6 +36,8 @@ def url(u):
     if not u: return None
     return u if u.startswith("http") else "http://" + u
 
+import import_collected
+import_collected.register_sources(SRC, SOURCE_META)   # collected official sources (data/sources/*/SOURCE.json)
 SRC_IDS = {k: i + 1 for i, k in enumerate(SRC)}
 
 dv, ds, up, un = rd("divisions.csv"), rd("districts.csv"), rd("upazilas.csv"), rd("unions.csv")
@@ -184,6 +186,9 @@ for n, (en, bn, upz) in enumerate(RAJ_POURASHAVAS, 1):
         path=uniq(f"{u['path']}/{s}"), verified=False, production_eligible=False, data_source="UNVERIFIED", evidence_level="unverified",
         notes="Rajshahi District has 14 pourashavas (Desh Rupantor headline); names/parents from general knowledge — confirm with LGD.")
 
+# Official hierarchy, census figures, wards and boundaries for Rajshahi Division (data/sources/)
+import_collected.apply_admin(rows, add, uniq)
+
 for r in rows:
     r.pop("_src_en", None)
     r["production_eligible"] = eligible(r["evidence_level"], r["evidence_source"], r["production_eligible"])
@@ -312,10 +317,27 @@ for n, p in enumerate(PLACES, 1):
     rec["verified"] = False   # no place has official evidence yet; see evidence_level
     assert not check_row(rec), (rec["slug"], check_row(rec))
     places.append(nfc_dict(rec))
-write_json(f"{OUT}/pilot_rajshahi/places.json", places)
-pcols = ["public_id", "slug", "name_bn", "name_en", "short_name", "category", "subcategory", "ownership", "address_en", "postcode",
-         "lat", "lon", "website", "established", "verification_status", "evidence_level", "production_eligible", "source", "source_url", "notes"]
-write_csv(f"{OUT}/pilot_rajshahi/places.csv", places, pcols)
+# collected places (data/sources/*/places.csv) merged with the pilot places, which they enrich
+pilot_n = len(places)
+places, place_stats = import_collected.build_places(rows, places, cat_by_key, web_features)
+cat_key_by_id = {c["id"]: c["key"] for c in cats}
+for p in places:
+    p["subcategory"] = cat_key_by_id.get(p["subcategory_id"], "").split(".")[-1] if p.get("subcategory_id") else None
+area_name = {r["id"]: r["name_en"] for r in rows}
+for p in places:
+    p["district"] = area_name.get(p["district_id"])
+    p["area"] = area_name.get(p.get("union_id") or p.get("upazila_id") or p.get("city_corporation_id") or p["district_id"])
+    p["phone"] = "; ".join(p["phones"])
+    assert not check_row(p), (p["slug"], check_row(p))
+public_place = lambda p: {k: v for k, v in p.items() if not k.startswith("_")}
+write_json(f"{OUT}/pilot_rajshahi/places.json", [public_place(p) for p in places[:pilot_n]])
+pcols = ["public_id", "slug", "name_bn", "name_en", "short_name", "category", "subcategory", "ownership", "district", "area",
+         "address_bn", "address_en", "postcode", "lat", "lon", "phone", "email", "website", "established",
+         "verification_status", "evidence_level", "production_eligible", "evidence_source", "source", "source_url", "notes"]
+write_csv(f"{OUT}/pilot_rajshahi/places.csv", places[:pilot_n], pcols)
+os.makedirs(f"{OUT}/places", exist_ok=True)
+write_csv(f"{OUT}/places/rajshahi_division_places.csv", places, pcols)
+write_csv(f"{OUT}/qa/places_import.csv", place_stats, list(place_stats[0].keys()))
 write_json(f"{OUT}/pilot_rajshahi/mockup_demo_fixtures_NOT_REAL.json",
            dict(warning="Names taken from the UI mockups. Not verified — use only as UI/dev fixtures, never import to production.",
                 items=DEMO_FIXTURES))
@@ -326,6 +348,7 @@ write_csv(f"{OUT}/qa/mockup_vs_verified.csv",
           ["topic", "mockup_values", "verified_value", "source", "source_url", "action"])
 write_csv(f"{OUT}/qa/known_gaps.csv", [dict(area=a, gap=g, fix=f) for a, g, f in KNOWN_GAPS], ["area", "gap", "fix"])
 
+write_csv(f"{OUT}/qa/collected_changes.csv", import_collected.changes, ["record", "change", "detail", "source"])
 write_csv(f"{OUT}/qa/reconciliation_changes.csv", changes + [dict(record=f"source:{k}", change="url_fixed", detail=why, source=k)
           for k, why in SOURCE_URL_FIXES.items()], ["record", "change", "detail", "source"])
 
@@ -394,12 +417,17 @@ with open(SQL_OUT, "w", encoding="utf-8") as f:
     for h in hot:
         f.write(f"INSERT INTO emergency_numbers(number,name_bn,name_en,category,verified,evidence_level,data_source_id,notes,sort_order) VALUES ({lit(h['number'])},{lit(h['name_bn'])},{lit(h['name_en'])},{lit(h['category'])},{lit(h['verified'])},{lit(h['evidence_level'])},{SRC_IDS[h['source']]},{lit(h['notes'] or None)},{h['sort_order']});\n")
     pc = ["public_id", "slug", "name_bn", "name_en", "short_name", "category_id", "subcategory_id", "ownership", "division_id", "district_id",
-          "upazila_id", "city_corporation_id", "address_en", "postcode", "lat", "lon", "website", "established", "attributes",
-          "verification_status", "data_source_id", "source_notes", "last_verified_at", "evidence_level", "evidence_source_id", "production_eligible"]
-    for p in places:
-        v = dict(p, data_source_id=SRC_IDS[p["source"]], source_notes=p["notes"], evidence_source_id=SRC_IDS.get(p["evidence_source"]),
-                 last_verified_at="2026-11-09" if p["evidence_level"] == "secondary" else None)
-        f.write(f"INSERT INTO places({','.join(pc)}) VALUES ({','.join(lit(v[c]) for c in pc)});\n")
+          "upazila_id", "union_id", "city_corporation_id", "address_bn", "address_en", "postcode", "lat", "lon", "phones", "email", "website",
+          "established", "attributes", "verification_status", "data_source_id", "source_notes", "last_verified_at", "evidence_level",
+          "evidence_source_id", "production_eligible"]
+    for i in range(0, len(places), 500):      # multi-row inserts keep the file small and the load fast
+        vals = []
+        for p in places[i:i + 500]:
+            v = dict(p, data_source_id=SRC_IDS[p["source"]], source_notes=p["notes"], evidence_source_id=SRC_IDS.get(p["evidence_source"]),
+                     last_verified_at=None if p["evidence_level"] in ("community", "unverified") else "2026-11-09" if p["source"].startswith("WIKI") else "2026-11-12")
+            cells = [("ARRAY[" + ",".join(lit(x) for x in v[c]) + "]::text[]" if v[c] else "'{}'") if c == "phones" else lit(v[c]) for c in pc]
+            vals.append("(" + ",".join(cells) + ")")
+        f.write(f"INSERT INTO places({','.join(pc)}) VALUES\n" + ",\n".join(vals) + ";\n")
     # gamification seeds from the profile mockups (level 4 + badges); other level names are placeholders
     for lv, bn, en, pts in [(1, "নতুন অবদানকারী", "Newcomer", 0), (2, "সক্রিয় সদস্য", "Active member", 500),
                             (3, "এলাকা সহায়ক", "Area helper", 1500), (4, "এলাকা অ্যাম্বাসেডর", "Area Ambassador", 3000),
@@ -411,6 +439,10 @@ with open(SQL_OUT, "w", encoding="utf-8") as f:
                               ("local_expert", "স্থানীয় বিশেষজ্ঞ", "Local expert", {"type": "approved_in_one_area", "gte": 20}),
                               ("first_contribution", "প্রথম অবদান", "First contribution", {"type": "approved_contributions", "gte": 1})]:
         f.write(f"INSERT INTO badges(key,name_bn,name_en,rule) VALUES ({lit(key)},{lit(bn)},{lit(en)},{lit(rule)});\n")
+    for r in rows:   # union / pourashava / ward / upazila polygons from collected sources
+        if r.get("_boundary"):
+            f.write(f"UPDATE admin_areas SET boundary = ST_Multi(ST_GeomFromGeoJSON({lit(json.dumps(r['_boundary'], separators=(',', ':')))}))::geography "
+                    f"WHERE id = {r['id']};\n")
     for feat in web_features:
         f.write(f"UPDATE admin_areas SET boundary = ST_Multi(ST_GeomFromGeoJSON({lit(json.dumps(feat['geometry'], separators=(',', ':')))}))::geography "
                 f"WHERE id = {feat['properties']['district_id']};\n")

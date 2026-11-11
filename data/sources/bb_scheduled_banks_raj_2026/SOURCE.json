@@ -1,0 +1,20 @@
+{
+  "key": "BB_SCHEDULED_BANKS_RAJ_2026",
+  "name": "Bangladesh Bank — Scheduled Banks Statistics (Rajshahi Division extract)",
+  "organization": "Bangladesh Bank",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://www.bb.org.bd/en/index.php/publication/publictn/2/14",
+    "https://www.bb.org.bd//pub/quaterly/schbanksta/sbs23apriljune2026.pdf"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Bangladesh Bank (bb.org.bd)",
+  "notes": "No licence stated. bb.org.bd publishes no public, filterable scheduled-bank branch list (no branch names/addresses/routing numbers; the routing-number URL is blocked by the site's WAF). Only aggregate statistics are available: division branch counts (Table-3.16, image), district deposits/advances (Table-1) and thana deposit accounts/amounts (Table-33). The 8.5 MB PDF is not committed; fetch.py re-downloads it and needs poppler's pdftotext to parse it.",
+  "files": {
+    "facts.csv": "a0b97f938d2a15a478b8970a0d1caa6cbe76a6c745a1bf40d75812b4d0f32267"
+  }
+}

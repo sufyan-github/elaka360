@@ -1,0 +1,34 @@
+{
+  "key": "RAJ_RANGE_POLICE_PORTALS_2026",
+  "name": "District police portals of Rajshahi Range (Natore, Naogaon, Chapainawabganj, Bogura, Joypurhat, Pabna, Sirajganj)",
+  "organization": "Bangladesh Police — district police units of Rajshahi Range",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://police.natore.gov.bd/pages/static-pages/697fdcd735ce18e1c06d8427",
+    "https://police.naogaon.gov.bd/pages/static-pages/698009d935ce18e1c06e365e",
+    "https://police.chapainawabganj.gov.bd/pages/static-pages/697ff42635ce18e1c06dcbf1",
+    "https://police.bogura.gov.bd/pages/static-pages/697f895535ce18e1c06b9a85",
+    "https://police.joypurhat.gov.bd/pages/static-pages/697f6db235ce18e1c06b05d0",
+    "https://police.pabna.gov.bd/pages/static-pages/697f893635ce18e1c06b8c6a",
+    "https://police.sirajganj.gov.bd/pages/static-pages/697fc88a35ce18e1c06d0e68",
+    "https://police.pabna.gov.bd/pages/static-pages/697f6dd035ce18e1c06b19fa"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "District police portals (police.<district>.gov.bd)",
+  "notes": "No licence stated. Institutional numbers only, no officer names. Only Pabna and Sirajganj publish per-thana numbers; Natore, Chapainawabganj, Bogura and Joypurhat publish SP-office contacts only; Naogaon's contact page returned 404 (this run: Naogaon: https://police.naogaon.gov.bd/pages/static-pages/698009d935ce18e1c06e365e -> 404). Rajshahi District is in RAJSHAHI_POLICE_2026.",
+  "files": {
+    "places.csv": "daa3f78ac78ecf2462e1d2369afda7ab52b07f7275343b65d96ecc099b5c9793",
+    "facts.csv": "0bd24a5567aab6ff30318fc2bed11ffce951b3801a2ee9b3e3ba2a8f9575538b",
+    "raw/bogura_police_contact.txt": "e0dfe024beed222380f37b3b04e4992f1f92653d2a6c3fb30ed7d31776b0d1db",
+    "raw/chapainawabganj_police_contact.txt": "88275f4b6e413e7e093248c77607c99b73dadac179d9d9b022dedbf848ff4009",
+    "raw/joypurhat_police_contact.txt": "c791f8694c0362f998bc4973a9b2d36d15f048db31272db349b57851c9819cfb",
+    "raw/natore_police_contact.txt": "3f666511c1e357b5d467677c495fd3375dcc7d7bcf0a83f508e362007bc20cbe",
+    "raw/pabna_police_contact.txt": "db97e09150b63305a59058b6bd02888e75a0407aa5ee95afe52686da9cee7eac",
+    "raw/pabna_police_thanas.txt": "ba7c165f259f58932f6f346f760e04c59848dd05ebefeea3c0961260725bd846",
+    "raw/sirajganj_police_contact.txt": "5eb8dd37825a9dac43bdd1eef96d98f860f634dc33daa169a7efb19861faab5b"
+  }
+}

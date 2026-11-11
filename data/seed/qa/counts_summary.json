@@ -2,9 +2,9 @@
  "division": 8,
  "district": 64,
  "upazila": 495,
- "union": 4538,
+ "union": 4542,
  "city_corporation": 13,
- "pourashava": 14,
+ "pourashava": 62,
  "upazilas_without_unions": [
   "Guimara",
   "Eidgaon",
@@ -17,14 +17,14 @@
   "Mohonpur": 6,
   "Charghat": 6,
   "Puthia": 6,
-  "Bagha": 6,
+  "Bagha": 7,
   "Godagari": 9,
   "Tanore": 7,
   "Bagmara": 16
  },
- "rajshahi_district_unions_total": 71,
+ "rajshahi_district_unions_total": 72,
  "district_area_check_rajshahi_computed_km2": 2443.3,
- "sum_district_area_km2": 140166.0,
+ "sum_district_area_km2": 140022.0,
  "categories": {
   "top_level": 11,
   "sub": 84
@@ -33,10 +33,10 @@
   "country": 1,
   "division": 8,
   "district": 64,
-  "upazila": 10,
-  "union": 0,
+  "upazila": 68,
+  "union": 566,
   "city_corporation": 13,
-  "pourashava": 0
+  "pourashava": 62
  },
  "seed_vs_master_untracked": 0
 }

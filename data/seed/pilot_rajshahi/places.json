@@ -15,6 +15,15 @@
   "website": "https://www.ru.ac.bd",
   "established": "1953-07-06",
   "attributes": {
+   "eiin": "136586",
+   "institute_type": "PUBLIC UNIVERSITY",
+   "education_level": "Masters",
+   "management": "GOVERNMENT",
+   "mpo": "NO",
+   "for_whom": "CO-EDUCATION",
+   "area_status": "CITY CORPORATION",
+   "ugc_category": "public-universities",
+   "postcode": "6205",
    "faculties": 12,
    "departments": 59,
    "institutes": 6,
@@ -22,7 +31,13 @@
    "students": "25,000+",
    "academic_staff": "1,200+",
    "campus_acres": 753,
-   "vice_chancellor": "Faridul Islam (since 16 Mar 2026)"
+   "vice_chancellor": "Faridul Islam (since 16 Mar 2026)",
+   "_sources": [
+    "WIKI_RU",
+    "UGC_UNIVERSITIES_RAJ_2026",
+    "BANBEIS_INST_RAJ_2026",
+    "PORTAL_TOURIST_SPOTS_RAJ_2026"
+   ]
   },
   "verified": false,
   "source": "WIKI_RU",
@@ -35,9 +50,18 @@
   "subcategory_id": 5,
   "source_url": "https://en.wikipedia.org/wiki/University_of_Rajshahi",
   "verification_status": "verified",
-  "evidence_level": "secondary",
-  "evidence_source": "WIKI_RU",
-  "production_eligible": true
+  "evidence_level": "official",
+  "evidence_source": "UGC_UNIVERSITIES_RAJ_2026",
+  "production_eligible": true,
+  "union_id": null,
+  "address_bn": null,
+  "phones": [
+   "+8802588865011"
+  ],
+  "email": "registrar@ru.ac.bd",
+  "district": "Rajshahi",
+  "area": "Rajshahi City Corporation",
+  "phone": "+8802588865011"
  },
  {
   "public_id": "INST-00000002",
@@ -55,12 +79,25 @@
   "website": "https://www.ruet.ac.bd",
   "established": "1964",
   "attributes": {
+   "eiin": "136625",
+   "institute_type": "PUBLIC UNIVERSITY",
+   "education_level": "Masters",
+   "management": "GOVERNMENT",
+   "for_whom": "CO-EDUCATION",
+   "area_status": "CITY CORPORATION",
+   "ugc_category": "public-universities",
+   "postcode": "6204",
    "university_status_year": 2003,
    "departments": 14,
    "faculties": 4,
    "students": 6484,
    "academic_staff": 400,
-   "vice_chancellor": "S M Abdur Razzak"
+   "vice_chancellor": "S M Abdur Razzak",
+   "_sources": [
+    "WIKI_RUET",
+    "UGC_UNIVERSITIES_RAJ_2026",
+    "BANBEIS_INST_RAJ_2026"
+   ]
   },
   "verified": false,
   "source": "WIKI_RUET",
@@ -73,9 +110,19 @@
   "subcategory_id": 5,
   "source_url": "https://en.wikipedia.org/wiki/Rajshahi_University_of_Engineering_%26_Technology",
   "verification_status": "verified",
-  "evidence_level": "secondary",
-  "evidence_source": "WIKI_RUET",
-  "production_eligible": true
+  "evidence_level": "official",
+  "evidence_source": "UGC_UNIVERSITIES_RAJ_2026",
+  "production_eligible": true,
+  "union_id": null,
+  "address_bn": null,
+  "phones": [
+   "+8802588866798",
+   "+880721750798"
+  ],
+  "email": "registrar@ruet.ac.bd",
+  "district": "Rajshahi",
+  "area": "Rajshahi City Corporation",
+  "phone": "+8802588866798; +880721750798"
  },
  {
   "public_id": "INST-00000003",
@@ -93,10 +140,17 @@
   "website": "https://rmch.gov.bd",
   "established": "1958",
   "attributes": {
+   "facility_code": "10001560",
+   "facility_type": "Medical College Hospital",
+   "agency": "DGHS",
    "college_established": 1958,
    "hospital_opened": 1965,
    "beds_history": "530 at opening (1965); 862 after extension (Wikipedia)",
-   "emergency": "24/7"
+   "emergency": "24/7",
+   "_sources": [
+    "WIKI_RMC",
+    "DGHS_HRIS_FACILITIES_RAJ_2026"
+   ]
   },
   "verified": false,
   "source": "WIKI_RMC",
@@ -109,9 +163,19 @@
   "subcategory_id": 13,
   "source_url": "https://en.wikipedia.org/wiki/Rajshahi_Medical_College",
   "verification_status": "verified",
-  "evidence_level": "secondary",
-  "evidence_source": "WIKI_RMC",
-  "production_eligible": true
+  "evidence_level": "official",
+  "evidence_source": "DGHS_HRIS_FACILITIES_RAJ_2026",
+  "production_eligible": true,
+  "union_id": null,
+  "address_bn": null,
+  "phones": [
+   "01701248116",
+   "01321180528"
+  ],
+  "email": "rmch@hospi.dghs.gov.bd",
+  "district": "Rajshahi",
+  "area": "Rajshahi City Corporation",
+  "phone": "01701248116; 01321180528"
  },
  {
   "public_id": "TOUR-00000004",
@@ -129,10 +193,17 @@
   "website": null,
   "established": "1895",
   "attributes": {
+   "protected_monument": true,
+   "construction_date_as_stated": "1895 সালে",
    "built_by": "Maharani Hemanta Kumari Devi",
    "style": "Indo-Saracenic Revival",
    "distance_from_rajshahi_km": 30,
-   "complex": "Puthia Temple Complex (Govinda, Shiva 1823, Jagaddhatri, Dol Mancha)"
+   "complex": "Puthia Temple Complex (Govinda, Shiva 1823, Jagaddhatri, Dol Mancha)",
+   "_sources": [
+    "WIKI_PUTHIA",
+    "DOA_PROTECTED_MONUMENTS_RAJ_2026",
+    "PORTAL_TOURIST_SPOTS_RAJ_2026"
+   ]
   },
   "verified": false,
   "source": "WIKI_PUTHIA",
@@ -145,9 +216,16 @@
   "subcategory_id": 54,
   "source_url": "https://en.wikipedia.org/wiki/Puthia_Rajbari",
   "verification_status": "verified",
-  "evidence_level": "secondary",
-  "evidence_source": "WIKI_PUTHIA",
-  "production_eligible": true
+  "evidence_level": "official",
+  "evidence_source": "DOA_PROTECTED_MONUMENTS_RAJ_2026",
+  "production_eligible": true,
+  "union_id": null,
+  "address_bn": "পুঠিয়া",
+  "phones": [],
+  "email": null,
+  "district": "Rajshahi",
+  "area": "Puthia",
+  "phone": ""
  },
  {
   "public_id": "TOUR-00000005",
@@ -166,7 +244,11 @@
   "established": "1910",
   "attributes": {
    "managed_by": "University of Rajshahi (since 1964)",
-   "founded_by": "Varendra Research Society"
+   "founded_by": "Varendra Research Society",
+   "_sources": [
+    "WIKI_VRM",
+    "PORTAL_TOURIST_SPOTS_RAJ_2026"
+   ]
   },
   "verified": false,
   "source": "WIKI_VRM",
@@ -179,9 +261,16 @@
   "subcategory_id": 60,
   "source_url": "https://en.wikipedia.org/wiki/Varendra_Research_Museum",
   "verification_status": "verified",
-  "evidence_level": "secondary",
-  "evidence_source": "WIKI_VRM",
-  "production_eligible": true
+  "evidence_level": "official",
+  "evidence_source": "PORTAL_TOURIST_SPOTS_RAJ_2026",
+  "production_eligible": true,
+  "union_id": null,
+  "address_bn": "রাজশাহী শহরে",
+  "phones": [],
+  "email": null,
+  "district": "Rajshahi",
+  "area": "Rajshahi City Corporation",
+  "phone": ""
  },
  {
   "public_id": "INST-00000006",
@@ -198,9 +287,22 @@
   "lon": null,
   "website": null,
   "established": "1873",
-  "attributes": {},
+  "attributes": {
+   "eiin": "126490",
+   "institute_type": "COLLEGE",
+   "education_level": "Masters",
+   "management": "GOVERNMENT",
+   "mpo": "NOT_APPLICABLE",
+   "for_whom": "CO-EDUCATION",
+   "area_status": "CITY CORPORATION",
+   "_sources": [
+    "UNVERIFIED",
+    "BANBEIS_INST_RAJ_2026",
+    "PORTAL_TOURIST_SPOTS_RAJ_2026"
+   ]
+  },
   "verified": false,
-  "source": "UNVERIFIED",
+  "source": "BANBEIS_INST_RAJ_2026",
   "notes": "Founding year and location need confirmation.",
   "division_id": 10002,
   "district_id": 20015,
@@ -208,11 +310,18 @@
   "city_corporation_id": 50005,
   "category_id": 1,
   "subcategory_id": 4,
-  "source_url": "",
+  "source_url": "https://institute-search.ieims.banbeis.gov.bd/details/126490",
   "verification_status": "unverified",
-  "evidence_level": "unverified",
-  "evidence_source": null,
-  "production_eligible": false
+  "evidence_level": "official",
+  "evidence_source": "BANBEIS_INST_RAJ_2026",
+  "production_eligible": true,
+  "union_id": null,
+  "address_bn": null,
+  "phones": [],
+  "email": "rajshahicollegebd@gmail.com",
+  "district": "Rajshahi",
+  "area": "Rajshahi City Corporation",
+  "phone": ""
  },
  {
   "public_id": "TOUR-00000007",
@@ -225,13 +334,20 @@
   "ownership": "public",
   "address_en": "Bagha, Rajshahi",
   "postcode": null,
-  "lat": null,
-  "lon": null,
+  "lat": 24.196028,
+  "lon": 88.839472,
   "website": null,
   "established": "1523",
-  "attributes": {},
+  "attributes": {
+   "protected_monument": true,
+   "construction_date_as_stated": "930 হিজরী (1523-24 খ্রিঃ)",
+   "_sources": [
+    "UNVERIFIED",
+    "DOA_PROTECTED_MONUMENTS_RAJ_2026"
+   ]
+  },
   "verified": false,
-  "source": "UNVERIFIED",
+  "source": "DOA_PROTECTED_MONUMENTS_RAJ_2026",
   "notes": "Sultanate-era mosque; year and coordinates need confirmation.",
   "division_id": 10002,
   "district_id": 20015,
@@ -239,11 +355,18 @@
   "city_corporation_id": null,
   "category_id": 50,
   "subcategory_id": 54,
-  "source_url": "",
+  "source_url": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-archaeology/2026/8/c11583de-bcca-48f8-be61-54013976bd0c.pdf",
   "verification_status": "unverified",
-  "evidence_level": "unverified",
-  "evidence_source": null,
-  "production_eligible": false
+  "evidence_level": "official",
+  "evidence_source": "DOA_PROTECTED_MONUMENTS_RAJ_2026",
+  "production_eligible": true,
+  "union_id": null,
+  "address_bn": "বাঘা",
+  "phones": [],
+  "email": null,
+  "district": "Rajshahi",
+  "area": "Bagha",
+  "phone": ""
  },
  {
   "public_id": "INST-00000008",
@@ -274,6 +397,13 @@
   "verification_status": "unverified",
   "evidence_level": "unverified",
   "evidence_source": null,
-  "production_eligible": false
+  "production_eligible": false,
+  "union_id": null,
+  "address_bn": null,
+  "phones": [],
+  "email": null,
+  "district": "Rajshahi",
+  "area": "Rajshahi City Corporation",
+  "phone": ""
  }
 ]

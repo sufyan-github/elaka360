@@ -1,0 +1,28 @@
+{
+  "key": "RAJDIV_PORTAL_2026",
+  "name": "Rajshahi Divisional Commissioner portal (rajshahidiv.gov.bd)",
+  "organization": "Office of the Divisional Commissioner, Rajshahi",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://rajshahidiv.gov.bd/",
+    "https://rajshahidiv.gov.bd/pages/static-pages/697fb33835ce18e1c06cb283",
+    "https://rajshahidiv.gov.bd/pages/static-pages/697fe5a835ce18e1c06dc8f2",
+    "https://rajshahidiv.gov.bd/pages/static-pages/697f79dc35ce18e1c06b6230",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-rajshahidiv/2024/12/14f1aa8d1197491d9350609897357943.pdf"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Office of the Divisional Commissioner, Rajshahi (rajshahidiv.gov.bd), Bangladesh National Portal",
+  "files": {
+    "areas.csv": "9f5ae0426b158dd8b0eb35784b373bf21e8ad82e2131fa8d5802c4c0a833bb57",
+    "facts.csv": "09c4a28b65040f5a5ff703a26056506d63234d1c8a60a15afbc9a8a52781b2e7",
+    "raw/ek_nojore_division_basic_table.txt": "c069f981bf63be41f1b6c0269a57bcb923db7b6599dde31ccb05230e3cc41241",
+    "raw/union_list_page.txt": "12cb586db0685339ba3c220f88e7771ad5176940e252c27fa677b1e4e9d6f693",
+    "raw/union_list_pdf.sha256": "cd1fd43af0da6e4eff4467d75ae59ec1b524bb01aac07750fbdbd48f7a293544",
+    "raw/upazila_list_page.txt": "e91a703d5d891ce46232ba3896215099ebe718491af14bdad4df2d6b32d11932"
+  },
+  "notes": "Page 697fb338… no longer carries the per-upazila union-count table (2026-03-31) cited in master_v3; it now lists districts/upazilas (68, incl. Mokamtala), updated 2026-10-18. Union names/counts come from the union-list PDF (Word document created 2022-10-16) attached to \"ইউনিয়নের তালিকা\" (page updated 2026-10-13), transcribed by hand because the PDF text layer is garbled (broken Bangla font). Division totals (567 unions, 62 pourashavas, 2 city corporations) from \"এক নজরে রাজশাহী বিভাগ\" (updated 2026-10-18). No Wayback snapshot of the old table exists."
+}
