@@ -1,4 +1,4 @@
-# Final implementation report (11 Nov 2026, updated)
+# Final implementation report (updated 12 Nov 2026)
 
 ## A. Executive summary
 
@@ -14,7 +14,10 @@ The branch `claude/complete-audit-report-1016dc` turns the read-only Phase 1 sli
 
 **It is not production-ready yet, and that is deliberate:**
 
-- **No official evidence:** no record has official (Tier 1) evidence. All unions and 485 upazilas come from a community dataset; by product decision (11 Nov 2026) they are shown with "not verified" warnings and `noindex` until verified against LGD/BBS sources.
+- **Official evidence covers Rajshahi Division only:**
+  - Rajshahi Division's 8 districts, 67 upazilas, 566 unions, 62 pourashavas and 618 wards now have official evidence (BBS 2022, LGD and government portals).
+  - 21,113 places from government registers are added (see [COLLECTED_DATA.md](../data/COLLECTED_DATA.md)).
+  - The other seven divisions still rely on a community dataset. They are shown with "not verified" warnings and `noindex`.
 - **No SMS gateway:** the sign-in SMS gateway is not configured.
 - **Not deployed:** nothing has been deployed.
 
@@ -41,13 +44,14 @@ The branch `claude/complete-audit-report-1016dc` turns the read-only Phase 1 sli
 | Item | Before | After |
 |---|---|---|
 | Records marked verified + production-eligible on community data alone | 5,099 (unions, upazilas, districts) | 0 |
-| Sourced (eligible) areas | everything claimed | 109 (country, 8 divisions, 64 districts, 10 upazilas, 13 city corporations) on secondary evidence; 5,037 shown with warnings |
-| Sourced places / hotlines | 8 / 10 claimed | 5 / 7 (3 places shown with warnings; unsourced hotlines never shown) |
+| Sourced (eligible) areas | everything claimed | 1,399: Rajshahi Division (1,322 official) plus country, divisions, districts and city corporations; the rest are shown with warnings |
+| Sourced places / hotlines | 8 / 10 claimed | 21,112 places (official registers; 1 pilot place still unsourced) / 7 hotlines |
 | Duplicate unions | 3 | 0 |
 | Junk names | 5 | 0 |
 | Unicode | mixed forms | NFC everywhere |
 | Natore Naldanga unions | 0 (under Sadar) | 5 (per district administration) |
-| Seed vs master v3.0 | not compared | 16 tracked differences, all with master conflict ids; CI fails on new or stale ones |
+| Seed vs master v3.0 | not compared | Tracked differences, each with a master conflict id; Bagha, Ullapara, Gabtali and Bhangura resolved by official evidence; CI fails on new or stale ones |
+| Rajshahi Division boundaries | districts only | 67 upazilas, 540 unions, 14 pourashavas, 28 wards (geoBoundaries / HDX) |
 | Wikipedia mirror links | 3 | 0 |
 
 Policy: [DATA_TRUST_POLICY.md](../data/DATA_TRUST_POLICY.md). Reconciliation: [DATA_RECONCILIATION.md](../data/DATA_RECONCILIATION.md). Open conflicts: [UNRESOLVED_CONFLICTS.md](../data/UNRESOLVED_CONFLICTS.md).
@@ -105,18 +109,19 @@ Policy: [DATA_TRUST_POLICY.md](../data/DATA_TRUST_POLICY.md). Reconciliation: [D
 | `pnpm build` (5 tasks) / `pnpm typecheck` (7) | Pass |
 | `pnpm lint` (4 packages) + `pnpm lint:root` | Pass, 0 problems |
 | Unit: shared 7, api 8 (incl. RFC 6238 TOTP vectors, duplicate thresholds), pipeline 6 | Pass |
-| `validate_seed.py` | 0 failures, 4 warnings (±1 population rounding) |
+| `validate_seed.py` | 0 failures, 4 warnings (±1 population rounding); also checks source manifests and checksums |
 | Seed rebuild reproducible | Pass |
-| `check_sql.py` | 45/45 statements OK |
+| `check_sql.py` | 45/45 statements OK (with 21,113 places loaded) |
 | `db-migrate.sh` on an empty DB, rerun, and tampered file | Applies 0001–0009 / "up to date" / aborts with exit 3 |
-| API integration (`integration-api.test.mjs`) | 9/9 pass in labelled (default) mode with Typesense, and in strict mode with staff 2FA required |
+| API integration (`integration-api.test.mjs`) | 9/9 pass in labelled (default) mode with Typesense, on the 12 Nov seed |
 | API smoke / web smoke | All checks pass (API smoke in both modes) |
-| Playwright (Pixel 7 + desktop: public, account, English, admin incl. 2FA enrolment and key issuing) | 46 passed, 2 skipped (admin tests on mobile, by design) |
+| Playwright (Pixel 7 + desktop: public, account, English, admin incl. 2FA enrolment and key issuing) | 46 passed, 2 skipped (admin tests on mobile, by design); 3 needed a rerun after the dev API's sign-in rate limit |
 | Lighthouse (mobile): home / place / emergency | Accessibility 100/100/100 · SEO 100/100/100 · Best practices 96/96/100. The two 96s come from a third-party basemap font 404 |
 | Typesense search path | Pass locally (typo-tolerant, Banglish, Bangla prefix); circuit breaker fails over to Postgres in < 70 ms and recovers |
 | GitHub Actions | **Not yet run**; first run happens on push |
 
 Bugs found and fixed by these tests:
+- with 21k places, "nearby" could list places out of distance order (sphere vs spheroid distance) and duplicate detection could miss the strongest match (no ordering before `LIMIT 20`);
 - the refresh-reuse revoke was rolled back;
 - parallel refreshes could log users out;
 - stale fetch cache crashed the evidence badge;
@@ -136,8 +141,8 @@ Bugs found and fixed by these tests:
 | Area | Status |
 |---|---|
 | Data trust enforcement | Complete (labelled visibility by default; strict mode available) |
-| Official verification of data | **Blocked** (needs LGD/BBS evidence work in the admin) |
-| Master reconciliation | Partially complete (16 open conflicts) |
+| Official verification of data | Partially complete (Rajshahi Division from official sources; seven divisions to go) |
+| Master reconciliation | Partially complete (Rajshahi Division conflicts mostly resolved; see UNRESOLVED_CONFLICTS.md) |
 | Public API, search, geo | Complete (Typesense untested locally) |
 | Auth | Partially complete. **Blocked** on an SMS gateway; Google sign-in not started (no OAuth credentials). Staff 2FA complete |
 | User features (saved, reviews, contributions) | Complete (collections UI and photo uploads not started) |

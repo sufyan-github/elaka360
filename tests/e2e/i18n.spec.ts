@@ -30,11 +30,11 @@ test('language switch keeps the query string', async ({ page }) => {
   await expect(page.getByRole('link', { name: 'English', exact: true })).toHaveAttribute('href', '/en/search?q=rajshahi');
 });
 
-test('English place page shows the English name first and "Secondary source"', async ({ page }) => {
+test('English place page shows the English name first and its evidence', async ({ page }) => {
   await page.goto('/en/p/university-of-rajshahi');
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('University of Rajshahi');
   await expect(page.getByText('রাজশাহী বিশ্ববিদ্যালয়', { exact: false }).first()).toBeVisible();   // Bangla name underneath
-  await expect(page.getByText('Secondary source').first()).toBeVisible();
+  await expect(page.getByText('Officially verified').first()).toBeVisible();
   await expect(page.getByRole('complementary', { name: 'Source and verification' })).toContainText('Wikipedia');
   await expect(page.getByRole('link', { name: /Report an error/ })).toHaveAttribute('href', /^\/en\/contribute\/new\?type=correction/);
 });

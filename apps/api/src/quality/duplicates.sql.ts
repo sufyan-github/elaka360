@@ -12,6 +12,7 @@ FROM places p, q
 WHERE p.status NOT IN ('archived', 'closed') AND p.category_id = $3 AND ($6::bigint IS NULL OR p.id <> $6)
   AND (p.name_bn % $1 OR ($2::text IS NOT NULL AND $2 <> '' AND p.name_key % elaka_latin_key($2)))
   AND (q.pt IS NULL OR p.geom IS NULL OR ST_DWithin(p.geom, q.pt, 500))
+ORDER BY name_sim DESC, dist_m NULLS LAST, p.id   -- strongest first: thousands of registry places share name words
 LIMIT 20`;
 
 /** $1 status|null, $2 limit, $3 offset */

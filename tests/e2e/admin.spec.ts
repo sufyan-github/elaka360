@@ -57,9 +57,10 @@ test.describe('admin', () => {
     await page.waitForLoadState('networkidle');
     await passTwoFactorIfAsked(page);
     await expect(page.getByRole('navigation')).toContainText('যাচাই');
-    // Live database figures, never mockup numbers: 5,132 non-country areas in the seed, 0 officially verified.
-    await expect(page.locator('main')).toContainText('৫,১৩২');
-    await expect(page.locator('main')).toContainText('সরকারিভাবে যাচাইকৃত০');
+    // Live database figures, never mockup numbers: 5,802 non-country areas in the seed, 1,322 with official evidence
+    // (Rajshahi Division from BBS 2022 / LGD / district portals).
+    await expect(page.locator('main')).toContainText('৫,৮০২');
+    await expect(page.locator('main')).toContainText('সরকারিভাবে যাচাইকৃত১,৩২২');
     await page.goto(`${ADMIN}/audit`);
     await expect(page.getByRole('table')).toBeVisible();
     await page.goto(`${ADMIN}/duplicates`);

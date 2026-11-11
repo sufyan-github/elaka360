@@ -110,8 +110,19 @@ export function Breadcrumb({ items }: { items: AdminAreaSummary[] }) {
   );
 }
 
-export function SourceFooter({ source, verifiedAt, note, evidence, reportHref }: {
-  source: DataSourceRef | null; verifiedAt?: string | null; note?: string | null; evidence?: EvidenceLevel; reportHref?: string;
+function SourceLink({ source }: { source: DataSourceRef }) {
+  return source.url ? (
+    <a href={source.url} target="_blank" rel="noopener noreferrer" className="font-medium text-secondary underline">
+      {source.name}
+    </a>
+  ) : (
+    <span className="font-medium">{source.name}</span>
+  );
+}
+
+export function SourceFooter({ source, detailsSource, verifiedAt, note, evidence, reportHref }: {
+  source: DataSourceRef | null; detailsSource?: DataSourceRef | null; verifiedAt?: string | null; note?: string | null;
+  evidence?: EvidenceLevel; reportHref?: string;
 }) {
   const locale = useLocale();
   const t = useTranslations('Evidence');
@@ -121,19 +132,14 @@ export function SourceFooter({ source, verifiedAt, note, evidence, reportHref }:
       <div className="min-w-0 space-y-1">
         <div>
           {t('source')}{' '}
-          {source ? (
-            source.url ? (
-              <a href={source.url} target="_blank" rel="noopener noreferrer" className="font-medium text-secondary underline">
-                {source.name}
-              </a>
-            ) : (
-              <span className="font-medium">{source.name}</span>
-            )
-          ) : (
-            t('sourceMissing')
-          )}
+          {source ? <SourceLink source={source} /> : t('sourceMissing')}
           {verifiedAt && <> · {t('lastChecked', { date: formatDate(verifiedAt, locale) })}</>}
         </div>
+        {detailsSource && (
+          <div>
+            {t('detailsFrom')} <SourceLink source={detailsSource} />
+          </div>
+        )}
         {evidence && EVIDENCE_LABEL[evidence] && (
           <div className="flex flex-wrap items-center gap-2">
             <EvidenceBadge level={evidence} /> <span className="text-muted">{evidenceText(evidence, locale).hint}</span>

@@ -47,7 +47,7 @@ SELECT ${PLACE_SUMMARY_COLS}, round(ST_Distance(p.geom, g.pt))::int AS distance_
 ${PLACE_JOINS}, g
 WHERE p.geom IS NOT NULL AND ST_DWithin(p.geom, g.pt, $3)
   AND ($4::text IS NULL OR c.key = $4 OR sc.key = $4)
-ORDER BY p.geom <-> g.pt
+ORDER BY ST_Distance(p.geom, g.pt), p.id   -- same measure as distance_m (<-> uses a sphere and can disagree by a metre)
 LIMIT $5`;
 
 export const PLACE_DETAIL_SQL = `
@@ -57,9 +57,13 @@ SELECT ${PLACE_SUMMARY_COLS},
   p.rating_avg::float8, p.rating_count, p.verification_notes,
   to_char(p.last_verified_at, 'YYYY-MM-DD') AS last_verified_at,
   COALESCE(p.union_id, p.upazila_id, p.city_corporation_id, p.district_id) AS area_id,
-  CASE WHEN s.id IS NULL THEN NULL ELSE json_build_object('key', s.key, 'name', s.name, 'url', NULLIF(s.url, '')) END AS source
+  CASE WHEN s.id IS NULL THEN NULL ELSE json_build_object('key', s.key, 'name', s.name, 'url', NULLIF(s.url, '')) END AS source,
+  -- where the details came from, when that is not the confirming source (a curated record confirmed by a registry)
+  CASE WHEN ds.id IS NULL OR ds.id = s.id THEN NULL
+       ELSE json_build_object('key', ds.key, 'name', ds.name, 'url', NULLIF(ds.url, '')) END AS details_source
 ${PLACE_JOINS}
 LEFT JOIN data_sources s ON s.id = COALESCE(p.evidence_source_id, p.data_source_id)
+LEFT JOIN data_sources ds ON ds.id = p.data_source_id
 WHERE p.slug = $1`;
 
 /** Map pins. $1 area id | null, $2 category key | null, $3..$6 optional bbox (west, south, east, north) */

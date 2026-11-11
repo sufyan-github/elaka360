@@ -131,6 +131,8 @@ export interface Place extends PlaceSummary {
   description_bn: string | null;
   description_en: string | null;
   source: DataSourceRef | null;
+  /** Where the details came from, when that differs from the confirming `source`. */
+  details_source: DataSourceRef | null;
   source_notes: string | null;
   last_verified_at: string | null;
   opening_hours: Record<string, unknown> | null;

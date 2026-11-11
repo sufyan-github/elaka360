@@ -43,8 +43,8 @@ export function titleOf(x: Named & { level: AdminLevel }, locale: Locale): strin
 export const EVIDENCE_LABEL: Record<EvidenceLevel, { bn: string; en: string; hint_bn: string; hint_en: string }> = {
   official: {
     bn: 'সরকারিভাবে যাচাইকৃত', en: 'Officially verified',
-    hint_bn: 'সরকারি গেজেট, এলজিডি বা বিবিএস-এর প্রাথমিক উৎসের সঙ্গে মিলিয়ে দেখা হয়েছে।',
-    hint_en: 'Checked against a government gazette, LGD or BBS primary source.',
+    hint_bn: 'সরকারি প্রাথমিক উৎস (গেজেট, এলজিডি, বিবিএস বা সরকারি নিবন্ধন/পোর্টাল) থেকে নেওয়া।',
+    hint_en: 'From a primary government source (gazette, LGD, BBS, or a government register or portal).',
   },
   secondary: {
     bn: 'দ্বিতীয় উৎস থেকে নেওয়া', en: 'Secondary source',

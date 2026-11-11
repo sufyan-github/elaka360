@@ -13,13 +13,12 @@ test('search finds Rajshahi from Banglish and opens the district', async ({ page
   await page.getByRole('link', { name: /^রাজশাহী Rajshahi জেলা/ }).first().click();
   await expect(page).toHaveURL(/\/rajshahi\/rajshahi$/);
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('রাজশাহী জেলা');
-  await expect(page.getByText('দ্বিতীয় উৎস থেকে নেওয়া').first()).toBeVisible();
+  await expect(page.getByText('সরকারিভাবে যাচাইকৃত').first()).toBeVisible();   // BBS 2022 / district portal evidence
 });
 
 test('unverified areas are shown with a warning and are not indexed', async ({ page }) => {
-  await page.goto('/rajshahi/rajshahi/paba');
-  await expect(page.getByText('কমিউনিটির তথ্য').first()).toBeVisible();          // union cards carry their evidence
   await page.goto('/dhaka/dhaka/savar');
+  await expect(page.getByText('কমিউনিটির তথ্য').first()).toBeVisible();          // union cards carry their evidence
   await expect(page.getByRole('note')).toContainText('যাচাই করা হয়নি');
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/);
 });
@@ -28,9 +27,11 @@ test('place page shows evidence, source and report link; unverified places are l
   await page.goto('/p/university-of-rajshahi');
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('রাজশাহী বিশ্ববিদ্যালয়');
   await expect(page.getByText('বিশ্ববিদ্যালয়', { exact: true })).toBeVisible();     // Bangla subcategory, not a raw slug
-  await expect(page.getByRole('complementary', { name: 'তথ্যের উৎস ও যাচাই' })).toContainText('Wikipedia');
+  const footer = page.getByRole('complementary', { name: 'তথ্যের উৎস ও যাচাই' });
+  await expect(footer).toContainText('UGC');                // confirmed by the UGC register …
+  await expect(footer).toContainText('বিস্তারিত তথ্য: Wikipedia');   // … details still credited to Wikipedia
   await expect(page.getByRole('link', { name: /ভুল তথ্য জানান/ })).toBeVisible();
-  await page.goto('/p/rajshahi-college');
+  await page.goto('/p/shah-makhdum-mazar');
   await expect(page.getByRole('note')).toContainText('যাচাই করা হয়নি');
 });
 

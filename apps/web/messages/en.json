@@ -93,6 +93,7 @@
     "sourceLabel": "Source and verification",
     "source": "Source:",
     "sourceMissing": "not stated",
+    "detailsFrom": "Details from:",
     "lastChecked": "Last checked: {date}",
     "report": "Report an error / suggest a correction"
   },

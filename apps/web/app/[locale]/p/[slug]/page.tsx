@@ -63,7 +63,10 @@ export default async function PlacePage({ params }: Props) {
   const Icon = categoryIcon(p.category_key);
   const hasPoint = p.lat !== null && p.lon !== null;
   const directions = hasPoint ? `https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lon}` : null;
-  const attrs = Object.entries(p.attributes ?? {}).filter(([, v]) => v !== null && v !== '');
+  // keys starting with `_` are internal (source ids, merge notes); only show plain values
+  const attrs = Object.entries(p.attributes ?? {}).filter(
+    ([k, v]) => !k.startsWith('_') && v !== null && v !== '' && ['string', 'number', 'boolean'].includes(typeof v),
+  );
   const sub = categoryName(categories, p.subcategory_key, locale) ?? categoryName(categories, p.category_key, locale);
   const other = otherName(p, locale);
   const address = locale === 'en'
@@ -185,6 +188,7 @@ export default async function PlacePage({ params }: Props) {
 
       <SourceFooter
         source={p.source}
+        detailsSource={p.details_source}
         verifiedAt={p.last_verified_at}
         note={p.source_notes}
         evidence={p.evidence_level}

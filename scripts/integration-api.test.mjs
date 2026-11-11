@@ -73,11 +73,12 @@ test('public reads follow the visibility mode and always carry evidence', async 
   const labelled = await labelledMode();
   const stats = await call('GET', '/v1/stats/national');
   assert.equal(stats.status, 200);
-  assert.equal(stats.json.sourced.union, 0, 'community-only unions are never counted as sourced');
-  assert.equal(stats.json.sourced.upazila, 10);
+  // Rajshahi Division's unions and upazilas carry official evidence (BBS 2022 + LGD/portal lists); elsewhere only community data
+  assert.equal(stats.json.sourced.union, 566, 'only officially sourced unions are counted as sourced');
+  assert.equal(stats.json.sourced.upazila, 68);
   assert.equal(stats.json.union, labelled ? stats.json.union : 0);
   assert.ok(stats.json.inclusion_rule);
-  const college = await call('GET', '/v1/places/rajshahi-college');
+  const college = await call('GET', '/v1/places/shah-makhdum-mazar');   // pilot place with no source yet
   const savar = await call('GET', '/v1/areas/by-path?path=dhaka/dhaka/savar');
   if (labelled) {
     assert.ok(stats.json.union >= 4538);
@@ -91,8 +92,11 @@ test('public reads follow the visibility mode and always carry evidence', async 
     assert.equal(savar.status, 404, 'community upazila hidden in strict mode');
   }
   const raj = await call('GET', '/v1/areas/by-path?path=rajshahi/rajshahi');
-  assert.equal(raj.json.area.evidence_level, 'secondary');
-  assert.equal(labelled ? raj.json.descendant_counts.union : raj.json.pending_counts.union, 71);
+  assert.equal(raj.json.area.evidence_level, 'official');
+  assert.equal(raj.json.descendant_counts.union, 72, 'all 72 unions are officially sourced, so visible in both modes');
+  const official = await call('GET', '/v1/places/rajshahi-college');
+  assert.equal(official.json.evidence_level, 'official', 'pilot place confirmed by the BANBEIS registry');
+  assert.equal(official.json.production_eligible, true);
   const hot = await call('GET', '/v1/emergency-numbers');
   assert.ok(hot.json.every((h) => h.evidence_level === 'official' || h.evidence_level === 'secondary'), 'hotlines are sourced in every mode');
   assert.ok(!hot.json.some((h) => ['16163', '16263', '1098', '16430'].includes(h.number)));
@@ -117,7 +121,7 @@ test('search: Banglish, multi-word, suggestions, locate, nearby', async () => {
   const sug = await call('GET', '/v1/search/suggest?q=raj');
   assert.ok(sug.json.items.length >= 1);
   const loc = await call('GET', '/v1/geo/locate?lat=24.37&lon=88.6');
-  assert.equal(loc.json.area.name_en, 'Rajshahi');
+  assert.equal(loc.json.area.name_en, 'Rajshahi City Corporation', 'smallest area with a boundary');
   const near = await call('GET', '/v1/places/nearby?lat=24.37&lon=88.6&radius_m=5000');
   const d = near.json.items.map((p) => p.distance_m);
   assert.deepEqual(d, [...d].sort((a, b) => a - b), 'nearest first');
@@ -307,7 +311,9 @@ test('open data: keyed, sourced-only, CSV, per-key rate limit, revocation', asyn
   assert.ok(body.items.length >= 95);
   assert.ok(body.items.every((a) => a.evidence_level === 'official' || a.evidence_level === 'secondary'), 'sourced only');
   const unions = await (await od('/v1/open-data/areas?level=union')).json();
-  assert.equal(unions.items.length, 0, 'community unions never exported, in any visibility mode');
+  assert.ok(unions.items.length > 0);
+  assert.ok(unions.items.every((u) => u.evidence_level === 'official' || u.evidence_level === 'secondary'),
+    'community unions never exported, in any visibility mode');
   const csv = await od('/v1/open-data/places?format=csv');
   assert.match(csv.headers.get('content-type'), /text\/csv/);
   assert.ok((await csv.text()).split('\r\n')[0].includes('public_id'));
