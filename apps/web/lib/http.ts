@@ -45,8 +45,15 @@ export async function relay(res: Response) {
   });
 }
 
+/**
+ * Client address to pass on to the API: X-Real-IP when our proxy sets it, else the LAST X-Forwarded-For entry
+ * (the one our own reverse proxy appended; earlier entries are client-supplied and spoofable).
+ */
 export function clientIp(req: NextRequest): string | null {
-  return req.headers.get('x-forwarded-for')?.split(',')[0]?.trim() || req.headers.get('x-real-ip') || null;
+  const real = req.headers.get('x-real-ip')?.trim();
+  const xff = req.headers.get('x-forwarded-for')?.split(',').map((s) => s.trim()).filter(Boolean);
+  const ip = real || xff?.[xff.length - 1] || null;
+  return ip && /^[0-9a-fA-F:.]{2,45}$/.test(ip) ? ip : null;
 }
 
 export function setSession(res: NextResponse, t: Pick<AuthTokens, 'access_token' | 'refresh_token' | 'expires_in'>) {

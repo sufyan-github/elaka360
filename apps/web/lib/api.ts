@@ -1,7 +1,8 @@
 import 'server-only';
 import type {
-  AdminAreaSummary, AreaDetail, AreaStats, AreaTreeNode, Category, EmergencyNumber, NationalStats, Paginated, Place, PlaceSummary, Problem, Review,
+  AdminAreaSummary, AreaDetail, AreaStats, AreaTreeNode, Category, EmergencyNumber, Locale, NationalStats, Paginated, Place, PlaceSummary, Problem, Review,
 } from '@elaka360/shared';
+import { nameOf } from '@elaka360/shared';
 
 export const API_URL = process.env.API_URL ?? 'http://localhost:4000';
 const TIMEOUT_MS = Number(process.env.API_TIMEOUT_MS ?? 5000);
@@ -59,13 +60,13 @@ export const api = {
     get<SearchResult>(`/v1/search${qs({ q, ...o })}`, 60),
 };
 
-/** Map a category key ("health.hospital") to its Bangla name using the taxonomy. */
-export function categoryName(categories: Category[], key: string | null | undefined): string | null {
+/** Map a category key ("health.hospital") to its name in the given locale using the taxonomy. */
+export function categoryName(categories: Category[], key: string | null | undefined, locale: Locale = 'bn'): string | null {
   if (!key) return null;
   for (const c of categories) {
-    if (c.key === key) return c.name_bn;
+    if (c.key === key) return nameOf(c, locale);
     const sub = c.children?.find((s) => s.key === key);
-    if (sub) return sub.name_bn;
+    if (sub) return nameOf(sub, locale);
   }
   return null;
 }

@@ -20,6 +20,15 @@ const pages = [
   ['/contribute', 'আপনার এলাকার তথ্য যোগ করুন'],
   ['/login', 'মোবাইল নম্বর'],
   ['/map', 'মানচিত্রে বাংলাদেশ'],
+  // English (/en/...)
+  ['/en', 'lang="en"'],
+  ['/en', 'Information on every area'],
+  ['/en/rajshahi/rajshahi', 'Rajshahi District'],
+  ['/en/p/university-of-rajshahi', 'University of Rajshahi'],
+  ['/en/emergency', 'Call 999'],
+  ['/en/explore', 'Explore Bangladesh'],
+  ['/en/about', 'About us'],
+  ['/en/saved', 'Mobile number'],   // redirects to the English sign-in page when signed out
 ];
 let failed = 0;
 for (const [path, text] of pages) {
@@ -29,6 +38,14 @@ for (const [path, text] of pages) {
   if (!ok) failed++;
   console.log(`${ok ? 'ok  ' : 'FAIL'} ${path} → ${res.status}${ok ? '' : ` (expected text: ${text})`}`);
 }
+const bnPrefix = await fetch(WEB + '/bn/about', { redirect: 'manual' });
+const bnPrefixOk = bnPrefix.status >= 300 && bnPrefix.status < 400 && new URL(bnPrefix.headers.get('location') ?? '', WEB).pathname === '/about';
+console.log(`${bnPrefixOk ? 'ok  ' : 'FAIL'} /bn/about redirects to /about → ${bnPrefix.status}`);
+if (!bnPrefixOk) failed++;
+const alt = await fetch(WEB + '/p/ruet').then((r) => r.text());
+const altOk = /hrefLang="en" href="[^"]*\/en\/p\/ruet"/.test(alt) && /hrefLang="x-default"/.test(alt);
+console.log(`${altOk ? 'ok  ' : 'FAIL'} hreflang alternates on /p/ruet`);
+if (!altOk) failed++;
 const nf = await fetch(WEB + '/no-such/area-here');
 // A community-only upazila: shown with an "unverified" warning (default), or 404 in strict mode.
 const hidden = await fetch(WEB + '/dhaka/dhaka/savar');

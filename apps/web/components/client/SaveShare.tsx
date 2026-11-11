@@ -1,16 +1,21 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useLocale, useTranslations } from 'next-intl';
 import { Bookmark, BookmarkCheck, Share2 } from 'lucide-react';
+import { useRouter } from '@/i18n/navigation';
+import { localePath } from '@/lib/links';
 
 /** Save (needs sign-in; state loaded in the browser so the page itself stays cacheable) and share. */
 export function SaveShare({ placeSlug, areaPath, title }: { placeSlug?: string; areaPath?: string; title: string }) {
+  const t = useTranslations('SaveShare');
+  const locale = useLocale();
   const router = useRouter();
   const [saved, setSaved] = useState(false);
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState<string | null>(null);
-  const here = placeSlug ? `/p/${placeSlug}` : `/${areaPath}`;
+  // Where to come back to after signing in: this page, in this language.
+  const here = localePath(locale, placeSlug ? `/p/${placeSlug}` : `/${areaPath}`);
 
   useEffect(() => {
     const ctrl = new AbortController();
@@ -33,7 +38,7 @@ export function SaveShare({ placeSlug, areaPath, title }: { placeSlug?: string; 
     setBusy(false);
     if (res.status === 401) return router.push(`/login?next=${encodeURIComponent(here)}`);
     if (res.ok) setSaved(!saved);
-    else setMsg('সংরক্ষণ করা যায়নি। আবার চেষ্টা করুন।');
+    else setMsg(t('saveFailed'));
   }
 
   async function share() {
@@ -42,7 +47,7 @@ export function SaveShare({ placeSlug, areaPath, title }: { placeSlug?: string; 
       if (navigator.share) await navigator.share({ title, url });
       else {
         await navigator.clipboard.writeText(url);
-        setMsg('লিংক কপি হয়েছে');
+        setMsg(t('copied'));
       }
     } catch {
       /* user cancelled */
@@ -54,10 +59,10 @@ export function SaveShare({ placeSlug, areaPath, title }: { placeSlug?: string; 
     <>
       <button type="button" onClick={toggle} disabled={busy} aria-pressed={saved} className={btn}>
         {saved ? <BookmarkCheck className="h-5 w-5 text-secondary" aria-hidden /> : <Bookmark className="h-5 w-5" aria-hidden />}
-        {saved ? 'সংরক্ষিত' : 'সংরক্ষণ'}
+        {saved ? t('saved') : t('save')}
       </button>
       <button type="button" onClick={share} className={btn}>
-        <Share2 className="h-5 w-5" aria-hidden /> শেয়ার
+        <Share2 className="h-5 w-5" aria-hidden /> {t('share')}
       </button>
       {msg && <p role="status" className="col-span-full text-center text-xs text-muted">{msg}</p>}
     </>

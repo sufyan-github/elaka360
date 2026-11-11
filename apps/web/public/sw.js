@@ -13,8 +13,11 @@
  *    dynamically rendered page, so that marker is how public dynamic pages opt in);
  *  - pages with a query string are not stored (search terms and coordinates stay out of the cache);
  *  - the precache is fetched with `credentials: 'omit'`, so it can never contain a signed-in view.
+ *
+ * Locales: Bangla pages live at `/…`, English at `/en/…`. Path rules (NEVER_CACHE) apply to both, and an
+ * English page that cannot load falls back to `/en/offline`.
  */
-const VERSION = 'v1';
+const VERSION = 'v2';
 const PRECACHE = `e360-precache-${VERSION}`;
 const PAGES = `e360-pages-${VERSION}`;
 const STATIC = `e360-static-${VERSION}`;
@@ -22,10 +25,11 @@ const DATA = `e360-data-${VERSION}`;
 const CURRENT = [PRECACHE, PAGES, STATIC, DATA];
 
 const OFFLINE_URL = '/offline';
+const OFFLINE_URL_EN = '/en/offline';
 /** Must succeed for the install to succeed. */
-const PRECACHE_REQUIRED = [OFFLINE_URL, '/data/hotlines.json', '/icons/icon-192.png', '/manifest.webmanifest'];
-/** Best effort: a server-rendered page that needs the API; a failure here must not block install. */
-const PRECACHE_OPTIONAL = ['/emergency'];
+const PRECACHE_REQUIRED = [OFFLINE_URL, OFFLINE_URL_EN, '/data/hotlines.json', '/icons/icon-192.png', '/manifest.webmanifest'];
+/** Best effort: server-rendered pages that need the API; a failure here must not block install. */
+const PRECACHE_OPTIONAL = ['/emergency', '/en/emergency'];
 
 const NEVER_CACHE = ['/api', '/login', '/me', '/saved', '/contribute', '/admin', '/auth'];
 const NAV_TIMEOUT_MS = 4000;
@@ -35,8 +39,18 @@ const MAX_DATA = 60;
 
 /* ------------------------------------------------------------------------------------------------ */
 
+/** `/en/me` → `/me`: locale-less path, so the same rules cover both languages. */
+function unlocalized(pathname) {
+  return pathname === '/en' ? '/' : pathname.startsWith('/en/') ? pathname.slice(3) : pathname;
+}
+
+function isEnglish(pathname) {
+  return pathname === '/en' || pathname.startsWith('/en/');
+}
+
 function isNeverCache(pathname) {
-  return NEVER_CACHE.some((p) => pathname === p || pathname.startsWith(p + '/'));
+  const p0 = unlocalized(pathname);
+  return NEVER_CACHE.some((p) => p0 === p || p0.startsWith(p + '/'));
 }
 
 function isStorable(res) {
@@ -157,18 +171,22 @@ async function networkFirstPage(event) {
     return (await fromCache()) || (await network);
   } catch {
     clearTimeout(timer);
-    return (await fromCache()) || offlineFallback();
+    return (await fromCache()) || offlineFallback(url.pathname);
   }
 }
 
-/** The precached /offline page (status 503), or plain text if even that is missing. */
-async function offlineFallback() {
-  const offline = await caches.match(OFFLINE_URL, { cacheName: PRECACHE, ignoreVary: true });
+/** The precached offline page in the request's language (status 503), or plain text if even that is missing. */
+async function offlineFallback(pathname) {
+  const english = isEnglish(pathname || '/');
+  const offline =
+    (await caches.match(english ? OFFLINE_URL_EN : OFFLINE_URL, { cacheName: PRECACHE, ignoreVary: true })) ||
+    (await caches.match(OFFLINE_URL, { cacheName: PRECACHE, ignoreVary: true }));
   if (offline) {
     const res = await markFromCache(offline);
     return new Response(res.body, { status: 503, statusText: 'Offline', headers: res.headers });
   }
-  return new Response('অফলাইন — ইন্টারনেট সংযোগ নেই।', { status: 503, headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
+  const text = english ? 'Offline — no internet connection.' : 'অফলাইন — ইন্টারনেট সংযোগ নেই।';
+  return new Response(text, { status: 503, headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
 }
 
 /** Personal pages (/me, /login, …): network only, nothing stored; offline → the /offline page. */
@@ -176,7 +194,7 @@ async function networkOnlyPage(event) {
   try {
     return (await event.preloadResponse) || (await fetch(event.request));
   } catch {
-    return offlineFallback();
+    return offlineFallback(new URL(event.request.url).pathname);
   }
 }
 

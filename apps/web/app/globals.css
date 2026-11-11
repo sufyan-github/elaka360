@@ -9,6 +9,8 @@ body {
   font-family: var(--font-bn);
   line-height: 1.55;
 }
+/* English pages: Inter for Latin text, Hind Siliguri still renders any Bangla names shown alongside. */
+html:lang(en) body { font-family: var(--font-inter), var(--font-hind-siliguri), 'Inter', 'Hind Siliguri', system-ui, sans-serif; }
 :focus-visible { outline: 2px solid var(--e360-secondary); outline-offset: 2px; }
 .hero-green {
   color: #ffffff;

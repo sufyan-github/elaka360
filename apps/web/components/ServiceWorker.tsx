@@ -1,15 +1,17 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { RefreshCw, WifiOff, X } from 'lucide-react';
 
 /**
  * Registers /sw.js (production builds only) and shows two small banners:
  *  - a new version is waiting → "refresh" sends SKIP_WAITING, then the page reloads once the new worker takes over;
  *  - the browser is offline, or this page was answered from the service-worker cache → data may be outdated.
- * Render once, in the root layout.
+ * Render once, in the locale layout.
  */
 export function ServiceWorker() {
+  const t = useTranslations('ServiceWorker');
   const [waiting, setWaiting] = useState<ServiceWorker | null>(null);
   const [updateDismissed, setUpdateDismissed] = useState(false);
   const [offline, setOffline] = useState(false);
@@ -96,20 +98,20 @@ export function ServiceWorker() {
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-[calc(4.5rem+env(safe-area-inset-bottom))] z-40 flex flex-col items-center gap-2 px-4 md:bottom-4">
       {showStale && (
-        <Banner onDismiss={() => setStaleDismissed(true)} icon={<WifiOff className="h-5 w-5 shrink-0 text-danger" aria-hidden />}>
-          {offline ? 'আপনি অফলাইনে আছেন — সংরক্ষিত তথ্য দেখানো হচ্ছে, তথ্য পুরোনো হতে পারে' : 'সংযোগ ধীর — সংরক্ষিত পাতা দেখানো হচ্ছে, তথ্য পুরোনো হতে পারে'}
+        <Banner closeLabel={t('close')} onDismiss={() => setStaleDismissed(true)} icon={<WifiOff className="h-5 w-5 shrink-0 text-danger" aria-hidden />}>
+          {offline ? t('offline') : t('slow')}
           {!offline && (
             <button type="button" onClick={() => window.location.reload()} className="ml-1 font-semibold text-primary underline underline-offset-2">
-              আবার লোড করুন
+              {t('reload')}
             </button>
           )}
         </Banner>
       )}
       {showUpdate && (
-        <Banner onDismiss={() => setUpdateDismissed(true)} icon={<RefreshCw className="h-5 w-5 shrink-0 text-primary" aria-hidden />}>
-          <span>নতুন সংস্করণ এসেছে</span>
+        <Banner closeLabel={t('close')} onDismiss={() => setUpdateDismissed(true)} icon={<RefreshCw className="h-5 w-5 shrink-0 text-primary" aria-hidden />}>
+          <span>{t('update')}</span>
           <button type="button" onClick={applyUpdate} className="ml-2 rounded-chip bg-primary px-3 py-1.5 text-sm font-semibold text-on-primary hover:bg-primary-hover">
-            রিফ্রেশ করুন
+            {t('refresh')}
           </button>
         </Banner>
       )}
@@ -117,7 +119,7 @@ export function ServiceWorker() {
   );
 }
 
-function Banner({ children, icon, onDismiss }: { children: React.ReactNode; icon: React.ReactNode; onDismiss: () => void }) {
+function Banner({ children, icon, onDismiss, closeLabel }: { children: React.ReactNode; icon: React.ReactNode; onDismiss: () => void; closeLabel: string }) {
   return (
     <div
       role="status"
@@ -126,7 +128,7 @@ function Banner({ children, icon, onDismiss }: { children: React.ReactNode; icon
     >
       {icon}
       <div className="min-w-0 flex-1">{children}</div>
-      <button type="button" onClick={onDismiss} className="grid h-8 w-8 shrink-0 place-items-center rounded-chip text-muted hover:text-ink" aria-label="বন্ধ করুন">
+      <button type="button" onClick={onDismiss} className="grid h-8 w-8 shrink-0 place-items-center rounded-chip text-muted hover:text-ink" aria-label={closeLabel}>
         <X className="h-4 w-4" aria-hidden />
       </button>
     </div>

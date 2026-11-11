@@ -1,7 +1,10 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useLocale, useTranslations } from 'next-intl';
+import { useRouter } from '@/i18n/navigation';
+import { localePath } from '@/lib/links';
+import { areaLabel, localName } from '@/lib/locale';
 import type { Map as MlMap, GeoJSONSource, LngLatBoundsLike } from 'maplibre-gl';
 import type { FeatureCollection, MultiPolygon } from 'geojson';
 import 'maplibre-gl/dist/maplibre-gl.css';
@@ -63,7 +66,9 @@ export function MapView({ districtIds, divisionId, areaId, category, className =
   const mapRef = useRef<MlMap | null>(null);
   const categoryRef = useRef(category);
   categoryRef.current = category;
-  const router = useRouter();
+  const router = useRouter(); // locale-aware: '/p/x' opens '/en/p/x' on English pages
+  const locale = useLocale();
+  const t = useTranslations('Map');
   const [failed, setFailed] = useState(false);
 
   useEffect(() => {
@@ -130,17 +135,18 @@ export function MapView({ districtIds, divisionId, areaId, category, className =
           map.on('click', 'pins', (e) => {
             const f = e.features?.[0];
             if (!f || f.geometry.type !== 'Point') return;
-            const p = f.properties as { slug: string; name_bn: string; area_label_bn?: string };
+            const p = f.properties as { slug: string; name_bn: string; name_en?: string | null; area_label_bn?: string | null; area_label_en?: string | null };
             const box = document.createElement('div');
             const a = document.createElement('a');
-            a.href = `/p/${p.slug}`;
-            a.textContent = p.name_bn;
+            a.href = localePath(locale, `/p/${p.slug}`);
+            a.textContent = localName({ name_bn: p.name_bn, name_en: p.name_en ?? null }, locale);
             a.style.cssText = 'font-weight:600;color:#075b3b;text-decoration:underline';
             a.addEventListener('click', (ev) => { ev.preventDefault(); router.push(`/p/${p.slug}`); });
             box.append(a);
-            if (p.area_label_bn) {
+            const label = areaLabel({ area_label_bn: p.area_label_bn ?? null, area_label_en: p.area_label_en ?? null }, locale);
+            if (label) {
               const s = document.createElement('div');
-              s.textContent = p.area_label_bn;
+              s.textContent = label;
               s.style.cssText = 'font-size:12px;color:#5c6b65';
               box.append(s);
             }
@@ -180,7 +186,7 @@ export function MapView({ districtIds, divisionId, areaId, category, className =
       mapRef.current = null;
     };
     // Re-create only when the focus changes; category updates are handled below.
-  }, [divisionId, areaId, districtIds?.join(','), point?.join(',')]);
+  }, [divisionId, areaId, districtIds?.join(','), point?.join(','), locale]);
 
   useEffect(() => {
     const src = mapRef.current?.getSource('places') as GeoJSONSource | undefined;
@@ -189,8 +195,8 @@ export function MapView({ districtIds, divisionId, areaId, category, className =
 
   return (
     <div className={`relative overflow-hidden rounded-card border border-line bg-tint ${className}`}>
-      <div ref={el} className="absolute inset-0" role="region" aria-label="মানচিত্র" />
-      {failed && <div className="absolute inset-0 grid place-items-center bg-tint p-4 text-center text-sm text-muted">মানচিত্র লোড করা যায়নি। ইন্টারনেট সংযোগ পরীক্ষা করুন।</div>}
+      <div ref={el} className="absolute inset-0" role="region" aria-label={t('label')} />
+      {failed && <div className="absolute inset-0 grid place-items-center bg-tint p-4 text-center text-sm text-muted">{t('failed')}</div>}
     </div>
   );
 }

@@ -1,4 +1,7 @@
 import type { NextConfig } from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
+
+const withNextIntl = createNextIntlPlugin('./i18n/request.ts');
 
 const MAP_ORIGIN = (() => {
   try {
@@ -28,6 +31,23 @@ const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true }, // linted separately by `pnpm lint` (eslint.config.mjs at the repo root)
+  /**
+   * Bangla (default locale) URLs have no prefix: `/x` is served by app/[locale] as `/bn/x`. This is a config
+   * rewrite, not a middleware rewrite, because Next.js matches ISR routes against the rewritten path only for
+   * config rewrites (with a middleware rewrite, `/p/ruet` and `/rajshahi` were rendered dynamically on every
+   * request). Applied after files and static routes, so public files, `/manifest.webmanifest` and `/api/*`
+   * never reach it; `/en/*` and `/bn/*` are excluded (the middleware redirects `/bn/x` to `/x`).
+   */
+  async rewrites() {
+    return {
+      beforeFiles: [],
+      afterFiles: [
+        { source: '/', destination: '/bn' },
+        { source: '/:path((?!en(?:/|$)|bn(?:/|$)|api(?:/|$)|_next(?:/|$)).+)', destination: '/bn/:path' },
+      ],
+      fallback: [],
+    };
+  },
   async headers() {
     return [
       {
@@ -45,4 +65,4 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+export default withNextIntl(nextConfig);

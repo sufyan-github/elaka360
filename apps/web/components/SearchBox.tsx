@@ -1,13 +1,18 @@
 'use client';
 
 import { useEffect, useId, useRef, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useLocale, useTranslations } from 'next-intl';
 import { Search } from 'lucide-react';
+import { useRouter } from '@/i18n/navigation';
+import { localePath } from '@/lib/links';
+import { localName, otherName } from '@/lib/locale';
 
 interface Suggestion { kind: 'area' | 'place'; name_bn: string; name_en: string; href_key: string; detail: string }
 
 /** Search box with keyboard-accessible suggestions (combobox pattern). Stale requests are aborted. */
 export function SearchBox({ defaultValue = '', autoFocus = false }: { defaultValue?: string; autoFocus?: boolean }) {
+  const t = useTranslations('SearchBox');
+  const locale = useLocale();
   const router = useRouter();
   const [q, setQ] = useState(defaultValue);
   const [items, setItems] = useState<Suggestion[]>([]);
@@ -30,6 +35,7 @@ export function SearchBox({ defaultValue = '', autoFocus = false }: { defaultVal
     return () => clearTimeout(t);
   }, [q]);
 
+  /** Locale-less path (for the localising router) and the same path in this locale (for the plain <a>). */
   const href = (s: Suggestion) => (s.kind === 'area' ? `/${s.href_key}` : `/p/${s.href_key}`);
 
   return (
@@ -59,8 +65,8 @@ export function SearchBox({ defaultValue = '', autoFocus = false }: { defaultVal
           name="q"
           type="search"
           maxLength={80}
-          placeholder="জেলা, উপজেলা, প্রতিষ্ঠান বা সেবা খুঁজুন…"
-          aria-label="খুঁজুন"
+          placeholder={t('placeholder')}
+          aria-label={t('label')}
           role="combobox"
           aria-expanded={open && items.length > 0}
           aria-controls={listId}
@@ -69,17 +75,17 @@ export function SearchBox({ defaultValue = '', autoFocus = false }: { defaultVal
           className="min-w-0 flex-1 bg-transparent py-2 text-[15px] outline-none placeholder:text-muted"
         />
         <button type="submit" className="rounded-chip bg-primary px-4 py-2 text-sm font-semibold text-on-primary hover:bg-primary-hover">
-          খুঁজুন
+          {t('submit')}
         </button>
       </div>
       {open && items.length > 0 && (
         <ul id={listId} role="listbox" className="absolute inset-x-0 top-full z-20 mt-1 overflow-hidden rounded-card border border-line bg-surface text-ink shadow-card">
           {items.map((s, i) => (
             <li key={`${s.kind}-${s.href_key}`} id={`${listId}-${i}`} role="option" aria-selected={i === active}>
-              <a href={href(s)} onMouseDown={(e) => { e.preventDefault(); router.push(href(s)); setOpen(false); }}
+              <a href={localePath(locale, href(s))} onMouseDown={(e) => { e.preventDefault(); router.push(href(s)); setOpen(false); }}
                  className={`flex items-center justify-between gap-2 px-3 py-2 text-sm ${i === active ? 'bg-tint' : ''}`}>
-                <span className="truncate">{s.name_bn} <span className="font-en text-xs text-muted">{s.name_en}</span></span>
-                <span className="shrink-0 text-xs text-muted">{s.kind === 'area' ? 'এলাকা' : 'স্থান'}</span>
+                <span className="truncate">{localName(s, locale)} <span className={`text-xs text-muted ${locale === 'bn' ? 'font-en' : ''}`}>{otherName(s, locale)}</span></span>
+                <span className="shrink-0 text-xs text-muted">{s.kind === 'area' ? t('area') : t('place')}</span>
               </a>
             </li>
           ))}
