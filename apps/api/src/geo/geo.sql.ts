@@ -101,3 +101,23 @@ export const BOUNDARY_LEVELS_SQL = `SELECT DISTINCT level::text FROM public_admi
 export const BOUNDARY_SQL = `
 SELECT a.id::int, a.name_bn, a.name_en, a.level::text, ST_AsGeoJSON(a.boundary::geometry, 5)::json AS geometry
 FROM public_admin_areas a WHERE a.id = $1 AND a.boundary IS NOT NULL`;
+
+/**
+ * Boundaries of the areas below a parent, for the live map. $1 parent id, $2 levels text[], $3 simplify tolerance (degrees).
+ * place_count counts public places filed under the area (pourashavas and wards have no place column: NULL).
+ */
+export const CHILD_BOUNDARIES_SQL = `
+WITH root AS (SELECT path FROM public_admin_areas WHERE id = $1)
+SELECT a.id::int, a.level::text, a.parent_id::int, a.name_bn, a.name_en, a.path, a.evidence_level::text, a.production_eligible,
+       a.population_2022,
+       CASE a.level
+         WHEN 'union' THEN (SELECT count(*) FROM public_places p WHERE p.union_id = a.id)
+         WHEN 'upazila' THEN (SELECT count(*) FROM public_places p WHERE p.upazila_id = a.id)
+         WHEN 'city_corporation' THEN (SELECT count(*) FROM public_places p WHERE p.city_corporation_id = a.id)
+         WHEN 'district' THEN (SELECT count(*) FROM public_places p WHERE p.district_id = a.id)
+       END::int AS place_count,
+       ST_AsGeoJSON(ST_SimplifyPreserveTopology(a.boundary::geometry, $3), 5)::json AS geometry
+FROM public_admin_areas a, root
+WHERE a.boundary IS NOT NULL AND a.level::text = ANY($2::text[]) AND a.path LIKE root.path || '/%'
+ORDER BY a.path
+LIMIT 3000`;

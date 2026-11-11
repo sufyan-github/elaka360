@@ -61,6 +61,15 @@ export class GeoController {
     return this.geo.boundary(idParam(id));
   }
 
+  @Get('areas/:id/boundaries')
+  @ApiOperation({ summary: 'Boundaries of the areas below this one (levels=upazila,union,…) as GeoJSON, with place counts' })
+  childBoundaries(@Param('id') id: string, @Query('levels') levels?: string) {
+    const allowed = new Set(['district', 'upazila', 'city_corporation', 'pourashava', 'union', 'ward']);
+    const list = (levels ?? 'upazila,city_corporation').split(',').map((l) => l.trim()).filter(Boolean);
+    if (!list.length || list.length > 6 || list.some((l) => !allowed.has(l))) throw new BadRequestException(`levels must be from: ${[...allowed].join(', ')}`);
+    return this.geo.childBoundaries(idParam(id), list);
+  }
+
   @Get('geo/locate')
   @ApiOperation({ summary: 'Which public area contains a point (resolves to the finest level with boundaries)' })
   locate(@Query('lat') lat?: string, @Query('lon') lon?: string) {

@@ -77,6 +77,12 @@ Policy: [DATA_TRUST_POLICY.md](../data/DATA_TRUST_POLICY.md). Reconciliation: [D
 - **Emergency:** a static page with a bundled fallback, quick tiles, and a 999 button visible on phones.
 - **Navigation:** search suggestions and filters, true category totals with paging.
 - **Map fixes:** the selected category survives load, tile errors show a message, pin colours come from the tokens, and place pages get a mini map.
+- **Live map (`/map`, 12 Nov 2026):**
+  - Rajshahi District first, with a switch to the whole division.
+  - Upazila and union outlines come from `GET /v1/areas/:id/boundaries`.
+  - Places load for the visible area and refresh every minute, with category filters and counts of what is in view.
+  - Clicking an area shows its population and place list, including places with no map location yet.
+  - The maps on the home and area pages rendered at zero height: MapLibre's CSS overrode `absolute inset-0`. Fixed. The cluster labels now use the basemap's Noto Sans font, which removes the font 404.
 - **PWA:** manifest, icons, service worker, offline page, update and offline banners.
 - **Static pages:** About, Contact, Privacy, Terms, Data policy, Guidelines.
 - **Tokens:** AA contrast, a full dark theme with a toggle, distinct category colours.

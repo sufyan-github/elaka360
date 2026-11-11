@@ -67,6 +67,17 @@ export class GeoService {
     return { type: 'Feature' as const, id: row.id, properties, geometry };
   }
 
+  /** Child-area boundaries (any depth) as a FeatureCollection for the live map. */
+  async childBoundaries(id: number, levels: string[]) {
+    // finer levels keep more detail; 0.0001° is about 11 m
+    const tolerance = levels.some((l) => l === 'union' || l === 'ward' || l === 'pourashava') ? 0.0001 : 0.0003;
+    const rows = await this.db.many<{ id: number; geometry: unknown } & Record<string, unknown>>(Q.CHILD_BOUNDARIES_SQL, [id, levels, tolerance]);
+    return {
+      type: 'FeatureCollection' as const,
+      features: rows.map(({ geometry, ...properties }) => ({ type: 'Feature' as const, id: properties.id, properties, geometry })),
+    };
+  }
+
   children(id: number, level?: string): Promise<AdminAreaSummary[]> {
     return this.db.many<AdminAreaSummary>(Q.CHILDREN_SQL, [id, level ?? null]);
   }

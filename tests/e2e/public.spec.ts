@@ -35,6 +35,17 @@ test('place page shows evidence, source and report link; unverified places are l
   await expect(page.getByRole('note')).toContainText('যাচাই করা হয়নি');
 });
 
+test('live map: Rajshahi District first, division next, boundaries from the API', async ({ page, request }) => {
+  await page.goto('/map');
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('লাইভ মানচিত্র — রাজশাহী');
+  await expect(page.getByRole('button', { name: 'রাজশাহী জেলা' })).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.getByRole('button', { name: 'রাজশাহী বিভাগ' })).toBeVisible();
+  await expect(page.getByRole('checkbox', { name: 'ইউনিয়নের সীমানা' })).toBeChecked();
+  const res = await request.get('/api/boundaries?area_id=20015&levels=upazila,city_corporation');
+  expect(res.ok()).toBeTruthy();
+  expect((await res.json()).features).toHaveLength(10);
+});
+
 test('emergency page lists only sourced hotlines and never the retired fire number', async ({ page }) => {
   await page.goto('/emergency');
   await expect(page.getByRole('link', { name: /৯৯৯-এ কল করুন/ })).toHaveAttribute('href', 'tel:999');

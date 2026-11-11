@@ -28,6 +28,8 @@ const CSP = [
 ].join('; ');
 
 const nextConfig: NextConfig = {
+  // NEXT_DIST_DIR lets a second build (e.g. a preview next to `next dev`) use its own folder instead of clobbering .next
+  distDir: process.env.NEXT_DIST_DIR || '.next',
   reactStrictMode: true,
   poweredByHeader: false,
   eslint: { ignoreDuringBuilds: true }, // linted separately by `pnpm lint` (eslint.config.mjs at the repo root)

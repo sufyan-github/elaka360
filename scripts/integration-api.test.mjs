@@ -102,6 +102,17 @@ test('public reads follow the visibility mode and always carry evidence', async 
   assert.ok(!hot.json.some((h) => ['16163', '16263', '1098', '16430'].includes(h.number)));
 });
 
+test('live map boundaries: child areas of Rajshahi District with place counts', async () => {
+  const upz = await call('GET', '/v1/areas/20015/boundaries?levels=upazila,city_corporation');
+  assert.equal(upz.status, 200);
+  assert.equal(upz.json.type, 'FeatureCollection');
+  assert.equal(upz.json.features.length, 10, '9 upazilas + Rajshahi City Corporation');
+  assert.ok(upz.json.features.every((f) => f.geometry && Number.isInteger(f.properties.place_count)));
+  const unions = await call('GET', '/v1/areas/20015/boundaries?levels=union');
+  assert.ok(unions.json.features.length >= 60 && unions.json.features.every((f) => f.properties.level === 'union'));
+  assert.equal((await call('GET', '/v1/areas/20015/boundaries?levels=planet')).status, 400);
+});
+
 test('errors are problem details; bad ids are 400 not 500', async () => {
   const r = await call('GET', '/v1/areas/999999999999999999999');
   assert.equal(r.status, 400);

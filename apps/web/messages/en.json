@@ -386,8 +386,8 @@
     "retry": "Try again"
   },
   "MapPage": {
-    "title": "Bangladesh on the map",
-    "subtitle": "Divisions, districts and important institutions — on an interactive map."
+    "title": "Live map — Rajshahi",
+    "subtitle": "Rajshahi District first, then the whole division: boundaries down to unions and every place with a known location."
   },
   "MapExplorer": {
     "cat": {
@@ -683,5 +683,51 @@
       "population": "Population",
       "places": "Places and institutions"
     }
+  },
+  "LiveMap": {
+    "label": "Live map",
+    "panel": "Map details",
+    "scope": "Area",
+    "category": "Category",
+    "layers": "Layers",
+    "scopes": {
+      "district": "Rajshahi District",
+      "division": "Rajshahi Division"
+    },
+    "layer": {
+      "coarse": "Upazila boundaries",
+      "fine": "Union boundaries",
+      "places": "Places"
+    },
+    "cat": {
+      "all": "All",
+      "education": "Education",
+      "health": "Health",
+      "government": "Government",
+      "emergency": "Emergency",
+      "tourism": "Tourism",
+      "religious": "Religious",
+      "transport": "Transport",
+      "finance": "Banks",
+      "agriculture": "Agriculture",
+      "business": "Business",
+      "other": "Other"
+    },
+    "starting": "Loading map…",
+    "loading": "Updating…",
+    "live": "Live · updated {time}",
+    "inView": "{n} places in view",
+    "inViewTitle": "On the map now",
+    "noneInView": "No places with a map location here. Zoom out or pick another category.",
+    "placesOff": "Places are hidden. Turn on “Places” to see them.",
+    "zoomIn": "Too many places to show at once. Zoom in to see them all.",
+    "hint": "Tap a union or upazila to see its population and places — including places that have no map location yet. The map refreshes itself every minute.",
+    "population": "Population (2022)",
+    "places": "Places",
+    "noPin": "no map location yet",
+    "openArea": "Open the area page",
+    "close": "Close",
+    "failed": "The map could not be loaded. Check your internet connection.",
+    "note": "Boundaries: geoBoundaries / HDX (OCHA). Places: government registers (DGHS, BANBEIS, DPE, UGC, Department of Archaeology, police, fire service, portals). Most schools and offices have no published coordinates yet, so they appear in the area panel but not as pins."
   }
 }

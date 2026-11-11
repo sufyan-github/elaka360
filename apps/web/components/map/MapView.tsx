@@ -120,7 +120,8 @@ export function MapView({ districtIds, divisionId, areaId, category, className =
           });
           map.addLayer({
             id: 'cluster-count', type: 'symbol', source: 'places', filter: ['has', 'point_count'],
-            layout: { 'text-field': ['get', 'point_count_abbreviated'], 'text-size': 12 },
+            // the basemap only serves Noto Sans; the MapLibre default font 404s
+            layout: { 'text-field': ['get', 'point_count_abbreviated'], 'text-size': 12, 'text-font': ['Noto Sans Bold'] },
             paint: { 'text-color': '#fff' },
           });
           map.addLayer({
@@ -195,7 +196,8 @@ export function MapView({ districtIds, divisionId, areaId, category, className =
 
   return (
     <div className={`relative overflow-hidden rounded-card border border-line bg-tint ${className}`}>
-      <div ref={el} className="absolute inset-0" role="region" aria-label={t('label')} />
+      {/* maplibre's CSS makes the container position:relative, so size it with h-full rather than absolute inset-0 */}
+      <div ref={el} className="h-full w-full" role="region" aria-label={t('label')} />
       {failed && <div className="absolute inset-0 grid place-items-center bg-tint p-4 text-center text-sm text-muted">{t('failed')}</div>}
     </div>
   );

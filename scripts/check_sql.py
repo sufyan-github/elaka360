@@ -26,6 +26,7 @@ PARAMS = {
     "LOCATE_SQL": ["24.37", "88.60"],
     "BOUNDARY_LEVELS_SQL": [],
     "BOUNDARY_SQL": ["20015"],
+    "CHILD_BOUNDARIES_SQL": ["20015", "'{union,pourashava}'", "0.0001"],
     # places
     "CATEGORIES_SQL": [],
     "PLACE_LIST_SQL": ["20015", "'education'", "NULL", "20", "0", "'relevance'"],
@@ -68,7 +69,7 @@ PARAMS = {
 EXPECT_ROWS = {  # minimum rows each statement must return on the seed (public = production-eligible only)
     "AREA_DETAIL_SQL": 1, "CHILDREN_SQL": 9, "LIST_SQL": 8, "PLACE_NEARBY_SQL": 4, "PLACE_DETAIL_SQL": 1, "EMERGENCY_SQL": 7,
     "AREA_SEARCH_SQL": 1, "CATEGORIES_SQL": 95, "BREADCRUMB_SQL": 4, "PLACE_LIST_SQL": 2, "PLACE_COUNT_SQL": 1, "AREA_DOCS_SQL": 95,
-    "PLACE_GEO_SQL": 5, "PLACE_DOCS_SQL": 5, "TREE_SQL": 73, "LOCATE_SQL": 1, "BOUNDARY_SQL": 1, "SUGGEST_SQL": 1,
+    "PLACE_GEO_SQL": 5, "PLACE_DOCS_SQL": 5, "TREE_SQL": 73, "LOCATE_SQL": 1, "BOUNDARY_SQL": 1, "CHILD_BOUNDARIES_SQL": 80, "SUGGEST_SQL": 1,
     "ADMIN_STATS_SQL": 1, "ADMIN_AREA_LIST_SQL": 8, "ADMIN_AREA_SQL": 1, "ADMIN_PLACE_LIST_SQL": 8, "ADMIN_PLACE_SQL": 1, "ADMIN_SOURCES_SQL": 20,
     "PLACE_ID_SQL": 1, "DUP_MATCH_SQL": 1, "OD_AREAS_SQL": 95, "OD_PLACES_SQL": 5, "OD_SOURCES_SQL": 5,
 }
