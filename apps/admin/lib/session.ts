@@ -82,7 +82,9 @@ async function clientIp(): Promise<string | null> {
   try {
     const { headers } = await import('next/headers');
     const h = await headers();
-    return h.get('x-real-ip') || h.get('x-forwarded-for')?.split(',').at(-1)?.trim() || null;
+    // On Cloudflare Workers (TRUST_CF_CONNECTING_IP=1) the edge sets CF-Connecting-IP; clients cannot forge it there.
+    const cf = process.env.TRUST_CF_CONNECTING_IP === '1' ? h.get('cf-connecting-ip')?.trim() : null;
+    return cf || h.get('x-real-ip') || h.get('x-forwarded-for')?.split(',').at(-1)?.trim() || null;
   } catch {
     return null; // outside a request (e.g. build)
   }
@@ -94,7 +96,11 @@ export async function apiFetchRaw(path: string, init: RequestInit): Promise<Resp
     // Forward the client IP so the API's per-IP limits apply to the person, not to this server.
     const ip = await clientIp();
     const h = new Headers(init.headers);
-    if (ip && /^[0-9a-fA-F:.]{3,45}$/.test(ip)) h.set('x-forwarded-for', ip);
+    if (ip && /^[0-9a-fA-F:.]{3,45}$/.test(ip)) {
+      h.set('x-forwarded-for', ip);
+      const secret = process.env.EDGE_SHARED_SECRET;   // lets the API trust this IP (see apps/api/src/common/edge-ip.ts)
+      if (secret) { h.set('x-edge-client-ip', ip); h.set('x-edge-key', secret); }
+    }
     return await fetch(`${API_URL}${path}`, { cache: 'no-store', ...init, headers: h, signal: init.signal ?? AbortSignal.timeout(8000) });
   } catch {
     return new Response(JSON.stringify(UNREACHABLE), { status: 502, headers: { 'content-type': 'application/problem+json' } });

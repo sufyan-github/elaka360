@@ -1,0 +1,228 @@
+{
+ "published": [
+  {
+   "key": "CITYPOP_ADJ",
+   "name": "BBS Census 2022 (adjusted) via citypopulation.de",
+   "url": "https://citypopulation.de/en/bangladesh/"
+  },
+  {
+   "key": "WIKI_CC",
+   "name": "Wikipedia: List of city corporations in Bangladesh (Mar 2026 snapshot)",
+   "url": "https://en.wikipedia.org/wiki/List_of_city_corporations_in_Bangladesh"
+  },
+  {
+   "key": "FE_BOGURA",
+   "name": "The Financial Express, 15 May 2026: Bogura becomes city corporation",
+   "url": "https://today.thefinancialexpress.com.bd/last-page/bogura-becomes-city-corporation-1778866247"
+  },
+  {
+   "key": "WIKI_SHAY",
+   "name": "Wikipedia: Shayestaganj Upazila",
+   "url": "https://en.wikipedia.org/wiki/Shayestaganj_Upazila"
+  },
+  {
+   "key": "FE_102",
+   "name": "The Financial Express, 6 Jun 2024: Fire service launches new hotline 102",
+   "url": "https://thefinancialexpress.com.bd/national/fire-service-launches-new-hotline-number-102"
+  },
+  {
+   "key": "WIKI_TEL",
+   "name": "Wikipedia: Telephone numbers in Bangladesh",
+   "url": "https://en.wikipedia.org/wiki/Telephone_numbers_in_Bangladesh"
+  },
+  {
+   "key": "WIKI_RU",
+   "name": "Wikipedia: University of Rajshahi",
+   "url": "https://en.wikipedia.org/wiki/University_of_Rajshahi"
+  },
+  {
+   "key": "WIKI_RUET",
+   "name": "Wikipedia: RUET (Mar 2026 snapshot)",
+   "url": "https://en.wikipedia.org/wiki/Rajshahi_University_of_Engineering_%26_Technology"
+  },
+  {
+   "key": "WIKI_RMC",
+   "name": "Wikipedia: Rajshahi Medical College",
+   "url": "https://en.wikipedia.org/wiki/Rajshahi_Medical_College"
+  },
+  {
+   "key": "WIKI_PUTHIA",
+   "name": "Wikipedia: Puthia Rajbari",
+   "url": "https://en.wikipedia.org/wiki/Puthia_Rajbari"
+  },
+  {
+   "key": "WIKI_VRM",
+   "name": "Wikipedia: Varendra Research Museum",
+   "url": "https://en.wikipedia.org/wiki/Varendra_Research_Museum"
+  },
+  {
+   "key": "BANBEIS_INST_RAJ_2026",
+   "name": "BANBEIS institution lists (EIIN registry, e-survey 2024) — Rajshahi Division",
+   "url": "https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637"
+  },
+  {
+   "key": "BBS_CENSUS_2022",
+   "name": "Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Rajshahi Division",
+   "url": "https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220"
+  },
+  {
+   "key": "BD_POLICE_CONTACTS_2020",
+   "name": "Bangladesh Police HQ — Contacts of Bangladesh Police (RMP and Rajshahi Range sheets)",
+   "url": "https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf"
+  },
+  {
+   "key": "BD_RAILWAY_RAJ_2026",
+   "name": "Bangladesh Railway — station phones and district-wise station counts (Rajshahi Division)",
+   "url": "https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6"
+  },
+  {
+   "key": "BDPOST_POSTCODES_RAJ_2026",
+   "name": "Bangladesh Post postcode booklet — Rajshahi Division post offices (scan on post.rajshahi.gov.bd)",
+   "url": "http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af"
+  },
+  {
+   "key": "BRTC_DEPOTS_RAJ_2026",
+   "name": "BRTC — bus depots in Rajshahi Division",
+   "url": "https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0"
+  },
+  {
+   "key": "CAAB_AIRPORTS_RAJ_2026",
+   "name": "Civil Aviation Authority of Bangladesh — airports in Rajshahi Division",
+   "url": "https://www.caab.gov.bd/"
+  },
+  {
+   "key": "DGHS_HRIS_FACILITIES_RAJ_2026",
+   "name": "DGHS / MoHFW HRIS Facility Registry — organisation list, Rajshahi Division",
+   "url": "https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=3"
+  },
+  {
+   "key": "DGME_MEDICAL_COLLEGES_RAJ_2026",
+   "name": "DGME medical and dental college lists — Rajshahi Division",
+   "url": "https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3"
+  },
+  {
+   "key": "DISTRICT_PORTAL_BANKS_RAJ_2026",
+   "name": "District portals — bank branch/office phone lists (Rajshahi, Natore, Naogaon)",
+   "url": "https://rajshahi.gov.bd/pages/static-pages/697f99c635ce18e1c06c092f"
+  },
+  {
+   "key": "DISTRICT_PORTALS_TRANSPORT_RAJ_2026",
+   "name": "District & upazila portals (Rajshahi Division) — bus terminals/stands and stations named on transport pages",
+   "url": "https://paba.rajshahi.gov.bd/pages/static-pages/697fc1d435ce18e1c06cdf9d"
+  },
+  {
+   "key": "DOA_PROTECTED_MONUMENTS_RAJ_2026",
+   "name": "Department of Archaeology — gazetted protected monuments, Rajshahi Division (district PDF lists)",
+   "url": "https://archaeology.gov.bd/pages/static-pages/6922df29933eb65569e20433"
+  },
+  {
+   "key": "DPE_IPEMIS_PRIMARY_RAJ_2026",
+   "name": "DPE IPEMIS primary school directory — Rajshahi Division",
+   "url": "https://ipemis.dpe.gov.bd/search-school"
+  },
+  {
+   "key": "FSCD_STATIONS_RAJ_2026",
+   "name": "Fire Service & Civil Defence — Rajshahi Division station & office numbers",
+   "url": "https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1"
+  },
+  {
+   "key": "PORTAL_TOURIST_SPOTS_RAJ_2026",
+   "name": "National portal 'দর্শনীয় স্থান' (tourist spot) lists — Rajshahi Division district and upazila portals",
+   "url": "https://rajshahi.gov.bd/pages/tourist-spot"
+  },
+  {
+   "key": "RAJ_RANGE_POLICE_PORTALS_2026",
+   "name": "District police portals of Rajshahi Range (Natore, Naogaon, Chapainawabganj, Bogura, Joypurhat, Pabna, Sirajganj)",
+   "url": "https://police.natore.gov.bd/pages/static-pages/697fdcd735ce18e1c06d8427"
+  },
+  {
+   "key": "RAJSHAHI_POLICE_2026",
+   "name": "Rajshahi District Police — thanas, SP office and control room numbers",
+   "url": "https://police.rajshahi.gov.bd/pages/static-pages/697f6dd335ce18e1c06b1c47"
+  },
+  {
+   "key": "RAJSHAHI_PORTAL_OFFICES_2026",
+   "name": "Government offices on the national portal sites — Divisional Commissioner, Rajshahi DC & upazila portals, DC/UNO offices of Rajshahi Division",
+   "url": "https://rajshahidiv.gov.bd/"
+  },
+  {
+   "key": "RMP_THANAS_2026",
+   "name": "Rajshahi Metropolitan Police — thanas and official numbers",
+   "url": "https://rmp.gov.bd/pages/static-pages/695e3b08c4774958d7b7214e"
+  },
+  {
+   "key": "UGC_UNIVERSITIES_RAJ_2026",
+   "name": "UGC university register — universities in Rajshahi Division",
+   "url": "https://www.ugc.gov.bd/universities"
+  }
+ ],
+ "heldBack": [
+  {
+   "key": "NUHIL",
+   "name": "nuhil/bangladesh-geocode (GitHub, MIT)",
+   "url": "https://github.com/nuhil/bangladesh-geocode"
+  }
+ ],
+ "gaps": [
+  {
+   "area": "unions",
+   "gap": "~33–40 unions missing vs the official 4,571–4,578 (seed has 4,538 after removing 3 duplicates). All unions are community data and not published.",
+   "fix": "Import the LGD/BBS union list and reconcile by geocode."
+  },
+  {
+   "area": "verification",
+   "gap": "No record has official (Tier 1) evidence yet; published areas and places rest on secondary sources.",
+   "fix": "Verify against LGD/BBS/gazette sources in the admin verification centre."
+  },
+  {
+   "area": "master v3.0",
+   "gap": "Seed and Consolidated Master v3.0 differ in Sirajganj (82 vs 83), Bogura (Gabtali/Sonatala), Rajshahi Bagha (Chakrajapur) and Chapainawabganj (5 names each way).",
+   "fix": "See docs/data/UNRESOLVED_CONFLICTS.md; resolve with primary evidence."
+  },
+  {
+   "area": "unions",
+   "gap": "New upazilas Eidgaon, Madhyanagar, Dasar and Guimara have 0 unions; their unions still sit under the parent upazilas (Naldanga fixed Nov 2026 from the Natore district portal).",
+   "fix": "Re-parent unions per the creation gazettes."
+  },
+  {
+   "area": "unions",
+   "gap": "Shayestaganj union and Nurpur were moved to Shayestaganj Upazila; Brahmandura was added without a source id.",
+   "fix": "Confirm against LGD."
+  },
+  {
+   "area": "upazilas",
+   "gap": "No coordinates or boundaries for upazilas/unions.",
+   "fix": "Use the BBS/HDX admin boundary sets (ADM3/ADM4)."
+  },
+  {
+   "area": "codes",
+   "gap": "BBS geocodes are filled for divisions only.",
+   "fix": "Add district/upazila/union geocodes from BBS."
+  },
+  {
+   "area": "pourashavas",
+   "gap": "Only Rajshahi District's 14 pourashavas are listed, and that list is unverified.",
+   "fix": "Import the LGD pourashava list (330)."
+  },
+  {
+   "area": "wards/villages",
+   "gap": "No wards, mouzas or villages.",
+   "fix": "BBS mouza/village lists."
+  },
+  {
+   "area": "area",
+   "gap": "District areas are computed from boundary polygons (approximate).",
+   "fix": "Replace with BBS official areas."
+  },
+  {
+   "area": "population",
+   "gap": "District/division population uses the 2022 adjusted figures; Rajshahi upazilas use enumerated figures.",
+   "fix": "Choose one basis app-wide."
+  },
+  {
+   "area": "places",
+   "gap": "Only 8 pilot places; 3 are unverified and have no coordinates.",
+   "fix": "Field verification + OSM import."
+  }
+ ]
+}

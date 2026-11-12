@@ -2,6 +2,7 @@ import { NextResponse, type NextRequest } from 'next/server';
 import { createTranslator } from 'next-intl';
 import bn from '@/messages/bn.json';
 import en from '@/messages/en.json';
+import { clientIp, edgeHeaders } from '@/lib/http';
 
 const API_URL = process.env.API_URL ?? 'http://localhost:4000';
 const MAX_BODY = 8 * 1024;
@@ -26,17 +27,6 @@ function expectedOrigins(req: NextRequest): Set<string> {
     }
   }
   return out;
-}
-
-/**
- * Client address to pass on. Our own reverse proxy appends the peer address as the LAST X-Forwarded-For
- * entry (anything before it is client-supplied and spoofable); X-Real-IP is used when the proxy sets it.
- */
-function clientIp(req: NextRequest): string | null {
-  const real = req.headers.get('x-real-ip')?.trim();
-  const xff = req.headers.get('x-forwarded-for')?.split(',').map((s) => s.trim()).filter(Boolean);
-  const ip = real || xff?.[xff.length - 1] || null;
-  return ip && /^[0-9a-fA-F:.]{2,45}$/.test(ip) ? ip : null;
 }
 
 /** Error messages in the form's language (`?locale=en`; Bangla by default). */
@@ -86,7 +76,7 @@ export async function POST(req: NextRequest) {
   const payload = { subject: str(input.subject), message: str(input.message), email: str(input.email) || undefined, website: str(input.website) };
   const headers: Record<string, string> = { 'content-type': 'application/json', accept: 'application/json' };
   const ip = clientIp(req);
-  if (ip) headers['x-forwarded-for'] = ip;
+  if (ip) Object.assign(headers, edgeHeaders(ip));
   const requestId = req.headers.get('x-request-id');
   if (requestId && /^[A-Za-z0-9._-]{8,64}$/.test(requestId)) headers['x-request-id'] = requestId;
 

@@ -1,0 +1,18 @@
+// Cloudflare Worker for the staff admin app (built by @opennextjs/cloudflare; deployed by .github/workflows/deploy.yml).
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "elaka360-admin",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": { "directory": ".open-next/assets", "binding": "ASSETS" },
+  "routes": [{ "pattern": "elaka360-admin.abusufyan.online", "custom_domain": true }],
+  "workers_dev": false,
+  "observability": { "enabled": true },
+  "vars": {
+    "API_URL": "https://elaka360-api.abusufyan.online",
+    "TRUST_CF_CONNECTING_IP": "1",
+    "ADMIN_ORIGIN": "https://elaka360-admin.abusufyan.online"
+  },
+  "services": [{ "binding": "WORKER_SELF_REFERENCE", "service": "elaka360-admin" }]
+}

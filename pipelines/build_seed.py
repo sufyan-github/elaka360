@@ -348,6 +348,28 @@ write_csv(f"{OUT}/qa/mockup_vs_verified.csv",
           ["topic", "mockup_values", "verified_value", "source", "source_url", "action"])
 write_csv(f"{OUT}/qa/known_gaps.csv", [dict(area=a, gap=g, fix=f) for a, g, f in KNOWN_GAPS], ["area", "gap", "fix"])
 
+# Data-policy page input for the web app: bundled at build time (the page also runs on Cloudflare Workers, which has no
+# file system). Published = sources behind production-eligible records; held back = community sources of hidden records.
+_published, _held = set(), set()
+for r in rows:
+    if r["production_eligible"]:
+        _published.update(k for k in (r.get("evidence_source"), r.get("population_source")) if k)
+    elif r["evidence_level"] == "community":
+        _held.add(r.get("data_source") or r.get("evidence_source") or "")
+for p in places:
+    if p["production_eligible"]:
+        _published.update(k for k in (p.get("evidence_source"), p.get("source")) if k and k in SRC and SRC[k][1])
+for h in hot:
+    if h["evidence_level"] in ("official", "secondary") and h["source"]:
+        _published.add(h["source"])
+assert not (_published - set(SRC)), f"published records cite unknown source keys: {_published - set(SRC)}"
+_pick = lambda keys: [dict(key=s["key"], name=s["name"], url=s["url"]) for s in srcs if s["key"] in keys and s["url"]]
+os.makedirs(os.path.join(ROOT, "apps", "web", "lib", "generated"), exist_ok=True)
+with open(os.path.join(ROOT, "apps", "web", "lib", "generated", "data-policy.json"), "w", encoding="utf-8") as fh:
+    json.dump(dict(published=_pick(_published), heldBack=_pick(_held - _published),
+                   gaps=[dict(area=a, gap=g, fix=f) for a, g, f in KNOWN_GAPS]), fh, ensure_ascii=False, indent=1)
+    fh.write("\n")
+
 write_csv(f"{OUT}/qa/collected_changes.csv", import_collected.changes, ["record", "change", "detail", "source"])
 write_csv(f"{OUT}/qa/reconciliation_changes.csv", changes + [dict(record=f"source:{k}", change="url_fixed", detail=why, source=k)
           for k, why in SOURCE_URL_FIXES.items()], ["record", "change", "detail", "source"])

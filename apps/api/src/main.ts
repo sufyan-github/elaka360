@@ -5,6 +5,7 @@ import type { NestExpressApplication } from '@nestjs/platform-express';
 import helmet from 'helmet';
 import { AppModule } from './app.module';
 import { requestContext } from './common/request-context';
+import { edgeClientIp } from './common/edge-ip';
 import { jwtSecret } from './common/auth/tokens';
 
 async function bootstrap() {
@@ -12,6 +13,7 @@ async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule, { logger: ['log', 'warn', 'error'] });
   app.disable('x-powered-by');
   app.set('trust proxy', Number(process.env.TRUST_PROXY_HOPS ?? 1));
+  app.use(edgeClientIp(process.env.EDGE_SHARED_SECRET));
   app.use(requestContext);
   app.use(helmet({ contentSecurityPolicy: { directives: { defaultSrc: ["'self'"], scriptSrc: ["'self'", "'unsafe-inline'"], styleSrc: ["'self'", "'unsafe-inline'"], imgSrc: ["'self'", 'data:'] } } }));
   app.useBodyParser('json', { limit: '100kb' });

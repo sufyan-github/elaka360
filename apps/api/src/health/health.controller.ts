@@ -24,7 +24,8 @@ export class HealthController {
       search: this.search.health(),
       public_include_unverified: INCLUDE_UNVERIFIED,
       staff_require_2fa: STAFF_REQUIRE_2FA,
-      version: process.env.APP_VERSION ?? 'dev',
+      // the deploy pipeline waits until this matches the commit it just released
+      version: process.env.APP_VERSION ?? process.env.RENDER_GIT_COMMIT ?? 'dev',
     };
   }
 }

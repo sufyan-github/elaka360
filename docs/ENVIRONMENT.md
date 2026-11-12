@@ -23,7 +23,8 @@
 | `DB_POOL_MAX`, `DB_STATEMENT_TIMEOUT_MS` | 10, 8000 | |
 | `TRUST_PROXY_HOPS` | 1 | For the client IP behind a load balancer |
 | `ACCESS_LOG` | on | `off` disables the JSON access log |
-| `APP_VERSION` | `dev` | Shown in `/health` |
+| `APP_VERSION` | `dev` | Shown in `/health` (on Render: `RENDER_GIT_COMMIT`, which the deploy pipeline waits for) |
+| `EDGE_SHARED_SECRET` | unset | ≥ 32 chars. When set, `X-Edge-Client-IP` from the web/admin servers is trusted as the visitor IP if `X-Edge-Key` matches (Cloudflare Workers) |
 
 ## Web (`apps/web`) and admin (`apps/admin`)
 
@@ -33,3 +34,6 @@
 | `API_TIMEOUT_MS` | 5000 | Server-side fetch timeout |
 | `NEXT_PUBLIC_SITE_URL` | `http://localhost:3000` | Canonical origin, also accepted by the CSRF Origin check |
 | `NEXT_PUBLIC_MAP_STYLE_URL` | OpenFreeMap positron | Basemap style; its origin is added to the CSP |
+| `EDGE_SHARED_SECRET` | unset | Same value as the API's; sends the visitor IP to the API (Worker secret, set by the deploy workflow) |
+| `TRUST_CF_CONNECTING_IP` | unset | `1` on Cloudflare Workers: take the visitor IP from `CF-Connecting-IP` |
+| `NEXT_DIST_DIR` | `.next` | Build folder; lets a preview build run beside `next dev` |

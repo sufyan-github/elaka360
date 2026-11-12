@@ -1,5 +1,3 @@
-import fs from 'node:fs';
-import path from 'node:path';
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { ExternalLink } from 'lucide-react';
@@ -8,8 +6,9 @@ import { asLocale, evidenceText, otherLocale } from '@/lib/locale';
 import { localeAlternates } from '@/lib/meta';
 import { Link } from '@/i18n/navigation';
 import { Card, Section } from '@/components/ui';
+import policyData from '@/lib/generated/data-policy.json';
 
-// Rendered once at build time (per locale) from the committed seed (data/seed/**), so names and URLs match it exactly.
+// Rendered once at build time (per locale) from the seed summary below.
 export const dynamic = 'force-static';
 
 type Props = { params: Promise<{ locale: string }> };
@@ -20,74 +19,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { title: t('title'), description: t('description'), alternates: localeAlternates(locale, '/data-policy') };
 }
 
-/* ---------------------------------------------------------------- build-time seed reading */
+/* ---------------------------------------------------------------- seed summary */
 
-function seedDir(): string {
-  let dir = process.cwd();
-  for (let i = 0; i < 5; i++) {
-    const candidate = path.join(dir, 'data', 'seed');
-    if (fs.existsSync(path.join(candidate, 'reference', 'data_sources.csv'))) return candidate;
-    dir = path.dirname(dir);
-  }
-  throw new Error('data-policy: data/seed not found (looked upwards from the web app directory)');
-}
-
-/** Minimal RFC 4180 parser (quoted fields, doubled quotes, CRLF), returning objects keyed by the header row. */
-function readCsv(file: string): Record<string, string>[] {
-  const text = fs.readFileSync(path.join(seedDir(), file), 'utf8').replace(/^\uFEFF/, '');
-  const rows: string[][] = [];
-  let row: string[] = [];
-  let field = '';
-  let quoted = false;
-  for (let i = 0; i < text.length; i++) {
-    const c = text[i];
-    if (quoted) {
-      if (c === '"' && text[i + 1] === '"') {
-        field += '"';
-        i++;
-      } else if (c === '"') quoted = false;
-      else field += c;
-    } else if (c === '"') quoted = true;
-    else if (c === ',') {
-      row.push(field);
-      field = '';
-    } else if (c === '\n' || c === '\r') {
-      if (c === '\r' && text[i + 1] === '\n') i++;
-      row.push(field);
-      rows.push(row);
-      row = [];
-      field = '';
-    } else field += c;
-  }
-  if (field || row.length) {
-    row.push(field);
-    rows.push(row);
-  }
-  const [header, ...body] = rows.filter((r) => r.some((x) => x !== ''));
-  return body.map((r) => Object.fromEntries(header!.map((h, i) => [h, r[i] ?? ''])));
-}
-
+// Written by pipelines/build_seed.py from the committed seed, so names and URLs match it exactly. Bundled at build
+// time: the page also runs on Cloudflare Workers, which has no file system.
 type Source = { key: string; name: string; url: string };
-
-function loadSources() {
-  const all = readCsv('reference/data_sources.csv').map((r) => ({ key: r.key!, name: r.name!, url: r.url ?? '' }));
-  const published = new Set<string>();
-  const heldBack = new Set<string>();
-  for (const a of readCsv('geo/admin_areas.csv')) {
-    if (a.production_eligible === 'True') {
-      if (a.evidence_source) published.add(a.evidence_source);
-      if (a.population_source) published.add(a.population_source);
-    } else if (a.evidence_level === 'community') heldBack.add(a.data_source || a.evidence_source || '');
-  }
-  for (const p of readCsv('pilot_rajshahi/places.csv')) if (p.production_eligible === 'True' && p.source) published.add(p.source);
-  for (const h of readCsv('reference/emergency_hotlines.csv')) if ((h.evidence_level === 'official' || h.evidence_level === 'secondary') && h.source) published.add(h.source);
-
-  const byKey = new Map(all.map((s) => [s.key, s]));
-  const pick = (keys: Set<string>) => all.filter((s) => keys.has(s.key) && s.url) as Source[];
-  const missing = [...published].filter((k) => !byKey.has(k));
-  if (missing.length) throw new Error(`data-policy: published records cite unknown source keys: ${missing.join(', ')}`);
-  return { published: pick(published), heldBack: pick(new Set([...heldBack].filter((k) => !published.has(k)))) };
-}
+const POLICY = policyData as { published: Source[]; heldBack: Source[]; gaps: { area: string; gap: string; fix: string }[] };
 
 /** known_gaps.csv `area` values → message keys (DataPolicy.gapArea.*). */
 const GAP_AREA = {
@@ -104,8 +41,7 @@ export default async function DataPolicyPage({ params }: Props) {
   const locale = asLocale((await params).locale);
   setRequestLocale(locale);
   const t = await getTranslations('DataPolicy');
-  const { published, heldBack } = loadSources();
-  const gaps = readCsv('qa/known_gaps.csv');
+  const { published, heldBack, gaps } = POLICY;
   const strong = (c: React.ReactNode) => <strong>{c}</strong>;
   const official = evidenceText('official', locale).label;
   const secondary = evidenceText('secondary', locale).label;

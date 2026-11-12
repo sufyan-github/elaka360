@@ -1,0 +1,137 @@
+name: Deploy
+
+# Production release: runs after CI passes on main (or by hand). Order matters:
+#   1. API on Render: deploy hook → Render builds the image, runs db-migrate.sh (pre-deploy), switches traffic;
+#      this job waits until /health reports the released commit.
+#   2. Website + admin on Cloudflare Workers, built against the live API (pages are pre-rendered from it).
+# Setup and secrets: docs/DEPLOYMENT.md → "Cloudflare + Render". A part whose secrets are missing is skipped.
+
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  SITE_URL: https://elaka360.abusufyan.online
+  ADMIN_URL: https://elaka360-admin.abusufyan.online
+  API_URL: https://elaka360-api.abusufyan.online
+  RELEASE_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+
+jobs:
+  api:
+    name: API (Render)
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    environment: production
+    timeout-minutes: 30
+    steps:
+      - name: Trigger the Render deploy
+        id: trigger
+        env:
+          HOOK: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        run: |
+          if [ -z "$HOOK" ]; then
+            echo "::notice::RENDER_DEPLOY_HOOK_URL is not set; skipping the API deploy"
+            echo "skipped=true" >> "$GITHUB_OUTPUT"; exit 0
+          fi
+          curl -fsS -X POST "${HOOK}&ref=${RELEASE_SHA}" -o /dev/null
+          echo "skipped=false" >> "$GITHUB_OUTPUT"
+      - name: Wait until /health reports this commit
+        if: steps.trigger.outputs.skipped == 'false'
+        run: |
+          for i in $(seq 1 100); do
+            v=$(curl -fsS --max-time 10 "$API_URL/health" | python3 -c 'import sys,json; print(json.load(sys.stdin).get("version",""))' 2>/dev/null || true)
+            if [ "$v" = "$RELEASE_SHA" ]; then echo "API is serving $v"; exit 0; fi
+            echo "waiting… (health version: ${v:-unreachable})"; sleep 15
+          done
+          echo "::error::the API did not report $RELEASE_SHA within 25 minutes; check the Render dashboard (build or migration failed?)"
+          exit 1
+
+  workers:
+    name: ${{ matrix.app }} (Cloudflare Workers)
+    needs: api
+    if: always() && (needs.api.result == 'success')
+    runs-on: ubuntu-latest
+    environment: production
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - app: web
+            url: https://elaka360.abusufyan.online
+            check: /emergency
+          - app: admin
+            url: https://elaka360-admin.abusufyan.online
+            check: /login
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - name: Check Cloudflare secrets
+        id: cf
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "::notice::Cloudflare secrets are not set; skipping the ${{ matrix.app }} deploy"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v4
+        if: steps.cf.outputs.skip == 'false'
+        with:
+          ref: ${{ env.RELEASE_SHA }}
+      - uses: pnpm/action-setup@v4
+        if: steps.cf.outputs.skip == 'false'
+      - uses: actions/setup-node@v4
+        if: steps.cf.outputs.skip == 'false'
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: Install
+        if: steps.cf.outputs.skip == 'false'
+        run: pnpm install --frozen-lockfile && pnpm --filter @elaka360/shared build
+      - name: The API must be up (pages are pre-rendered from it)
+        if: steps.cf.outputs.skip == 'false'
+        run: curl -fsS --retry 5 --retry-delay 10 --retry-all-errors "$API_URL/health" -o /dev/null
+      - name: ISR cache bucket (website only, created once)
+        if: steps.cf.outputs.skip == 'false' && matrix.app == 'web'
+        working-directory: apps/web
+        run: npx wrangler r2 bucket list | grep -q "elaka360-web-cache" || npx wrangler r2 bucket create elaka360-web-cache
+      - name: Build for Workers
+        if: steps.cf.outputs.skip == 'false'
+        working-directory: apps/${{ matrix.app }}
+        env:
+          API_URL: ${{ env.API_URL }}
+          NEXT_PUBLIC_SITE_URL: ${{ env.SITE_URL }}
+        run: pnpm cf:build
+      - name: Deploy
+        if: steps.cf.outputs.skip == 'false'
+        working-directory: apps/${{ matrix.app }}
+        run: pnpm cf:deploy
+      - name: Shared secret for visitor IPs
+        if: steps.cf.outputs.skip == 'false'
+        working-directory: apps/${{ matrix.app }}
+        env:
+          EDGE_SHARED_SECRET: ${{ secrets.EDGE_SHARED_SECRET }}
+        run: |
+          if [ -z "$EDGE_SHARED_SECRET" ]; then echo "::warning::EDGE_SHARED_SECRET is not set: per-visitor rate limits will not work"; exit 0; fi
+          printf '%s' "$EDGE_SHARED_SECRET" | npx wrangler secret put EDGE_SHARED_SECRET
+      - name: Smoke test
+        if: steps.cf.outputs.skip == 'false'
+        run: |
+          for i in $(seq 1 12); do
+            code=$(curl -s -o /dev/null -w '%{http_code}' "${{ matrix.url }}${{ matrix.check }}")
+            [ "$code" = "200" ] && { echo "${{ matrix.url }}${{ matrix.check }} → 200"; exit 0; }
+            echo "got $code, retrying"; sleep 10
+          done
+          exit 1

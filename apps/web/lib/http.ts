@@ -21,13 +21,19 @@ export function problem(status: number, title: string, detail?: string) {
     { status, headers: { 'content-type': 'application/problem+json', 'cache-control': 'no-store' } });
 }
 
+/** Client-IP headers for the API: plain X-Forwarded-For, plus the signed edge headers when EDGE_SHARED_SECRET is set. */
+export function edgeHeaders(ip: string): Record<string, string> {
+  const secret = process.env.EDGE_SHARED_SECRET;
+  return { 'X-Forwarded-For': ip, ...(secret ? { 'X-Edge-Client-IP': ip, 'X-Edge-Key': secret } : {}) };
+}
+
 /** Forward a request to the API; never throws (returns a 502 problem when the API is unreachable). */
 export async function forward(path: string, init: RequestInit & { ip?: string | null } = {}): Promise<Response> {
   const { ip, ...rest } = init;
   try {
     return await fetch(`${API_URL}${path}`, {
       ...rest,
-      headers: { ...(rest.headers as Record<string, string>), ...(ip ? { 'X-Forwarded-For': ip } : {}) },
+      headers: { ...(rest.headers as Record<string, string>), ...(ip ? edgeHeaders(ip) : {}) },
       cache: 'no-store',
       signal: AbortSignal.timeout(TIMEOUT_MS),
     });
@@ -50,6 +56,9 @@ export async function relay(res: Response) {
  * (the one our own reverse proxy appended; earlier entries are client-supplied and spoofable).
  */
 export function clientIp(req: NextRequest): string | null {
+  // On Cloudflare Workers (TRUST_CF_CONNECTING_IP=1) the edge sets CF-Connecting-IP; clients cannot forge it there.
+  const cf = process.env.TRUST_CF_CONNECTING_IP === '1' ? req.headers.get('cf-connecting-ip')?.trim() : undefined;
+  if (cf && /^[0-9a-fA-F:.]{2,45}$/.test(cf)) return cf;
   const real = req.headers.get('x-real-ip')?.trim();
   const xff = req.headers.get('x-forwarded-for')?.split(',').map((s) => s.trim()).filter(Boolean);
   const ip = real || xff?.[xff.length - 1] || null;
