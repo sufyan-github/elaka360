@@ -3,14 +3,14 @@
 2,CITYPOP_ADJ,BBS Census 2022 (adjusted) via citypopulation.de,https://citypopulation.de/en/bangladesh/
 3,CITYPOP_RAJ,"BBS Census 2022 (enumerated) via citypopulation.de, Rajshahi district page",https://citypopulation.de/en/bangladesh/admin/81__rajshahi/
 4,WIKI_RAJ,Wikipedia: Rajshahi District,https://en.wikipedia.org/wiki/Rajshahi_District
-5,WIKI_CC,Wikipedia: List of city corporations in Bangladesh (Mar 2026 snapshot),https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/City_Councils_of_Bangladesh
-6,WIKI_ADMIN,Wikipedia: Administrative geography of Bangladesh (Mar 2026 snapshot),https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/Subdivisions_of_Bangladesh
+5,WIKI_CC,Wikipedia: List of city corporations in Bangladesh (Mar 2026 snapshot),https://en.wikipedia.org/wiki/List_of_city_corporations_in_Bangladesh
+6,WIKI_ADMIN,Wikipedia: Administrative geography of Bangladesh (Mar 2026 snapshot),https://en.wikipedia.org/wiki/Administrative_geography_of_Bangladesh
 7,FE_BOGURA,"The Financial Express, 15 May 2026: Bogura becomes city corporation",https://today.thefinancialexpress.com.bd/last-page/bogura-becomes-city-corporation-1778866247
 8,WIKI_SHAY,Wikipedia: Shayestaganj Upazila,https://en.wikipedia.org/wiki/Shayestaganj_Upazila
 9,FE_102,"The Financial Express, 6 Jun 2024: Fire service launches new hotline 102",https://thefinancialexpress.com.bd/national/fire-service-launches-new-hotline-number-102
 10,WIKI_TEL,Wikipedia: Telephone numbers in Bangladesh,https://en.wikipedia.org/wiki/Telephone_numbers_in_Bangladesh
 11,WIKI_RU,Wikipedia: University of Rajshahi,https://en.wikipedia.org/wiki/University_of_Rajshahi
-12,WIKI_RUET,Wikipedia: RUET (Mar 2026 snapshot),https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/RUET
+12,WIKI_RUET,Wikipedia: RUET (Mar 2026 snapshot),https://en.wikipedia.org/wiki/Rajshahi_University_of_Engineering_%26_Technology
 13,WIKI_RMC,Wikipedia: Rajshahi Medical College,https://en.wikipedia.org/wiki/Rajshahi_Medical_College
 14,WIKI_PUTHIA,Wikipedia: Puthia Rajbari,https://en.wikipedia.org/wiki/Puthia_Rajbari
 15,BANGLAPEDIA_PUTHIA,Banglapedia: Puthia,https://en.banglapedia.org/index.php/Puthia
@@ -18,3 +18,38 @@
 17,RU_VRM,University of Rajshahi: Varendra Research Museum,https://www.ru.ac.bd/facilities/varendra-research-museum/
 18,MOCKUP,"Elaka360 UI mockups (design placeholder, not a fact source)",
 19,UNVERIFIED,General knowledge — not checked against a primary source in this build,
+20,NATORE_DC_2026,Natore District Administration: এক নজরে নাটোর (52 unions; Naldanga 5),https://natore.gov.bd/pages/static-pages/697fbb1d35ce18e1c06cc346
+21,MASTER_V3,"Elaka360 Consolidated Master v3.0 (project reconciliation package, non-production)",
+22,BANBEIS_INST_RAJ_2026,"BANBEIS institution lists (EIIN registry, e-survey 2024) — Rajshahi Division",https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637
+23,BB_SCHEDULED_BANKS_RAJ_2026,Bangladesh Bank — Scheduled Banks Statistics (Rajshahi Division extract),https://www.bb.org.bd/en/index.php/publication/publictn/2/14
+24,BBS_CENSUS_2022,"Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Rajshahi Division",https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220
+25,BD_POLICE_CONTACTS_2020,Bangladesh Police HQ — Contacts of Bangladesh Police (RMP and Rajshahi Range sheets),https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf
+26,BD_RAILWAY_RAJ_2026,Bangladesh Railway — station phones and district-wise station counts (Rajshahi Division),https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6
+27,BDPOST_POSTCODES_RAJ_2026,Bangladesh Post postcode booklet — Rajshahi Division post offices (scan on post.rajshahi.gov.bd),http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af
+28,BRTC_DEPOTS_RAJ_2026,BRTC — bus depots in Rajshahi Division,https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0
+29,CAAB_AIRPORTS_RAJ_2026,Civil Aviation Authority of Bangladesh — airports in Rajshahi Division,https://www.caab.gov.bd/
+30,DGHS_BD_GEOCODES,"Bangladesh GeoCodes CodeSystem (BBS geo-codes) in the DGHS Bangladesh Core FHIR IG, Rajshahi Division extract",https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html
+31,DGHS_HRIS_FACILITIES_RAJ_2026,"DGHS / MoHFW HRIS Facility Registry — organisation list, Rajshahi Division",https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=3
+32,DGME_MEDICAL_COLLEGES_RAJ_2026,DGME medical and dental college lists — Rajshahi Division,https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3
+33,DISTRICT_PORTAL_BANKS_RAJ_2026,"District portals — bank branch/office phone lists (Rajshahi, Natore, Naogaon)",https://rajshahi.gov.bd/pages/static-pages/697f99c635ce18e1c06c092f
+34,DISTRICT_PORTALS_TRANSPORT_RAJ_2026,District & upazila portals (Rajshahi Division) — bus terminals/stands and stations named on transport pages,https://paba.rajshahi.gov.bd/pages/static-pages/697fc1d435ce18e1c06cdf9d
+35,RAJDIV_DISTRICT_PORTALS_2026,"District and upazila administration portals — Natore, Naogaon, Chapainawabganj, Bogura, Joypurhat, Pabna, Sirajganj",https://natore.gov.bd/
+36,DOA_PROTECTED_MONUMENTS_RAJ_2026,"Department of Archaeology — gazetted protected monuments, Rajshahi Division (district PDF lists)",https://archaeology.gov.bd/pages/static-pages/6922df29933eb65569e20433
+37,DPE_IPEMIS_PRIMARY_RAJ_2026,DPE IPEMIS primary school directory — Rajshahi Division,https://ipemis.dpe.gov.bd/search-school
+38,FSCD_STATIONS_RAJ_2026,Fire Service & Civil Defence — Rajshahi Division station & office numbers,https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1
+39,GEOBOUNDARIES_BGD_ADM4,"geoBoundaries gbOpen Bangladesh ADM4 (unions, paurashavas, city wards), Rajshahi Division extract",https://www.geoboundaries.org/api/current/gbOpen/BGD/ADM4/
+40,HDX_COD_AB_BGD,"Bangladesh - Subnational Administrative Boundaries (COD-AB v03), Rajshahi Division extract",https://data.humdata.org/dataset/cod-ab-bgd
+41,LGD_2026,Local Government Division portal (lgd.gov.bd) — Rajshahi Division extract,https://lgd.gov.bd/
+42,OSM_RAJ_2026,OpenStreetMap contributors — Rajshahi Division extract (points of interest),https://www.openstreetmap.org/relation/3859335
+43,PORTAL_TOURIST_SPOTS_RAJ_2026,National portal 'দর্শনীয় স্থান' (tourist spot) lists — Rajshahi Division district and upazila portals,https://rajshahi.gov.bd/pages/tourist-spot
+44,RAJ_RANGE_POLICE_PORTALS_2026,"District police portals of Rajshahi Range (Natore, Naogaon, Chapainawabganj, Bogura, Joypurhat, Pabna, Sirajganj)",https://police.natore.gov.bd/pages/static-pages/697fdcd735ce18e1c06d8427
+45,RAJSHAHI_DC_PORTAL_2026,"Rajshahi District Administration portal — upazila/union list, pourashava list, district at-a-glance",https://rajshahi.gov.bd/pages/static-pages/697f79bb35ce18e1c06b5300
+46,RAJDIV_PORTAL_2026,Rajshahi Divisional Commissioner portal (rajshahidiv.gov.bd),https://rajshahidiv.gov.bd/
+47,RAJSHAHI_POLICE_2026,"Rajshahi District Police — thanas, SP office and control room numbers",https://police.rajshahi.gov.bd/pages/static-pages/697f6dd335ce18e1c06b1c47
+48,RAJSHAHI_PORTAL_OFFICES_2026,"Government offices on the national portal sites — Divisional Commissioner, Rajshahi DC & upazila portals, DC/UNO offices of Rajshahi Division",https://rajshahidiv.gov.bd/
+49,RAJSHAHI_UNION_PORTALS_2026,Union Parishad portals of Rajshahi District — এক নজরে (at-a-glance) pages,https://rajshahi.gov.bd/pages/static-pages/697f79bb35ce18e1c06b5300
+50,RAJSHAHI_UPAZILA_PORTALS_2026,"Upazila Administration portals of Rajshahi District (9 upazilas) — union lists, এক নজরে, pourashava pages",https://bagha.rajshahi.gov.bd/
+51,RCC_PORTAL_2026,Rajshahi City Corporation official portal (erajshahi.portal.gov.bd),https://erajshahi.portal.gov.bd/
+52,RMP_PORTAL_2026,Rajshahi Metropolitan Police official portal (rmp.gov.bd),https://rmp.gov.bd/
+53,RMP_THANAS_2026,Rajshahi Metropolitan Police — thanas and official numbers,https://rmp.gov.bd/pages/static-pages/695e3b08c4774958d7b7214e
+54,UGC_UNIVERSITIES_RAJ_2026,UGC university register — universities in Rajshahi Division,https://www.ugc.gov.bd/universities

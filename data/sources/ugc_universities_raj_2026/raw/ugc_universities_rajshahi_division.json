@@ -1,0 +1,594 @@
+[
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 181,
+   "name_en": "University of Rajshahi",
+   "name_bn": null,
+   "slug": "university-of-rajshahi",
+   "website": "www.ru.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 181,
+   "name_en": "University of Rajshahi",
+   "name_bn": null,
+   "slug": "university-of-rajshahi",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "1953",
+   "present_campus": null,
+   "permanent_campus": "University of Rajshahi, Motihar, Kajla, Rajshahi-6205",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.ru.ac.bd",
+   "email": "registrar@ru.ac.bd",
+   "telephone_mobile": "(+88 02) 588865011",
+   "fax": "+8802588866364",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Rajshahi",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 198,
+   "name_en": "Rajshahi University of Engineering & Technology (RUET)",
+   "name_bn": null,
+   "slug": "rajshahi-university-of-engineering-technology-ruet",
+   "website": "www.ruet.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 198,
+   "name_en": "Rajshahi University of Engineering & Technology (RUET)",
+   "name_bn": null,
+   "slug": "rajshahi-university-of-engineering-technology-ruet",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2003",
+   "present_campus": null,
+   "permanent_campus": "Rajshahi University of Engineering & Technology (RUET), Kazla, Rajshahi-6204, Bangladesh.",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.ruet.ac.bd",
+   "email": "registrar@ruet.ac.bd",
+   "telephone_mobile": "+880 2588866798, +88 0721 750 798",
+   "fax": "+880 2588867105",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Rajshahi",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 208,
+   "name_en": "Pabna University of Science and Technology",
+   "name_bn": null,
+   "slug": "pabna-university-of-science-and-technology",
+   "website": "www.pust.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 208,
+   "name_en": "Pabna University of Science and Technology",
+   "name_bn": null,
+   "slug": "pabna-university-of-science-and-technology",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2008",
+   "present_campus": null,
+   "permanent_campus": "Pabna University of Science and Technology, Rajapur, pabna-6600",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.pust.ac.bd",
+   "email": "registrar@pust.ac.bd",
+   "telephone_mobile": "+8802588845193, 01715-229922",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Pabna",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 218,
+   "name_en": "Rajshahi Medical University",
+   "name_bn": null,
+   "slug": "rajshahi-medical-university",
+   "website": "www.rmu.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 218,
+   "name_en": "Rajshahi Medical University",
+   "name_bn": null,
+   "slug": "rajshahi-medical-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2016",
+   "present_campus": null,
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.rmu.edu.bd",
+   "email": "rmu.registrar@gmail.com, info@rmu.edu.bd",
+   "telephone_mobile": "0247811157, +880721-773453, 01713-048845",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Rajshahi",
+  "_basis": "name"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 219,
+   "name_en": "Rabindra University, Bangladesh",
+   "name_bn": null,
+   "slug": "rabindra-university-bangladesh",
+   "website": "www.rub.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 219,
+   "name_en": "Rabindra University, Bangladesh",
+   "name_bn": null,
+   "slug": "rabindra-university-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2017",
+   "present_campus": null,
+   "permanent_campus": "Rabindra University, Bangladesh, Shahzadpur,Sirajganj",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.rub.ac.bd",
+   "email": "vc@rub.ac.bd, registrar@rub.ac.bd,",
+   "telephone_mobile": "02588833525, 01819198081 (Registrar), 02588833521, 01711090742 (PS to VC)",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Sirajganj",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 233,
+   "name_en": "Naogaon  University",
+   "name_bn": null,
+   "slug": "naogaon-university",
+   "website": null,
+   "marker": null
+  },
+  "detail": {
+   "id": 233,
+   "name_en": "Naogaon  University",
+   "name_bn": null,
+   "slug": "naogaon-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2023",
+   "present_campus": null,
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": null,
+   "email": "drhasnat77@gmail.com",
+   "telephone_mobile": "01712884977",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Naogaon",
+  "_basis": "name"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 235,
+   "name_en": "Bogra Science and Technology University",
+   "name_bn": null,
+   "slug": "bogra-science-and-technology-university",
+   "website": "bstu.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 235,
+   "name_en": "Bogra Science and Technology University",
+   "name_bn": null,
+   "slug": "bogra-science-and-technology-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2025",
+   "present_campus": null,
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "bstu.ac.bd",
+   "email": "vc@bstu.ac.bd",
+   "telephone_mobile": "01335-181113",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Bogura",
+  "_basis": "name"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 270,
+   "name_en": "Pundra University of Science & Technology",
+   "name_bn": null,
+   "slug": "pundra-university-of-science-technology",
+   "website": "www.pundrauniversity.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 270,
+   "name_en": "Pundra University of Science & Technology",
+   "name_bn": null,
+   "slug": "pundra-university-of-science-technology",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2002",
+   "present_campus": "Rangpur Road, Gokul, Bogura-5800",
+   "permanent_campus": "Rangpur Road, Gokul, Bogura-5800",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.pundrauniversity.ac.bd",
+   "email": "info@pundrauniversity.ac.bd; itadmin@pundrauniversity.ac.bd; vc@pundrauniversity.ac.bd",
+   "telephone_mobile": "+88-051-78563, 01313377054",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Bogura",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 291,
+   "name_en": "Varendra University",
+   "name_bn": null,
+   "slug": "varendra-university",
+   "website": "www.vu.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 291,
+   "name_en": "Varendra University",
+   "name_bn": null,
+   "slug": "varendra-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2012",
+   "present_campus": "Varendra University, Rajshahi Bypass Road, Chandrima, Paba,Rajshahi-6204",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.vu.edu.bd",
+   "email": "info@vu.edu.bd",
+   "telephone_mobile": "09677601070, Ext: 105",
+   "fax": "+88-0721-750748",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Rajshahi",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 298,
+   "name_en": "Exim Bank Agricultural University, Bangladesh",
+   "name_bn": null,
+   "slug": "exim-bank-agricultural-university-bangladesh",
+   "website": "www.ebaub.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 298,
+   "name_en": "Exim Bank Agricultural University, Bangladesh",
+   "name_bn": null,
+   "slug": "exim-bank-agricultural-university-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2012",
+   "present_campus": "69-69/1 Sagar Tower, Boro Indara Moor, Chapainawabgonj 6300",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.ebaub.edu.bd",
+   "email": "hider@eximbankbd.com, admissions@ebaub.edu.bd",
+   "telephone_mobile": "0781-53525-29",
+   "fax": "0781-53531",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Chapainawabganj",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 300,
+   "name_en": "Khwaja Yunus Ali University",
+   "name_bn": null,
+   "slug": "khwaja-yunus-ali-university",
+   "website": "www.kyau.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 300,
+   "name_en": "Khwaja Yunus Ali University",
+   "name_bn": null,
+   "slug": "khwaja-yunus-ali-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2012",
+   "present_campus": "Enayetpur, Enayetpur sharif, Chowhali, Sirajgonj",
+   "permanent_campus": "Enayetpur, Enayetpur sharif, Chowhali, Sirajgonj",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.kyau.edu.bd",
+   "email": "info@kyau.edu.bd",
+   "telephone_mobile": "8802588834442",
+   "fax": "8802588834441",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Sirajganj",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 309,
+   "name_en": "North Bengal International University",
+   "name_bn": null,
+   "slug": "north-bengal-international-university",
+   "website": "www.nbiu.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 309,
+   "name_en": "North Bengal International University",
+   "name_bn": null,
+   "slug": "north-bengal-international-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2013",
+   "present_campus": "Choddopai, Natore Road, Motihar, Rajshahi.",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.nbiu.edu.bd",
+   "email": "registrar@nbiu.edu.bd, nbiu.edu@gmail.com, info@nbiu.edu.bd",
+   "telephone_mobile": "01717013283, 0721-773561, 01789-908612, 01713072270, 01979908612",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Rajshahi",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 311,
+   "name_en": "Rajshahi Science & Technology University (RSTU), Natore",
+   "name_bn": null,
+   "slug": "rajshahi-science-technology-university-rstu-natore",
+   "website": "www.rstu.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 311,
+   "name_en": "Rajshahi Science & Technology University (RSTU), Natore",
+   "name_bn": null,
+   "slug": "rajshahi-science-technology-university-rstu-natore",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2013",
+   "present_campus": "VIP Tower, Holding # 112 Dhaka Road, Bara Harishpur, Natore Sadar Natore 6400",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.rstu.edu.bd",
+   "email": "rstuniversity@yahoo.com",
+   "telephone_mobile": "07716496, 01713303183 (Cell)",
+   "fax": "07716496",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Natore",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 319,
+   "name_en": "Bangladesh Army University of Engineering and Technology (BAUET), Qadirabad",
+   "name_bn": null,
+   "slug": "bangladesh-army-university-of-engineering-and-technology-bauet-qadirabad",
+   "website": "www.bauet.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 319,
+   "name_en": "Bangladesh Army University of Engineering and Technology (BAUET), Qadirabad",
+   "name_bn": null,
+   "slug": "bangladesh-army-university-of-engineering-and-technology-bauet-qadirabad",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2015",
+   "present_campus": "Dayarampur, Bagatipara, Qadirabad Cantoment, Natore-6431",
+   "permanent_campus": "Dayarampur, Bagatipara, Qadirabad Cantoment, Natore-6431",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.bauet.ac.bd",
+   "email": "registrarbauet@gmail.com, bauetqadirabad@gmail.com",
+   "telephone_mobile": "02-588879775, 01708503503",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Natore",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 333,
+   "name_en": "Ahsania Mission University of Science and Technology",
+   "name_bn": null,
+   "slug": "ahsania-mission-university-of-science-and-technology",
+   "website": "www.amust.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 333,
+   "name_en": "Ahsania Mission University of Science and Technology",
+   "name_bn": null,
+   "slug": "ahsania-mission-university-of-science-and-technology",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2018",
+   "present_campus": "54/1-2 Mirzapur, Binodpur Bazar, Motihar Rajshahi-6206",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.amust.ac.bd",
+   "email": "infor@amust.ac.bd; registrar@amust.ac.bd",
+   "telephone_mobile": "01324744550, 01324744559",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Rajshahi",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 336,
+   "name_en": "Shah Makhdum Management University, Rajshahi",
+   "name_bn": null,
+   "slug": "shah-makhdum-management-university-rajshahi",
+   "website": null,
+   "marker": null
+  },
+  "detail": {
+   "id": 336,
+   "name_en": "Shah Makhdum Management University, Rajshahi",
+   "name_bn": null,
+   "slug": "shah-makhdum-management-university-rajshahi",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2018",
+   "present_campus": null,
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": null,
+   "email": null,
+   "telephone_mobile": null,
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Rajshahi",
+  "_basis": "name"
+ }
+]

@@ -1,0 +1,24 @@
+{
+  "key": "BD_RAILWAY_RAJ_2026",
+  "name": "Bangladesh Railway — station phones and district-wise station counts (Rajshahi Division)",
+  "organization": "Bangladesh Railway",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6",
+    "https://railway.gov.bd/pages/files/6919975c933eb65569ddc4da",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-railway/2026/5/f526722f-5331-425f-b5a6-e13b91b509a3.pdf"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Bangladesh Railway (railway.gov.bd)",
+  "notes": "No licence stated. railway.gov.bd publishes no station register (no per-station list with district/code/class); only an 'important stations' BTCL phone list and district-wise station counts in the annual Information Book (2023-24 edition, 1.5 MB PDF, not committed — fetch.py re-downloads it). eticket.railway.gov.bd robots.txt disallows all crawling, so its station list was not used. Timetable/fare files list stops but are not a station registry.",
+  "files": {
+    "places.csv": "4254e580cc85125f3fb42fb27fcbe5abb7b9f39ae2f5426d951ac88d462cdd2f",
+    "facts.csv": "7cde98ae35223b67e7898599e3b20ed81e952ff76afdf59f394974dd40abfc01",
+    "raw/railway_important_station_phones.txt": "752630f5f74541f480f1fb9f787b998a5b20961b14a99cda310b462f49f92273",
+    "raw/infobook_2023_24_table4.txt": "6c40ecc2a699a4717aad619b7f19a8f947ae1dc3d51430cc80616913e6611245"
+  }
+}

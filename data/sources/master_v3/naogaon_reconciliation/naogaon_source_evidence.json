@@ -1,0 +1,47 @@
+[
+  {
+    "source_id": "SRC-NAO-DIST-2018",
+    "title": "নওগাঁ জেলাধীন ইউনিয়ন পরিষদের নামের তালিকা",
+    "owner": "Naogaon District Administration",
+    "url": "https://naogaon.gov.bd/pages/static-pages/697f893c35ce18e1c06b8f47",
+    "vintage": "Updated 2018-08-19",
+    "claim": "Official district portal lists union names grouped by all 11 upazilas; indexed excerpt provides Bangla names through Manda.",
+    "limitations": "Old 2018 vintage; page returned 502 when opened. Full content is only partially visible in search index."
+  },
+  {
+    "source_id": "SRC-NAO-ATLAS-2024",
+    "title": "List of Union Parishads in Naogaon District",
+    "owner": "Naogaon.site",
+    "url": "https://naogaon.site/list-of-union-parishads-in-naogaon-district-2",
+    "vintage": "Published 2024-06-11",
+    "claim": "Complete English list of 99 union parishads grouped across 11 upazilas, with upazila-wise counts.",
+    "limitations": "Secondary local information site, not government authority; used as full transcription scaffold and must be checked against official portal rows."
+  },
+  {
+    "source_id": "SRC-BBS-NAO-2011",
+    "title": "Population & Housing Census 2011, National Report Volume-02: Union Statistics",
+    "owner": "Bangladesh Bureau of Statistics",
+    "url": "https://file-dhaka.portal.gov.bd/uploads/fdd40cb4-abcc-4242-8f92-049814cfb1ae/62f/ddf/380/62fddf380c36b606372449.pdf",
+    "vintage": "2011 census/geocode snapshot",
+    "claim": "Naogaon district code 64 and historical upazila/union codes and names; indexed excerpt includes Niamatpur and other Naogaon unions.",
+    "limitations": "Historical 2011 dataset; not necessarily current legal boundary/code registry."
+  },
+  {
+    "source_id": "SRC-NAO-UPAZILA-2025",
+    "title": "নওগাঁ জেলার উপজেলা পরিষদসমূহ",
+    "owner": "Naogaon District Administration",
+    "url": "https://www.naogaon.gov.bd/bn/site/page/kw38-%E0%A6%89%E0%A6%AA%E0%A6%9C%E0%A7%87%E0%A6%B2%E0%A6%BE-%E0%A6%AA%E0%A6%B0%E0%A6%BF%E0%A6%B7%E0%A6%A6",
+    "vintage": "Published/crawled 2025",
+    "claim": "Official district portal lists 11 upazilas.",
+    "limitations": "Confirms upazila count, not union-level names/counts."
+  },
+  {
+    "source_id": "SRC-NAO-ATLAS-COUNTS",
+    "title": "Naogaon District: upazilas, unions, population — Upazila Atlas",
+    "owner": "The Daily Sangbad",
+    "url": "https://thedailysangbad.com/districts/naogaon",
+    "vintage": "Crawled 2026",
+    "claim": "Lists 11 upazilas and counts totaling 99 unions; counts: Sadar 13, Manda 14, Mohadevpur 10, Niamatpur 8, Patnitala 11, Badalgachhi 9, Atrai 8, Dhamoirhat 8, Raninagar 8, Sapahar 6, Porsha 6.",
+    "limitations": "Secondary data; conflicts with 2018 district official list and 2024 list for some upazila counts; total still 99."
+  }
+]

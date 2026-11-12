@@ -18,23 +18,32 @@ async function check(name, path, fn, expectStatus = 200) {
 }
 
 const EXPECT_ENGINE = process.env.SEARCH_ENGINE_EXPECT; // 'typesense' in CI
+const LABELLED = (await (await fetch(API + '/health')).json()).public_include_unverified === true;
 await check('health', '/health', (b) => {
   assert.equal(b.status, 'ok');
-  if (EXPECT_ENGINE) assert.equal(b.search, EXPECT_ENGINE);
+  if (EXPECT_ENGINE) assert.equal(b.search.engine, EXPECT_ENGINE);
 });
 await check('national stats', '/v1/stats/national', (b) => {
   assert.equal(b.division, 8);
   assert.equal(b.district, 64);
-  assert.equal(b.upazila, 495);
+  // Visibility follows PUBLIC_INCLUDE_UNVERIFIED; `sourced` counts only production-eligible records.
+  assert.equal(b.upazila, LABELLED ? 495 : 10);
   assert.equal(b.city_corporation, 13);
-  assert.ok(b.union >= 4541);
+  assert.equal(b.union, LABELLED ? 4538 : 0);
+  assert.equal(b.sourced.union, 0);
+  assert.equal(b.sourced.upazila, 10);
+  assert.ok(b.inclusion_rule);
+});
+await check('national pending counts', '/v1/areas/1/stats', (b) => {
+  assert.equal(b.pending_counts.union ?? 0, LABELLED ? 0 : 4538);
 });
 await check('divisions', '/v1/areas?level=division', (b) => assert.equal(b.items.length, 8));
 await check('rajshahi district', '/v1/areas/by-path?path=rajshahi/rajshahi', (b) => {
   assert.equal(b.area.name_bn, 'রাজশাহী');
   assert.equal(b.area.level, 'district');
   assert.equal(b.children.filter((c) => c.level === 'upazila').length, 9);
-  assert.equal(b.descendant_counts.union, 71);
+  assert.equal(LABELLED ? b.descendant_counts.union : b.pending_counts.union, 71);
+  assert.equal(b.area.evidence_level, 'secondary');
   assert.equal(b.breadcrumb.at(0).level, 'country');
   assert.ok(b.place_counts.education >= 2);
 });
@@ -49,8 +58,14 @@ await check('place detail', '/v1/places/university-of-rajshahi', (b) => {
   assert.equal(b.verification_status, 'verified');
   assert.ok(b.breadcrumb.length >= 3);
   assert.equal(b.source.key, 'WIKI_RU');
+  assert.equal(b.evidence_level, 'secondary');
 });
-await check('places in district', '/v1/places?area_id=20015&category=education', (b) => assert.ok(b.items.length >= 3));
+await check('unverified place labelled or hidden', '/v1/places/rajshahi-college', LABELLED ? (b) => assert.equal(b.production_eligible, false) : null, LABELLED ? 200 : 404);
+await check('places in district', '/v1/places?area_id=20015&category=education', (b) => {
+  assert.ok(b.items.length >= 2);
+  assert.equal(b.total, b.items.length);
+  if (!LABELLED) assert.ok(b.items.every((p) => p.production_eligible));
+});
 await check('nearby', '/v1/places/nearby?lat=24.37&lon=88.60&radius_m=5000', (b) => {
   assert.ok(b.items.length >= 4);
   assert.ok(b.items[0].distance_m <= b.items.at(-1).distance_m);
@@ -78,7 +93,9 @@ if (EXPECT_ENGINE === 'typesense') {
 await check('emergency numbers', '/v1/emergency-numbers', (b) => {
   assert.equal(b[0].number, '999');
   assert.ok(b.some((n) => n.number === '102'));
+  assert.ok(!b.some((n) => n.evidence_level === 'unverified'));
 });
+await check('openapi', '/openapi.json', (b) => assert.ok(b.paths['/v1/areas/{id}/stats']));
 
 if (failed) {
   console.error(`\n${failed} check(s) failed`);

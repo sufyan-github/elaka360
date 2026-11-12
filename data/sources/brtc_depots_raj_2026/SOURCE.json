@@ -1,0 +1,19 @@
+{
+  "key": "BRTC_DEPOTS_RAJ_2026",
+  "name": "BRTC — bus depots in Rajshahi Division",
+  "organization": "Bangladesh Road Transport Corporation (BRTC)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Bangladesh Road Transport Corporation (brtc.gov.bd)",
+  "notes": "No licence stated. BRTC lists depots with the unit head's name/mobile; only depot names and office landlines are kept. No Rajshahi-district BRTC depot is listed. No addresses or coordinates.",
+  "files": {
+    "places.csv": "9eff74f03bf978527eab6131c106cf68c6c26072099570f1e5d27d7c267cc179"
+  }
+}

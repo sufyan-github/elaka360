@@ -9,12 +9,16 @@ body {
   font-family: var(--font-bn);
   line-height: 1.55;
 }
+/* English pages: Inter for Latin text, Hind Siliguri still renders any Bangla names shown alongside. */
+html:lang(en) body { font-family: var(--font-inter), var(--font-hind-siliguri), 'Inter', 'Hind Siliguri', system-ui, sans-serif; }
 :focus-visible { outline: 2px solid var(--e360-secondary); outline-offset: 2px; }
 .hero-green {
+  color: #ffffff;
   background:
     radial-gradient(120% 90% at 100% 0%, rgb(242 201 76 / 0.18), transparent 60%),
-    linear-gradient(160deg, #075b3b 0%, #0d6e48 55%, #16865b 100%);
+    linear-gradient(160deg, var(--e360-hero-from) 0%, var(--e360-hero-mid) 55%, var(--e360-hero-to) 100%);
 }
-.hero-red { background: linear-gradient(160deg, #b51d1d 0%, #d62828 60%, #e5383b 100%); }
+.hero-red { color: #ffffff; background: linear-gradient(160deg, var(--e360-hero-red-from) 0%, var(--e360-hero-red-to) 100%); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
 .scrollbar-none { scrollbar-width: none; }
 .scrollbar-none::-webkit-scrollbar { display: none; }

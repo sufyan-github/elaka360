@@ -2,7 +2,9 @@
   "name": "elaka360",
   "private": true,
   "packageManager": "pnpm@10.28.0",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
@@ -11,10 +13,20 @@
     "lint": "turbo run lint",
     "db:up": "docker compose up -d postgres",
     "db:reset": "bash scripts/db-reset.sh",
-    "seed:build": "python3 pipelines/build_seed.py"
+    "seed:build": "python3 pipelines/build_seed.py",
+    "lint:root": "eslint scripts",
+    "e2e": "playwright test",
+    "test:integration": "node --test scripts/integration-api.test.mjs",
+    "edge:export": "node apps/api/dist/cli/export-edge.js",
+    "edge:sync:local": "node scripts/d1-sync.mjs --local"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@playwright/test": "^1.65.0",
+    "eslint": "^9.39.5",
+    "globals": "^16.5.0",
     "turbo": "^2.5.0",
-    "typescript": "^5.8.0"
+    "typescript": "^5.8.0",
+    "typescript-eslint": "^8.72.2"
   }
 }

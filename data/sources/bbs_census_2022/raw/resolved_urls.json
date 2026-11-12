@@ -1,0 +1,33 @@
+{
+ "union_statistics": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/f376ca7e7ee5405f8311de650415b9d8.pdf",
+ "community_xlsx": {
+  "Rajshahi": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/3c3b94e632604786bfc0b4a3a4872208.xlsx",
+  "Natore": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/e0349f833a4a45baafa46d1bb562b908.xlsx",
+  "Naogaon": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/34e059e2210243cbbbbdd3142b882ba1.xlsx",
+  "Pabna": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/0b82f91e54084e6ab16100f6bf808c19.xlsx",
+  "Sirajganj": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/b351a354bf3949dab5b3d936c55c60ce.xlsx",
+  "Bogura": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/b63c65a7d6c24ee3b854881f0a8d506d.xlsx",
+  "Chapainawabganj": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/9fd9b896e2da4e1b9fc7d163490ba81d.xlsx",
+  "Joypurhat": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/98d23819d1764f3da7dc257e1f498a34.xlsx"
+ },
+ "district_page": {
+  "Rajshahi": "https://bbs.gov.bd/pages/files/6a097f27af5b16b9ec4060f9",
+  "Natore": "https://bbs.gov.bd/pages/files/6a097f68f570c41f02eb7470",
+  "Naogaon": "https://bbs.gov.bd/pages/files/6a7050df33abb83ff10d065a",
+  "Pabna": "https://bbs.gov.bd/pages/files/6a097fb604d89a37d7fa434f",
+  "Sirajganj": "https://bbs.gov.bd/pages/files/6a097ffbfa5a21e711e53b6b",
+  "Bogura": "https://bbs.gov.bd/pages/files/6a0980679da92ab7e499678b",
+  "Chapainawabganj": "https://bbs.gov.bd/pages/files/6a0980c1ad0e9a31cc2598ae",
+  "Joypurhat": "https://bbs.gov.bd/pages/files/6a098145af5b16b9ec40632d"
+ },
+ "district_pdf": {
+  "Rajshahi": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/c712cc05-e861-40c1-8a1f-ae765cec9f78.pdf",
+  "Natore": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/9818a50f-aa97-4183-9914-6b63de820ec4.pdf",
+  "Naogaon": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/7/d3ce217c-1df1-4a3a-b968-be2cff37b01f.pdf",
+  "Pabna": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/6112b236-698c-4a44-9b54-0f23e04a803c.pdf",
+  "Sirajganj": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/846d588b-a88f-4e17-b951-d81ae5bbf53f.pdf",
+  "Bogura": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/3d8572c6-d763-467a-a050-99ebfa7b4cdb.pdf",
+  "Chapainawabganj": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/ca335923-8434-424e-a0f0-b166e5ec6e81.pdf",
+  "Joypurhat": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/bfd5f614-0469-4518-aab7-6d1fa6775622.pdf"
+ }
+}

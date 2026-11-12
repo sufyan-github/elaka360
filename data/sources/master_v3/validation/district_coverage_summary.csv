@@ -1,0 +1,9 @@
+﻿district,upazila_count_baseline,union_target_or_slots,data_quality_note
+Rajshahi,9,71,No names in v2.8 scaffold; Bagha 6 vs 7 open
+Natore,7,52,52 named candidates; parent distribution conflict open
+Naogaon,11,99,99 named candidates; parent distribution conflict open
+Chapainawabganj,5,45,45 named candidate slots; duplicate/parent uncertainty; no production
+Bogura,12,108,108 pre-restructuring slots; 2026 restructuring legal evidence not verified
+Joypurhat,5,32,32 named candidates; secondary source claims 34
+Pabna,9,74,73 distribution slots + one unallocated 2022 delta; no names asserted
+Sirajganj,9,83,83 slots; no names asserted; current count vs 2011 +1

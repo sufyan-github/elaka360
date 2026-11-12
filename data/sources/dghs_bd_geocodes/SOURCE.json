@@ -1,0 +1,23 @@
+{
+  "key": "DGHS_BD_GEOCODES",
+  "name": "Bangladesh GeoCodes CodeSystem (BBS geo-codes) in the DGHS Bangladesh Core FHIR IG, Rajshahi Division extract",
+  "organization": "Directorate General of Health Services (DGHS), Ministry of Health and Family Welfare",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html",
+    "https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.json",
+    "https://fhir.dghs.gov.bd/core/ImplementationGuide-bd.fhir.core.json"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": "2026-10-15",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution": "Directorate General of Health Services (DGHS), Bangladesh — Bangladesh Core FHIR IG; codes: BBS geo-code system",
+  "files": {
+    "areas.csv": "2bc64f51040c10edd64ec7cc8224abcbecef08726be1f9025597e62d841750d7",
+    "crosswalk.csv": "e1a18b2426ed7b5b0ac4ffab69263bd068088456186ed0c5c9e5f4a15ba5c59f",
+    "raw/bd-geocodes_rajshahi.json": "038fb060f13f267c0367dd868e2b55908da906bf16a63eac652abaaff71d0e91"
+  },
+  "notes": "CodeSystem https://fhir.dghs.gov.bd/core/CodeSystem/bd-geocodes version 0.5.0, status draft, date 2026-10-15T00:09:54+00:00, 1591 codes nationally. Divisions, districts, upazilas/city thanas, city corporations and paurashavas only: no union-level codes (only 'Unions Of X Upazila' placeholders). The IG does not say which BBS release the codes come from. Skipped entries: 501000 Bogura N/A (district placeholder (no city corporation)); 503800 Joypurhat N/A (district placeholder (no city corporation)); 506400 Naogaon N/A (district placeholder (no city corporation)); 506900 Natore N/A (district placeholder (no city corporation)); 507000 Chapainawabganj N/A (district placeholder (no city corporation)); 507600 Pabna N/A (district placeholder (no city corporation)); 508100 Rajshahi N/A (district placeholder (no city corporation)); 5081662266 Rajshahi City Corp. (part of the city corporation inside thana Boalia); 5081664066 Rajshahi City Corp. (part of the city corporation inside thana Matihar); 5081668566 Rajshahi City Corp. (part of the city corporation inside thana Rajpara); 5081669066 Rajshahi City Corp. (part of the city corporation inside thana Shah Makhdum); 508800 Sirajganj N/A (district placeholder (no city corporation)); plus 67 'Unions Of ... Upazila' placeholders."
+}

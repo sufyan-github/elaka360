@@ -1,0 +1,21 @@
+{
+  "key": "RAJSHAHI_PORTAL_OFFICES_2026",
+  "name": "Government offices on the national portal sites — Divisional Commissioner, Rajshahi DC & upazila portals, DC/UNO offices of Rajshahi Division",
+  "organization": "Divisional / District / Upazila administrations (national portal framework)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://rajshahidiv.gov.bd/",
+    "https://rajshahi.gov.bd/",
+    "https://<upazila>.rajshahi.gov.bd/"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Divisional / District / Upazila administrations (national portal framework)",
+  "files": {
+    "places.csv": "1f543e8e3e966dcd1c8291f51742d8b0c7fcaa91277a1d7d94e01d7819182335"
+  },
+  "notes": "Office list = menu entries under 'সরকারি অফিসসমূহ' / 'সরকারী অফিস' / 'স্থানীয় সরকার' / 'পৌরসভা' plus the DC/UNO portals themselves; union parishads and pourashavas from DC portal static lists. Contacts = office landline and *.gov.bd e-mail from the office head's officer card or the 'যোগাযোগ' page; mobile numbers, personal e-mails and officials' names are not collected. No addresses/coordinates are published in a structured way. No licence stated. Licence: none stated on the source; treat as government public information, cite the source."
+}

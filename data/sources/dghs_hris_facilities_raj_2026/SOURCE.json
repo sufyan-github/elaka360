@@ -1,0 +1,23 @@
+{
+  "key": "DGHS_HRIS_FACILITIES_RAJ_2026",
+  "name": "DGHS / MoHFW HRIS Facility Registry — organisation list, Rajshahi Division",
+  "organization": "Directorate General of Health Services (DGHS), Ministry of Health and Family Welfare",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=3",
+    "https://hris.mohfw.gov.bd/public/facility-registry",
+    "https://hris.mohfw.gov.bd/public/facility-registry/facilities/1554/profile"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Source: DGHS Facility Registry (hris.mohfw.gov.bd), Ministry of Health and Family Welfare, Bangladesh",
+  "files": {
+    "places.csv": "0108aaf4f40f138e17432809ef3188b1177ff6ccb77424bb5fa3addde76cc10e",
+    "facts.csv": "b57fc1271e368ba9befd2fef56dbf32f5d348a3abb974abe8089483e6aa7b6b3",
+    "raw/hris_organization_list_rajshahi_division.csv": "6a7dc8e82d9a05012c1ef619a240becaf3bf13fd685ff6545319cd7ab93cdfb9"
+  },
+  "notes": "Public report of the MoHFW HRIS Facility Registry (successor of facilityregistry.dghs.gov.bd, which returned 'Service Unavailable' on 2026-11-12). Excel export (ret=excel) of all active entries filtered to Rajshahi Division (division_id 3): 5,227 rows incl. government facilities, private hospitals/clinics/diagnostic centres, health offices and training institutes. Registry is live and self-reported by facilities; coordinates are as entered by facilities (QA flags in notes). Contacts kept only for non-private facilities (DGHS-issued office mobiles/landlines and dghs.gov.bd mailboxes); private/NGO contacts and facility-head names not collected. No licence stated on the site."
+}

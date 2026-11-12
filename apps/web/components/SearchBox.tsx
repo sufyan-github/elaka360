@@ -1,21 +1,96 @@
-import { Search } from 'lucide-react';
+'use client';
 
-export function SearchBox({ defaultValue = '', placeholder = 'এলাকা, প্রতিষ্ঠান বা সেবা খুঁজুন…', autoFocus = false }: { defaultValue?: string; placeholder?: string; autoFocus?: boolean }) {
+import { useEffect, useId, useRef, useState } from 'react';
+import { useLocale, useTranslations } from 'next-intl';
+import { Search } from 'lucide-react';
+import { useRouter } from '@/i18n/navigation';
+import { localePath } from '@/lib/links';
+import { localName, otherName } from '@/lib/locale';
+
+import { suggest, type Suggestion } from '@/lib/browser-search';
+
+/** Search box with keyboard-accessible suggestions (combobox pattern). Stale requests are aborted. */
+export function SearchBox({ defaultValue = '', autoFocus = false }: { defaultValue?: string; autoFocus?: boolean }) {
+  const t = useTranslations('SearchBox');
+  const locale = useLocale();
+  const router = useRouter();
+  const [q, setQ] = useState(defaultValue);
+  const [items, setItems] = useState<Suggestion[]>([]);
+  const [active, setActive] = useState(-1);
+  const [open, setOpen] = useState(false);
+  const listId = useId();
+  const ctrl = useRef<AbortController | null>(null);
+
+  useEffect(() => {
+    const term = q.trim();
+    if (term.length < 2) { setItems([]); return; }
+    const t = setTimeout(() => {
+      // suggestions come from the static search index in the browser (lib/browser-search.ts)
+      ctrl.current?.abort();
+      const mine = (ctrl.current = new AbortController());
+      suggest(term)
+        .then((list) => { if (!mine.signal.aborted) { setItems(list.slice(0, 8)); setActive(-1); } })
+        .catch(() => undefined);
+    }, 180);
+    return () => clearTimeout(t);
+  }, [q]);
+
+  /** Locale-less path (for the localising router) and the same path in this locale (for the plain <a>). */
+  const href = (s: Suggestion) => (s.kind === 'area' ? `/${s.href_key}` : `/p/${s.href_key}`);
+
   return (
-    <form action="/search" method="get" role="search" className="flex items-center gap-2 rounded-card bg-surface p-1.5 pl-3 shadow-card">
-      <Search className="h-5 w-5 shrink-0 text-muted" aria-hidden />
-      <input
-        name="q"
-        defaultValue={defaultValue}
-        placeholder={placeholder}
-        aria-label="খুঁজুন"
-        autoFocus={autoFocus}
-        minLength={2}
-        className="min-w-0 flex-1 bg-transparent py-2 text-[15px] text-ink outline-none placeholder:text-muted"
-      />
-      <button type="submit" className="rounded-chip bg-primary px-4 py-2 text-sm font-semibold text-white hover:bg-primary-hover">
-        খুঁজুন
-      </button>
+    <form
+      role="search"
+      onSubmit={(e) => {
+        e.preventDefault();
+        if (active >= 0 && items[active]) router.push(href(items[active]!));
+        else if (q.trim()) router.push(`/search?q=${encodeURIComponent(q.trim())}`);
+        setOpen(false);
+      }}
+      className="relative"
+    >
+      <div className="flex items-center gap-2 rounded-card border border-line bg-surface p-1.5 pl-3 shadow-card">
+        <Search className="h-5 w-5 shrink-0 text-muted" aria-hidden />
+        <input
+          value={q}
+          onChange={(e) => { setQ(e.target.value); setOpen(true); }}
+          onFocus={() => setOpen(true)}
+          onBlur={() => setTimeout(() => setOpen(false), 150)}
+          onKeyDown={(e) => {
+            if (e.key === 'ArrowDown') { e.preventDefault(); setActive((a) => Math.min(a + 1, items.length - 1)); }
+            if (e.key === 'ArrowUp') { e.preventDefault(); setActive((a) => Math.max(a - 1, -1)); }
+            if (e.key === 'Escape') setOpen(false);
+          }}
+          autoFocus={autoFocus}
+          name="q"
+          type="search"
+          maxLength={80}
+          placeholder={t('placeholder')}
+          aria-label={t('label')}
+          role="combobox"
+          aria-expanded={open && items.length > 0}
+          aria-controls={listId}
+          aria-autocomplete="list"
+          aria-activedescendant={active >= 0 ? `${listId}-${active}` : undefined}
+          className="min-w-0 flex-1 bg-transparent py-2 text-[15px] outline-none placeholder:text-muted"
+        />
+        <button type="submit" className="rounded-chip bg-primary px-4 py-2 text-sm font-semibold text-on-primary hover:bg-primary-hover">
+          {t('submit')}
+        </button>
+      </div>
+      {open && items.length > 0 && (
+        <ul id={listId} role="listbox" className="absolute inset-x-0 top-full z-20 mt-1 overflow-hidden rounded-card border border-line bg-surface text-ink shadow-card">
+          {items.map((s, i) => (
+            <li key={`${s.kind}-${s.href_key}`} id={`${listId}-${i}`} role="option" aria-selected={i === active}>
+              <a href={localePath(locale, href(s))} onMouseDown={(e) => { e.preventDefault(); router.push(href(s)); setOpen(false); }}
+                 className={`flex items-center justify-between gap-2 px-3 py-2 text-sm ${i === active ? 'bg-tint' : ''}`}>
+                <span className="truncate">{localName(s, locale)} <span className={`text-xs text-muted ${locale === 'bn' ? 'font-en' : ''}`}>{otherName(s, locale)}</span></span>
+                <span className="shrink-0 text-xs text-muted">{s.kind === 'area' ? t('area') : t('place')}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
     </form>
   );
 }

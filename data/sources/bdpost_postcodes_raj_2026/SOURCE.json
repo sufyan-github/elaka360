@@ -1,0 +1,23 @@
+{
+  "key": "BDPOST_POSTCODES_RAJ_2026",
+  "name": "Bangladesh Post postcode booklet — Rajshahi Division post offices (scan on post.rajshahi.gov.bd)",
+  "organization": "বাংলাদেশ ডাক বিভাগ (Bangladesh Post Office) — DPMG Rajshahi Division portal",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-post-rajshahi/2024/12/e548300c14de4897aa9516b65816e29f.pdf"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "বাংলাদেশ ডাক বিভাগ (Bangladesh Post Office) — DPMG Rajshahi Division portal",
+  "files": {
+    "facts.csv": "573f3a6a30a140e342e3ce180a4f89b5dd59b906fd4130418a349ceb6731bc8c",
+    "places.csv": "f3792f15a04b9ac45eed581609d01699edca40587588fad3f759656105eb8d4a",
+    "raw/postcode_booklet_pp21.png": "23b9faa5434c87b771c74bac3124081073a1b55470950d22953676b153864b91",
+    "raw/postcode_booklet_pp22-23.png": "232fd6e7716f22609e3273ced05059751231569d958431758832f784878e3a72"
+  },
+  "notes": "Undated scanned booklet (page last updated 2018-09-21) with no text layer; Rajshahi Division entries (booklet pp. 21-23) transcribed by hand from the page images (raw/*.png). fetch.py verifies the PDF hash and re-emits the transcription. bdpost.gov.bd publishes no office list (its postcode menu points to ekdak.com); the 88-page 'all post offices' list and the telephone directory on the same portal are also image-only scans and were not transcribed. Branch post offices are not in the booklet. No licence stated. Licence: none stated on the source; treat as government public information, cite the source."
+}

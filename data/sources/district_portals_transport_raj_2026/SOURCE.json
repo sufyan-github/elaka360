@@ -1,0 +1,43 @@
+{
+  "key": "DISTRICT_PORTALS_TRANSPORT_RAJ_2026",
+  "name": "District & upazila portals (Rajshahi Division) — bus terminals/stands and stations named on transport pages",
+  "organization": "Deputy Commissioner / Upazila Nirbahi offices (national portal framework)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://paba.rajshahi.gov.bd/pages/static-pages/697fc1d435ce18e1c06cdf9d",
+    "https://tanore.rajshahi.gov.bd/pages/static-pages/697f93c835ce18e1c06bed67",
+    "https://durgapur.rajshahi.gov.bd/pages/static-pages/697fbb0a35ce18e1c06cba79",
+    "https://bagha.rajshahi.gov.bd/pages/static-pages/697fdcf435ce18e1c06d91ec",
+    "https://rajshahi.gov.bd/pages/static-pages/697fb32435ce18e1c06ca906",
+    "https://naogaon.gov.bd/pages/static-pages/travel-dqg2l3-6ad6d76afd9ba071690f8283",
+    "https://joypurhat.gov.bd/pages/static-pages/697f804235ce18e1c06b7cdf",
+    "https://sirajganj.gov.bd/pages/static-pages/697fbb0e35ce18e1c06cbc46",
+    "https://sirajganj.gov.bd/pages/static-pages/697ff46435ce18e1c06de89f",
+    "https://bogura.gov.bd/pages/static-pages/697fbb3f35ce18e1c06cd359",
+    "https://pabna.gov.bd/pages/static-pages/697fbb1f35ce18e1c06cc403",
+    "https://chapainawabganj.gov.bd/pages/static-pages/697f99c635ce18e1c06c093f"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "District/upazila portals (*.gov.bd, Bangladesh National Portal)",
+  "notes": "No licence stated. No portal publishes a bus-terminal register; these are names explicitly given in 'যোগাযোগ ব্যবস্থা' pages. Rajshahi district portal names no terminal; Pabna, Bogura and Chapainawabganj pages name only Dhaka-side terminals or bus companies. raw/ keeps the extracted page text (descriptive text is not copied into the CSVs).",
+  "files": {
+    "places.csv": "26707975de18c696e7ab8cc44dcacfa1e6f1b75cd03bda7a500b8cfcef3a348c",
+    "facts.csv": "3b1c1a8099fbf4b73b3a4539358c7b4088d4581d8af0ef5393a2ef67fd40308e",
+    "raw/bagha_transport.txt": "7a4debe3a20dcc20f2e87d60404a55be82f9b95edc610c5fa4aca428df5e6f7e",
+    "raw/bogura_transport.txt": "7c90fc5e6b58ac80c45e5e0481d2d6cc0fa3459ba42d1876bebbe0bcf55cfb7e",
+    "raw/chapainawabganj_transport.txt": "8f3ba79995b90db0a68233c81c064ecc31ba2e1f82091c4fb20e119c00ffe6e1",
+    "raw/durgapur_transport.txt": "e10b8a056f5634d5fd78bcfeccc2816a8030775980f03a235153cfb4c6299a65",
+    "raw/joypurhat_transport.txt": "2501d8e00dd99851cdbb77ef74409b285146f7040d3cfce12c14a75de7adb103",
+    "raw/naogaon_transport.txt": "b9bbea87ac85a362afd4e80ddfc39432e86c1411a790577c912bb05961cd92bf",
+    "raw/paba_transport.txt": "ecc5c2173fcbc6f2f81e8e18604e5e2cc45ad02a440c443565d1ad754ec55ff8",
+    "raw/pabna_transport.txt": "eede041a51f0dc61d70b0abb60f521988cd219b165a0ce14c6df344d79877c9b",
+    "raw/rajshahi_transport.txt": "f5221e8bbdba93be5d51ab43ed886bd701b8a79b8af0b4cb03331699b93d3edf",
+    "raw/sirajganj_schedule_transport.txt": "ebf33775b85b39015d5353d883ab838b23085c6afa9000e6d22900ccb4220150",
+    "raw/sirajganj_transport.txt": "8c0b6cbb4a16ba2ea2d30d102eb5d80c7a315d983a8893773621674b128c5682",
+    "raw/tanore_transport.txt": "a5dd1b7b3f633a74450233efa894c7702c004e0c507bbb92b332a5d396ae951f"
+  }
+}

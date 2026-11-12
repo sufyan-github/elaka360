@@ -1,0 +1,160 @@
+name: Deploy
+
+# Production release on Cloudflare (free plan): runs after CI passes on main, or by hand.
+#   1. Build the data: a throwaway PostGIS database is loaded with the seed, and the NestJS API's own code exports
+#      its public responses (apps/api/src/cli/export-edge.ts): D1 rows + static map and search files.
+#   2. D1: create the database on first run, apply db/d1/schema.sql, write only changed rows (scripts/d1-sync.mjs).
+#   3. Deploy the API Worker (apps/edge-api) at elaka360-api.abusufyan.online.
+#   4. Build the website against that API and deploy it at elaka360.abusufyan.online (pages cached in R2).
+# Setup and secrets: docs/DEPLOYMENT.md → "Cloudflare (free plan)". Without the Cloudflare secrets everything is skipped.
+
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    environment: production
+    timeout-minutes: 45
+    services:
+      postgres:
+        image: postgis/postgis:16-3.4
+        env:
+          POSTGRES_USER: elaka360
+          POSTGRES_PASSWORD: elaka360
+          POSTGRES_DB: elaka360
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U elaka360" --health-interval 5s --health-timeout 5s --health-retries 20
+    env:
+      RELEASE_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+      SITE_URL: https://elaka360.abusufyan.online
+      API_URL: https://elaka360-api.abusufyan.online
+      DATABASE_URL: postgres://elaka360:elaka360@localhost:5432/elaka360   # throwaway, inside this job only
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      WRANGLER_SEND_METRICS: "false"
+    steps:
+      - name: Check Cloudflare secrets
+        id: cf
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "::notice::CLOUDFLARE_API_TOKEN / CLOUDFLARE_ACCOUNT_ID are not set; nothing to deploy"
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v4
+        if: steps.cf.outputs.skip == 'false'
+        with:
+          ref: ${{ env.RELEASE_SHA }}
+      - uses: pnpm/action-setup@v4
+        if: steps.cf.outputs.skip == 'false'
+      - uses: actions/setup-node@v4
+        if: steps.cf.outputs.skip == 'false'
+        with:
+          node-version: 22
+          cache: pnpm
+      - name: Install
+        if: steps.cf.outputs.skip == 'false'
+        run: pnpm install --frozen-lockfile && pnpm --filter @elaka360/shared --filter @elaka360/api build
+
+      # ---------------------------------------------------------------- 1. data
+      - name: Load the seed into the throwaway database and export the public API
+        if: steps.cf.outputs.skip == 'false'
+        run: |
+          bash scripts/db-migrate.sh
+          bash scripts/db-seed-once.sh
+          node apps/api/dist/cli/export-edge.js
+
+      # ---------------------------------------------------------------- 2. D1
+      - name: D1 database (created on the first run)
+        if: steps.cf.outputs.skip == 'false'
+        working-directory: apps/edge-api
+        run: |
+          id=$(npx wrangler d1 list --json | node -e 'const l=JSON.parse(require("fs").readFileSync(0,"utf8"));const d=l.find(x=>x.name==="elaka360");process.stdout.write(d?d.uuid:"")')
+          if [ -z "$id" ]; then
+            npx wrangler d1 create elaka360 --location apac
+            id=$(npx wrangler d1 list --json | node -e 'const l=JSON.parse(require("fs").readFileSync(0,"utf8"));process.stdout.write(l.find(x=>x.name==="elaka360").uuid)')
+          fi
+          sed -i "s/00000000-0000-0000-0000-000000000000/$id/" wrangler.jsonc
+          echo "D1 elaka360 = $id"
+      - name: D1 data sync (only changed rows)
+        if: steps.cf.outputs.skip == 'false'
+        run: |
+          set +e
+          node scripts/d1-sync.mjs --remote
+          code=$?
+          if [ $code -eq 10 ]; then
+            echo "::warning::D1 write budget reached for today; the rest loads on the next run (re-run this workflow after 00:00 UTC)"
+          elif [ $code -ne 0 ]; then exit $code; fi
+
+      # ---------------------------------------------------------------- 3. API Worker
+      - name: Deploy the API Worker
+        if: steps.cf.outputs.skip == 'false'
+        working-directory: apps/edge-api
+        run: npx wrangler deploy --var APP_VERSION:$RELEASE_SHA
+      - name: API Worker secret (visitor IPs from the website)
+        if: steps.cf.outputs.skip == 'false'
+        working-directory: apps/edge-api
+        env:
+          EDGE_SHARED_SECRET: ${{ secrets.EDGE_SHARED_SECRET }}
+        run: |
+          if [ -z "$EDGE_SHARED_SECRET" ]; then echo "::warning::EDGE_SHARED_SECRET is not set: contact-form rate limits see Cloudflare's IPs"; exit 0; fi
+          printf '%s' "$EDGE_SHARED_SECRET" | npx wrangler secret put EDGE_SHARED_SECRET
+      - name: Wait for the API to serve this release
+        if: steps.cf.outputs.skip == 'false'
+        run: |
+          for i in $(seq 1 40); do
+            v=$(curl -fsS --max-time 10 "$API_URL/health" | node -e 'try{process.stdout.write(JSON.parse(require("fs").readFileSync(0,"utf8")).version)}catch{}' || true)
+            [ "$v" = "$RELEASE_SHA" ] && { echo "API serves $v"; exit 0; }
+            echo "waiting… (${v:-unreachable})"; sleep 6
+          done
+          exit 1
+
+      # ---------------------------------------------------------------- 4. website
+      - name: Page cache bucket (created once)
+        if: steps.cf.outputs.skip == 'false'
+        working-directory: apps/web
+        run: npx wrangler r2 bucket list | grep -q "elaka360-web-cache" || npx wrangler r2 bucket create elaka360-web-cache
+      - name: Build the website for Workers
+        if: steps.cf.outputs.skip == 'false'
+        working-directory: apps/web
+        env:
+          NEXT_PUBLIC_SITE_URL: ${{ env.SITE_URL }}
+        run: pnpm cf:build
+      - name: Deploy the website
+        if: steps.cf.outputs.skip == 'false'
+        working-directory: apps/web
+        run: pnpm cf:deploy
+      - name: Website secret (visitor IPs to the API)
+        if: steps.cf.outputs.skip == 'false'
+        working-directory: apps/web
+        env:
+          EDGE_SHARED_SECRET: ${{ secrets.EDGE_SHARED_SECRET }}
+        run: |
+          [ -z "$EDGE_SHARED_SECRET" ] && exit 0
+          printf '%s' "$EDGE_SHARED_SECRET" | npx wrangler secret put EDGE_SHARED_SECRET
+      - name: Smoke test
+        if: steps.cf.outputs.skip == 'false'
+        run: |
+          for path in /emergency / /rajshahi/rajshahi /p/rajshahi-college /map /data/search/areas.json; do
+            for i in $(seq 1 12); do
+              code=$(curl -s -o /dev/null -w '%{http_code}' "$SITE_URL$path")
+              [ "$code" = "200" ] && { echo "$path → 200"; break; }
+              [ $i -eq 12 ] && { echo "::error::$path → $code"; exit 1; }
+              sleep 10
+            done
+          done

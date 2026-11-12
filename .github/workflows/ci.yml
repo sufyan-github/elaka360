@@ -12,7 +12,7 @@ concurrency:
 jobs:
   ci:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
     services:
       postgres:
         image: postgis/postgis:16-3.4
@@ -34,9 +34,16 @@ jobs:
       DATABASE_URL: postgres://elaka360:elaka360@localhost:5432/elaka360
       API_URL: http://localhost:4000
       WEB_URL: http://localhost:3000
+      ADMIN_URL: http://localhost:3001
       TYPESENSE_URL: http://localhost:8108
       TYPESENSE_API_KEY: ci-key
       SEARCH_ENGINE_EXPECT: typesense
+      # Test-only settings: OTP codes are returned in API responses (refused when NODE_ENV=production).
+      SMS_PROVIDER: dev
+      OTP_RATE_PER_MIN: "200"
+      OTP_PER_PHONE_15M: "20"
+      THROTTLE_SCALE: "20"
+      AUTH_JWT_SECRET: ci-only-secret-ci-only-secret-0000000
       TURBO_TELEMETRY_DISABLED: 1
       NEXT_TELEMETRY_DISABLED: 1
     steps:
@@ -45,26 +52,26 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: pnpm
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
 
-      - name: Seed is reproducible from sources
+      - name: Seed — reproducible, valid, tested
         run: |
+          python3 -m unittest pipelines/test_pipeline.py
           python3 pipelines/build_seed.py > /dev/null
-          git diff --stat --exit-code -- data/seed db/seed apps/web/public/geo
+          git diff --stat --exit-code -- data/seed db/seed apps/web/public/geo apps/web/public/data docs/data/SOURCE_REGISTRY.md docs/data/UNRESOLVED_CONFLICTS.md
+          python3 pipelines/validate_seed.py
 
-      - name: Install
-        run: pnpm install --no-frozen-lockfile
+      - name: Install (frozen lockfile)
+        run: pnpm install --frozen-lockfile
 
-      - name: Upload lockfile (commit it once CI is green)
-        uses: actions/upload-artifact@v4
-        with:
-          name: pnpm-lock
-          path: pnpm-lock.yaml
+      - name: Lint
+        run: pnpm lint && pnpm lint:root
 
-      - name: Build
-        run: pnpm build
+      - name: Build packages and API
+        run: pnpm --filter @elaka360/shared --filter @elaka360/api build
 
       - name: Typecheck
         run: pnpm typecheck
@@ -75,28 +82,78 @@ jobs:
       - name: Database — migrate + seed
         run: bash scripts/db-reset.sh
 
+      - name: Database — production migrator is idempotent and checksum-safe
+        run: |
+          psql "$DATABASE_URL" -c "CREATE DATABASE migrate_check"
+          DATABASE_URL=postgres://elaka360:elaka360@localhost:5432/migrate_check bash scripts/db-migrate.sh
+          DATABASE_URL=postgres://elaka360:elaka360@localhost:5432/migrate_check bash scripts/db-migrate.sh | grep -q "up to date"
+
       - name: Database — check every API query
         run: python3 scripts/check_sql.py
+
+      - name: Edge export (D1 rows, static map and search files) from the seeded database
+        run: node apps/api/dist/cli/export-edge.js
 
       - name: Search — build Typesense index
         run: |
           for i in $(seq 1 30); do curl -sf http://localhost:8108/health && break; sleep 1; done
           pnpm --filter @elaka360/api search:reindex
 
-      - name: API smoke test
+      - name: Start API
         run: |
           node apps/api/dist/main.js > api.log 2>&1 &
           for i in $(seq 1 30); do curl -sf $API_URL/health && break; sleep 1; done
-          node scripts/smoke-api.mjs
 
-      - name: Web smoke test
+      - name: Edge API (D1) — load a local D1 and compare every public endpoint with the NestJS API
+        env:
+          WRANGLER_SEND_METRICS: "false"
+        run: |
+          node scripts/d1-sync.mjs --local
+          (cd apps/edge-api && npx wrangler dev --port 8789 --ip 127.0.0.1 > ../../edge-api.log 2>&1 &)
+          for i in $(seq 1 60); do curl -sf -o /dev/null http://127.0.0.1:8789/health && break; sleep 1; done
+          python3 scripts/edge-parity.py "$API_URL" http://127.0.0.1:8789
+
+      - name: API smoke + integration tests (labelled visibility, the default)
+        run: |
+          node scripts/smoke-api.mjs
+          node --test scripts/integration-api.test.mjs
+
+      - name: API smoke + integration tests (strict visibility, staff 2FA required)
+        run: |
+          PUBLIC_INCLUDE_UNVERIFIED=false STAFF_REQUIRE_2FA=true API_PORT=4001 node apps/api/dist/main.js > api-strict.log 2>&1 &
+          for i in $(seq 1 30); do curl -sf http://localhost:4001/health && break; sleep 1; done
+          API_URL=http://localhost:4001 node scripts/smoke-api.mjs
+          API_URL=http://localhost:4001 node --test scripts/integration-api.test.mjs
+
+      - name: Build web + admin (pages are pre-rendered from the running API)
+        run: pnpm --filter @elaka360/web --filter @elaka360/admin build
+
+      - name: Start web + admin
         run: |
           pnpm --filter @elaka360/web start > web.log 2>&1 &
-          for i in $(seq 1 40); do curl -sf -o /dev/null $WEB_URL/saved && break; sleep 1; done
-          node scripts/smoke-web.mjs
+          pnpm --filter @elaka360/admin start > admin.log 2>&1 &
+          for i in $(seq 1 40); do curl -sf -o /dev/null $WEB_URL/emergency && break; sleep 1; done
+          for i in $(seq 1 40); do curl -sf -o /dev/null $ADMIN_URL/login && break; sleep 1; done
+
+      - name: Web smoke test
+        run: node scripts/smoke-web.mjs
+
+      - name: End-to-end (Playwright, mobile + desktop)
+        run: |
+          pnpm exec playwright install --with-deps chromium
+          pnpm e2e
+
+      - name: Upload Playwright report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report
 
       - name: Logs
         if: always()
         run: |
           echo "--- api.log"; tail -n 80 api.log || true
+          echo "--- edge-api.log"; tail -n 40 edge-api.log || true
           echo "--- web.log"; tail -n 80 web.log || true
+          echo "--- admin.log"; tail -n 40 admin.log || true

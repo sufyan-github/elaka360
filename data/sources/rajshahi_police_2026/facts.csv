@@ -1,0 +1,3 @@
+entity_level,entity_name_en,district_en,upazila_en,code,fact,value,unit,basis,year,source_key,source_url,notes
+district,Rajshahi,Rajshahi,,,police_circles,4,circles,listed,2026,RAJSHAHI_POLICE_2026,https://police.rajshahi.gov.bd/pages/static-pages/697f79bd35ce18e1c06b53d5,"Circles: গোদাগাড়ী সার্কেল, চারঘাট সার্কেল, পুঠিয়া সার্কেল, সদর সার্কেল (district police, excludes RMP)"
+district,Rajshahi,Rajshahi,,,police_stations,8,thanas,listed,2026,RAJSHAHI_POLICE_2026,https://police.rajshahi.gov.bd/pages/static-pages/697f79bd35ce18e1c06b53d5,Thanas of Rajshahi District Police (outside RMP jurisdiction)

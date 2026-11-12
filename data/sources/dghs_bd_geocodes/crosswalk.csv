@@ -1,0 +1,140 @@
+our_id,our_level,our_name_en,our_path,source_code,source_name_en,match_method,confidence,notes
+20014,district,Bogura,rajshahi/bogura,5010,Bogura,name_exact,high,source level district
+20017,district,Joypurhat,rajshahi/joypurhat,5038,Joypurhat,name_exact,high,source level district
+20019,district,Naogaon,rajshahi/naogaon,5064,Naogaon,name_exact,high,source level district
+20016,district,Natore,rajshahi/natore,5069,Natore,name_exact,high,source level district
+20018,district,Chapainawabganj,rajshahi/chapainawabganj,5070,Chapainawabganj,name_exact,high,source level district
+20013,district,Pabna,rajshahi/pabna,5076,Pabna,name_exact,high,source level district
+20015,district,Rajshahi,rajshahi/rajshahi,5081,Rajshahi,name_exact,high,source level district
+20012,district,Sirajganj,rajshahi/sirajganj,5088,Sirajganj,name_exact,high,source level district
+30127,upazila,Adamdighi,rajshahi/bogura/adamdighi,50100006,Adamdighi,name_exact,high,source level upazila
+30123,upazila,Bogra Sadar,rajshahi/bogura/bogra-sadar,50100020,Bogura Sadar,name_skeleton,medium,source level upazila
+30130,upazila,Dhunot,rajshahi/bogura/dhunot,50100027,Dhunat,name_skeleton,medium,source level upazila
+30126,upazila,Dupchanchia,rajshahi/bogura/dupchanchia,50100033,Dhupchanchia,name_banglish,high,source level upazila
+30131,upazila,Gabtali,rajshahi/bogura/gabtali,50100040,Gabtali,name_exact,high,source level upazila
+30122,upazila,Kahaloo,rajshahi/bogura/kahaloo,50100054,Kahaloo,name_exact,high,source level upazila
+30128,upazila,Nondigram,rajshahi/bogura/nondigram,50100067,Nandigram,name_skeleton,medium,source level upazila
+30124,upazila,Shariakandi,rajshahi/bogura/shariakandi,50100081,Sariakandi,name_exact,high,source level upazila
+30125,upazila,Shajahanpur,rajshahi/bogura/shajahanpur,50100085,Shajahanpur,name_exact,high,source level upazila
+30132,upazila,Sherpur,rajshahi/bogura/sherpur,50100088,Sherpur,name_exact,high,source level upazila
+30133,upazila,Shibganj,rajshahi/bogura/shibganj,50100094,Shibganj,name_exact,high,source level upazila
+30129,upazila,Sonatala,rajshahi/bogura/sonatala,50100095,Sonatola,name_skeleton,medium,source level upazila
+30150,upazila,Akkelpur,rajshahi/joypurhat/akkelpur,50380013,Akkelpur,name_exact,high,source level upazila
+30154,upazila,Joypurhat Sadar,rajshahi/joypurhat/joypurhat-sadar,50380047,Joypurhat Sadar,name_exact,high,source level upazila
+30151,upazila,Kalai,rajshahi/joypurhat/kalai,50380058,Kalai,name_exact,high,source level upazila
+30152,upazila,Khetlal,rajshahi/joypurhat/khetlal,50380061,Khetlal,name_exact,high,source level upazila
+30153,upazila,Panchbibi,rajshahi/joypurhat/panchbibi,50380074,Panchbibi,name_exact,high,source level upazila
+30166,upazila,Atrai,rajshahi/naogaon/atrai,50640003,Atrai,name_exact,high,source level upazila
+30161,upazila,Badalgachi,rajshahi/naogaon/badalgachi,50640006,Badalgachhi,name_exact,high,source level upazila
+30163,upazila,Dhamoirhat,rajshahi/naogaon/dhamoirhat,50640028,Dhamoirhat,name_exact,high,source level upazila
+30165,upazila,Manda,rajshahi/naogaon/manda,50640047,Manda,name_exact,high,source level upazila
+30160,upazila,Mohadevpur,rajshahi/naogaon/mohadevpur,50640050,Mahadebpur,name_skeleton,medium,source level upazila
+30168,upazila,Naogaon Sadar,rajshahi/naogaon/naogaon-sadar,50640060,Naogaon Sadar,name_exact,high,source level upazila
+30164,upazila,Niamatpur,rajshahi/naogaon/niamatpur,50640069,Niamatpur,name_exact,high,source level upazila
+30162,upazila,Patnitala,rajshahi/naogaon/patnitala,50640075,Patnitala,name_exact,high,source level upazila
+30169,upazila,Porsha,rajshahi/naogaon/porsha,50640079,Porsha,name_exact,high,source level upazila
+30167,upazila,Raninagar,rajshahi/naogaon/raninagar,50640085,Raninagar,name_exact,high,source level upazila
+30170,upazila,Sapahar,rajshahi/naogaon/sapahar,50640086,Sapahar,name_exact,high,source level upazila
+30146,upazila,Bagatipara,rajshahi/natore/bagatipara,50690009,Bagatipara,name_exact,high,source level upazila
+30145,upazila,Baraigram,rajshahi/natore/baraigram,50690015,Baraigram,name_exact,high,source level upazila
+30148,upazila,Gurudaspur,rajshahi/natore/gurudaspur,50690041,Gurudaspur,name_exact,high,source level upazila
+30147,upazila,Lalpur,rajshahi/natore/lalpur,50690044,Lalpur,name_exact,high,source level upazila
+30149,upazila,Naldanga,rajshahi/natore/naldanga,50690055,Naldanga,name_exact,high,source level upazila
+30143,upazila,Natore Sadar,rajshahi/natore/natore-sadar,50690063,Natore Sadar,name_exact,high,source level upazila
+30144,upazila,Singra,rajshahi/natore/singra,50690091,Singra,name_exact,high,source level upazila
+30158,upazila,Bholahat,rajshahi/chapainawabganj/bholahat,50700018,Bholahat,name_exact,high,source level upazila
+30156,upazila,Gomostapur,rajshahi/chapainawabganj/gomostapur,50700037,Gomastapur,name_skeleton,medium,source level upazila
+30157,upazila,Nachol,rajshahi/chapainawabganj/nachol,50700056,Nachole,name_skeleton,medium,source level upazila
+30155,upazila,Chapainawabganj Sadar,rajshahi/chapainawabganj/chapainawabganj-sadar,50700066,Chapainawabganj Sadar,name_exact,high,source level upazila
+30159,upazila,Shibganj,rajshahi/chapainawabganj/shibganj,50700088,Shibganj,name_exact,high,source level upazila
+30118,upazila,Atghoria,rajshahi/pabna/atghoria,50760005,Atgharia,name_skeleton,medium,source level upazila
+30117,upazila,Bera,rajshahi/pabna/bera,50760016,Bera,name_exact,high,source level upazila
+30115,upazila,Bhangura,rajshahi/pabna/bhangura,50760019,Bhangura,name_exact,high,source level upazila
+30119,upazila,Chatmohar,rajshahi/pabna/chatmohar,50760022,Chatmohar,name_exact,high,source level upazila
+30121,upazila,Faridpur,rajshahi/pabna/faridpur,50760033,Faridpur,name_exact,high,source level upazila
+30114,upazila,Ishurdi,rajshahi/pabna/ishurdi,50760039,Ishwardi,name_skeleton,medium,source level upazila
+30116,upazila,Pabna Sadar,rajshahi/pabna/pabna-sadar,50760055,Pabna Sadar,name_exact,high,source level upazila
+30120,upazila,Santhia,rajshahi/pabna/santhia,50760072,Santhia,name_exact,high,source level upazila
+30113,upazila,Sujanagar,rajshahi/pabna/sujanagar,50760083,Sujanagar,name_exact,high,source level upazila
+30139,upazila,Bagha,rajshahi/rajshahi/bagha,50810010,Bagha,name_exact,high,source level upazila
+30142,upazila,Bagmara,rajshahi/rajshahi/bagmara,50810012,Baghmara,name_banglish,high,source level upazila
+30137,upazila,Charghat,rajshahi/rajshahi/charghat,50810025,Charghat,name_exact,high,source level upazila
+30135,upazila,Durgapur,rajshahi/rajshahi/durgapur,50810031,Durgapur,name_exact,high,source level upazila
+30140,upazila,Godagari,rajshahi/rajshahi/godagari,50810034,Godagari,name_exact,high,source level upazila
+30136,upazila,Mohonpur,rajshahi/rajshahi/mohonpur,50810053,Mohanpur,name_skeleton,medium,source level upazila
+30134,upazila,Paba,rajshahi/rajshahi/paba,50810072,Paba,name_exact,high,source level upazila
+30138,upazila,Puthia,rajshahi/rajshahi/puthia,50810082,Puthia,name_exact,high,source level upazila
+30141,upazila,Tanore,rajshahi/rajshahi/tanore,50810094,Tanore,name_exact,high,source level upazila
+30104,upazila,Belkuchi,rajshahi/sirajganj/belkuchi,50880011,Belkuchi,name_exact,high,source level upazila
+30105,upazila,Chauhali,rajshahi/sirajganj/chauhali,50880027,Chauhali,name_exact,high,source level upazila
+30106,upazila,Kamarkhand,rajshahi/sirajganj/kamarkhand,50880044,Kamarkhanda,name_skeleton,medium,source level upazila
+30107,upazila,Kazipur,rajshahi/sirajganj/kazipur,50880050,Kazipur,name_exact,high,source level upazila
+30108,upazila,Raigonj,rajshahi/sirajganj/raigonj,50880061,Royganj,name_skeleton,medium,source level upazila
+30109,upazila,Shahjadpur,rajshahi/sirajganj/shahjadpur,50880067,Shahjadpur,name_exact,high,source level upazila
+30110,upazila,Sirajganj Sadar,rajshahi/sirajganj/sirajganj-sadar,50880078,Sirajganj Sadar,name_exact,high,source level upazila
+30111,upazila,Tarash,rajshahi/sirajganj/tarash,50880089,Tarash,name_exact,high,source level upazila
+30112,upazila,Ullapara,rajshahi/sirajganj/ullapara,50880094,Ullahpara,name_skeleton,medium,source level upazila
+,,,,50690066,Naldanga,unmatched,none,source level upazila; no candidates under parent
+50005,city_corporation,Rajshahi City Corporation,rajshahi/rajshahi/rajshahi-city-corporation,508166,Rajshahi City Corporation,name_exact,high,source level city_corporation
+,,,,5010000650,Santahar Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Adamdighi
+,,,,5010002020,Bogra Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Bogra Sadar
+,,,,5010002730,Dhunat Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Dhunot
+,,,,5010003337,Dhupchanchia Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Dupchanchia
+,,,,5010003370,Talora  Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Dupchanchia
+,,,,5010004040,Gabtali Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Gabtali
+,,,,5010005442,Kahaloo Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kahaloo
+,,,,5010006745,Nandigram Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Nondigram
+,,,,5010008165,Sariakandi Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Shariakandi
+,,,,5010008875,Sherpur Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Sherpur
+,,,,5010009482,Shibganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Shibganj
+,,,,5010009587,Sonatola Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Sonatala
+,,,,5038001325,Akkelpur Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Akkelpur
+,,,,5038004750,Joypurhat Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Joypurhat Sadar
+,,,,5038005860,Kalai Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kalai
+,,,,5038006167,Khetlal Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Khetlal
+,,,,5038007475,Panchbibi Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Panchbibi
+,,,,5064002830,Dhamoirhat Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Dhamoirhat
+,,,,5064006050,Naogaon Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Naogaon Sadar
+,,,,5064007570,Nozipur Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Patnitala
+,,,,5069000921,Bagatipara Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Bagatipara
+,,,,5069001525,Banpara Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Baraigram
+,,,,5069001531,Baraigram Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Baraigram
+,,,,5069004140,Gurudaspur Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Gurudaspur
+,,,,5069004435,Gopalpur (lalpur) Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Lalpur
+,,,,5069005545,Naldanga Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Naldanga
+,,,,5069006350,Natore Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Natore Sadar
+,,,,5069009175,Singra Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Singra
+,,,,5070003744,Rahanpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Gomostapur
+,,,,5070005622,Nachole Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Nachol
+,,,,5070006633,Chapai Nababganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Chapainawabganj Sadar
+,,,,5070008866,Shibganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Shibganj
+,,,,5076000508,Atgharia Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Atghoria
+,,,,5076001612,Bera Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Bera
+,,,,5076001918,Bhangura Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Bhangura
+,,,,5076002225,Chatmohar Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Chatmohar
+,,,,5076003337,Faridpur Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Faridpur
+,,,,5076003950,Ishwardi Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Ishurdi
+,,,,5076005562,Pabna Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Pabna Sadar
+,,,,5076007275,Santhia Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Santhia
+,,,,5076008387,Sujanagar Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Sujanagar
+60001,pourashava,Arani Pourashava,rajshahi/rajshahi/bagha/arani-pourashava,5081001008,Arani Paurasava,name_exact,high,source level pourashava
+60002,pourashava,Bagha Pourashava,rajshahi/rajshahi/bagha/bagha-pourashava,5081001016,Bagha Paurasava,name_exact,high,source level pourashava
+60003,pourashava,Bhabaniganj Pourashava,rajshahi/rajshahi/bagmara/bhabaniganj-pourashava,5081001225,Bhabanigonj Paurasava,name_skeleton,medium,source level pourashava
+60004,pourashava,Taherpur Pourashava,rajshahi/rajshahi/bagmara/taherpur-pourashava,5081001285,Tahirpur Paurasava,name_skeleton,medium,source level pourashava
+60005,pourashava,Charghat Pourashava,rajshahi/rajshahi/charghat/charghat-pourashava,5081002533,Charghat Paurasava,name_exact,high,source level pourashava
+60006,pourashava,Durgapur Pourashava,rajshahi/rajshahi/durgapur/durgapur-pourashava,5081003143,Durgapur Paurasava,name_exact,high,source level pourashava
+60007,pourashava,Godagari Pourashava,rajshahi/rajshahi/godagari/godagari-pourashava,5081003450,Godagari Paurasava,name_exact,high,source level pourashava
+60008,pourashava,Kakanhat Pourashava,rajshahi/rajshahi/godagari/kakanhat-pourashava,5081003455,Kakanhat Paurasava,name_exact,high,source level pourashava
+60009,pourashava,Keshorhat Pourashava,rajshahi/rajshahi/mohonpur/keshorhat-pourashava,5081005365,Kesharhat Paurasava,name_skeleton,medium,source level pourashava
+60010,pourashava,Katakhali Pourashava,rajshahi/rajshahi/paba/katakhali-pourashava,5081007260,Katakhali Paurasava,name_exact,high,source level pourashava
+60011,pourashava,Naohata Pourashava,rajshahi/rajshahi/paba/naohata-pourashava,5081007275,Noahata Paurasava,name_skeleton,medium,source level pourashava
+60012,pourashava,Puthia Pourashava,rajshahi/rajshahi/puthia/puthia-pourashava,5081008280,Puthia Paurasava,name_exact,high,source level pourashava
+60014,pourashava,Mundumala Pourashava,rajshahi/rajshahi/tanore/mundumala-pourashava,5081009470,Mundumala Paurasava,name_exact,high,source level pourashava
+60013,pourashava,Tanore Pourashava,rajshahi/rajshahi/tanore/tanore-pourashava,5081009483,Tanore Paurasava,name_exact,high,source level pourashava
+,,,,5088001116,Belkuchi Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Belkuchi
+,,,,5088005020,Kazipur Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kazipur
+,,,,5088006123,Royganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Raigonj
+,,,,5088006725,Shahjadpur Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Shahjadpur
+,,,,5088007850,Sirajganj Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Sirajganj Sadar
+,,,,5088009475,Ullah Para Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Ullapara
+50013,city_corporation,Bogura City Corporation,rajshahi/bogura/bogura-city-corporation,,,no_source_unit,none,no DGHS/BBS unit matched under Bogura

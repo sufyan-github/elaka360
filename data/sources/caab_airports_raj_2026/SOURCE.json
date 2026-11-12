@@ -1,0 +1,25 @@
+{
+  "key": "CAAB_AIRPORTS_RAJ_2026",
+  "name": "Civil Aviation Authority of Bangladesh — airports in Rajshahi Division",
+  "organization": "Civil Aviation Authority of Bangladesh (CAAB)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://www.caab.gov.bd/",
+    "https://new.caab.gov.bd/airportsf.html",
+    "https://new.caab.gov.bd/contactof.html",
+    "https://new.caab.gov.bd/airports/rajshahi.html",
+    "https://new.caab.gov.bd/airports/ishwardi.html"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Civil Aviation Authority of Bangladesh (caab.gov.bd)",
+  "notes": "No licence stated. Airline-office and individual staff numbers on the airport pages are not collected; only the Airport Manager office phone/cell/e-mail. caab.gov.bd omits the Sectigo OV R36 intermediate (handled by the AIA helper).",
+  "files": {
+    "places.csv": "dcc10e7ea79ff491fb879bf0b46eaae44c68208a84f49f576678ef5edee96b2d",
+    "raw/ishwardi.txt": "99443de81df1b5b1b24a9a6d78cbe250e175112ab758246691731284496e6e3e",
+    "raw/rajshahi.txt": "5b972a8a31e3682a23a8a449e66d866f2d61992413194150854908100ea6e64b"
+  }
+}

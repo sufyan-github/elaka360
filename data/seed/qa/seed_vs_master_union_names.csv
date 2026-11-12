@@ -1,0 +1,18 @@
+﻿district,upazila,side,union_en,union_bn,status,note
+Naogaon,Raninagar,spelling_variant,Bargachha | seed: Borgoca,বড়গাছা | seed: বরগাছা,variant,similarity 0.77
+Naogaon,Raninagar,master_only,Khateshwar Raninagar,,known,Likely spelling variant of seed 'Khatteshawr' (খট্টেশ্বর রাণীনগর); master has no Bangla name for this row.
+Naogaon,Raninagar,seed_only,Khatteshawr,খট্টেশ্বর রাণীনগর,known,See 'Khateshwar Raninagar'.
+Natore,Bagatipara,spelling_variant,Phaguradiar | seed: Faguardiar,ফাগুয়াড়দিয়ার | seed: ফাগুয়ারদিয়াড়,variant,similarity 0.80
+Chapainawabganj,Chapainawabganj Sadar,master_only,Parbatipur,পার্বতীপুর,known,CNB-003: master register repeats this name under Gomastapur with a copied geocode suffix; register not reliable here.
+Chapainawabganj,Chapainawabganj Sadar,master_only,Panka,পাঁকা,known,CNB-003: master register repeats this name under Shibganj; register not reliable here.
+Chapainawabganj,Chapainawabganj Sadar,master_only,Radhanagar,রাধানগর,known,CNB-003: master register repeats this name under Gomastapur; register not reliable here.
+Chapainawabganj,Chapainawabganj Sadar,seed_only,Jhilim,ঝিলিম,known,CNB-003: absent from the master register; seed keeps nuhil name until row-level evidence exists.
+Chapainawabganj,Chapainawabganj Sadar,seed_only,Shahjahanpur,শাহজাহানপুর,known,CNB-003: absent from the master register; seed keeps nuhil name.
+Chapainawabganj,Chapainawabganj Sadar,seed_only,Narayanpur,নারায়নপুর,known,CNB-003: absent from the master register; seed keeps nuhil name.
+Chapainawabganj,Gomostapur,master_only,Ghorapakhia,ঘোড়াপাখিয়া,known,CNB-002/CNB-003: master repeats this name under Shibganj; Gomastapur 8 vs 9 open.
+Chapainawabganj,Gomostapur,seed_only,Rahanpur,রহনপুর,known,CNB-003: absent from the master register; Rahanpur is also a pourashava name.
+Chapainawabganj,Shibganj,master_only,Trimohoni,ত্রিমোহনী,known,CNB-003: not in seed.
+Chapainawabganj,Shibganj,seed_only,Ujirpur,উজিরপুর,known,CNB-003: absent from the master register.
+Rajshahi,Charghat,spelling_variant,Bhaya Laxmipur | seed: Vialuxmipur,ভায়ালক্ষ্মীপুর | seed: ভায়ালক্ষীপুর,variant,similarity 0.93
+Rajshahi,Godagari,spelling_variant,Char Asariadaha | seed: Asariadaha,চর আষাড়িয়াদহ | seed: আষাড়িয়াদহ,variant,similarity 0.90
+Rajshahi,Tanore,spelling_variant,Soronjai | seed: Saranjai,সরনজাই | seed: সরঞ্জাই,variant,similarity 0.77

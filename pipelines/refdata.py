@@ -7,14 +7,14 @@ SRC = {
     "CITYPOP_ADJ": ("BBS Census 2022 (adjusted) via citypopulation.de", "https://citypopulation.de/en/bangladesh/"),
     "CITYPOP_RAJ": ("BBS Census 2022 (enumerated) via citypopulation.de, Rajshahi district page", "https://citypopulation.de/en/bangladesh/admin/81__rajshahi/"),
     "WIKI_RAJ": ("Wikipedia: Rajshahi District", "https://en.wikipedia.org/wiki/Rajshahi_District"),
-    "WIKI_CC": ("Wikipedia: List of city corporations in Bangladesh (Mar 2026 snapshot)", "https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/City_Councils_of_Bangladesh"),
-    "WIKI_ADMIN": ("Wikipedia: Administrative geography of Bangladesh (Mar 2026 snapshot)", "https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/Subdivisions_of_Bangladesh"),
+    "WIKI_CC": ("Wikipedia: List of city corporations in Bangladesh (Mar 2026 snapshot)", "https://en.wikipedia.org/wiki/List_of_city_corporations_in_Bangladesh"),
+    "WIKI_ADMIN": ("Wikipedia: Administrative geography of Bangladesh (Mar 2026 snapshot)", "https://en.wikipedia.org/wiki/Administrative_geography_of_Bangladesh"),
     "FE_BOGURA": ("The Financial Express, 15 May 2026: Bogura becomes city corporation", "https://today.thefinancialexpress.com.bd/last-page/bogura-becomes-city-corporation-1778866247"),
     "WIKI_SHAY": ("Wikipedia: Shayestaganj Upazila", "https://en.wikipedia.org/wiki/Shayestaganj_Upazila"),
     "FE_102": ("The Financial Express, 6 Jun 2024: Fire service launches new hotline 102", "https://thefinancialexpress.com.bd/national/fire-service-launches-new-hotline-number-102"),
     "WIKI_TEL": ("Wikipedia: Telephone numbers in Bangladesh", "https://en.wikipedia.org/wiki/Telephone_numbers_in_Bangladesh"),
     "WIKI_RU": ("Wikipedia: University of Rajshahi", "https://en.wikipedia.org/wiki/University_of_Rajshahi"),
-    "WIKI_RUET": ("Wikipedia: RUET (Mar 2026 snapshot)", "https://wiki.krisyotam.com/content/wikipedia_en_all_nopic_2026-03/RUET"),
+    "WIKI_RUET": ("Wikipedia: RUET (Mar 2026 snapshot)", "https://en.wikipedia.org/wiki/Rajshahi_University_of_Engineering_%26_Technology"),
     "WIKI_RMC": ("Wikipedia: Rajshahi Medical College", "https://en.wikipedia.org/wiki/Rajshahi_Medical_College"),
     "WIKI_PUTHIA": ("Wikipedia: Puthia Rajbari", "https://en.wikipedia.org/wiki/Puthia_Rajbari"),
     "BANGLAPEDIA_PUTHIA": ("Banglapedia: Puthia", "https://en.banglapedia.org/index.php/Puthia"),
@@ -22,6 +22,8 @@ SRC = {
     "RU_VRM": ("University of Rajshahi: Varendra Research Museum", "https://www.ru.ac.bd/facilities/varendra-research-museum/"),
     "MOCKUP": ("Elaka360 UI mockups (design placeholder, not a fact source)", ""),
     "UNVERIFIED": ("General knowledge — not checked against a primary source in this build", ""),
+    "NATORE_DC_2026": ("Natore District Administration: এক নজরে নাটোর (52 unions; Naldanga 5)", "https://natore.gov.bd/pages/static-pages/697fbb1d35ce18e1c06cc346"),
+    "MASTER_V3": ("Elaka360 Consolidated Master v3.0 (project reconciliation package, non-production)", ""),
 }
 
 # BBS geocodes for divisions (keyed by nuhil division id)
@@ -288,8 +290,10 @@ MOCKUP_VS_VERIFIED = [
 ]
 
 KNOWN_GAPS = [
-    ("unions", "~30–37 unions missing vs the official 4,571–4,578 (dataset has 4,541).", "Import the LGD/BBS union list and reconcile by geocode."),
-    ("unions", "New upazilas Eidgaon, Madhyanagar, Dasar, Guimara and Naldanga have 0 unions; their unions still sit under the parent upazilas.", "Re-parent unions per the creation gazettes."),
+    ("unions", "~33–40 unions missing vs the official 4,571–4,578 (seed has 4,538 after removing 3 duplicates). All unions are community data and not published.", "Import the LGD/BBS union list and reconcile by geocode."),
+    ("verification", "No record has official (Tier 1) evidence yet; published areas and places rest on secondary sources.", "Verify against LGD/BBS/gazette sources in the admin verification centre."),
+    ("master v3.0", "Seed and Consolidated Master v3.0 differ in Sirajganj (82 vs 83), Bogura (Gabtali/Sonatala), Rajshahi Bagha (Chakrajapur) and Chapainawabganj (5 names each way).", "See docs/data/UNRESOLVED_CONFLICTS.md; resolve with primary evidence."),
+    ("unions", "New upazilas Eidgaon, Madhyanagar, Dasar and Guimara have 0 unions; their unions still sit under the parent upazilas (Naldanga fixed Nov 2026 from the Natore district portal).", "Re-parent unions per the creation gazettes."),
     ("unions", "Shayestaganj union and Nurpur were moved to Shayestaganj Upazila; Brahmandura was added without a source id.", "Confirm against LGD."),
     ("upazilas", "No coordinates or boundaries for upazilas/unions.", "Use the BBS/HDX admin boundary sets (ADM3/ADM4)."),
     ("codes", "BBS geocodes are filled for divisions only.", "Add district/upazila/union geocodes from BBS."),
@@ -299,3 +303,79 @@ KNOWN_GAPS = [
     ("population", "District/division population uses the 2022 adjusted figures; Rajshahi upazilas use enumerated figures.", "Choose one basis app-wide."),
     ("places", "Only 8 pilot places; 3 are unverified and have no coordinates.", "Field verification + OSM import."),
 ]
+
+
+# ---------------- Data trust & reconciliation (Nov 2026 audit) ----------------
+# Source metadata for data_sources (type, organisation, licence, trust 1-5, access date).
+# Licence is recorded only where the source states one; None means "not stated — check before redistribution".
+SOURCE_META = {
+    "NUHIL": dict(type="community_dataset", org="nuhil (GitHub)", license="MIT", trust=1, accessed="2026-11-09"),
+    "CITYPOP_ADJ": dict(type="census_aggregator", org="citypopulation.de (BBS Census 2022)", license=None, trust=3, accessed="2026-11-09"),
+    "CITYPOP_RAJ": dict(type="census_aggregator", org="citypopulation.de (BBS Census 2022)", license=None, trust=3, accessed="2026-11-09"),
+    "WIKI_RAJ": dict(type="encyclopedia", org="Wikipedia", license="CC BY-SA 4.0", trust=3, accessed="2026-11-09"),
+    "WIKI_CC": dict(type="encyclopedia", org="Wikipedia", license="CC BY-SA 4.0", trust=3, accessed="2026-11-11"),
+    "WIKI_ADMIN": dict(type="encyclopedia", org="Wikipedia", license="CC BY-SA 4.0", trust=3, accessed="2026-11-11"),
+    "FE_BOGURA": dict(type="news", org="The Financial Express", license=None, trust=3, accessed="2026-11-09"),
+    "WIKI_SHAY": dict(type="encyclopedia", org="Wikipedia", license="CC BY-SA 4.0", trust=3, accessed="2026-11-09"),
+    "FE_102": dict(type="news", org="The Financial Express", license=None, trust=3, accessed="2026-11-09"),
+    "WIKI_TEL": dict(type="encyclopedia", org="Wikipedia", license="CC BY-SA 4.0", trust=3, accessed="2026-11-09"),
+    "WIKI_RU": dict(type="encyclopedia", org="Wikipedia", license="CC BY-SA 4.0", trust=3, accessed="2026-11-09"),
+    "WIKI_RUET": dict(type="encyclopedia", org="Wikipedia", license="CC BY-SA 4.0", trust=3, accessed="2026-11-11"),
+    "WIKI_RMC": dict(type="encyclopedia", org="Wikipedia", license="CC BY-SA 4.0", trust=3, accessed="2026-11-09"),
+    "WIKI_PUTHIA": dict(type="encyclopedia", org="Wikipedia", license="CC BY-SA 4.0", trust=3, accessed="2026-11-09"),
+    "BANGLAPEDIA_PUTHIA": dict(type="encyclopedia", org="Asiatic Society of Bangladesh", license=None, trust=3, accessed="2026-11-09"),
+    "WIKI_VRM": dict(type="encyclopedia", org="Wikipedia", license="CC BY-SA 4.0", trust=3, accessed="2026-11-09"),
+    "RU_VRM": dict(type="institution_website", org="University of Rajshahi", license=None, trust=3, accessed="2026-11-09"),
+    "MOCKUP": dict(type="design_placeholder", org="Elaka360", license=None, trust=1, accessed=None),
+    "UNVERIFIED": dict(type="none", org=None, license=None, trust=1, accessed=None),
+    "NATORE_DC_2026": dict(type="government_portal", org="Natore District Administration", license=None, trust=4, accessed="2026-11-04"),
+    "MASTER_V3": dict(type="project_reconciliation", org="Elaka360", license=None, trust=2, accessed="2026-11-04"),
+}
+
+# The v0.1 seed linked three sources to a third-party Wikipedia mirror; they now point to wikipedia.org.
+SOURCE_URL_FIXES = {
+    "WIKI_CC": "wiki.krisyotam.com mirror -> https://en.wikipedia.org/wiki/List_of_city_corporations_in_Bangladesh (facts read from a Mar 2026 snapshot)",
+    "WIKI_ADMIN": "wiki.krisyotam.com mirror -> https://en.wikipedia.org/wiki/Administrative_geography_of_Bangladesh",
+    "WIKI_RUET": "wiki.krisyotam.com mirror -> https://en.wikipedia.org/wiki/Rajshahi_University_of_Engineering_%26_Technology",
+}
+
+# Mechanical clean-ups of nuhil union names (keyed by nuhil union id). Only artefacts of the
+# source's URL-derived names are fixed: a stray number, an "up" (union parishad) suffix.
+UNION_NAME_FIXES = {
+    "1176": dict(name_bn="গোপালনগর", why="Bangla name had a leading digit '১' (union number) in the source"),
+    "1278": dict(name_en="Maria", why="English name 'Mariaup' carried the 'up' (union parishad) suffix from its website slug"),
+    "1414": dict(name_en="Mohadevpur", why="English name '1nomohadevpur' carried a '1 no.' prefix from its website slug (union No. 1)"),
+    "2806": dict(name_bn="আমদিয়া", why="Bangla name had a trailing '২' not present in the English name or website slug"),
+    "3177": dict(name_en="Maijchar", why="English name 'Maijchar9' carried a trailing union number from its website slug"),
+}
+
+# Exact duplicates in nuhil (same upazila, same name). The first row is kept.
+UNION_DUPLICATE_DROPS = {
+    "2353": "Duplicate of nuhil:union:2352 Awajpur (Charfesson): identical name, Bangla name and website",
+    "2546": "Duplicate of nuhil:union:2540 Talimpur (Barlekha): identical name, Bangla name and website",
+    "3686": "Duplicate of nuhil:union:3685 Bhojoanpur (Tetulia): same name and Bangla name; website points to gazipur.gov.bd",
+}
+
+# Natore: five unions listed under Natore Sadar in nuhil belong to Naldanga upazila
+# (Natore District Administration: Natore Sadar 7, Naldanga 5). nuhil union ids:
+NALDANGA_UNION_IDS = {"1285", "1286", "1287", "1288", "1289"}
+
+# Known, tracked differences between the seed and Consolidated Master v3.0. The validator fails on any
+# difference not listed here, and on any entry here that no longer differs (so the list stays honest).
+KNOWN_MASTER_DIFFS = {
+    ("count", "Bogura", "Sonatala"): "BOG-005: master baseline Sonatala 6; seed 7 matches the Bogura district list (2026-10-07) and BBS 2022. Gabtali is 12 in both after adding সুখানপুকুর.",
+    ("count", "Rajshahi", "Bagha"): "RAJ-001/RAJ-002 resolved by official evidence: Bagha has 7 unions incl. চকরাজাপুর (district union list 2026-06-25, Bagha and Chakrajapur portals, BBS 2022 geocode 50-81-10-182). The master's selected baseline still says 6.",
+    ("count", "Pabna", "Bhangura"): "PAB-001/PAB-006 resolved: Bhangura has 6 unions incl. মন্ডতোষ (Pabna এক নজরে 2023, Bhangura portal, BBS 2022 = 74 unions). The master's secondary distribution says 5.",
+    ("name", "Naogaon", "Raninagar", "master_only", "Khateshwar Raninagar"): "Likely spelling variant of seed 'Khatteshawr' (খট্টেশ্বর রাণীনগর); master has no Bangla name for this row.",
+    ("name", "Naogaon", "Raninagar", "seed_only", "Khatteshawr"): "See 'Khateshwar Raninagar'.",
+    ("name", "Chapainawabganj", "Chapainawabganj Sadar", "master_only", "Parbatipur"): "CNB-003: master register repeats this name under Gomastapur with a copied geocode suffix; register not reliable here.",
+    ("name", "Chapainawabganj", "Chapainawabganj Sadar", "master_only", "Panka"): "CNB-003: master register repeats this name under Shibganj; register not reliable here.",
+    ("name", "Chapainawabganj", "Chapainawabganj Sadar", "master_only", "Radhanagar"): "CNB-003: master register repeats this name under Gomastapur; register not reliable here.",
+    ("name", "Chapainawabganj", "Chapainawabganj Sadar", "seed_only", "Jhilim"): "CNB-003: absent from the master register; seed keeps nuhil name until row-level evidence exists.",
+    ("name", "Chapainawabganj", "Chapainawabganj Sadar", "seed_only", "Shahjahanpur"): "CNB-003: absent from the master register; seed keeps nuhil name.",
+    ("name", "Chapainawabganj", "Chapainawabganj Sadar", "seed_only", "Narayanpur"): "CNB-003: absent from the master register; seed keeps nuhil name.",
+    ("name", "Chapainawabganj", "Gomostapur", "master_only", "Ghorapakhia"): "CNB-002/CNB-003: master repeats this name under Shibganj; Gomastapur 8 vs 9 open.",
+    ("name", "Chapainawabganj", "Gomostapur", "seed_only", "Rahanpur"): "CNB-003: absent from the master register; Rahanpur is also a pourashava name.",
+    ("name", "Chapainawabganj", "Shibganj", "master_only", "Trimohoni"): "CNB-003: not in seed.",
+    ("name", "Chapainawabganj", "Shibganj", "seed_only", "Ujirpur"): "CNB-003: absent from the master register.",
+}

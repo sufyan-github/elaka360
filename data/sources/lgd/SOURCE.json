@@ -1,0 +1,25 @@
+{
+  "key": "LGD_2026",
+  "name": "Local Government Division portal (lgd.gov.bd) — Rajshahi Division extract",
+  "organization": "Local Government Division, Ministry of LGRD&C",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://lgd.gov.bd/",
+    "https://lgd.gov.bd/pages/static-pages/6941401ec4774958d7b54a3f",
+    "https://lgd.gov.bd/pages/static-pages/69414021c4774958d7b54bea"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Local Government Division (lgd.gov.bd), Bangladesh National Portal",
+  "files": {
+    "areas.csv": "b46d9803f3574cfa0e7afd29ff129f89d4575544b610b8085b279a6b884d11a3",
+    "facts.csv": "001acca0f452523e8f494ac2097c0952f3d4d62930a5d04767fc89fae7c4d6b4",
+    "raw/menu_page_status.txt": "ec7380f8a565b97caed965387ac7ee18792e5b8ad178ab6a7177399fd1eddaaf",
+    "raw/union_parishad_page.txt": "575801547f605c0c8ef630f87b23e58192d279c656841702c795b9a66052d386",
+    "raw/upazila_list_rajshahi_division.txt": "0f62dbb8ca2acd416e85e9ae6814229c5abcdd6faa90101dc58e28ca1bc1f2f4"
+  },
+  "notes": "Not a formal LGD list/gazette, so trust 4. The portal has no pourashava list, no union list and no downloadable Excel/PDF directory; its menu pages for city corporations, pourashavas, zila parishads and upazila parishads return HTTP 404 (see raw/menu_page_status.txt). Only the upazila-parishad list (updated 2023-05-31) and a national union-parishad total (4571, updated 2023-05-15) exist."
+}

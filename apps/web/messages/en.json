@@ -1,0 +1,734 @@
+{
+  "Meta": {
+    "title": "Elaka360 — information on every area of Bangladesh",
+    "description": "Divisions, districts, institutions, services, tourism and emergency information — with sources, in one place. Every Place. Every Detail."
+  },
+  "Layout": {
+    "skipToContent": "Skip to main content",
+    "footerNav": "Information pages",
+    "about": "About us",
+    "dataPolicy": "Data & verification policy",
+    "guidelines": "Contribution guidelines",
+    "privacy": "Privacy",
+    "terms": "Terms of use",
+    "contact": "Contact",
+    "disclaimer": "Elaka360 is an independent initiative; it is not affiliated with the Government of Bangladesh. In an emergency, call 999."
+  },
+  "Header": {
+    "home": "Elaka360 — Home",
+    "quickLinks": "Quick links",
+    "emergencyLabel": "Emergency services 999",
+    "emergencyShort": "999",
+    "emergencyLong": "Emergency 999",
+    "search": "Search",
+    "account": "My account"
+  },
+  "LanguageSwitch": {
+    "label": "বাংলা",
+    "short": "বাংলা",
+    "title": "View this page in Bangla"
+  },
+  "Theme": {
+    "system": "Theme: system",
+    "light": "Theme: light",
+    "dark": "Theme: dark"
+  },
+  "BottomNav": {
+    "label": "Main",
+    "home": "Home",
+    "explore": "Explore",
+    "search": "Search",
+    "saved": "Saved",
+    "profile": "Profile"
+  },
+  "SearchBox": {
+    "placeholder": "Search districts, upazilas, institutions or services…",
+    "label": "Search",
+    "submit": "Search",
+    "area": "Area",
+    "place": "Place"
+  },
+  "ServiceWorker": {
+    "offline": "You are offline — showing saved information, which may be out of date",
+    "slow": "Slow connection — showing a saved copy of this page, which may be out of date",
+    "reload": "Reload",
+    "update": "A new version is available",
+    "refresh": "Refresh",
+    "close": "Close"
+  },
+  "Map": {
+    "label": "Map",
+    "failed": "The map could not be loaded. Check your internet connection."
+  },
+  "SaveShare": {
+    "save": "Save",
+    "saved": "Saved",
+    "share": "Share",
+    "saveFailed": "Could not save. Please try again.",
+    "copied": "Link copied"
+  },
+  "Review": {
+    "error401": "Sign in to write a review.",
+    "error409": "You have already reviewed this place. You can edit it from your profile.",
+    "error429": "No more reviews can be posted today; please try later.",
+    "failed": "The review could not be submitted.",
+    "pickRating": "Choose a rating (1–5).",
+    "thanks": "Thank you! Your review has been added.",
+    "rating": "Your rating",
+    "stars": "{n, plural, one {{count} star} other {{count} stars}}",
+    "comment": "Comment (optional)",
+    "privacyHint": "Do not write personal information or anyone’s name or phone number.",
+    "signIn": "Sign in",
+    "submit": "Submit review"
+  },
+  "Common": {
+    "breadcrumb": "Location"
+  },
+  "Evidence": {
+    "sourced": "Sourced",
+    "noticeTitle": "Not verified.",
+    "noticeCommunity": "This information comes from a community dataset or a user submission; it may contain errors. For anything important, check an official source.",
+    "noticeUnverified": "This information has not yet been checked against any source; it may contain errors. For anything important, check an official source.",
+    "noticeReport": "Report the correct information",
+    "sourceLabel": "Source and verification",
+    "source": "Source:",
+    "sourceMissing": "not stated",
+    "detailsFrom": "Details from:",
+    "lastChecked": "Last checked: {date}",
+    "report": "Report an error / suggest a correction"
+  },
+  "Home": {
+    "heroTitle": "Information on every area<br></br>of Bangladesh, <accent>with sources, in one place</accent>",
+    "heroSub": "Divisions, districts, city corporations, institutions, tourist spots and emergency services — the source of every piece of information is shown.",
+    "nearMe": "Near me",
+    "map": "Map",
+    "emergency": "Emergency services — national emergency number",
+    "exploreTitle": "Explore Bangladesh",
+    "exploreAll": "See all divisions",
+    "districtCount": "{n, plural, one {{count} district} other {{count} districts}}",
+    "lookingFor": "What are you looking for?",
+    "somePlaces": "Some places",
+    "more": "More",
+    "moreQuery": "Rajshahi",
+    "mapTitle": "Bangladesh on the map",
+    "fullMap": "Full map",
+    "contributeTitle": "Add information about your area",
+    "contributeBody": "Suggest a new place or a correction — it will be published after it has been checked.",
+    "statsTitle": "What Elaka360 has",
+    "places": "Places",
+    "sourcedCount": "{count} sourced",
+    "allSourced": "All sourced",
+    "pending": "{n, plural, one {{count} more area is} other {{count} more areas are}} awaiting verification.",
+    "sourcesNote": "The numbers come straight from the database. “Sourced” means matched against a source such as Wikipedia, the census or newspapers; the rest are not verified, and their pages say so. Sources: Wikipedia, BBS Census 2022 (compiled by citypopulation.de), The Financial Express; the community dataset of the administrative structure (nuhil/bangladesh-geocode) is awaiting verification. <link>Data & verification policy</link>"
+  },
+  "Area": {
+    "notFound": "Area not found",
+    "description": "{place} — administrative information, institutions, services and places to visit, with sources.",
+    "popAdjusted": "Census 2022 (adjusted)",
+    "popEnumerated": "Census 2022 (enumerated)",
+    "popCensus": "Census 2022",
+    "popEstimate": "Estimate",
+    "area": "Area",
+    "areaComputed": "Approximate, from the map",
+    "population": "Population",
+    "enumeratedNote": "This area’s population is the enumerated count; district and division figures are adjusted counts, so the totals will not match exactly.",
+    "and": " and ",
+    "pending": "There is information on {list} in this area, but it is not shown until it has been checked against an official or reliable source. <link>Why?</link>",
+    "map": "Map",
+    "fullMap": "Full map",
+    "quickSearch": "Quick search",
+    "placesTitle": "Important institutions and places",
+    "emptyTitle": "No published places in this area yet",
+    "emptyBody": "You can add a place you know — it will be published after it has been checked.",
+    "addPlace": "Add a new place",
+    "website": "Official website"
+  },
+  "Place": {
+    "notFound": "Not found",
+    "public": "Public",
+    "established": "Established: {year}",
+    "call": "Call",
+    "noPhone": "No verified phone number",
+    "directions": "Directions",
+    "description": "Description",
+    "keyFacts": "Key facts",
+    "contact": "Contact and location",
+    "contactUnverified": "Contact details have not been verified yet.",
+    "reviews": "Reviews",
+    "reviewsCount": "Reviews ({count})",
+    "noReviews": "No reviews yet.",
+    "policyNote": "Under the <link>verification policy</link>, every fact shows its source and verification status."
+  },
+  "PlaceAttr": {
+    "faculties": "Faculties",
+    "departments": "Departments",
+    "institutes": "Institutes",
+    "residential_halls": "Residential halls",
+    "students": "Students",
+    "academic_staff": "Teachers",
+    "campus_acres": "Campus (acres)",
+    "vice_chancellor": "Vice-chancellor",
+    "university_status_year": "University since",
+    "college_established": "College founded",
+    "hospital_opened": "Hospital opened",
+    "beds_history": "Beds",
+    "emergency": "Emergency service",
+    "built_by": "Built by",
+    "style": "Architectural style",
+    "distance_from_rajshahi_km": "Distance from Rajshahi (km)",
+    "complex": "Complex",
+    "managed_by": "Managed by",
+    "founded_by": "Founder"
+  },
+  "Explore": {
+    "metaTitle": "Explore — divisions, districts, upazilas",
+    "title": "Explore Bangladesh",
+    "subtitle": "From divisions to districts, upazilas and city corporations — each area shown with its source and verification status.",
+    "levelsNav": "Administrative level",
+    "divisionNav": "Division",
+    "allDivisions": "All divisions",
+    "empty": "No published areas in this division",
+    "pending": "{n, plural, one {{count} more upazila is} other {{count} more upazilas are}} awaiting verification. <link>Details</link>"
+  },
+  "Category": {
+    "fallbackTitle": "Category",
+    "subNav": "Subcategories",
+    "all": "All",
+    "total": "Total found: {count}",
+    "emptyTitle": "Nothing has been published in this category yet",
+    "emptyBody": "In the pilot phase, only a few sourced places in Rajshahi have been published.",
+    "first": "Back to the start",
+    "next": "Next page"
+  },
+  "Search": {
+    "title": "Search",
+    "typeAll": "All",
+    "typeArea": "Areas",
+    "typePlace": "Places",
+    "hint": "Type in Bangla or English — for example “রাজশাহী”, “rajsahi”, “paba”, “hospital”.",
+    "typeNav": "Result type",
+    "failedTitle": "Search is not available right now",
+    "failedBody": "Could not connect to the server. Please try again in a little while.",
+    "areas": "Areas",
+    "places": "Institutions and places",
+    "noResults": "Nothing found for “{q}”",
+    "noResultsBody": "Check the spelling or try a different word.",
+    "loading": "Searching…"
+  },
+  "Emergency": {
+    "title": "Emergency services",
+    "intro": "The national emergency number for police, fire service and ambulance is 999 — free, 24 hours a day.",
+    "call999": "Call 999",
+    "police": "Police",
+    "fire": "Fire service",
+    "ambulance": "Ambulance",
+    "nearby": "Find emergency services and hospitals nearby",
+    "hotlines": "Important national hotlines",
+    "note": "Only numbers with a source are shown ({label}). The fire service’s new hotline is 102; the old 16163 has been discontinued.",
+    "offlineList": "The server could not be reached, so a saved list is shown."
+  },
+  "Login": {
+    "title": "Sign in",
+    "intro": "A 6-digit code will be sent to your mobile number. You need to sign in to save, write reviews and add information.",
+    "legal": "By signing in you accept our terms of use and privacy policy. We keep only your phone number and display name.",
+    "error429": "Too many attempts. Please try again in a little while.",
+    "error503": "SMS cannot be sent right now. Please try later.",
+    "wrongCode": "The code is not correct.",
+    "expiredCode": "The code has expired or was entered wrongly too many times — get a new code.",
+    "error400": "Enter a valid Bangladeshi mobile number (for example 01712345678).",
+    "errorGeneric": "Something went wrong. Please try again.",
+    "phone": "Mobile number",
+    "sendCode": "Send code",
+    "enterCode": "Enter the code sent to {phone}.",
+    "devCode": "Development server: code {code} (on the real server it goes by SMS)",
+    "code": "6-digit code",
+    "name": "Your name (first time, optional)",
+    "signIn": "Sign in",
+    "changeNumber": "Change number / new code"
+  },
+  "Me": {
+    "title": "My profile",
+    "type": {
+      "new_place": "New place",
+      "new_business": "New business",
+      "new_tourist_spot": "New tourist spot",
+      "area_info": "Area information",
+      "photo": "Photo",
+      "correction": "Correction",
+      "report": "Report"
+    },
+    "memberSince": "Member since {date}",
+    "staff": "You have staff access — the admin panel runs at a separate address.",
+    "points": "Points",
+    "contributions": "Contributions",
+    "approved": "Approved",
+    "myContributions": "My contributions",
+    "newContribution": "New contribution",
+    "moderator": "Moderator: {note}",
+    "emptyTitle": "No contributions yet",
+    "emptyBody": "Add a place in your area or a correction to wrong information.",
+    "myReviews": "My reviews",
+    "noReviews": "You have not written any reviews yet.",
+    "account": "Account"
+  },
+  "Account": {
+    "failed": "That could not be done. Please try again.",
+    "nameUpdated": "Name updated.",
+    "displayName": "Display name",
+    "save": "Save",
+    "signOut": "Sign out",
+    "signOutAll": "Sign out on all devices",
+    "deletionRequested": "You requested deletion of your account on {date}.",
+    "cancelDeletion": "Cancel the request",
+    "confirmDeletion": "Send a request to delete your account? The team will check it and delete it.",
+    "requestDeletion": "Request account deletion"
+  },
+  "Saved": {
+    "title": "Saved",
+    "heading": "Saved areas and places",
+    "emptyTitle": "You have not saved anything yet",
+    "emptyBody": "Press “Save” on any area or place page.",
+    "areas": "Areas",
+    "places": "Places",
+    "offlineNote": "Offline downloads (district packs) are not available yet; the emergency page and hotlines also open offline."
+  },
+  "Contribute": {
+    "metaTitle": "Add information",
+    "title": "Add information about your area",
+    "intro": "A moderator checks every contribution. Once approved, the information is shown labelled “Community data”; when its source has been checked it becomes “Sourced”.",
+    "actions": {
+      "new_place": {
+        "title": "Add a new place",
+        "body": "A school, hospital, office, place to visit or business."
+      },
+      "correction": {
+        "title": "Correct wrong information",
+        "body": "When a page’s name, address, phone or other information is wrong."
+      },
+      "report": {
+        "title": "Report a problem",
+        "body": "A place that has closed, a duplicate or offensive content."
+      }
+    },
+    "howTitle": "How it works",
+    "step1": "Choose the type and enter the information (a Bangla name is required).",
+    "step2": "Give the location — “my location”, or a moderator will set it later.",
+    "step3": "Give a link to the source (a government portal, the institution’s website, etc.) — this makes checking faster.",
+    "step4": "Confirm and submit. Follow the status on your profile: submitted → under review → approved / needs changes / rejected.",
+    "privacy": "Do not give anyone’s personal information (home address, personal phone number). <link>Guidelines</link>"
+  },
+  "Wizard": {
+    "title": "New contribution",
+    "steps": "Steps",
+    "stepType": "Type",
+    "stepDetails": "Details",
+    "stepLocation": "Location",
+    "stepSubmit": "Source & submit",
+    "error401": "Your session has ended — please sign in again. Your draft is saved on this device.",
+    "error429": "Today’s limit has been reached. Your draft is saved; submit it later.",
+    "errorDetail": "Could not submit: {detail}",
+    "errorGeneric": "Could not submit. Your draft is saved on this device.",
+    "locateFailed": "Your location could not be found. You can submit without a location too.",
+    "typeQuestion": "What kind of contribution?",
+    "type": {
+      "new_place": "New place",
+      "correction": "Correct wrong information",
+      "report": "Report a problem"
+    },
+    "targetPlace": "Place: {target}",
+    "targetArea": "Area: {target}",
+    "needsTarget": "To suggest a correction, use the “Report an error” link on the page concerned.",
+    "nameBn": "Name (Bangla) *",
+    "nameEn": "Name (English)",
+    "category": "Type *",
+    "choose": "Choose",
+    "address": "Address",
+    "description": "Description",
+    "phone": "Institution’s phone (not a personal number)",
+    "website": "Website",
+    "field": "Which information?",
+    "fieldPlaceholder": "e.g. phone number, address, name",
+    "currentValue": "What is shown now",
+    "proposedValue": "Correct information *",
+    "details": "Details",
+    "locationIntro": "Giving a location helps the moderator check more easily. Your location is stored only with this contribution.",
+    "useLocation": "Use my current location",
+    "location": "Location:",
+    "clear": "Remove",
+    "evidence": "Source links (one per line, at most 5)",
+    "evidenceHint": "A government portal or the institution’s own website is best. Links to search results are not accepted.",
+    "confirm": "I confirm that, to the best of my knowledge, this information is correct and contains no one’s personal information.",
+    "back": "Previous step",
+    "saveDraft": "Keep as draft",
+    "next": "Next step",
+    "submit": "Submit"
+  },
+  "Offline": {
+    "metaTitle": "Offline",
+    "title": "No internet connection",
+    "body": "This page cannot be loaded right now. Try again when the connection is back. Some pages you opened before may still be visible offline, but their information may be out of date.",
+    "bodyOther": "আপনি অফলাইনে আছেন। আগে খোলা পাতাগুলো হয়তো এখনো দেখা যাবে, তবে তথ্য পুরোনো হতে পারে।",
+    "openEmergency": "Open the emergency services page",
+    "hotlines": "Emergency and service hotlines",
+    "call999": "If life or property is at risk, call <strong>{number}</strong> — Bangladesh’s national emergency number (police, fire service, ambulance). Phone calls do not need the internet.",
+    "callSr": "— call",
+    "allSecondary": "These numbers: {label} — {hint}",
+    "mixed": "The evidence level is written under each number.",
+    "bundled": "This list was saved when this version of the app was built, so it may not be up to date."
+  },
+  "NotFound": {
+    "title": "Page not found",
+    "body": "The address may be wrong, or the area has not been added yet.",
+    "explore": "Explore areas"
+  },
+  "Error": {
+    "title": "Something went wrong",
+    "body": "Could not connect to the server. Please try again in a little while.",
+    "retry": "Try again"
+  },
+  "MapPage": {
+    "title": "Live map — Rajshahi",
+    "subtitle": "Rajshahi District first, then the whole division: boundaries down to unions and every place with a known location."
+  },
+  "MapExplorer": {
+    "cat": {
+      "all": "All",
+      "education": "Education",
+      "health": "Health",
+      "government": "Government",
+      "tourism": "Tourism",
+      "religious": "Religious",
+      "emergency": "Emergency",
+      "transport": "Transport"
+    },
+    "note": "Tap a district to open its page. In the pilot phase only a few places in Rajshahi have been added."
+  },
+  "NearMe": {
+    "title": "Services near me",
+    "subtitle": "Useful institutions and services around your current location.",
+    "loadFailed": "Could not load the information. Please try again.",
+    "current": "Current location",
+    "fallback": "Rajshahi city (your location could not be found)",
+    "yours": "Your location (used only in your browser, not stored)",
+    "locating": "Finding your location…",
+    "update": "Update location",
+    "loading": "Loading…",
+    "empty": "No published places were found within this distance. Try a larger distance. In an emergency, call <link>999</link>."
+  },
+  "Contact": {
+    "title": "Contact",
+    "description": "Send the Elaka360 team a question, feedback or an error in the information.",
+    "subtitleOther": "Elaka360 দলের সঙ্গে যোগাযোগ",
+    "emergency": "<strong>Do not use this form in an emergency.</strong> For police, fire service or ambulance, call <num>{number}</num>.",
+    "formTitle": "Send a message",
+    "formIntro": "Questions, feedback, errors in the information or offers of collaboration — write to us with this form.",
+    "faqTitle": "Frequently asked questions",
+    "faq": {
+      "accuracy": {
+        "q": "How accurate is Elaka360’s information?",
+        "a": "Every published piece of information shows its source and evidence level. So far, the published information is “{label}” — that is, taken from sources such as Wikipedia, census compilations or newspapers, not officially verified. So before an important decision, check with the government office or institution concerned. See the <policy>data & verification policy</policy> for details."
+      },
+      "report": {
+        "q": "How do I report an error?",
+        "a": "Use this form to tell us which page is wrong and how, and if possible give a link to a source for the correct information (for example a government website or gazette). No correction is published without a source; changes reach the site only after review."
+      },
+      "add": {
+        "q": "How do I add a new place or institution?",
+        "a": "After signing in, you can send a suggestion from the <contribute>Add information</contribute> page. The suggestion is reviewed and published only after its source has been checked. Read the rules in the <guidelines>contribution guidelines</guidelines>."
+      },
+      "data": {
+        "q": "How is the information I send used?",
+        "a": "The subject, message and (optional) email you give in this form are stored only to deal with and reply to your message. Details are in the <privacy>privacy policy</privacy>."
+      }
+    }
+  },
+  "ContactForm": {
+    "subjectMin": "The subject must be at least {min} characters.",
+    "messageMin": "The message must be at least {min} characters.",
+    "emailInvalid": "The email address does not look right.",
+    "sendFailed": "The message could not be sent. Please try again in a little while.",
+    "network": "No internet connection, or the server cannot be reached. Check your connection and try again.",
+    "sentTitle": "Thank you, your message has arrived.",
+    "sentBody": "Messages are reviewed, but it may not be possible to reply to every message.",
+    "sendAnother": "Send another message",
+    "subject": "Subject",
+    "subjectPlaceholder": "e.g. An error in some Rajshahi information",
+    "message": "Message",
+    "messagePlaceholder": "Which page, what problem or suggestion — write the details. For a correction, a link to a source helps.",
+    "characters": "characters",
+    "email": "Email",
+    "optional": "(optional)",
+    "emailHint": "Give it if you want a reply. It will be used only to reply to this message.",
+    "honeypot": "Leave this field empty",
+    "emergencyNote": "This form is not for emergencies — call <link>{number}</link>.",
+    "sending": "Sending…",
+    "send": "Send message"
+  },
+  "ContactApi": {
+    "rateLimited": "Too many messages sent. Please try again in a minute.",
+    "subjectRequired": "Enter a subject.",
+    "subjectMin": "The subject must be at least 3 characters.",
+    "subjectMax": "The subject can be at most 120 characters.",
+    "messageRequired": "Enter a message.",
+    "messageMin": "The message must be at least 10 characters.",
+    "messageMax": "The message can be at most 1000 characters.",
+    "emailInvalid": "The email address does not look right.",
+    "unreadable": "The form could not be read. Reload the page and try again.",
+    "serverError": "There was a problem on the server. Please try again in a little while.",
+    "failed": "The message could not be sent. Check the details and try again.",
+    "crossOrigin": "The request was not accepted (different origin).",
+    "badType": "The request type is not correct.",
+    "tooLarge": "The message is too large.",
+    "unreachable": "The server cannot be reached right now. Please try again in a little while."
+  },
+  "About": {
+    "title": "About us",
+    "description": "What Elaka360 is, where its information comes from, what is published and what is planned.",
+    "subtitleOther": "Elaka360 সম্পর্কে",
+    "missionTitle": "Our aim",
+    "mission1": "Elaka360’s aim is simple: that people in Bangladesh can find reliable information about their own area — administrative areas, institutions, services and emergency numbers — in one place, in Bangla, and with sources.",
+    "mission2": "We believe it matters to show the source next to the information. So every published piece of information says where it was taken from, and we do not publish information that has not yet been checked.",
+    "independent": "Elaka360 is an independent initiative. It is not part of the Government of Bangladesh or any government agency, and no government agency has endorsed it.",
+    "howTitle": "How the information works",
+    "howIntro": "Every piece of information has an evidence level. On the site they are labelled like this:",
+    "howSourced": "Only <strong>{official}</strong> or <strong>{secondary}</strong> information whose source is named is shown as “Sourced”. Community data and not-yet-verified information are shown too, but every such page carries a “Not verified” warning.",
+    "howSecondary": "So far, all sourced information comes from secondary sources — such as Wikipedia, the citypopulation.de compilation of the BBS Census 2022, and newspapers. No information has been officially verified yet.",
+    "howCommunity": "The administrative levels below the district (upazilas, unions) come from a community dataset. Until they have been checked against the official list, most of them are shown as “Not verified”.",
+    "howPilot": "Elaka360 is currently in the <strong>Rajshahi pilot</strong> phase: information on institutions and places is for now limited to a few places in Rajshahi District.",
+    "planTitle": "Plans",
+    "planIntro": "The work below is in our plans. These are not promises, and there is no fixed schedule.",
+    "plan1": "Check the lists of upazilas and unions against official sources, step by step.",
+    "plan2": "Add information on institutions and services in districts beyond Rajshahi.",
+    "plan3": "Review and publish users’ corrections and suggestions for new places.",
+    "plan4": "Add upazila and union boundaries to the map.",
+    "moreTitle": "Learn more",
+    "more": {
+      "dataPolicy": {
+        "label": "Data & verification policy",
+        "sub": "Evidence levels, the list of sources and known gaps"
+      },
+      "guidelines": {
+        "label": "Contribution guidelines",
+        "sub": "Rules for adding or correcting information"
+      },
+      "contribute": {
+        "label": "Add information",
+        "sub": "Suggest a new place or a correction"
+      },
+      "contact": {
+        "label": "Contact",
+        "sub": "Send a question or feedback"
+      }
+    }
+  },
+  "Guidelines": {
+    "title": "Contribution guidelines",
+    "description": "Rules for giving information, photos and reviews on Elaka360 — what is accepted and what is rejected.",
+    "subtitleOther": "অবদানের নির্দেশিকা",
+    "intro": "The information, photos and reviews you give help others. To keep the information reliable for everyone, please follow the rules below.",
+    "rulesTitle": "Main rules",
+    "rules": {
+      "source": {
+        "title": "Cite a source",
+        "body": "Give a verifiable source with new information or a correction — for example a link to a government website, a gazette, the institution’s own website or a reliable newspaper. Search engine result pages are not accepted as sources."
+      },
+      "personal": {
+        "title": "No personal information",
+        "body": "Do not give private individuals’ personal phone numbers, home addresses, identity document details or photos. An institution’s public contact details may be given."
+      },
+      "spam": {
+        "title": "No advertising or spam",
+        "body": "Promotional text, irrelevant links, submitting the same information again and again, or fake reviews of your own business are not accepted."
+      },
+      "photos": {
+        "title": "Your own photos",
+        "body": "Only give photos that you took yourself or have permission to use. If people’s faces are clearly visible, their consent is required."
+      },
+      "respect": {
+        "title": "Be respectful in reviews",
+        "body": "Write honestly about your own experience. Abuse, threats, hateful or discriminatory remarks, and attacks on a specific staff member by name are not allowed."
+      }
+    },
+    "rejectedTitle": "What is rejected",
+    "rejected": {
+      "r1": "Information without a source, or that cannot be verified",
+      "r2": "Numbers or statistics based on guesses or hearsay",
+      "r3": "Anyone’s personal information, or photos taken without permission",
+      "r4": "Advertising, spam or irrelevant links",
+      "r5": "Text or photos copied from others",
+      "r6": "Insulting, threatening or hateful language",
+      "r7": "Falsely presenting yourself as a government representative or an official of an institution"
+    },
+    "afterTitle": "What happens after you submit",
+    "after1": "A reviewer looks at suggestions for new places and corrections. A suggestion may be approved, returned for changes, or rejected; you can see the status of each suggestion on your profile. Information is published on the site only after its source has been checked — how, is described in the <link>data & verification policy</link>.",
+    "after2": "Reviews are published as soon as they are submitted. Anyone can report a review that breaks the rules, and it may be removed after review.",
+    "after3": "Repeatedly breaking the rules may lead to an account being limited or closed.",
+    "ctaContribute": "Add information",
+    "ctaTerms": "Terms of use"
+  },
+  "Privacy": {
+    "title": "Privacy policy",
+    "description": "What information Elaka360 collects, why, how long it is kept and how to ask for it to be deleted.",
+    "subtitleOther": "গোপনীয়তা নীতি",
+    "intro": "This page explains in plain language what information about you Elaka360 keeps, and why. The site is new and some things have not been decided yet — they are stated openly here.",
+    "collectedTitle": "What we collect",
+    "collected": {
+      "phone": {
+        "what": "Mobile phone number",
+        "why": "For signing in. A one-time code is sent to the number by SMS. An SMS provider will be used to send the code; it has not been finalised yet. To prevent abuse, the IP address at the time the code was requested is kept with the code record."
+      },
+      "profile": {
+        "what": "Display name and profile settings",
+        "why": "Your name, an optional home area and who can see your profile — you set these yourself. Your name may be shown next to your reviews and contributions."
+      },
+      "session": {
+        "what": "Sign-in sessions",
+        "why": "To keep you signed in, a session record is kept, together with your browser or app identifier (user agent). Signing out ends that session."
+      },
+      "contributions": {
+        "what": "Contributions and reviews you submit",
+        "why": "New places, corrections, reviews and their review history are kept so that the source of information and its changes can be traced. Reviews are published to everyone as soon as they are submitted; a contribution’s information reaches the site once it is approved in review."
+      },
+      "saved": {
+        "what": "Saved places and lists",
+        "why": "The places or areas you save are kept in your account so you can see them later."
+      },
+      "contact": {
+        "what": "Contact form messages",
+        "why": "The subject, message and, if you give it, your email address — only to deal with and reply to your message."
+      }
+    },
+    "browseFree": "You can browse the site without signing in; then none of the account information above is created.",
+    "notStoredTitle": "What we do not store",
+    "notStored": {
+      "nearMe": "<strong>“Near me”:</strong> with your permission, your browser shares your location, and it is used only to find nearby places. Your location is not stored in our database.",
+      "logs": "<strong>Server logs:</strong> the server logs the page or address part (path), time and result of each request, but query strings (such as search terms or location coordinates) are not logged.",
+      "cache": "<strong>Offline cache:</strong> some general pages and data of the site may be stored in your device’s browser for offline viewing. Profile, saved lists, sign-in and contribution pages are not stored this way.",
+      "map": "<strong>Map:</strong> map tiles come from a third-party map service, so while you view the map your browser communicates with that service directly."
+    },
+    "retentionTitle": "How long it is kept",
+    "retention1": "How long each kind of information will be kept is still <strong>to be decided</strong>. Once specific periods are set, they will be written on this page.",
+    "retention2": "Sign-in codes stop working after a short time, but how long code records will be kept is also still to be decided.",
+    "deletionTitle": "Asking for deletion",
+    "deletion1": "While signed in, you can send a request to delete your account from the <link>profile</link> page, and you can cancel the request before it has been processed. Requests are processed by hand by members of the Elaka360 team.",
+    "deletion2": "For any other questions, use the <link>contact form</link>.",
+    "legalTitle": "Legal matters",
+    "legal": "How our practices fit the applicable rules on data protection in Bangladesh is currently being reviewed. This policy may change as a result; if it does, this page will be updated."
+  },
+  "Terms": {
+    "title": "Terms of use",
+    "description": "Terms for using Elaka360: the nature of the information, user content, moderation and the relationship with the government.",
+    "subtitleOther": "ব্যবহারের শর্তাবলি",
+    "intro": "By using Elaka360 you accept the terms below. They are written in plain language.",
+    "s1Title": "1. Information as it is",
+    "s1p1": "The site’s information is taken from the sources named and provided “as is”. We try to keep the information correct, but we cannot guarantee that any information is complete, accurate or up to date. The source and evidence level of each piece of information are explained in the <link>data & verification policy</link>.",
+    "s1p2": "<strong>Before an important decision</strong> — for example about medical care, legal matters, government services, travel or money — check the information against the official source of the government office or institution concerned.",
+    "s1p3": "In an emergency, do not wait for information on the site — call 999 directly.",
+    "s2Title": "2. No relationship with the government",
+    "s2p1": "Elaka360 is an independent initiative. It is not part of any ministry, office or agency of the Government of Bangladesh, does not act on their behalf, and is not endorsed by them. A government institution’s name or number appearing on the site only provides information; it does not mean any partnership.",
+    "s3Title": "3. Content you provide",
+    "s3intro": "When you submit a review, photo, new place or correction, you confirm that:",
+    "s3li1": "the information is true to the best of your knowledge and, where applicable, you have cited a source;",
+    "s3li2": "you own the rights to the photo or text, or have permission to use it;",
+    "s3li3": "it contains no one’s personal information, harassment, hate speech, advertising or anything illegal.",
+    "s3p2": "You give Elaka360 permission to show, edit and store the content you submit on the site. Detailed rules are in the <link>contribution guidelines</link>.",
+    "s4Title": "4. Moderation",
+    "s4p1": "New places and corrections are published only after review. Reviews are published immediately, but anyone can report an inappropriate review. If the guidelines are not followed we may edit, hide or delete content, and if the rules are broken repeatedly we may limit or close the account.",
+    "s5Title": "5. What is not allowed",
+    "s5li1": "putting unusual load on the site or the API, or trying to get around security measures;",
+    "s5li2": "opening or using an account in someone else’s name;",
+    "s5li3": "knowingly submitting false information.",
+    "s6Title": "6. Changes",
+    "s6p1": "The site and these terms may change over time. If they change, this page will be updated.",
+    "s6p2": "To learn how personal information is used, see the <privacy>privacy policy</privacy>. If you have questions, <contact>contact us</contact>."
+  },
+  "DataPolicy": {
+    "title": "Data & verification policy",
+    "description": "Evidence levels of information on Elaka360, what is published, the list of sources, how corrections work and known gaps.",
+    "subtitleOther": "তথ্য ও যাচাই নীতি",
+    "intro": "The rules below decide which information Elaka360 shows and which it does not. The key point: <strong>next to every piece of information it says which source it came from and whether it has been verified.</strong>",
+    "levelsTitle": "The four evidence levels",
+    "sourced": "Sourced",
+    "shownWithWarning": "Shown, labelled “Not verified”",
+    "verifiedWord": "The word “verified” is used only for officially verified information. So far, no information has reached this level.",
+    "diffTitle": "Sourced versus not-yet-verified information",
+    "diffIntro": "A piece of information counts as “Sourced” (publishable) only when:",
+    "diffLi1": "its evidence level is “{official}” or “{secondary}”, <strong>and</strong>",
+    "diffLi2": "the name of the source it was taken from (and a link where possible) is recorded.",
+    "diffRest": "The rest of the information is shown too, so that you can find your own area and point out errors. But every such page carries a “Not verified” warning at the top, and search engines are not allowed to index it. Emergency hotlines are never shown without a source, and any future Open Data export will contain only sourced information. These rules are enforced at the database level.",
+    "whyTitle": "Why most upazilas and unions are “Not verified”",
+    "why1": "The lists of divisions, districts and city corporations were checked against secondary sources and published. But the full list of the levels below the district (upazilas, unions) came from a community dataset, in which some new upazilas and unions are missing or in the wrong place. Until they have been checked against the official list, they are shown as “Not verified”.",
+    "why2": "Exceptions: as part of the Rajshahi pilot, the upazilas of Rajshahi District, and a few areas for which a separate source was found, are sourced.",
+    "populationTitle": "About the population figures",
+    "population": "Population figures are taken from the BBS Census 2022 (via the citypopulation.de compilation), but not on the same basis at every level: <strong>adjusted</strong> figures are used for divisions and districts, and <strong>enumerated</strong> figures for the upazilas of Rajshahi District. So the upazila figures may not add up exactly to the district total.",
+    "correctionsTitle": "How corrections work",
+    "corrections1": "If you see an error, tell us through the <contact>contact form</contact>, or sign in and send a <contribute>correction</contribute> — with a source for the correct information.",
+    "corrections2": "A reviewer on the Elaka360 team looks at the source and approves the suggestion, asks for changes or rejects it.",
+    "corrections3": "If approved, the information is updated and the new source is shown with it. A record of changes is kept.",
+    "correctionsMore": "See the detailed rules in the <link>contribution guidelines</link>.",
+    "sourcesTitle": "Sources of published information",
+    "newTab": "(opens in a new tab)",
+    "sourcesNote": "This list is generated from the dataset of this version of the site.",
+    "heldBackTitle": "Sources of information awaiting verification",
+    "heldBackNote": "{label} — the lists of upazilas and unions come from here",
+    "gapsTitle": "Known gaps",
+    "gapsIntro": "Gaps in the dataset that we know about, and the plans to fill them (from the project’s quality-check list):",
+    "plannedFix": "Planned fix:",
+    "gapArea": {
+      "unions": "Unions",
+      "upazilas": "Upazilas",
+      "codes": "Geocodes",
+      "pourashavas": "Pourashavas",
+      "wardsVillages": "Wards and villages",
+      "area": "Area",
+      "population": "Population",
+      "places": "Places and institutions"
+    }
+  },
+  "LiveMap": {
+    "label": "Live map",
+    "panel": "Map details",
+    "scope": "Area",
+    "category": "Category",
+    "layers": "Layers",
+    "scopes": {
+      "district": "Rajshahi District",
+      "division": "Rajshahi Division"
+    },
+    "layer": {
+      "coarse": "Upazila boundaries",
+      "fine": "Union boundaries",
+      "places": "Places"
+    },
+    "cat": {
+      "all": "All",
+      "education": "Education",
+      "health": "Health",
+      "government": "Government",
+      "emergency": "Emergency",
+      "tourism": "Tourism",
+      "religious": "Religious",
+      "transport": "Transport",
+      "finance": "Banks",
+      "agriculture": "Agriculture",
+      "business": "Business",
+      "other": "Other"
+    },
+    "starting": "Loading map…",
+    "loading": "Updating…",
+    "live": "Live · updated {time}",
+    "inView": "{n} places in view",
+    "inViewTitle": "On the map now",
+    "noneInView": "No places with a map location here. Zoom out or pick another category.",
+    "placesOff": "Places are hidden. Turn on “Places” to see them.",
+    "zoomIn": "Too many places to show at once. Zoom in to see them all.",
+    "hint": "Tap a union or upazila to see its population and places — including places that have no map location yet. The map checks for newly published data every few minutes.",
+    "population": "Population (2022)",
+    "places": "Places",
+    "noPin": "no map location yet",
+    "openArea": "Open the area page",
+    "close": "Close",
+    "failed": "The map could not be loaded. Check your internet connection.",
+    "note": "Boundaries: geoBoundaries / HDX (OCHA). Places: government registers (DGHS, BANBEIS, DPE, UGC, Department of Archaeology, police, fire service, portals). Most schools and offices have no published coordinates yet, so they appear in the area panel but not as pins."
+  }
+}

@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@import "@elaka360/ui/tokens.css";
+@import "@elaka360/ui/theme.css";
+
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--e360-bg);
+  color: var(--e360-text);
+  font-family: var(--font-bn);
+  line-height: 1.55;
+}
+:focus-visible { outline: 2px solid var(--e360-secondary); outline-offset: 2px; }
+.font-en { font-family: var(--font-en); }
+
+/* Component classes live in the components layer so Tailwind utilities (e.g. lg:hidden) can override them. */
+@layer components {
+  /* Form controls share one look. */
+  .input {
+    width: 100%;
+    border: 1px solid var(--e360-border);
+    background: var(--e360-surface);
+    color: var(--e360-text);
+    border-radius: var(--e360-radius-sm);
+    padding: 0.45rem 0.7rem;
+    font-size: 0.9rem;
+    min-height: 2.4rem;
+  }
+  .input:focus { outline: 2px solid var(--e360-secondary); outline-offset: 0; border-color: transparent; }
+  .input:disabled { opacity: 0.6; cursor: not-allowed; }
+  .input[aria-invalid='true'] { border-color: var(--e360-danger); }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+    border-radius: var(--e360-radius-sm); padding: 0.45rem 0.9rem; font-size: 0.9rem; font-weight: 600;
+    min-height: 2.4rem; border: 1px solid transparent; cursor: pointer; white-space: nowrap;
+  }
+  .btn:disabled { opacity: 0.55; cursor: not-allowed; }
+  .btn-primary { background: var(--e360-primary); color: var(--e360-on-primary, #fff); }
+  .btn-primary:hover:not(:disabled) { background: var(--e360-primary-hover); }
+  .btn-outline { background: var(--e360-surface); border-color: var(--e360-border); color: var(--e360-text); }
+  .btn-outline:hover:not(:disabled) { background: var(--e360-surface-tint); }
+  .btn-danger { background: var(--e360-danger); color: var(--e360-on-danger, #fff); }
+  .btn-danger:hover:not(:disabled) { filter: brightness(0.92); }
+  .btn-sm { min-height: 2rem; padding: 0.25rem 0.6rem; font-size: 0.8rem; }
+
+  .table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+  .table th { text-align: left; font-weight: 600; color: var(--e360-text-muted); font-size: 0.78rem; padding: 0.55rem 0.75rem; border-bottom: 1px solid var(--e360-border); white-space: nowrap; }
+  .table td { padding: 0.55rem 0.75rem; border-bottom: 1px solid var(--e360-border); vertical-align: top; }
+  .table tbody tr:hover { background: var(--e360-surface-tint); }
+  .table tbody tr:last-child td { border-bottom: 0; }
+}

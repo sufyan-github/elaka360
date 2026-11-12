@@ -1,0 +1,24 @@
+{
+  "key": "RMP_PORTAL_2026",
+  "name": "Rajshahi Metropolitan Police official portal (rmp.gov.bd)",
+  "organization": "Rajshahi Metropolitan Police, Bangladesh Police",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://rmp.gov.bd/",
+    "https://rmp.gov.bd/pages/static-pages/695e3b09c4774958d7b72177",
+    "https://rmp.gov.bd/pages/static-pages/695e3b08c4774958d7b7214e"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Rajshahi Metropolitan Police (rmp.gov.bd), Bangladesh National Portal",
+  "files": {
+    "areas.csv": "27b939243bb03d50d7ca066368b9c1f76bd4e875445a90fa74adb07c753ba2d2",
+    "facts.csv": "dff27b76602cea3a992ee946e3ca6d54dad3bc1189dda9d9a45393d5d250f67f",
+    "raw/ek_nojore_rmp.txt": "8cc3d802cf40963e1475b44bb9632ec352d4b7951baf28bea6fbd734d1927456",
+    "raw/units.txt": "cddc819c14f4f4f5a42cb0f6907c823e5e2bf91428e2dff2193bd432a29572ae"
+  },
+  "notes": "এক নজরে আরএমপি (updated 2026-04-29) and the units page (updated 2025-08-14) both give 12 thanas. Thana subsites (<name>ps.rmp.gov.bd) are empty templates; no thana-to-ward mapping is published. Phone numbers on the units page are not copied (redacted in raw/)."
+}

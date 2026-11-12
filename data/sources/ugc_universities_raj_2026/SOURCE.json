@@ -1,0 +1,22 @@
+{
+  "key": "UGC_UNIVERSITIES_RAJ_2026",
+  "name": "UGC university register — universities in Rajshahi Division",
+  "organization": "University Grants Commission of Bangladesh (UGC)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://www.ugc.gov.bd/universities",
+    "https://www.ugc.gov.bd/universities/public-universities",
+    "https://www.ugc.gov.bd/universities/private-universities"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Source: University Grants Commission of Bangladesh (ugc.gov.bd)",
+  "notes": "All 181 universities on ugc.gov.bd (public, private, international, CBHE) were read from the page data embedded in each university page (/university/<slug>); kept where the UGC campus address names a Rajshahi-Division district, or, when UGC gives no address at all, where the university's name does (flagged in notes). Officials' names (VC, registrar etc.) are dropped. Phones: only landline/hotline numbers kept (mobile numbers dropped as possibly personal); e-mails: only the university's own domain or institutional-looking addresses. No coordinates. Licence not stated.",
+  "files": {
+    "places.csv": "d96a1643e2f3de396ad16af26869903e3f691e87a3ca60a6173727aacbc8cfc7",
+    "raw/ugc_universities_rajshahi_division.json": "9a18a00684a4ed2f5c99185a142d4d409d1a94da1abafdba7f85f6fb3d7a8b93"
+  }
+}

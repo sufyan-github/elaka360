@@ -1,0 +1,58 @@
+[
+ {
+  "number": "999",
+  "name_bn": "জাতীয় জরুরি সেবা",
+  "name_en": "National emergency service (police, fire, ambulance)",
+  "category": "emergency",
+  "evidence_level": "secondary",
+  "notes": ""
+ },
+ {
+  "number": "102",
+  "name_bn": "ফায়ার সার্ভিস ও সিভিল ডিফেন্স",
+  "name_en": "Fire Service & Civil Defence",
+  "category": "fire",
+  "evidence_level": "secondary",
+  "notes": "Replaced 16163, which was to be discontinued after 31 Dec 2024. Mockups still show 16163."
+ },
+ {
+  "number": "333",
+  "name_bn": "জাতীয় তথ্য ও সেবা বাতায়ন",
+  "name_en": "National helpline (information & services)",
+  "category": "government",
+  "evidence_level": "secondary",
+  "notes": ""
+ },
+ {
+  "number": "109",
+  "name_bn": "নারী ও শিশু নির্যাতন প্রতিরোধ",
+  "name_en": "Violence against women & children helpline",
+  "category": "protection",
+  "evidence_level": "secondary",
+  "notes": ""
+ },
+ {
+  "number": "106",
+  "name_bn": "দুর্নীতি দমন কমিশন",
+  "name_en": "Anti-Corruption Commission",
+  "category": "government",
+  "evidence_level": "secondary",
+  "notes": ""
+ },
+ {
+  "number": "105",
+  "name_bn": "জাতীয় পরিচয়পত্র সেবা",
+  "name_en": "NID services",
+  "category": "government",
+  "evidence_level": "secondary",
+  "notes": ""
+ },
+ {
+  "number": "131",
+  "name_bn": "বাংলাদেশ রেলওয়ে",
+  "name_en": "Bangladesh Railway",
+  "category": "transport",
+  "evidence_level": "secondary",
+  "notes": ""
+ }
+]

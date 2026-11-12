@@ -1,0 +1,21 @@
+{
+  "key": "BD_POLICE_CONTACTS_2020",
+  "name": "Bangladesh Police HQ — Contacts of Bangladesh Police (RMP and Rajshahi Range sheets)",
+  "organization": "Bangladesh Police Headquarters",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf",
+    "https://www.police.gov.bd/storage/upload/announcement/EcDDy28T7DJdOqyuVB2CSiTjUAX8kTiy1HBoOPHj.xlsx"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": "2020-10-03",
+  "license": null,
+  "license_url": null,
+  "attribution": "Bangladesh Police (police.gov.bd)",
+  "notes": "No licence stated. XLSX 'Contacts Of Bangladesh Police' uploaded 03-10-2020 (Last-Modified 2020-10-03). Only the RMP and Rajshahi Range sheets are used (raw/ keeps those rows as CSV; the full 1.5 MB workbook is re-downloaded by fetch.py). Designations only, no personal names. Old 2020 numbers: the 01320-series 'New Number' values match the 2026 district/RMP portals where checked; the 'Current Number' column is the pre-2020 numbering.",
+  "files": {
+    "places.csv": "e94860740300791a9afb565cf1fe29f1b5a79d7cf350a8311c0825151fb08f24",
+    "raw/police_contacts_2020_rmp_rajshahi_range.csv": "d68f5ff1d472c70669e41f25f3e393b10a69fb801f23f218bed34eb15a85cbb5"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "key": "RAJSHAHI_POLICE_2026",
+  "name": "Rajshahi District Police — thanas, SP office and control room numbers",
+  "organization": "Rajshahi District Police (Bangladesh Police)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://police.rajshahi.gov.bd/pages/static-pages/697f6dd335ce18e1c06b1c47",
+    "https://police.rajshahi.gov.bd/pages/static-pages/697f79bd35ce18e1c06b53d5"
+  ],
+  "accessed": "2026-11-12",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Office of the Superintendent of Police, Rajshahi (police.rajshahi.gov.bd)",
+  "notes": "No licence stated. Institutional numbers only (OC and duty-officer official mobiles, official e-mails); no officer names. The portal's map link for the SP office is a Google Maps search URL, not a published coordinate, so no lat/lon.",
+  "files": {
+    "places.csv": "d6626fcb6964a869107cf47f2f9e8c0a3e4d69bbc7bfdf619846f880ad5ca83d",
+    "facts.csv": "beeaf13fb5cd8fccd2c71c9f294e7fdd051c73a5f4bafa3c3e218e52676c1f15",
+    "raw/rajshahi_police_contact.txt": "dcc69afae1a22dc4c7cd33bafe59b16a2cbc7c93c75ecd282e9d6364ea202b38",
+    "raw/rajshahi_police_circles.txt": "f510e52fc9ca033d7826547a02d4cec60ccff9f1a094f80140a545d85cd483c2"
+  }
+}
