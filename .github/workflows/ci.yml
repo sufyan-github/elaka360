@@ -70,8 +70,8 @@ jobs:
       - name: Lint
         run: pnpm lint && pnpm lint:root
 
-      - name: Build
-        run: pnpm build
+      - name: Build packages and API
+        run: pnpm --filter @elaka360/shared --filter @elaka360/api build
 
       - name: Typecheck
         run: pnpm typecheck
@@ -91,6 +91,9 @@ jobs:
       - name: Database — check every API query
         run: python3 scripts/check_sql.py
 
+      - name: Edge export (D1 rows, static map and search files) from the seeded database
+        run: node apps/api/dist/cli/export-edge.js
+
       - name: Search — build Typesense index
         run: |
           for i in $(seq 1 30); do curl -sf http://localhost:8108/health && break; sleep 1; done
@@ -100,6 +103,15 @@ jobs:
         run: |
           node apps/api/dist/main.js > api.log 2>&1 &
           for i in $(seq 1 30); do curl -sf $API_URL/health && break; sleep 1; done
+
+      - name: Edge API (D1) — load a local D1 and compare every public endpoint with the NestJS API
+        env:
+          WRANGLER_SEND_METRICS: "false"
+        run: |
+          node scripts/d1-sync.mjs --local
+          (cd apps/edge-api && npx wrangler dev --port 8789 --ip 127.0.0.1 > ../../edge-api.log 2>&1 &)
+          for i in $(seq 1 60); do curl -sf -o /dev/null http://127.0.0.1:8789/health && break; sleep 1; done
+          python3 scripts/edge-parity.py "$API_URL" http://127.0.0.1:8789
 
       - name: API smoke + integration tests (labelled visibility, the default)
         run: |
@@ -112,6 +124,9 @@ jobs:
           for i in $(seq 1 30); do curl -sf http://localhost:4001/health && break; sleep 1; done
           API_URL=http://localhost:4001 node scripts/smoke-api.mjs
           API_URL=http://localhost:4001 node --test scripts/integration-api.test.mjs
+
+      - name: Build web + admin (pages are pre-rendered from the running API)
+        run: pnpm --filter @elaka360/web --filter @elaka360/admin build
 
       - name: Start web + admin
         run: |
@@ -139,5 +154,6 @@ jobs:
         if: always()
         run: |
           echo "--- api.log"; tail -n 80 api.log || true
+          echo "--- edge-api.log"; tail -n 40 edge-api.log || true
           echo "--- web.log"; tail -n 80 web.log || true
           echo "--- admin.log"; tail -n 40 admin.log || true

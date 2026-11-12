@@ -16,7 +16,9 @@
     "seed:build": "python3 pipelines/build_seed.py",
     "lint:root": "eslint scripts",
     "e2e": "playwright test",
-    "test:integration": "node --test scripts/integration-api.test.mjs"
+    "test:integration": "node --test scripts/integration-api.test.mjs",
+    "edge:export": "node apps/api/dist/cli/export-edge.js",
+    "edge:sync:local": "node scripts/d1-sync.mjs --local"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",

@@ -1,71 +1,57 @@
 # Deployment
 
-Production deployment has **not** been performed from this repository yet. The chosen setup is **Cloudflare + Render** (below). The generic procedure after it applies to any host.
+**Live since 12 Nov 2026** on Cloudflare's free plan: https://elaka360.abusufyan.online. It serves the public site:
+areas, places, search, the live map and emergency numbers. Sign-in, contributions and the admin need an SMS gateway and
+the full API, so they are not deployed yet (see "Later" below).
 
-## Cloudflare + Render (production setup)
+## Cloudflare (free plan)
 
 | Part | Where | Address |
 |---|---|---|
-| Public website (`apps/web`) | Cloudflare Workers (OpenNext) | https://elaka360.abusufyan.online |
-| Admin (`apps/admin`) | Cloudflare Workers (OpenNext) | https://elaka360-admin.abusufyan.online |
-| API (`apps/api`) | Render web service (Docker, `apps/api/Dockerfile`) | https://elaka360-api.abusufyan.online |
-| Database | Render PostgreSQL 16 (PostGIS, no public access) | internal |
+| Website (`apps/web`) | Worker `elaka360-web` (OpenNext); page cache in R2 `elaka360-web-cache`, Durable Object revalidation queue | https://elaka360.abusufyan.online |
+| Public API (`apps/edge-api`) | Worker `elaka360-api` on D1 `elaka360` (APAC); reached by the website through a service binding | https://elaka360-api.abusufyan.online |
+| Map boundaries + pins, search index | static files in the website (`/data/map`, `/data/search`) | — |
 
-Hostnames use one level under `abusufyan.online` because Cloudflare's free certificate covers `*.abusufyan.online` only (`admin.elaka360.abusufyan.online` would need a paid certificate).
+### How it fits the free plan
 
-### How a release works
+- **The API is a snapshot of the reference API.**
+  - The NestJS API on PostgreSQL stays the source of truth. `apps/api/src/cli/export-edge.ts` runs its own services against a database loaded with the seed and writes every public response: area pages, place pages, ordered lists and stats.
+  - The Worker only looks these up, so each request uses little CPU (the free limit is 10 ms) and few D1 rows (5 million reads a day).
+  - In CI, `scripts/edge-parity.py` compares 39 endpoints of the Worker with the NestJS API and fails on any difference.
+- **D1 writes are limited to 100,000 rows a day, shared by every database in the account.**
+  - `scripts/d1-sync.mjs` writes only rows whose content hash changed, and it stops at `--budget`; running it again continues.
+  - A full load is about 74,000 rows, so the first load was split over two days. It loads curated places first, then places on the map, then the rest.
+- **Search runs in the browser** (`apps/web/lib/browser-search.ts`) over a static index of about 560 KB compressed, loaded on the first search. A server-side substring search would use up D1's read allowance.
+- **The map loads static files.** It refreshes them every 5 minutes, which picks up new releases.
+- **Pages are cached in R2.** Home, area and place pages are refreshed every 5 minutes. `/c/<category>` renders on every visit and is the page most at risk of Cloudflare's "Error 1102" (CPU limit). Watch the Worker's metrics.
 
-Pushing to `main` runs **CI** (`.github/workflows/ci.yml`). When CI passes, **Deploy** (`.github/workflows/deploy.yml`) runs:
+### Release (GitHub Actions, `.github/workflows/deploy.yml`)
 
-1. **API.** It calls Render's deploy hook for that exact commit. Render builds the image, runs `scripts/db-migrate.sh` as the pre-deploy step (new migrations only, never drops data), then switches traffic. The job waits until `/health` reports the released commit.
-2. **Website and admin.** They are built against the live API, then deployed with `opennextjs-cloudflare deploy`, which also fills the website's page cache. Cloudflare creates the DNS records and certificates for the custom domains. A smoke test checks `/emergency` and `/login`.
+After CI passes on `main`, or when started by hand:
+1. A throwaway PostGIS database in the job is loaded with the seed, and `export-edge` runs.
+2. The changed D1 rows are synced. Exit code 10 means the write budget was reached: the run warns, and the next run finishes the load.
+3. The API Worker is deployed. The job waits until `/health` reports the commit.
+4. The website is built against the live API and deployed (the R2 page cache is filled), then smoke-tested.
 
-A part whose secrets are missing is skipped with a notice, so the setup can be done in stages. You can also start Deploy by hand (Actions → Deploy → Run workflow).
+### One-time setup (already done on 12 Nov 2026, except the GitHub secrets)
 
-### One-time setup
+- D1 `elaka360` (id in `apps/edge-api/wrangler.jsonc`), R2 bucket `elaka360-web-cache`, both Workers with custom domains, and the `EDGE_SHARED_SECRET` Worker secret on both Workers.
+- **GitHub secrets, needed for automatic releases:**
+  - `CLOUDFLARE_ACCOUNT_ID` = `d89998f5da60c9ff528edc0f2a7fca59`.
+  - `CLOUDFLARE_API_TOKEN`: a custom token (My Profile → API Tokens) with these permissions:
+    - Account: **Workers Scripts – Edit**, **D1 – Edit**, **Workers R2 Storage – Edit**, **Account Settings – Read**.
+    - Zone `abusufyan.online`: **Workers Routes – Edit**, **Zone – Read**, **DNS – Edit**.
+  - Optional `EDGE_SHARED_SECRET`: the Workers already have one. If you set this, it replaces it on both Workers.
+- **Manual release from a signed-in machine** (`npx wrangler login`):
+  - Run `pnpm db:reset`, then `pnpm --filter @elaka360/api build && pnpm edge:export`.
+  - Run `node scripts/d1-sync.mjs --remote`.
+  - In `apps/edge-api`, run `npx wrangler deploy`.
+  - In `apps/web`, run `API_URL=https://elaka360-api.abusufyan.online NEXT_PUBLIC_SITE_URL=https://elaka360.abusufyan.online pnpm cf:build && pnpm cf:deploy`.
 
-**1. Render (API + database)**
-1. Sign in at render.com and connect your GitHub account. Choose **New → Blueprint**, pick this repository, and apply `render.yaml`. This creates `elaka360-api` and `elaka360-db` in Singapore.
-2. When asked for values:
-   - `EDGE_SHARED_SECRET`: generate one with `openssl rand -base64 48` and keep it for step 3.
-   - `SMS_PROVIDER`: leave empty. Phone sign-in returns 503 until an SMS gateway is integrated, but browsing works.
-3. After the first deploy succeeds, open **elaka360-api → Shell** and run `bash scripts/db-seed-once.sh`. It loads the reference data once and refuses if the database already has data.
-4. **elaka360-api → Settings → Custom Domains** lists `elaka360-api.abusufyan.online`. In Cloudflare DNS add a **CNAME** `elaka360-api` → `<service>.onrender.com`, set to **DNS only** (grey cloud), so Render can issue its certificate.
-5. Copy the **Deploy Hook** URL from **elaka360-api → Settings**. It is a secret.
+### Later: the full API (accounts, contributions, admin)
 
-**2. Cloudflare**
-1. Enable **R2** (dashboard → R2). The free tier is enough, but Cloudflare asks for a payment method. It stores the website's page cache.
-2. Create an API token (My Profile → API Tokens → Create custom token) with these permissions:
-   - Account: **Workers Scripts – Edit**, **Workers R2 Storage – Edit**, **Account Settings – Read**.
-   - Zone `abusufyan.online`: **Workers Routes – Edit**, **DNS – Edit**, **Zone – Read**.
-3. Note the **Account ID**, shown on the dashboard's right-hand side.
-
-**3. GitHub (repository → Settings → Secrets and variables → Actions)**
-- `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`: from step 2.
-- `RENDER_DEPLOY_HOOK_URL`: from step 1.5.
-- `EDGE_SHARED_SECRET`: the same value as in Render.
-
-Optional: create the environment **production** (Settings → Environments) with required reviewers, so every release waits for an approval.
-
-**4. First release.** Merge this branch into `main`. The Deploy workflow only runs from the default branch.
-
-### Visitor IPs and rate limits
-
-On Workers, every API call comes from Cloudflare's addresses. The website and admin therefore send the visitor's IP (from `CF-Connecting-IP`) in `X-Edge-Client-IP`, together with `EDGE_SHARED_SECRET`. The API trusts that IP only when the secret matches (`apps/api/src/common/edge-ip.ts`), so per-visitor limits work and direct callers cannot forge an IP. Without the secret, all visitors share Cloudflare's IPs and hit the sign-in limits together.
-
-### Costs (approximate, Nov 2026)
-
-| Part | Cost |
-|---|---|
-| Render web service `0.5c-512mb` (paid, needed for the pre-deploy migration step) | about $7/month |
-| Render Postgres `0.1c-256mb` | about $6/month |
-| Cloudflare Workers, R2 and Durable Objects free tiers | $0 at low traffic |
-
-### Not set up yet
-
-- **SMS gateway:** needed for sign-in and the admin. Until it exists, the first super admin cannot sign in.
-- **Typesense:** search uses PostgreSQL. To add it, set `TYPESENSE_URL` and `TYPESENSE_API_KEY` on Render and run `search:reindex` from the Render Shell.
-- **Error tracking:** none is configured.
+These need the NestJS API with PostgreSQL and an SMS gateway. `apps/api/Dockerfile` and `render.yaml` prepare a Render deployment (about $13/month).
+When that exists, point the website's sign-in and account routes at it, or move those parts to D1 as well.
 
 ## Components
 

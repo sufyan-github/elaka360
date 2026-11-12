@@ -2,6 +2,7 @@ import 'server-only';
 import { NextResponse, type NextRequest } from 'next/server';
 import type { AuthTokens } from '@elaka360/shared';
 import { API_URL } from './api';
+import { apiFetch } from './edge';
 
 const TIMEOUT_MS = Number(process.env.API_TIMEOUT_MS ?? 5000);
 export const AT_COOKIE = 'e360_at';
@@ -31,7 +32,7 @@ export function edgeHeaders(ip: string): Record<string, string> {
 export async function forward(path: string, init: RequestInit & { ip?: string | null } = {}): Promise<Response> {
   const { ip, ...rest } = init;
   try {
-    return await fetch(`${API_URL}${path}`, {
+    return await apiFetch(`${API_URL}${path}`, {
       ...rest,
       headers: { ...(rest.headers as Record<string, string>), ...(ip ? edgeHeaders(ip) : {}) },
       cache: 'no-store',

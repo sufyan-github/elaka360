@@ -1,4 +1,5 @@
 import 'server-only';
+import { apiFetch } from './edge';
 import { cookies } from 'next/headers';
 import type { Me } from '@elaka360/shared';
 import { API_URL } from './api';
@@ -14,7 +15,7 @@ export async function currentUser(): Promise<Me | null> {
   const token = await accessToken();
   if (!token) return null;
   try {
-    const res = await fetch(`${API_URL}/v1/me`, { headers: { Authorization: `Bearer ${token}` }, cache: 'no-store', signal: AbortSignal.timeout(5000) });
+    const res = await apiFetch(`${API_URL}/v1/me`, { headers: { Authorization: `Bearer ${token}` }, cache: 'no-store', signal: AbortSignal.timeout(5000) });
     return res.ok ? ((await res.json()) as Me) : null;
   } catch {
     return null;
@@ -26,7 +27,7 @@ export async function authedGet<T>(path: string): Promise<T | null> {
   const token = await accessToken();
   if (!token) return null;
   try {
-    const res = await fetch(`${API_URL}${path}`, { headers: { Authorization: `Bearer ${token}` }, cache: 'no-store', signal: AbortSignal.timeout(5000) });
+    const res = await apiFetch(`${API_URL}${path}`, { headers: { Authorization: `Bearer ${token}` }, cache: 'no-store', signal: AbortSignal.timeout(5000) });
     return res.ok ? ((await res.json()) as T) : null;
   } catch {
     return null;

@@ -12,8 +12,26 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 
 const STYLE_URL = process.env.NEXT_PUBLIC_MAP_STYLE_URL ?? 'https://tiles.openfreemap.org/styles/positron';
 const CATEGORIES = ['education', 'health', 'government', 'emergency', 'tourism', 'religious', 'transport', 'finance', 'agriculture', 'business', 'other'];
-const REFRESH_MS = 60_000;      // live refresh while the tab is visible
-const PIN_LIMIT = 5000;         // the API's per-request cap
+const REFRESH_MS = 300_000;     // re-check the published data every 5 minutes while the tab is visible
+/** Static map data written at release time by apps/api/src/cli/export-edge.ts (no API or database call per view). */
+const PINS_URL = '/data/map/pins-10002.json';
+const boundaryUrl = (id: number, group: 'coarse' | 'fine') => `/data/map/b-${id}-${group}.json`;
+type PinFile = { fields: string[]; rows: unknown[][] };
+let pinsCache: { at: number; features: Feature<Point, PinProps & { district_id: number | null }>[] } | null = null;
+async function loadPinFile(force: boolean) {
+  if (pinsCache && !force) return pinsCache.features;
+  const res = await fetch(PINS_URL, { cache: force ? 'no-cache' : 'default' });   // no-cache = revalidate (cheap 304)
+  if (!res.ok) throw new Error(String(res.status));
+  const { fields, rows } = (await res.json()) as PinFile;
+  const features = rows.map((r) => {
+    const p = Object.fromEntries(fields.map((f, i) => [f, r[i]])) as Record<string, unknown>;
+    const { lat, lon, ...props } = p;
+    return { type: 'Feature' as const, geometry: { type: 'Point' as const, coordinates: [lon as number, lat as number] },
+             properties: props as unknown as PinProps & { district_id: number | null } };
+  });
+  pinsCache = { at: Date.now(), features };
+  return features;
+}
 
 /** Rajshahi District first, then the whole division (more areas follow as their data is collected). */
 export const SCOPES = {
@@ -79,8 +97,8 @@ export function LiveMap({ scope, category, layers }: {
   const [selected, setSelected] = useState<AreaProps | null>(null);
   const [areaPlaces, setAreaPlaces] = useState<{ items: PlaceSummary[]; total: number } | null>(null);
 
-  /** Load the pins inside the current view (plus a margin) for the active scope and category. */
-  const loadPins = useCallback(async () => {
+  /** Pins for the active scope and category, from the static file (filtered here, in the browser). */
+  const loadPins = useCallback(async (force = false) => {
     const map = mapRef.current;
     if (!map || !map.getSource('places')) return;
     const { scope: s, category: c, layers: l } = stateRef.current;
@@ -89,19 +107,19 @@ export function LiveMap({ scope, category, layers }: {
       setInView({ total: 0, byCat: {}, truncated: false });
       return;
     }
-    const b = map.getBounds();
-    const padX = (b.getEast() - b.getWest()) * 0.2, padY = (b.getNorth() - b.getSouth()) * 0.2;
-    const bbox = [b.getWest() - padX, b.getSouth() - padY, b.getEast() + padX, b.getNorth() + padY].map((n) => n.toFixed(4)).join(',');
-    const params = new URLSearchParams({ area_id: String(SCOPES[s].id), bbox });
-    if (c) params.set('category', c);
-    abortRef.current?.abort();
     const ctl = new AbortController();
+    abortRef.current?.abort();
     abortRef.current = ctl;
     setLoading(true);
     try {
-      const res = await fetch(`/api/places-geo?${params}`, { signal: ctl.signal });
-      if (!res.ok) throw new Error(String(res.status));
-      const fc = (await res.json()) as FeatureCollection<Point, PinProps>;
+      const all = await loadPinFile(force);
+      if (ctl.signal.aborted) return;
+      const district = s === 'district' ? SCOPES.district.id : null;
+      const fc: FeatureCollection<Point, PinProps> = {
+        type: 'FeatureCollection',
+        features: all.filter((f) => (district === null || f.properties.district_id === district)
+          && (!c || f.properties.category_key === c || f.properties.subcategory_key === c)),
+      };
       (map.getSource('places') as GeoJSONSource | undefined)?.setData(fc);
       const byCat: Record<string, number> = {};
       const view = map.getBounds();
@@ -112,7 +130,7 @@ export function LiveMap({ scope, category, layers }: {
         total++;
         byCat[f.properties.category_key] = (byCat[f.properties.category_key] ?? 0) + 1;
       }
-      setInView({ total, byCat, truncated: fc.features.length >= PIN_LIMIT });
+      setInView({ total, byCat, truncated: false });
       setUpdated(new Date());
     } catch (e) {
       if ((e as Error).name !== 'AbortError') console.warn('pins failed', e);
@@ -130,7 +148,7 @@ export function LiveMap({ scope, category, layers }: {
     const key = `${cfg.id}:${cfg.fine}`;
     if (!l.fine || map.getZoom() < cfg.fineZoom || fineLoaded.current === key) return;
     fineLoaded.current = key;
-    const res = await fetch(`/api/boundaries?area_id=${cfg.id}&levels=${cfg.fine}`);
+    const res = await fetch(boundaryUrl(cfg.id, 'fine'));
     if (res.ok) (map.getSource('fine') as GeoJSONSource).setData((await res.json()) as AreaFC);
     else fineLoaded.current = null;
   }, []);
@@ -307,7 +325,7 @@ export function LiveMap({ scope, category, layers }: {
     (map.getSource('fine') as GeoJSONSource).setData(empty);
     setSelected(null);
     (async () => {
-      const res = await fetch(`/api/boundaries?area_id=${cfg.id}&levels=${cfg.coarse}`);
+      const res = await fetch(boundaryUrl(cfg.id, 'coarse'));
       if (cancelled || !res.ok) return;
       const fc = (await res.json()) as AreaFC;
       (map.getSource('coarse') as GeoJSONSource).setData(fc);
@@ -330,10 +348,10 @@ export function LiveMap({ scope, category, layers }: {
     void loadPins();
   }, [ready, category, layers.coarse, layers.fine, layers.places, loadPins, loadFine]);
 
-  // Live: refresh pins every minute while visible, and when the tab comes back.
+  // Live: re-check the published pins every few minutes while visible, and when the tab comes back.
   useEffect(() => {
     if (!ready) return;
-    const tick = () => { if (document.visibilityState === 'visible') void loadPins(); };
+    const tick = () => { if (document.visibilityState === 'visible') void loadPins(true); };
     const id = setInterval(tick, REFRESH_MS);
     document.addEventListener('visibilitychange', tick);
     return () => { clearInterval(id); document.removeEventListener('visibilitychange', tick); };

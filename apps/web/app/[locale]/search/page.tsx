@@ -1,13 +1,10 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { LEVEL_LABEL } from '@elaka360/shared';
-import { ApiError, api, type SearchResult } from '@/lib/api';
 import { asLocale } from '@/lib/locale';
 import { localeAlternates } from '@/lib/meta';
 import { Link } from '@/i18n/navigation';
-import { AreaCard, PlaceCard } from '@/components/cards';
 import { SearchBox } from '@/components/SearchBox';
-import { EmptyState, Section } from '@/components/ui';
+import { SearchResults } from './SearchResults';
 
 type Props = { params: Promise<{ locale: string }>; searchParams: Promise<{ q?: string; type?: string }> };
 
@@ -26,15 +23,6 @@ export default async function SearchPage({ params, searchParams }: Props) {
   const sp = await searchParams;
   const q = (sp.q ?? '').trim().slice(0, 80);
   const type = sp.type === 'area' || sp.type === 'place' ? sp.type : '';
-  let result: SearchResult | null = null;
-  let failed = false;
-  if (q.length >= 2) {
-    try {
-      result = await api.search(q, { type: type || undefined });
-    } catch (e) {
-      if (!(e instanceof ApiError && e.status === 400)) failed = true;
-    }
-  }
   return (
     <>
       <div className="pt-6">
@@ -52,30 +40,7 @@ export default async function SearchPage({ params, searchParams }: Props) {
           ))}
         </nav>
       )}
-      {failed && <div className="mt-6"><EmptyState title={t('failedTitle')} body={t('failedBody')} /></div>}
-      {result && (
-        <>
-          {result.areas.length > 0 && (
-            <Section title={t('areas')}>
-              <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
-                {result.areas.map((a) => <AreaCard key={a.id} area={a} sub={LEVEL_LABEL[a.level][locale]} />)}
-              </div>
-            </Section>
-          )}
-          {result.places.length > 0 && (
-            <Section title={t('places')}>
-              <div className="grid gap-3 md:grid-cols-2">
-                {result.places.map((p) => <PlaceCard key={p.public_id} place={p} />)}
-              </div>
-            </Section>
-          )}
-          {!result.areas.length && !result.places.length && (
-            <div className="mt-6">
-              <EmptyState title={t('noResults', { q })} body={t('noResultsBody')} />
-            </div>
-          )}
-        </>
-      )}
+      {q.length >= 2 && <SearchResults q={q} type={type} />}
     </>
   );
 }

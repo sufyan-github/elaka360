@@ -46,7 +46,7 @@ const THEME_SCRIPT = `try{var t=localStorage.getItem('e360-theme');if(t==='light
 /** Message namespaces used by client components; the long static-page texts stay on the server. */
 const CLIENT_NAMESPACES = [
   'Common', 'Evidence', 'LanguageSwitch', 'BottomNav', 'Theme', 'SearchBox', 'ServiceWorker', 'Map', 'MapExplorer', 'LiveMap', 'NearMe',
-  'Wizard', 'Login', 'Account', 'Review', 'SaveShare', 'ContactForm', 'Error',
+  'Wizard', 'Login', 'Account', 'Review', 'SaveShare', 'ContactForm', 'Error', 'Search',
 ] as const;
 
 export default async function LocaleLayout({ children, params }: Props) {

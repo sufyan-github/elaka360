@@ -3,6 +3,7 @@ import type {
   AdminAreaSummary, AreaDetail, AreaStats, AreaTreeNode, Category, EmergencyNumber, Locale, NationalStats, Paginated, Place, PlaceSummary, Problem, Review,
 } from '@elaka360/shared';
 import { nameOf } from '@elaka360/shared';
+import { apiFetch } from './edge';
 
 export const API_URL = process.env.API_URL ?? 'http://localhost:4000';
 const TIMEOUT_MS = Number(process.env.API_TIMEOUT_MS ?? 5000);
@@ -17,7 +18,7 @@ export class ApiError extends Error {
 async function get<T>(path: string, revalidate: number | false = 300, init: RequestInit = {}): Promise<T> {
   let res: Response;
   try {
-    res = await fetch(`${API_URL}${path}`, {
+    res = await apiFetch(`${API_URL}${path}`, {
       ...init,
       signal: AbortSignal.timeout(TIMEOUT_MS),
       ...(revalidate === false ? { cache: 'no-store' } : { next: { revalidate } }),

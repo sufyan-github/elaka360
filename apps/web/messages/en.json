@@ -212,7 +212,8 @@
     "areas": "Areas",
     "places": "Institutions and places",
     "noResults": "Nothing found for “{q}”",
-    "noResultsBody": "Check the spelling or try a different word."
+    "noResultsBody": "Check the spelling or try a different word.",
+    "loading": "Searching…"
   },
   "Emergency": {
     "title": "Emergency services",
@@ -721,7 +722,7 @@
     "noneInView": "No places with a map location here. Zoom out or pick another category.",
     "placesOff": "Places are hidden. Turn on “Places” to see them.",
     "zoomIn": "Too many places to show at once. Zoom in to see them all.",
-    "hint": "Tap a union or upazila to see its population and places — including places that have no map location yet. The map refreshes itself every minute.",
+    "hint": "Tap a union or upazila to see its population and places — including places that have no map location yet. The map checks for newly published data every few minutes.",
     "population": "Population (2022)",
     "places": "Places",
     "noPin": "no map location yet",

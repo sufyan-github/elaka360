@@ -1,0 +1,16 @@
+{
+  "name": "@elaka360/edge-api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Public read API on Cloudflare Workers + D1 (snapshots of the NestJS API's responses)",
+  "scripts": {
+    "dev": "wrangler dev --port 8789",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.0",
+    "wrangler": "4.155.0"
+  }
+}

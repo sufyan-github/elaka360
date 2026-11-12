@@ -1,0 +1,13 @@
+// Public read API on Cloudflare Workers + D1 (apps/edge-api). Deployed by .github/workflows/deploy.yml, which also
+// creates the D1 database and fills in its id. The website reaches it through a service binding (no public hop).
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "elaka360-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "routes": [{ "pattern": "elaka360-api.abusufyan.online", "custom_domain": true }],
+  "workers_dev": false,
+  "observability": { "enabled": true },
+  "d1_databases": [{ "binding": "DB", "database_name": "elaka360", "database_id": "41575ad2-bbbe-4115-941c-dbd73b49e701" }],
+  "vars": { "APP_VERSION": "dev" }
+}

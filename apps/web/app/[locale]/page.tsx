@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import { connection } from 'next/server';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Building2, Map as MapIcon, MapPin, Phone, PlusCircle, ShieldCheck, Users } from 'lucide-react';
 import { LEVEL_LABEL, formatNumber } from '@elaka360/shared';
@@ -18,11 +17,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { alternates: localeAlternates(asLocale((await params).locale), '/') };
 }
 
-/* Rendered per request (so builds never depend on a running API); every API read below is cached for 5–60 minutes. */
+/* Cached and refreshed every 5 minutes (ISR): on Cloudflare's free plan a page rendered per visit would risk the
+   10 ms CPU limit. The build therefore needs the API (CI starts it before building the website). */
+export const revalidate = 300;
+
 export default async function HomePage({ params }: Props) {
   const locale = asLocale((await params).locale);
   setRequestLocale(locale);
-  await connection();
   const t = await getTranslations('Home');
   // One tree call (divisions + their districts) instead of one detail call per division (finding C15).
   const [tree, categories, stats, national, places] = await Promise.all([

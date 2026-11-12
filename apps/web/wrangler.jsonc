@@ -18,7 +18,11 @@
   },
   // ISR cache: R2 bucket for pages, Durable Object queue for time-based revalidation
   "r2_buckets": [{ "binding": "NEXT_INC_CACHE_R2_BUCKET", "bucket_name": "elaka360-web-cache" }],
-  "services": [{ "binding": "WORKER_SELF_REFERENCE", "service": "elaka360-web" }],
+  "services": [
+    { "binding": "WORKER_SELF_REFERENCE", "service": "elaka360-web" },
+    // the edge API Worker (apps/edge-api), reached without a network hop; API_URL is used for build-time fetches
+    { "binding": "API", "service": "elaka360-api" }
+  ],
   "durable_objects": { "bindings": [{ "name": "NEXT_CACHE_DO_QUEUE", "class_name": "DOQueueHandler" }] },
   "migrations": [{ "tag": "v1", "new_sqlite_classes": ["DOQueueHandler"] }]
 }

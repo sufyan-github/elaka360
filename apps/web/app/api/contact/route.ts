@@ -3,6 +3,7 @@ import { createTranslator } from 'next-intl';
 import bn from '@/messages/bn.json';
 import en from '@/messages/en.json';
 import { clientIp, edgeHeaders } from '@/lib/http';
+import { apiFetch } from '@/lib/edge';
 
 const API_URL = process.env.API_URL ?? 'http://localhost:4000';
 const MAX_BODY = 8 * 1024;
@@ -82,7 +83,7 @@ export async function POST(req: NextRequest) {
 
   let res: Response;
   try {
-    res = await fetch(`${API_URL}/v1/contact`, {
+    res = await apiFetch(`${API_URL}/v1/contact`, {
       method: 'POST',
       headers,
       body: JSON.stringify(payload),
