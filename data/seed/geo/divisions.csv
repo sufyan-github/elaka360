@@ -5,5 +5,5 @@
 10004,division,1,বরিশাল,Barishal,barishal,barishal,10,nuhil:division:4,http://www.barisaldiv.gov.bd,,,,,9325820,adjusted,CITYPOP_ADJ,,,False,True,secondary,CITYPOP_ADJ,NUHIL,
 10005,division,1,সিলেট,Sylhet,sylhet,sylhet,60,nuhil:division:5,http://www.sylhetdiv.gov.bd,,,,,11415113,adjusted,CITYPOP_ADJ,,,False,True,secondary,CITYPOP_ADJ,NUHIL,
 10006,division,1,ঢাকা,Dhaka,dhaka,dhaka,30,nuhil:division:6,http://www.dhakadiv.gov.bd,,,,,45644586,adjusted,CITYPOP_ADJ,,,False,True,secondary,CITYPOP_ADJ,NUHIL,
-10007,division,1,রংপুর,Rangpur,rangpur,rangpur,55,nuhil:division:7,http://www.rangpurdiv.gov.bd,,,,,18020071,adjusted,CITYPOP_ADJ,,,False,True,secondary,CITYPOP_ADJ,NUHIL,
+10007,division,1,রংপুর,Rangpur,rangpur,rangpur,55,nuhil:division:7,http://www.rangpurdiv.gov.bd,,,,,17610955,enumerated,BBS_CENSUS_2022_RANGPUR,,,False,True,secondary,CITYPOP_ADJ,NUHIL,
 10008,division,1,ময়মনসিংহ,Mymensingh,mymensingh,mymensingh,45,nuhil:division:8,http://www.mymensinghdiv.gov.bd,,,,,12637472,adjusted,CITYPOP_ADJ,,,False,True,secondary,CITYPOP_ADJ,NUHIL,

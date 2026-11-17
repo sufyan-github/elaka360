@@ -1,0 +1,25 @@
+# DGHS bd-geocodes (BBS geocodes) — Rangpur Division
+
+- **Source:** DGHS Bangladesh Core FHIR Implementation Guide, CodeSystem `bd-geocodes` v0.5.0 (2026-10-15), 1,591 codes nationally. https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html
+- **Run:** `python3 -I data/sources/dghs_bd_geocodes/fetch.py --division rangpur` (accessed 2026-11-17). Key `DGHS_BD_GEOCODES_RANGPUR`, division `rangpur`, kind `dghs_geocodes`.
+- **Licence:** CC0-1.0 (the guide's licence field).
+- **Code layout (inferred, as for Rajshahi):** 2 digits division (55) · 4 district (5585) · 6 city corporation (558575) · 8 upazila or city thana (55850003) · 10 paurashava (5585000313 Badarganj).
+- **Coverage:** 8 districts, 58 upazilas, Rangpur City Corporation (558575) with 6 thanas (Hajirhat, Haragachh, Kotwali, Mahiganj, Parshuram, Tajhat), and 28 paurashavas. **No unions:** the 58 "Unions Of … Upazila" placeholders are skipped.
+- **Rangpur Sadar:** the list codes it `55857549`, inside the city-corporation code space (558575). It also has "Unions Of Rangpur Sadar Upazila" (`5585754999`) and a city-corporation part (`5585754975`). `fetch.py` now reads such a code as an upazila and says so in `areas.csv` notes; this rule does not change the Rajshahi output.
+- **Agreement with HDX v03:** the 8-digit upazila codes equal the HDX v03 P-codes minus `BD` for 57 of 58 upazilas. The exceptions: Rangpur Sadar is `55857549` here vs HDX `BD55850049`, and the city corporation is `558575` here vs HDX `BD55857500`.
+- **Crosswalk:**
+  - Districts 8/8 and Rangpur City Corporation → 50008.
+  - Upazilas 58/58: 47 exact, 1 banglish, 8 skeleton, 2 fuzzy (Rajibpur↔Charrajibpur, Tentulia↔Tetulia).
+  - Paurashavas 0/28: the seed has no Rangpur pourashavas yet.
+- **Paurashavas (28):**
+  - Dinajpur 8: Birampur, Birganj, Setabganj, Fulbari, Ghoraghat, Hakimpur, Dinajpur, Parbatipur
+  - Gaibandha 4: Gaibandha, Gobindaganj, Palashbari, Sundarganj
+  - Kurigram 3: Kurigram, Nageshwari, Ulipur
+  - Lalmonirhat 2: Lalmonirhat, Patgram
+  - Nilphamari 4: Domar, Jaldhaka, Nilphamari, Saidpur
+  - Panchagarh 2: Boda, Panchagarh
+  - Rangpur 2: Badarganj, "Haragachh (kaunia)"
+  - Thakurgaon 3: Pirganj, Ranisankail, Thakurgaon
+- **Paurashava sets disagree between sources.** The HDX 2020 points also list 28, but a different set (Kaunia and the old Rangpur Sadar paurashava instead of Palashbari). BBS 2022 lists 31.
+- **Spelling differences (DGHS/HDX vs seed):** Biral/Birol, Kaharole/Kaharol, Fulchhari/Phulchari, Raumari/Rowmari, Kishoreganj/Kishorganj, Saidpur/Syedpur, Badarganj/Badargonj, Pirganj/Pirgonj, Taraganj/Taragonj.
+- **Code vintage:** not stated by DGHS.

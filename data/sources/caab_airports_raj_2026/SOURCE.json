@@ -1,5 +1,7 @@
 {
   "key": "CAAB_AIRPORTS_RAJ_2026",
+  "division": "rajshahi",
+  "kind": "caab",
   "name": "Civil Aviation Authority of Bangladesh — airports in Rajshahi Division",
   "organization": "Civil Aviation Authority of Bangladesh (CAAB)",
   "source_type": "government_portal",

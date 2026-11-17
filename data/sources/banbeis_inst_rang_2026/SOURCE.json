@@ -1,0 +1,36 @@
+{
+  "key": "BANBEIS_INST_RANG_2026",
+  "name": "BANBEIS institution lists (EIIN registry, e-survey 2024) — Rangpur Division",
+  "organization": "Bangladesh Bureau of Educational Information and Statistics (BANBEIS), Ministry of Education",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637",
+    "https://banbeis.gov.bd/pages/files/6919975e933eb65569ddc579",
+    "https://banbeis.gov.bd/pages/files/69199763933eb65569ddc6e8",
+    "https://banbeis.gov.bd/pages/files/69568a64a31054345f1038ee",
+    "https://banbeis.gov.bd/pages/files/69199762933eb65569ddc6d1",
+    "https://banbeis.gov.bd/pages/files/6919975f933eb65569ddc5ce",
+    "https://banbeis.gov.bd/pages/files/69199761933eb65569ddc66f",
+    "https://institute-search.ieims.banbeis.gov.bd/"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Source: BANBEIS (banbeis.gov.bd), institution lists based on e-survey 2024",
+  "division": "rangpur",
+  "kind": "banbeis",
+  "notes": "National XLSX lists (school; college & school-and-college; madrasa; government technical; independent technical; public/private university; professional) published on banbeis.gov.bd file pages (object-store links), filtered to DIVISION_NAME=Rangpur and deduplicated by EIIN; same collector and rules as BANBEIS_INST_RAJ_2026. Fields: division, district, thana, institute type, education level, EIIN, name (English only), post office, e-mail, management, MPO status, for-whom, geographical position, area status. No coordinates, no phone numbers, no Bangla names. source_url per row is the BANBEIS Institute Search detail page for that EIIN (its /api/ is disallowed by robots.txt, not crawled). No education-board cross-check for this division. Licence not stated on the portal.",
+  "files": {
+    "places.csv": "a9b3019c67c98ac5a031820dc29a27e8e391379c4b3cf95726ce58a39230d0f6",
+    "facts.csv": "62a1d881a6443355685ffe33b4f8f2fcab8e49f21243ef45111c13523344cfd7",
+    "raw/banbeis_college_rangpur_division.csv": "6e289472d9b8e8ff2c3d698a6cebc5093e969e2059ea43f87b52a07d431e8aa4",
+    "raw/banbeis_govt_technical_rangpur_division.csv": "4a34ba4b1ac7fc003da23ffee7795760e7f6b985d681898aff23be8c7d27aebe",
+    "raw/banbeis_madrasa_rangpur_division.csv": "7ebc9307058aef4f4fbbc9b0318647f89cdab09f513eacf0827ee1b1e921d704",
+    "raw/banbeis_professional_rangpur_division.csv": "9b8cbb40f04e52abf6d586e908f140351e3e25dd90c41bceedfcc56efa6f6cf2",
+    "raw/banbeis_school_rangpur_division.csv": "f7582544ed8fdda720a07d1ee646ee04677e2b87167f5e2e65dd38860adf94a3",
+    "raw/banbeis_technical_rangpur_division.csv": "5f1cb906edccbd7e2409b587e186c69f39f5f86024642fdcba48e378d9049057",
+    "raw/banbeis_university_rangpur_division.csv": "08e02efe19515a1a9eb77670c7dbabcffccccd7eedbdfa8a7547b88228af3214"
+  }
+}

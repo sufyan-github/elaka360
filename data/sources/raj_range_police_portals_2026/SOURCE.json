@@ -1,5 +1,7 @@
 {
   "key": "RAJ_RANGE_POLICE_PORTALS_2026",
+  "division": "rajshahi",
+  "kind": "range_police",
   "name": "District police portals of Rajshahi Range (Natore, Naogaon, Chapainawabganj, Bogura, Joypurhat, Pabna, Sirajganj)",
   "organization": "Bangladesh Police — district police units of Rajshahi Range",
   "source_type": "government_portal",

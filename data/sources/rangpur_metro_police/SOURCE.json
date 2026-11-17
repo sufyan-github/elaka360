@@ -1,0 +1,43 @@
+{
+  "key": "RANGPUR_METRO_POLICE",
+  "division": "rangpur",
+  "kind": "metro_police",
+  "name": "Rangpur Metropolitan Police official site (rpmp.gov.bd)",
+  "organization": "Rangpur Metropolitan Police, Bangladesh Police",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://rpmp.gov.bd/",
+    "https://rpmp.gov.bd/index.php/home/history",
+    "https://rpmp.gov.bd/index.php/home/kotowali_thana",
+    "https://rpmp.gov.bd/index.php/home/tajhat_thana",
+    "https://rpmp.gov.bd/index.php/home/mahigonj_thana",
+    "https://rpmp.gov.bd/index.php/home/haragach_thana",
+    "https://rpmp.gov.bd/index.php/home/porshuram_thana",
+    "https://rpmp.gov.bd/index.php/home/hazirhat_thana",
+    "https://rpmp.gov.bd/index.php/home/kotwali_tajhat_zone",
+    "https://rpmp.gov.bd/index.php/home/haragach_mahigonj_zone",
+    "https://rpmp.gov.bd/index.php/home/porshuram_hazirhat_zone",
+    "https://rpmp.rangpurdiv.gov.bd/pages/static-pages/69771cd5c4774958d7c06d89"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Rangpur Metropolitan Police (rpmp.gov.bd)",
+  "notes": "RpMP's own site rpmp.gov.bd (custom CMS; pages carry no update date). 6 thanas in 3 zones; each thana page lists the RPCC wards and mouzas (with JL numbers) it covers. Haragach thana also covers Haragach Pourashava and Sarai union (Kaunia); Mahiganj also Kalyani union (Pirgachha). No area or population figure is published. Phone numbers are not copied here (see RANGPUR_METRO_POLICE_THANAS_2026); raw/ excerpts have phones redacted.",
+  "files": {
+    "areas.csv": "2d77b0bcf07878cc23bfdb03c09d7c5f27730d6300cf99f0ef16b34e865b8c04",
+    "facts.csv": "5df010caf1af1dd8a0ab8ea22b78457278f127ed95315670783a71ab462ed79a",
+    "raw/history_rpmp_formation.txt": "230821ec8d77a7fc7ad902fad0c1e0d1fce936232e4b08d50e5f7cc207c7b70f",
+    "raw/thana_hajirhat.txt": "da366d3fc1d1d8ab2696078074dd7fc6c6590e0f9abf260e1deab0d66f793b3e",
+    "raw/thana_haragach.txt": "8d71e00010686b5b3247ebe1a2763ca65751d62c8ebeeb1d8f97be6385f43e36",
+    "raw/thana_kotwali.txt": "3a44f36c18c2138e624b9c446f5e6913377e281e8e31d1c739a86f9fdd47d81e",
+    "raw/thana_mahiganj.txt": "c271660f6564aa84527fd0bd51b4790ac7591cb2d9bad09446b2c7cde4ff7ff6",
+    "raw/thana_parshuram.txt": "ebd5b8fbda66ddb987113229910edd1628d8a08552e2ff374b7ab7f0dca82e76",
+    "raw/thana_tajhat.txt": "e8eb8c4ffca6067e5c28fdf4fa450ea4a52201c450ab7502a861913f41d966c3",
+    "raw/zone_kotwali.txt": "fc7b7060910080b8ab7596413965d40940381114ce6657cb1a34c0b38cb32349",
+    "raw/zone_mahiganj.txt": "17f91ea10e00769a59288e6f2290c809bb003a2596c26e9b39dae88f2bfe59b8",
+    "raw/zone_parshuram.txt": "b0684beedc795ed7596beec1c6fd5937ca3d4c55dbacf26804c3d6a968c3c63a"
+  }
+}

@@ -1,0 +1,72 @@
+entity_level,entity_name_en,district_en,upazila_en,code,fact,value,unit,basis,year,source_key,source_url,notes
+division,Rangpur,,,,area_km2,16374.091,km2,as stated,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69770c4dc4774958d7c0088a,label 'আয়তন' value '১৬৩৭৪.০৯১ বর্গকিলোমিটার'; page updated 2025-04-20
+division,Rangpur,,,,population,17610956,persons,as stated,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69770c4dc4774958d7c0088a,"label 'জনসংখ্যা' value '১৭,৬১০,৯৫৬ জন'; page updated 2025-04-20"
+division,Rangpur,,,,upazila_count,58,count,as stated,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69770c4dc4774958d7c0088a,label 'উপজেলার সংখ্যা' value '৫৮ টি (আটান্ন) টি'; page updated 2025-04-20
+division,Rangpur,,,,thana_count,60,count,as stated,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69770c4dc4774958d7c0088a,label 'থানার সংখ্যা' value '৬০ টি (ষাট) টি'; page updated 2025-04-20
+division,Rangpur,,,,pourashava_count,31,count,as stated,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69770c4dc4774958d7c0088a,label 'পৌরসভার সংখ্যা' value '৩১ টি (একত্রিশ) টি'; page updated 2025-04-20
+division,Rangpur,,,,union_count,536,count,as stated,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69770c4dc4774958d7c0088a,label 'ইউনিয়নের সংখ্যা' value '৫৩৬ টি (পাঁচশত ছত্রিশ) টি'; page updated 2025-04-20
+division,Rangpur,,,,mouza_count,6710,count,as stated,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69770c4dc4774958d7c0088a,label 'মৌজার সংখ্যা' value '৬৭১০ টি (ছয় হাজার সাতশত দশ) টি'; page updated 2025-04-20
+division,Rangpur,,,,village_count,9066,count,as stated,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69770c4dc4774958d7c0088a,label 'গ্রামের সংখ্যা' value '৯০৬৬ টি (নয় হাজার ছেষট্টি)টি'; page updated 2025-04-20
+division,Rangpur,,,,district_count_listed,8,count,count of districts listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69770436c4774958d7bf3dee,page updated 2025-04-20
+division,Rangpur,,,,upazila_count_listed,58,count,count of upazilas listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/6977533ec4774958d7c1ab94,page updated 2025-04-20
+division,Rangpur,,,,upazila_count,58,count,as stated,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/6977533ec4774958d7c1ab94,printed 'মোট ৫৮ টি' in the list heading; page updated 2025-04-20
+upazila,Birampur,Dinajpur,Birampur,,union_count,7,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Birganj,Dinajpur,Birganj,,union_count,11,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Birol,Dinajpur,Birol,,union_count,12,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Bochaganj,Dinajpur,Bochaganj,,union_count,6,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Chirirbandar,Dinajpur,Chirirbandar,,union_count,12,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Dinajpur Sadar,Dinajpur,Dinajpur Sadar,,union_count,10,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Fulbari,Dinajpur,Fulbari,,union_count,7,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Ghoraghat,Dinajpur,Ghoraghat,,union_count,4,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Hakimpur,Dinajpur,Hakimpur,,union_count,3,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Kaharol,Dinajpur,Kaharol,,union_count,6,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Khansama,Dinajpur,Khansama,,union_count,6,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Nawabganj,Dinajpur,Nawabganj,,union_count,9,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Parbatipur,Dinajpur,Parbatipur,,union_count,10,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Gaibandha Sadar,Gaibandha,Gaibandha Sadar,,union_count,13,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Gobindaganj,Gaibandha,Gobindaganj,,union_count,17,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Palashbari,Gaibandha,Palashbari,,union_count,9,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Phulchari,Gaibandha,Phulchari,,union_count,7,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Sadullapur,Gaibandha,Sadullapur,,union_count,11,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Saghata,Gaibandha,Saghata,,union_count,10,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Sundarganj,Gaibandha,Sundarganj,,union_count,15,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Bhurungamari,Kurigram,Bhurungamari,,union_count,10,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Charrajibpur,Kurigram,Charrajibpur,,union_count,3,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Chilmari,Kurigram,Chilmari,,union_count,6,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Kurigram Sadar,Kurigram,Kurigram Sadar,,union_count,8,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Nageshwari,Kurigram,Nageshwari,,union_count,14,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Phulbari,Kurigram,Phulbari,,union_count,6,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Rajarhat,Kurigram,Rajarhat,,union_count,7,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Rowmari,Kurigram,Rowmari,,union_count,6,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Ulipur,Kurigram,Ulipur,,union_count,13,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Aditmari,Lalmonirhat,Aditmari,,union_count,8,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Hatibandha,Lalmonirhat,Hatibandha,,union_count,12,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Kaliganj,Lalmonirhat,Kaliganj,,union_count,8,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Lalmonirhat Sadar,Lalmonirhat,Lalmonirhat Sadar,,union_count,9,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Patgram,Lalmonirhat,Patgram,,union_count,8,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Dimla,Nilphamari,Dimla,,union_count,10,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Domar,Nilphamari,Domar,,union_count,10,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Jaldhaka,Nilphamari,Jaldhaka,,union_count,11,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Kishorganj,Nilphamari,Kishorganj,,union_count,9,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Nilphamari Sadar,Nilphamari,Nilphamari Sadar,,union_count,15,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Syedpur,Nilphamari,Syedpur,,union_count,5,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Atwari,Panchagarh,Atwari,,union_count,6,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Boda,Panchagarh,Boda,,union_count,10,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Debiganj,Panchagarh,Debiganj,,union_count,10,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Panchagarh Sadar,Panchagarh,Panchagarh Sadar,,union_count,10,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Tetulia,Panchagarh,Tetulia,,union_count,7,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Badargonj,Rangpur,Badargonj,,union_count,10,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Gangachara,Rangpur,Gangachara,,union_count,9,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Kaunia,Rangpur,Kaunia,,union_count,6,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Mithapukur,Rangpur,Mithapukur,,union_count,17,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Pirgacha,Rangpur,Pirgacha,,union_count,9,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Pirgonj,Rangpur,Pirgonj,,union_count,15,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Rangpur Sadar,Rangpur,Rangpur Sadar,,union_count,5,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Taragonj,Rangpur,Taragonj,,union_count,5,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Baliadangi,Thakurgaon,Baliadangi,,union_count,8,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Haripur,Thakurgaon,Haripur,,union_count,6,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Pirganj,Thakurgaon,Pirganj,,union_count,10,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Ranisankail,Thakurgaon,Ranisankail,,union_count,8,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+upazila,Thakurgaon Sadar,Thakurgaon,Thakurgaon Sadar,,union_count,21,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+division,Rangpur,,,,union_count_listed,535,count,count of unions listed,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,page updated 2025-04-20
+division,Rangpur,,,,union_count,535,count,as stated,,RANGDIV_PORTAL_2026,https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead,printed 'তালিকা: ৫৩৫ টি' in the list heading; page updated 2025-04-20

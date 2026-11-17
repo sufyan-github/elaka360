@@ -4,6 +4,8 @@
   "organization": "Deputy Commissioner's offices / Upazila Nirbahi Officer's offices, Government of Bangladesh (a2i National Portal)",
   "source_type": "government_portal",
   "trust_level": 4,
+  "division": "rajshahi",
+  "kind": "district_portals",
   "urls": [
     "https://natore.gov.bd/",
     "https://naogaon.gov.bd/",
@@ -88,7 +90,7 @@
   "files": {
     "areas.csv": "c717cd8657ff5be82992530e2ca937fb4fbecd598f72fb61c4acf329e74a3016",
     "facts.csv": "754caaa06b5720e004ec94ddf179245e3b04c6f2f4f4d4f29e48b0dd5e941a63",
-    "fetch.py": "03e4953ec24cde5a61ef4de8a1373c5c78b0daa798e8c213212b651ec123a9af",
+    "fetch.py": "191d274110c71c9f6963fb401d076144797f84a7526da1404abb9ec1b54655ab",
     "raw/pages.csv": "11025fe16c71147e5c8231e59968c87ada996a1a09909e198098c3aa42f4f513"
   },
   "notes": "Union lists per upazila, upazila lists, pourashava lists and district 'এক নজরে' headline figures for the 7 Rajshahi Division districts other than Rajshahi. Union rows come from the district union-list pages except Pabna (upazila portals; Bera names not published). Each row's notes carry the page's own last-updated date; raw/pages.csv lists every page with its date. Page dates range 2012-2026; treat as verified=false until reconciled with LGD/gazette. Only facts extracted; no personal contact data. The first 7 URLs are the portal home pages used to locate menu pages; the last URL is the Sectigo intermediate fetched for TLS verification."

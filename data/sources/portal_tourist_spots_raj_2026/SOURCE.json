@@ -1,5 +1,7 @@
 {
   "key": "PORTAL_TOURIST_SPOTS_RAJ_2026",
+  "division": "rajshahi",
+  "kind": "tourist_spots",
   "name": "National portal 'দর্শনীয় স্থান' (tourist spot) lists — Rajshahi Division district and upazila portals",
   "organization": "District / Upazila administrations (national portal framework, a2i/Cabinet Division)",
   "source_type": "government_portal",

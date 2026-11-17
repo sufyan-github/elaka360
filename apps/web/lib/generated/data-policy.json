@@ -61,8 +61,18 @@
    "url": "https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637"
   },
   {
+   "key": "BANBEIS_INST_RANG_2026",
+   "name": "BANBEIS institution lists (EIIN registry, e-survey 2024) — Rangpur Division",
+   "url": "https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637"
+  },
+  {
    "key": "BBS_CENSUS_2022",
    "name": "Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Rajshahi Division",
+   "url": "https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220"
+  },
+  {
+   "key": "BBS_CENSUS_2022_RANGPUR",
+   "name": "Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Rangpur Division",
    "url": "https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220"
   },
   {
@@ -71,8 +81,18 @@
    "url": "https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf"
   },
   {
+   "key": "BD_POLICE_CONTACTS_2020_RANGPUR",
+   "name": "Bangladesh Police HQ — Contacts of Bangladesh Police (RRMP and Rangpur Range sheets)",
+   "url": "https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf"
+  },
+  {
    "key": "BD_RAILWAY_RAJ_2026",
    "name": "Bangladesh Railway — station phones and district-wise station counts (Rajshahi Division)",
+   "url": "https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6"
+  },
+  {
+   "key": "BD_RAILWAY_RANG_2026",
+   "name": "Bangladesh Railway — station phones and district-wise station counts (Rangpur Division)",
    "url": "https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6"
   },
   {
@@ -81,8 +101,18 @@
    "url": "http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af"
   },
   {
+   "key": "BDPOST_POSTCODES_RANG_2026",
+   "name": "Bangladesh Post postcode booklet — Rangpur Division post offices (scan on post.rajshahi.gov.bd)",
+   "url": "http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af"
+  },
+  {
    "key": "BRTC_DEPOTS_RAJ_2026",
    "name": "BRTC — bus depots in Rajshahi Division",
+   "url": "https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0"
+  },
+  {
+   "key": "BRTC_DEPOTS_RANG_2026",
+   "name": "BRTC — bus depots in Rangpur Division",
    "url": "https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0"
   },
   {
@@ -91,13 +121,28 @@
    "url": "https://www.caab.gov.bd/"
   },
   {
+   "key": "CAAB_AIRPORTS_RANG_2026",
+   "name": "Civil Aviation Authority of Bangladesh — airports in Rangpur Division",
+   "url": "https://www.caab.gov.bd/"
+  },
+  {
    "key": "DGHS_HRIS_FACILITIES_RAJ_2026",
    "name": "DGHS / MoHFW HRIS Facility Registry — organisation list, Rajshahi Division",
    "url": "https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=3"
   },
   {
+   "key": "DGHS_HRIS_FACILITIES_RANG_2026",
+   "name": "DGHS / MoHFW HRIS Facility Registry — organisation list, Rangpur Division",
+   "url": "https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=4"
+  },
+  {
    "key": "DGME_MEDICAL_COLLEGES_RAJ_2026",
    "name": "DGME medical and dental college lists — Rajshahi Division",
+   "url": "https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3"
+  },
+  {
+   "key": "DGME_MEDICAL_COLLEGES_RANG_2026",
+   "name": "DGME medical and dental college lists — Rangpur Division",
    "url": "https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3"
   },
   {
@@ -106,9 +151,19 @@
    "url": "https://rajshahi.gov.bd/pages/static-pages/697f99c635ce18e1c06c092f"
   },
   {
+   "key": "DISTRICT_PORTAL_BANKS_RANG_2026",
+   "name": "District portals — bank branch/office phone lists (Panchagarh, Nilphamari, Kurigram)",
+   "url": "https://panchagarh.gov.bd/pages/static-pages/69773725c4774958d7c0d34e"
+  },
+  {
    "key": "DISTRICT_PORTALS_TRANSPORT_RAJ_2026",
    "name": "District & upazila portals (Rajshahi Division) — bus terminals/stands and stations named on transport pages",
    "url": "https://paba.rajshahi.gov.bd/pages/static-pages/697fc1d435ce18e1c06cdf9d"
+  },
+  {
+   "key": "DISTRICT_PORTALS_TRANSPORT_RANG_2026",
+   "name": "District & upazila portals (Rangpur Division) — bus terminals/stands and stations named on transport pages",
+   "url": "https://rangpur.gov.bd/pages/static-pages/6977698ec4774958d7c22b10"
   },
   {
    "key": "DOA_PROTECTED_MONUMENTS_RAJ_2026",
@@ -116,8 +171,18 @@
    "url": "https://archaeology.gov.bd/pages/static-pages/6922df29933eb65569e20433"
   },
   {
+   "key": "DOA_PROTECTED_MONUMENTS_RANG_2026",
+   "name": "Department of Archaeology — gazetted protected monuments, Rangpur Division (district PDF lists)",
+   "url": "https://archaeology.gov.bd/pages/static-pages/6922dca5933eb65569e1169f"
+  },
+  {
    "key": "DPE_IPEMIS_PRIMARY_RAJ_2026",
    "name": "DPE IPEMIS primary school directory — Rajshahi Division",
+   "url": "https://ipemis.dpe.gov.bd/search-school"
+  },
+  {
+   "key": "DPE_IPEMIS_PRIMARY_RANG_2026",
+   "name": "DPE IPEMIS primary school directory — Rangpur Division",
    "url": "https://ipemis.dpe.gov.bd/search-school"
   },
   {
@@ -126,9 +191,19 @@
    "url": "https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1"
   },
   {
+   "key": "FSCD_STATIONS_RANG_2026",
+   "name": "Fire Service & Civil Defence — Rangpur Division station & office numbers",
+   "url": "https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1"
+  },
+  {
    "key": "PORTAL_TOURIST_SPOTS_RAJ_2026",
    "name": "National portal 'দর্শনীয় স্থান' (tourist spot) lists — Rajshahi Division district and upazila portals",
    "url": "https://rajshahi.gov.bd/pages/tourist-spot"
+  },
+  {
+   "key": "PORTAL_TOURIST_SPOTS_RANG_2026",
+   "name": "National portal 'দর্শনীয় স্থান' (tourist spot) lists — Rangpur Division district and upazila portals",
+   "url": "https://rangpur.gov.bd/pages/tourist-spot"
   },
   {
    "key": "RAJ_RANGE_POLICE_PORTALS_2026",
@@ -146,6 +221,26 @@
    "url": "https://rajshahidiv.gov.bd/"
   },
   {
+   "key": "RANG_RANGE_POLICE_PORTALS_2026",
+   "name": "District police portals of Rangpur Range (Panchagarh, Dinajpur, Lalmonirhat, Nilphamari, Gaibandha, Thakurgaon, Kurigram)",
+   "url": "https://police.panchagarh.gov.bd/"
+  },
+  {
+   "key": "RANGPUR_METRO_POLICE_THANAS_2026",
+   "name": "Rangpur Metropolitan Police — thanas and official numbers",
+   "url": "https://rpmp.gov.bd/index.php/home/units"
+  },
+  {
+   "key": "RANGPUR_POLICE_2026",
+   "name": "Rangpur District Police — SP office and thanas",
+   "url": "https://police.rangpur.gov.bd/"
+  },
+  {
+   "key": "RANGPUR_PORTAL_OFFICES_2026",
+   "name": "Government offices on the national portal sites — Divisional Commissioner, Rangpur DC & upazila portals, DC/UNO offices of Rangpur Division",
+   "url": "https://rangpurdiv.gov.bd/"
+  },
+  {
    "key": "RMP_THANAS_2026",
    "name": "Rajshahi Metropolitan Police — thanas and official numbers",
    "url": "https://rmp.gov.bd/pages/static-pages/695e3b08c4774958d7b7214e"
@@ -153,6 +248,11 @@
   {
    "key": "UGC_UNIVERSITIES_RAJ_2026",
    "name": "UGC university register — universities in Rajshahi Division",
+   "url": "https://www.ugc.gov.bd/universities"
+  },
+  {
+   "key": "UGC_UNIVERSITIES_RANG_2026",
+   "name": "UGC university register — universities in Rangpur Division",
    "url": "https://www.ugc.gov.bd/universities"
   }
  ],

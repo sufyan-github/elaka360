@@ -20,6 +20,8 @@
   "license": null,
   "license_url": null,
   "attribution": "Source: BANBEIS (banbeis.gov.bd), institution lists based on e-survey 2024",
+  "division": "rajshahi",
+  "kind": "banbeis",
   "notes": "National XLSX lists (school; college & school-and-college; madrasa; government technical; independent technical; public/private university; professional) published on banbeis.gov.bd file pages (object-store links), filtered to DIVISION_NAME=Rajshahi and deduplicated by EIIN (the government-technical list is a subset of the technical list). Fields: division, district, thana, institute type, education level, EIIN, name (English only), post office, e-mail, management, MPO status, for-whom, geographical position, area status. No coordinates, no phone numbers, no Bangla names. source_url per row is the BANBEIS Institute Search detail page for that EIIN (a JavaScript app; its /api/ is disallowed by robots.txt, so it was NOT crawled). rajshahi_board_listed (schools/colleges only) is a cross-check against the Rajshahi Education Board's public institute list JSON (https://rajshahiboard.gov.bd/sonali/ins.php, EIIN + name only). Licence not stated on the portal.",
   "files": {
     "places.csv": "1e3caf7711c1cf46df7a11cf589267f44a1cf918e47d36f71f3fef66d57a6777",

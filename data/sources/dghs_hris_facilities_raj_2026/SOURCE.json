@@ -14,6 +14,8 @@
   "license": null,
   "license_url": null,
   "attribution": "Source: DGHS Facility Registry (hris.mohfw.gov.bd), Ministry of Health and Family Welfare, Bangladesh",
+  "division": "rajshahi",
+  "kind": "dghs_hris",
   "files": {
     "places.csv": "0108aaf4f40f138e17432809ef3188b1177ff6ccb77424bb5fa3addde76cc10e",
     "facts.csv": "b57fc1271e368ba9befd2fef56dbf32f5d348a3abb974abe8089483e6aa7b6b3",

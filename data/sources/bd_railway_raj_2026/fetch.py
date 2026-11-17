@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Fetch Bangladesh Railway station phones and district-wise station counts for Rajshahi Division (BD_RAILWAY_RAJ_2026)."""
+"""Fetch Bangladesh Railway station phones and district-wise station counts for Rajshahi Division (BD_RAILWAY_RAJ_2026).
+
+Usage: python3 fetch.py [--division rajshahi|rangpur] [--out DIR]   (default: Rajshahi into this folder; DIVISIONS.md)"""
 # --- polite HTTP helper (copy this block into each fetch.py; stdlib + requests only) -----------------
 # Many *.gov.bd servers send only their leaf certificate and omit the intermediate CA. Browsers fetch the
 # missing intermediate via the certificate's AIA URL; we do the same explicitly: download the published
@@ -197,6 +199,38 @@ def xj(d):
     return json.dumps(d, ensure_ascii=False, separators=(",", ":")) if d else ""
 # --- end common utilities -----------------------------------------------------------------------------
 
+# --- division selection (data/sources/DIVISIONS.md) ---------------------------------------------------------
+import argparse
+DIVISION_CODES = {"rajshahi": "raj", "rangpur": "rang", "dhaka": "dhk", "chattogram": "ctg", "khulna": "khl",
+                  "barishal": "bar", "sylhet": "syl", "mymensingh": "mym"}
+
+
+def division_setup(here, base_key, configured, extra_args=()):
+    """Parse --division/--out -> (args, out_dir, source_key). Rajshahi (default) keeps this folder and key; another
+    division writes to its own folder named per DIVISIONS.md and never touches the Rajshahi files."""
+    ap = argparse.ArgumentParser(description=(__doc__ or "").strip().split("\n")[0])
+    ap.add_argument("--division", default="rajshahi", choices=list(DIVISION_CODES))
+    ap.add_argument("--out", help="output folder (default: this folder for rajshahi, the division's own folder otherwise)")
+    for name, kw in extra_args:
+        ap.add_argument(name, **kw)
+    args = ap.parse_args()
+    if args.division not in configured:
+        ap.error("division %r is not configured in this collector yet (configured: %s)" % (args.division, ", ".join(configured)))
+    here = os.path.abspath(str(here))
+    folder = os.path.basename(here)
+    if args.division == "rajshahi":
+        name, key = folder, base_key
+    else:
+        code = DIVISION_CODES[args.division]
+        name = folder.replace("_raj_", "_%s_" % code) if "_raj_" in folder else "%s_%s" % (folder, args.division)
+        key = base_key.replace("_RAJ_", "_%s_" % code.upper()) if "_RAJ_" in base_key else "%s_%s" % (base_key, args.division.upper())
+    out = os.path.abspath(args.out) if args.out else (here if args.division == "rajshahi" else os.path.join(os.path.dirname(here), name))
+    if args.division != "rajshahi" and out == here:
+        ap.error("refusing to write another division's output into the Rajshahi folder")
+    os.makedirs(out, exist_ok=True)
+    return args, out, key
+# --- end division selection ---------------------------------------------------------------------------------
+
 # --- BD_RAILWAY_RAJ_2026 ------------------------------------------------------------------------------
 KEY = "BD_RAILWAY_RAJ_2026"
 URL_PHONES = "https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6"     # গুরুত্বপূর্ন স্টেশনের টেলিফোন
@@ -214,8 +248,26 @@ IN_DIVISION = {"রাজশাহী": ("Rajshahi", ""), "রাজশাহী
                "বগুড়া": ("Bogura", ""), "ঈশ্বরদী": ("Pabna", "Ishwardi"), "সান্তাহার": ("Bogura", "Adamdighi"),
                "আব্দুলপুর": ("Natore", "Lalpur"), "পাবনা": ("Pabna", ""), "সিরাজগঞ্জ বাজার": ("Sirajganj", "")}
 
+# Rangpur Division: same two railway.gov.bd sources; Table-4 values transcribed from the same Information Book page
+BY_DIV = {
+    "rajshahi": dict(districts=DISTRICTS, table4=TABLE4, stations=IN_DIVISION),
+    "rangpur": dict(
+        districts=["Dinajpur", "Gaibandha", "Kurigram", "Lalmonirhat", "Nilphamari", "Panchagarh", "Rangpur", "Thakurgaon"],
+        table4={"Dinajpur": (24, "143.800"), "Gaibandha": (14, "80.950"), "Kurigram": (8, "42.500"), "Lalmonirhat": (15, "114.000"),
+                "Nilphamari": (9, "65.300"), "Panchagarh": (3, "18.320"), "Rangpur": (9, "63.800"), "Thakurgaon": (6, "47.180")},
+        stations={"বোনারপাড়া": ("Gaibandha", "Saghata"), "গাইবান্ধা": ("Gaibandha", ""), "রংপুর": ("Rangpur", ""),
+                  "কুড়িগ্রাম": ("Kurigram", ""), "ঠাকুরগাঁও": ("Thakurgaon", ""), "নীলফামারী": ("Nilphamari", ""),
+                  "সৈয়দপুর": ("Nilphamari", "Saidpur"), "দিনাজপুর": ("Dinajpur", ""), "পার্বতীপুর": ("Dinajpur", "Parbatipur"),
+                  "লালমনিরহাট": ("Lalmonirhat", ""), "পঞ্চগড়": ("Panchagarh", "")}),
+}
+
 
 def main():
+    global HERE, RAW, KEY, DISTRICTS, TABLE4, IN_DIVISION
+    args, out, KEY = division_setup(HERE, KEY, list(BY_DIV))
+    HERE, RAW = Path(out), Path(out) / "raw"
+    division, head = args.division, args.division.capitalize()
+    DISTRICTS, TABLE4, IN_DIVISION = (BY_DIV[division][k] for k in ("districts", "table4", "stations"))
     places, facts = [], []
     r = get(URL_PHONES)
     if r is not None and r.ok:
@@ -278,19 +330,20 @@ def main():
                                     "Station count includes block huts, halts and goods booking points."))
     tot_st = sum(table[d][0] for d in DISTRICTS)
     tot_km = round(sum(float(table[d][1]) for d in DISTRICTS), 3)
-    facts.append(dict(entity_level="division", entity_name_en="Rajshahi", fact="railway_stations", value=tot_st, unit="stations",
+    facts.append(dict(entity_level="division", entity_name_en=head, fact="railway_stations", value=tot_st, unit="stations",
                       basis="derived (sum of district rows)", year=2024, source_key=KEY, source_url=pdf_url,
-                      notes="Sum of the 8 Rajshahi-division districts in Table-4 (FY 2023-2024)"))
-    facts.append(dict(entity_level="division", entity_name_en="Rajshahi", fact="railway_route_km", value=tot_km, unit="km",
+                      notes=f"Sum of the 8 {head}-division districts in Table-4 (FY 2023-2024)"))
+    facts.append(dict(entity_level="division", entity_name_en=head, fact="railway_route_km", value=tot_km, unit="km",
                       basis="derived (sum of district rows)", year=2024, source_key=KEY, source_url=pdf_url,
-                      notes="Sum of the 8 Rajshahi-division districts in Table-4 (FY 2023-2024)"))
+                      notes=f"Sum of the 8 {head}-division districts in Table-4 (FY 2023-2024)"))
     write_csv("places.csv", PLACE_COLS, places)
     write_csv("facts.csv", FACT_COLS, facts)
     files = ["places.csv", "facts.csv", "raw/railway_important_station_phones.txt"]
     if (RAW / "infobook_2023_24_table4.txt").exists():
         files.append("raw/infobook_2023_24_table4.txt")
     write_manifest(dict(
-        key=KEY, name="Bangladesh Railway — station phones and district-wise station counts (Rajshahi Division)",
+        key=KEY, division=division, kind="railway",
+        name=f"Bangladesh Railway — station phones and district-wise station counts ({head} Division)",
         organization="Bangladesh Railway", source_type="government_portal", trust_level=4,
         urls=[URL_PHONES, URL_INFOBOOK_PAGE, pdf_url], accessed=__import__("datetime").date.today().isoformat(),
         publication_date=None, license=None, license_url=None, attribution="Bangladesh Railway (railway.gov.bd)",

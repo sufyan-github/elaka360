@@ -1,5 +1,7 @@
 {
   "key": "BDPOST_POSTCODES_RAJ_2026",
+  "division": "rajshahi",
+  "kind": "bdpost",
   "name": "Bangladesh Post postcode booklet — Rajshahi Division post offices (scan on post.rajshahi.gov.bd)",
   "organization": "বাংলাদেশ ডাক বিভাগ (Bangladesh Post Office) — DPMG Rajshahi Division portal",
   "source_type": "government_portal",

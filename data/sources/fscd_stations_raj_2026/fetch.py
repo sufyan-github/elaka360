@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Fetch Rajshahi-Division fire station & office numbers from fireservice.gov.bd (FSCD_STATIONS_RAJ_2026)."""
+"""Fetch Rajshahi-Division fire station & office numbers from fireservice.gov.bd (FSCD_STATIONS_RAJ_2026).
+
+Usage: python3 fetch.py [--division rajshahi|rangpur] [--out DIR]   (default: Rajshahi into this folder; DIVISIONS.md)"""
 # --- polite HTTP helper (copy this block into each fetch.py; stdlib + requests only) -----------------
 # Many *.gov.bd servers send only their leaf certificate and omit the intermediate CA. Browsers fetch the
 # missing intermediate via the certificate's AIA URL; we do the same explicitly: download the published
@@ -197,6 +199,38 @@ def xj(d):
     return json.dumps(d, ensure_ascii=False, separators=(",", ":")) if d else ""
 # --- end common utilities -----------------------------------------------------------------------------
 
+# --- division selection (data/sources/DIVISIONS.md) ---------------------------------------------------------
+import argparse
+DIVISION_CODES = {"rajshahi": "raj", "rangpur": "rang", "dhaka": "dhk", "chattogram": "ctg", "khulna": "khl",
+                  "barishal": "bar", "sylhet": "syl", "mymensingh": "mym"}
+
+
+def division_setup(here, base_key, configured, extra_args=()):
+    """Parse --division/--out -> (args, out_dir, source_key). Rajshahi (default) keeps this folder and key; another
+    division writes to its own folder named per DIVISIONS.md and never touches the Rajshahi files."""
+    ap = argparse.ArgumentParser(description=(__doc__ or "").strip().split("\n")[0])
+    ap.add_argument("--division", default="rajshahi", choices=list(DIVISION_CODES))
+    ap.add_argument("--out", help="output folder (default: this folder for rajshahi, the division's own folder otherwise)")
+    for name, kw in extra_args:
+        ap.add_argument(name, **kw)
+    args = ap.parse_args()
+    if args.division not in configured:
+        ap.error("division %r is not configured in this collector yet (configured: %s)" % (args.division, ", ".join(configured)))
+    here = os.path.abspath(str(here))
+    folder = os.path.basename(here)
+    if args.division == "rajshahi":
+        name, key = folder, base_key
+    else:
+        code = DIVISION_CODES[args.division]
+        name = folder.replace("_raj_", "_%s_" % code) if "_raj_" in folder else "%s_%s" % (folder, args.division)
+        key = base_key.replace("_RAJ_", "_%s_" % code.upper()) if "_RAJ_" in base_key else "%s_%s" % (base_key, args.division.upper())
+    out = os.path.abspath(args.out) if args.out else (here if args.division == "rajshahi" else os.path.join(os.path.dirname(here), name))
+    if args.division != "rajshahi" and out == here:
+        ap.error("refusing to write another division's output into the Rajshahi folder")
+    os.makedirs(out, exist_ok=True)
+    return args, out, key
+# --- end division selection ---------------------------------------------------------------------------------
+
 # --- FSCD_STATIONS_RAJ_2026 -----------------------------------------------------------------------------
 KEY = "FSCD_STATIONS_RAJ_2026"
 BASE = "https://fireservice.gov.bd"
@@ -301,6 +335,95 @@ T = [
     ("Sirajganj", "তাড়াশ ফায়ার স্টেশন", "01901-022373", "station", "Tarash"),
     ("Sirajganj", "নর্থ ওয়েস্ট ফায়ার স্টেশন", "01313-425824", "station", ""),
 ]
+# Rangpur-division PDF ("ফায়ার সার্ভিস ও সিভিল ডিফেন্স, রংপুর বিভাগ, রংপুর", Word export dated 2026-08-11): same broken text
+# layer; names transcribed by hand from the rendered pages (3 pages, 8 district tables), in PDF order.
+T_RANGPUR = [
+    ("Rangpur", "উপপরিচালক,রংপুর", "01901-020140", "office", ""),
+    ("Rangpur", "সহকারী পরিচালক,রংপুর", "01901-020142", "office", ""),
+    ("Rangpur", "উপসহকারী পরিচালক,রংপুর", "01901-023203", "office", ""),
+    ("Rangpur", "রংপুর ফায়ার স্টেশন", "01901-023231", "station", ""),
+    ("Rangpur", "হারাগাছ ফায়ার স্টেশন", "01901-023241", "station", ""),
+    ("Rangpur", "বদরগঞ্জ ফায়ার স্টেশন", "01901-023235", "station", "Badarganj"),
+    ("Rangpur", "কাউনিয়া ফায়ার স্টেশন", "01901-023239", "station", "Kaunia"),
+    ("Rangpur", "মিঠাপুকুর ফায়ার স্টেশন", "01901-023243", "station", "Mithapukur"),
+    ("Rangpur", "পীরগাছা ফায়ার স্টেশন", "01901-023245", "station", "Pirgachha"),
+    ("Rangpur", "পীরগঞ্জ ফায়ার স্টেশন", "01901-023247", "station", "Pirganj"),
+    ("Rangpur", "তারাগঞ্জ ফায়ার স্টেশন", "01901-023249", "station", "Taraganj"),
+    ("Rangpur", "গংগাচড়া ফায়ার স্টেশন", "01901-023237", "station", "Gangachara"),
+    ("Gaibandha", "উপসহকারী পরিচালক,গাইবান্ধা", "01901-023204", "office", ""),
+    ("Gaibandha", "গাইবান্ধা ফায়ার স্টেশন", "01901-023337", "station", ""),
+    ("Gaibandha", "গোবিন্দগঞ্জ ফায়ার স্টেশন", "01901-023325", "station", "Gobindaganj"),
+    ("Gaibandha", "ফুলছড়ী ফায়ার স্টেশন", "01901-023333", "station", "Phulchhari"),
+    ("Gaibandha", "সাঘাটা ফায়ার স্টেশন", "01901-023332", "station", "Saghata"),
+    ("Gaibandha", "সুন্দরগঞ্জ ফায়ার স্টেশন", "01901-023327", "station", "Sundarganj"),
+    ("Gaibandha", "সাদুল্লাপুর ফায়ার স্টেশন", "01901-023335", "station", "Sadullapur"),
+    ("Gaibandha", "পলাশবাড়ী ফায়ার স্টেশন", "01901-023329", "station", "Palashbari"),
+    ("Kurigram", "উপসহকারী পরিচালক,কুড়িগ্রাম", "01901-023205", "office", ""),
+    ("Kurigram", "কুড়িগ্রাম ফায়ার স্টেশন", "01901-023337", "station", ""),
+    ("Kurigram", "উলিপুর ফায়ার স্টেশন", "01901-023341", "station", "Ulipur"),
+    ("Kurigram", "নাগেশ্বরী ফায়ার স্টেশন", "01901-023343", "station", "Nageshwari"),
+    ("Kurigram", "চিলমারী ফায়ার স্টেশন", "01901-023345", "station", "Chilmari"),
+    ("Kurigram", "কর্তিমারী ফায়ার স্টেশন", "01901-023347", "station", ""),
+    ("Kurigram", "রাজারহাট ফায়ার স্টেশন", "01901-023349", "station", "Rajarhat"),
+    ("Kurigram", "ফুলবাড়ী ফায়ার স্টেশন", "01723-976767", "station", "Phulbari"),
+    ("Kurigram", "রাজিবপুর ফায়ার স্টেশন", "01901-023353", "station", "Char Rajibpur"),
+    ("Lalmonirhat", "উপসহকারী পরিচালক,লালমনিরহাট", "01901-023206", "office", ""),
+    ("Lalmonirhat", "লালমনিরহাট ফায়ার স্টেশন", "01901-023359", "station", ""),
+    ("Lalmonirhat", "পাটগ্রাম ফায়ার স্টেশন", "01901-023361", "station", "Patgram"),
+    ("Lalmonirhat", "হাতিবান্ধা ফায়ার স্টেশন", "01901-023367", "station", "Hatibandha"),
+    ("Lalmonirhat", "কালীগঞ্জ ফায়ার স্টেশন", "01901-023365", "station", "Kaliganj"),
+    ("Lalmonirhat", "আদিতমারী ফায়ার স্টেশন", "01901-023369", "station", "Aditmari"),
+    ("Nilphamari", "উপসহকারী পরিচালক,নীলফামারী", "01901-023207", "office", ""),
+    ("Nilphamari", "নীলফামারী ফায়ার স্টেশন", "01901-023307", "station", ""),
+    ("Nilphamari", "সৈয়দপুর ফায়ার স্টেশন", "01901-023311", "station", "Saidpur"),
+    ("Nilphamari", "উত্তরা ইপিজেড ফায়ার স্টেশন", "01901-023309", "station", ""),
+    ("Nilphamari", "কিশোরগঞ্জ ফায়ার স্টেশন", "01901-023319", "station", "Kishoreganj"),
+    ("Nilphamari", "জলঢাকা ফায়ার স্টেশন", "01901-023317", "station", "Jaldhaka"),
+    ("Nilphamari", "ডোমার ফায়ার স্টেশন", "01901-023313", "station", "Domar"),
+    ("Nilphamari", "ডিমলা ফায়ার স্টেশন", "01901-023321", "station", "Dimla"),
+    ("Nilphamari", "চিলাহাটি ফায়ার স্টেশন", "01901-023315", "station", ""),
+    ("Dinajpur", "সহকারী পরিচালক,দিনাজপুর", "01901-020144", "office", ""),
+    ("Dinajpur", "উপসহকারী পরিচালক,দিনাজপুর", "01901-023210", "office", ""),
+    ("Dinajpur", "দিনাজপুর ফায়ার স্টেশন", "01901-023251", "station", ""),
+    ("Dinajpur", "পার্বতীপুর ফায়ার স্টেশন", "01901-023259", "station", "Parbatipur"),
+    ("Dinajpur", "ফুলবাড়ী ফায়ার স্টেশন", "01901-023261", "station", "Phulbari"),
+    ("Dinajpur", "বিরামপুর ফায়ার স্টেশন", "01901-023269", "station", "Birampur"),
+    ("Dinajpur", "সেতাবগঞ্জ ফায়ার স্টেশন", "01901-023263", "station", ""),
+    ("Dinajpur", "হিলি ফায়ার স্টেশন", "01901-023273", "station", ""),
+    ("Dinajpur", "বীরগঞ্জ ফায়ার স্টেশন", "01901-023279", "station", "Birganj"),
+    ("Dinajpur", "চিরিরবন্দর ফায়ার স্টেশন", "01901-023265", "station", "Chirirbandar"),
+    ("Dinajpur", "খানসামা ফায়ার স্টেশন", "01901-023277", "station", "Khansama"),
+    ("Dinajpur", "ঘোড়াঘাট ফায়ার স্টেশন", "01901-023271", "station", "Ghoraghat"),
+    ("Dinajpur", "নবাবগঞ্জ ফায়ার স্টেশন", "01901-023281", "station", "Nawabganj"),
+    ("Dinajpur", "কাহারোল ফায়ার স্টেশন", "01901-023275", "station", "Kaharole"),
+    ("Dinajpur", "বিরল ফায়ার স্টেশন", "01901-023283", "station", "Biral"),
+    ("Thakurgaon", "উপসহকারী পরিচালক,ঠাকুরগাঁও", "01901-023208", "office", ""),
+    ("Thakurgaon", "ঠাকুরগাঁও ফায়ার স্টেশন", "01901-023285", "station", ""),
+    ("Thakurgaon", "পীরগঞ্জ ফায়ার স্টেশন", "01901-023291", "station", "Pirganj"),
+    ("Thakurgaon", "রানীশংকৈল ফায়ার স্টেশন", "01901-023295", "station", "Ranisankail"),
+    ("Thakurgaon", "বালিয়াডাঙ্গী ফায়ার স্টেশন", "01901-023287", "station", "Baliadangi"),
+    ("Thakurgaon", "হরিপুর ফায়ার স্টেশন", "01901-023289", "station", "Haripur"),
+    ("Panchagarh", "উপসহকারী পরিচালক,পঞ্চগড়", "01901-023209", "office", ""),
+    ("Panchagarh", "পঞ্চগড় ফায়ার স্টেশন", "01901-023297", "station", ""),
+    ("Panchagarh", "তেতুলিয়া ফায়ার স্টেশন", "01901-023299", "station", "Tetulia"),
+    ("Panchagarh", "বোদা ফায়ার স্টেশন", "01901-023301", "station", "Boda"),
+    ("Panchagarh", "দেবীগঞ্জ ফায়ার স্টেশন", "01901-023303", "station", "Debiganj"),
+    ("Panchagarh", "আটোয়ারী ফায়ার স্টেশন", "01901-023305", "station", "Atwari"),
+]
+# Remarks on single rows of the Rangpur transcription (keyed by name as transcribed)
+T_NOTES = {
+    "কর্তিমারী ফায়ার স্টেশন": "name read from the rendered PDF, where the conjunct is hard to read (may be printed 'কত্তিমারী'); upazila not inferred",
+    "গাইবান্ধা ফায়ার স্টেশন": "the PDF prints the same number (01901-023337) for Gaibandha and Kurigram fire stations",
+    "কুড়িগ্রাম ফায়ার স্টেশন": "the PDF prints the same number (01901-023337) for Gaibandha and Kurigram fire stations",
+    "ফুলবাড়ী ফায়ার স্টেশন|01723-976767": "number printed in the official list is outside the FSCD 01901 series",
+    "সাঘাটা ফায়ার স্টেশন": "number as printed (01901-023332)",
+}
+# per division: (label in the national tables, transcription, divisional portal page or None, vehicle-table column, folder name word)
+BY_DIV = {
+    "rajshahi": dict(bn="রাজশাহী", T=None, portal=URL_DIV_PORTAL, veh_col=5),
+    "rangpur": dict(bn="রংপুর", T=T_RANGPUR, portal=None, veh_col=6),
+}
+DIVISION, HEAD, CODE = "rajshahi", "Rajshahi", "raj"
 DIV_BN = {"Rajshahi": "রাজশাহী", "Chapainawabganj": "চাঁপাইনবাবগঞ্জ", "Natore": "নাটোর", "Naogaon": "নওগাঁ",
           "Bogura": "বগুড়া", "Joypurhat": "জয়পুরহাট", "Pabna": "পাবনা", "Sirajganj": "সিরাজগঞ্জ"}
 
@@ -315,7 +438,7 @@ def find_pdf_url():
         return PDF_FALLBACK
     # table rows: ক্রঃ নং | বিভাগের নাম | ডাউনলোড(link)
     for tr in re.findall(r"<tr\b.*?</tr>", r.text, flags=re.S):
-        if "রাজশাহী" in clean(tr):
+        if BY_DIV[DIVISION]["bn"] in clean(tr):
             m = re.search(r'href="(https://objectstorage[^"]+\.pdf)"', tr)
             if m:
                 return m.group(1)
@@ -323,14 +446,24 @@ def find_pdf_url():
 
 
 def main():
+    global HERE, RAW, KEY, T, URL_DIV_PORTAL, DIVISION, HEAD, CODE
+    args, out, KEY = division_setup(HERE, KEY, list(BY_DIV))
+    HERE, RAW = Path(out), Path(out) / "raw"
+    DIVISION, HEAD, CODE = args.division, args.division.capitalize(), DIVISION_CODES[args.division]
+    cfg = BY_DIV[DIVISION]
+    T, URL_DIV_PORTAL = cfg["T"] or T, cfg["portal"]
+    bn = cfg["bn"]
+    pdf_name = "fscd_%s_division_numbers.pdf" % DIVISION
     places, facts = [], []
     pdf_url = find_pdf_url()
     pdf_note = ""
     live_phones = None
     r = get(pdf_url)
     if r is not None and r.ok and r.content[:4] == b"%PDF":
-        p = save_raw("fscd_rajshahi_division_numbers.pdf", r.content)
+        p = save_raw(pdf_name, r.content)
         txt = pdftotext(p)
+        if txt and DIVISION != "rajshahi":
+            txt = asc(txt)  # this PDF's text layer prints the numbers in Bangla (some mixed) digits
         if txt:
             live_phones = [digits(x) for x in re.findall(r"01\d{3}-?\d{6}", txt)]
     else:
@@ -348,7 +481,7 @@ def main():
 
     # Rajshahi divisional FSCD portal (cross-check for Rajshahi District)
     alt, ctrl_landlines = {}, []
-    rp = get(URL_DIV_PORTAL)
+    rp = get(URL_DIV_PORTAL) if URL_DIV_PORTAL else None
     if rp is not None and rp.ok:
         ctrl_landlines = sorted(set(re.findall(r"02588-\d{6}", asc(rp.text))))
         for t in tables(rp.text):
@@ -360,13 +493,13 @@ def main():
         for x in ph:
             alt_by_phone[digits(x)] = (nm, ph)
 
-    counts = {}
+    counts, used_ids = {}, set()
     for i, (dist, name, phone, kind, upa) in enumerate(T, 1):
         if t_missing := [m for m in missing if m[2] == phone]:
             continue  # number no longer in live PDF
         d = digits(phone)
         ph = phone if "-" in phone else f"{d[:5]}-{d[5:]}"
-        extra = {"fscd_division": "Rajshahi", "list": "নতুন যোগাযোগ নাম্বার", "pdf_serial_order": i}
+        extra = {"fscd_division": HEAD, "list": "নতুন যোগাযোগ নাম্বার", "pdf_serial_order": i}
         notes = []
         if kind == "station":
             counts[dist] = counts.get(dist, 0) + 1
@@ -381,6 +514,15 @@ def main():
             notes.append("row is an FSCD office post (Deputy/Assistant/Deputy-Assistant Director) listed with an official number; office address not given in the PDF")
         if phone != ph:
             notes.append(f"number printed without hyphen in PDF ({phone})")
+        if DIVISION != "rajshahi":
+            notes.append(f"name transcribed from the rendered PDF page (text layer has broken Bangla glyphs)")
+            for k in (name, f"{name}|{phone}"):
+                if k in T_NOTES and (k != "ফুলবাড়ী ফায়ার স্টেশন" or dist != "Dinajpur"):
+                    notes.append(T_NOTES[k])
+        sid = f"fscd-{CODE}-{d}"
+        if sid in used_ids:  # same number printed for two rows: keep both, disambiguate the id by district
+            sid = f"{sid}-{dist.lower()}"
+        used_ids.add(sid)
         if d in alt_by_phone:
             anm, aph = alt_by_phone[d]
             if anm != name:
@@ -392,7 +534,7 @@ def main():
                              " for this station; fireservice.gov.bd lists 01730-336655 as the Rajshahi divisional control-room mobile")
         elif dist == "Rajshahi" and kind == "station" and alt:
             notes.append("not listed on fireservice.rajshahi.gov.bd station-number page")
-        places.append(dict(source_key=KEY, source_id=f"fscd-raj-{d}", name_bn=nfc(name), name_en="", category_key=cat,
+        places.append(dict(source_key=KEY, source_id=sid, name_bn=nfc(name), name_en="", category_key=cat,
                            district_en=dist, upazila_en=upa, phone=ph, operator="ফায়ার সার্ভিস ও সিভিল ডিফেন্স অধিদপ্তর",
                            ownership="public", extra_json=xj(extra), source_url=pdf_url,
                            notes=(pdf_note + "; ".join(notes)).strip()))
@@ -402,23 +544,24 @@ def main():
     if rc is not None and rc.ok:
         for t in tables(rc.text):
             for row in t:
-                if row and row[0].startswith("রাজশাহী নিয়ন্ত্রণ কক্ষ") and len(row) > 1:
-                    places.append(dict(source_key=KEY, source_id="fscd-raj-control-room",
-                                       name_bn="ফায়ার সার্ভিস ও সিভিল ডিফেন্স, রাজশাহী নিয়ন্ত্রণ কক্ষ", name_en="",
-                                       category_key="emergency", district_en="Rajshahi", phone=phone_norm(row[1]),
+                if row and row[0].startswith(f"{bn} নিয়ন্ত্রণ কক্ষ") and len(row) > 1:
+                    places.append(dict(source_key=KEY, source_id=f"fscd-{CODE}-control-room",
+                                       name_bn=f"ফায়ার সার্ভিস ও সিভিল ডিফেন্স, {bn} নিয়ন্ত্রণ কক্ষ", name_en="",
+                                       category_key="emergency", district_en=HEAD, phone=phone_norm(row[1]),
                                        operator="ফায়ার সার্ভিস ও সিভিল ডিফেন্স অধিদপ্তর", ownership="public",
-                                       extra_json=xj({"label_in_source": row[0], "role": "divisional control room (Rajshahi division)",
+                                       extra_json=xj({"label_in_source": row[0], "role": f"divisional control room ({HEAD} division)",
                                                       "landlines_on_divisional_portal": ctrl_landlines}),
                                        source_url=URL_CONTROL,
-                                       notes="Name composed from the table label 'রাজশাহী নিয়ন্ত্রণ কক্ষ' on the FSCD control-room page. "
-                                             "fireservice.rajshahi.gov.bd prints the divisional control room landlines in the new 02588-85xxxx format "
-                                             "while fireservice.gov.bd still prints 0721-77xxxx; 01730-336655 appears on both."))
+                                       notes=("Name composed from the table label 'রাজশাহী নিয়ন্ত্রণ কক্ষ' on the FSCD control-room page. "
+                                              "fireservice.rajshahi.gov.bd prints the divisional control room landlines in the new 02588-85xxxx format "
+                                              "while fireservice.gov.bd still prints 0721-77xxxx; 01730-336655 appears on both.") if DIVISION == "rajshahi" else
+                                             f"Name composed from the table label '{row[0]}' on the FSCD control-room page."))
 
     # Station counts per district (counted from the PDF list)
     for dist, n in counts.items():
         facts.append(dict(entity_level="district", entity_name_en=dist, district_en=dist, fact="fire_stations_listed",
                           value=n, unit="stations", basis="counted from station-number list", year=2026, source_key=KEY,
-                          source_url=pdf_url, notes="Count of 'ফায়ার স্টেশন' rows in the Rajshahi-division number list (PDF dated 2026-08-11)"))
+                          source_url=pdf_url, notes=f"Count of 'ফায়ার স্টেশন' rows in the {HEAD}-division number list (PDF dated 2026-08-11)"))
 
     # National page with station counts per class by division (Rajshahi row)
     rn = get(URL_COUNTS)
@@ -428,31 +571,32 @@ def main():
                 "fire_stations_class_c", "fire_stations_river", "fire_stations_total"]
         for t in tables(rn.text):
             for row in t:
-                if len(row) >= 9 and row[1].startswith("রাজশাহী বিভাগ"):
+                if len(row) >= 9 and row[1].startswith(f"{bn} বিভাগ"):
                     for k, h, v in zip(keys, heads, row[2:9]):
-                        facts.append(dict(entity_level="division", entity_name_en="Rajshahi", fact=k, value=asc(v), unit="stations",
+                        facts.append(dict(entity_level="division", entity_name_en=HEAD, fact=k, value=asc(v), unit="stations",
                                           basis="reported", year="", source_key=KEY, source_url=URL_COUNTS,
                                           notes=f"Column '{h}'; page total 'সর্বমোট চালুকৃত স্টেশন - ৫৩৮ টি' (national). Page undated."))
                 if len(row) >= 6 and row[1] in ("এ্যাম্বুলেন্স", "পাম্প") or (row and row[0].startswith("অগ্নি নির্বাপনী ভিহিক্যাল")):
-                    # columns: ক্রঃ নং | নাম | ঢাকা | মঃসিংহ | চট্রগ্রাম | রাজশাহী | ...
+                    # columns: ক্রঃ নং | নাম | ঢাকা | মঃসিংহ | চট্রগ্রাম | রাজশাহী | রংপুর | ...
+                    col = cfg["veh_col"]
                     if row[0].startswith("অগ্নি নির্বাপনী"):
-                        val, label = row[4], "vehicles_and_pumps_total"
+                        val, label = row[col - 1], "vehicles_and_pumps_total"
                     else:
-                        val, label = row[5], {"এ্যাম্বুলেন্স": "fscd_ambulances", "পাম্প": "fscd_pumps"}[row[1]]
-                    facts.append(dict(entity_level="division", entity_name_en="Rajshahi", fact=label, value=asc(val), unit="units",
+                        val, label = row[col], {"এ্যাম্বুলেন্স": "fscd_ambulances", "পাম্প": "fscd_pumps"}[row[1]]
+                    facts.append(dict(entity_level="division", entity_name_en=HEAD, fact=label, value=asc(val), unit="units",
                                       basis="reported", year=2024, source_key=KEY, source_url=URL_COUNTS,
-                                      notes="Vehicle/pump summary dated 20 Oct 2024 (Rajshahi column)"))
+                                      notes=f"Vehicle/pump summary dated 20 Oct 2024 ({HEAD} column)"))
     write_csv("places.csv", PLACE_COLS, places)
     write_csv("facts.csv", FACT_COLS, facts)
     write_manifest(dict(
-        key=KEY, name="Fire Service & Civil Defence — Rajshahi Division station & office numbers",
+        key=KEY, division=DIVISION, kind="fscd", name=f"Fire Service & Civil Defence — {HEAD} Division station & office numbers",
         organization="Fire Service and Civil Defence Directorate (FSCD), Bangladesh", source_type="government_portal",
-        trust_level=4, urls=[URL_ALL_NUMBERS, pdf_url, URL_CONTROL, URL_COUNTS, URL_DIV_PORTAL],
+        trust_level=4, urls=[u for u in (URL_ALL_NUMBERS, pdf_url, URL_CONTROL, URL_COUNTS, URL_DIV_PORTAL) if u],
         accessed=__import__("datetime").date.today().isoformat(), publication_date="2026-08-11",
         license=None, license_url=None, attribution="Fire Service and Civil Defence Directorate, Bangladesh (fireservice.gov.bd)",
         notes="No licence stated on fireservice.gov.bd. publication_date = creation date in the PDF metadata. Station names were "
               "transcribed from the rendered PDF because its text layer has broken Bangla glyph mapping; phone numbers come from the "
-              "text layer. No addresses or coordinates are published."), ["places.csv", "facts.csv", "raw/fscd_rajshahi_division_numbers.pdf"])
+              "text layer. No addresses or coordinates are published."), ["places.csv", "facts.csv", "raw/" + pdf_name])
 
 
 if __name__ == "__main__":

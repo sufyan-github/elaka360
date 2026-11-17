@@ -1,0 +1,691 @@
+{
+ "url": "https://fhir.dghs.gov.bd/core/CodeSystem/bd-geocodes",
+ "version": "0.5.0",
+ "name": "BDGeoCodesCS",
+ "title": "Bangladesh GeoCodes CodeSystem",
+ "status": "draft",
+ "date": "2026-10-15T00:09:54+00:00",
+ "publisher": "Directorate General of Health Services (DGHS), Bangladesh",
+ "description": "Bangladesh GeoCodes",
+ "count": 1591,
+ "ig_license": "CC0-1.0",
+ "ig_version": "0.5.0",
+ "concepts_rangpur_division": [
+  {
+   "code": "55",
+   "display": "Rangpur"
+  },
+  {
+   "code": "5527",
+   "display": "Dinajpur"
+  },
+  {
+   "code": "5532",
+   "display": "Gaibandha"
+  },
+  {
+   "code": "5549",
+   "display": "Kurigram"
+  },
+  {
+   "code": "5552",
+   "display": "Lalmonirhat"
+  },
+  {
+   "code": "5573",
+   "display": "Nilphamari"
+  },
+  {
+   "code": "5577",
+   "display": "Panchagarh"
+  },
+  {
+   "code": "5585",
+   "display": "Rangpur"
+  },
+  {
+   "code": "5594",
+   "display": "Thakurgaon"
+  },
+  {
+   "code": "552700",
+   "display": "Dinajpur N/A"
+  },
+  {
+   "code": "553200",
+   "display": "Gaibandha N/A"
+  },
+  {
+   "code": "554900",
+   "display": "Kurigram N/A"
+  },
+  {
+   "code": "555200",
+   "display": "Lalmonirhat N/A"
+  },
+  {
+   "code": "557300",
+   "display": "Nilphamari N/A"
+  },
+  {
+   "code": "557700",
+   "display": "Panchagarh N/A"
+  },
+  {
+   "code": "558575",
+   "display": "Rangpur City Corporation"
+  },
+  {
+   "code": "558500",
+   "display": "Rangpur N/A"
+  },
+  {
+   "code": "559400",
+   "display": "Thakurgaon N/A"
+  },
+  {
+   "code": "55270010",
+   "display": "Birampur"
+  },
+  {
+   "code": "55270012",
+   "display": "Birganj"
+  },
+  {
+   "code": "55270017",
+   "display": "Biral"
+  },
+  {
+   "code": "55270021",
+   "display": "Bochaganj"
+  },
+  {
+   "code": "55270030",
+   "display": "Chirirbandar"
+  },
+  {
+   "code": "55270038",
+   "display": "Fulbari"
+  },
+  {
+   "code": "55270043",
+   "display": "Ghoraghat"
+  },
+  {
+   "code": "55270047",
+   "display": "Hakimpur"
+  },
+  {
+   "code": "55270056",
+   "display": "Kaharole"
+  },
+  {
+   "code": "55270060",
+   "display": "Khansama"
+  },
+  {
+   "code": "55270064",
+   "display": "Dinajpur Sadar"
+  },
+  {
+   "code": "55270069",
+   "display": "Nawabganj"
+  },
+  {
+   "code": "55270077",
+   "display": "Parbatipur"
+  },
+  {
+   "code": "55320021",
+   "display": "Fulchhari"
+  },
+  {
+   "code": "55320024",
+   "display": "Gaibandha Sadar"
+  },
+  {
+   "code": "55320030",
+   "display": "Gobindaganj"
+  },
+  {
+   "code": "55320067",
+   "display": "Palashbari"
+  },
+  {
+   "code": "55320082",
+   "display": "Sadullapur"
+  },
+  {
+   "code": "55320088",
+   "display": "Saghata"
+  },
+  {
+   "code": "55320091",
+   "display": "Sundarganj"
+  },
+  {
+   "code": "55490006",
+   "display": "Bhurungamari"
+  },
+  {
+   "code": "55490008",
+   "display": "Rajibpur"
+  },
+  {
+   "code": "55490009",
+   "display": "Chilmari"
+  },
+  {
+   "code": "55490018",
+   "display": "Phulbari"
+  },
+  {
+   "code": "55490052",
+   "display": "Kurigram Sadar"
+  },
+  {
+   "code": "55490061",
+   "display": "Nageshwari"
+  },
+  {
+   "code": "55490077",
+   "display": "Rajarhat"
+  },
+  {
+   "code": "55490079",
+   "display": "Raumari"
+  },
+  {
+   "code": "55490094",
+   "display": "Ulipur"
+  },
+  {
+   "code": "55520002",
+   "display": "Aditmari"
+  },
+  {
+   "code": "55520033",
+   "display": "Hatibandha"
+  },
+  {
+   "code": "55520039",
+   "display": "Kaliganj"
+  },
+  {
+   "code": "55520055",
+   "display": "Lalmonirhat Sadar"
+  },
+  {
+   "code": "55520070",
+   "display": "Patgram"
+  },
+  {
+   "code": "55730012",
+   "display": "Dimla"
+  },
+  {
+   "code": "55730015",
+   "display": "Domar"
+  },
+  {
+   "code": "55730036",
+   "display": "Jaldhaka"
+  },
+  {
+   "code": "55730045",
+   "display": "Kishoreganj"
+  },
+  {
+   "code": "55730064",
+   "display": "Nilphamari Sadar"
+  },
+  {
+   "code": "55730085",
+   "display": "Saidpur"
+  },
+  {
+   "code": "55770004",
+   "display": "Atwari"
+  },
+  {
+   "code": "55770025",
+   "display": "Boda"
+  },
+  {
+   "code": "55770034",
+   "display": "Debiganj"
+  },
+  {
+   "code": "55770073",
+   "display": "Panchagarh Sadar"
+  },
+  {
+   "code": "55770090",
+   "display": "Tentulia"
+  },
+  {
+   "code": "55850003",
+   "display": "Badarganj"
+  },
+  {
+   "code": "55850027",
+   "display": "Gangachara"
+  },
+  {
+   "code": "55850042",
+   "display": "Kaunia"
+  },
+  {
+   "code": "55857549",
+   "display": "Rangpur Sadar"
+  },
+  {
+   "code": "55850058",
+   "display": "Mithapukur"
+  },
+  {
+   "code": "55850073",
+   "display": "Pirgachha"
+  },
+  {
+   "code": "55850076",
+   "display": "Pirganj"
+  },
+  {
+   "code": "55850092",
+   "display": "Taraganj"
+  },
+  {
+   "code": "55940008",
+   "display": "Baliadangi"
+  },
+  {
+   "code": "55940051",
+   "display": "Haripur"
+  },
+  {
+   "code": "55940082",
+   "display": "Pirganj"
+  },
+  {
+   "code": "55940086",
+   "display": "Ranisankail"
+  },
+  {
+   "code": "55940094",
+   "display": "Thakurgaon Sadar"
+  },
+  {
+   "code": "55857531",
+   "display": "Hajirhat"
+  },
+  {
+   "code": "55857533",
+   "display": "Haragachh"
+  },
+  {
+   "code": "55857544",
+   "display": "Kotwali"
+  },
+  {
+   "code": "55857555",
+   "display": "Mahiganj"
+  },
+  {
+   "code": "55857569",
+   "display": "Parshuram"
+  },
+  {
+   "code": "55857589",
+   "display": "Tajhat"
+  },
+  {
+   "code": "5527001012",
+   "display": "Birampur Paurasava"
+  },
+  {
+   "code": "5527001218",
+   "display": "Birganj Paurashava"
+  },
+  {
+   "code": "5527002185",
+   "display": "Setabganj Paurasava"
+  },
+  {
+   "code": "5527003842",
+   "display": "Fulbari Paurasava"
+  },
+  {
+   "code": "5527004353",
+   "display": "Ghoraghat Paurashava"
+  },
+  {
+   "code": "5527004757",
+   "display": "Hakimpur Paurasava"
+  },
+  {
+   "code": "5527006428",
+   "display": "Dinajpur Paurasava"
+  },
+  {
+   "code": "5527007771",
+   "display": "Parbatipur Paurasava"
+  },
+  {
+   "code": "5532002422",
+   "display": "Gaibandha Paurasava"
+  },
+  {
+   "code": "5532003033",
+   "display": "Gobindaganj Paurasava"
+  },
+  {
+   "code": "5532006766",
+   "display": "Palashbari Paurashav"
+  },
+  {
+   "code": "5532009177",
+   "display": "Sundarganj Paurashava"
+  },
+  {
+   "code": "5549005233",
+   "display": "Kurigram Paurasava"
+  },
+  {
+   "code": "5549006155",
+   "display": "Nageshwari Paurashava"
+  },
+  {
+   "code": "5549009466",
+   "display": "Ulipur Paurasava"
+  },
+  {
+   "code": "5552005533",
+   "display": "Lalmonirhat Paurasava"
+  },
+  {
+   "code": "5552007066",
+   "display": "Patgram Paurasava"
+  },
+  {
+   "code": "5573001525",
+   "display": "Domar Paurasava"
+  },
+  {
+   "code": "5573003637",
+   "display": "Jaldhaka Paurashava"
+  },
+  {
+   "code": "5573006450",
+   "display": "Nilphamari Paurasava"
+  },
+  {
+   "code": "5573008575",
+   "display": "Saidpur Paurasava"
+  },
+  {
+   "code": "5577002520",
+   "display": "Boda Paurashava"
+  },
+  {
+   "code": "5577007350",
+   "display": "Panchagarh Paurasava"
+  },
+  {
+   "code": "5585000313",
+   "display": "Badarganj Paurasava"
+  },
+  {
+   "code": "5585004225",
+   "display": "Haragachh (kaunia) Paurasava"
+  },
+  {
+   "code": "5585754975",
+   "display": "Rangpur City Corporation"
+  },
+  {
+   "code": "5594008233",
+   "display": "Pirganj Paurasava"
+  },
+  {
+   "code": "5594008655",
+   "display": "Ranisankail Paurashava"
+  },
+  {
+   "code": "5594009466",
+   "display": "Thakurgaon Paurasava"
+  },
+  {
+   "code": "5527001099",
+   "display": "Unions Of Birampur Upazila"
+  },
+  {
+   "code": "5527001299",
+   "display": "Unions Of Birganj Upazila"
+  },
+  {
+   "code": "5527001799",
+   "display": "Unions Of Biral Upazila"
+  },
+  {
+   "code": "5527002199",
+   "display": "Unions Of Bochaganj Upazila"
+  },
+  {
+   "code": "5527003099",
+   "display": "Unions Of Chirirbandar Upazila"
+  },
+  {
+   "code": "5527003899",
+   "display": "Unions Of Fulbari Upazila"
+  },
+  {
+   "code": "5527004399",
+   "display": "Unions Of Ghoraghat Upazila"
+  },
+  {
+   "code": "5527004799",
+   "display": "Unions Of Hakimpur Upazila"
+  },
+  {
+   "code": "5527005699",
+   "display": "Unions Of Kaharole Upazila"
+  },
+  {
+   "code": "5527006099",
+   "display": "Unions Of Khansama Upazila"
+  },
+  {
+   "code": "5527006499",
+   "display": "Unions Of Dinajpur Sadar Upazila"
+  },
+  {
+   "code": "5527006999",
+   "display": "Unions Of Nawabganj Upazila"
+  },
+  {
+   "code": "5527007799",
+   "display": "Unions Of Parbatipur Upazila"
+  },
+  {
+   "code": "5532002199",
+   "display": "Unions Of Fulchhari Upazila"
+  },
+  {
+   "code": "5532002499",
+   "display": "Unions Of Gaibandha Sadar Upazila"
+  },
+  {
+   "code": "5532003099",
+   "display": "Unions Of Gobindaganj Upazila"
+  },
+  {
+   "code": "5532006799",
+   "display": "Unions Of Palashbari Upazila"
+  },
+  {
+   "code": "5532008299",
+   "display": "Unions Of Sadullapur Upazila"
+  },
+  {
+   "code": "5532008899",
+   "display": "Unions Of Saghata Upazila"
+  },
+  {
+   "code": "5532009199",
+   "display": "Unions Of Sundarganj Upazila"
+  },
+  {
+   "code": "5549000699",
+   "display": "Unions Of Bhurungamari Upazila"
+  },
+  {
+   "code": "5549000899",
+   "display": "Unions Of Char Rajibpur Upazila"
+  },
+  {
+   "code": "5549000999",
+   "display": "Unions Of Chilmari Upazila"
+  },
+  {
+   "code": "5549001899",
+   "display": "Unions Of Phulbari Upazila"
+  },
+  {
+   "code": "5549005299",
+   "display": "Unions Of Kurigram Sadar Upazila"
+  },
+  {
+   "code": "5549006199",
+   "display": "Unions Of Nageshwari Upazila"
+  },
+  {
+   "code": "5549007799",
+   "display": "Unions Of Rajarhat Upazila"
+  },
+  {
+   "code": "5549007999",
+   "display": "Unions Of Raumari Upazila"
+  },
+  {
+   "code": "5549009499",
+   "display": "Unions Of Ulipur Upazila"
+  },
+  {
+   "code": "5552000299",
+   "display": "Unions Of Aditmari Upazila"
+  },
+  {
+   "code": "5552003399",
+   "display": "Unions Of Hatibandha Upazila"
+  },
+  {
+   "code": "5552003999",
+   "display": "Unions Of Kaliganj Upazila"
+  },
+  {
+   "code": "5552005599",
+   "display": "Unions Of Lalmonirhat Sadar Upazila"
+  },
+  {
+   "code": "5552007099",
+   "display": "Unions Of Patgram Upazila"
+  },
+  {
+   "code": "5573001299",
+   "display": "Unions Of Dimla Upazila"
+  },
+  {
+   "code": "5573001599",
+   "display": "Unions Of Domar Upazila Upazila"
+  },
+  {
+   "code": "5573003699",
+   "display": "Unions Of Jaldhaka Upazila"
+  },
+  {
+   "code": "5573004599",
+   "display": "Unions Of Kishoreganj Upazila"
+  },
+  {
+   "code": "5573006499",
+   "display": "Unions Of Nilphamari Sadar Upazila"
+  },
+  {
+   "code": "5573008599",
+   "display": "Unions Of Saidpur Upazila Upazila"
+  },
+  {
+   "code": "5577000499",
+   "display": "Unions Of Atwari Upazila"
+  },
+  {
+   "code": "5577002599",
+   "display": "Unions Of Boda Upazila"
+  },
+  {
+   "code": "5577003499",
+   "display": "Unions Of Debiganj Upazila"
+  },
+  {
+   "code": "5577007399",
+   "display": "Unions Of Panchagarh Sadar Upazila"
+  },
+  {
+   "code": "5577009099",
+   "display": "Unions Of Tentulia Upazila"
+  },
+  {
+   "code": "5585000399",
+   "display": "Unions Of Badarganj Upazila"
+  },
+  {
+   "code": "5585002799",
+   "display": "Unions Of Gangachara Upazila"
+  },
+  {
+   "code": "5585004299",
+   "display": "Unions Of Kaunia Upazila"
+  },
+  {
+   "code": "5585754999",
+   "display": "Unions Of Rangpur Sadar Upazila"
+  },
+  {
+   "code": "5585005899",
+   "display": "Unions Of Mitha Pukur Upazila"
+  },
+  {
+   "code": "5585007399",
+   "display": "Unions Of Pirgachha Upazila"
+  },
+  {
+   "code": "5585007699",
+   "display": "Unions Of Pirganj Upazila"
+  },
+  {
+   "code": "5585009299",
+   "display": "Unions Of Taraganj Upazila"
+  },
+  {
+   "code": "5594000899",
+   "display": "Unions Of Baliadangi Upazila"
+  },
+  {
+   "code": "5594005199",
+   "display": "Unions Of Haripur Upazila"
+  },
+  {
+   "code": "5594008299",
+   "display": "Unions Of Pirganj Upazila"
+  },
+  {
+   "code": "5594008699",
+   "display": "Unions Of Ranisankail Upazila"
+  },
+  {
+   "code": "5594009499",
+   "display": "Unions Of Thakurgaon Sadar Upazila"
+  }
+ ]
+}

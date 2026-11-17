@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""BBS Population and Housing Census 2022 — Rajshahi Division (8 districts).
+"""BBS Population and Housing Census 2022 — one division (default Rajshahi Division, 8 districts).
+
+  python3 -I fetch.py [--division rajshahi] [--out DIR] [--cache DIR] [--offline] [--refresh]
+
+Default (no arguments): Rajshahi Division into this folder, exactly as the first run. Another division (district
+table below; Rangpur so far) writes to ../bbs_census_2022_<division>/ with raw/c01_<division>_division.csv and
+source key BBS_CENSUS_2022_<DIVISION> (data/sources/DIVISIONS.md). File names below are those of the Rajshahi run.
 
 Downloads from bbs.gov.bd (Census 2022 publication page) and rebuilds:
 
@@ -26,8 +32,11 @@ from urllib.parse import urlparse
 import requests
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+FOLDER = HERE  # the collector folder; HERE / RAW are the output folder (set by configure())
 RAW = os.path.join(HERE, "raw")
 KEY = "BBS_CENSUS_2022"
+KIND = "bbs_census"
+DIVISION_SLUG = "rajshahi"
 UA = "Elaka360-data-pipeline (research; contact via repository)"
 DELAY = 1.3  # seconds between requests to the same host
 AIA_INTERMEDIATE = "http://crt.sectigo.com/SectigoPublicServerAuthenticationCADVR36.crt"
@@ -41,6 +50,19 @@ DISTRICTS = [
     ("Pabna", "PABNA", "76"), ("Sirajganj", "SIRAJGANJ", "88"), ("Bogura", "BOGURA", "10"),
     ("Chapainawabganj", "CHAPAI NAWABGANJ", "70"), ("Joypurhat", "JOYPURHAT", "38"),
 ]
+
+# Other divisions: (division name, BBS division geocode, districts as above). Labels are the district names printed
+# on the BBS Census 2022 page; codes are checked against the first C-01 row of each Excel file.
+DIVISIONS = {
+    "rajshahi": ("Rajshahi", "50", DISTRICTS),
+    "rangpur": ("Rangpur", "55", [
+        ("Rangpur", "RANGPUR", "85"), ("Gaibandha", "GAIBANDHA", "32"), ("Nilphamari", "NILPHAMARI", "73"),
+        ("Kurigram", "KURIGRAM", "49"), ("Dinajpur", "DINAJPUR", "27"), ("Thakurgaon", "THAKURGAON", "94"),
+        ("Lalmonirhat", "LALMONIRHAT", "52"), ("Panchagarh", "PANCHAGARH", "77"),
+    ]),
+    # dhaka, chattogram, khulna, barishal, sylhet, mymensingh: district table not written yet
+    "dhaka": None, "chattogram": None, "khulna": None, "barishal": None, "sylhet": None, "mymensingh": None,
+}
 
 # URLs as resolved on 2026-11-12; used when the listing page cannot be parsed.
 OS = "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/"
@@ -298,9 +320,9 @@ def union_statistics_d01(pages):
         if not seen:
             continue
         for ln in p.splitlines():
-            if re.match(r"^\s*50\s+(\d\d\s+)?\S", ln):
+            if re.match(r"^\s*" + DIVISION_CODE + r"\s+(\d\d\s+)?\S", ln):
                 out.append(f"p{pno}\t{' '.join(ln.split())}")
-        if len(out) >= 9:
+        if len(out) >= len(DISTRICTS) + 1:
             break
     return out
 
@@ -317,10 +339,11 @@ def classify(r):
     if r["mauza_code"]:
         return "mouza"
     if r["union_ward_code"]:
-        if r["paurashava_code"] or r["city_corporation_code"]:
-            return "ward"
-        # Bogura Cantonment is printed in the Union/Ward column (code 998) but is not a union parishad
-        return "cantonment" if "cantonment" in r["name"].lower() else "union"
+        # Bogura / Saidpur Cantonment are printed in the Union/Ward column (code 998) but are not union parishads;
+        # Rangpur's "Cantonment" (code 998) sits in a city-corporation thana but is not a city ward
+        if "cantonment" in r["name"].lower():
+            return "cantonment"
+        return "ward" if r["paurashava_code"] or r["city_corporation_code"] else "union"
     if r["paurashava_code"]:
         return "pourashava"
     if r["upazila_thana_code"]:
@@ -337,7 +360,7 @@ def geocode(r):
 
 
 def build(urls):
-    c01 = list(csv.DictReader(open(os.path.join(RAW, "c01_rajshahi_division.csv"), encoding="utf-8")))
+    c01 = list(csv.DictReader(open(os.path.join(RAW, f"c01_{DIVISION_SLUG}_division.csv"), encoding="utf-8")))
     kf = open(os.path.join(RAW, "district_report_key_findings.txt"), encoding="utf-8").read()
     d01 = open(os.path.join(RAW, "union_statistics_D01.txt"), encoding="utf-8").read().splitlines()
 
@@ -398,9 +421,12 @@ def build(urls):
                 note.append("unit split across parents; figures are for this part only")
             if lvl == "pourashava" and pcount.get(u["paurashava_code"], 0) > 1:
                 note.append(f"paurashava listed under {pcount[u['paurashava_code']]} upazilas; figures are for the part in {upz}")
-            if lvl == "cantonment":
-                note.append("printed in the Union/Ward column of C-01 with a union-style code; not a union parishad "
-                            "(the District Report's union total counts it, Union Statistics Table D01 does not)")
+            if lvl == "cantonment" and u["city_corporation_code"]:
+                note.append("printed as a ward row (code 998) of a city-corporation thana in C-01; not a numbered city ward")
+            elif lvl == "cantonment":
+                note.append("printed in the Union/Ward column of C-01 with a union-style code; not a union parishad"
+                            + (" (the District Report's union total counts it, Union Statistics Table D01 does not)"
+                               if DIVISION_SLUG == "rajshahi" else ""))
             # parent
             if lvl == "district":
                 parent = ("division", DIVISION)
@@ -413,7 +439,7 @@ def build(urls):
             elif lvl == "pourashava":
                 parent = ("upazila", upz)
             elif lvl in ("union", "cantonment"):
-                parent = ("upazila", upz)
+                parent = ("thana" if u["city_corporation_code"] else "upazila", upz)
             elif lvl == "ward":
                 if u["paurashava_code"]:
                     pn = next((strip_generic(x["name"]) for x in units if x["level"] == "pourashava"
@@ -607,13 +633,36 @@ def write_csv(path, rows, cols):
 
 # ------------------------------------------------------------------ main
 
+def configure(division, out=None):
+    """Point the module at one division: district table, codes, key and output folder."""
+    global HERE, RAW, KEY, DIVISION_CODE, DIVISION, DISTRICTS, DIVISION_SLUG, PINNED
+    if not DIVISIONS.get(division):
+        raise SystemExit(f"no district table for division '{division}' yet: add it to DIVISIONS in {__file__}")
+    DIVISION, DIVISION_CODE, DISTRICTS = DIVISIONS[division]
+    DIVISION_SLUG = division
+    HERE = os.path.abspath(out) if out else (FOLDER if division == "rajshahi"
+                                             else os.path.join(os.path.dirname(FOLDER), "bbs_census_2022_" + division))
+    RAW = os.path.join(HERE, "raw")
+    if division != "rajshahi":
+        KEY = f"BBS_CENSUS_2022_{division.upper()}"
+        # fallback URLs: the division's previous raw/resolved_urls.json, else only the national Union Statistics PDF
+        prev = os.path.join(RAW, "resolved_urls.json")
+        PINNED = (json.load(open(prev, encoding="utf-8")) if os.path.isfile(prev) else
+                  {"union_statistics": PINNED["union_statistics"], "community_xlsx": {}, "district_page": {},
+                   "district_pdf": {}})
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--division", default="rajshahi", choices=sorted(DIVISIONS))
+    ap.add_argument("--out", default=None, help="output folder (default: this folder for rajshahi, "
+                    "else ../bbs_census_2022_<division>)")
     ap.add_argument("--cache", default=os.path.join(tempfile.gettempdir(), "elaka360_bbs_census_2022"),
                     help="directory for the large downloads (not committed)")
     ap.add_argument("--offline", action="store_true", help="rebuild areas.csv/facts.csv from raw/ only")
     ap.add_argument("--refresh", action="store_true", help="re-download files already in the cache")
     a = ap.parse_args()
+    configure(a.division, a.out)
     os.makedirs(RAW, exist_ok=True)
     urls_path = os.path.join(RAW, "resolved_urls.json")
     if a.offline:
@@ -623,8 +672,8 @@ def main():
     fx = Fetcher(a.cache)
     urls = resolve(fx)
 
-    # Community Report Excel → raw/c01_rajshahi_division.csv
-    with open(os.path.join(RAW, "c01_rajshahi_division.csv"), "w", encoding="utf-8", newline="") as f:
+    # Community Report Excel → raw/c01_<division>_division.csv
+    with open(os.path.join(RAW, f"c01_{DIVISION_SLUG}_division.csv"), "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=["district_file"] + C01_COLS, lineterminator="\n")
         w.writeheader()
         for dname, _, dcode in DISTRICTS:
@@ -647,7 +696,7 @@ def main():
         p = fx.file(urls["union_statistics"], "union_statistics.pdf", a.refresh)
         lines = union_statistics_d01(pdf_pages(p))
         open(os.path.join(RAW, "union_statistics_D01.txt"), "w", encoding="utf-8").write(
-            f"# {urls['union_statistics']}\n# Table D01 rows for Rajshahi Division (geocode 50); pPAGE<TAB>row\n"
+            f"# {urls['union_statistics']}\n# Table D01 rows for {DIVISION} Division (geocode {DIVISION_CODE}); pPAGE<TAB>row\n"
             + "\n".join(lines) + "\n")
     json.dump(urls, open(urls_path, "w", encoding="utf-8"), indent=1, ensure_ascii=False)
     build(urls)

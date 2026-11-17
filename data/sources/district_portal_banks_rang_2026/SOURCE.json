@@ -1,0 +1,30 @@
+{
+  "key": "DISTRICT_PORTAL_BANKS_RANG_2026",
+  "division": "rangpur",
+  "kind": "district_banks",
+  "name": "District portals — bank branch/office phone lists (Panchagarh, Nilphamari, Kurigram)",
+  "organization": "Deputy Commissioner's offices (district portals)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://panchagarh.gov.bd/pages/static-pages/69773725c4774958d7c0d34e",
+    "https://nilphamari.gov.bd/pages/static-pages/6977535ec4774958d7c1bad7",
+    "https://kurigram.gov.bd/pages/static-pages/6977614ec4774958d7c215ca",
+    "https://rangpur.gov.bd/pages/static-pages/6977242ec4774958d7c0a048",
+    "https://gaibandha.gov.bd/pages/static-pages/69771ca6c4774958d7c05746",
+    "https://thakurgaon.gov.bd/pages/static-pages/697769a8c4774958d7c23719",
+    "https://dinajpur.gov.bd/pages/static-pages/ব্যাংক-3abb1c-69774bd4c4774958d7c16c05"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "District portals panchagarh.gov.bd, nilphamari.gov.bd, kurigram.gov.bd",
+  "notes": "No licence stated; lists are undated. Only landline numbers are kept (branch mobile numbers dropped: Panchagarh 12, Nilphamari 11). No coordinates or routing numbers. Rangpur and Gaibandha portals list bank names only; Thakurgaon's page is two unnamed PDF attachments; Lalmonirhat has no bank page; Dinajpur's page gives national hotlines and alternative street names per bank (not branch data) — none used.",
+  "files": {
+    "places.csv": "69bb99b32c096d1ebc8f4172b68342d1b54997bf5508ca8e23904cdf8b6cb9b6",
+    "raw/kurigram_banks.txt": "065b0c7d5c8fb46d92e59e4e7c9f2a507a33d19534a32974d15c164996f55896",
+    "raw/nilphamari_banks.txt": "95453caeebd21555b4869a2c943e49245f3e0f48eea0b7881c19406d58b4f981",
+    "raw/panchagarh_banks.txt": "47cb1c79409debc8754c0071c873617020a1590c3d0ba4e0d33b1721912d0e16"
+  }
+}

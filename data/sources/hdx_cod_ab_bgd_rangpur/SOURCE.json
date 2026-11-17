@@ -1,0 +1,28 @@
+{
+  "key": "HDX_COD_AB_BGD_RANGPUR",
+  "name": "Bangladesh - Subnational Administrative Boundaries (COD-AB v03), Rangpur Division extract",
+  "organization": "OCHA (ROAP / FIS) on HDX; source: Bangladesh Bureau of Statistics (BBS)",
+  "source_type": "humanitarian_dataset",
+  "trust_level": 3,
+  "urls": [
+    "https://data.humdata.org/dataset/cod-ab-bgd",
+    "https://data.humdata.org/dataset/401d3fae-4262-48c9-891f-461fd776d49b/resource/cec2abe3-d8b7-4025-9362-9f7e780f2a07/download/bgd_admin_boundaries.geojson.zip",
+    "https://data.humdata.org/api/3/action/package_show?id=cod-ab-bgd"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": "2026-01-26",
+  "license": "CC-BY-IGO-3.0",
+  "license_url": "http://creativecommons.org/licenses/by/3.0/igo/legalcode",
+  "attribution": "Bangladesh Bureau of Statistics (BBS); OCHA ROAP; published by OCHA FIS / HDX (CC BY-IGO)",
+  "files": {
+    "areas.csv": "04414a0b6e9e877eb571d3f15c54bc2434a4f3d1f691746cc5cf28e30481c5f0",
+    "boundaries.geojson": "bf1fbfba017200d0c9d1b0a9baf3990455fe0e70b8b6f6b58153575f116c08ad",
+    "facts.csv": "50994006543ae269635cb3b9575590369b4be2535214172dab52918907ff519d",
+    "crosswalk.csv": "3d33061cb55cdb5b3d59486dd9f9f4d6280e88d6d503cd387b0ef70dd5480d52",
+    "raw/bgd_adminpoints_rangpur.geojson": "980f6de79244381a6b8e64a9e4c7cf1a351a711ab701280873463c726df892fb",
+    "raw/hdx_cod_ab_bgd_package.json": "7c5aee071ef0b0f6b20c863e9af8a9025312a3a71e0d109b49c9f5a01512fd0d"
+  },
+  "notes": "COD-AB v03: ADM1-ADM3 polygons, valid_on 2023-05-21, reviewed 2025-06-01, HDX resource last modified 2026-01-26T15:14:12.782628. HDX dataset_date [2023-05-21T00:00:00 TO 2025-06-01T23:59:59]; 'boundaries created by the source 01 January 2010'. No ADM4 (union) polygons in v03; union/paurashava/ward codes come from the bgd_adminpoints layer (valid_on 2020-11-13, older P-code scheme BD+div+dist+upz+union, 2 digits each). Polygons simplified (Douglas-Peucker 0.0002 deg, 5 decimals) ring by ring, so shared borders can have slivers of a few metres.",
+  "division": "rangpur",
+  "kind": "hdx_cod_ab"
+}

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""HDX COD-AB Bangladesh (OCHA / BBS, version v03) -> Rajshahi Division.
+"""HDX COD-AB Bangladesh (OCHA / BBS, version v03) -> one division (default Rajshahi).
 
 Downloads the "Bangladesh - Subnational Administrative Boundaries" dataset from HDX
-(https://data.humdata.org/dataset/cod-ab-bgd), keeps Rajshahi Division (P-code BD50) and writes:
+(https://data.humdata.org/dataset/cod-ab-bgd), keeps one division (Rajshahi = P-code BD50) and writes:
 
   raw/hdx_cod_ab_bgd_package.json        HDX metadata snapshot (licence, dates, resource URLs)
   raw/bgd_adminpoints_rajshahi.geojson    HDX admin label points for BD50, unmodified (only source of ADM4 codes)
@@ -13,7 +13,11 @@ Downloads the "Bangladesh - Subnational Administrative Boundaries" dataset from 
   SOURCE.json                             manifest with sha256 of the files above
 
 Dependencies: Python 3 standard library + requests. No GIS packages (simplification and point-in-polygon are
-implemented here). Run from anywhere:  python3 -I data/sources/hdx_cod_ab_bgd/fetch.py [--cache DIR]
+implemented here). Run from anywhere:
+  python3 -I data/sources/hdx_cod_ab_bgd/fetch.py [--division rajshahi] [--out DIR] [--cache DIR]
+Default (no arguments): Rajshahi Division into this folder, exactly as the first run. Another division writes to
+../hdx_cod_ab_bgd_<division>/ (see data/sources/DIVISIONS.md) with raw/bgd_adminpoints_<division>.geojson, key
+HDX_COD_AB_BGD_<DIVISION>, and its own SOURCE.json.
 The ~38 MB HDX zip is cached in --cache (default: $TMPDIR/elaka360_cache) and is not committed.
 """
 import argparse, csv, datetime, difflib, hashlib, io, json, math, os, re, sys, tempfile, time, unicodedata, zipfile
@@ -27,6 +31,15 @@ DATASET = "cod-ab-bgd"
 PAGE = "https://data.humdata.org/dataset/cod-ab-bgd"
 API = "https://data.humdata.org/api/3/action/package_show?id=" + DATASET
 DIV_PCODE = "BD50"
+KIND = "hdx_cod_ab"
+
+# division -> (folder/key code, BBS geocode, seed admin_areas id, English name); see data/sources/DIVISIONS.md
+DIVISIONS = {
+    "rajshahi": ("raj", "50", "10002", "Rajshahi"), "rangpur": ("rang", "55", "10007", "Rangpur"),
+    "dhaka": ("dhk", "30", "10006", "Dhaka"), "chattogram": ("ctg", "20", "10001", "Chattogram"),
+    "khulna": ("khl", "40", "10003", "Khulna"), "barishal": ("bar", "10", "10004", "Barishal"),
+    "sylhet": ("syl", "60", "10005", "Sylhet"), "mymensingh": ("mym", "45", "10008", "Mymensingh"),
+}
 SIMPLIFY_DEG = 0.0002  # ~20 m; Douglas-Peucker tolerance for the published polygons
 
 _last = {}
@@ -289,7 +302,8 @@ def match_names(src, ours):
     return res
 
 
-def load_seed():
+def load_seed(div_id="10002"):
+    """Seed admin units below the division with seed id div_id (default Rajshahi 10002), plus all rows by id."""
     with open(SEED, encoding="utf-8-sig", newline="") as f:
         rows = list(csv.DictReader(f))
     by_id = {r["id"]: r for r in rows}
@@ -297,7 +311,7 @@ def load_seed():
     def in_div(r):
         while r.get("parent_id"):
             r = by_id[r["parent_id"]]
-            if r["id"] == "10002":
+            if r["id"] == div_id:
                 return True
         return False
     return [r for r in rows if in_div(r)], by_id
@@ -306,10 +320,17 @@ def load_seed():
 # district name differences between HDX (v03 / 2020) and the seed, decided by hand (same P-code district)
 DISTRICT_SEED = {"BD5010": "Bogura", "BD5038": "Joypurhat", "BD5064": "Naogaon", "BD5069": "Natore",
                  "BD5070": "Chapainawabganj", "BD5076": "Pabna", "BD5081": "Rajshahi", "BD5088": "Sirajganj"}
+# per division (HDX/DGHS district code -> seed district name_en); a division missing here is matched by name
+DISTRICT_SEED_BY_DIV = {
+    "rajshahi": DISTRICT_SEED,
+    "rangpur": {"BD5527": "Dinajpur", "BD5532": "Gaibandha", "BD5549": "Kurigram", "BD5552": "Lalmonirhat",
+                "BD5573": "Nilphamari", "BD5577": "Panchagarh", "BD5585": "Rangpur", "BD5594": "Thakurgaon"},
+}
 
 
-def build_crosswalk(units, seed_rows, by_id, source_label, district_key=lambda code: code[:6]):
+def build_crosswalk(units, seed_rows, by_id, source_label, district_key=lambda code: code[:6], district_map=DISTRICT_SEED):
     """units: dicts with level, code, name_en, parent_code (district P-code for upazila; upazila code for union ...).
+    district_map: district code -> seed district name_en (default Rajshahi); None = match districts by name.
     Returns crosswalk rows (one per source unit + one per unmatched seed unit)."""
     out = []
     seed_by_level_parent = {}
@@ -326,8 +347,12 @@ def build_crosswalk(units, seed_rows, by_id, source_label, district_key=lambda c
     matched_our = set()
     # districts
     districts = {r["name_en"]: r for r in seed_rows if r["level"] == "district"}
-    for u in [u for u in units if u["level"] == "district"]:
-        r = districts.get(DISTRICT_SEED.get(district_key(u["code"])))
+    src_d = [u for u in units if u["level"] == "district"]
+    if district_map is None:  # no hand-checked table for this division: one-to-one name matching
+        res = match_names([(u["code"], u["name_en"]) for u in src_d], [(r["name_en"], r["name_en"]) for r in districts.values()])
+        district_map = {district_key(u["code"]): res[u["code"]][0] for u in src_d if res[u["code"]][0]}
+    for u in src_d:
+        r = districts.get(district_map.get(district_key(u["code"])))
         if r:
             same = latin_key(r["name_en"]) == latin_key(u["name_en"])
             row(r, u, "code_district" if not same else "name_exact", "high",
@@ -420,12 +445,31 @@ def adm4_level(name):
     return "union"
 
 
+def out_dir(folder, division, out=None):
+    """--out, else the collector folder for Rajshahi, else the sibling folder <folder>_<division> (DIVISIONS.md)."""
+    if out:
+        return os.path.abspath(out)
+    return folder if division == "rajshahi" else os.path.join(os.path.dirname(folder), os.path.basename(folder) + "_" + division)
+
+
+def division_key(key, division):
+    """National key + division suffix (DIVISIONS.md); Rajshahi keeps the original key."""
+    return key if division == "rajshahi" else f"{key}_{division.upper()}"
+
+
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("--division", default="rajshahi", choices=sorted(DIVISIONS))
+    ap.add_argument("--out", default=None, help="output folder (default: this folder for rajshahi, else ../hdx_cod_ab_bgd_<division>)")
     ap.add_argument("--cache", default=os.path.join(tempfile.gettempdir(), "elaka360_cache"))
     a = ap.parse_args()
+    global KEY, DIV_PCODE
+    _, bbs, seed_id, div_name = DIVISIONS[a.division]
+    KEY = division_key(KEY, a.division)
+    DIV_PCODE = "BD" + bbs
+    OUT = out_dir(HERE, a.division, a.out)
     os.makedirs(a.cache, exist_ok=True)
-    os.makedirs(os.path.join(HERE, "raw"), exist_ok=True)
+    os.makedirs(os.path.join(OUT, "raw"), exist_ok=True)
 
     meta = get(API).json()["result"]
     res = {r["name"]: r for r in meta["resources"]}
@@ -439,7 +483,7 @@ def main():
                                      "methodology_other")}
     snap["organization"] = meta["organization"]["title"]
     snap["resources"] = [{k: r.get(k) for k in ("name", "format", "size", "url", "last_modified")} for r in meta["resources"]]
-    json.dump(snap, open(os.path.join(HERE, "raw", "hdx_cod_ab_bgd_package.json"), "w", encoding="utf-8"),
+    json.dump(snap, open(os.path.join(OUT, "raw", "hdx_cod_ab_bgd_package.json"), "w", encoding="utf-8"),
               ensure_ascii=False, indent=1)
 
     z = zipfile.ZipFile(zpath)
@@ -448,8 +492,8 @@ def main():
     for lvl in (1, 2, 3):
         adm[lvl] = [f for f in load(f"bgd_admin{lvl}.geojson")["features"] if f["properties"]["adm1_pcode"] == DIV_PCODE]
     pts = [f for f in load("bgd_adminpoints.geojson")["features"] if f["properties"].get("adm1_pcode") == DIV_PCODE]
-    json.dump({"type": "FeatureCollection", "name": "bgd_adminpoints (Rajshahi Division BD50)", "features": pts},
-              open(os.path.join(HERE, "raw", "bgd_adminpoints_rajshahi.geojson"), "w", encoding="utf-8"),
+    json.dump({"type": "FeatureCollection", "name": f"bgd_adminpoints ({div_name} Division {DIV_PCODE})", "features": pts},
+              open(os.path.join(OUT, "raw", f"bgd_adminpoints_{a.division}.geojson"), "w", encoding="utf-8"),
               ensure_ascii=False, separators=(",", ":"))
 
     # ---------------- boundaries.geojson (v03 polygons)
@@ -457,6 +501,8 @@ def main():
     div = adm[1][0]["properties"]
     lvl_name = {1: "division", 2: "district", 3: "upazila"}
     pt3 = {f["properties"]["adm3_pcode"]: f["properties"] for f in pts if f["properties"]["admin_level"] == 3}
+    old3 = {f["properties"]["adm3_pcode"][:6] + f["properties"]["adm3_pcode"][-2:] for f in adm[3]}
+    city_pts = any(c not in old3 for c in pt3)  # 2020 level-3 points that are city thanas, not v03 upazilas
     for lvl in (1, 2, 3):
         for f in sorted(adm[lvl], key=lambda f: f["properties"][f"adm{lvl}_pcode"]):
             p = f["properties"]
@@ -479,7 +525,8 @@ def main():
                 elif level == "upazila":
                     notes.append("no 2020 label point for this upazila (created after the 2020 list or merged in it)")
                 if level == "city_corporation":
-                    notes.append("thana-level units of the city are in the 2020 points (level thana)")
+                    notes.append("thana-level units of the city are in the 2020 points (level thana)" if city_pts
+                                 else "no thana or ward units of the city in the 2020 points")
             areas.append({"level": level, "name_en": name, "name_bn": p.get(f"adm{lvl}_name1") or "",
                           "parent_level": {1: "country", 2: "division", 3: "district"}[lvl],
                           "parent_name_en": p.get(f"adm{lvl - 1}_name") if lvl > 1 else "Bangladesh",
@@ -524,21 +571,21 @@ def main():
                                "no ADM4 polygon in COD-AB v03 (see GEOBOUNDARIES_BGD_ADM4)"})
         units.append({"level": level, "code": code, "name_en": name, "match_parent": match_parent})
 
-    fc = {"type": "FeatureCollection", "name": f"{KEY} Rajshahi Division (BD50) levels 1-3", "features": feats}
-    with open(os.path.join(HERE, "boundaries.geojson"), "w", encoding="utf-8") as fh:
+    fc = {"type": "FeatureCollection", "name": f"{KEY} {div_name} Division ({DIV_PCODE}) levels 1-3", "features": feats}
+    with open(os.path.join(OUT, "boundaries.geojson"), "w", encoding="utf-8") as fh:
         json.dump(fc, fh, ensure_ascii=False, separators=(",", ":"))
-    write_csv(os.path.join(HERE, "areas.csv"), AREA_COLS, areas)
-    write_csv(os.path.join(HERE, "facts.csv"), FACT_COLS, facts)
+    write_csv(os.path.join(OUT, "areas.csv"), AREA_COLS, areas)
+    write_csv(os.path.join(OUT, "facts.csv"), FACT_COLS, facts)
 
-    seed_rows, by_id = load_seed()
-    xw, _ = build_crosswalk(units, seed_rows, by_id, "HDX")
-    write_csv(os.path.join(HERE, "crosswalk.csv"), XW_COLS, xw)
+    seed_rows, by_id = load_seed(seed_id)
+    xw, _ = build_crosswalk(units, seed_rows, by_id, "HDX", district_map=DISTRICT_SEED_BY_DIV.get(a.division))
+    write_csv(os.path.join(OUT, "crosswalk.csv"), XW_COLS, xw)
 
-    files = ["areas.csv", "boundaries.geojson", "facts.csv", "crosswalk.csv", "raw/bgd_adminpoints_rajshahi.geojson",
+    files = ["areas.csv", "boundaries.geojson", "facts.csv", "crosswalk.csv", f"raw/bgd_adminpoints_{a.division}.geojson",
              "raw/hdx_cod_ab_bgd_package.json"]
     manifest = {
         "key": KEY,
-        "name": "Bangladesh - Subnational Administrative Boundaries (COD-AB v03), Rajshahi Division extract",
+        "name": f"Bangladesh - Subnational Administrative Boundaries (COD-AB v03), {div_name} Division extract",
         "organization": "OCHA (ROAP / FIS) on HDX; source: Bangladesh Bureau of Statistics (BBS)",
         "source_type": "humanitarian_dataset",
         "trust_level": 3,
@@ -548,20 +595,22 @@ def main():
         "license": "CC-BY-IGO-3.0",
         "license_url": meta.get("license_url"),
         "attribution": "Bangladesh Bureau of Statistics (BBS); OCHA ROAP; published by OCHA FIS / HDX (CC BY-IGO)",
-        "files": {f: sha256(os.path.join(HERE, f)) for f in files},
+        "files": {f: sha256(os.path.join(OUT, f)) for f in files},
         "notes": ("COD-AB v03: ADM1-ADM3 polygons, valid_on 2023-05-21, reviewed 2025-06-01, HDX resource last modified "
                   f"{meta.get('last_modified')}. HDX dataset_date {meta.get('dataset_date')}; 'boundaries created by the "
                   "source 01 January 2010'. No ADM4 (union) polygons in v03; union/paurashava/ward codes come from the "
                   "bgd_adminpoints layer (valid_on 2020-11-13, older P-code scheme BD+div+dist+upz+union, 2 digits each). "
                   "Polygons simplified (Douglas-Peucker 0.0002 deg, 5 decimals) ring by ring, so shared borders can have "
                   "slivers of a few metres."),
+        "division": a.division,
+        "kind": KIND,
     }
-    json.dump(manifest, open(os.path.join(HERE, "SOURCE.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+    json.dump(manifest, open(os.path.join(OUT, "SOURCE.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 
     from collections import Counter
     print("areas", Counter(r["level"] for r in areas))
     print("crosswalk", Counter((r["our_level"] or "-", r["match_method"]) for r in xw))
-    print("boundaries.geojson", os.path.getsize(os.path.join(HERE, "boundaries.geojson")), "bytes")
+    print("boundaries.geojson", os.path.getsize(os.path.join(OUT, "boundaries.geojson")), "bytes")
 
 
 if __name__ == "__main__":

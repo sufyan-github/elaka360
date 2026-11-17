@@ -14,13 +14,14 @@ const STYLE_URL = process.env.NEXT_PUBLIC_MAP_STYLE_URL ?? 'https://tiles.openfr
 const CATEGORIES = ['education', 'health', 'government', 'emergency', 'tourism', 'religious', 'transport', 'finance', 'agriculture', 'business', 'other'];
 const REFRESH_MS = 300_000;     // re-check the published data every 5 minutes while the tab is visible
 /** Static map data written at release time by apps/api/src/cli/export-edge.ts (no API or database call per view). */
-const PINS_URL = '/data/map/pins-10002.json';
+const pinsUrl = (divisionId: number) => `/data/map/pins-${divisionId}.json`;
 const boundaryUrl = (id: number, group: 'coarse' | 'fine') => `/data/map/b-${id}-${group}.json`;
 type PinFile = { fields: string[]; rows: unknown[][] };
-let pinsCache: { at: number; features: Feature<Point, PinProps & { district_id: number | null }>[] } | null = null;
-async function loadPinFile(force: boolean) {
-  if (pinsCache && !force) return pinsCache.features;
-  const res = await fetch(PINS_URL, { cache: force ? 'no-cache' : 'default' });   // no-cache = revalidate (cheap 304)
+const pinsCache = new Map<number, Feature<Point, PinProps & { district_id: number | null }>[]>();
+async function loadPinFile(divisionId: number, force: boolean) {
+  const cached = pinsCache.get(divisionId);
+  if (cached && !force) return cached;
+  const res = await fetch(pinsUrl(divisionId), { cache: force ? 'no-cache' : 'default' });   // no-cache = revalidate (cheap 304)
   if (!res.ok) throw new Error(String(res.status));
   const { fields, rows } = (await res.json()) as PinFile;
   const features = rows.map((r) => {
@@ -29,16 +30,14 @@ async function loadPinFile(force: boolean) {
     return { type: 'Feature' as const, geometry: { type: 'Point' as const, coordinates: [lon as number, lat as number] },
              properties: props as unknown as PinProps & { district_id: number | null } };
   });
-  pinsCache = { at: Date.now(), features };
+  pinsCache.set(divisionId, features);
   return features;
 }
 
-/** Rajshahi District first, then the whole division (more areas follow as their data is collected). */
-export const SCOPES = {
-  district: { id: 20015, divisionId: 10002, coarse: 'upazila,city_corporation', fine: 'union,pourashava', fineZoom: 0 },
-  division: { id: 10002, divisionId: 10002, coarse: 'upazila,city_corporation', fine: 'union,pourashava', fineZoom: 9.6 },
-} as const;
-export type ScopeKey = keyof typeof SCOPES;
+/** One map scope: a division's head district or the whole division (listed in /data/map/scopes.json at release time). */
+export interface MapScope { id: number; kind: 'district' | 'division'; division_id: number; name_bn: string; name_en: string }
+/** Union outlines for a whole division are heavy: load them once the user zooms in. */
+const fineZoom = (s: MapScope) => (s.kind === 'district' ? 0 : 9.6);
 
 type AreaProps = {
   id: number; level: AdminLevel; name_bn: string; name_en: string | null; path: string;
@@ -73,7 +72,7 @@ function boundsOf(fc: FeatureCollection): [[number, number], [number, number]] |
 const empty: FeatureCollection = { type: 'FeatureCollection', features: [] };
 
 export function LiveMap({ scope, category, layers }: {
-  scope: ScopeKey;
+  scope: MapScope;
   category: string;
   layers: { coarse: boolean; fine: boolean; places: boolean };
 }) {
@@ -112,9 +111,9 @@ export function LiveMap({ scope, category, layers }: {
     abortRef.current = ctl;
     setLoading(true);
     try {
-      const all = await loadPinFile(force);
+      const all = await loadPinFile(s.division_id, force);
       if (ctl.signal.aborted) return;
-      const district = s === 'district' ? SCOPES.district.id : null;
+      const district = s.kind === 'district' ? s.id : null;
       const fc: FeatureCollection<Point, PinProps> = {
         type: 'FeatureCollection',
         features: all.filter((f) => (district === null || f.properties.district_id === district)
@@ -144,11 +143,10 @@ export function LiveMap({ scope, category, layers }: {
     const map = mapRef.current;
     if (!map || !map.getSource('fine')) return;
     const { scope: s, layers: l } = stateRef.current;
-    const cfg = SCOPES[s];
-    const key = `${cfg.id}:${cfg.fine}`;
-    if (!l.fine || map.getZoom() < cfg.fineZoom || fineLoaded.current === key) return;
+    const key = `${s.id}:fine`;
+    if (!l.fine || map.getZoom() < fineZoom(s) || fineLoaded.current === key) return;
     fineLoaded.current = key;
-    const res = await fetch(boundaryUrl(cfg.id, 'fine'));
+    const res = await fetch(boundaryUrl(s.id, 'fine'));
     if (res.ok) (map.getSource('fine') as GeoJSONSource).setData((await res.json()) as AreaFC);
     else fineLoaded.current = null;
   }, []);
@@ -319,7 +317,7 @@ export function LiveMap({ scope, category, layers }: {
   useEffect(() => {
     const map = mapRef.current;
     if (!ready || !map) return;
-    const cfg = SCOPES[scope];
+    const cfg = scope;
     let cancelled = false;
     fineLoaded.current = null;
     (map.getSource('fine') as GeoJSONSource).setData(empty);

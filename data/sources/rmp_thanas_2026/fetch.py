@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Fetch Rajshahi Metropolitan Police thanas & official numbers from rmp.gov.bd (RMP_THANAS_2026)."""
+"""Fetch metropolitan police thanas & official numbers (default Rajshahi Metropolitan Police, rmp.gov.bd, RMP_THANAS_2026).
+
+Usage: python3 fetch.py [--division rangpur] [--out DIR]  (rangpur: rpmp.gov.bd -> RANGPUR_METRO_POLICE_THANAS_2026)."""
 # --- polite HTTP helper (copy this block into each fetch.py; stdlib + requests only) -----------------
 # Many *.gov.bd servers send only their leaf certificate and omit the intermediate CA. Browsers fetch the
 # missing intermediate via the certificate's AIA URL; we do the same explicitly: download the published
@@ -209,6 +211,9 @@ THANA_EN = {"বোয়ালিয়া": "Boalia", "রাজপাড়�
 
 
 def main():
+    configure()
+    if DIVISION != "rajshahi":
+        return SITES[DIVISION]["run"]()
     places, facts = [], []
     r = get(URL_UNITS)
     if r is not None and r.ok:
@@ -273,13 +278,183 @@ def main():
     write_csv("places.csv", PLACE_COLS, places)
     write_csv("facts.csv", FACT_COLS, facts)
     write_manifest(dict(
-        key=KEY, name="Rajshahi Metropolitan Police — thanas and official numbers", organization="Rajshahi Metropolitan Police (Bangladesh Police)",
+        key=KEY, division="rajshahi", kind="metro_police_thanas", name="Rajshahi Metropolitan Police — thanas and official numbers", organization="Rajshahi Metropolitan Police (Bangladesh Police)",
         source_type="government_portal", trust_level=4, urls=[URL_UNITS, URL_CONTACT, URL_GLANCE],
         accessed=__import__("datetime").date.today().isoformat(), publication_date=None, license=None, license_url=None,
         attribution="Rajshahi Metropolitan Police (rmp.gov.bd)",
         notes="No licence stated. Only institutional numbers (OC official mobiles, HQ phone/fax) are collected; no officer names. "
               "No addresses (except HQ) or coordinates are published for thanas."),
         ["places.csv", "facts.csv", "raw/rmp_units.txt", "raw/rmp_contact.txt"])
+
+
+# --- division selection (see ../DIVISIONS.md) --------------------------------------------------------------
+# `python3 fetch.py` = `--division rajshahi`, output into this folder (unchanged behaviour). Other divisions write into
+# their own folder (default: the sibling folder named per DIVISIONS.md) and never into the Rajshahi folder.
+import argparse
+DIVISION_CHOICES = ("rajshahi", "rangpur", "dhaka", "chattogram", "khulna", "barishal", "sylhet", "mymensingh")
+DIVISION = "rajshahi"
+
+
+def parse_division_args(folders):
+    """Parse --division/--out. folders: division -> default output folder name (a sibling of this folder)."""
+    ap = argparse.ArgumentParser(description=(__doc__ or "").strip().split("\n")[0])
+    ap.add_argument("--division", default="rajshahi", choices=DIVISION_CHOICES)
+    ap.add_argument("--out", help="output folder (default: this folder for rajshahi, ../<division folder> otherwise)")
+    a = ap.parse_args()
+    if a.division not in folders:
+        raise SystemExit("this collector has no table for division %r yet (see DIVISIONS.md)" % a.division)
+    here = os.path.dirname(os.path.abspath(__file__))
+    out = os.path.abspath(a.out or os.path.join(here, "..", folders[a.division]))
+    if a.division != "rajshahi" and os.path.realpath(out) == os.path.realpath(here):
+        raise SystemExit("refusing to write %s output into the Rajshahi folder %s" % (a.division, here))
+    os.makedirs(out, exist_ok=True)
+    return a.division, out
+
+
+def write_division_manifest(out, meta):
+    """SOURCE.json for a non-default division run: meta + sha256 of every data file in the output folder."""
+    import hashlib as _h, json as _j
+    files = {}
+    for root, _, names in os.walk(out):
+        for n in sorted(names):
+            full = os.path.join(root, n)
+            rel = os.path.relpath(full, out).replace(os.sep, "/")
+            if rel in ("SOURCE.json", "fetch.py", "REPORT.md") or "__pycache__" in rel:
+                continue
+            files[rel] = _h.sha256(open(full, "rb").read()).hexdigest()
+    m = dict(meta)
+    m["files"] = dict(sorted(files.items()))
+    with open(os.path.join(out, "SOURCE.json"), "w", encoding="utf-8") as f:
+        f.write(_j.dumps(m, ensure_ascii=False, indent=2) + "\n")
+
+
+# --- Rangpur Metropolitan Police (rpmp.gov.bd, RpMP's own site) -------------------------------------------------------
+RP_KEY = "RANGPUR_METRO_POLICE_THANAS_2026"
+RP_UNITS = "https://rpmp.gov.bd/index.php/home/units"                      # ইউনিট ও যোগাযোগের নাম্বার সমূহ
+RP_DIRECTORY = "https://rpmp.gov.bd/index.php/home/telephone_directory"    # টেলিফোন ডিরেক্টরি (Police Commissioner's office)
+RP_CONTACT = "https://rpmp.rangpurdiv.gov.bd/pages/static-pages/69771cd5c4774958d7c06d89"  # অফিস যোগাযোগ (address)
+RP_THANA_EN = {"কোতয়ালী": "Kotwali", "তাজহাট": "Tajhat", "মাহিগঞ্জ": "Mahiganj", "হারাগাছ": "Haragach", "পরশুরাম": "Parshuram",
+               "হাজিরহাট": "Hajirhat"}
+RP_OP = "রংপুর মেট্রোপলিটন পুলিশ (আরপিএমপি)"
+
+
+def rp_contacts(cell):
+    """'মোবাইল-০১৩২০-০৭৩৪৭৫ টেলিফোন-০২-৫৮৯৯৬১১৪৮ ইমেইল- x@police.gov.bd' -> dict (ASCII digits, source grouping)."""
+    c = asc(cell)
+    out = {}
+    for k, lab in (("mobile", "মোবাইল"), ("telephone", "টেলিফোন"), ("fax", "ফ্যাক্স")):
+        m = re.search(lab + r"\s*-\s*([+\d][\d\- ]{5,}\d)", c)
+        if m and not m.group(1).rstrip("-").endswith("--"):
+            out[k] = re.sub(r"\s+", "", m.group(1))
+    m = re.search(r"[A-Za-z0-9][A-Za-z0-9._]*@police\.gov\.bd", c.replace(" ", ""))
+    if m:
+        out["email"] = m.group(0)
+    return out
+
+
+def rp_rows(url):
+    r = get(url)
+    if r is None or not r.ok:
+        print("unavailable:", url)
+        return []
+    rows = [row for tb in tables(r.text) for row in tb if len(row) >= 2 and row[0] != "পদবী"]
+    return rows
+
+
+def main_rangpur():
+    places, facts = [], []
+    rows = rp_rows(RP_UNITS)
+    save_raw("rpmp_units.txt", "\n".join(" | ".join(r) for r in rows))
+    cur = None
+    by_thana = {}
+    for label, cell in ((r[0], r[1]) for r in rows):
+        c = rp_contacts(cell)
+        m = re.match(r"অফিসার ইনচার্জ,\s*(.+?) থানা$", label)
+        if m:
+            th = nfc(m.group(1))
+            cur = th
+            en = RP_THANA_EN.get(th, "")
+            rec = dict(source_key=RP_KEY, source_id="rpmp-thana-%s" % (en.lower() or th), name_bn="%s থানা" % th, name_en="",
+                       category_key="emergency.police_station", district_en="Rangpur", upazila_en=en,
+                       phone="; ".join(x for x in (c.get("mobile"), c.get("telephone")) if x), email=c.get("email", ""),
+                       operator=RP_OP, ownership="public",
+                       _extra={"unit": "metropolitan_thana", "police_force": "RpMP", "oc_mobile": c.get("mobile"),
+                               "thana_telephone": c.get("telephone"), "label_in_source": label},
+                       source_url=RP_UNITS,
+                       notes="upazila_en holds the RpMP metropolitan thana (not an upazila). Phone = OC's official mobile and the thana "
+                             "telephone as published by RpMP.")
+            by_thana[th] = rec
+            places.append(rec)
+            continue
+        m = re.match(r"ডিউটি অফিসার,\s*(.+?) থানা$", label)
+        if m and nfc(m.group(1)) in by_thana:
+            by_thana[nfc(m.group(1))]["_extra"].update(duty_officer_mobile=c.get("mobile"), duty_officer_telephone=c.get("telephone"))
+            continue
+        m = re.match(r"ইনচার্জ,\s*(.+?পুলিশ ফাঁড়ি)$", label)
+        if m:
+            places.append(dict(source_key=RP_KEY, source_id="rpmp-outpost-%d" % (sum(1 for p in places if p["category_key"] == "emergency.police_outpost") + 1),
+                               name_bn=nfc(m.group(1)), name_en="", category_key="emergency.police_outpost", district_en="Rangpur",
+                               upazila_en=RP_THANA_EN.get(cur, ""), phone=c.get("mobile", ""), email=c.get("email", ""), operator=RP_OP,
+                               ownership="public", _extra={"police_force": "RpMP", "listed_under_thana": cur, "label_in_source": label},
+                               source_url=RP_UNITS, notes="Police outpost listed under %s thana; phone = in-charge's official mobile." % cur))
+            continue
+        if label == "কন্ট্রোল রুম":
+            places.append(dict(source_key=RP_KEY, source_id="rpmp-control-room", name_bn="আরপিএমপি কন্ট্রোল রুম", name_en="",
+                               category_key="emergency", district_en="Rangpur",
+                               phone="; ".join(x for x in (c.get("mobile"), c.get("telephone")) if x), operator=RP_OP, ownership="public",
+                               _extra={"fax": c.get("fax"), "label_in_source": label}, source_url=RP_UNITS,
+                               notes="Name composed from the 'কন্ট্রোল রুম' row of the RpMP units page."))
+    hot = next((rp_contacts(r[1]).get("mobile") for r in rows if r[0].startswith("আরপিএমপি, হটলাইন")), None)
+    for p in places:
+        if p["source_id"] == "rpmp-control-room" and hot:
+            p["_extra"]["rpmp_hotline"] = hot
+    # Police Commissioner's office (HQ)
+    drows = rp_rows(RP_DIRECTORY)
+    pc = next((r for r in drows if r[0] == "পুলিশ কমিশনার"), None)
+    addr = ""
+    r = get(RP_CONTACT)
+    if r is not None and r.ok:
+        m = re.search(r"কাচারী বাজার, রংপুর-[০-৯]+", " ".join(content_text(r.text)))
+        addr = m.group(0) if m else ""
+    if pc:
+        c = rp_contacts(pc[1])
+        save_raw("rpmp_directory_commissioner.txt", " | ".join(pc))
+        places.append(dict(source_key=RP_KEY, source_id="rpmp-hq", name_bn="রংপুর মেট্রোপলিটন পুলিশ হেডকোয়ার্টার্স", name_en="",
+                           category_key="government.sp_office", address=addr, district_en="Rangpur",
+                           phone="; ".join(x for x in (c.get("telephone"), c.get("mobile")) if x), email=c.get("email", ""),
+                           operator="বাংলাদেশ পুলিশ", ownership="public",
+                           _extra={"office": "পুলিশ কমিশনারের কার্যালয়", "fax": c.get("fax"), "address_source": RP_CONTACT if addr else None},
+                           source_url=RP_DIRECTORY,
+                           notes="Police Commissioner's office (metropolitan equivalent of an SP office) — closest taxonomy key "
+                                 "government.sp_office. Numbers of the Police Commissioner post (telephone directory); address from "
+                                 "rpmp.rangpurdiv.gov.bd 'অফিস যোগাযোগ'."))
+    for p in places:
+        p["extra_json"] = xj(p.pop("_extra", {}))
+    n = sum(1 for p in places if p["category_key"] == "emergency.police_station")
+    facts.append(dict(entity_level="metropolitan_police", entity_name_en="Rangpur Metropolitan Police area", district_en="Rangpur",
+                      fact="police_stations", value=n, unit="thanas", basis="listed", year=2026, source_key=RP_KEY, source_url=RP_UNITS,
+                      notes="Counted from OC rows of the RpMP units page"))
+    write_csv("places.csv", PLACE_COLS, places)
+    write_csv("facts.csv", FACT_COLS, facts)
+    write_manifest(dict(
+        key=RP_KEY, division="rangpur", kind="metro_police_thanas", name="Rangpur Metropolitan Police — thanas and official numbers",
+        organization="Rangpur Metropolitan Police (Bangladesh Police)", source_type="government_portal", trust_level=4,
+        urls=[RP_UNITS, RP_DIRECTORY, RP_CONTACT], accessed=__import__("datetime").date.today().isoformat(), publication_date=None,
+        license=None, license_url=None, attribution="Rangpur Metropolitan Police (rpmp.gov.bd)",
+        notes="No licence stated. Only institutional numbers (OC / outpost in-charge official mobiles, thana telephones, HQ and "
+              "control-room numbers, *@police.gov.bd e-mails) are collected; no officer names. No thana addresses or coordinates "
+              "are published (zone offices give street hints only)."),
+        ["places.csv", "facts.csv"] + sorted(f"raw/{p.name}" for p in RAW.glob("*.txt")))
+
+
+SITES = {"rajshahi": dict(folder="rmp_thanas_2026"), "rangpur": dict(folder="rangpur_metro_police_thanas_2026", run=main_rangpur)}
+
+
+def configure():
+    global DIVISION, HERE, RAW
+    DIVISION, out = parse_division_args({k: v["folder"] for k, v in SITES.items()})
+    HERE = Path(out)
+    RAW = HERE / "raw"
 
 
 if __name__ == "__main__":

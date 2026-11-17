@@ -1,7 +1,22 @@
 #!/usr/bin/env python3
-"""Fetch the DPE IPEMIS primary-school directory for Rajshahi Division (stdlib + requests only).
+"""Fetch the DPE IPEMIS primary-school directory for one division, default Rajshahi (stdlib + requests only).
 
-Usage: python3 fetch.py [--offline]   (--offline rebuilds the CSVs from raw/ and keeps previously fetched live statistics)."""
+Usage: python3 fetch.py [--offline]   (--offline rebuilds the CSVs from raw/ and keeps previously fetched live statistics).
+       python3 fetch.py --division rangpur [--out DIR] [--offline]
+           another division (see ../DIVISIONS.md); default output is the sibling folder dpe_ipemis_primary_<code>_2026,
+           the Rajshahi files are never touched."""
+import argparse as _argparse
+# division -> (code from DIVISIONS.md, IPEMIS divisionId from the search page's division <select>)
+DIVISIONS = {"rajshahi": ("raj", 1), "khulna": ("khl", 2), "dhaka": ("dhk", 3), "chattogram": ("ctg", 4),
+             "barishal": ("bar", 5), "sylhet": ("syl", 6), "rangpur": ("rang", 7), "mymensingh": ("mym", 8)}
+_ap = _argparse.ArgumentParser()
+_ap.add_argument("--division", default="rajshahi", choices=sorted(DIVISIONS))
+_ap.add_argument("--out", default=None, help="output folder (default: this folder for Rajshahi, else the sibling folder)")
+_ap.add_argument("--offline", action="store_true", help="rebuild from raw/ in the output folder without network")
+ARGS = _ap.parse_args()
+DIV = ARGS.division
+DIVT = DIV.title()
+CODE, DIVISION_ID = DIVISIONS[DIV]  # DIVISION_ID: IPEMIS id of the division
 # --- polite HTTP helper (copy this block into each fetch.py; stdlib + requests only) -----------------
 # Many *.gov.bd servers send only their leaf certificate and omit the intermediate CA. Browsers fetch the
 # missing intermediate via the certificate's AIA URL; we do the same explicitly: download the published
@@ -92,15 +107,15 @@ def get(url, retries=2, **kw):
 
 # --- admin-name normalisation (source spellings -> standard English names) ------------------------------
 import re as _re
-DIVISION_DISTRICTS = ["Rajshahi", "Natore", "Naogaon", "Chapainawabganj", "Bogura", "Joypurhat", "Pabna", "Sirajganj"]
-_DISTRICT_ALIASES = {
+_RAJ_DISTRICTS = ["Rajshahi", "Natore", "Naogaon", "Chapainawabganj", "Bogura", "Joypurhat", "Pabna", "Sirajganj"]
+_RAJ_DISTRICT_ALIASES = {
     "rajshahi": "Rajshahi", "natore": "Natore", "naogaon": "Naogaon", "chapainawabganj": "Chapainawabganj",
     "chapainawabgonj": "Chapainawabganj", "nawabganj": "Chapainawabganj", "bogura": "Bogura", "bogra": "Bogura",
     "joypurhat": "Joypurhat", "jaipurhat": "Joypurhat", "pabna": "Pabna", "sirajganj": "Sirajganj", "sirajgonj": "Sirajganj",
 }
 # metropolitan thanas of Rajshahi City (not upazilas)
-METRO_THANAS = {"Boalia", "Rajpara", "Motihar", "Shah Makhdum"}
-_UPAZILA_ALIASES = {
+_RAJ_METRO_THANAS = {"Boalia", "Rajpara", "Motihar", "Shah Makhdum"}
+_RAJ_UPAZILA_ALIASES = {
     # Rajshahi
     "bagha": "Bagha", "baghmara": "Bagmara", "bagmara": "Bagmara", "charghat": "Charghat", "durgapur": "Durgapur",
     "godagari": "Godagari", "mohanpur": "Mohanpur", "mohonpur": "Mohanpur", "paba": "Paba", "puthia": "Puthia",
@@ -137,6 +152,59 @@ _UPAZILA_ALIASES = {
     "shahjadpur": "Shahjadpur", "shajadpur": "Shahjadpur", "sirajganjsadar": "Sirajganj Sadar",
     "sirajgonjsadar": "Sirajganj Sadar", "tarash": "Tarash", "ullahpara": "Ullahpara", "ullapara": "Ullahpara",
 }
+# Rangpur Division (keys are _key() of the spellings seen in the BANBEIS / IPEMIS / HRIS lists)
+_RANG_DISTRICTS = ["Rangpur", "Dinajpur", "Gaibandha", "Kurigram", "Lalmonirhat", "Nilphamari", "Panchagarh", "Thakurgaon"]
+_RANG_DISTRICT_ALIASES = {
+    "rangpur": "Rangpur", "dinajpur": "Dinajpur", "gaibandha": "Gaibandha", "kurigram": "Kurigram",
+    "lalmonirhat": "Lalmonirhat", "nilphamari": "Nilphamari", "panchagarh": "Panchagarh", "thakurgaon": "Thakurgaon",
+}
+# metropolitan thanas of Rangpur City (Rangpur Metropolitan Police)
+_RANG_METRO_THANAS = {"Kotwali", "Tajhat", "Mahiganj", "Haragach", "Parshuram", "Hajirhat"}
+_RANG_UPAZILA_ALIASES = {
+    # Dinajpur
+    "biral": "Biral", "birol": "Biral", "birampur": "Birampur", "birganj": "Birganj", "birgonj": "Birganj",
+    "bochaganj": "Bochaganj", "bochagonj": "Bochaganj", "chirirbandar": "Chirirbandar", "dinajpursadar": "Dinajpur Sadar",
+    "fulbari": "Fulbari", "ghoraghat": "Ghoraghat", "hakimpur": "Hakimpur", "kaharole": "Kaharole", "kaharol": "Kaharole",
+    "khansama": "Khansama", "khanshama": "Khansama", "nawabganj": "Nawabganj", "nawabgonj": "Nawabganj",
+    "parbatipur": "Parbatipur", "parbotipur": "Parbatipur",
+    # Gaibandha
+    "fulchhari": "Fulchhari", "fulchari": "Fulchhari", "phulchari": "Fulchhari", "phulchhari": "Fulchhari",
+    "gaibandhasadar": "Gaibandha Sadar", "gobindaganj": "Gobindaganj", "gobindogonj": "Gobindaganj",
+    "gobindagonj": "Gobindaganj", "palashbari": "Palashbari", "sadullapur": "Sadullapur", "shadullapur": "Sadullapur",
+    "saghata": "Saghata", "shaghata": "Saghata", "sundarganj": "Sundarganj", "sundargonj": "Sundarganj",
+    "shundorgonj": "Sundarganj",
+    # Kurigram ("Fulbari" of Kurigram is Phulbari; district-qualified key)
+    "bhurungamari": "Bhurungamari", "charrajibpur": "Char Rajibpur", "rajibpur": "Char Rajibpur", "chilmari": "Chilmari",
+    "kurigramsadar": "Kurigram Sadar", "nageshwari": "Nageshwari", "nageswari": "Nageshwari", "phulbari": "Phulbari",
+    "kurigram/fulbari": "Phulbari", "rajarhat": "Rajarhat", "raumari": "Raumari", "rowmari": "Raumari", "ulipur": "Ulipur",
+    # Lalmonirhat
+    "aditmari": "Aditmari", "hatibandha": "Hatibandha", "kaliganj": "Kaliganj", "kaligonj": "Kaliganj",
+    "lalmonirhatsadar": "Lalmonirhat Sadar", "patgram": "Patgram",
+    # Nilphamari
+    "dimla": "Dimla", "domar": "Domar", "jaldhaka": "Jaldhaka", "kishoreganj": "Kishoreganj", "kishoregonj": "Kishoreganj",
+    "kishorganj": "Kishoreganj", "nilphamarisadar": "Nilphamari Sadar", "nilphamarisadarupaz": "Nilphamari Sadar",
+    "saidpur": "Saidpur", "syedpur": "Saidpur",
+    # Panchagarh
+    "atwari": "Atwari", "boda": "Boda", "debiganj": "Debiganj", "debigonj": "Debiganj",
+    "panchagarhsadar": "Panchagarh Sadar", "tentulia": "Tentulia", "tetulia": "Tentulia",
+    # Rangpur
+    "badarganj": "Badarganj", "badargonj": "Badarganj", "gangachara": "Gangachara", "gangachhara": "Gangachara",
+    "kaunia": "Kaunia", "kawnia": "Kaunia", "mithapukur": "Mithapukur", "pirgachha": "Pirgachha", "pirgacha": "Pirgachha",
+    "pirganj": "Pirganj", "pirgonj": "Pirganj", "rangpursadar": "Rangpur Sadar", "taraganj": "Taraganj",
+    "taragonj": "Taraganj",
+    "kotwali": "Kotwali", "tajhat": "Tajhat", "mahiganj": "Mahiganj", "haragach": "Haragach", "parshuram": "Parshuram",
+    "hajirhat": "Hajirhat",
+    # Thakurgaon (Ruhia and Bhulli are thanas that IPEMIS lists as separate units)
+    "baliadangi": "Baliadangi", "haripur": "Haripur", "horipur": "Haripur", "ranisankail": "Ranisankail",
+    "ranishonkoil": "Ranisankail", "thakurgaonsadar": "Thakurgaon Sadar", "ruhia": "Ruhia", "bhulli": "Bhulli",
+    "vulli": "Bhulli",
+}
+# thanas that a source lists as if they were upazilas (not metropolitan)
+_RANG_OTHER_THANAS = {"Ruhia", "Bhulli"}
+_NORM = {"rajshahi": (_RAJ_DISTRICTS, _RAJ_DISTRICT_ALIASES, _RAJ_METRO_THANAS, _RAJ_UPAZILA_ALIASES),
+         "rangpur": (_RANG_DISTRICTS, _RANG_DISTRICT_ALIASES, _RANG_METRO_THANAS, _RANG_UPAZILA_ALIASES)}
+DIVISION_DISTRICTS, _DISTRICT_ALIASES, METRO_THANAS, _UPAZILA_ALIASES = _NORM.get(DIV, ([], {}, set(), {}))
+OTHER_THANAS = {"rangpur": _RANG_OTHER_THANAS}.get(DIV, set())
 
 
 def _key(s):
@@ -147,7 +215,12 @@ def norm_district(s):
     return _DISTRICT_ALIASES.get(_key(s), "")
 
 
-def norm_upazila(s):
+def norm_upazila(s, district=None):
+    """district (optional) allows district-qualified aliases for names that differ by district."""
+    if district:
+        v = _UPAZILA_ALIASES.get(_key(district) + "/" + _key(s))
+        if v:
+            return v
     return _UPAZILA_ALIASES.get(_key(s), "")
 # --- end normalisation -----------------------------------------------------------------------------------
 
@@ -160,6 +233,8 @@ PLACE_COLS = ["source_key", "source_id", "name_bn", "name_en", "category_key", "
 FACT_COLS = ["entity_level", "entity_name_en", "district_en", "upazila_en", "code", "fact", "value", "unit", "basis",
              "year", "source_key", "source_url", "notes"]
 HERE = os.path.dirname(os.path.abspath(__file__))
+OUT = os.path.abspath(ARGS.out) if ARGS.out else (
+    HERE if DIV == "rajshahi" else os.path.join(os.path.dirname(HERE), f"dpe_ipemis_primary_{CODE}_2026"))
 
 
 def nfc(s):
@@ -174,7 +249,7 @@ def cj(d):
 
 
 def write_csv(name, cols, rows):
-    with open(os.path.join(HERE, name), "w", newline="", encoding="utf-8") as f:
+    with open(os.path.join(OUT, name), "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore")
         w.writeheader()
         for r in rows:
@@ -190,27 +265,57 @@ def sha256(path):
 
 
 def update_manifest(files):
-    p = os.path.join(HERE, "SOURCE.json")
-    m = json.load(open(p, encoding="utf-8")) if os.path.exists(p) else {}
+    p = os.path.join(OUT, "SOURCE.json")
+    m = json.load(open(p, encoding="utf-8")) if os.path.exists(p) else new_manifest()
     m["accessed"] = datetime.date.today().isoformat()
-    m["files"] = {f: sha256(os.path.join(HERE, f)) for f in files if os.path.exists(os.path.join(HERE, f))}
+    m["files"] = {f: sha256(os.path.join(OUT, f)) for f in files if os.path.exists(os.path.join(OUT, f))}
     with open(p, "w", encoding="utf-8") as fh:
         json.dump(m, fh, ensure_ascii=False, indent=2)
         fh.write("\n")
+
+
+def new_manifest():
+    """SOURCE.json for a division other than Rajshahi (the Rajshahi manifest is maintained by hand)."""
+    return {
+        "key": SOURCE_KEY,
+        "name": f"DPE IPEMIS primary school directory — {DIVT} Division",
+        "organization": "Directorate of Primary Education (DPE), Ministry of Primary and Mass Education",
+        "source_type": "government_portal",
+        "trust_level": 4,
+        "urls": [SEARCH_PAGE, SITE + "/load-lite-school-list", API + "/api/school-stat-public", "https://dpe.gov.bd/"],
+        "accessed": datetime.date.today().isoformat(),
+        "publication_date": None,
+        "license": None,
+        "license_url": None,
+        "attribution": "Source: Directorate of Primary Education, IPEMIS (ipemis.dpe.gov.bd)",
+        "division": DIV,
+        "kind": "dpe_ipemis",
+        "notes": (f"Public 'প্রাথমিক বিদ্যালয় ডিরেক্টরি' (school search) of the Integrated Primary Education Management "
+                  f"Information System, linked from dpe.gov.bd. Listing endpoint used by the public page (DataTables "
+                  f"JSON), queried per district of {DIVT} Division (divisionId={DIVISION_ID}); same collector and rules "
+                  "as DPE_IPEMIS_PRIMARY_RAJ_2026. Covers government primary, newly nationalised and experimental "
+                  "schools only (no kindergartens, NGO or ebtedayee madrasas). No coordinates; head teachers' names and "
+                  "mobiles on the detail pages are deliberately NOT collected. Live data (changes daily). No robots.txt "
+                  "on ipemis.dpe.gov.bd / api.ipemis.dpe.gov.bd (404). Licence not stated."),
+        "files": {},
+    }
 # --- end output helpers -----------------------------------------------------------------------------------
 
-# --- DPE IPEMIS primary-school directory: Rajshahi Division ---------------------------------------------
+# --- DPE IPEMIS primary-school directory: one division -------------------------------------------------
 import sys
 from collections import Counter, defaultdict
 
-SOURCE_KEY = "DPE_IPEMIS_PRIMARY_RAJ_2026"
+SOURCE_KEY = f"DPE_IPEMIS_PRIMARY_{CODE.upper()}_2026"
 SITE = "https://ipemis.dpe.gov.bd"
 API = "https://api.ipemis.dpe.gov.bd"
-LIST_URL = SITE + "/load-lite-school-list?draw=1&start={start}&length=500&divisionId=1&districtId={did}"
+LIST_URL = SITE + "/load-lite-school-list?draw=1&start={start}&length=500&divisionId=%d&districtId={did}" % DIVISION_ID
 DETAIL_URL = SITE + "/school-details-view/{sid}"
 SEARCH_PAGE = SITE + "/search-school"
-DIVISION_ID = 1  # IPEMIS id of Rajshahi Division (from the search page's division <select>)
-RAW = os.path.join(HERE, "raw", "ipemis_school_list_rajshahi_division.json")
+RAW_REL = f"raw/ipemis_school_list_{DIV}_division.json"
+METRO_NOTE = {
+    "rajshahi": "IPEMIS unit BOALIA(SADAR) = Rajshahi City Corporation area (metropolitan thana), not an upazila",
+}.get(DIV, f"metropolitan thana of {DIVT} City, not an upazila")
+RAW = os.path.join(OUT, *RAW_REL.split("/"))
 
 
 def getjson(url):
@@ -226,7 +331,7 @@ def getjson(url):
 
 
 def main():
-    offline = "--offline" in sys.argv
+    offline = ARGS.offline
     districts = getjson(f"{API}/api/districts/lite/division/{DIVISION_ID}") if not offline else None
     districts = (districts or {}).get("data") or []
     schools = []
@@ -255,12 +360,20 @@ def main():
             continue
         seen.add(s["schoolId"])
         dist = norm_district(s.get("districtName"))
-        upz = norm_upazila(s.get("upazilaName"))
+        upz = norm_upazila(s.get("upazilaName"), s.get("districtName"))
         notes = []
         if not upz:
             notes.append(f"upazila '{s.get('upazilaName')}' not normalised")
+            if DIV != "rajshahi" and nfc(s.get("upazilaName")):  # other divisions: keep the source spelling
+                upz = nfc(s.get("upazilaName"))
+        if not dist and DIV != "rajshahi" and nfc(s.get("districtName")):
+            notes.append(f"district '{s.get('districtName')}' not normalised")
+            dist = nfc(s.get("districtName"))
         if upz in METRO_THANAS:
-            notes.append("IPEMIS unit BOALIA(SADAR) = Rajshahi City Corporation area (metropolitan thana), not an upazila")
+            notes.append(METRO_NOTE)
+        if upz in OTHER_THANAS:
+            notes.append(f"IPEMIS lists {s.get('upazilaName')} as its own upazila unit; {upz} is a thana, not an upazila "
+                         "(parent upazila not given by the source)")
         union = nfc(s.get("geoUnionNameLocal") or s.get("geoUnionName"))
         rows.append({
             "source_key": SOURCE_KEY,
@@ -280,12 +393,12 @@ def main():
                 "cluster_bn": nfc(s.get("geoClusterNameLocal")),
                 "upazila_src": s.get("upazilaName"), "district_src": s.get("districtName"),
                 "teachers": s.get("totalTeacher"), "students": s.get("totalStudent"),
-                "admin_unit": "metropolitan_thana" if upz in METRO_THANAS else "upazila",
+                "admin_unit": "metropolitan_thana" if upz in METRO_THANAS else "thana" if upz in OTHER_THANAS else "upazila",
             }),
             "source_url": DETAIL_URL.format(sid=s["schoolId"]),
             "notes": "; ".join(notes),
         })
-    rows.sort(key=lambda r: (r["district_en"] != "Rajshahi", r["district_en"], r["upazila_en"], r["name_en"]))
+    rows.sort(key=lambda r: (r["district_en"] != DIVT, r["district_en"], r["upazila_en"], r["name_en"]))
     write_csv("places.csv", PLACE_COLS, rows)
 
     # facts: official IPEMIS public statistics per division / district / upazila + listed-record counts by type
@@ -309,31 +422,31 @@ def main():
                               "notes": f"IPEMIS public school statistic API ({url}); live figure on access date; "
                                        "covers schools in IPEMIS (govt, newly nationalised, experimental)"})
 
-    if offline and os.path.exists(os.path.join(HERE, "facts.csv")):  # keep previously fetched live statistics
-        facts += [r for r in csv.DictReader(open(os.path.join(HERE, "facts.csv"), encoding="utf-8"))
+    if offline and os.path.exists(os.path.join(OUT, "facts.csv")):  # keep previously fetched live statistics
+        facts += [r for r in csv.DictReader(open(os.path.join(OUT, "facts.csv"), encoding="utf-8"))
                   if r["basis"] == "official_live_statistic"]
     if not offline:
-        add_stats("division", "Rajshahi", "", "", f"ipemis_division:{DIVISION_ID}", f"divisionId={DIVISION_ID}")
+        add_stats("division", DIVT, "", "", f"ipemis_division:{DIVISION_ID}", f"divisionId={DIVISION_ID}")
         for d in districts:
             dist = norm_district(d["name"])
             add_stats("district", dist, dist, "", f"ipemis_district:{d['districtId']}",
                       f"divisionId={DIVISION_ID}&districtId={d['districtId']}")
             ups = getjson(f"{API}/api/upazilas/lite/district/{d['districtId']}")
             for u in (ups or {}).get("data") or []:
-                upz = norm_upazila(u["name"])
-                add_stats("thana" if upz in METRO_THANAS else "upazila", upz or u["name"], dist, upz,
+                upz = norm_upazila(u["name"], d["name"])
+                add_stats("thana" if upz in METRO_THANAS or upz in OTHER_THANAS else "upazila", upz or u["name"], dist, upz,
                           f"ipemis_upazila:{u['upazilaId']}",
                           f"divisionId={DIVISION_ID}&districtId={d['districtId']}&upazilaId={u['upazilaId']}")
     cnt = Counter((r["district_en"], r["upazila_en"], json.loads(r["extra_json"]).get("school_type")) for r in rows)
     for (dist, upz, typ), n in sorted(cnt.items()):
-        facts.append({"entity_level": "thana" if upz in METRO_THANAS else "upazila", "entity_name_en": upz,
+        facts.append({"entity_level": "thana" if upz in METRO_THANAS or upz in OTHER_THANAS else "upazila", "entity_name_en": upz,
                       "district_en": dist, "upazila_en": upz, "code": "",
                       "fact": "primary_schools_listed_" + _re.sub(r"[^a-z]+", "_", typ.lower()).strip("_"),
                       "value": n, "unit": "schools", "basis": "count_of_listed_records", "year": year,
                       "source_key": SOURCE_KEY, "source_url": SEARCH_PAGE,
                       "notes": f"count of IPEMIS directory rows with school type '{typ}'"})
     write_csv("facts.csv", FACT_COLS, facts)
-    update_manifest(["places.csv", "facts.csv", "raw/ipemis_school_list_rajshahi_division.json"])
+    update_manifest(["places.csv", "facts.csv", RAW_REL])
     print("places", len(rows), "facts", len(facts))
     print(Counter(r["district_en"] for r in rows))
 

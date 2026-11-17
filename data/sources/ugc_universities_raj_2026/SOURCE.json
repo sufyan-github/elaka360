@@ -1,5 +1,7 @@
 {
   "key": "UGC_UNIVERSITIES_RAJ_2026",
+  "division": "rajshahi",
+  "kind": "ugc",
   "name": "UGC university register — universities in Rajshahi Division",
   "organization": "University Grants Commission of Bangladesh (UGC)",
   "source_type": "government_portal",

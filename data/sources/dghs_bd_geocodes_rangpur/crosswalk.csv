@@ -1,0 +1,96 @@
+our_id,our_level,our_name_en,our_path,source_code,source_name_en,match_method,confidence,notes
+20054,district,Dinajpur,rangpur/dinajpur,5527,Dinajpur,name_exact,high,source level district
+20057,district,Gaibandha,rangpur/gaibandha,5532,Gaibandha,name_exact,high,source level district
+20060,district,Kurigram,rangpur/kurigram,5549,Kurigram,name_exact,high,source level district
+20055,district,Lalmonirhat,rangpur/lalmonirhat,5552,Lalmonirhat,name_exact,high,source level district
+20056,district,Nilphamari,rangpur/nilphamari,5573,Nilphamari,name_exact,high,source level district
+20053,district,Panchagarh,rangpur/panchagarh,5577,Panchagarh,name_exact,high,source level district
+20059,district,Rangpur,rangpur/rangpur,5585,Rangpur,name_exact,high,source level district
+20058,district,Thakurgaon,rangpur/thakurgaon,5594,Thakurgaon,name_exact,high,source level district
+30407,upazila,Birampur,rangpur/dinajpur/birampur,55270010,Birampur,name_exact,high,source level upazila
+30405,upazila,Birganj,rangpur/dinajpur/birganj,55270012,Birganj,name_exact,high,source level upazila
+30415,upazila,Birol,rangpur/dinajpur/birol,55270017,Biral,name_skeleton,medium,source level upazila
+30409,upazila,Bochaganj,rangpur/dinajpur/bochaganj,55270021,Bochaganj,name_exact,high,source level upazila
+30416,upazila,Chirirbandar,rangpur/dinajpur/chirirbandar,55270030,Chirirbandar,name_exact,high,source level upazila
+30411,upazila,Fulbari,rangpur/dinajpur/fulbari,55270038,Fulbari,name_exact,high,source level upazila
+30406,upazila,Ghoraghat,rangpur/dinajpur/ghoraghat,55270043,Ghoraghat,name_exact,high,source level upazila
+30413,upazila,Hakimpur,rangpur/dinajpur/hakimpur,55270047,Hakimpur,name_exact,high,source level upazila
+30410,upazila,Kaharol,rangpur/dinajpur/kaharol,55270056,Kaharole,name_skeleton,medium,source level upazila
+30414,upazila,Khansama,rangpur/dinajpur/khansama,55270060,Khansama,name_exact,high,source level upazila
+30412,upazila,Dinajpur Sadar,rangpur/dinajpur/dinajpur-sadar,55270064,Dinajpur Sadar,name_exact,high,source level upazila
+30404,upazila,Nawabganj,rangpur/dinajpur/nawabganj,55270069,Nawabganj,name_exact,high,source level upazila
+30408,upazila,Parbatipur,rangpur/dinajpur/parbatipur,55270077,Parbatipur,name_exact,high,source level upazila
+30434,upazila,Phulchari,rangpur/gaibandha/phulchari,55320021,Fulchhari,name_banglish,high,source level upazila
+30429,upazila,Gaibandha Sadar,rangpur/gaibandha/gaibandha-sadar,55320024,Gaibandha Sadar,name_exact,high,source level upazila
+30432,upazila,Gobindaganj,rangpur/gaibandha/gobindaganj,55320030,Gobindaganj,name_exact,high,source level upazila
+30430,upazila,Palashbari,rangpur/gaibandha/palashbari,55320067,Palashbari,name_exact,high,source level upazila
+30428,upazila,Sadullapur,rangpur/gaibandha/sadullapur,55320082,Sadullapur,name_exact,high,source level upazila
+30431,upazila,Saghata,rangpur/gaibandha/saghata,55320088,Saghata,name_exact,high,source level upazila
+30433,upazila,Sundarganj,rangpur/gaibandha/sundarganj,55320091,Sundarganj,name_exact,high,source level upazila
+30450,upazila,Bhurungamari,rangpur/kurigram/bhurungamari,55490006,Bhurungamari,name_exact,high,source level upazila
+30456,upazila,Charrajibpur,rangpur/kurigram/charrajibpur,55490008,Rajibpur,name_fuzzy,medium,source level upazila; similarity 0.89 to 'Charrajibpur'
+30454,upazila,Chilmari,rangpur/kurigram/chilmari,55490009,Chilmari,name_exact,high,source level upazila
+30451,upazila,Phulbari,rangpur/kurigram/phulbari,55490018,Phulbari,name_exact,high,source level upazila
+30448,upazila,Kurigram Sadar,rangpur/kurigram/kurigram-sadar,55490052,Kurigram Sadar,name_exact,high,source level upazila
+30449,upazila,Nageshwari,rangpur/kurigram/nageshwari,55490061,Nageshwari,name_exact,high,source level upazila
+30452,upazila,Rajarhat,rangpur/kurigram/rajarhat,55490077,Rajarhat,name_exact,high,source level upazila
+30455,upazila,Rowmari,rangpur/kurigram/rowmari,55490079,Raumari,name_skeleton,medium,source level upazila
+30453,upazila,Ulipur,rangpur/kurigram/ulipur,55490094,Ulipur,name_exact,high,source level upazila
+30421,upazila,Aditmari,rangpur/lalmonirhat/aditmari,55520002,Aditmari,name_exact,high,source level upazila
+30419,upazila,Hatibandha,rangpur/lalmonirhat/hatibandha,55520033,Hatibandha,name_exact,high,source level upazila
+30418,upazila,Kaliganj,rangpur/lalmonirhat/kaliganj,55520039,Kaliganj,name_exact,high,source level upazila
+30417,upazila,Lalmonirhat Sadar,rangpur/lalmonirhat/lalmonirhat-sadar,55520055,Lalmonirhat Sadar,name_exact,high,source level upazila
+30420,upazila,Patgram,rangpur/lalmonirhat/patgram,55520070,Patgram,name_exact,high,source level upazila
+30424,upazila,Dimla,rangpur/nilphamari/dimla,55730012,Dimla,name_exact,high,source level upazila
+30423,upazila,Domar,rangpur/nilphamari/domar,55730015,Domar,name_exact,high,source level upazila
+30425,upazila,Jaldhaka,rangpur/nilphamari/jaldhaka,55730036,Jaldhaka,name_exact,high,source level upazila
+30426,upazila,Kishorganj,rangpur/nilphamari/kishorganj,55730045,Kishoreganj,name_skeleton,medium,source level upazila
+30427,upazila,Nilphamari Sadar,rangpur/nilphamari/nilphamari-sadar,55730064,Nilphamari Sadar,name_exact,high,source level upazila
+30422,upazila,Syedpur,rangpur/nilphamari/syedpur,55730085,Saidpur,name_skeleton,medium,source level upazila
+30402,upazila,Atwari,rangpur/panchagarh/atwari,55770004,Atwari,name_exact,high,source level upazila
+30401,upazila,Boda,rangpur/panchagarh/boda,55770025,Boda,name_exact,high,source level upazila
+30400,upazila,Debiganj,rangpur/panchagarh/debiganj,55770034,Debiganj,name_exact,high,source level upazila
+30399,upazila,Panchagarh Sadar,rangpur/panchagarh/panchagarh-sadar,55770073,Panchagarh Sadar,name_exact,high,source level upazila
+30403,upazila,Tetulia,rangpur/panchagarh/tetulia,55770090,Tentulia,name_fuzzy,medium,source level upazila; similarity 0.93 to 'Tetulia'
+30443,upazila,Badargonj,rangpur/rangpur/badargonj,55850003,Badarganj,name_skeleton,medium,source level upazila
+30441,upazila,Gangachara,rangpur/rangpur/gangachara,55850027,Gangachara,name_exact,high,source level upazila
+30446,upazila,Kaunia,rangpur/rangpur/kaunia,55850042,Kaunia,name_exact,high,source level upazila
+30444,upazila,Mithapukur,rangpur/rangpur/mithapukur,55850058,Mithapukur,name_exact,high,source level upazila
+30447,upazila,Pirgacha,rangpur/rangpur/pirgacha,55850073,Pirgachha,name_exact,high,source level upazila
+30445,upazila,Pirgonj,rangpur/rangpur/pirgonj,55850076,Pirganj,name_skeleton,medium,source level upazila
+30442,upazila,Taragonj,rangpur/rangpur/taragonj,55850092,Taraganj,name_skeleton,medium,source level upazila
+30440,upazila,Rangpur Sadar,rangpur/rangpur/rangpur-sadar,55857549,Rangpur Sadar,name_exact,high,source level upazila
+30439,upazila,Baliadangi,rangpur/thakurgaon/baliadangi,55940008,Baliadangi,name_exact,high,source level upazila
+30438,upazila,Haripur,rangpur/thakurgaon/haripur,55940051,Haripur,name_exact,high,source level upazila
+30436,upazila,Pirganj,rangpur/thakurgaon/pirganj,55940082,Pirganj,name_exact,high,source level upazila
+30437,upazila,Ranisankail,rangpur/thakurgaon/ranisankail,55940086,Ranisankail,name_exact,high,source level upazila
+30435,upazila,Thakurgaon Sadar,rangpur/thakurgaon/thakurgaon-sadar,55940094,Thakurgaon Sadar,name_exact,high,source level upazila
+50008,city_corporation,Rangpur City Corporation,rangpur/rangpur/rangpur-city-corporation,558575,Rangpur City Corporation,name_exact,high,source level city_corporation
+,,,,5527001012,Birampur Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Birampur
+,,,,5527001218,Birganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Birganj
+,,,,5527002185,Setabganj Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Bochaganj
+,,,,5527003842,Fulbari Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Fulbari
+,,,,5527004353,Ghoraghat Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Ghoraghat
+,,,,5527004757,Hakimpur Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Hakimpur
+,,,,5527006428,Dinajpur Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Dinajpur Sadar
+,,,,5527007771,Parbatipur Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Parbatipur
+,,,,5532002422,Gaibandha Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Gaibandha Sadar
+,,,,5532003033,Gobindaganj Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Gobindaganj
+,,,,5532006766,Palashbari Paurashav,no_seed_unit,none,source level pourashava; our seed has no pourashava under Palashbari
+,,,,5532009177,Sundarganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Sundarganj
+,,,,5549005233,Kurigram Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kurigram Sadar
+,,,,5549006155,Nageshwari Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Nageshwari
+,,,,5549009466,Ulipur Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Ulipur
+,,,,5552005533,Lalmonirhat Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Lalmonirhat Sadar
+,,,,5552007066,Patgram Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Patgram
+,,,,5573001525,Domar Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Domar
+,,,,5573003637,Jaldhaka Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Jaldhaka
+,,,,5573006450,Nilphamari Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Nilphamari Sadar
+,,,,5573008575,Saidpur Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Syedpur
+,,,,5577002520,Boda Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Boda
+,,,,5577007350,Panchagarh Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Panchagarh Sadar
+,,,,5585000313,Badarganj Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Badargonj
+,,,,5585004225,Haragachh (kaunia) Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kaunia
+,,,,5594008233,Pirganj Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Pirganj
+,,,,5594008655,Ranisankail Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Ranisankail
+,,,,5594009466,Thakurgaon Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Thakurgaon Sadar

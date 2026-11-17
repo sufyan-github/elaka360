@@ -1,5 +1,7 @@
 {
   "key": "RMP_THANAS_2026",
+  "division": "rajshahi",
+  "kind": "metro_police_thanas",
   "name": "Rajshahi Metropolitan Police — thanas and official numbers",
   "organization": "Rajshahi Metropolitan Police (Bangladesh Police)",
   "source_type": "government_portal",

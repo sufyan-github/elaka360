@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
-"""Rajshahi City Corporation portal (erajshahi.portal.gov.bd) -> RCC_PORTAL_2026.
+"""City corporation portal -> areas/facts. Default: Rajshahi City Corporation (erajshahi.portal.gov.bd) -> RCC_PORTAL_2026.
 
-Re-runnable, self-contained (stdlib + requests). Usage: python3 -I fetch.py
+Re-runnable, self-contained (stdlib + requests). Usage: python3 -I fetch.py [--division rangpur] [--out DIR]
+(--division rangpur: Rangpur City Corporation, rpcc.gov.bd -> RANGPUR_CITY_CORPORATION in ../rangpur_city_corporation)
 Writes raw/ excerpts, areas.csv, facts.csv and refreshes the file checksums in SOURCE.json.
 """
 import csv
@@ -253,7 +254,7 @@ U_WARDSEC = B + '6ae2c685e0cf99482934fec4'    # ওয়ার্ড সচি�
 CC = 'Rajshahi City Corporation'
 
 
-def main():
+def main_rajshahi():
     darpan = page(U_DARPAN)
     glance = page(U_GLANCE)
     mayors = page(U_MAYORS)
@@ -328,6 +329,158 @@ def main():
     ]
     write_csv('facts.csv', FACT_COLS, facts)
     finish()
+
+
+# ---------------------------------------------------------------------------------------------------------------
+# Rangpur City Corporation portal (rpcc.gov.bd, linked from rangpurdiv.gov.bd and rangpur.gov.bd "স্থানীয় সরকার").
+# rpcc.portal.gov.bd / erangpur.portal.gov.bd do not resolve; rpcc.gov.bd omits the Sectigo DV R36 intermediate.
+# ---------------------------------------------------------------------------------------------------------------
+RP = 'https://rpcc.gov.bd/pages/static-pages/'
+RP_GLANCE = RP + '6922dd53933eb65569e14850'      # এক নজরে রংপুর সিটি কর্পোরেশন
+RP_LOCATION = RP + '6922dce1933eb65569e12890'    # অবস্থান ও আয়তন
+RP_WARDS = RP + 'রংপুর-সিটি-কর্পোরেশনের-ওয়ার্ড-সংখ্যা-নির্ধারন-এবং-ওয়ার্ড-ভিত্তিক-সীমানা-নির্ধারণ-eyz1ua-6a0c231d2a941ac3be730868'
+RP_COUNCILLORS = RP + '6971de1126b92f94c28c23e1'  # কাউন্সিলর তথ্যাদি (image attachment)
+RP_CC = 'Rangpur City Corporation'
+RP_CC_BN = 'রংপুর সিটি কর্পোরেশন'
+
+
+def main_rangpur():
+    glance = page(RP_GLANCE)
+    loc = page(RP_LOCATION)
+    wards = page(RP_WARDS)
+    councillors = page(RP_COUNCILLORS)
+    expect(glance, '২৮/০৬/২০১২', '১ মে ১৮৬৯', '২৩/০৯/১৯৮৬', '৩৩ টি।', 'মৌজা ১১২ টি', 'মহল্লা ৪৪২ টি', '২০৫.৭০ বর্গ কিঃ মিঃ',
+           'প্রায় ৭৯৬৫৫৬ জন', 'পুরুষ ৩৯৮২৮২ জন', 'মহিলা ৩৯৮২৭৪ জন', 'শিক্ষিতের হার ৬৫%')
+    expect(loc, '২০৩.৬৩ বর্গকিলোমিটার', '১১২টি মৌজা', '১২টি ইউনিয়ন', '৭টি ইউনিয়ন পূর্ণাঙ্গ ও ৫টি আংশিক')
+    if 'ওয়ার্ড সংখ্যা নির্ধারন' not in wards['title'] or len(wards['attachments']) != 1:
+        warn('ward-delimitation page changed: %r %r' % (wards['title'], wards['attachments']))
+
+    save_raw('ek_nojore_rpcc.txt', glance, redact_phones(glance['text']))
+    save_raw('location_area.txt', loc)
+    save_raw('ward_delimitation_page.txt', wards, 'Attachment (scanned Bangladesh Gazette, extraordinary, 9 Sep 2012; ward -> mouza '
+             'lists and reserved wards; not transcribed except the reserved-ward table):\n' + '\n'.join(wards['attachments']))
+    save_raw('councillors_page.txt', councillors, 'Attachment(s) (image; personal names/phones NOT copied):\n' + '\n'.join(councillors['attachments']))
+
+    g_note = 'এক নজরে updated ' + glance['updated']
+    l_note = 'অবস্থান ও আয়তন updated ' + loc['updated']
+    gaz = wards['attachments'][0] if wards['attachments'] else ''
+    areas = [dict(level='city_corporation', name_en=RP_CC, name_bn=RP_CC_BN, parent_level='district', parent_name_en='Rangpur',
+                  parent_name_bn='রংপুর', district_en='Rangpur', website='https://rpcc.gov.bd/', source_key=RP_KEY, source_url=RP_GLANCE,
+                  notes='Official portal rpcc.gov.bd. ' + g_note)]
+    # 33 general wards; the 2012 LGD gazette (scanned, page 8) groups them into 11 reserved (women's) wards of 3 wards each.
+    for n in range(1, 34):
+        res = (n - 1) // 3 + 1
+        areas.append(dict(level='ward', name_en='Ward %d' % n, name_bn='ওয়ার্ড নং ' + ''.join(BN_DIGITS[int(c)] for c in str(n)),
+                          parent_level='city_corporation', parent_name_en=RP_CC, parent_name_bn=RP_CC_BN, district_en='Rangpur',
+                          code=str(n), code_scheme='RPCC_WARD_NO', source_key=RP_KEY, source_url=RP_WARDS,
+                          notes='Ward number only (name_bn is a label). RPCC has 33 wards (এক নজরে); the ward-delimitation gazette '
+                                '(Bangladesh Gazette extraordinary, 9 Sep 2012, scanned PDF %s) lists the mouzas of each ward (not '
+                                'transcribed) and puts ward %d in reserved (women\'s) ward %d. %s' % (gaz, n, res, g_note)))
+    write_csv('areas.csv', AREA_COLS, areas)
+
+    def f(fact, value, unit, basis, year, url, notes):
+        return dict(entity_level='city_corporation', entity_name_en=RP_CC, district_en='Rangpur', fact=fact, value=value,
+                    unit=unit, basis=basis, year=year, source_key=RP_KEY, source_url=url, notes=notes)
+    facts = [
+        f('wards_count', '33', 'wards', 'official', '', RP_GLANCE, 'এক নজরে: ওয়ার্ড সংখ্যা ৩৩ টি; the 2012 delimitation gazette also has 33. '
+          'RpMP\'s history page says 30 wards (outdated). ' + g_note),
+        f('reserved_wards_count', '11', 'wards', 'official', '2012', RP_WARDS,
+          'Reserved (women\'s) wards 1-11, each covering 3 consecutive general wards (1-3 ... 31-33); read from the scanned gazette '
+          'attachment, not machine-checked.'),
+        f('established', '2012-06-28', 'date', 'official', '2012', RP_GLANCE,
+          'City corporation established 28/06/2012 (এক নজরে). RpMP\'s history page gives 1 July 2012. ' + g_note),
+        f('municipality_established_year', '1869', 'year', 'official', '1869', RP_GLANCE, 'Pourashava founded 1 May 1869 (এক নজরে). ' + g_note),
+        f('pourashava_class_a_date', '1986-09-23', 'date', 'official', '1986', RP_GLANCE, 'Upgraded to class (ক) pourashava 23/09/1986. ' + g_note),
+        f('area_km2', '205.70', 'km2', 'official', '', RP_GLANCE, 'এক নজরে "২০৫.৭০ বর্গ কিঃ মিঃ" (the same figure is repeated, by mistake, '
+          'as the household count). The location page gives 203.63 km2. ' + g_note),
+        f('area_km2', '203.63', 'km2', 'official', '', RP_LOCATION, 'অবস্থান ও আয়তন: "আয়তন এখন ২০৩.৬৩ বর্গকিলোমিটার"; conflicts with 205.70 on '
+          'the এক নজরে page. ' + l_note),
+        f('population', '796556', 'persons', 'official', '', RP_GLANCE, '"প্রায় ৭৯৬৫৫৬ জন" (approximate); year and basis not stated. ' + g_note),
+        f('population_male', '398282', 'persons', 'official', '', RP_GLANCE, 'Year and basis not stated. ' + g_note),
+        f('population_female', '398274', 'persons', 'official', '', RP_GLANCE, 'Year and basis not stated. ' + g_note),
+        f('literacy_rate', '65', 'percent', 'official', '', RP_GLANCE, 'Year and basis not stated. ' + g_note),
+        f('mouza_count', '112', 'mouzas', 'official', '', RP_GLANCE, 'Also on the location page. ' + g_note),
+        f('mahalla_count', '442', 'mahallas', 'official', '', RP_GLANCE, 'No mahalla names published. ' + g_note),
+        f('jurisdiction', '12 unions merged (10 of Rangpur Sadar, Sarai of Kaunia, Kalyani of Pirgachha): 7 whole, 5 partial, 112 mouzas; '
+          'cantonment excluded', 'text', 'official', '', RP_LOCATION, l_note),
+    ]
+    write_csv('facts.csv', FACT_COLS, facts)
+    meta = {'key': RP_KEY, 'division': 'rangpur', 'kind': 'city_corporation',
+            'name': 'Rangpur City Corporation official portal (rpcc.gov.bd)', 'organization': 'Rangpur City Corporation',
+            'source_type': 'government_portal', 'trust_level': 4,
+            'urls': ['https://rpcc.gov.bd/', RP_GLANCE, RP_LOCATION, RP_WARDS, RP_COUNCILLORS], 'accessed': ACCESSED,
+            'publication_date': None, 'license': None, 'license_url': None,
+            'attribution': 'Rangpur City Corporation (rpcc.gov.bd), Bangladesh National Portal',
+            'notes': 'rpcc.portal.gov.bd does not resolve; the RPCC portal is rpcc.gov.bd. Key pages: এক নজরে রংপুর সিটি কর্পোরেশন '
+                     '(updated %s), অবস্থান ও আয়তন (%s), ward delimitation (scanned 2012 gazette PDF, page %s). Ward and councillor '
+                     'lists are scanned images/PDFs; officials\' names and phones are not copied. No ward names or mahalla lists '
+                     'are published.' % (glance['updated'], loc['updated'], wards['updated'])}
+    with open(os.path.join(HERE, 'SOURCE.json'), 'w', encoding='utf-8') as fh:
+        json.dump(meta, fh, ensure_ascii=False, indent=2)
+        fh.write('\n')
+    finish()
+
+
+RP_KEY = 'RANGPUR_CITY_CORPORATION'
+# --- division selection (see ../DIVISIONS.md) --------------------------------------------------------------
+# `python3 fetch.py` = `--division rajshahi`, output into this folder (unchanged behaviour). Other divisions write into
+# their own folder (default: the sibling folder named per DIVISIONS.md) and never into the Rajshahi folder.
+import argparse
+DIVISION_CHOICES = ("rajshahi", "rangpur", "dhaka", "chattogram", "khulna", "barishal", "sylhet", "mymensingh")
+DIVISION = "rajshahi"
+
+
+def parse_division_args(folders):
+    """Parse --division/--out. folders: division -> default output folder name (a sibling of this folder)."""
+    ap = argparse.ArgumentParser(description=(__doc__ or "").strip().split("\n")[0])
+    ap.add_argument("--division", default="rajshahi", choices=DIVISION_CHOICES)
+    ap.add_argument("--out", help="output folder (default: this folder for rajshahi, ../<division folder> otherwise)")
+    a = ap.parse_args()
+    if a.division not in folders:
+        raise SystemExit("this collector has no table for division %r yet (see DIVISIONS.md)" % a.division)
+    here = os.path.dirname(os.path.abspath(__file__))
+    out = os.path.abspath(a.out or os.path.join(here, "..", folders[a.division]))
+    if a.division != "rajshahi" and os.path.realpath(out) == os.path.realpath(here):
+        raise SystemExit("refusing to write %s output into the Rajshahi folder %s" % (a.division, here))
+    os.makedirs(out, exist_ok=True)
+    return a.division, out
+
+
+def write_division_manifest(out, meta):
+    """SOURCE.json for a non-default division run: meta + sha256 of every data file in the output folder."""
+    import hashlib as _h, json as _j
+    files = {}
+    for root, _, names in os.walk(out):
+        for n in sorted(names):
+            full = os.path.join(root, n)
+            rel = os.path.relpath(full, out).replace(os.sep, "/")
+            if rel in ("SOURCE.json", "fetch.py", "REPORT.md") or "__pycache__" in rel:
+                continue
+            files[rel] = _h.sha256(open(full, "rb").read()).hexdigest()
+    m = dict(meta)
+    m["files"] = dict(sorted(files.items()))
+    with open(os.path.join(out, "SOURCE.json"), "w", encoding="utf-8") as f:
+        f.write(_j.dumps(m, ensure_ascii=False, indent=2) + "\n")
+
+
+SITES = {  # division -> city corporation collector (city name, portal, output folder)
+    'rajshahi': dict(city='Rajshahi City Corporation', portal='https://erajshahi.portal.gov.bd/', key=KEY, folder='rcc', run=main_rajshahi),
+    'rangpur': dict(city=RP_CC, portal='https://rpcc.gov.bd/', key=RP_KEY, folder='rangpur_city_corporation', run=main_rangpur),
+}
+
+
+def main():
+    global DIVISION, HERE, RAW, ACCESSED
+    DIVISION, out = parse_division_args({k: v['folder'] for k, v in SITES.items()})
+    if DIVISION != 'rajshahi':
+        HERE, RAW = out, os.path.join(out, 'raw')
+        ACCESSED = __import__('datetime').date.today().isoformat()
+    elif os.path.realpath(out) != os.path.realpath(HERE):
+        HERE, RAW = out, os.path.join(out, 'raw')
+        if not os.path.exists(os.path.join(HERE, 'SOURCE.json')):
+            import shutil
+            shutil.copy(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'SOURCE.json'), HERE)
+    SITES[DIVISION]['run']()
 
 
 if __name__ == '__main__':

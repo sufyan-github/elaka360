@@ -2,9 +2,9 @@
  "division": 8,
  "district": 64,
  "upazila": 495,
- "union": 4542,
+ "union": 4546,
  "city_corporation": 13,
- "pourashava": 62,
+ "pourashava": 93,
  "upazilas_without_unions": [
   "Guimara",
   "Eidgaon",
@@ -24,7 +24,7 @@
  },
  "rajshahi_district_unions_total": 72,
  "district_area_check_rajshahi_computed_km2": 2443.3,
- "sum_district_area_km2": 140022.0,
+ "sum_district_area_km2": 139981.0,
  "categories": {
   "top_level": 11,
   "sub": 84
@@ -33,10 +33,10 @@
   "country": 1,
   "division": 8,
   "district": 64,
-  "upazila": 68,
-  "union": 566,
+  "upazila": 126,
+  "union": 1101,
   "city_corporation": 13,
-  "pourashava": 62
+  "pourashava": 93
  },
  "seed_vs_master_untracked": 0
 }

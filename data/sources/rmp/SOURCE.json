@@ -1,5 +1,7 @@
 {
   "key": "RMP_PORTAL_2026",
+  "division": "rajshahi",
+  "kind": "metro_police",
   "name": "Rajshahi Metropolitan Police official portal (rmp.gov.bd)",
   "organization": "Rajshahi Metropolitan Police, Bangladesh Police",
   "source_type": "government_portal",

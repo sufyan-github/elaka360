@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Fetch DGME (Directorate General of Medical Education) medical & dental college lists; keep Rajshahi Division.
 
-stdlib + requests only. Usage: python3 fetch.py"""
+stdlib + requests only. Usage: python3 fetch.py [--division rajshahi|rangpur] [--out DIR]
+Default: Rajshahi Division into this folder (DIVISIONS.md)."""
 # --- polite HTTP helper (copy this block into each fetch.py; stdlib + requests only) -----------------
 # Many *.gov.bd servers send only their leaf certificate and omit the intermediate CA. Browsers fetch the
 # missing intermediate via the certificate's AIA URL; we do the same explicitly: download the published
@@ -192,6 +193,13 @@ def sha256(path):
 def update_manifest(files):
     p = os.path.join(HERE, "SOURCE.json")
     m = json.load(open(p, encoding="utf-8")) if os.path.exists(p) else {}
+    if not m:  # first run for another division
+        m = {"key": SOURCE_KEY, "division": DIVISION, "kind": "dgme",
+             "name": "DGME medical and dental college lists — %s Division" % DIVISION.capitalize(),
+             "organization": "Directorate General of Medical Education (DGME), Ministry of Health and Family Welfare",
+             "source_type": "government_portal", "trust_level": 4, "urls": [MEDICAL_PAGE, DENTAL_PAGE, GOVT_WEB_PAGE],
+             "accessed": None, "publication_date": None, "license": None, "license_url": None,
+             "attribution": "Source: Directorate General of Medical Education (dgme.gov.bd)"}
     m["accessed"] = datetime.date.today().isoformat()
     m["files"] = {f: sha256(os.path.join(HERE, f)) for f in files if os.path.exists(os.path.join(HERE, f))}
     with open(p, "w", encoding="utf-8") as fh:
@@ -199,7 +207,39 @@ def update_manifest(files):
         fh.write("\n")
 # --- end output helpers -----------------------------------------------------------------------------------
 
-# --- DGME medical & dental college lists: colleges located in Rajshahi Division ---------------------------
+# --- division selection (data/sources/DIVISIONS.md) ---------------------------------------------------------
+import argparse
+DIVISION_CODES = {"rajshahi": "raj", "rangpur": "rang", "dhaka": "dhk", "chattogram": "ctg", "khulna": "khl",
+                  "barishal": "bar", "sylhet": "syl", "mymensingh": "mym"}
+
+
+def division_setup(here, base_key, configured, extra_args=()):
+    """Parse --division/--out -> (args, out_dir, source_key). Rajshahi (default) keeps this folder and key; another
+    division writes to its own folder named per DIVISIONS.md and never touches the Rajshahi files."""
+    ap = argparse.ArgumentParser(description=(__doc__ or "").strip().split("\n")[0])
+    ap.add_argument("--division", default="rajshahi", choices=list(DIVISION_CODES))
+    ap.add_argument("--out", help="output folder (default: this folder for rajshahi, the division's own folder otherwise)")
+    for name, kw in extra_args:
+        ap.add_argument(name, **kw)
+    args = ap.parse_args()
+    if args.division not in configured:
+        ap.error("division %r is not configured in this collector yet (configured: %s)" % (args.division, ", ".join(configured)))
+    here = os.path.abspath(str(here))
+    folder = os.path.basename(here)
+    if args.division == "rajshahi":
+        name, key = folder, base_key
+    else:
+        code = DIVISION_CODES[args.division]
+        name = folder.replace("_raj_", "_%s_" % code) if "_raj_" in folder else "%s_%s" % (folder, args.division)
+        key = base_key.replace("_RAJ_", "_%s_" % code.upper()) if "_RAJ_" in base_key else "%s_%s" % (base_key, args.division.upper())
+    out = os.path.abspath(args.out) if args.out else (here if args.division == "rajshahi" else os.path.join(os.path.dirname(here), name))
+    if args.division != "rajshahi" and out == here:
+        ap.error("refusing to write another division's output into the Rajshahi folder")
+    os.makedirs(out, exist_ok=True)
+    return args, out, key
+# --- end division selection ---------------------------------------------------------------------------------
+
+# --- DGME medical & dental college lists: colleges located in Rajshahi Division (or --division) -------------
 import sys, html as _html
 from collections import Counter
 
@@ -214,6 +254,14 @@ EN_DISTRICT_WORDS = {"Rajshahi": ["rajshahi"], "Natore": ["natore"], "Naogaon": 
                      "Chapainawabganj": ["nawabganj"], "Bogura": ["bogura", "bogra"], "Joypurhat": ["joypurhat"],
                      "Pabna": ["pabna"], "Sirajganj": ["sirajganj"]}
 BN_DIGITS = str.maketrans("০১২৩৪৫৬৭৮৯", "0123456789")
+DIVISION = "rajshahi"
+BY_DIV = {  # division -> (Bangla district names, English words of the government-college page); first district = head
+    "rajshahi": (BN_DISTRICTS, EN_DISTRICT_WORDS),
+    "rangpur": ({"রংপুর": "Rangpur", "দিনাজপুর": "Dinajpur", "ঠাকুরগাঁও": "Thakurgaon", "পঞ্চগড়": "Panchagarh",
+                 "নীলফামারী": "Nilphamari", "লালমনিরহাট": "Lalmonirhat", "কুড়িগ্রাম": "Kurigram", "গাইবান্ধা": "Gaibandha"},
+                {"Rangpur": ["rangpur"], "Dinajpur": ["dinajpur"], "Thakurgaon": ["thakurgaon"], "Panchagarh": ["panchagarh"],
+                 "Nilphamari": ["nilphamari"], "Lalmonirhat": ["lalmonirhat"], "Kurigram": ["kurigram"], "Gaibandha": ["gaibandha"]}),
+}
 
 
 def fetch_html(url):
@@ -259,12 +307,17 @@ def num(s):
 
 
 def main():
+    global HERE, SOURCE_KEY, DIVISION, BN_DISTRICTS, EN_DISTRICT_WORDS
+    args, HERE, SOURCE_KEY = division_setup(HERE, SOURCE_KEY, list(BY_DIV))
+    DIVISION = args.division
+    BN_DISTRICTS, EN_DISTRICT_WORDS = BY_DIV[DIVISION]
+    head = next(iter(EN_DISTRICT_WORDS)) if DIVISION != "rajshahi" else "Rajshahi"
     pages = {"medical": fetch_html(MEDICAL_PAGE),
              "dental": fetch_html(DENTAL_PAGE),
              "govt_web": fetch_html(GOVT_WEB_PAGE)}
 
     # English names + websites of government medical colleges, keyed by district
-    gov_web = {}
+    gov_web, gov_web_all = {}, {}
     for kind, cells, hrefs in blocks(content_part(pages["govt_web"])):
         if kind != "row" or not cells or not cells[0]:
             continue
@@ -273,6 +326,9 @@ def main():
             if any(w in low for w in words) and "medical college" in low and "dental" not in low:
                 site = next((u for u in hrefs if "dgme.gov.bd" not in u), "") or (cells[1] if len(cells) > 1 else "")
                 gov_web.setdefault(dist, (cells[0], site))
+                gov_web_all.setdefault(dist, []).append(cells[0])
+    if DIVISION != "rajshahi":  # match by district only when the district has exactly one government college there
+        gov_web = {d: v for d, v in gov_web.items() if len(gov_web_all[d]) == 1}
 
     rows = []
     # medical colleges: 5-column table = government, 6-column (with ছাত্র/ছাত্রী) = private
@@ -343,7 +399,14 @@ def main():
 
     for r in rows:
         r["extra_json"] = cj(r["extra_json"])
-    rows.sort(key=lambda r: (r["district_en"] != "Rajshahi", r["district_en"], r["ownership"], r["name_bn"]))
+    if DIVISION != "rajshahi":  # government colleges sharing a district: none keeps the district-matched English name
+        for d in {r["district_en"] for r in rows if r["ownership"] == "government" and r["source_id"].startswith("dgme_mbbs")}:
+            gov = [r for r in rows if r["district_en"] == d and r["ownership"] == "government" and r["source_id"].startswith("dgme_mbbs")]
+            if len(gov) > 1:
+                for r in gov:
+                    r["name_en"], r["website"] = "", ""
+                    r["notes"] = "several government colleges in this district; English name/website not matched by district"
+    rows.sort(key=lambda r: (r["district_en"] != head, r["district_en"], r["ownership"], r["name_bn"]))
     write_csv("places.csv", PLACE_COLS, rows)
     update_manifest(["places.csv"])
     print("places", len(rows), Counter(r["district_en"] for r in rows), Counter(r["ownership"] for r in rows))

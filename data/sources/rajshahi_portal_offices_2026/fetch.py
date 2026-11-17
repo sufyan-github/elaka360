@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Government offices listed on the national-portal sites (Divisional Commissioner, Rajshahi DC portal and its upazila portals; DC and UNO offices of the other Rajshahi Division districts).
+"""Government offices listed on the national-portal sites (Divisional Commissioner, head-district DC portal and its upazila portals; DC and UNO offices of the other districts of the division; default Rajshahi).
 
-Re-runnable: python3 fetch.py  (stdlib + requests). Optional: ELAKA_CACHE=<dir> caches pages."""
+Re-runnable: python3 fetch.py [--division rangpur] [--out DIR]  (stdlib + requests). Optional: ELAKA_CACHE=<dir> caches pages."""
 # --- polite HTTP helper (copy this block into each fetch.py; stdlib + requests only) -----------------
 # Many *.gov.bd servers send only their leaf certificate and omit the intermediate CA. Browsers fetch the
 # missing intermediate via the certificate's AIA URL; we do the same explicitly: download the published
@@ -390,6 +390,134 @@ SOURCE_KEY = "RAJSHAHI_PORTAL_OFFICES_2026"
 OUT = os.path.dirname(os.path.abspath(__file__))
 DIV_HOST = "rajshahidiv.gov.bd"
 OFFICE_TOPS = re.compile(r"অফিস|দপ্তর|আরও")
+HEAD = "Rajshahi"                                  # the division's head district (DC portal crawled in depth)
+DIVCOM_NAME = "বিভাগীয় কমিশনারের কার্যালয়, রাজশাহী"
+
+# --- division selection (see ../DIVISIONS.md) --------------------------------------------------------------
+# `python3 fetch.py` = `--division rajshahi`, output into this folder (unchanged behaviour). Other divisions write into
+# their own folder (default: the sibling folder named per DIVISIONS.md) and never into the Rajshahi folder.
+import argparse
+DIVISION_CHOICES = ("rajshahi", "rangpur", "dhaka", "chattogram", "khulna", "barishal", "sylhet", "mymensingh")
+DIVISION = "rajshahi"
+
+
+def parse_division_args(folders):
+    """Parse --division/--out. folders: division -> default output folder name (a sibling of this folder)."""
+    ap = argparse.ArgumentParser(description=(__doc__ or "").strip().split("\n")[0])
+    ap.add_argument("--division", default="rajshahi", choices=DIVISION_CHOICES)
+    ap.add_argument("--out", help="output folder (default: this folder for rajshahi, ../<division folder> otherwise)")
+    a = ap.parse_args()
+    if a.division not in folders:
+        raise SystemExit("this collector has no table for division %r yet (see DIVISIONS.md)" % a.division)
+    here = os.path.dirname(os.path.abspath(__file__))
+    out = os.path.abspath(a.out or os.path.join(here, "..", folders[a.division]))
+    if a.division != "rajshahi" and os.path.realpath(out) == os.path.realpath(here):
+        raise SystemExit("refusing to write %s output into the Rajshahi folder %s" % (a.division, here))
+    os.makedirs(out, exist_ok=True)
+    return a.division, out
+
+
+def write_division_manifest(out, meta):
+    """SOURCE.json for a non-default division run: meta + sha256 of every data file in the output folder."""
+    import hashlib as _h, json as _j
+    files = {}
+    for root, _, names in os.walk(out):
+        for n in sorted(names):
+            full = os.path.join(root, n)
+            rel = os.path.relpath(full, out).replace(os.sep, "/")
+            if rel in ("SOURCE.json", "fetch.py", "REPORT.md") or "__pycache__" in rel:
+                continue
+            files[rel] = _h.sha256(open(full, "rb").read()).hexdigest()
+    m = dict(meta)
+    m["files"] = dict(sorted(files.items()))
+    with open(os.path.join(out, "SOURCE.json"), "w", encoding="utf-8") as f:
+        f.write(_j.dumps(m, ensure_ascii=False, indent=2) + "\n")
+
+
+# Rangpur Division names: Bangla -> English (HDX COD-AB spellings). District hosts verified by page title (Nov 2026);
+# upazila portal subdomains verified by their home-page titles ("হোম | <upazila> উপজেলা").
+RANGPUR_DISTRICTS = {"রংপুর": "Rangpur", "পঞ্চগড়": "Panchagarh", "দিনাজপুর": "Dinajpur", "লালমনিরহাট": "Lalmonirhat",
+                     "নীলফামারী": "Nilphamari", "গাইবান্ধা": "Gaibandha", "ঠাকুরগাঁও": "Thakurgaon", "কুড়িগ্রাম": "Kurigram"}
+RANGPUR_DISTRICT_HOSTS = {"Rangpur": "rangpur.gov.bd", "Panchagarh": "panchagarh.gov.bd", "Dinajpur": "dinajpur.gov.bd",
+                          "Lalmonirhat": "lalmonirhat.gov.bd", "Nilphamari": "nilphamari.gov.bd", "Gaibandha": "gaibandha.gov.bd",
+                          "Thakurgaon": "thakurgaon.gov.bd", "Kurigram": "kurigram.gov.bd"}
+RANGPUR_UPAZILAS = {  # district -> [(english, bangla names/aliases..., portal subdomain)]
+    "Rangpur": [("Badarganj", ["বদরগঞ্জ"], "badargonj"), ("Gangachara", ["গংগাচড়া", "গঙ্গাচড়া"], "gangachara"),
+                ("Kaunia", ["কাউনিয়া"], "kaunia"), ("Rangpur Sadar", ["রংপুর সদর"], "rangpursadar"),
+                ("Mithapukur", ["মিঠাপুকুর"], "mithapukur"), ("Pirgachha", ["পীরগাছা"], "pirgacha"),
+                ("Pirganj", ["পীরগঞ্জ"], "pirgonj"), ("Taraganj", ["তারাগঞ্জ"], "taragonj")],
+    "Panchagarh": [("Atowari", ["আটোয়ারী"], "atwari"), ("Boda", ["বোদা"], "boda"), ("Debiganj", ["দেবীগঞ্জ"], "debiganj"),
+                   ("Panchagarh Sadar", ["পঞ্চগড় সদর"], "panchagarhsadar"), ("Tentulia", ["তেঁতুলিয়া", "তেতুলিয়া"], "tetulia")],
+    "Thakurgaon": [("Baliadangi", ["বালিয়াডাঙ্গী", "বালিয়াডাংগী"], "baliadangi"), ("Haripur", ["হরিপুর"], "haripur"),
+                   ("Pirganj", ["পীরগঞ্জ"], "pirganj"), ("Ranishankail", ["রাণীশংকৈল", "রানীশংকৈল"], "ranisankail"),
+                   ("Thakurgaon Sadar", ["ঠাকুরগাঁও সদর"], "thakurgaonsadar")],
+    "Nilphamari": [("Dimla", ["ডিমলা"], "dimla"), ("Domar", ["ডোমার"], "domar"), ("Jaldhaka", ["জলঢাকা"], "jaldhaka"),
+                   ("Kishoreganj", ["কিশোরগঞ্জ"], "kishorganj"), ("Nilphamari Sadar", ["নীলফামারী সদর"], "nilphamarisadar"),
+                   ("Saidpur", ["সৈয়দপুর"], "syedpur")],
+    "Lalmonirhat": [("Aditmari", ["আদিতমারী"], "aditmari"), ("Hatibandha", ["হাতীবান্ধা"], "hatibandha"),
+                    ("Kaliganj", ["কালীগঞ্জ"], "kaliganj"), ("Lalmonirhat Sadar", ["লালমনিরহাট সদর"], "sadar"),
+                    ("Patgram", ["পাটগ্রাম"], "patgram")],
+    "Gaibandha": [("Fulchhari", ["ফুলছড়ি"], "phulchari"), ("Gaibandha Sadar", ["গাইবান্ধা সদর"], "gaibandhasadar"),
+                  ("Gobindaganj", ["গোবিন্দগঞ্জ"], "gobindaganj"), ("Palashbari", ["পলাশবাড়ী", "পলাশবাড়ি"], "palashbari"),
+                  ("Sadullapur", ["সাদুল্লাপুর", "সাদুল্যাপুর"], "sadullapur"), ("Saghata", ["সাঘাটা"], "saghata"),
+                  ("Sundarganj", ["সুন্দরগঞ্জ"], "sundarganj")],
+    "Kurigram": [("Bhurungamari", ["ভূরুঙ্গামারী", "ভুরুঙ্গামারী"], "bhurungamari"), ("Rajibpur", ["রাজিবপুর", "রাজীবপুর"], "charrajibpur"),
+                 ("Chilmari", ["চিলমারী"], "chilmari"), ("Phulbari", ["ফুলবাড়ী"], "phulbari"),
+                 ("Kurigram Sadar", ["কুড়িগ্রাম সদর"], "kurigramsadar"), ("Nageshwari", ["নাগেশ্বরী"], "nageshwari"),
+                 ("Rajarhat", ["রাজারহাট"], "rajarhat"), ("Roumari", ["রৌমারী"], "rowmari"), ("Ulipur", ["উলিপুর"], "ulipur")],
+    "Dinajpur": [("Birampur", ["বিরামপুর"], "birampur"), ("Birganj", ["বীরগঞ্জ"], "birganj"), ("Birol", ["বিরল"], "birol"),
+                 ("Bochaganj", ["বোচাগঞ্জ"], "bochaganj"), ("Chirirbandar", ["চিরিরবন্দর"], "chirirbandar"),
+                 ("Fulbari", ["ফুলবাড়ী"], "fulbari"), ("Ghoraghat", ["ঘোড়াঘাট"], "ghoraghat"), ("Hakimpur", ["হাকিমপুর"], "hakimpur"),
+                 ("Kaharole", ["কাহারোল"], "kaharol"), ("Khansama", ["খানসামা"], "khansama"),
+                 ("Dinajpur Sadar", ["দিনাজপুর সদর"], "dinajpursadar"), ("Nababganj", ["নবাবগঞ্জ"], "nawabganj"),
+                 ("Parbatipur", ["পার্বতীপুর"], "parbatipur")],
+}
+# Rangpur Metropolitan Police thanas (rpmp.gov.bd), English transliterations
+RANGPUR_CITY_THANAS = {"কোতয়ালী": "Kotwali", "তাজহাট": "Tajhat", "মাহিগঞ্জ": "Mahiganj", "হারাগাছ": "Haragach",
+                       "পরশুরাম": "Parshuram", "হাজিরহাট": "Hajirhat"}
+
+
+DIVISION_TABLES = {
+    "rajshahi": dict(DISTRICTS=DISTRICTS, DISTRICT_HOSTS=DISTRICT_HOSTS, UPAZILAS=UPAZILAS, CITY_THANAS=CITY_THANAS,
+                     HEAD="Rajshahi", DIV_HOST="rajshahidiv.gov.bd", DIVCOM_NAME="বিভাগীয় কমিশনারের কার্যালয়, রাজশাহী",
+                     SOURCE_KEY="RAJSHAHI_PORTAL_OFFICES_2026", folder="rajshahi_portal_offices_2026"),
+    "rangpur": dict(DISTRICTS=RANGPUR_DISTRICTS, DISTRICT_HOSTS=RANGPUR_DISTRICT_HOSTS, UPAZILAS=RANGPUR_UPAZILAS,
+                    CITY_THANAS=RANGPUR_CITY_THANAS, HEAD="Rangpur", DIV_HOST="rangpurdiv.gov.bd",
+                    DIVCOM_NAME="বিভাগীয় কমিশনারের কার্যালয়, রংপুর", SOURCE_KEY="RANGPUR_PORTAL_OFFICES_2026",
+                    folder="rangpur_portal_offices_2026",
+                    # DC portal "উপজেলা ও ইউনিয়ন" table (no pourashava list is published on rangpur.gov.bd)
+                    UNION_LIST="https://rangpur.gov.bd/pages/static-pages/6977698ec4774958d7c22b0e"),
+}
+DIV_PORTAL_PREFIX = {"rajshahi": "rajshahi", "rangpur": "rangpur", "dhaka": "dhaka", "chattogram": "chattogram", "khulna": "khulna",
+                     "barishal": "barishal", "sylhet": "sylhet", "mymensingh": "mymensingh"}
+
+
+def configure():
+    global DIVISION, OUT, DISTRICTS, DISTRICT_HOSTS, UPAZILAS, CITY_THANAS, HEAD, DIV_HOST, DIVCOM_NAME, SOURCE_KEY, NOT_OFFICES
+    DIVISION, OUT = parse_division_args({k: v["folder"] for k, v in DIVISION_TABLES.items()})
+    t = DIVISION_TABLES[DIVISION]
+    DISTRICTS, DISTRICT_HOSTS, UPAZILAS, CITY_THANAS = t["DISTRICTS"], t["DISTRICT_HOSTS"], t["UPAZILAS"], t["CITY_THANAS"]
+    HEAD, DIV_HOST, DIVCOM_NAME, SOURCE_KEY = t["HEAD"], t["DIV_HOST"], t["DIVCOM_NAME"], t["SOURCE_KEY"]
+    if DIVISION != "rajshahi":  # offices of the other divisions' portals are skipped (Rajshahi keeps its original pattern)
+        others = "|".join(v for k, v in DIV_PORTAL_PREFIX.items() if k != DIVISION)
+        NOT_OFFICES = re.compile(r"^(bdlaws\.minlaw\.gov\.bd)$|(%s)div\.gov\.bd$" % others)
+
+
+def division_manifest():
+    dn = DIVISION.capitalize()
+    return {"key": SOURCE_KEY, "division": DIVISION, "kind": "portal_offices",
+            "name": "Government offices on the national portal sites — Divisional Commissioner, %s DC & upazila portals, DC/UNO offices of %s Division" % (HEAD, dn),
+            "organization": "Divisional / District / Upazila administrations (national portal framework)",
+            "source_type": "government_portal", "trust_level": 4,
+            "urls": ["https://%s/" % DIV_HOST, "https://%s/" % DISTRICT_HOSTS[HEAD], "https://<upazila>.%s/" % DISTRICT_HOSTS[HEAD]]
+                    + ([DIVISION_TABLES[DIVISION]["UNION_LIST"]] if DIVISION_TABLES[DIVISION].get("UNION_LIST") else []),
+            "accessed": __import__("datetime").date.today().isoformat(), "publication_date": None, "license": None, "license_url": None,
+            "attribution": "Divisional / District / Upazila administrations (national portal framework)",
+            "notes": "Office list = menu entries under 'সরকারি অফিসসমূহ' / 'সরকারী অফিস' / 'স্থানীয় সরকার' / 'পৌরসভা' plus the DC/UNO "
+                     "portals themselves; union parishads from the %s DC portal's union list. Contacts = office landline and *.gov.bd "
+                     "e-mail from the office head's officer card or the 'যোগাযোগ' page; mobile numbers, personal e-mails and officials' "
+                     "names are not collected. No addresses/coordinates are published in a structured way. Licence: none stated on "
+                     "the source; treat as government public information, cite the source." % HEAD}
 
 
 def host_of(u):
@@ -516,6 +644,7 @@ class Job:
 
 
 def main():
+    configure()
     from concurrent.futures import ThreadPoolExecutor
     places, seen, jobs = [], set(), []
 
@@ -532,12 +661,12 @@ def main():
 
     # 1) Divisional Commissioner's office + division-level offices listed on the divisional portal
     div = "https://%s/" % DIV_HOST
-    add(Job("বিভাগীয় কমিশনারের কার্যালয়, রাজশাহী", div, "Rajshahi", None, "division", None, div,
+    add(Job(DIVCOM_NAME, div, HEAD, None, "division", None, div,
                       "government.divisional_commissioner", True))
     divhome = fetch_text(div)
     for top, grp, ttl, href in menu_entries(divhome):
         if OFFICE_TOPS.search(top) and norm_url(href) and host_of(href).endswith(".gov.bd") and host_of(href) != DIV_HOST:
-            add(Job(ttl, href, "Rajshahi", None, "division", grp, div))
+            add(Job(ttl, href, HEAD, None, "division", grp, div))
 
     # 2) Rajshahi District: DC portal + its office menu + local government; 9 upazila portals + their office menus
     for dist, dhost in DISTRICT_HOSTS.items():
@@ -545,7 +674,7 @@ def main():
         add(Job("জেলা প্রশাসকের কার্যালয়, " + [k for k, v in DISTRICTS.items() if v == dist][0], dbase, dist, None,
                           "district", None, dbase, "government.dc_office", True))
         dhome = fetch_text(dbase)
-        if dist == "Rajshahi":
+        if dist == HEAD:
             for top, grp, ttl, href in menu_entries(dhome):
                 if (OFFICE_TOPS.search(top) or "স্থানীয় সরকার" in top) and norm_url(href) and host_of(href) != dhost:
                     if re.search(r"\.(?:gov\.bd|portal\.gov\.bd)$", host_of(href)) or "pourashava" in host_of(href):
@@ -558,7 +687,7 @@ def main():
             ubase = "https://%s.%s/" % (sub, dhost)
             add(Job("উপজেলা নির্বাহী অফিসারের কার্যালয়, " + bns[0], ubase, dist, en, "upazila", None, dbase,
                               "government.uno_office", True))
-            if dist != "Rajshahi":
+            if dist != HEAD:
                 continue
             uhome = fetch_text(ubase)
             for top, grp, ttl, href in menu_entries(uhome):
@@ -589,7 +718,12 @@ def main():
     places[:] = out
     seen.update((r["source_id"], r["district_en"]) for r in places)
 
-    # 3) Rajshahi District local-government lists (names only, from the DC portal static pages)
+    # 3) Head-district local-government lists (names only, from the DC portal static pages)
+    if DIVISION == "rangpur":
+        union_list_rangpur(add)
+    if DIVISION != "rajshahi":
+        finish_places(places)
+        return
     up_list = "https://rajshahi.gov.bd/pages/static-pages/697f79bb35ce18e1c06b5300"
     t = widget(fetch_text(up_list))
     cur_up = None
@@ -626,15 +760,48 @@ def main():
                      "upazila_en": up_ps, "ownership": "public",
                      "extra_json": jdump({"serial": ascii_digits(cells[0])}), "source_url": ps_list,
                      "notes": "listed on the DC portal pourashava list; no portal link given there"})
+    finish_places(places)
+
+
+def finish_places(places):
     for r in places:
-        if r["district_en"] == "Rajshahi" and not r["upazila_en"]:
+        if r["district_en"] == HEAD and not r["upazila_en"]:
             for bn, th in CITY_THANAS.items():
                 if bn in r["name_bn"] and th not in ("Paba",):
                     r["upazila_en"] = th
-                    r["notes"] = "; ".join(x for x in [r.get("notes"), "upazila_en holds a Rajshahi metropolitan thana"] if x)
+                    r["notes"] = "; ".join(x for x in [r.get("notes"), "upazila_en holds a %s metropolitan thana" % HEAD] if x)
                     break
     write_csv(os.path.join(OUT, "places.csv"), PLACE_COLS, places)
     print(len(places), "places", file=sys.stderr)
+    if DIVISION != "rajshahi":
+        write_division_manifest(OUT, division_manifest())
+
+
+def union_list_rangpur(add):
+    """rangpur.gov.bd 'উপজেলা ও ইউনিয়ন': rows (district, upazila, union) / (upazila, union) / (union)."""
+    url = DIVISION_TABLES["rangpur"]["UNION_LIST"]
+    t = widget(fetch_text(url))
+    cur_up = None
+    for tb in html_tables(t):
+        for cells, hrefs in tb:
+            cells = [c for c in cells if c]
+            if not cells or cells[-1] == "ইউনিয়ন":
+                continue
+            if len(cells) >= 2:
+                cur_up = find_upazila(cells[-2], HEAD)[1]
+            if not cur_up:
+                continue
+            listed = cells[-1]
+            m = re.match(r"^([০-৯0-9]+)\s*নং\s*(.+)$", listed)
+            base = nfc(m.group(2) if m else listed)
+            base = re.sub(r"\s*(ইউনিয়ন|ইউনিয়ান|ইউুনয়ন)$", "", base).strip()
+            site = norm_url(hrefs[-1]) if hrefs else None
+            add({"source_key": SOURCE_KEY, "source_id": host_of(site) if site else "up:%s:%s" % (cur_up, base),
+                 "name_bn": "%s ইউনিয়ন পরিষদ" % base, "category_key": "government.union_parishad",
+                 "district_en": HEAD, "upazila_en": cur_up, "website": site or "", "ownership": "public",
+                 "extra_json": jdump({"union_no": int(ascii_digits(m.group(1))) if m else None, "union_name_as_listed": listed}),
+                 "source_url": url,
+                 "notes": "listed on the DC portal union list; office contacts not collected (UP portals list elected representatives)"})
 
 
 if __name__ == "__main__":

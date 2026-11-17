@@ -1,25 +1,45 @@
 'use client';
 
-import { useState } from 'react';
-import { useTranslations } from 'next-intl';
-import { LiveMap, type ScopeKey } from '@/components/map/LiveMap';
+import { useEffect, useState } from 'react';
+import { useLocale, useTranslations } from 'next-intl';
+import { LiveMap, type MapScope } from '@/components/map/LiveMap';
+import { localName } from '@/lib/locale';
+import type { Locale } from '@elaka360/shared';
 
 const CATS = ['', 'education', 'health', 'government', 'emergency', 'tourism', 'religious', 'transport', 'finance'] as const;
-const SCOPE_KEYS: ScopeKey[] = ['district', 'division'];
+/** Shown until /data/map/scopes.json loads (and if it cannot): the first division collected. */
+const FALLBACK: MapScope[] = [
+  { id: 20015, kind: 'district', division_id: 10002, name_bn: 'রাজশাহী', name_en: 'Rajshahi' },
+  { id: 10002, kind: 'division', division_id: 10002, name_bn: 'রাজশাহী', name_en: 'Rajshahi' },
+];
 
-/** Live map of Rajshahi District / Division: outlines, places loaded for the visible area, refreshed every minute. */
+/** Live map: each collected division's head district and the whole division; outlines, places and their counts. */
 export function MapExplorer() {
   const t = useTranslations('LiveMap');
-  const [scope, setScope] = useState<ScopeKey>('district');
+  const locale = useLocale() as Locale;
+  const [scopes, setScopes] = useState<MapScope[]>(FALLBACK);
+  const [scope, setScope] = useState<MapScope>(FALLBACK[0]!);
   const [category, setCategory] = useState('');
   const [layers, setLayers] = useState({ coarse: true, fine: true, places: true });
+
+  useEffect(() => {
+    fetch('/data/map/scopes.json')
+      .then((r) => (r.ok ? r.json() : null))
+      .then((list: MapScope[] | null) => {
+        if (!list?.length) return;
+        setScopes(list);
+        setScope((cur) => list.find((x) => x.id === cur.id) ?? list[0]!);
+      })
+      .catch(() => undefined);
+  }, []);
+
   const chip = (on: boolean) => `whitespace-nowrap rounded-full px-3 py-1.5 text-sm ${on ? 'bg-primary text-on-primary' : 'border border-line bg-surface'}`;
   return (
     <>
       <div className="mt-3 flex flex-wrap items-center gap-2" role="group" aria-label={t('scope')}>
-        {SCOPE_KEYS.map((key) => (
-          <button type="button" key={key} aria-pressed={scope === key} onClick={() => setScope(key)} className={chip(scope === key)}>
-            {t(`scopes.${key}`)}
+        {scopes.map((s) => (
+          <button type="button" key={s.id} aria-pressed={scope.id === s.id} onClick={() => setScope(s)} className={chip(scope.id === s.id)}>
+            {localName({ name_bn: s.name_bn, name_en: s.name_en }, locale)} {t(`kind.${s.kind}`)}
           </button>
         ))}
       </div>

@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Fetch CAAB airport data for airports in Rajshahi Division (CAAB_AIRPORTS_RAJ_2026)."""
+"""Fetch CAAB airport data for airports in Rajshahi Division (CAAB_AIRPORTS_RAJ_2026).
+
+Usage: python3 fetch.py [--division rajshahi|rangpur] [--out DIR]   (default: Rajshahi into this folder; DIVISIONS.md)"""
 # --- polite HTTP helper (copy this block into each fetch.py; stdlib + requests only) -----------------
 # Many *.gov.bd servers send only their leaf certificate and omit the intermediate CA. Browsers fetch the
 # missing intermediate via the certificate's AIA URL; we do the same explicitly: download the published
@@ -197,6 +199,38 @@ def xj(d):
     return json.dumps(d, ensure_ascii=False, separators=(",", ":")) if d else ""
 # --- end common utilities -----------------------------------------------------------------------------
 
+# --- division selection (data/sources/DIVISIONS.md) ---------------------------------------------------------
+import argparse
+DIVISION_CODES = {"rajshahi": "raj", "rangpur": "rang", "dhaka": "dhk", "chattogram": "ctg", "khulna": "khl",
+                  "barishal": "bar", "sylhet": "syl", "mymensingh": "mym"}
+
+
+def division_setup(here, base_key, configured, extra_args=()):
+    """Parse --division/--out -> (args, out_dir, source_key). Rajshahi (default) keeps this folder and key; another
+    division writes to its own folder named per DIVISIONS.md and never touches the Rajshahi files."""
+    ap = argparse.ArgumentParser(description=(__doc__ or "").strip().split("\n")[0])
+    ap.add_argument("--division", default="rajshahi", choices=list(DIVISION_CODES))
+    ap.add_argument("--out", help="output folder (default: this folder for rajshahi, the division's own folder otherwise)")
+    for name, kw in extra_args:
+        ap.add_argument(name, **kw)
+    args = ap.parse_args()
+    if args.division not in configured:
+        ap.error("division %r is not configured in this collector yet (configured: %s)" % (args.division, ", ".join(configured)))
+    here = os.path.abspath(str(here))
+    folder = os.path.basename(here)
+    if args.division == "rajshahi":
+        name, key = folder, base_key
+    else:
+        code = DIVISION_CODES[args.division]
+        name = folder.replace("_raj_", "_%s_" % code) if "_raj_" in folder else "%s_%s" % (folder, args.division)
+        key = base_key.replace("_RAJ_", "_%s_" % code.upper()) if "_RAJ_" in base_key else "%s_%s" % (base_key, args.division.upper())
+    out = os.path.abspath(args.out) if args.out else (here if args.division == "rajshahi" else os.path.join(os.path.dirname(here), name))
+    if args.division != "rajshahi" and out == here:
+        ap.error("refusing to write another division's output into the Rajshahi folder")
+    os.makedirs(out, exist_ok=True)
+    return args, out, key
+# --- end division selection ---------------------------------------------------------------------------------
+
 # --- CAAB_AIRPORTS_RAJ_2026 ---------------------------------------------------------------------------
 KEY = "CAAB_AIRPORTS_RAJ_2026"
 URL_HOME = "https://www.caab.gov.bd/"
@@ -206,6 +240,28 @@ AIRPORTS = [  # (page, name_bn as on caab.gov.bd menu, district, upazila)
     ("https://new.caab.gov.bd/airports/rajshahi.html", "শাহ মখদুম বিমানবন্দর", "Rajshahi", ""),
     ("https://new.caab.gov.bd/airports/ishwardi.html", "ঈশ্বরদী বিমানবন্দর", "Pabna", "Ishwardi"),
 ]
+
+# per division: airports with a CAAB page, and airports CAAB only names in its "All airports" overview (no page)
+BY_DIV = {
+    "rajshahi": dict(pages=AIRPORTS, listed=[("Bogura Airport", "Bogura")]),
+    "rangpur": dict(pages=[("https://new.caab.gov.bd/airports/saidpur.html", "সৈয়দপুর বিমানবন্দর", "Nilphamari", "Saidpur")],
+                    listed=[("Thakurgaon Airport", "Thakurgaon")]),
+}
+STATUS = [("Operational-", "Domestic, operational"), ("Needs prior approval for air operation", "Needs prior approval for air operation"),
+          ("Service not available", "Service not available")]
+
+
+def caab_status(txt, name):
+    """Section of the CAAB overview ('A. Operational', 'B. Needs prior approval…', 'C. Service not available') naming the airport."""
+    i = txt.find(name)
+    if i < 0:
+        return None
+    best = None
+    for label, status in STATUS:
+        j = txt.rfind(label, 0, i)
+        if j >= 0 and (best is None or j > best[0]):
+            best = (j, status)
+    return best[1] if best else None
 
 
 def dms(s, neg_letters="SW"):
@@ -228,6 +284,11 @@ def field(lines, label):
 
 
 def main():
+    global HERE, RAW, KEY, AIRPORTS
+    args, out, KEY = division_setup(HERE, KEY, list(BY_DIV))
+    HERE, RAW = Path(out), Path(out) / "raw"
+    division, head = args.division, args.division.capitalize()
+    AIRPORTS = BY_DIV[division]["pages"]
     places, facts = [], []
     menu = ""
     r = get(URL_HOME)
@@ -248,19 +309,28 @@ def main():
         lat_s, lon_s = field(lines, "Latitude"), field(lines, "Longitude")
         txt = " ".join(lines)
         ph = re.search(r"Phone:\s*([+\d ()]+)\(Off\)", txt)
+        if not ph and division != "rajshahi":  # e.g. Saidpur: 'Airport Manager, Saidpur, Bangladesh. Telephone: +880…'
+            ph = re.search(r"Airport Manager[^:]*?Telephone:\s*(\+?[\d ]{7,}\d)", txt)
         cell = re.search(r"Cell:\s*([+\d ,]+?)(?:\s+e-?mail|\s+email)", txt, flags=re.I)
         em = re.search(r"e-?mail\s*:\s*([\w.]+@caab\.gov\.bd)", txt, flags=re.I)
         phones = [p.strip() for p in ([ph.group(1)] if ph else []) + (cell.group(1).split(",") if cell else []) if p.strip()]
         extra = {"icao_on_page": icao, "iata": iata, "latitude_raw": lat_s, "longitude_raw": lon_s,
                  "twr_freq": field(lines, "TWR FREQ") or field(lines, "TWR FREQ."), "ndb": field(lines, "NDB"), "dvor": field(lines, "DVOR")}
         notes = ["Coordinates converted from the DDMMSS values on the CAAB airport page (aerodrome reference as published)"]
+        lat, lon = dms(lat_s) or "", dms(lon_s) or ""
+        if division != "rajshahi":
+            if not lat and dms(lat_s.replace(" ", "")):  # e.g. '254537 . 35N' printed with spaces
+                lat = dms(lat_s.replace(" ", ""))
+                notes.append("latitude printed with spaces ('%s'); read as %s" % (lat_s, lat_s.replace(" ", "")))
+            if not (lat and lon):
+                lat = lon = ""
         if icao == "VISD":
             notes.append("CAAB page prints ICAO 'VISD'; Ishwardi's ICAO location indicator in ICAO Doc 7910 is VGIS — kept as printed, needs checking")
-        if name_bn not in menu:
+        if (name_bn not in menu) if division == "rajshahi" else (nfc(name_bn) not in nfc(menu)):
             notes.append("Bangla name taken from the caab.gov.bd airport menu (not found on this run)")
         places.append(dict(
             source_key=KEY, source_id=f"caab-{(iata or icao).lower()}", name_bn=name_bn, name_en=title,
-            category_key="transport.airport", lat=dms(lat_s) or "", lon=dms(lon_s) or "", district_en=dist, upazila_en=upa,
+            category_key="transport.airport", lat=lat, lon=lon, district_en=dist, upazila_en=upa,
             phone="; ".join(phones), email=em.group(1) if em else "", website=url, operator="বেসামরিক বিমান চলাচল কর্তৃপক্ষ, বাংলাদেশ (CAAB)",
             ownership="public", extra_json=xj(extra), source_url=url,
             notes="; ".join(notes) + ("; upazila_en from the airport name" if upa else "")))
@@ -268,7 +338,22 @@ def main():
     if r is not None and r.ok:
         pass
         txt = clean(r.text)
-        if "Bogura Airport" in txt:
+        if division != "rajshahi":
+            for nm, d in BY_DIV[division]["listed"]:
+                st = caab_status(txt, nm)
+                if st:
+                    places.append(dict(
+                        source_key=KEY, source_id="caab-" + nm.split()[0].lower(), name_bn="", name_en=nm,
+                        category_key="transport.airport", district_en=d, operator="", ownership="public",
+                        extra_json=xj({"caab_status": st}), source_url=URL_ALL,
+                        notes=f"Listed by CAAB under '{st}' in its airport overview; CAAB publishes no airport page, codes, "
+                              "coordinates or contact for it"))
+            for p in places:
+                if p["source_url"] != URL_ALL:
+                    st = caab_status(txt, p["name_en"].replace(" Airport", "") + " Airport")
+                    if st:
+                        p["extra_json"] = xj(dict(json.loads(p["extra_json"] or "{}"), caab_status=st))
+        if division == "rajshahi" and "Bogura Airport" in txt:
             places.append(dict(
                 source_key=KEY, source_id="caab-bogura", name_bn="", name_en="Bogura Airport", category_key="transport.airport",
                 district_en="Bogura", operator="", ownership="public",
@@ -302,7 +387,8 @@ def main():
                         p["notes"] += "; CAAB contacts page lists " + ", ".join(diff) + " (not on the airport page)"
     write_csv("places.csv", PLACE_COLS, places)
     write_manifest(dict(
-        key=KEY, name="Civil Aviation Authority of Bangladesh — airports in Rajshahi Division", organization="Civil Aviation Authority of Bangladesh (CAAB)",
+        key=KEY, division=division, kind="caab",
+        name=f"Civil Aviation Authority of Bangladesh — airports in {head} Division", organization="Civil Aviation Authority of Bangladesh (CAAB)",
         source_type="government_portal", trust_level=4, urls=[URL_HOME, URL_ALL, URL_CONTACTS] + [a[0] for a in AIRPORTS],
         accessed=__import__("datetime").date.today().isoformat(), publication_date=None, license=None, license_url=None,
         attribution="Civil Aviation Authority of Bangladesh (caab.gov.bd)",

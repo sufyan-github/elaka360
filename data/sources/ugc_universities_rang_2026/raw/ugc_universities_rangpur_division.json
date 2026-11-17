@@ -1,0 +1,261 @@
+[
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 193,
+   "name_en": "Hajee Mohammad Danesh Science & Technology University",
+   "name_bn": null,
+   "slug": "hajee-mohammad-danesh-science-technology-university",
+   "website": "www.hstu.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 193,
+   "name_en": "Hajee Mohammad Danesh Science & Technology University",
+   "name_bn": null,
+   "slug": "hajee-mohammad-danesh-science-technology-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "1999",
+   "present_campus": null,
+   "permanent_campus": "Hajee Mohammad Danesh Science & Technology University, Dinajpur-5200,Bangladesh",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.hstu.ac.bd",
+   "email": "registrar@hstu.ac.bd",
+   "telephone_mobile": "+8801713163351 +88-0531-61355(office)",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dinajpur",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 209,
+   "name_en": "Begum Rokeya University, Rangpur",
+   "name_bn": null,
+   "slug": "begum-rokeya-university-rangpur",
+   "website": "www.brur.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 209,
+   "name_en": "Begum Rokeya University, Rangpur",
+   "name_bn": null,
+   "slug": "begum-rokeya-university-rangpur",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2008",
+   "present_campus": null,
+   "permanent_campus": "Begum Rokeya University, Modern Mor Road, Rangpur-5400, Bangladesh",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.brur.ac.bd",
+   "email": "office.registrar@brur.ac.bd",
+   "telephone_mobile": "+8801313013211",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Rangpur",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 225,
+   "name_en": "Aviation And Aerospace University, Bangladesh",
+   "name_bn": null,
+   "slug": "aviation-and-aerospace-university-bangladesh",
+   "website": "www.aaub.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 225,
+   "name_en": "Aviation And Aerospace University, Bangladesh",
+   "name_bn": null,
+   "slug": "aviation-and-aerospace-university-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2019",
+   "present_campus": null,
+   "permanent_campus": "Lalmonirhat (in Process)",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.aaub.edu.bd",
+   "email": "contact@aaub.edu.bd",
+   "telephone_mobile": "8801769995099",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Lalmonirhat",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 230,
+   "name_en": "Kurigram Agricultural University",
+   "name_bn": null,
+   "slug": "kurigram-agricultural-university",
+   "website": "www.kuriau.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 230,
+   "name_en": "Kurigram Agricultural University",
+   "name_bn": null,
+   "slug": "kurigram-agricultural-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2021",
+   "present_campus": null,
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.kuriau.edu.bd",
+   "email": "vc@kuriau.edu.bd; registrar@kuriau.edu.bd",
+   "telephone_mobile": "+880-9611 678921",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Kurigram",
+  "_basis": "name"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 237,
+   "name_en": "Thakurgaon University",
+   "name_bn": null,
+   "slug": "thakurgaon-university",
+   "website": null,
+   "marker": null
+  },
+  "detail": {
+   "id": 237,
+   "name_en": "Thakurgaon University",
+   "name_bn": null,
+   "slug": "thakurgaon-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2023",
+   "present_campus": null,
+   "permanent_campus": "Thakurgaon",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": null,
+   "email": null,
+   "telephone_mobile": null,
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Thakurgaon",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 318,
+   "name_en": "Bangladesh Army University of Science and Technology (BAUST), Saidpur",
+   "name_bn": null,
+   "slug": "bangladesh-army-university-of-science-and-technology-baust-saidpur",
+   "website": "www.baust.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 318,
+   "name_en": "Bangladesh Army University of Science and Technology (BAUST), Saidpur",
+   "name_bn": null,
+   "slug": "bangladesh-army-university-of-science-and-technology-baust-saidpur",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2015",
+   "present_campus": "Saidpur Cantonment, Saidpur, Nilphamari",
+   "permanent_campus": "Saidpur Cantonment, Saidpur, Nilphamari",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.baust.edu.bd",
+   "email": "registrar@baust.edu.bd",
+   "telephone_mobile": "02-588878201/01769-675551",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Nilphamari",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 346,
+   "name_en": "Teesta University, Rangpur",
+   "name_bn": null,
+   "slug": "teesta-university-rangpur",
+   "website": "www.teestauniversity.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 346,
+   "name_en": "Teesta University, Rangpur",
+   "name_bn": null,
+   "slug": "teesta-university-rangpur",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2023",
+   "present_campus": null,
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.teestauniversity.ac.bd",
+   "email": "teestauniversity@gmail.com",
+   "telephone_mobile": "018194403333, 018194402222",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Rangpur",
+  "_basis": "name"
+ }
+]

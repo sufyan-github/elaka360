@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Fetch BRTC bus depots located in Rajshahi Division from brtc.gov.bd (BRTC_DEPOTS_RAJ_2026)."""
+"""Fetch BRTC bus depots located in Rajshahi Division from brtc.gov.bd (BRTC_DEPOTS_RAJ_2026).
+
+Usage: python3 fetch.py [--division rajshahi|rangpur] [--out DIR]   (default: Rajshahi into this folder; DIVISIONS.md)"""
 # --- polite HTTP helper (copy this block into each fetch.py; stdlib + requests only) -----------------
 # Many *.gov.bd servers send only their leaf certificate and omit the intermediate CA. Browsers fetch the
 # missing intermediate via the certificate's AIA URL; we do the same explicitly: download the published
@@ -197,14 +199,58 @@ def xj(d):
     return json.dumps(d, ensure_ascii=False, separators=(",", ":")) if d else ""
 # --- end common utilities -----------------------------------------------------------------------------
 
+# --- division selection (data/sources/DIVISIONS.md) ---------------------------------------------------------
+import argparse
+DIVISION_CODES = {"rajshahi": "raj", "rangpur": "rang", "dhaka": "dhk", "chattogram": "ctg", "khulna": "khl",
+                  "barishal": "bar", "sylhet": "syl", "mymensingh": "mym"}
+
+
+def division_setup(here, base_key, configured, extra_args=()):
+    """Parse --division/--out -> (args, out_dir, source_key). Rajshahi (default) keeps this folder and key; another
+    division writes to its own folder named per DIVISIONS.md and never touches the Rajshahi files."""
+    ap = argparse.ArgumentParser(description=(__doc__ or "").strip().split("\n")[0])
+    ap.add_argument("--division", default="rajshahi", choices=list(DIVISION_CODES))
+    ap.add_argument("--out", help="output folder (default: this folder for rajshahi, the division's own folder otherwise)")
+    for name, kw in extra_args:
+        ap.add_argument(name, **kw)
+    args = ap.parse_args()
+    if args.division not in configured:
+        ap.error("division %r is not configured in this collector yet (configured: %s)" % (args.division, ", ".join(configured)))
+    here = os.path.abspath(str(here))
+    folder = os.path.basename(here)
+    if args.division == "rajshahi":
+        name, key = folder, base_key
+    else:
+        code = DIVISION_CODES[args.division]
+        name = folder.replace("_raj_", "_%s_" % code) if "_raj_" in folder else "%s_%s" % (folder, args.division)
+        key = base_key.replace("_RAJ_", "_%s_" % code.upper()) if "_RAJ_" in base_key else "%s_%s" % (base_key, args.division.upper())
+    out = os.path.abspath(args.out) if args.out else (here if args.division == "rajshahi" else os.path.join(os.path.dirname(here), name))
+    if args.division != "rajshahi" and out == here:
+        ap.error("refusing to write another division's output into the Rajshahi folder")
+    os.makedirs(out, exist_ok=True)
+    return args, out, key
+# --- end division selection ---------------------------------------------------------------------------------
+
 # --- BRTC_DEPOTS_RAJ_2026 -----------------------------------------------------------------------------
 KEY = "BRTC_DEPOTS_RAJ_2026"
 URL = "https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0"   # ডিপো/ইউনিটসমূহের কর্মকর্তাবৃন্দের তালিকা
 DIST = {nfc("বগুড়া"): "Bogura", nfc("পাবনা"): "Pabna", nfc("রাজশাহী"): "Rajshahi", nfc("সিরাজগঞ্জ"): "Sirajganj", nfc("নাটোর"): "Natore",
         nfc("নওগাঁ"): "Naogaon", nfc("জয়পুরহাট"): "Joypurhat", nfc("চাঁপাইনবাবগঞ্জ"): "Chapainawabganj"}
 
+DIST_BY_DIV = {
+    "rajshahi": DIST,
+    "rangpur": {nfc("রংপুর"): "Rangpur", nfc("দিনাজপুর"): "Dinajpur", nfc("ঠাকুরগাঁও"): "Thakurgaon", nfc("পঞ্চগড়"): "Panchagarh",
+                nfc("নীলফামারী"): "Nilphamari", nfc("সৈয়দপুর"): "Nilphamari", nfc("লালমনিরহাট"): "Lalmonirhat",
+                nfc("কুড়িগ্রাম"): "Kurigram", nfc("গাইবান্ধা"): "Gaibandha"},
+}
+
 
 def main():
+    global HERE, RAW, KEY, DIST
+    args, out, KEY = division_setup(HERE, KEY, list(DIST_BY_DIV))
+    HERE, RAW = Path(out), Path(out) / "raw"
+    division, head = args.division, args.division.capitalize()
+    DIST = DIST_BY_DIV[division]
     places = []
     r = get(URL)
     if r is not None and r.ok:
@@ -229,14 +275,18 @@ def main():
                     notes=("BRTC bus depot (BRTC buses start here) mapped to transport.bus_terminal. " if is_depot else "BRTC training centre, not a terminal. ")
                           + "Name prefixed with 'বিআরটিসি' (source lists it under BRTC depots). Only the office number is kept; the unit head's "
                           "mobile and name are not collected." + (" Office number printed as '০২-০৫১৬৬১৪৫' (02- prefix plus old Bogura code 051); the Bogura district portal "
-                          "lists BRTC as 051-66145 (বাসস্ট্যান্ড)." if "০৫১৬৬১৪৫" in row[2] else "")))
+                          "lists BRTC as 051-66145 (বাসস্ট্যান্ড)." if "০৫১৬৬১৪৫" in row[2] else "")
+                          + (" No office number printed." if division != "rajshahi" and not office else "")))
     write_csv("places.csv", PLACE_COLS, places)
     write_manifest(dict(
-        key=KEY, name="BRTC — bus depots in Rajshahi Division", organization="Bangladesh Road Transport Corporation (BRTC)",
+        key=KEY, division=division, kind="brtc",
+        name=f"BRTC — bus depots in {head} Division", organization="Bangladesh Road Transport Corporation (BRTC)",
         source_type="government_portal", trust_level=4, urls=[URL], accessed=__import__("datetime").date.today().isoformat(),
         publication_date=None, license=None, license_url=None, attribution="Bangladesh Road Transport Corporation (brtc.gov.bd)",
         notes="No licence stated. BRTC lists depots with the unit head's name/mobile; only depot names and office landlines are kept. "
-              "No Rajshahi-district BRTC depot is listed. No addresses or coordinates."),
+              + ("No Rajshahi-district BRTC depot is listed. " if division == "rajshahi" else
+                 f"{len(places)} depot(s) of {head} Division listed. ")
+              + "No addresses or coordinates."),
         ["places.csv"])
 
 

@@ -1,0 +1,23 @@
+{
+  "key": "BD_POLICE_CONTACTS_2020_RANGPUR",
+  "division": "rangpur",
+  "kind": "police_hq_2020",
+  "name": "Bangladesh Police HQ — Contacts of Bangladesh Police (RRMP and Rangpur Range sheets)",
+  "organization": "Bangladesh Police Headquarters",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf",
+    "https://www.police.gov.bd/storage/upload/announcement/EcDDy28T7DJdOqyuVB2CSiTjUAX8kTiy1HBoOPHj.xlsx"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": "2020-10-03",
+  "license": null,
+  "license_url": null,
+  "attribution": "Bangladesh Police (police.gov.bd)",
+  "notes": "No licence stated. XLSX 'Contacts Of Bangladesh Police' uploaded 03-10-2020 (Last-Modified 2020-10-03). Only the RRMP and Rangpur Range sheets are used (raw/ keeps those rows as CSV; the full 1.5 MB workbook is re-downloaded by fetch.py). Designations only, no personal names. Old 2020 numbers: the 01320-series 'New Number' values match the 2026 district/RMP portals where checked; the 'Current Number' column is the pre-2020 numbering. For this division the 2026 portals were not cross-checked by this collector.",
+  "files": {
+    "places.csv": "6c9aaa044eb3644c11be252e8c24a7e63f9d6216cb90f1537173e68d494582e2",
+    "raw/police_contacts_2020_rrmp_rangpur_range.csv": "cb3cef050ae72957ee555103eadf82045f596d887cb6390e7ef181780b113c95"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "key": "DGHS_BD_GEOCODES_RANGPUR",
+  "name": "Bangladesh GeoCodes CodeSystem (BBS geo-codes) in the DGHS Bangladesh Core FHIR IG, Rangpur Division extract",
+  "organization": "Directorate General of Health Services (DGHS), Ministry of Health and Family Welfare",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html",
+    "https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.json",
+    "https://fhir.dghs.gov.bd/core/ImplementationGuide-bd.fhir.core.json"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": "2026-10-15",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution": "Directorate General of Health Services (DGHS), Bangladesh — Bangladesh Core FHIR IG; codes: BBS geo-code system",
+  "files": {
+    "areas.csv": "05e75d33d9f86b5a52098c89f9fb2ad84c244ea325871958747434544f9dd745",
+    "crosswalk.csv": "d7097869cf26b20c49b520ba1807cdd4b72caf847c60bd4c60318e499dcc6d2f",
+    "raw/bd-geocodes_rangpur.json": "3b0bf0f44d799d7d0e2767fc365d73987c8678e26e81098f318019be0a7ef5c0"
+  },
+  "notes": "CodeSystem https://fhir.dghs.gov.bd/core/CodeSystem/bd-geocodes version 0.5.0, status draft, date 2026-10-15T00:09:54+00:00, 1591 codes nationally. Divisions, districts, upazilas/city thanas, city corporations and paurashavas only: no union-level codes (only 'Unions Of X Upazila' placeholders). The IG does not say which BBS release the codes come from. Skipped entries: 552700 Dinajpur N/A (district placeholder (no city corporation)); 553200 Gaibandha N/A (district placeholder (no city corporation)); 554900 Kurigram N/A (district placeholder (no city corporation)); 555200 Lalmonirhat N/A (district placeholder (no city corporation)); 557300 Nilphamari N/A (district placeholder (no city corporation)); 557700 Panchagarh N/A (district placeholder (no city corporation)); 558500 Rangpur N/A (district placeholder (no city corporation)); 5585754975 Rangpur City Corporation (part of the city corporation inside thana Rangpur Sadar); 559400 Thakurgaon N/A (district placeholder (no city corporation)); plus 58 'Unions Of ... Upazila' placeholders.",
+  "division": "rangpur",
+  "kind": "dghs_geocodes"
+}

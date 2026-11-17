@@ -1,5 +1,7 @@
 {
   "key": "FSCD_STATIONS_RAJ_2026",
+  "division": "rajshahi",
+  "kind": "fscd",
   "name": "Fire Service & Civil Defence — Rajshahi Division station & office numbers",
   "organization": "Fire Service and Civil Defence Directorate (FSCD), Bangladesh",
   "source_type": "government_portal",

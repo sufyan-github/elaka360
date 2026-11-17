@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Collect bus terminals/stands and stations named on Rajshahi-Division district/upazila portal transport pages (DISTRICT_PORTALS_TRANSPORT_RAJ_2026)."""
+"""Collect bus terminals/stands and stations named on a division's district/upazila portal transport pages (default Rajshahi, DISTRICT_PORTALS_TRANSPORT_RAJ_2026).
+
+Usage: python3 fetch.py [--division rangpur] [--out DIR]  (rangpur -> DISTRICT_PORTALS_TRANSPORT_RANG_2026)."""
 # --- polite HTTP helper (copy this block into each fetch.py; stdlib + requests only) -----------------
 # Many *.gov.bd servers send only their leaf certificate and omit the intermediate CA. Browsers fetch the
 # missing intermediate via the certificate's AIA URL; we do the same explicitly: download the published
@@ -242,7 +244,11 @@ ENTRIES = [
 ]
 
 
+NOTE_SUFFIX = " Mentioned in travel directions, not a registry entry; no address/coordinates/contact."
+
+
 def main():
+    configure()
     places, facts, text = [], [], {}
     for k, url in PAGES.items():
         r = get(url)
@@ -258,15 +264,25 @@ def main():
             continue
         places.append(dict(source_key=KEY, source_id=f"dpt-{i:02d}", name_bn=name, name_en="", category_key=cat, district_en=dist,
                            upazila_en=upa, ownership="", extra_json=xj({"phrase_on_page": phrase, "also_on": [PAGES[k] for k in hit[1:]]}),
-                           source_url=PAGES[hit[0]], notes=note + " Mentioned in travel directions, not a registry entry; no address/coordinates/contact."))
+                           source_url=PAGES[hit[0]], notes=note + NOTE_SUFFIX))
     if "sirajganj" in text and re.search(r"সিরাজগঞ্জ শহরে ০২টি বাস টার্মিনাল", text["sirajganj"]):
         facts.append(dict(entity_level="pourashava", entity_name_en="Sirajganj", district_en="Sirajganj", fact="bus_terminals", value=2,
                           unit="terminals", basis="reported", year="", source_key=KEY, source_url=PAGES["sirajganj"],
                           notes="'সিরাজগঞ্জ শহরে ০২টি বাস টার্মিনাল রয়েছে' (Sirajganj town)"))
+    if "rpcc" in text and re.search(r"কোচ/বাস/ট্রাক স্টান্ড[\s|]*৪ টি", text["rpcc"]):
+        facts.append(dict(entity_level="city_corporation", entity_name_en="Rangpur City Corporation", district_en="Rangpur",
+                          fact="coach_bus_truck_stands", value=4, unit="stands", basis="reported", year="", source_key=KEY,
+                          source_url=PAGES["rpcc"], notes="'কোচ/বাস/ট্রাক স্টান্ড ৪ টি': ঢাকা কোচ স্টান্ড, কেন্দ্রীয় বাস টার্মিনাল, "
+                                                          "ট্রাক স্টান্ড, পীরগাছা বাস স্টান্ড (RPCC এক নজরে)"))
+    if DIVISION != "rajshahi":
+        write_csv("places.csv", PLACE_COLS, places)
+        write_csv("facts.csv", FACT_COLS, facts)
+        write_manifest(MANIFEST, ["places.csv", "facts.csv"] + sorted(f"raw/{p.name}" for p in RAW.glob("*.txt")))
+        return
     write_csv("places.csv", PLACE_COLS, places)
     write_csv("facts.csv", FACT_COLS, facts)
     write_manifest(dict(
-        key=KEY, name="District & upazila portals (Rajshahi Division) — bus terminals/stands and stations named on transport pages",
+        key=KEY, division="rajshahi", kind="district_transport", name="District & upazila portals (Rajshahi Division) — bus terminals/stands and stations named on transport pages",
         organization="Deputy Commissioner / Upazila Nirbahi offices (national portal framework)", source_type="government_portal",
         trust_level=4, urls=list(PAGES.values()), accessed=__import__("datetime").date.today().isoformat(), publication_date=None,
         license=None, license_url=None, attribution="District/upazila portals (*.gov.bd, Bangladesh National Portal)",
@@ -274,6 +290,124 @@ def main():
               "pages. Rajshahi district portal names no terminal; Pabna, Bogura and Chapainawabganj pages name only Dhaka-side "
               "terminals or bus companies. raw/ keeps the extracted page text (descriptive text is not copied into the CSVs)."),
         ["places.csv", "facts.csv"] + sorted(f"raw/{p.name}" for p in RAW.glob("*.txt")))
+
+
+# --- division selection (see ../DIVISIONS.md) --------------------------------------------------------------
+# `python3 fetch.py` = `--division rajshahi`, output into this folder (unchanged behaviour). Other divisions write into
+# their own folder (default: the sibling folder named per DIVISIONS.md) and never into the Rajshahi folder.
+import argparse
+DIVISION_CHOICES = ("rajshahi", "rangpur", "dhaka", "chattogram", "khulna", "barishal", "sylhet", "mymensingh")
+DIVISION = "rajshahi"
+
+
+def parse_division_args(folders):
+    """Parse --division/--out. folders: division -> default output folder name (a sibling of this folder)."""
+    ap = argparse.ArgumentParser(description=(__doc__ or "").strip().split("\n")[0])
+    ap.add_argument("--division", default="rajshahi", choices=DIVISION_CHOICES)
+    ap.add_argument("--out", help="output folder (default: this folder for rajshahi, ../<division folder> otherwise)")
+    a = ap.parse_args()
+    if a.division not in folders:
+        raise SystemExit("this collector has no table for division %r yet (see DIVISIONS.md)" % a.division)
+    here = os.path.dirname(os.path.abspath(__file__))
+    out = os.path.abspath(a.out or os.path.join(here, "..", folders[a.division]))
+    if a.division != "rajshahi" and os.path.realpath(out) == os.path.realpath(here):
+        raise SystemExit("refusing to write %s output into the Rajshahi folder %s" % (a.division, here))
+    os.makedirs(out, exist_ok=True)
+    return a.division, out
+
+
+def write_division_manifest(out, meta):
+    """SOURCE.json for a non-default division run: meta + sha256 of every data file in the output folder."""
+    import hashlib as _h, json as _j
+    files = {}
+    for root, _, names in os.walk(out):
+        for n in sorted(names):
+            full = os.path.join(root, n)
+            rel = os.path.relpath(full, out).replace(os.sep, "/")
+            if rel in ("SOURCE.json", "fetch.py", "REPORT.md") or "__pycache__" in rel:
+                continue
+            files[rel] = _h.sha256(open(full, "rb").read()).hexdigest()
+    m = dict(meta)
+    m["files"] = dict(sorted(files.items()))
+    with open(os.path.join(out, "SOURCE.json"), "w", encoding="utf-8") as f:
+        f.write(_j.dumps(m, ensure_ascii=False, indent=2) + "\n")
+
+
+# --- DISTRICT_PORTALS_TRANSPORT_RANG_2026 (Rangpur Division) ---------------------------------------------------------
+RANG_KEY = "DISTRICT_PORTALS_TRANSPORT_RANG_2026"
+RANG_PAGES = {
+    "rangpur": "https://rangpur.gov.bd/pages/static-pages/6977698ec4774958d7c22b10",
+    "panchagarh": "https://panchagarh.gov.bd/pages/static-pages/6977395fc4774958d7c1128c",
+    "dinajpur": "https://dinajpur.gov.bd/pages/static-pages/69772ba3c4774958d7c0b6fb",
+    "lalmonirhat": "https://lalmonirhat.gov.bd/pages/static-pages/69772b7ec4774958d7c0a564",
+    "nilphamari": "https://nilphamari.gov.bd/pages/static-pages/6977240bc4774958d7c08fab",
+    "gaibandha": "https://gaibandha.gov.bd/pages/static-pages/69775360c4774958d7c1bbb4",
+    "kurigram": "https://kurigram.gov.bd/pages/static-pages/69774bbac4774958d7c15f85",
+    "badarganj": "https://badargonj.rangpur.gov.bd/pages/static-pages/69770c53c4774958d7c00afe",
+    "gangachara": "https://gangachara.rangpur.gov.bd/pages/static-pages/69773757c4774958d7c0eadc",
+    "kaunia": "https://kaunia.rangpur.gov.bd/pages/static-pages/6977374bc4774958d7c0e500",
+    "pirganj": "https://pirgonj.rangpur.gov.bd/pages/static-pages/69773dd8c4774958d7c12f41",
+    "taraganj": "https://taragonj.rangpur.gov.bd/pages/static-pages/697759f7c4774958d7c1e6fd",
+    "rpcc": "https://rpcc.gov.bd/pages/static-pages/6922dd53933eb65569e14850",   # এক নজরে রংপুর সিটি কর্পোরেশন, item ১৩
+}
+_GB = "Gaibandha district portal 'যোগাযোগ ব্যবস্থা' lists it among 'গাইবান্ধা জেলার রেলস্টেশনগুলি' (a largely historical text; the list may be dated)."
+_RS = " Name composed as '<listed name> রেলস্টেশন'."
+RANG_ENTRIES = [
+    (["panchagarh"], "দিনাজপুর স্টেশনে", "দিনাজপুর স্টেশন", "transport.railway_station", "Dinajpur", "",
+     "Panchagarh district portal: Dhaka intercity trains to Dinajpur stop here; travellers to Panchagarh continue by bus. Name as written ('দিনাজপুর স্টেশনে')."),
+    (["panchagarh"], "কেন্দ্রিয় বাস টার্মিনালে", "দিনাজপুর কেন্দ্রিয় বাস টার্মিনাল", "transport.bus_terminal", "Dinajpur", "",
+     "Panchagarh district portal: reached by rickshaw from Dinajpur station; buses to Panchagarh leave here. 'দিনাজপুর' added from the context."),
+    (["lalmonirhat"], "লালমনিরহাট ষ্টেশন", "লালমনিরহাট ষ্টেশন", "transport.railway_station", "Lalmonirhat", "",
+     "Lalmonirhat district portal train timetables: departure station of trains to Burimari, Parbatipur/Dinajpur, Santahar and Dhaka."),
+    (["lalmonirhat"], "বুড়িমারী", "বুড়িমারী ষ্টেশন", "transport.railway_station", "Lalmonirhat", "",
+     "Lalmonirhat district portal train timetables: terminus in the 'গন্তব্য ষ্টেশন' column (Burimari commuter/Karatoya Express). Name composed; upazila not stated."),
+] + [(["gaibandha"], ph, nm, "transport.railway_station", "Gaibandha", "", _GB + (_RS if comp else "")) for ph, nm, comp in [
+    ("হচ্ছেঃ বামনডাঙ্গা,", "বামনডাঙ্গা রেলস্টেশন", True), ("বামনডাঙ্গা, নলডাঙ্গা,", "নলডাঙ্গা রেলস্টেশন", True),
+    ("নলডাঙ্গা, কামারপাড়া,", "কামারপাড়া রেলস্টেশন", True), ("কামারপাড়া, কুপতলা,", "কুপতলা রেলস্টেশন", True),
+    ("কুপতলা, গাইবান্ধা,", "গাইবান্ধা রেলস্টেশন", True), ("গাইবান্ধা, ত্রিমোহিনী,", "ত্রিমোহিনী রেলস্টেশন", True),
+    ("বালাসীঘাট রেলওয়ে ফেরী স্টেশন", "বালাসীঘাট রেলওয়ে ফেরী স্টেশন", False), ("স্টেশন, বাদিয়াখালী,", "বাদিয়াখালী রেলস্টেশন", True),
+    ("বোনারপাড়া জংশন", "বোনারপাড়া জংশন", False), ("জংশন, মহিমাগঞ্জ,", "মহিমাগঞ্জ রেলস্টেশন", True),
+    ("মহিমাগঞ্জ, ভরতখালী,", "ভরতখালী রেলস্টেশন", True), ("ভরতখালী, ফুলছড়ি,", "ফুলছড়ি রেলস্টেশন", True),
+    ("তিস্তামুখ ঘাট রেলওয়ে স্টেশন", "তিস্তামুখ ঘাট রেলওয়ে স্টেশন", False)]] + [
+    (["gangachara"], "কাউনিয়া রেলওয়ে জংশন", "কাউনিয়া রেলওয়ে জংশন", "transport.railway_station", "Rangpur", "",
+     "Gangachara upazila portal: nearest station to Gangachara (about 8–10 km); upazila of the station not stated."),
+    (["gangachara"], "রংপুর রেলস্টেশন", "রংপুর রেলস্টেশন", "transport.railway_station", "Rangpur", "",
+     "Gangachara upazila portal: second-nearest station (about 12 km)."),
+    (["badarganj"], "স্টেশন মাস্টার, বদরগঞ্জ", "বদরগঞ্জ রেলস্টেশন", "transport.railway_station", "Rangpur", "Badarganj",
+     "Badarganj upazila portal lists the Badarganj station master among its transport contacts; name composed (the number is a malformed mobile and is not copied)."),
+    (["rpcc"], "ঢাকা কোচ স্টান্ড", "ঢাকা কোচ স্টান্ড", "transport.bus_terminal", "Rangpur", "",
+     "Rangpur City Corporation 'এক নজরে': one of its 4 coach/bus/truck stands (inside the city corporation)."),
+    (["rpcc"], "কেন্দ্রীয় বাস টার্মিনাল", "রংপুর কেন্দ্রীয় বাস টার্মিনাল", "transport.bus_terminal", "Rangpur", "",
+     "Rangpur City Corporation 'এক নজরে': 'কেন্দ্রীয় বাস টার্মিনাল' (also has an RPCC public toilet and pond); 'রংপুর' added."),
+    (["rpcc"], "পীরগাছা বাস স্টান্ড", "পীরগাছা বাস স্টান্ড", "transport.bus_terminal", "Rangpur", "",
+     "Rangpur City Corporation 'এক নজরে': one of its 4 coach/bus/truck stands (in Rangpur city, for buses to Pirgachha; not in Pirgachha upazila)."),
+]
+RANG_MANIFEST = dict(
+    key=RANG_KEY, division="rangpur", kind="district_transport",
+    name="District & upazila portals (Rangpur Division) — bus terminals/stands and stations named on transport pages",
+    organization="Deputy Commissioner / Upazila Nirbahi offices and Rangpur City Corporation (national portal framework)",
+    source_type="government_portal", trust_level=4, urls=list(RANG_PAGES.values()), accessed=None, publication_date=None,
+    license=None, license_url=None, attribution="District/upazila portals and rpcc.gov.bd (*.gov.bd, Bangladesh National Portal)",
+    notes="No licence stated. No portal publishes a bus-terminal register; rows are names explicitly given on 'যোগাযোগ ব্যবস্থা' pages "
+          "(district: Panchagarh, Lalmonirhat, Gaibandha; upazila: Badarganj, Gangachara) and in the Rangpur City Corporation "
+          "'এক নজরে' page. Rangpur, Dinajpur, Nilphamari and Kurigram district pages and the Kaunia, Pirganj and Taraganj upazila "
+          "pages name no terminal or station (only road lengths, timetables or bus companies); Thakurgaon has no such page. raw/ "
+          "keeps the extracted page text (descriptive text is not copied into the CSVs).")
+SITES = {"rajshahi": dict(folder="district_portals_transport_raj_2026"),
+         "rangpur": dict(folder="district_portals_transport_rang_2026", key=RANG_KEY, pages=RANG_PAGES, entries=RANG_ENTRIES,
+                         manifest=RANG_MANIFEST, note_suffix=" Named on a portal page, not a registry entry; no address/coordinates/contact.")}
+MANIFEST = None
+
+
+def configure():
+    global DIVISION, HERE, RAW, KEY, PAGES, ENTRIES, MANIFEST, NOTE_SUFFIX
+    DIVISION, out = parse_division_args({k: v["folder"] for k, v in SITES.items()})
+    HERE = Path(out)
+    RAW = HERE / "raw"
+    if DIVISION != "rajshahi":
+        t = SITES[DIVISION]
+        KEY, PAGES, ENTRIES, NOTE_SUFFIX = t["key"], t["pages"], t["entries"], t["note_suffix"]
+        MANIFEST = dict(t["manifest"], accessed=__import__("datetime").date.today().isoformat())
 
 
 if __name__ == "__main__":

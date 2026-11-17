@@ -1,0 +1,24 @@
+{
+  "key": "RANGPUR_PORTAL_OFFICES_2026",
+  "division": "rangpur",
+  "kind": "portal_offices",
+  "name": "Government offices on the national portal sites — Divisional Commissioner, Rangpur DC & upazila portals, DC/UNO offices of Rangpur Division",
+  "organization": "Divisional / District / Upazila administrations (national portal framework)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://rangpurdiv.gov.bd/",
+    "https://rangpur.gov.bd/",
+    "https://<upazila>.rangpur.gov.bd/",
+    "https://rangpur.gov.bd/pages/static-pages/6977698ec4774958d7c22b0e"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Divisional / District / Upazila administrations (national portal framework)",
+  "notes": "Office list = menu entries under 'সরকারি অফিসসমূহ' / 'সরকারী অফিস' / 'স্থানীয় সরকার' / 'পৌরসভা' plus the DC/UNO portals themselves; union parishads from the Rangpur DC portal's union list. Contacts = office landline and *.gov.bd e-mail from the office head's officer card or the 'যোগাযোগ' page; mobile numbers, personal e-mails and officials' names are not collected. No addresses/coordinates are published in a structured way. Licence: none stated on the source; treat as government public information, cite the source.",
+  "files": {
+    "places.csv": "583304762205d58aecf6deddb95c2fdb558e0bef18f141f254dd453d03d7f2a5"
+  }
+}

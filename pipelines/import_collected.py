@@ -15,8 +15,36 @@ from collected import (PolygonIndex, SOURCES, bn_key, check_manifest, en_key, en
 from reconcile import latin_key, upazila_key
 from trust import nfc
 
-DIVISION_ID = 10002
+# Divisions in processing order: a division added later never changes the ids or slugs of earlier ones.
+# See data/sources/DIVISIONS.md.
+DIVISIONS = [
+    dict(name="rajshahi", id=10002, head=20015),
+    dict(name="rangpur", id=10007, head=20059),
+    dict(name="dhaka", id=10006, head=20047),
+    dict(name="chattogram", id=10001, head=20008),
+    dict(name="khulna", id=10003, head=20027),
+    dict(name="barishal", id=10004, head=20033),
+    dict(name="sylhet", id=10005, head=20036),
+    dict(name="mymensingh", id=10008, head=20062),
+]
+DIVISION_ID = 10002       # Rajshahi: the first division collected (pilot places, metro-thana tables)
 BBS = "BBS_CENSUS_2022"
+# kind of the Rajshahi folders that predate the "kind" field in SOURCE.json
+FOLDER_KIND = {
+    "bbs_census_2022": "bbs_census", "hdx_cod_ab_bgd": "hdx_cod_ab", "geoboundaries_bgd_adm4": "geoboundaries_adm4",
+    "dghs_bd_geocodes": "dghs_geocodes", "lgd": "lgd", "rajshahi_district_portal": "district_portal_main",
+    "division_district_portals": "district_portals", "rajshahi_upazila_portals": "upazila_portals",
+    "rajshahi_union_portals": "union_portals", "rajshahi_divisional_portal": "divisional_portal", "rcc": "city_corporation",
+    "rmp": "metro_police", "rmp_thanas_2026": "metro_police_thanas", "rajshahi_police_2026": "district_police",
+    "raj_range_police_portals_2026": "range_police", "bd_police_contacts_2020": "police_hq_2020",
+    "fscd_stations_raj_2026": "fscd", "dghs_hris_facilities_raj_2026": "dghs_hris", "banbeis_inst_raj_2026": "banbeis",
+    "dpe_ipemis_primary_raj_2026": "dpe_ipemis", "ugc_universities_raj_2026": "ugc", "dgme_medical_colleges_raj_2026": "dgme",
+    "doa_protected_monuments_raj_2026": "doa_monuments", "bdpost_postcodes_raj_2026": "bdpost", "bd_railway_raj_2026": "railway",
+    "caab_airports_raj_2026": "caab", "brtc_depots_raj_2026": "brtc", "bb_scheduled_banks_raj_2026": "bb_banks",
+    "district_portal_banks_raj_2026": "district_banks", "district_portals_transport_raj_2026": "district_transport",
+    "portal_tourist_spots_raj_2026": "tourist_spots", "rajshahi_portal_offices_2026": "portal_offices",
+    "osm_rajshahi_division": "osm",
+}
 changes = []           # dicts: record, change, detail, source
 problems = []          # manifest problems (reported by validate_seed.py)
 
@@ -28,6 +56,24 @@ def _manifests():
     if _MANIFESTS is None:
         _MANIFESTS = [m for m in manifests() if m["key"] not in ("NUHIL",)]
     return _MANIFESTS
+
+
+def division_of(m):
+    return m.get("division") or "rajshahi"
+
+
+def kind_of(m):
+    return m.get("kind") or FOLDER_KIND.get(os.path.basename(m["_dir"]))
+
+
+def sources(division, kind):
+    """Manifests of one kind collected for one division (sorted by key)."""
+    return [m for m in _manifests() if division_of(m) == division and kind_of(m) == kind]
+
+
+def source(division, kind):
+    found = sources(division, kind)
+    return found[0] if found else None
 
 
 def _dir(key):
@@ -107,10 +153,17 @@ def _slug(s):
 # ------------------------------------------------------------------ admin hierarchy
 
 def apply_admin(rows, add, uniq):
-    """Official hierarchy, codes, populations, wards and boundaries for Rajshahi Division."""
-    bbs_dir = _dir(BBS)
-    if not bbs_dir:
-        return
+    """Official hierarchy, codes, populations, wards and boundaries, division by division (BBS Census 2022 extracts)."""
+    for div in DIVISIONS:
+        m = source(div["name"], "bbs_census")
+        if m:
+            _apply_admin_division(rows, add, uniq, div, m)
+
+
+def _apply_admin_division(rows, add, uniq, div, bbs_manifest):
+    BBS = bbs_manifest["key"]
+    DIVISION_ID = div["id"]
+    bbs_dir = bbs_manifest["_dir"]
     by_id = {r["id"]: r for r in rows}
     kids = defaultdict(list)
     for r in rows:
@@ -121,7 +174,6 @@ def apply_admin(rows, add, uniq):
     for f in read_csv(os.path.join(bbs_dir, "facts.csv")):
         if f["code"]:
             facts[f["code"]][f["fact"]] = f["value"]
-    bbs_url = _url(BBS)
 
     def official(r, code, note):
         r.update(bbs_code=code, evidence_level="official", evidence_source=BBS, production_eligible=True,
@@ -146,11 +198,11 @@ def apply_admin(rows, add, uniq):
         area = facts.get(a["code"], {}).get("area_km2")
         if area:
             d.update(area_km2=float(area), area_basis="official")
-    div = by_id[DIVISION_ID]
     total = sum(d["population_2022"] or 0 for d in d_of.values() if d.get("population_basis") == "enumerated")
-    if len(d_of) == 8 and total:
-        div.update(population_2022=total, population_basis="enumerated", population_source=BBS)
-        log("division:10002", "population", f"sum of BBS 2022 enumerated district populations = {total}", BBS)
+    if len(d_of) == len(districts) and total:
+        div_row = by_id[DIVISION_ID]
+        div_row.update(population_2022=total, population_basis="enumerated", population_source=BBS)
+        log(f"division:{DIVISION_ID}", "population", f"sum of BBS 2022 enumerated district populations = {total}", BBS)
 
     # upazilas (+ RCC)
     upz_of = {}   # bbs upazila code -> seed row
@@ -165,22 +217,36 @@ def apply_admin(rows, add, uniq):
         for i, a in enumerate(bbs_up):
             if a["code"] not in upz_of:
                 log(f"bbs:{a['code']}", "unmatched", f"BBS upazila {a['name_en']} ({dname}) not in seed", BBS)
-    rcc = next((r for r in rows if r["level"] == "city_corporation" and r["name_en"] == "Rajshahi City Corporation"), None)
+    # city corporations: matched by name within their district; wards counted from the census
+    cc_of = {}   # BBS city corporation code -> seed row
     for a in bbs_by_level["city_corporation"]:
-        if rcc and a["name_en"] == "Rajshahi City Corporation":
-            before = rcc.get("population_2022")
-            official(rcc, a["code"], "Matched to BBS Census 2022 city corporation 50-81-66.")
-            rcc.update(wards_count=30)
-            log("city_corporation:50005", "population", f"{before} -> {rcc['population_2022']} (BBS 2022 C-01; RCC এক নজরে agrees)", BBS)
+        d = d_of.get(a["district_en"]) or next((x for x in d_of.values() if a["code"].startswith(x.get("bbs_code") or "~")), None)
+        cands = [r for r in rows if r["level"] == "city_corporation" and (d is None or r["parent_id"] == d["id"])]
+        cc, _ = _best(re.sub(r"\s*city corporation", "", a["name_en"], flags=re.I), cands,
+                      key=lambda r: r["name_en"].replace(" City Corporation", ""), threshold=0.8)
+        if not cc:
+            log(f"bbs:{a['code']}", "unmatched", f"BBS city corporation {a['name_en']} not in seed", BBS)
+            continue
+        before = cc.get("population_2022")
+        cc_of[a["code"]] = cc
+        if cc["id"] == 50005:   # Rajshahi: ward count from the RCC এক নজরে page
+            official(cc, a["code"], "Matched to BBS Census 2022 city corporation 50-81-66.")
+            cc.update(wards_count=30)
+            log("city_corporation:50005", "population", f"{before} -> {cc['population_2022']} (BBS 2022 C-01; RCC এক নজরে agrees)", BBS)
+            continue
+        official(cc, a["code"], f"Matched to BBS Census 2022 city corporation {a['code']}.")
+        nums = {re.search(r"(\d+)", w["name_en"]).group(1) for w in bbs_by_level["ward"]
+                if w["code"].startswith(a["code"] + "-") and re.search(r"(\d+)", w["name_en"])}
+        if nums:
+            cc.update(wards_count=len(nums))
+        log(f"city_corporation:{cc['id']}", "population", f"{before} -> {cc['population_2022']} (BBS 2022)", BBS)
 
     # Bangla names from official portals: Rajshahi District portal + the other districts' portals
     portal_rows = []
-    for key, fn in (("RAJSHAHI_DC_PORTAL_2026", "areas.csv"), ("RAJDIV_DISTRICT_PORTALS_2026", "areas.csv")):
-        d = _dir(key)
-        if d:
-            for r in read_csv(os.path.join(d, fn)):
-                r["_src"] = key
-                portal_rows.append(r)
+    for pm in sources(div["name"], "district_portal_main") + sources(div["name"], "district_portals"):
+        for r in read_csv(os.path.join(pm["_dir"], "areas.csv")):
+            r["_src"] = pm["key"]
+            portal_rows.append(r)
 
     def portal_for(level, district_en, upazila_name):
         out = []
@@ -220,6 +286,11 @@ def apply_admin(rows, add, uniq):
         pscore = {j: sc for i, (j, sc) in pmatch.items()}
         for j, s in enumerate(seed_u):
             p = portal_seed.get(j)
+            if p and re.search(r"[০-৯0-9]", p["name_bn"] or ""):
+                # list serial left in the name ("৫ ধর্মপাল"): drop a leading number, never keep a digit in a name
+                p = dict(p, name_bn=re.sub(r"^[০-৯0-9]+[\s.।)]*", "", p["name_bn"]).strip())
+                if re.search(r"[০-৯0-9]", p["name_bn"]):
+                    p = None
             if p and p["name_bn"] and bn_key(p["name_bn"]) != bn_key(s["name_bn"]) and pscore.get(j, 0) < 0.8:
                 # not clearly the same spelling: keep ours, record the portal's for review
                 log(f"area:{s['id']}", "name_bn_review", f"seed {s['name_bn']} vs portal {p['name_bn']} (similarity {pscore.get(j, 0):.2f}); not changed", p["_src"])
@@ -274,7 +345,8 @@ def apply_admin(rows, add, uniq):
                 log(f"area:{hit['id']}", "reparented", f"{hit['name_en']}: parent -> {u['name_en']} (BBS {a['code']})", BBS)
                 hit["parent_id"] = u["id"]
             official(hit, a["code"], f"Matched to BBS Census 2022 pourashava {a['code']}.")
-            hit["notes"] = "Rajshahi District portal and BBS 2022 list 14 pourashavas."
+            if DIVISION_ID == 10002:
+                hit["notes"] = "Rajshahi District portal and BBS 2022 list 14 pourashavas."
             r = hit
         else:
             bn = portal[0]["name_bn"] if len(portal) == 1 else None
@@ -293,8 +365,8 @@ def apply_admin(rows, add, uniq):
         paura_of[a["code"]] = r
 
     # wards of pourashavas and the city corporation
-    next_ward = 70001
-    rcc_wards = {}
+    first_ward = next_ward = max([r["id"] for r in rows if r["level"] == "ward"] + [70000]) + 1
+    cc_wards = {}
     for a in sorted(bbs_by_level["ward"], key=lambda a: a["code"]):
         m = re.search(r"(\d+)", a["name_en"])
         if not m:
@@ -302,14 +374,16 @@ def apply_admin(rows, add, uniq):
         n = int(m.group(1))
         prefix = "-".join(a["code"].split("-")[:4])
         pop = facts.get(a["code"], {}).get("population")
-        if a["code"].startswith("50-81-66") and rcc:
-            if n in rcc_wards:   # a ward split across two thanas ("Part"): add the parts together
-                w = rcc_wards[n]
+        cc_code = next((c for c in cc_of if a["code"].startswith(c + "-")), None)
+        if cc_code:
+            cc = cc_of[cc_code]
+            if (cc["id"], n) in cc_wards:   # a ward split across two thanas ("Part"): add the parts together
+                w = cc_wards[(cc["id"], n)]
                 if pop and pop.isdigit():
                     w["population_2022"] = (w["population_2022"] or 0) + int(pop)
                 w["notes"] = "Ward split across city thanas in BBS 2022; population is the sum of the parts."
                 continue
-            parent = rcc
+            parent = cc
         else:
             parent = paura_of.get(prefix)
             if not parent:
@@ -319,19 +393,24 @@ def apply_admin(rows, add, uniq):
                 data_source=BBS, evidence_level="official", evidence_source=BBS, notes=None)
         official(r, a["code"], f"Listed in BBS Census 2022 ({a['code']}).")
         r["_before"] = (False, False)
-        if parent is rcc:
-            rcc_wards[n] = r
+        if parent["level"] == "city_corporation":
+            cc_wards[(parent["id"], n)] = r
         next_ward += 1
-    log("wards", "wards_added", f"{next_ward - 70001} wards (pourashavas + Rajshahi City Corporation)", BBS)
+    ccs = " + ".join(c["name_en"] for c in cc_of.values()) or "no city corporation"
+    log("wards" if DIVISION_ID == 10002 else f"wards:{div['name']}", "wards_added",
+        f"{next_ward - first_ward} wards (pourashavas + {ccs})", BBS)
 
-    _attach_boundaries(rows)
+    _attach_boundaries(rows, div, cc_of)
 
 
-def _attach_boundaries(rows):
-    """Union / pourashava / ward polygons (geoBoundaries 2020) and upazila polygons (HDX COD-AB v03)."""
-    hdx, gb = _dir("HDX_COD_AB_BGD"), _dir("GEOBOUNDARIES_BGD_ADM4")
-    if not hdx:
+def _attach_boundaries(rows, div, cc_of):
+    """Union / pourashava / ward polygons (geoBoundaries 2020) and upazila polygons (HDX COD-AB v03) for one division."""
+    hm, gm = source(div["name"], "hdx_cod_ab"), source(div["name"], "geoboundaries_adm4")
+    if not hm:
         return
+    hdx, gb = hm["_dir"], (gm["_dir"] if gm else None)
+    # city wards are matched by number inside their city corporation: HDX/geoBoundaries code prefix BD<div><district>
+    cc_prefix = {"BD" + "".join(code.split("-")[:2]): cc for code, cc in cc_of.items()}
     by_id = {r["id"]: r for r in rows}
     xwalk = {}
     for x in read_csv(os.path.join(hdx, "crosswalk.csv")):
@@ -343,29 +422,27 @@ def _attach_boundaries(rows):
         for f in fc["features"]:
             p = f["properties"]
             our = xwalk.get(p.get("code"))
-            if our is None and p.get("level") == "ward" and p.get("code", "").startswith("BD5081"):
+            cc = next((c for pre, c in cc_prefix.items() if p.get("code", "").startswith(pre)), None)
+            if our is None and p.get("level") == "ward" and cc:
                 m = re.search(r"(\d+)", p.get("name_en") or "")
-                rcc = next((r for r in rows if r["level"] == "ward" and r["name_en"] == f"Ward {int(m.group(1))}"
-                            and by_id[r["parent_id"]]["level"] == "city_corporation"), None) if m else None
-                our = rcc["id"] if rcc else None
+                hit = next((r for r in rows if r["level"] == "ward" and r["name_en"] == f"Ward {int(m.group(1))}"
+                            and r["parent_id"] == cc["id"]), None) if m else None
+                our = hit["id"] if hit else None
             r = by_id.get(our)
             if r and f.get("geometry") and r["level"] in ("upazila", "union", "pourashava", "ward", "city_corporation"):
                 g = f["geometry"]
                 r["_boundary"] = g if g["type"] == "MultiPolygon" else {"type": "MultiPolygon", "coordinates": [g["coordinates"]]}
                 n += 1
-    log("boundaries", "attached", f"{n} polygons attached (HDX COD-AB v03 upazilas, geoBoundaries 2020 unions/pourashavas/wards)",
-        "HDX_COD_AB_BGD")
+    log("boundaries" if div["id"] == 10002 else f"boundaries:{div['name']}", "attached",
+        f"{n} polygons attached (HDX COD-AB v03 upazilas, geoBoundaries 2020 unions/pourashavas/wards)", hm["key"])
 
 
 # ------------------------------------------------------------------ places
 
 # Sources merged first win on conflicting fields; later ones only fill gaps. Curated pilot places come before all.
-PLACE_PRIORITY = ["UGC_UNIVERSITIES_RAJ_2026", "DGME_MEDICAL_COLLEGES_RAJ_2026", "DOA_PROTECTED_MONUMENTS_RAJ_2026",
-                  "CAAB_AIRPORTS_RAJ_2026", "BD_RAILWAY_RAJ_2026", "BRTC_DEPOTS_RAJ_2026", "RMP_THANAS_2026",
-                  "RAJSHAHI_POLICE_2026", "RAJ_RANGE_POLICE_PORTALS_2026", "FSCD_STATIONS_RAJ_2026",
-                  "DGHS_HRIS_FACILITIES_RAJ_2026", "BANBEIS_INST_RAJ_2026", "DPE_IPEMIS_PRIMARY_RAJ_2026",
-                  "RAJSHAHI_PORTAL_OFFICES_2026", "BDPOST_POSTCODES_RAJ_2026", "DISTRICT_PORTAL_BANKS_RAJ_2026",
-                  "DISTRICT_PORTALS_TRANSPORT_RAJ_2026", "PORTAL_TOURIST_SPOTS_RAJ_2026", "BD_POLICE_CONTACTS_2020"]
+PLACE_PRIORITY = ["ugc", "dgme", "doa_monuments", "caab", "railway", "brtc", "metro_police_thanas", "district_police",
+                  "range_police", "fscd", "dghs_hris", "banbeis", "dpe_ipemis", "portal_offices", "bdpost", "district_banks",
+                  "district_transport", "tourist_spots", "police_hq_2020", "osm"]   # by source kind (DIVISIONS.md)
 PREFIX = {"education": "INST", "health": "INST", "religious": "INST", "tourism": "TOUR", "emergency": "SRV",
           "government": "GOV", "transport": "TRN", "finance": "FIN", "business": "BIZ", "agriculture": "AGR"}
 # metropolitan thanas inside Rajshahi City Corporation (RMP); their places belong to the city corporation
@@ -375,14 +452,18 @@ RCC_THANAS = {latin_key(n) for n in ("Boalia", "Bowalia", "Rajpara", "Rajapara",
 PABA_THANAS = {latin_key(n) for n in ("Belpukur", "Damkura", "Karnahar", "Karnohar", "Katakhali")}   # RMP thanas in Paba upazila
 RAJSHAHI_DISTRICT_ID = 20015
 DISTRICT_ALIASES = {"bogra": "bogura", "chapainawabganj": "chapainawabganj", "chapainababganj": "chapainawabganj",
-                    "nawabganj": "chapainawabganj", "chapai": "chapainawabganj", "jaipurhat": "joypurhat", "joypurhat": "joypurhat"}
+                    "nawabganj": "chapainawabganj", "chapai": "chapainawabganj", "jaipurhat": "joypurhat", "joypurhat": "joypurhat",
+                    "chitagong": "chatogram", "chittagong": "chatogram", "comilla": "cumila", "jesore": "jasore",
+                    "barisal": "barisal", "nilphamary": "nilphamari", "lalmonirhat": "lalmonirhat", "kurigram": "kurigram",
+                    "panchagar": "panchagarh", "thakurgao": "thakurgaon", "netrakona": "netrokona", "moulvibazar": "moulvibazar",
+                    "maulvibazar": "moulvibazar", "brahmanbaria": "brahmanbaria", "jhalakati": "jhalokathi", "jhalokati": "jhalokathi"}
 # attribute keys worth showing (source keys are kept; labels live in apps/web/messages/*.json → PlaceAttr)
 ATTR_KEYS = ["eiin", "school_code", "facility_code", "institute_type", "facility_type", "school_type", "education_level",
              "management", "mpo", "for_whom", "area_status", "teachers", "students", "beds", "agency", "ugc_category",
              "protected_monument", "construction_date_as_stated", "head_designation", "postcode", "station_code", "iata", "icao"]
 GROUP = {"religious": "tourism"}
 # contacts: keep institutional ones only (COLLECTION_FORMAT.md)
-PERSONAL_MAIL_SOURCES = {"DGHS_HRIS_FACILITIES_RAJ_2026"}     # registry mixes office mailboxes with staff gmail
+PERSONAL_MAIL_KINDS = {"dghs_hris"}     # registry mixes office mailboxes with staff gmail
 OFFICIAL_MAIL = re.compile(r"@([\w.-]+\.)?(gov\.bd|ac\.bd|edu\.bd|org\.bd|police\.gov\.bd)$", re.I)
 BAD_SITE = re.compile(r"facebook\.com|blogspot\.|youtube\.com|google\.com|/edit$|^https?://[^/.]+/?$", re.I)            # a mosque can be listed as a tourist spot by one source and a shrine by another
 COMPAT = [{"health.hospital", "health.medical_college_hospital"}]
@@ -476,52 +557,20 @@ def _compatible(a, b):
 
 
 def build_places(rows, base_places, cat_by_key, district_features):
-    """Merge collected places (data/sources/*/places.csv) with the curated pilot places.
+    """Merge collected places (data/sources/*/places.csv) with the curated pilot places, division by division.
 
     Returns the full place list (pilot places first, enriched in place). Every merge, skip and coordinate fix is logged.
+    Divisions are processed in DIVISIONS order, so a division added later never changes earlier slugs or ids.
     """
     from trust import eligible
     global _AREA_EN, _AREA_BN
     by_id = {r["id"]: r for r in rows}
-    names = [r for r in rows if r["level"] in ("district", "upazila") and (r["id"] == DIVISION_ID or
-             r["parent_id"] == DIVISION_ID or by_id.get(r["parent_id"], {}).get("parent_id") == DIVISION_ID)]
-    en_words = sorted({w.lower() for r in names for w in [r["name_en"], r.get("_src_en") or ""] if w} |
-                      {"bogra", "nawabganj", "chapai", "sadar", "city"}, key=len, reverse=True)
-    _AREA_EN = re.compile(r"\b(" + "|".join(re.escape(w) for w in en_words) + r")\b", re.I)
-    bn_words = sorted({r["name_bn"] for r in names if r["name_bn"]} | {"সদর", "সিটি", "বগুড়া", "চাঁপাই"},
-                      key=len, reverse=True)
-    _AREA_BN = re.compile("|".join(re.escape(w) for w in bn_words))
-    districts = {latin_key(r["name_en"]): r for r in rows if r["level"] == "district" and r["parent_id"] == DIVISION_ID}
-    upz_by_d = defaultdict(list)
-    for r in rows:
-        if r["level"] == "upazila" and r["parent_id"] in {d["id"] for d in districts.values()}:
-            upz_by_d[r["parent_id"]].append(r)
     unions_by_u = defaultdict(list)
     for r in rows:
         if r["level"] == "union":
             unions_by_u[r["parent_id"]].append(r)
-    dist_poly = PolygonIndex([f for f in district_features if f["properties"].get("division_id") == DIVISION_ID])
     area_poly = PolygonIndex([{"type": "Feature", "geometry": r["_boundary"], "properties": {"id": r["id"]}}
                               for r in rows if r.get("_boundary") and r["level"] in ("union", "pourashava")])
-
-    def district_of(name):
-        k = latin_key(name or "")
-        k = DISTRICT_ALIASES.get(k, k)
-        if k in districts:
-            return districts[k]
-        best = max(districts.values(), key=lambda d: en_similarity(name, d["name_en"]), default=None)
-        return best if best and en_similarity(name, best["name_en"]) >= 0.8 else None
-
-    def upazila_of(d, name):
-        if not name:
-            return None
-        k = upazila_key(name)
-        cands = upz_by_d[d["id"]]
-        for u in cands:
-            if upazila_key(u["name_en"]) == k or upazila_key(u.get("_src_en") or "") == k:
-                return u
-        scored = sorted(((en_similarity(name, u["name_en"]), u["id"], u) for u in cands), reverse=True)
-        return scored[0][2] if scored and scored[0][0] >= 0.8 else None
 
     def union_from_text(u, text):
         t = re.sub(r"[০-৯0-9]+\s*নং|ইউনিয়ন|পরিষদ|ইউপি|[\s,\-।]", "", text or "")
@@ -548,148 +597,199 @@ def build_places(rows, base_places, cat_by_key, district_features):
     index = defaultdict(list)      # (district_id, group) -> places
     for p in out:
         index[(p["district_id"], GROUP.get(p["category"], p["category"]))].append(p)
-
     order = {k: i for i, k in enumerate(PLACE_PRIORITY)}
-    srcs = sorted((m for m in _manifests() if os.path.isfile(os.path.join(m["_dir"], "places.csv"))),
-                  key=lambda m: (order.get(m["key"], 999), m["key"]))
     stats = {}
-    for m in srcs:
-        key, trust = m["key"], int(m.get("trust_level") or 1)
-        st = stats.setdefault(key, dict(source=key, trust=trust, rows=0, added=0, merged=0, skipped=0, with_point=0,
-                                        point_dropped=0, union_resolved=0, upazila_resolved=0))
-        for r in read_csv(os.path.join(m["_dir"], "places.csv")):
-            st["rows"] += 1
-            extra = {}
-            if r.get("extra_json"):
-                try:
-                    extra = json.loads(r["extra_json"])
-                except ValueError:
-                    extra = {}
-            rid = f"{key}:{r.get('source_id')}"
-            if extra.get("office_post"):                       # FSCD staff posts, not places
-                st["skipped"] += 1
-                continue
-            cat = r.get("category_key") or ""
-            if cat not in cat_by_key:
-                cat = cat.split(".")[0]
-            if cat not in cat_by_key:
-                st["skipped"] += 1
-                log(rid, "place_skipped", f"category {r.get('category_key')!r} not in taxonomy", key)
-                continue
-            top = cat.split(".")[0]
-            name_en, name_bn = _title(_clean(r.get("name_en"))), _clean(r.get("name_bn"))
-            if not (name_en or name_bn):
-                st["skipped"] += 1
-                continue
-            d = district_of(r.get("district_en"))
-            if not d:
-                st["skipped"] += 1
-                log(rid, "place_skipped", f"district {r.get('district_en')!r} not in Rajshahi Division", key)
-                continue
-            lat = float(r["lat"]) if r.get("lat") else None
-            lon = float(r["lon"]) if r.get("lon") else None
-            upz, union_id, cc = None, None, None
-            thana = latin_key(r.get("upazila_en") or "")
-            if thana in RCC_THANAS and d["id"] == RAJSHAHI_DISTRICT_ID:
-                cc = RCC_ID
-            elif thana in PABA_THANAS and d["id"] == RAJSHAHI_DISTRICT_ID:
-                upz = upazila_of(d, "Paba")
-            elif r.get("upazila_en"):
-                upz = upazila_of(d, r["upazila_en"])
-            if lat is not None:
-                hit = dist_poly.find(lon, lat)
-                if not hit or hit[0]["properties"].get("district_id") != d["id"]:
-                    log(rid, "place_point_dropped", f"{lat},{lon} is not inside {d['name_en']} district", key)
-                    st["point_dropped"] += 1
-                    lat = lon = None
-                else:
-                    st["with_point"] += 1
-                    for f in area_poly.find(lon, lat):
-                        a = by_id[f["properties"]["id"]]
-                        pu = by_id.get(a["parent_id"])
-                        if cc is None and pu and pu["level"] == "upazila" and pu["parent_id"] == d["id"]:
-                            upz = pu
-                            union_id = a["id"] if a["level"] == "union" else None
-                        break
-            if upz and not union_id:
-                un = union_from_text(upz, extra.get("union_or_ward_bn") or (name_bn if cat == "government.union_parishad" else ""))
-                union_id = un["id"] if un else None
-            st["upazila_resolved"] += bool(upz or cc)
-            st["union_resolved"] += bool(union_id)
-            phones = []
-            for ph in re.split(r"[;,/]| or ", r.get("phone") or ""):
-                ph = re.sub(r"[^\d+\-]", "", ph.strip())
-                if len(re.sub(r"\D", "", ph)) >= 5 and ph not in phones:
-                    phones.append(ph)
-            email = (re.split(r"[;,\s]+", r.get("email") or "") or [""])[0] or None
-            if email and (key in PERSONAL_MAIL_SOURCES and not OFFICIAL_MAIL.search(email) or "@" not in email):
-                email = None          # e.g. a health worker's own gmail: not an institutional contact
-            website = r.get("website") if (r.get("website") or "").startswith("http") else None
-            if website and BAD_SITE.search(website):
-                website = None
-            addr = _clean(r.get("address"))
-            own = (r.get("ownership") or "").lower()
-            ownership = "public" if own in ("public", "government", "govt") else "private" if own in ("private", "non_government") \
-                else own if own in ("ngo", "trust", "autonomous") else None
-            attrs = {k: extra[k] for k in ATTR_KEYS if isinstance(extra.get(k), (str, int, float, bool)) and extra.get(k) != ""}
-            est = extra.get("year_of_establishment") or extra.get("established")
-            rec = dict(name_en=name_en or None, name_bn=name_bn or name_en, _bn_fallback=not name_bn, short_name=None,
-                       category=top, _cat=cat, category_id=cat_by_key[top]["id"],
-                       subcategory_id=cat_by_key[cat]["id"] if "." in cat else None, ownership=ownership,
-                       division_id=DIVISION_ID, district_id=d["id"], upazila_id=upz["id"] if upz else None, union_id=union_id,
-                       city_corporation_id=cc, address_bn=addr if re.search(r"[ঀ-৿]", addr) else None,
-                       address_en=addr if addr and not re.search(r"[ঀ-৿]", addr) else None,
-                       postcode=str(extra.get("postcode") or "") or None, lat=lat, lon=lon, phones=phones, email=email,
-                       website=website, established=str(est) if est else None, attributes=attrs,
-                       source=key, source_url=r.get("source_url") or _url(key), notes=_clean(r.get("notes")) or None,
-                       _srcs=[key], _rid=rid)
-            rec["evidence_level"] = evidence_for(trust, bool(r.get("source_url")))
-            # merge with an earlier record of the same place from another source
-            group = index[(d["id"], GROUP.get(top, top))]
-            best, score = None, 0.0
-            # a portal's tourist spot can be a college, office or mosque listed elsewhere: exact names only
-            others = [p for g, ps in index.items() if g[0] == d["id"] and g != (d["id"], GROUP.get(top, top)) for p in ps
-                      if top == "tourism" and not rec["_bn_fallback"] and bn_key(p["name_bn"]) == bn_key(rec["name_bn"])]
-            for p in group + others:
-                if key in p["_srcs"] or not _compatible(p, rec):
+
+    for div in DIVISIONS:
+        DIVISION_ID = div["id"]
+        srcs = sorted((m for m in _manifests() if division_of(m) == div["name"] and os.path.isfile(os.path.join(m["_dir"], "places.csv"))),
+                      key=lambda m: (order.get(kind_of(m), 999), m["key"]))
+        if not srcs:
+            continue
+        names = [r for r in rows if r["level"] in ("district", "upazila") and (r["id"] == DIVISION_ID or
+                 r["parent_id"] == DIVISION_ID or by_id.get(r["parent_id"], {}).get("parent_id") == DIVISION_ID)]
+        en_words = sorted({w.lower() for r in names for w in [r["name_en"], r.get("_src_en") or ""] if w} |
+                          {"bogra", "nawabganj", "chapai", "sadar", "city"}, key=len, reverse=True)
+        _AREA_EN = re.compile(r"\b(" + "|".join(re.escape(w) for w in en_words) + r")\b", re.I)
+        bn_words = sorted({r["name_bn"] for r in names if r["name_bn"]} | {"সদর", "সিটি", "বগুড়া", "চাঁপাই"},
+                          key=len, reverse=True)
+        _AREA_BN = re.compile("|".join(re.escape(w) for w in bn_words))
+        districts = {latin_key(r["name_en"]): r for r in rows if r["level"] == "district" and r["parent_id"] == DIVISION_ID}
+        upz_by_d = defaultdict(list)
+        for r in rows:
+            if r["level"] == "upazila" and r["parent_id"] in {d["id"] for d in districts.values()}:
+                upz_by_d[r["parent_id"]].append(r)
+        dist_poly = PolygonIndex([f for f in district_features if f["properties"].get("division_id") == DIVISION_ID])
+        # city corporations by district, and metro-police thana names that belong to them (Rajshahi: fixed tables)
+        cc_by_d = defaultdict(list)
+        for r in rows:
+            if r["level"] == "city_corporation" and r["parent_id"] in {d["id"] for d in districts.values()}:
+                cc_by_d[r["parent_id"]].append(r)
+        metro_thanas = set()
+        for mm in sources(div["name"], "metro_police_thanas"):
+            metro_thanas |= {latin_key(x["upazila_en"]) for x in read_csv(os.path.join(mm["_dir"], "places.csv")) if x.get("upazila_en")}
+
+        def district_of(name):
+            k = latin_key(name or "")
+            k = DISTRICT_ALIASES.get(k, k)
+            if k in districts:
+                return districts[k]
+            best = max(districts.values(), key=lambda d: en_similarity(name, d["name_en"]), default=None)
+            return best if best and en_similarity(name, best["name_en"]) >= 0.8 else None
+
+        def upazila_of(d, name):
+            if not name:
+                return None
+            k = upazila_key(name)
+            cands = upz_by_d[d["id"]]
+            for u in cands:
+                if upazila_key(u["name_en"]) == k or upazila_key(u.get("_src_en") or "") == k:
+                    return u
+            scored = sorted(((en_similarity(name, u["name_en"]), u["id"], u) for u in cands), reverse=True)
+            return scored[0][2] if scored and scored[0][0] >= 0.8 else None
+
+        for m in srcs:
+            key, trust = m["key"], int(m.get("trust_level") or 1)
+            personal_mail = kind_of(m) in PERSONAL_MAIL_KINDS
+            st = stats.setdefault(key, dict(source=key, trust=trust, rows=0, added=0, merged=0, skipped=0, with_point=0,
+                                            point_dropped=0, union_resolved=0, upazila_resolved=0))
+            for r in read_csv(os.path.join(m["_dir"], "places.csv")):
+                st["rows"] += 1
+                extra = {}
+                if r.get("extra_json"):
+                    try:
+                        extra = json.loads(r["extra_json"])
+                    except ValueError:
+                        extra = {}
+                rid = f"{key}:{r.get('source_id')}"
+                if extra.get("office_post"):                       # FSCD staff posts, not places
+                    st["skipped"] += 1
                     continue
-                if (p.get("upazila_id") or p.get("city_corporation_id")) and (rec["upazila_id"] or rec["city_corporation_id"]) and \
-                        (p.get("upazila_id"), p.get("city_corporation_id")) != (rec["upazila_id"], rec["city_corporation_id"]):
+                cat = r.get("category_key") or ""
+                if cat not in cat_by_key:
+                    cat = cat.split(".")[0]
+                if cat not in cat_by_key:
+                    st["skipped"] += 1
+                    log(rid, "place_skipped", f"category {r.get('category_key')!r} not in taxonomy", key)
                     continue
-                same_area = bool(rec["upazila_id"] and p.get("upazila_id") == rec["upazila_id"])
-                if p.get("lat") is not None and rec["lat"] is not None and haversine_m(p["lat"], p["lon"], rec["lat"], rec["lon"]) > 2000:
+                top = cat.split(".")[0]
+                name_en, name_bn = _title(_clean(r.get("name_en"))), _clean(r.get("name_bn"))
+                if not (name_en or name_bn):
+                    st["skipped"] += 1
                     continue
-                s = _place_sim(p, rec)
-                if s == 0.86 and not same_area:
-                    s = 0.0
-                # one-per-upazila services named only generically by one source ("উপজেলা স্বাস্থ্য কমপ্লেক্স")
-                # police: one record per thana, names differ by script across sources
-                if top == "emergency" and cat == p["_cat"] == "emergency.police_station" and s < 0.85:
-                    pt, rt = p.get("_thana"), thana
-                    if pt and rt and en_similarity(pt, rt) >= 0.9 and (not p.get("name_en") or not rec["name_en"] or s >= 0.6):
-                        s = 0.86
-                if p in others:
-                    s = 1.0 if p.get("lat") is None or rec["lat"] is None or haversine_m(p["lat"], p["lon"], rec["lat"], rec["lon"]) < 2000 else 0.0
-                if s > score:
-                    best, score = p, s
-            rec["_thana"] = thana if cat == "emergency.police_station" else None
-            if best and score >= 0.85:
-                _merge(best, rec)
-                st["merged"] += 1
-                log(best["slug"], "place_merged", f"{rid} ({score:.2f})", key)
-                continue
-            pid = _hash_id(rid, used_ids)
-            base = _slug(name_en or romanize_bn(name_bn))[:80].strip("-") or _slug(cat_by_key[cat]["name_en"])
-            where = _slug((upz or {}).get("name_en") or ("rajshahi-city" if cc else d["name_en"]))
-            slug = f"{base}-{where}" if where and not base.endswith(where) else base
-            slug_, n = slug, 2
-            while slug_ in slugs:
-                slug_, n = f"{slug}-{n}", n + 1
-            slugs.add(slug_)
-            rec.update(public_id=f"{PREFIX.get(top, 'PLC')}-{pid:08d}", slug=slug_)
-            out.append(rec)
-            group.append(rec)
-            st["added"] += 1
+                d = district_of(r.get("district_en"))
+                if not d:
+                    st["skipped"] += 1
+                    log(rid, "place_skipped", f"district {r.get('district_en')!r} not in {div['name'].title()} Division", key)
+                    continue
+                lat = float(r["lat"]) if r.get("lat") else None
+                lon = float(r["lon"]) if r.get("lon") else None
+                upz, union_id, cc = None, None, None
+                thana = latin_key(r.get("upazila_en") or "")
+                if thana in RCC_THANAS and d["id"] == RAJSHAHI_DISTRICT_ID:
+                    cc = RCC_ID
+                elif thana in PABA_THANAS and d["id"] == RAJSHAHI_DISTRICT_ID:
+                    upz = upazila_of(d, "Paba")
+                elif r.get("upazila_en"):
+                    upz = upazila_of(d, r["upazila_en"])
+                    # a metro-police thana that is not an upazila: the district's only city corporation
+                    if not upz and DIVISION_ID != 10002 and thana in metro_thanas and len(cc_by_d[d["id"]]) == 1:
+                        cc = cc_by_d[d["id"]][0]["id"]
+                if lat is not None:
+                    hit = dist_poly.find(lon, lat)
+                    if not hit or hit[0]["properties"].get("district_id") != d["id"]:
+                        log(rid, "place_point_dropped", f"{lat},{lon} is not inside {d['name_en']} district", key)
+                        st["point_dropped"] += 1
+                        lat = lon = None
+                    else:
+                        st["with_point"] += 1
+                        for f in area_poly.find(lon, lat):
+                            a = by_id[f["properties"]["id"]]
+                            pu = by_id.get(a["parent_id"])
+                            if cc is None and pu and pu["level"] == "upazila" and pu["parent_id"] == d["id"]:
+                                upz = pu
+                                union_id = a["id"] if a["level"] == "union" else None
+                            break
+                if upz and not union_id:
+                    un = union_from_text(upz, extra.get("union_or_ward_bn") or (name_bn if cat == "government.union_parishad" else ""))
+                    union_id = un["id"] if un else None
+                st["upazila_resolved"] += bool(upz or cc)
+                st["union_resolved"] += bool(union_id)
+                phones = []
+                for ph in re.split(r"[;,/]| or ", r.get("phone") or ""):
+                    ph = re.sub(r"[^\d+\-]", "", ph.strip())
+                    if len(re.sub(r"\D", "", ph)) >= 5 and ph not in phones:
+                        phones.append(ph)
+                email = (re.split(r"[;,\s]+", r.get("email") or "") or [""])[0] or None
+                if email and (personal_mail and not OFFICIAL_MAIL.search(email) or "@" not in email):
+                    email = None          # e.g. a health worker's own gmail: not an institutional contact
+                website = r.get("website") if (r.get("website") or "").startswith("http") else None
+                if website and BAD_SITE.search(website):
+                    website = None
+                addr = _clean(r.get("address"))
+                own = (r.get("ownership") or "").lower()
+                ownership = "public" if own in ("public", "government", "govt") else "private" if own in ("private", "non_government") \
+                    else own if own in ("ngo", "trust", "autonomous") else None
+                attrs = {k: extra[k] for k in ATTR_KEYS if isinstance(extra.get(k), (str, int, float, bool)) and extra.get(k) != ""}
+                est = extra.get("year_of_establishment") or extra.get("established")
+                rec = dict(name_en=name_en or None, name_bn=name_bn or name_en, _bn_fallback=not name_bn, short_name=None,
+                           category=top, _cat=cat, category_id=cat_by_key[top]["id"],
+                           subcategory_id=cat_by_key[cat]["id"] if "." in cat else None, ownership=ownership,
+                           division_id=DIVISION_ID, district_id=d["id"], upazila_id=upz["id"] if upz else None, union_id=union_id,
+                           city_corporation_id=cc, address_bn=addr if re.search(r"[ঀ-৿]", addr) else None,
+                           address_en=addr if addr and not re.search(r"[ঀ-৿]", addr) else None,
+                           postcode=str(extra.get("postcode") or "") or None, lat=lat, lon=lon, phones=phones, email=email,
+                           website=website, established=str(est) if est else None, attributes=attrs,
+                           source=key, source_url=r.get("source_url") or _url(key), notes=_clean(r.get("notes")) or None,
+                           _srcs=[key], _rid=rid)
+                rec["evidence_level"] = evidence_for(trust, bool(r.get("source_url")))
+                # merge with an earlier record of the same place from another source
+                group = index[(d["id"], GROUP.get(top, top))]
+                best, score = None, 0.0
+                # a portal's tourist spot can be a college, office or mosque listed elsewhere: exact names only
+                others = [p for g, ps in index.items() if g[0] == d["id"] and g != (d["id"], GROUP.get(top, top)) for p in ps
+                          if top == "tourism" and not rec["_bn_fallback"] and bn_key(p["name_bn"]) == bn_key(rec["name_bn"])]
+                for p in group + others:
+                    if key in p["_srcs"] or not _compatible(p, rec):
+                        continue
+                    if (p.get("upazila_id") or p.get("city_corporation_id")) and (rec["upazila_id"] or rec["city_corporation_id"]) and \
+                            (p.get("upazila_id"), p.get("city_corporation_id")) != (rec["upazila_id"], rec["city_corporation_id"]):
+                        continue
+                    same_area = bool(rec["upazila_id"] and p.get("upazila_id") == rec["upazila_id"])
+                    if p.get("lat") is not None and rec["lat"] is not None and haversine_m(p["lat"], p["lon"], rec["lat"], rec["lon"]) > 2000:
+                        continue
+                    s = _place_sim(p, rec)
+                    if s == 0.86 and not same_area:
+                        s = 0.0
+                    # one-per-upazila services named only generically by one source ("উপজেলা স্বাস্থ্য কমপ্লেক্স")
+                    # police: one record per thana, names differ by script across sources
+                    if top == "emergency" and cat == p["_cat"] == "emergency.police_station" and s < 0.85:
+                        pt, rt = p.get("_thana"), thana
+                        if pt and rt and en_similarity(pt, rt) >= 0.9 and (not p.get("name_en") or not rec["name_en"] or s >= 0.6):
+                            s = 0.86
+                    if p in others:
+                        s = 1.0 if p.get("lat") is None or rec["lat"] is None or haversine_m(p["lat"], p["lon"], rec["lat"], rec["lon"]) < 2000 else 0.0
+                    if s > score:
+                        best, score = p, s
+                rec["_thana"] = thana if cat == "emergency.police_station" else None
+                if best and score >= 0.85:
+                    _merge(best, rec)
+                    st["merged"] += 1
+                    log(best["slug"], "place_merged", f"{rid} ({score:.2f})", key)
+                    continue
+                pid = _hash_id(rid, used_ids)
+                base = _slug(name_en or romanize_bn(name_bn))[:80].strip("-") or _slug(cat_by_key[cat]["name_en"])
+                where = _slug((upz or {}).get("name_en") or
+                              (_slug(by_id[cc]["name_en"].replace(" City Corporation", "")) + "-city" if cc else d["name_en"]))
+                slug = f"{base}-{where}" if where and not base.endswith(where) else base
+                slug_, n = slug, 2
+                while slug_ in slugs:
+                    slug_, n = f"{slug}-{n}", n + 1
+                slugs.add(slug_)
+                rec.update(public_id=f"{PREFIX.get(top, 'PLC')}-{pid:08d}", slug=slug_)
+                out.append(rec)
+                group.append(rec)
+                st["added"] += 1
 
     # finalise evidence, flags and provenance
     for p in out:

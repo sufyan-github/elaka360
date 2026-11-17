@@ -1,0 +1,24 @@
+{
+  "key": "DGHS_HRIS_FACILITIES_RANG_2026",
+  "name": "DGHS / MoHFW HRIS Facility Registry — organisation list, Rangpur Division",
+  "organization": "Directorate General of Health Services (DGHS), Ministry of Health and Family Welfare",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=4",
+    "https://hris.mohfw.gov.bd/public/facility-registry"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Source: DGHS Facility Registry (hris.mohfw.gov.bd), Ministry of Health and Family Welfare, Bangladesh",
+  "division": "rangpur",
+  "kind": "dghs_hris",
+  "files": {
+    "places.csv": "7e5b993293f0bf9cb5f19f556023aa53483fa5504966ea7741162416751c30d3",
+    "facts.csv": "2663fe71bea79b7af17a285195f19ff8b8beacdc82de30a656d7827f40a69826",
+    "raw/hris_organization_list_rangpur_division.csv": "f8030824b6d93e52a8ac1765128abdc279aa177a9f2a87459da1dc46b83850b4"
+  },
+  "notes": "Public report of the MoHFW HRIS Facility Registry. Excel export (ret=excel) of all active entries filtered to Rangpur Division (division_id 4), same collector and rules as DGHS_HRIS_FACILITIES_RAJ_2026. Registry is live and self-reported by facilities; coordinates are as entered by facilities (QA flags in notes). Contacts kept only for non-private facilities; private/NGO contacts and addresses and facility-head names not collected. No licence stated on the site."
+}

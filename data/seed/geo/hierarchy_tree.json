@@ -34732,6 +34732,78 @@
        "path": "rangpur/dinajpur/birampur",
        "children": [
         {
+         "id": 60063,
+         "level": "pourashava",
+         "name_bn": "বিরামপুর পৌরসভা",
+         "name_en": "Birampur Pourashava",
+         "path": "rangpur/dinajpur/birampur/birampur-pourashava",
+         "children": [
+          {
+           "id": 70619,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/dinajpur/birampur/birampur-pourashava/ward-1"
+          },
+          {
+           "id": 70620,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/dinajpur/birampur/birampur-pourashava/ward-2"
+          },
+          {
+           "id": 70621,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/dinajpur/birampur/birampur-pourashava/ward-3"
+          },
+          {
+           "id": 70622,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/dinajpur/birampur/birampur-pourashava/ward-4"
+          },
+          {
+           "id": 70623,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/dinajpur/birampur/birampur-pourashava/ward-5"
+          },
+          {
+           "id": 70624,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/dinajpur/birampur/birampur-pourashava/ward-6"
+          },
+          {
+           "id": 70625,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/dinajpur/birampur/birampur-pourashava/ward-7"
+          },
+          {
+           "id": 70626,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/dinajpur/birampur/birampur-pourashava/ward-8"
+          },
+          {
+           "id": 70627,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/dinajpur/birampur/birampur-pourashava/ward-9"
+          }
+         ]
+        },
+        {
          "id": 43720,
          "level": "union",
          "name_bn": "বিনাইল",
@@ -34789,6 +34861,78 @@
        "name_en": "Birganj",
        "path": "rangpur/dinajpur/birganj",
        "children": [
+        {
+         "id": 60064,
+         "level": "pourashava",
+         "name_bn": "বীরগঞ্জ পৌরসভা",
+         "name_en": "Birganj Pourashava",
+         "path": "rangpur/dinajpur/birganj/birganj-pourashava",
+         "children": [
+          {
+           "id": 70628,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/dinajpur/birganj/birganj-pourashava/ward-1"
+          },
+          {
+           "id": 70629,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/dinajpur/birganj/birganj-pourashava/ward-2"
+          },
+          {
+           "id": 70630,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/dinajpur/birganj/birganj-pourashava/ward-3"
+          },
+          {
+           "id": 70631,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/dinajpur/birganj/birganj-pourashava/ward-4"
+          },
+          {
+           "id": 70632,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/dinajpur/birganj/birganj-pourashava/ward-5"
+          },
+          {
+           "id": 70633,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/dinajpur/birganj/birganj-pourashava/ward-6"
+          },
+          {
+           "id": 70634,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/dinajpur/birganj/birganj-pourashava/ward-7"
+          },
+          {
+           "id": 70635,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/dinajpur/birganj/birganj-pourashava/ward-8"
+          },
+          {
+           "id": 70636,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/dinajpur/birganj/birganj-pourashava/ward-9"
+          }
+         ]
+        },
         {
          "id": 43708,
          "level": "union",
@@ -34876,6 +35020,78 @@
        "path": "rangpur/dinajpur/birol",
        "children": [
         {
+         "id": 60065,
+         "level": "pourashava",
+         "name_bn": "বিরল পৌরসভা",
+         "name_en": "Birol Pourashava",
+         "path": "rangpur/dinajpur/birol/birol-pourashava",
+         "children": [
+          {
+           "id": 70637,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/dinajpur/birol/birol-pourashava/ward-1"
+          },
+          {
+           "id": 70638,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/dinajpur/birol/birol-pourashava/ward-2"
+          },
+          {
+           "id": 70639,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/dinajpur/birol/birol-pourashava/ward-3"
+          },
+          {
+           "id": 70640,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/dinajpur/birol/birol-pourashava/ward-4"
+          },
+          {
+           "id": 70641,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/dinajpur/birol/birol-pourashava/ward-5"
+          },
+          {
+           "id": 70642,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/dinajpur/birol/birol-pourashava/ward-6"
+          },
+          {
+           "id": 70643,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/dinajpur/birol/birol-pourashava/ward-7"
+          },
+          {
+           "id": 70644,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/dinajpur/birol/birol-pourashava/ward-8"
+          },
+          {
+           "id": 70645,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/dinajpur/birol/birol-pourashava/ward-9"
+          }
+         ]
+        },
+        {
          "id": 43771,
          "level": "union",
          "name_bn": "আজিমপুর",
@@ -34920,7 +35136,7 @@
         {
          "id": 43772,
          "level": "union",
-         "name_bn": "ফরাক্কাবাদ",
+         "name_bn": "ফরক্কাবাদ",
          "name_en": "Farakkabad",
          "path": "rangpur/dinajpur/birol/farakkabad"
         },
@@ -34932,6 +35148,13 @@
          "path": "rangpur/dinajpur/birol/mongalpur"
         },
         {
+         "id": 44546,
+         "level": "union",
+         "name_bn": "পলাশ বাড়ি",
+         "name_en": "Palashbari",
+         "path": "rangpur/dinajpur/birol/palashbari"
+        },
+        {
          "id": 43781,
          "level": "union",
          "name_bn": "রাজারামপুর",
@@ -34941,7 +35164,7 @@
         {
          "id": 43780,
          "level": "union",
-         "name_bn": "রাণীপুকুর",
+         "name_bn": "রানীপুকুর",
          "name_en": "Ranipukur",
          "path": "rangpur/dinajpur/birol/ranipukur"
         },
@@ -34962,6 +35185,78 @@
        "path": "rangpur/dinajpur/bochaganj",
        "children": [
         {
+         "id": 60066,
+         "level": "pourashava",
+         "name_bn": "বোচাগঞ্জ পৌরসভা",
+         "name_en": "Setabganj Pourashava",
+         "path": "rangpur/dinajpur/bochaganj/setabganj-pourashava",
+         "children": [
+          {
+           "id": 70646,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/dinajpur/bochaganj/setabganj-pourashava/ward-1"
+          },
+          {
+           "id": 70647,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/dinajpur/bochaganj/setabganj-pourashava/ward-2"
+          },
+          {
+           "id": 70648,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/dinajpur/bochaganj/setabganj-pourashava/ward-3"
+          },
+          {
+           "id": 70649,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/dinajpur/bochaganj/setabganj-pourashava/ward-4"
+          },
+          {
+           "id": 70650,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/dinajpur/bochaganj/setabganj-pourashava/ward-5"
+          },
+          {
+           "id": 70651,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/dinajpur/bochaganj/setabganj-pourashava/ward-6"
+          },
+          {
+           "id": 70652,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/dinajpur/bochaganj/setabganj-pourashava/ward-7"
+          },
+          {
+           "id": 70653,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/dinajpur/bochaganj/setabganj-pourashava/ward-8"
+          },
+          {
+           "id": 70654,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/dinajpur/bochaganj/setabganj-pourashava/ward-9"
+          }
+         ]
+        },
+        {
          "id": 43735,
          "level": "union",
          "name_bn": "আটগাঁও",
@@ -34971,14 +35266,14 @@
         {
          "id": 43734,
          "level": "union",
-         "name_bn": "ঈশানিয়া",
+         "name_bn": "ইশানিয়া",
          "name_en": "Eshania",
          "path": "rangpur/dinajpur/bochaganj/eshania"
         },
         {
          "id": 43738,
          "level": "union",
-         "name_bn": "মুর্শিদহাট",
+         "name_bn": "মুশিদহাট",
          "name_en": "Murshidhat",
          "path": "rangpur/dinajpur/bochaganj/murshidhat"
         },
@@ -34992,7 +35287,7 @@
         {
          "id": 43737,
          "level": "union",
-         "name_bn": "রনগাঁও",
+         "name_bn": "রণগাঁও",
          "name_en": "Rongaon",
          "path": "rangpur/dinajpur/bochaganj/rongaon"
         },
@@ -35050,7 +35345,7 @@
         {
          "id": 43785,
          "level": "union",
-         "name_bn": "ইসবপুর",
+         "name_bn": "ইবসপুর",
          "name_en": "Isobpur",
          "path": "rangpur/dinajpur/chirirbandar/isobpur"
         },
@@ -35071,7 +35366,7 @@
         {
          "id": 43789,
          "level": "union",
-         "name_bn": "সাইতারা",
+         "name_bn": "সাইতাড়া",
          "name_en": "Saitara",
          "path": "rangpur/dinajpur/chirirbandar/saitara"
         },
@@ -35105,6 +35400,99 @@
        "name_en": "Dinajpur Sadar",
        "path": "rangpur/dinajpur/dinajpur-sadar",
        "children": [
+        {
+         "id": 60070,
+         "level": "pourashava",
+         "name_bn": "দিনাজপুর পৌরসভা",
+         "name_en": "Dinajpur Pourashava",
+         "path": "rangpur/dinajpur/dinajpur-sadar/dinajpur-pourashava",
+         "children": [
+          {
+           "id": 70682,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/dinajpur/dinajpur-sadar/dinajpur-pourashava/ward-1"
+          },
+          {
+           "id": 70691,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১০",
+           "name_en": "Ward 10",
+           "path": "rangpur/dinajpur/dinajpur-sadar/dinajpur-pourashava/ward-10"
+          },
+          {
+           "id": 70692,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১১",
+           "name_en": "Ward 11",
+           "path": "rangpur/dinajpur/dinajpur-sadar/dinajpur-pourashava/ward-11"
+          },
+          {
+           "id": 70693,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১২",
+           "name_en": "Ward 12",
+           "path": "rangpur/dinajpur/dinajpur-sadar/dinajpur-pourashava/ward-12"
+          },
+          {
+           "id": 70683,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/dinajpur/dinajpur-sadar/dinajpur-pourashava/ward-2"
+          },
+          {
+           "id": 70684,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/dinajpur/dinajpur-sadar/dinajpur-pourashava/ward-3"
+          },
+          {
+           "id": 70685,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/dinajpur/dinajpur-sadar/dinajpur-pourashava/ward-4"
+          },
+          {
+           "id": 70686,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/dinajpur/dinajpur-sadar/dinajpur-pourashava/ward-5"
+          },
+          {
+           "id": 70687,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/dinajpur/dinajpur-sadar/dinajpur-pourashava/ward-6"
+          },
+          {
+           "id": 70688,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/dinajpur/dinajpur-sadar/dinajpur-pourashava/ward-7"
+          },
+          {
+           "id": 70689,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/dinajpur/dinajpur-sadar/dinajpur-pourashava/ward-8"
+          },
+          {
+           "id": 70690,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/dinajpur/dinajpur-sadar/dinajpur-pourashava/ward-9"
+          }
+         ]
+        },
         {
          "id": 43760,
          "level": "union",
@@ -35185,9 +35573,81 @@
        "path": "rangpur/dinajpur/fulbari",
        "children": [
         {
+         "id": 60067,
+         "level": "pourashava",
+         "name_bn": "ফুলবাড়ী পৌরসভা",
+         "name_en": "Fulbari Pourashava",
+         "path": "rangpur/dinajpur/fulbari/fulbari-pourashava",
+         "children": [
+          {
+           "id": 70655,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/dinajpur/fulbari/fulbari-pourashava/ward-1"
+          },
+          {
+           "id": 70656,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/dinajpur/fulbari/fulbari-pourashava/ward-2"
+          },
+          {
+           "id": 70657,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/dinajpur/fulbari/fulbari-pourashava/ward-3"
+          },
+          {
+           "id": 70658,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/dinajpur/fulbari/fulbari-pourashava/ward-4"
+          },
+          {
+           "id": 70659,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/dinajpur/fulbari/fulbari-pourashava/ward-5"
+          },
+          {
+           "id": 70660,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/dinajpur/fulbari/fulbari-pourashava/ward-6"
+          },
+          {
+           "id": 70661,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/dinajpur/fulbari/fulbari-pourashava/ward-7"
+          },
+          {
+           "id": 70662,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/dinajpur/fulbari/fulbari-pourashava/ward-8"
+          },
+          {
+           "id": 70663,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/dinajpur/fulbari/fulbari-pourashava/ward-9"
+          }
+         ]
+        },
+        {
          "id": 43746,
          "level": "union",
-         "name_bn": "আলাদিপুর",
+         "name_bn": "আলাদীপুর",
          "name_en": "Aladipur",
          "path": "rangpur/dinajpur/fulbari/aladipur"
         },
@@ -35215,7 +35675,7 @@
         {
          "id": 43747,
          "level": "union",
-         "name_bn": "কাজীহাল",
+         "name_bn": "কাজিহাল",
          "name_en": "Kagihal",
          "path": "rangpur/dinajpur/fulbari/kagihal"
         },
@@ -35243,9 +35703,81 @@
        "path": "rangpur/dinajpur/ghoraghat",
        "children": [
         {
+         "id": 60068,
+         "level": "pourashava",
+         "name_bn": "ঘোড়াঘাট পৌরসভা",
+         "name_en": "Ghoraghat Pourashava",
+         "path": "rangpur/dinajpur/ghoraghat/ghoraghat-pourashava",
+         "children": [
+          {
+           "id": 70664,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/dinajpur/ghoraghat/ghoraghat-pourashava/ward-1"
+          },
+          {
+           "id": 70665,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/dinajpur/ghoraghat/ghoraghat-pourashava/ward-2"
+          },
+          {
+           "id": 70666,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/dinajpur/ghoraghat/ghoraghat-pourashava/ward-3"
+          },
+          {
+           "id": 70667,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/dinajpur/ghoraghat/ghoraghat-pourashava/ward-4"
+          },
+          {
+           "id": 70668,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/dinajpur/ghoraghat/ghoraghat-pourashava/ward-5"
+          },
+          {
+           "id": 70669,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/dinajpur/ghoraghat/ghoraghat-pourashava/ward-6"
+          },
+          {
+           "id": 70670,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/dinajpur/ghoraghat/ghoraghat-pourashava/ward-7"
+          },
+          {
+           "id": 70671,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/dinajpur/ghoraghat/ghoraghat-pourashava/ward-8"
+          },
+          {
+           "id": 70672,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/dinajpur/ghoraghat/ghoraghat-pourashava/ward-9"
+          }
+         ]
+        },
+        {
          "id": 43712,
          "level": "union",
-         "name_bn": "বুলাকীপুর",
+         "name_bn": "বুলাকিপুর",
          "name_en": "Bulakipur",
          "path": "rangpur/dinajpur/ghoraghat/bulakipur"
         },
@@ -35280,6 +35812,78 @@
        "path": "rangpur/dinajpur/hakimpur",
        "children": [
         {
+         "id": 60069,
+         "level": "pourashava",
+         "name_bn": "হাকিমপুর পৌরসভা",
+         "name_en": "Hakimpur Pourashava",
+         "path": "rangpur/dinajpur/hakimpur/hakimpur-pourashava",
+         "children": [
+          {
+           "id": 70673,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/dinajpur/hakimpur/hakimpur-pourashava/ward-1"
+          },
+          {
+           "id": 70674,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/dinajpur/hakimpur/hakimpur-pourashava/ward-2"
+          },
+          {
+           "id": 70675,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/dinajpur/hakimpur/hakimpur-pourashava/ward-3"
+          },
+          {
+           "id": 70676,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/dinajpur/hakimpur/hakimpur-pourashava/ward-4"
+          },
+          {
+           "id": 70677,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/dinajpur/hakimpur/hakimpur-pourashava/ward-5"
+          },
+          {
+           "id": 70678,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/dinajpur/hakimpur/hakimpur-pourashava/ward-6"
+          },
+          {
+           "id": 70679,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/dinajpur/hakimpur/hakimpur-pourashava/ward-7"
+          },
+          {
+           "id": 70680,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/dinajpur/hakimpur/hakimpur-pourashava/ward-8"
+          },
+          {
+           "id": 70681,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/dinajpur/hakimpur/hakimpur-pourashava/ward-9"
+          }
+         ]
+        },
+        {
          "id": 43762,
          "level": "union",
          "name_bn": "আলীহাট",
@@ -35289,7 +35893,7 @@
         {
          "id": 43764,
          "level": "union",
-         "name_bn": "বোয়ালদার",
+         "name_bn": "বোয়ালদাড়",
          "name_en": "Boalder",
          "path": "rangpur/dinajpur/hakimpur/boalder"
         },
@@ -35312,7 +35916,7 @@
         {
          "id": 43739,
          "level": "union",
-         "name_bn": "ডাবোর",
+         "name_bn": "ডাবর",
          "name_en": "Dabor",
          "path": "rangpur/dinajpur/kaharol/dabor"
         },
@@ -35456,7 +36060,7 @@
         {
          "id": 43699,
          "level": "union",
-         "name_bn": "মাহামুদপুর",
+         "name_bn": "মাহমুদপুর",
          "name_en": "Mahmudpur",
          "path": "rangpur/dinajpur/nawabganj/mahmudpur"
         },
@@ -35484,6 +36088,78 @@
        "path": "rangpur/dinajpur/parbatipur",
        "children": [
         {
+         "id": 60071,
+         "level": "pourashava",
+         "name_bn": "পার্বতীপুর পৌরসভা",
+         "name_en": "Parbatipur Pourashava",
+         "path": "rangpur/dinajpur/parbatipur/parbatipur-pourashava",
+         "children": [
+          {
+           "id": 70694,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/dinajpur/parbatipur/parbatipur-pourashava/ward-1"
+          },
+          {
+           "id": 70695,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/dinajpur/parbatipur/parbatipur-pourashava/ward-2"
+          },
+          {
+           "id": 70696,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/dinajpur/parbatipur/parbatipur-pourashava/ward-3"
+          },
+          {
+           "id": 70697,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/dinajpur/parbatipur/parbatipur-pourashava/ward-4"
+          },
+          {
+           "id": 70698,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/dinajpur/parbatipur/parbatipur-pourashava/ward-5"
+          },
+          {
+           "id": 70699,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/dinajpur/parbatipur/parbatipur-pourashava/ward-6"
+          },
+          {
+           "id": 70700,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/dinajpur/parbatipur/parbatipur-pourashava/ward-7"
+          },
+          {
+           "id": 70701,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/dinajpur/parbatipur/parbatipur-pourashava/ward-8"
+          },
+          {
+           "id": 70702,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/dinajpur/parbatipur/parbatipur-pourashava/ward-9"
+          }
+         ]
+        },
+        {
          "id": 43723,
          "level": "union",
          "name_bn": "বেলাইচন্ডি",
@@ -35493,7 +36169,7 @@
         {
          "id": 43727,
          "level": "union",
-         "name_bn": "চন্ডীপুর",
+         "name_bn": "চন্ডিপুর",
          "name_en": "Chandipur",
          "path": "rangpur/dinajpur/parbatipur/chandipur"
         },
@@ -35571,6 +36247,78 @@
        "name_en": "Gaibandha Sadar",
        "path": "rangpur/gaibandha/gaibandha-sadar",
        "children": [
+        {
+         "id": 60072,
+         "level": "pourashava",
+         "name_bn": "গাইবান্ধা পৌরসভা",
+         "name_en": "Gaibandha Pourashava",
+         "path": "rangpur/gaibandha/gaibandha-sadar/gaibandha-pourashava",
+         "children": [
+          {
+           "id": 70703,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/gaibandha/gaibandha-sadar/gaibandha-pourashava/ward-1"
+          },
+          {
+           "id": 70704,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/gaibandha/gaibandha-sadar/gaibandha-pourashava/ward-2"
+          },
+          {
+           "id": 70705,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/gaibandha/gaibandha-sadar/gaibandha-pourashava/ward-3"
+          },
+          {
+           "id": 70706,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/gaibandha/gaibandha-sadar/gaibandha-pourashava/ward-4"
+          },
+          {
+           "id": 70707,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/gaibandha/gaibandha-sadar/gaibandha-pourashava/ward-5"
+          },
+          {
+           "id": 70708,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/gaibandha/gaibandha-sadar/gaibandha-pourashava/ward-6"
+          },
+          {
+           "id": 70709,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/gaibandha/gaibandha-sadar/gaibandha-pourashava/ward-7"
+          },
+          {
+           "id": 70710,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/gaibandha/gaibandha-sadar/gaibandha-pourashava/ward-8"
+          },
+          {
+           "id": 70711,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/gaibandha/gaibandha-sadar/gaibandha-pourashava/ward-9"
+          }
+         ]
+        },
         {
          "id": 43916,
          "level": "union",
@@ -35671,6 +36419,78 @@
        "name_en": "Gobindaganj",
        "path": "rangpur/gaibandha/gobindaganj",
        "children": [
+        {
+         "id": 60073,
+         "level": "pourashava",
+         "name_bn": "গোবিন্দগঞ্জ পৌরসভা",
+         "name_en": "Gobindaganj Pourashava",
+         "path": "rangpur/gaibandha/gobindaganj/gobindaganj-pourashava",
+         "children": [
+          {
+           "id": 70712,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/gaibandha/gobindaganj/gobindaganj-pourashava/ward-1"
+          },
+          {
+           "id": 70713,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/gaibandha/gobindaganj/gobindaganj-pourashava/ward-2"
+          },
+          {
+           "id": 70714,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/gaibandha/gobindaganj/gobindaganj-pourashava/ward-3"
+          },
+          {
+           "id": 70715,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/gaibandha/gobindaganj/gobindaganj-pourashava/ward-4"
+          },
+          {
+           "id": 70716,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/gaibandha/gobindaganj/gobindaganj-pourashava/ward-5"
+          },
+          {
+           "id": 70717,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/gaibandha/gobindaganj/gobindaganj-pourashava/ward-6"
+          },
+          {
+           "id": 70718,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/gaibandha/gobindaganj/gobindaganj-pourashava/ward-7"
+          },
+          {
+           "id": 70719,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/gaibandha/gobindaganj/gobindaganj-pourashava/ward-8"
+          },
+          {
+           "id": 70720,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/gaibandha/gobindaganj/gobindaganj-pourashava/ward-9"
+          }
+         ]
+        },
         {
          "id": 43947,
          "level": "union",
@@ -35799,6 +36619,78 @@
        "name_en": "Palashbari",
        "path": "rangpur/gaibandha/palashbari",
        "children": [
+        {
+         "id": 60074,
+         "level": "pourashava",
+         "name_bn": "পলাশবাড়ী পৌরসভা",
+         "name_en": "Palashbari Pourashava",
+         "path": "rangpur/gaibandha/palashbari/palashbari-pourashava",
+         "children": [
+          {
+           "id": 70721,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/gaibandha/palashbari/palashbari-pourashava/ward-1"
+          },
+          {
+           "id": 70722,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/gaibandha/palashbari/palashbari-pourashava/ward-2"
+          },
+          {
+           "id": 70723,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/gaibandha/palashbari/palashbari-pourashava/ward-3"
+          },
+          {
+           "id": 70724,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/gaibandha/palashbari/palashbari-pourashava/ward-4"
+          },
+          {
+           "id": 70725,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/gaibandha/palashbari/palashbari-pourashava/ward-5"
+          },
+          {
+           "id": 70726,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/gaibandha/palashbari/palashbari-pourashava/ward-6"
+          },
+          {
+           "id": 70727,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/gaibandha/palashbari/palashbari-pourashava/ward-7"
+          },
+          {
+           "id": 70728,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/gaibandha/palashbari/palashbari-pourashava/ward-8"
+          },
+          {
+           "id": 70729,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/gaibandha/palashbari/palashbari-pourashava/ward-9"
+          }
+         ]
+        },
         {
          "id": 43926,
          "level": "union",
@@ -36046,7 +36938,7 @@
         {
          "id": 43936,
          "level": "union",
-         "name_bn": "কচুয়া",
+         "name_bn": "কচুয়াই",
          "name_en": "Kachua",
          "path": "rangpur/gaibandha/saghata/kachua"
         },
@@ -36094,6 +36986,78 @@
        "name_en": "Sundarganj",
        "path": "rangpur/gaibandha/sundarganj",
        "children": [
+        {
+         "id": 60075,
+         "level": "pourashava",
+         "name_bn": "সুন্দরগঞ্জ পৌরসভা",
+         "name_en": "Sundarganj Pourashava",
+         "path": "rangpur/gaibandha/sundarganj/sundarganj-pourashava",
+         "children": [
+          {
+           "id": 70730,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/gaibandha/sundarganj/sundarganj-pourashava/ward-1"
+          },
+          {
+           "id": 70731,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/gaibandha/sundarganj/sundarganj-pourashava/ward-2"
+          },
+          {
+           "id": 70732,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/gaibandha/sundarganj/sundarganj-pourashava/ward-3"
+          },
+          {
+           "id": 70733,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/gaibandha/sundarganj/sundarganj-pourashava/ward-4"
+          },
+          {
+           "id": 70734,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/gaibandha/sundarganj/sundarganj-pourashava/ward-5"
+          },
+          {
+           "id": 70735,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/gaibandha/sundarganj/sundarganj-pourashava/ward-6"
+          },
+          {
+           "id": 70736,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/gaibandha/sundarganj/sundarganj-pourashava/ward-7"
+          },
+          {
+           "id": 70737,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/gaibandha/sundarganj/sundarganj-pourashava/ward-8"
+          },
+          {
+           "id": 70738,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/gaibandha/sundarganj/sundarganj-pourashava/ward-9"
+          }
+         ]
+        },
         {
          "id": 43959,
          "level": "union",
@@ -36220,21 +37184,21 @@
         {
          "id": 44145,
          "level": "union",
-         "name_bn": "আন্ধারীরঝাড়",
+         "name_bn": "আন্ধারীঝাড়",
          "name_en": "Andharirjhar",
          "path": "rangpur/kurigram/bhurungamari/andharirjhar"
         },
         {
          "id": 44147,
          "level": "union",
-         "name_bn": "বঙ্গসোনাহাট",
+         "name_bn": "বঙ্গঁসোনাহাট",
          "name_en": "Bangasonahat",
          "path": "rangpur/kurigram/bhurungamari/bangasonahat"
         },
         {
          "id": 44143,
          "level": "union",
-         "name_bn": "ভূরুঙ্গামারী",
+         "name_bn": "ভুরুঙ্গামারী",
          "name_en": "Bhurungamari",
          "path": "rangpur/kurigram/bhurungamari/bhurungamari"
         },
@@ -36378,6 +37342,78 @@
        "path": "rangpur/kurigram/kurigram-sadar",
        "children": [
         {
+         "id": 60076,
+         "level": "pourashava",
+         "name_bn": "কুড়িগ্রাম পৌরসভা",
+         "name_en": "Kurigram Pourashava",
+         "path": "rangpur/kurigram/kurigram-sadar/kurigram-pourashava",
+         "children": [
+          {
+           "id": 70739,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/kurigram/kurigram-sadar/kurigram-pourashava/ward-1"
+          },
+          {
+           "id": 70740,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/kurigram/kurigram-sadar/kurigram-pourashava/ward-2"
+          },
+          {
+           "id": 70741,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/kurigram/kurigram-sadar/kurigram-pourashava/ward-3"
+          },
+          {
+           "id": 70742,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/kurigram/kurigram-sadar/kurigram-pourashava/ward-4"
+          },
+          {
+           "id": 70743,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/kurigram/kurigram-sadar/kurigram-pourashava/ward-5"
+          },
+          {
+           "id": 70744,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/kurigram/kurigram-sadar/kurigram-pourashava/ward-6"
+          },
+          {
+           "id": 70745,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/kurigram/kurigram-sadar/kurigram-pourashava/ward-7"
+          },
+          {
+           "id": 70746,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/kurigram/kurigram-sadar/kurigram-pourashava/ward-8"
+          },
+          {
+           "id": 70747,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/kurigram/kurigram-sadar/kurigram-pourashava/ward-9"
+          }
+         ]
+        },
+        {
          "id": 44119,
          "level": "union",
          "name_bn": "বেলগাছা",
@@ -36443,6 +37479,78 @@
        "path": "rangpur/kurigram/nageshwari",
        "children": [
         {
+         "id": 60077,
+         "level": "pourashava",
+         "name_bn": "নাগেশ্বরী পৌরসভা",
+         "name_en": "Nageshwari Pourashava",
+         "path": "rangpur/kurigram/nageshwari/nageshwari-pourashava",
+         "children": [
+          {
+           "id": 70748,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/kurigram/nageshwari/nageshwari-pourashava/ward-1"
+          },
+          {
+           "id": 70749,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/kurigram/nageshwari/nageshwari-pourashava/ward-2"
+          },
+          {
+           "id": 70750,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/kurigram/nageshwari/nageshwari-pourashava/ward-3"
+          },
+          {
+           "id": 70751,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/kurigram/nageshwari/nageshwari-pourashava/ward-4"
+          },
+          {
+           "id": 70752,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/kurigram/nageshwari/nageshwari-pourashava/ward-5"
+          },
+          {
+           "id": 70753,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/kurigram/nageshwari/nageshwari-pourashava/ward-6"
+          },
+          {
+           "id": 70754,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/kurigram/nageshwari/nageshwari-pourashava/ward-7"
+          },
+          {
+           "id": 70755,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/kurigram/nageshwari/nageshwari-pourashava/ward-8"
+          },
+          {
+           "id": 70756,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/kurigram/nageshwari/nageshwari-pourashava/ward-9"
+          }
+         ]
+        },
+        {
          "id": 44127,
          "level": "union",
          "name_bn": "বামনডাঙ্গা",
@@ -36466,7 +37574,7 @@
         {
          "id": 44138,
          "level": "union",
-         "name_bn": "বল্লভেরখাস",
+         "name_bn": "বলস্নভেরখাস",
          "name_en": "Bollobherkhas",
          "path": "rangpur/kurigram/nageshwari/bollobherkhas"
         },
@@ -36631,7 +37739,7 @@
         {
          "id": 44157,
          "level": "union",
-         "name_bn": "নাজিমখাঁন",
+         "name_bn": "নজিমখাঁন",
          "name_en": "Nazimkhan",
          "path": "rangpur/kurigram/rajarhat/nazimkhan"
         },
@@ -36664,6 +37772,13 @@
          "name_bn": "বন্দবেড়",
          "name_en": "Bondober",
          "path": "rangpur/kurigram/rowmari/bondober"
+        },
+        {
+         "id": 44547,
+         "level": "union",
+         "name_bn": "চর শৌলমারী",
+         "name_en": "Char Shoulmari",
+         "path": "rangpur/kurigram/rowmari/char-shoulmari"
         },
         {
          "id": 44181,
@@ -36702,6 +37817,78 @@
        "name_en": "Ulipur",
        "path": "rangpur/kurigram/ulipur",
        "children": [
+        {
+         "id": 60078,
+         "level": "pourashava",
+         "name_bn": "উলিপুর পৌরসভা",
+         "name_en": "Ulipur Pourashava",
+         "path": "rangpur/kurigram/ulipur/ulipur-pourashava",
+         "children": [
+          {
+           "id": 70757,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/kurigram/ulipur/ulipur-pourashava/ward-1"
+          },
+          {
+           "id": 70758,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/kurigram/ulipur/ulipur-pourashava/ward-2"
+          },
+          {
+           "id": 70759,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/kurigram/ulipur/ulipur-pourashava/ward-3"
+          },
+          {
+           "id": 70760,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/kurigram/ulipur/ulipur-pourashava/ward-4"
+          },
+          {
+           "id": 70761,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/kurigram/ulipur/ulipur-pourashava/ward-5"
+          },
+          {
+           "id": 70762,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/kurigram/ulipur/ulipur-pourashava/ward-6"
+          },
+          {
+           "id": 70763,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/kurigram/ulipur/ulipur-pourashava/ward-7"
+          },
+          {
+           "id": 70764,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/kurigram/ulipur/ulipur-pourashava/ward-8"
+          },
+          {
+           "id": 70765,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/kurigram/ulipur/ulipur-pourashava/ward-9"
+          }
+         ]
+        },
         {
          "id": 44169,
          "level": "union",
@@ -36747,7 +37934,7 @@
         {
          "id": 44163,
          "level": "union",
-         "name_bn": "দুর্গাপুর",
+         "name_bn": "দূর্গাপুর",
          "name_en": "Durgapur",
          "path": "rangpur/kurigram/ulipur/durgapur"
         },
@@ -36828,7 +38015,7 @@
         {
          "id": 43834,
          "level": "union",
-         "name_bn": "দূর্গাপুর",
+         "name_bn": "দুর্গাপুর",
          "name_en": "Durgapur",
          "path": "rangpur/lalmonirhat/aditmari/durgapur"
         },
@@ -36935,7 +38122,7 @@
         {
          "id": 43815,
          "level": "union",
-         "name_bn": "সিন্দুর্ণা",
+         "name_bn": "সিন্দুর্না",
          "name_en": "Sindurna",
          "path": "rangpur/lalmonirhat/hatibandha/sindurna"
         },
@@ -36956,7 +38143,7 @@
         {
          "id": 43819,
          "level": "union",
-         "name_bn": "ভেলাগুড়ি",
+         "name_bn": "ভেলাগুড়ী",
          "name_en": "Vhelaguri",
          "path": "rangpur/lalmonirhat/hatibandha/vhelaguri"
         }
@@ -37021,7 +38208,7 @@
         {
          "id": 43806,
          "level": "union",
-         "name_bn": "তুষভান্ডার",
+         "name_bn": "তুষভাণ্ডার",
          "name_en": "Tushbhandar",
          "path": "rangpur/lalmonirhat/kaliganj/tushbhandar"
         }
@@ -37034,6 +38221,78 @@
        "name_en": "Lalmonirhat Sadar",
        "path": "rangpur/lalmonirhat/lalmonirhat-sadar",
        "children": [
+        {
+         "id": 60079,
+         "level": "pourashava",
+         "name_bn": "লালমনিরহাট পৌরসভা",
+         "name_en": "Lalmonirhat Pourashava",
+         "path": "rangpur/lalmonirhat/lalmonirhat-sadar/lalmonirhat-pourashava",
+         "children": [
+          {
+           "id": 70766,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/lalmonirhat/lalmonirhat-sadar/lalmonirhat-pourashava/ward-1"
+          },
+          {
+           "id": 70767,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/lalmonirhat/lalmonirhat-sadar/lalmonirhat-pourashava/ward-2"
+          },
+          {
+           "id": 70768,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/lalmonirhat/lalmonirhat-sadar/lalmonirhat-pourashava/ward-3"
+          },
+          {
+           "id": 70769,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/lalmonirhat/lalmonirhat-sadar/lalmonirhat-pourashava/ward-4"
+          },
+          {
+           "id": 70770,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/lalmonirhat/lalmonirhat-sadar/lalmonirhat-pourashava/ward-5"
+          },
+          {
+           "id": 70771,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/lalmonirhat/lalmonirhat-sadar/lalmonirhat-pourashava/ward-6"
+          },
+          {
+           "id": 70772,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/lalmonirhat/lalmonirhat-sadar/lalmonirhat-pourashava/ward-7"
+          },
+          {
+           "id": 70773,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/lalmonirhat/lalmonirhat-sadar/lalmonirhat-pourashava/ward-8"
+          },
+          {
+           "id": 70774,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/lalmonirhat/lalmonirhat-sadar/lalmonirhat-pourashava/ward-9"
+          }
+         ]
+        },
         {
          "id": 43798,
          "level": "union",
@@ -37106,6 +38365,78 @@
        "name_en": "Patgram",
        "path": "rangpur/lalmonirhat/patgram",
        "children": [
+        {
+         "id": 60080,
+         "level": "pourashava",
+         "name_bn": "পাটগ্রাম পৌরসভা",
+         "name_en": "Patgram Pourashava",
+         "path": "rangpur/lalmonirhat/patgram/patgram-pourashava",
+         "children": [
+          {
+           "id": 70775,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/lalmonirhat/patgram/patgram-pourashava/ward-1"
+          },
+          {
+           "id": 70776,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/lalmonirhat/patgram/patgram-pourashava/ward-2"
+          },
+          {
+           "id": 70777,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/lalmonirhat/patgram/patgram-pourashava/ward-3"
+          },
+          {
+           "id": 70778,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/lalmonirhat/patgram/patgram-pourashava/ward-4"
+          },
+          {
+           "id": 70779,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/lalmonirhat/patgram/patgram-pourashava/ward-5"
+          },
+          {
+           "id": 70780,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/lalmonirhat/patgram/patgram-pourashava/ward-6"
+          },
+          {
+           "id": 70781,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/lalmonirhat/patgram/patgram-pourashava/ward-7"
+          },
+          {
+           "id": 70782,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/lalmonirhat/patgram/patgram-pourashava/ward-8"
+          },
+          {
+           "id": 70783,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/lalmonirhat/patgram/patgram-pourashava/ward-9"
+          }
+         ]
+        },
         {
          "id": 43828,
          "level": "union",
@@ -37232,21 +38563,21 @@
         {
          "id": 43854,
          "level": "union",
-         "name_bn": "পশ্চিম ছাতনাই",
+         "name_bn": "পশ্চিশ ছাতনাই",
          "name_en": "Paschim Chhatnay",
          "path": "rangpur/nilphamari/dimla/paschim-chhatnay"
         },
         {
          "id": 43863,
          "level": "union",
-         "name_bn": "পুর্ব ছাতনাই",
+         "name_bn": "পূর্ব ছাতনাই",
          "name_en": "Purba Chhatnay",
          "path": "rangpur/nilphamari/dimla/purba-chhatnay"
         },
         {
          "id": 43862,
          "level": "union",
-         "name_bn": "টেপা খরীবাড়ী",
+         "name_bn": "টেপা খড়িবাড়ী",
          "name_en": "Tepa Khribari",
          "path": "rangpur/nilphamari/dimla/tepa-khribari"
         }
@@ -37260,6 +38591,78 @@
        "path": "rangpur/nilphamari/domar",
        "children": [
         {
+         "id": 60081,
+         "level": "pourashava",
+         "name_bn": "ডোমার পৌরসভা",
+         "name_en": "Domar Pourashava",
+         "path": "rangpur/nilphamari/domar/domar-pourashava",
+         "children": [
+          {
+           "id": 70784,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/nilphamari/domar/domar-pourashava/ward-1"
+          },
+          {
+           "id": 70785,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/nilphamari/domar/domar-pourashava/ward-2"
+          },
+          {
+           "id": 70786,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/nilphamari/domar/domar-pourashava/ward-3"
+          },
+          {
+           "id": 70787,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/nilphamari/domar/domar-pourashava/ward-4"
+          },
+          {
+           "id": 70788,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/nilphamari/domar/domar-pourashava/ward-5"
+          },
+          {
+           "id": 70789,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/nilphamari/domar/domar-pourashava/ward-6"
+          },
+          {
+           "id": 70790,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/nilphamari/domar/domar-pourashava/ward-7"
+          },
+          {
+           "id": 70791,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/nilphamari/domar/domar-pourashava/ward-8"
+          },
+          {
+           "id": 70792,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/nilphamari/domar/domar-pourashava/ward-9"
+          }
+         ]
+        },
+        {
          "id": 43848,
          "level": "union",
          "name_bn": "বামুনীয়া",
@@ -37269,7 +38672,7 @@
         {
          "id": 43845,
          "level": "union",
-         "name_bn": "ভোগডাবুড়ী",
+         "name_bn": "ভোগডাবুড়ি",
          "name_en": "Bhogdaburi",
          "path": "rangpur/nilphamari/domar/bhogdaburi"
         },
@@ -37297,7 +38700,7 @@
         {
          "id": 43853,
          "level": "union",
-         "name_bn": "হরিণচরা",
+         "name_bn": "হরিণচড়া",
          "name_en": "Harinchara",
          "path": "rangpur/nilphamari/domar/harinchara"
         },
@@ -37338,6 +38741,78 @@
        "name_en": "Jaldhaka",
        "path": "rangpur/nilphamari/jaldhaka",
        "children": [
+        {
+         "id": 60082,
+         "level": "pourashava",
+         "name_bn": "জলঢাকা পৌরসভা",
+         "name_en": "Jaldhaka Pourashava",
+         "path": "rangpur/nilphamari/jaldhaka/jaldhaka-pourashava",
+         "children": [
+          {
+           "id": 70793,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/nilphamari/jaldhaka/jaldhaka-pourashava/ward-1"
+          },
+          {
+           "id": 70794,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/nilphamari/jaldhaka/jaldhaka-pourashava/ward-2"
+          },
+          {
+           "id": 70795,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/nilphamari/jaldhaka/jaldhaka-pourashava/ward-3"
+          },
+          {
+           "id": 70796,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/nilphamari/jaldhaka/jaldhaka-pourashava/ward-4"
+          },
+          {
+           "id": 70797,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/nilphamari/jaldhaka/jaldhaka-pourashava/ward-5"
+          },
+          {
+           "id": 70798,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/nilphamari/jaldhaka/jaldhaka-pourashava/ward-6"
+          },
+          {
+           "id": 70799,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/nilphamari/jaldhaka/jaldhaka-pourashava/ward-7"
+          },
+          {
+           "id": 70800,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/nilphamari/jaldhaka/jaldhaka-pourashava/ward-8"
+          },
+          {
+           "id": 70801,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/nilphamari/jaldhaka/jaldhaka-pourashava/ward-9"
+          }
+         ]
+        },
         {
          "id": 43866,
          "level": "union",
@@ -37383,7 +38858,7 @@
         {
          "id": 43871,
          "level": "union",
-         "name_bn": "কাঠালী",
+         "name_bn": "কাঁঠালী",
          "name_en": "Kathali",
          "path": "rangpur/nilphamari/jaldhaka/kathali"
         },
@@ -37497,6 +38972,78 @@
        "path": "rangpur/nilphamari/nilphamari-sadar",
        "children": [
         {
+         "id": 60083,
+         "level": "pourashava",
+         "name_bn": "নীলফামারী পৌরসভা",
+         "name_en": "Nilphamari Pourashava",
+         "path": "rangpur/nilphamari/nilphamari-sadar/nilphamari-pourashava",
+         "children": [
+          {
+           "id": 70802,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/nilphamari/nilphamari-sadar/nilphamari-pourashava/ward-1"
+          },
+          {
+           "id": 70803,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/nilphamari/nilphamari-sadar/nilphamari-pourashava/ward-2"
+          },
+          {
+           "id": 70804,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/nilphamari/nilphamari-sadar/nilphamari-pourashava/ward-3"
+          },
+          {
+           "id": 70805,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/nilphamari/nilphamari-sadar/nilphamari-pourashava/ward-4"
+          },
+          {
+           "id": 70806,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/nilphamari/nilphamari-sadar/nilphamari-pourashava/ward-5"
+          },
+          {
+           "id": 70807,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/nilphamari/nilphamari-sadar/nilphamari-pourashava/ward-6"
+          },
+          {
+           "id": 70808,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/nilphamari/nilphamari-sadar/nilphamari-pourashava/ward-7"
+          },
+          {
+           "id": 70809,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/nilphamari/nilphamari-sadar/nilphamari-pourashava/ward-8"
+          },
+          {
+           "id": 70810,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/nilphamari/nilphamari-sadar/nilphamari-pourashava/ward-9"
+          }
+         ]
+        },
+        {
          "id": 43884,
          "level": "union",
          "name_bn": "চওড়া বড়গাছা",
@@ -37541,7 +39088,7 @@
         {
          "id": 43886,
          "level": "union",
-         "name_bn": "খোকসাবাড়ী",
+         "name_bn": "খোকশাবাড়ী",
          "name_en": "Khoksabari",
          "path": "rangpur/nilphamari/nilphamari-sadar/khoksabari"
         },
@@ -37555,7 +39102,7 @@
         {
          "id": 43897,
          "level": "union",
-         "name_bn": "লক্ষ্মীচাপ",
+         "name_bn": "লক্ষীচাপ",
          "name_en": "Lakshmicha",
          "path": "rangpur/nilphamari/nilphamari-sadar/lakshmicha"
         },
@@ -37610,6 +39157,120 @@
        "name_en": "Syedpur",
        "path": "rangpur/nilphamari/syedpur",
        "children": [
+        {
+         "id": 60084,
+         "level": "pourashava",
+         "name_bn": "সৈয়দপুর পৌরসভা",
+         "name_en": "Saidpur Pourashava",
+         "path": "rangpur/nilphamari/syedpur/saidpur-pourashava",
+         "children": [
+          {
+           "id": 70811,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/nilphamari/syedpur/saidpur-pourashava/ward-1"
+          },
+          {
+           "id": 70820,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১০",
+           "name_en": "Ward 10",
+           "path": "rangpur/nilphamari/syedpur/saidpur-pourashava/ward-10"
+          },
+          {
+           "id": 70821,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১১",
+           "name_en": "Ward 11",
+           "path": "rangpur/nilphamari/syedpur/saidpur-pourashava/ward-11"
+          },
+          {
+           "id": 70822,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১২",
+           "name_en": "Ward 12",
+           "path": "rangpur/nilphamari/syedpur/saidpur-pourashava/ward-12"
+          },
+          {
+           "id": 70823,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১৩",
+           "name_en": "Ward 13",
+           "path": "rangpur/nilphamari/syedpur/saidpur-pourashava/ward-13"
+          },
+          {
+           "id": 70824,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১৪",
+           "name_en": "Ward 14",
+           "path": "rangpur/nilphamari/syedpur/saidpur-pourashava/ward-14"
+          },
+          {
+           "id": 70825,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১৫",
+           "name_en": "Ward 15",
+           "path": "rangpur/nilphamari/syedpur/saidpur-pourashava/ward-15"
+          },
+          {
+           "id": 70812,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/nilphamari/syedpur/saidpur-pourashava/ward-2"
+          },
+          {
+           "id": 70813,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/nilphamari/syedpur/saidpur-pourashava/ward-3"
+          },
+          {
+           "id": 70814,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/nilphamari/syedpur/saidpur-pourashava/ward-4"
+          },
+          {
+           "id": 70815,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/nilphamari/syedpur/saidpur-pourashava/ward-5"
+          },
+          {
+           "id": 70816,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/nilphamari/syedpur/saidpur-pourashava/ward-6"
+          },
+          {
+           "id": 70817,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/nilphamari/syedpur/saidpur-pourashava/ward-7"
+          },
+          {
+           "id": 70818,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/nilphamari/syedpur/saidpur-pourashava/ward-8"
+          },
+          {
+           "id": 70819,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/nilphamari/syedpur/saidpur-pourashava/ward-9"
+          }
+         ]
+        },
         {
          "id": 43841,
          "level": "union",
@@ -37666,7 +39327,7 @@
         {
          "id": 43682,
          "level": "union",
-         "name_bn": "আলোয়াখোয়া",
+         "name_bn": "আলোয়াখোওয়া",
          "name_en": "Alowakhowa",
          "path": "rangpur/panchagarh/atwari/alowakhowa"
         },
@@ -37715,9 +39376,81 @@
        "path": "rangpur/panchagarh/boda",
        "children": [
         {
+         "id": 60085,
+         "level": "pourashava",
+         "name_bn": "Boda Pourashava",
+         "name_en": "Boda Pourashava",
+         "path": "rangpur/panchagarh/boda/boda-pourashava",
+         "children": [
+          {
+           "id": 70826,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/panchagarh/boda/boda-pourashava/ward-1"
+          },
+          {
+           "id": 70827,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/panchagarh/boda/boda-pourashava/ward-2"
+          },
+          {
+           "id": 70828,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/panchagarh/boda/boda-pourashava/ward-3"
+          },
+          {
+           "id": 70829,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/panchagarh/boda/boda-pourashava/ward-4"
+          },
+          {
+           "id": 70830,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/panchagarh/boda/boda-pourashava/ward-5"
+          },
+          {
+           "id": 70831,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/panchagarh/boda/boda-pourashava/ward-6"
+          },
+          {
+           "id": 70832,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/panchagarh/boda/boda-pourashava/ward-7"
+          },
+          {
+           "id": 70833,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/panchagarh/boda/boda-pourashava/ward-8"
+          },
+          {
+           "id": 70834,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/panchagarh/boda/boda-pourashava/ward-9"
+          }
+         ]
+        },
+        {
          "id": 43670,
          "level": "union",
-         "name_bn": "বেংহারী",
+         "name_bn": "বেংহারি",
          "name_en": "Banghari",
          "path": "rangpur/panchagarh/boda/banghari"
         },
@@ -37752,7 +39485,7 @@
         {
          "id": 43671,
          "level": "union",
-         "name_bn": "কাজলদীঘি কালিগঞ্জ",
+         "name_bn": "কাজলদিঘী কালিয়াগঞ্জ",
          "name_en": "Kajoldighi Kaligonj",
          "path": "rangpur/panchagarh/boda/kajoldighi-kaligonj"
         },
@@ -37766,14 +39499,14 @@
         {
          "id": 43669,
          "level": "union",
-         "name_bn": "ময়দান দীঘি",
+         "name_bn": "ময়দানদিঘি",
          "name_en": "Moidandighi",
          "path": "rangpur/panchagarh/boda/moidandighi"
         },
         {
          "id": 43677,
          "level": "union",
-         "name_bn": "পাচপীর",
+         "name_bn": "পাঁচপীর",
          "name_en": "Pachpir",
          "path": "rangpur/panchagarh/boda/pachpir"
         },
@@ -37794,9 +39527,81 @@
        "path": "rangpur/panchagarh/debiganj",
        "children": [
         {
+         "id": 60086,
+         "level": "pourashava",
+         "name_bn": "Debiganj Pourashava",
+         "name_en": "Debiganj Pourashava",
+         "path": "rangpur/panchagarh/debiganj/debiganj-pourashava",
+         "children": [
+          {
+           "id": 70835,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/panchagarh/debiganj/debiganj-pourashava/ward-1"
+          },
+          {
+           "id": 70836,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/panchagarh/debiganj/debiganj-pourashava/ward-2"
+          },
+          {
+           "id": 70837,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/panchagarh/debiganj/debiganj-pourashava/ward-3"
+          },
+          {
+           "id": 70838,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/panchagarh/debiganj/debiganj-pourashava/ward-4"
+          },
+          {
+           "id": 70839,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/panchagarh/debiganj/debiganj-pourashava/ward-5"
+          },
+          {
+           "id": 70840,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/panchagarh/debiganj/debiganj-pourashava/ward-6"
+          },
+          {
+           "id": 70841,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/panchagarh/debiganj/debiganj-pourashava/ward-7"
+          },
+          {
+           "id": 70842,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/panchagarh/debiganj/debiganj-pourashava/ward-8"
+          },
+          {
+           "id": 70843,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/panchagarh/debiganj/debiganj-pourashava/ward-9"
+          }
+         ]
+        },
+        {
          "id": 43667,
          "level": "union",
-         "name_bn": "চেংঠী হাজরা ডাঙ্গা",
+         "name_bn": "চেংঠি হাজরাডাঙ্গা",
          "name_en": "Chengthi Hazra Danga",
          "path": "rangpur/panchagarh/debiganj/chengthi-hazra-danga"
         },
@@ -37824,7 +39629,7 @@
         {
          "id": 43660,
          "level": "union",
-         "name_bn": "দেবীগঞ্জ সদর",
+         "name_bn": "দেবীগঞ্জ",
          "name_en": "Debiganj Sadar",
          "path": "rangpur/panchagarh/debiganj/debiganj-sadar"
         },
@@ -37838,7 +39643,7 @@
         {
          "id": 43659,
          "level": "union",
-         "name_bn": "শালডাঙ্গা",
+         "name_bn": "শালডাংগা",
          "name_en": "Shaldanga",
          "path": "rangpur/panchagarh/debiganj/shaldanga"
         },
@@ -37873,6 +39678,78 @@
        "path": "rangpur/panchagarh/panchagarh-sadar",
        "children": [
         {
+         "id": 60087,
+         "level": "pourashava",
+         "name_bn": "Panchagarh Pourashava",
+         "name_en": "Panchagarh Pourashava",
+         "path": "rangpur/panchagarh/panchagarh-sadar/panchagarh-pourashava",
+         "children": [
+          {
+           "id": 70844,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/panchagarh/panchagarh-sadar/panchagarh-pourashava/ward-1"
+          },
+          {
+           "id": 70845,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/panchagarh/panchagarh-sadar/panchagarh-pourashava/ward-2"
+          },
+          {
+           "id": 70846,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/panchagarh/panchagarh-sadar/panchagarh-pourashava/ward-3"
+          },
+          {
+           "id": 70847,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/panchagarh/panchagarh-sadar/panchagarh-pourashava/ward-4"
+          },
+          {
+           "id": 70848,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/panchagarh/panchagarh-sadar/panchagarh-pourashava/ward-5"
+          },
+          {
+           "id": 70849,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/panchagarh/panchagarh-sadar/panchagarh-pourashava/ward-6"
+          },
+          {
+           "id": 70850,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/panchagarh/panchagarh-sadar/panchagarh-pourashava/ward-7"
+          },
+          {
+           "id": 70851,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/panchagarh/panchagarh-sadar/panchagarh-pourashava/ward-8"
+          },
+          {
+           "id": 70852,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/panchagarh/panchagarh-sadar/panchagarh-pourashava/ward-9"
+          }
+         ]
+        },
+        {
          "id": 43650,
          "level": "union",
          "name_bn": "অমরখানা",
@@ -37896,7 +39773,7 @@
         {
          "id": 43657,
          "level": "union",
-         "name_bn": "গরিনাবাড়ী",
+         "name_bn": "গড়িনাবাড়ী",
          "name_en": "Garinabari",
          "path": "rangpur/panchagarh/panchagarh-sadar/garinabari"
         },
@@ -37910,7 +39787,7 @@
         {
          "id": 43651,
          "level": "union",
-         "name_bn": "হাড়িভাসা",
+         "name_bn": "হাড়িভাষা",
          "name_en": "Haribhasa",
          "path": "rangpur/panchagarh/panchagarh-sadar/haribhasa"
         },
@@ -37938,7 +39815,7 @@
         {
          "id": 43649,
          "level": "union",
-         "name_bn": "সাতমেরা",
+         "name_bn": "সাতমেড়া",
          "name_en": "Satmara",
          "path": "rangpur/panchagarh/panchagarh-sadar/satmara"
         }
@@ -37968,7 +39845,7 @@
         {
          "id": 43687,
          "level": "union",
-         "name_bn": "বুড়াবুড়ী",
+         "name_bn": "বুড়াবুড়ি",
          "name_en": "Buraburi",
          "path": "rangpur/panchagarh/tetulia/buraburi"
         },
@@ -37989,7 +39866,7 @@
         {
          "id": 43690,
          "level": "union",
-         "name_bn": "তেতুলিয়া",
+         "name_bn": "তেঁতুলিয়া",
          "name_en": "Tentulia",
          "path": "rangpur/panchagarh/tetulia/tentulia"
         },
@@ -38016,7 +39893,240 @@
        "level": "city_corporation",
        "name_bn": "রংপুর সিটি কর্পোরেশন",
        "name_en": "Rangpur City Corporation",
-       "path": "rangpur/rangpur/rangpur-city-corporation"
+       "path": "rangpur/rangpur/rangpur-city-corporation",
+       "children": [
+        {
+         "id": 70871,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ১",
+         "name_en": "Ward 1",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-1"
+        },
+        {
+         "id": 70873,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ১০",
+         "name_en": "Ward 10",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-10"
+        },
+        {
+         "id": 70874,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ১১",
+         "name_en": "Ward 11",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-11"
+        },
+        {
+         "id": 70875,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ১২",
+         "name_en": "Ward 12",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-12"
+        },
+        {
+         "id": 70879,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ১৩",
+         "name_en": "Ward 13",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-13"
+        },
+        {
+         "id": 70880,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ১৪",
+         "name_en": "Ward 14",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-14"
+        },
+        {
+         "id": 70881,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ১৫",
+         "name_en": "Ward 15",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-15"
+        },
+        {
+         "id": 70882,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ১৬",
+         "name_en": "Ward 16",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-16"
+        },
+        {
+         "id": 70883,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ১৭",
+         "name_en": "Ward 17",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-17"
+        },
+        {
+         "id": 70884,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ১৮",
+         "name_en": "Ward 18",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-18"
+        },
+        {
+         "id": 70885,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ১৯",
+         "name_en": "Ward 19",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-19"
+        },
+        {
+         "id": 70872,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ২",
+         "name_en": "Ward 2",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-2"
+        },
+        {
+         "id": 70886,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ২০",
+         "name_en": "Ward 20",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-20"
+        },
+        {
+         "id": 70887,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ২১",
+         "name_en": "Ward 21",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-21"
+        },
+        {
+         "id": 70888,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ২২",
+         "name_en": "Ward 22",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-22"
+        },
+        {
+         "id": 70889,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ২৩",
+         "name_en": "Ward 23",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-23"
+        },
+        {
+         "id": 70890,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ২৪",
+         "name_en": "Ward 24",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-24"
+        },
+        {
+         "id": 70891,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ২৫",
+         "name_en": "Ward 25",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-25"
+        },
+        {
+         "id": 70892,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ২৬",
+         "name_en": "Ward 26",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-26"
+        },
+        {
+         "id": 70893,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ২৭",
+         "name_en": "Ward 27",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-27"
+        },
+        {
+         "id": 70894,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ২৮",
+         "name_en": "Ward 28",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-28"
+        },
+        {
+         "id": 70895,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ২৯",
+         "name_en": "Ward 29",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-29"
+        },
+        {
+         "id": 70898,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ৩",
+         "name_en": "Ward 3",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-3"
+        },
+        {
+         "id": 70896,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ৩০",
+         "name_en": "Ward 30",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-30"
+        },
+        {
+         "id": 70902,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ৩১",
+         "name_en": "Ward 31",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-31"
+        },
+        {
+         "id": 70903,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ৩২",
+         "name_en": "Ward 32",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-32"
+        },
+        {
+         "id": 70897,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ৩৩",
+         "name_en": "Ward 33",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-33"
+        },
+        {
+         "id": 70899,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ৪",
+         "name_en": "Ward 4",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-4"
+        },
+        {
+         "id": 70900,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ৫",
+         "name_en": "Ward 5",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-5"
+        },
+        {
+         "id": 70901,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ৬",
+         "name_en": "Ward 6",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-6"
+        },
+        {
+         "id": 70876,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ৭",
+         "name_en": "Ward 7",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-7"
+        },
+        {
+         "id": 70877,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ৮",
+         "name_en": "Ward 8",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-8"
+        },
+        {
+         "id": 70878,
+         "level": "ward",
+         "name_bn": "ওয়ার্ড নং ৯",
+         "name_en": "Ward 9",
+         "path": "rangpur/rangpur/rangpur-city-corporation/ward-9"
+        }
+       ]
       },
       {
        "id": 30443,
@@ -38026,9 +40136,81 @@
        "path": "rangpur/rangpur/badargonj",
        "children": [
         {
+         "id": 60088,
+         "level": "pourashava",
+         "name_bn": "বদরগঞ্জ পৌরসভা",
+         "name_en": "Badarganj Pourashava",
+         "path": "rangpur/rangpur/badargonj/badarganj-pourashava",
+         "children": [
+          {
+           "id": 70853,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/rangpur/badargonj/badarganj-pourashava/ward-1"
+          },
+          {
+           "id": 70854,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/rangpur/badargonj/badarganj-pourashava/ward-2"
+          },
+          {
+           "id": 70855,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/rangpur/badargonj/badarganj-pourashava/ward-3"
+          },
+          {
+           "id": 70856,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/rangpur/badargonj/badarganj-pourashava/ward-4"
+          },
+          {
+           "id": 70857,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/rangpur/badargonj/badarganj-pourashava/ward-5"
+          },
+          {
+           "id": 70858,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/rangpur/badargonj/badarganj-pourashava/ward-6"
+          },
+          {
+           "id": 70859,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/rangpur/badargonj/badarganj-pourashava/ward-7"
+          },
+          {
+           "id": 70860,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/rangpur/badargonj/badarganj-pourashava/ward-8"
+          },
+          {
+           "id": 70861,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/rangpur/badargonj/badarganj-pourashava/ward-9"
+          }
+         ]
+        },
+        {
          "id": 44064,
          "level": "union",
-         "name_bn": "বিষ্ণপুর",
+         "name_bn": "বিষ্ণুপুর",
          "name_en": "Bishnapur",
          "path": "rangpur/rangpur/badargonj/bishnapur"
         },
@@ -38077,7 +40259,7 @@
         {
          "id": 44062,
          "level": "union",
-         "name_bn": "মধুপুর",
+         "name_bn": "মধূপুর",
          "name_en": "Modhupur",
          "path": "rangpur/rangpur/badargonj/modhupur"
         },
@@ -38163,14 +40345,14 @@
         {
          "id": 44051,
          "level": "union",
-         "name_bn": "মর্ণেয়া",
+         "name_bn": "মর্নেয়া",
          "name_en": "Morneya",
          "path": "rangpur/rangpur/gangachara/morneya"
         },
         {
          "id": 44054,
          "level": "union",
-         "name_bn": "নোহালী",
+         "name_bn": "নোহলী",
          "name_en": "Nohali",
          "path": "rangpur/rangpur/gangachara/nohali"
         }
@@ -38183,6 +40365,78 @@
        "name_en": "Kaunia",
        "path": "rangpur/rangpur/kaunia",
        "children": [
+        {
+         "id": 60089,
+         "level": "pourashava",
+         "name_bn": "Haragachh (Kaunia) Pourashava",
+         "name_en": "Haragachh (Kaunia) Pourashava",
+         "path": "rangpur/rangpur/kaunia/haragachh-kaunia-pourashava",
+         "children": [
+          {
+           "id": 70862,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/rangpur/kaunia/haragachh-kaunia-pourashava/ward-1"
+          },
+          {
+           "id": 70863,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/rangpur/kaunia/haragachh-kaunia-pourashava/ward-2"
+          },
+          {
+           "id": 70864,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/rangpur/kaunia/haragachh-kaunia-pourashava/ward-3"
+          },
+          {
+           "id": 70865,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/rangpur/kaunia/haragachh-kaunia-pourashava/ward-4"
+          },
+          {
+           "id": 70866,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/rangpur/kaunia/haragachh-kaunia-pourashava/ward-5"
+          },
+          {
+           "id": 70867,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/rangpur/kaunia/haragachh-kaunia-pourashava/ward-6"
+          },
+          {
+           "id": 70868,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/rangpur/kaunia/haragachh-kaunia-pourashava/ward-7"
+          },
+          {
+           "id": 70869,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/rangpur/kaunia/haragachh-kaunia-pourashava/ward-8"
+          },
+          {
+           "id": 70870,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/rangpur/kaunia/haragachh-kaunia-pourashava/ward-9"
+          }
+         ]
+        },
         {
          "id": 44103,
          "level": "union",
@@ -38272,7 +40526,7 @@
         {
          "id": 44085,
          "level": "union",
-         "name_bn": "দূর্গাপুর",
+         "name_bn": "দুর্গাপুর",
          "name_en": "Durgapur",
          "path": "rangpur/rangpur/mithapukur/durgapur"
         },
@@ -38293,7 +40547,7 @@
         {
          "id": 44070,
          "level": "union",
-         "name_bn": "খোরাগাছ",
+         "name_bn": "খোড়াগাছ",
          "name_en": "Khoragach",
          "path": "rangpur/rangpur/mithapukur/khoragach"
         },
@@ -38393,7 +40647,7 @@
         {
          "id": 44108,
          "level": "union",
-         "name_bn": "কল্যাণী",
+         "name_bn": "কল্যানী",
          "name_en": "Kollyani",
          "path": "rangpur/rangpur/pirgacha/kollyani"
         },
@@ -38414,7 +40668,7 @@
         {
          "id": 44111,
          "level": "union",
-         "name_bn": "ছাওলা",
+         "name_bn": "ছওলা",
          "name_en": "Saula",
          "path": "rangpur/rangpur/pirgacha/saula"
         },
@@ -38435,6 +40689,78 @@
        "path": "rangpur/rangpur/pirgonj",
        "children": [
         {
+         "id": 60090,
+         "level": "pourashava",
+         "name_bn": "পীরগঞ্জ পৌরসভা",
+         "name_en": "Pirganj Pourashava",
+         "path": "rangpur/rangpur/pirgonj/pirganj-pourashava",
+         "children": [
+          {
+           "id": 70904,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/rangpur/pirgonj/pirganj-pourashava/ward-1"
+          },
+          {
+           "id": 70905,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/rangpur/pirgonj/pirganj-pourashava/ward-2"
+          },
+          {
+           "id": 70906,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/rangpur/pirgonj/pirganj-pourashava/ward-3"
+          },
+          {
+           "id": 70907,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/rangpur/pirgonj/pirganj-pourashava/ward-4"
+          },
+          {
+           "id": 70908,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/rangpur/pirgonj/pirganj-pourashava/ward-5"
+          },
+          {
+           "id": 70910,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/rangpur/pirgonj/pirganj-pourashava/ward-6"
+          },
+          {
+           "id": 70909,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/rangpur/pirgonj/pirganj-pourashava/ward-7"
+          },
+          {
+           "id": 70911,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/rangpur/pirgonj/pirganj-pourashava/ward-8"
+          },
+          {
+           "id": 70912,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/rangpur/pirgonj/pirganj-pourashava/ward-9"
+          }
+         ]
+        },
+        {
          "id": 44093,
          "level": "union",
          "name_bn": "বড় আলমপুর",
@@ -38444,7 +40770,7 @@
         {
          "id": 44089,
          "level": "union",
-         "name_bn": "বড়দরগাহ",
+         "name_bn": "বড়দরগা",
          "name_en": "Borodargah",
          "path": "rangpur/rangpur/pirgonj/borodargah"
         },
@@ -38458,7 +40784,7 @@
         {
          "id": 44087,
          "level": "union",
-         "name_bn": "চৈত্রকোল",
+         "name_bn": "চৈত্রকল",
          "name_en": "Chattracol",
          "path": "rangpur/rangpur/pirgonj/chattracol"
         },
@@ -38493,7 +40819,7 @@
         {
          "id": 44101,
          "level": "union",
-         "name_bn": "পাঁচগাছী",
+         "name_bn": "পাচগাছী",
          "name_en": "Pachgachi",
          "path": "rangpur/rangpur/pirgonj/pachgachi"
         },
@@ -38568,6 +40894,13 @@
          "name_bn": "হরিদেবপুর",
          "name_en": "Horidebpur",
          "path": "rangpur/rangpur/rangpur-sadar/horidebpur"
+        },
+        {
+         "id": 44548,
+         "level": "union",
+         "name_bn": "খলেয়া",
+         "name_en": "Khaleya",
+         "path": "rangpur/rangpur/rangpur-sadar/khaleya"
         },
         {
          "id": 44034,
@@ -38697,7 +41030,7 @@
         {
          "id": 44033,
          "level": "union",
-         "name_bn": "বড়বাড়ী",
+         "name_bn": "বড়বাড়ি",
          "name_en": "Borobari",
          "path": "rangpur/thakurgaon/baliadangi/borobari"
         },
@@ -38804,6 +41137,78 @@
        "path": "rangpur/thakurgaon/pirganj",
        "children": [
         {
+         "id": 60091,
+         "level": "pourashava",
+         "name_bn": "পীরগঞ্জ পৌরসভা",
+         "name_en": "Pirganj Pourashava",
+         "path": "rangpur/thakurgaon/pirganj/pirganj-pourashava",
+         "children": [
+          {
+           "id": 70913,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/thakurgaon/pirganj/pirganj-pourashava/ward-1"
+          },
+          {
+           "id": 70914,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/thakurgaon/pirganj/pirganj-pourashava/ward-2"
+          },
+          {
+           "id": 70915,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/thakurgaon/pirganj/pirganj-pourashava/ward-3"
+          },
+          {
+           "id": 70916,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/thakurgaon/pirganj/pirganj-pourashava/ward-4"
+          },
+          {
+           "id": 70917,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/thakurgaon/pirganj/pirganj-pourashava/ward-5"
+          },
+          {
+           "id": 70918,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/thakurgaon/pirganj/pirganj-pourashava/ward-6"
+          },
+          {
+           "id": 70919,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/thakurgaon/pirganj/pirganj-pourashava/ward-7"
+          },
+          {
+           "id": 70920,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/thakurgaon/pirganj/pirganj-pourashava/ward-8"
+          },
+          {
+           "id": 70921,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/thakurgaon/pirganj/pirganj-pourashava/ward-9"
+          }
+         ]
+        },
+        {
          "id": 44011,
          "level": "union",
          "name_bn": "বৈরচুনা",
@@ -38883,6 +41288,78 @@
        "path": "rangpur/thakurgaon/ranisankail",
        "children": [
         {
+         "id": 60092,
+         "level": "pourashava",
+         "name_bn": "রাণীশংকৈল পৌরসভা",
+         "name_en": "Ranishankail Pourashava",
+         "path": "rangpur/thakurgaon/ranisankail/ranishankail-pourashava",
+         "children": [
+          {
+           "id": 70922,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/thakurgaon/ranisankail/ranishankail-pourashava/ward-1"
+          },
+          {
+           "id": 70923,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/thakurgaon/ranisankail/ranishankail-pourashava/ward-2"
+          },
+          {
+           "id": 70924,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/thakurgaon/ranisankail/ranishankail-pourashava/ward-3"
+          },
+          {
+           "id": 70925,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/thakurgaon/ranisankail/ranishankail-pourashava/ward-4"
+          },
+          {
+           "id": 70926,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/thakurgaon/ranisankail/ranishankail-pourashava/ward-5"
+          },
+          {
+           "id": 70927,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/thakurgaon/ranisankail/ranishankail-pourashava/ward-6"
+          },
+          {
+           "id": 70928,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/thakurgaon/ranisankail/ranishankail-pourashava/ward-7"
+          },
+          {
+           "id": 70929,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/thakurgaon/ranisankail/ranishankail-pourashava/ward-8"
+          },
+          {
+           "id": 70930,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/thakurgaon/ranisankail/ranishankail-pourashava/ward-9"
+          }
+         ]
+        },
+        {
          "id": 44016,
          "level": "union",
          "name_bn": "বাচোর",
@@ -38947,6 +41424,99 @@
        "name_en": "Thakurgaon Sadar",
        "path": "rangpur/thakurgaon/thakurgaon-sadar",
        "children": [
+        {
+         "id": 60093,
+         "level": "pourashava",
+         "name_bn": "ঠাকুরগাঁও পৌরসভা",
+         "name_en": "Thakurgaon Pourashava",
+         "path": "rangpur/thakurgaon/thakurgaon-sadar/thakurgaon-pourashava",
+         "children": [
+          {
+           "id": 70931,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১",
+           "name_en": "Ward 1",
+           "path": "rangpur/thakurgaon/thakurgaon-sadar/thakurgaon-pourashava/ward-1"
+          },
+          {
+           "id": 70940,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১০",
+           "name_en": "Ward 10",
+           "path": "rangpur/thakurgaon/thakurgaon-sadar/thakurgaon-pourashava/ward-10"
+          },
+          {
+           "id": 70941,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১১",
+           "name_en": "Ward 11",
+           "path": "rangpur/thakurgaon/thakurgaon-sadar/thakurgaon-pourashava/ward-11"
+          },
+          {
+           "id": 70942,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ১২",
+           "name_en": "Ward 12",
+           "path": "rangpur/thakurgaon/thakurgaon-sadar/thakurgaon-pourashava/ward-12"
+          },
+          {
+           "id": 70932,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ২",
+           "name_en": "Ward 2",
+           "path": "rangpur/thakurgaon/thakurgaon-sadar/thakurgaon-pourashava/ward-2"
+          },
+          {
+           "id": 70933,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৩",
+           "name_en": "Ward 3",
+           "path": "rangpur/thakurgaon/thakurgaon-sadar/thakurgaon-pourashava/ward-3"
+          },
+          {
+           "id": 70934,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৪",
+           "name_en": "Ward 4",
+           "path": "rangpur/thakurgaon/thakurgaon-sadar/thakurgaon-pourashava/ward-4"
+          },
+          {
+           "id": 70935,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৫",
+           "name_en": "Ward 5",
+           "path": "rangpur/thakurgaon/thakurgaon-sadar/thakurgaon-pourashava/ward-5"
+          },
+          {
+           "id": 70936,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৬",
+           "name_en": "Ward 6",
+           "path": "rangpur/thakurgaon/thakurgaon-sadar/thakurgaon-pourashava/ward-6"
+          },
+          {
+           "id": 70937,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৭",
+           "name_en": "Ward 7",
+           "path": "rangpur/thakurgaon/thakurgaon-sadar/thakurgaon-pourashava/ward-7"
+          },
+          {
+           "id": 70938,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৮",
+           "name_en": "Ward 8",
+           "path": "rangpur/thakurgaon/thakurgaon-sadar/thakurgaon-pourashava/ward-8"
+          },
+          {
+           "id": 70939,
+           "level": "ward",
+           "name_bn": "ওয়ার্ড নং ৯",
+           "name_en": "Ward 9",
+           "path": "rangpur/thakurgaon/thakurgaon-sadar/thakurgaon-pourashava/ward-9"
+          }
+         ]
+        },
         {
          "id": 43983,
          "level": "union",
@@ -39086,6 +41656,13 @@
          "name_bn": "সালন্দর",
          "name_en": "Salandar",
          "path": "rangpur/thakurgaon/thakurgaon-sadar/salandar"
+        },
+        {
+         "id": 44549,
+         "level": "union",
+         "name_bn": "Senua",
+         "name_en": "Senua",
+         "path": "rangpur/thakurgaon/thakurgaon-sadar/senua"
         },
         {
          "id": 43998,

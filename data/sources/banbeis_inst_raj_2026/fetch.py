@@ -1,8 +1,24 @@
 #!/usr/bin/env python3
-"""Fetch BANBEIS institution lists (EIIN registry, e-survey 2024) and keep Rajshahi Division (stdlib + requests only).
+"""Fetch BANBEIS institution lists (EIIN registry, e-survey 2024) and keep one division (default Rajshahi)
+(stdlib + requests only).
 
-Also cross-checks EIINs against the Rajshahi Education Board public institute list (flag only).
-Usage: python3 fetch.py [--offline]   (--offline rebuilds the CSVs from raw/ without network)."""
+For Rajshahi also cross-checks EIINs against the Rajshahi Education Board public institute list (flag only).
+Usage: python3 fetch.py [--offline]   (--offline rebuilds the CSVs from raw/ without network).
+       python3 fetch.py --division rangpur [--out DIR] [--offline]
+           another division (see ../DIVISIONS.md); default output is the sibling folder banbeis_inst_<code>_2026,
+           the Rajshahi files are never touched."""
+import argparse as _argparse
+# division -> code from DIVISIONS.md
+DIVISION_CODES = {"rajshahi": "raj", "rangpur": "rang", "dhaka": "dhk", "chattogram": "ctg", "khulna": "khl",
+                  "barishal": "bar", "sylhet": "syl", "mymensingh": "mym"}
+_ap = _argparse.ArgumentParser()
+_ap.add_argument("--division", default="rajshahi", choices=sorted(DIVISION_CODES))
+_ap.add_argument("--out", default=None, help="output folder (default: this folder for Rajshahi, else the sibling folder)")
+_ap.add_argument("--offline", action="store_true", help="rebuild from raw/ in the output folder without network")
+ARGS = _ap.parse_args()
+DIV = ARGS.division
+DIVT = DIV.title()
+CODE = DIVISION_CODES[DIV]
 # --- polite HTTP helper (copy this block into each fetch.py; stdlib + requests only) -----------------
 # Many *.gov.bd servers send only their leaf certificate and omit the intermediate CA. Browsers fetch the
 # missing intermediate via the certificate's AIA URL; we do the same explicitly: download the published
@@ -93,15 +109,15 @@ def get(url, retries=2, **kw):
 
 # --- admin-name normalisation (source spellings -> standard English names) ------------------------------
 import re as _re
-DIVISION_DISTRICTS = ["Rajshahi", "Natore", "Naogaon", "Chapainawabganj", "Bogura", "Joypurhat", "Pabna", "Sirajganj"]
-_DISTRICT_ALIASES = {
+_RAJ_DISTRICTS = ["Rajshahi", "Natore", "Naogaon", "Chapainawabganj", "Bogura", "Joypurhat", "Pabna", "Sirajganj"]
+_RAJ_DISTRICT_ALIASES = {
     "rajshahi": "Rajshahi", "natore": "Natore", "naogaon": "Naogaon", "chapainawabganj": "Chapainawabganj",
     "chapainawabgonj": "Chapainawabganj", "nawabganj": "Chapainawabganj", "bogura": "Bogura", "bogra": "Bogura",
     "joypurhat": "Joypurhat", "jaipurhat": "Joypurhat", "pabna": "Pabna", "sirajganj": "Sirajganj", "sirajgonj": "Sirajganj",
 }
 # metropolitan thanas of Rajshahi City (not upazilas)
-METRO_THANAS = {"Boalia", "Rajpara", "Motihar", "Shah Makhdum"}
-_UPAZILA_ALIASES = {
+_RAJ_METRO_THANAS = {"Boalia", "Rajpara", "Motihar", "Shah Makhdum"}
+_RAJ_UPAZILA_ALIASES = {
     # Rajshahi
     "bagha": "Bagha", "baghmara": "Bagmara", "bagmara": "Bagmara", "charghat": "Charghat", "durgapur": "Durgapur",
     "godagari": "Godagari", "mohanpur": "Mohanpur", "mohonpur": "Mohanpur", "paba": "Paba", "puthia": "Puthia",
@@ -138,6 +154,59 @@ _UPAZILA_ALIASES = {
     "shahjadpur": "Shahjadpur", "shajadpur": "Shahjadpur", "sirajganjsadar": "Sirajganj Sadar",
     "sirajgonjsadar": "Sirajganj Sadar", "tarash": "Tarash", "ullahpara": "Ullahpara", "ullapara": "Ullahpara",
 }
+# Rangpur Division (keys are _key() of the spellings seen in the BANBEIS / IPEMIS / HRIS lists)
+_RANG_DISTRICTS = ["Rangpur", "Dinajpur", "Gaibandha", "Kurigram", "Lalmonirhat", "Nilphamari", "Panchagarh", "Thakurgaon"]
+_RANG_DISTRICT_ALIASES = {
+    "rangpur": "Rangpur", "dinajpur": "Dinajpur", "gaibandha": "Gaibandha", "kurigram": "Kurigram",
+    "lalmonirhat": "Lalmonirhat", "nilphamari": "Nilphamari", "panchagarh": "Panchagarh", "thakurgaon": "Thakurgaon",
+}
+# metropolitan thanas of Rangpur City (Rangpur Metropolitan Police)
+_RANG_METRO_THANAS = {"Kotwali", "Tajhat", "Mahiganj", "Haragach", "Parshuram", "Hajirhat"}
+_RANG_UPAZILA_ALIASES = {
+    # Dinajpur
+    "biral": "Biral", "birol": "Biral", "birampur": "Birampur", "birganj": "Birganj", "birgonj": "Birganj",
+    "bochaganj": "Bochaganj", "bochagonj": "Bochaganj", "chirirbandar": "Chirirbandar", "dinajpursadar": "Dinajpur Sadar",
+    "fulbari": "Fulbari", "ghoraghat": "Ghoraghat", "hakimpur": "Hakimpur", "kaharole": "Kaharole", "kaharol": "Kaharole",
+    "khansama": "Khansama", "khanshama": "Khansama", "nawabganj": "Nawabganj", "nawabgonj": "Nawabganj",
+    "parbatipur": "Parbatipur", "parbotipur": "Parbatipur",
+    # Gaibandha
+    "fulchhari": "Fulchhari", "fulchari": "Fulchhari", "phulchari": "Fulchhari", "phulchhari": "Fulchhari",
+    "gaibandhasadar": "Gaibandha Sadar", "gobindaganj": "Gobindaganj", "gobindogonj": "Gobindaganj",
+    "gobindagonj": "Gobindaganj", "palashbari": "Palashbari", "sadullapur": "Sadullapur", "shadullapur": "Sadullapur",
+    "saghata": "Saghata", "shaghata": "Saghata", "sundarganj": "Sundarganj", "sundargonj": "Sundarganj",
+    "shundorgonj": "Sundarganj",
+    # Kurigram ("Fulbari" of Kurigram is Phulbari; district-qualified key)
+    "bhurungamari": "Bhurungamari", "charrajibpur": "Char Rajibpur", "rajibpur": "Char Rajibpur", "chilmari": "Chilmari",
+    "kurigramsadar": "Kurigram Sadar", "nageshwari": "Nageshwari", "nageswari": "Nageshwari", "phulbari": "Phulbari",
+    "kurigram/fulbari": "Phulbari", "rajarhat": "Rajarhat", "raumari": "Raumari", "rowmari": "Raumari", "ulipur": "Ulipur",
+    # Lalmonirhat
+    "aditmari": "Aditmari", "hatibandha": "Hatibandha", "kaliganj": "Kaliganj", "kaligonj": "Kaliganj",
+    "lalmonirhatsadar": "Lalmonirhat Sadar", "patgram": "Patgram",
+    # Nilphamari
+    "dimla": "Dimla", "domar": "Domar", "jaldhaka": "Jaldhaka", "kishoreganj": "Kishoreganj", "kishoregonj": "Kishoreganj",
+    "kishorganj": "Kishoreganj", "nilphamarisadar": "Nilphamari Sadar", "nilphamarisadarupaz": "Nilphamari Sadar",
+    "saidpur": "Saidpur", "syedpur": "Saidpur",
+    # Panchagarh
+    "atwari": "Atwari", "boda": "Boda", "debiganj": "Debiganj", "debigonj": "Debiganj",
+    "panchagarhsadar": "Panchagarh Sadar", "tentulia": "Tentulia", "tetulia": "Tentulia",
+    # Rangpur
+    "badarganj": "Badarganj", "badargonj": "Badarganj", "gangachara": "Gangachara", "gangachhara": "Gangachara",
+    "kaunia": "Kaunia", "kawnia": "Kaunia", "mithapukur": "Mithapukur", "pirgachha": "Pirgachha", "pirgacha": "Pirgachha",
+    "pirganj": "Pirganj", "pirgonj": "Pirganj", "rangpursadar": "Rangpur Sadar", "taraganj": "Taraganj",
+    "taragonj": "Taraganj",
+    "kotwali": "Kotwali", "tajhat": "Tajhat", "mahiganj": "Mahiganj", "haragach": "Haragach", "parshuram": "Parshuram",
+    "hajirhat": "Hajirhat",
+    # Thakurgaon (Ruhia and Bhulli are thanas that IPEMIS lists as separate units)
+    "baliadangi": "Baliadangi", "haripur": "Haripur", "horipur": "Haripur", "ranisankail": "Ranisankail",
+    "ranishonkoil": "Ranisankail", "thakurgaonsadar": "Thakurgaon Sadar", "ruhia": "Ruhia", "bhulli": "Bhulli",
+    "vulli": "Bhulli",
+}
+# thanas that a source lists as if they were upazilas (not metropolitan)
+_RANG_OTHER_THANAS = {"Ruhia", "Bhulli"}
+_NORM = {"rajshahi": (_RAJ_DISTRICTS, _RAJ_DISTRICT_ALIASES, _RAJ_METRO_THANAS, _RAJ_UPAZILA_ALIASES),
+         "rangpur": (_RANG_DISTRICTS, _RANG_DISTRICT_ALIASES, _RANG_METRO_THANAS, _RANG_UPAZILA_ALIASES)}
+DIVISION_DISTRICTS, _DISTRICT_ALIASES, METRO_THANAS, _UPAZILA_ALIASES = _NORM.get(DIV, ([], {}, set(), {}))
+OTHER_THANAS = {"rangpur": _RANG_OTHER_THANAS}.get(DIV, set())
 
 
 def _key(s):
@@ -148,7 +217,12 @@ def norm_district(s):
     return _DISTRICT_ALIASES.get(_key(s), "")
 
 
-def norm_upazila(s):
+def norm_upazila(s, district=None):
+    """district (optional) allows district-qualified aliases for names that differ by district."""
+    if district:
+        v = _UPAZILA_ALIASES.get(_key(district) + "/" + _key(s))
+        if v:
+            return v
     return _UPAZILA_ALIASES.get(_key(s), "")
 # --- end normalisation -----------------------------------------------------------------------------------
 
@@ -161,6 +235,8 @@ PLACE_COLS = ["source_key", "source_id", "name_bn", "name_en", "category_key", "
 FACT_COLS = ["entity_level", "entity_name_en", "district_en", "upazila_en", "code", "fact", "value", "unit", "basis",
              "year", "source_key", "source_url", "notes"]
 HERE = os.path.dirname(os.path.abspath(__file__))
+OUT = os.path.abspath(ARGS.out) if ARGS.out else (
+    HERE if DIV == "rajshahi" else os.path.join(os.path.dirname(HERE), f"banbeis_inst_{CODE}_2026"))
 
 
 def nfc(s):
@@ -175,7 +251,7 @@ def cj(d):
 
 
 def write_csv(name, cols, rows):
-    with open(os.path.join(HERE, name), "w", newline="", encoding="utf-8") as f:
+    with open(os.path.join(OUT, name), "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore")
         w.writeheader()
         for r in rows:
@@ -191,20 +267,48 @@ def sha256(path):
 
 
 def update_manifest(files):
-    p = os.path.join(HERE, "SOURCE.json")
-    m = json.load(open(p, encoding="utf-8")) if os.path.exists(p) else {}
+    p = os.path.join(OUT, "SOURCE.json")
+    m = json.load(open(p, encoding="utf-8")) if os.path.exists(p) else new_manifest()
     m["accessed"] = datetime.date.today().isoformat()
-    m["files"] = {f: sha256(os.path.join(HERE, f)) for f in files if os.path.exists(os.path.join(HERE, f))}
+    m["files"] = {f: sha256(os.path.join(OUT, f)) for f in files if os.path.exists(os.path.join(OUT, f))}
     with open(p, "w", encoding="utf-8") as fh:
         json.dump(m, fh, ensure_ascii=False, indent=2)
         fh.write("\n")
+
+
+def new_manifest():
+    """SOURCE.json for a division other than Rajshahi (the Rajshahi manifest is maintained by hand)."""
+    return {
+        "key": SOURCE_KEY,
+        "name": f"BANBEIS institution lists (EIIN registry, e-survey 2024) — {DIVT} Division",
+        "organization": "Bangladesh Bureau of Educational Information and Statistics (BANBEIS), Ministry of Education",
+        "source_type": "government_portal",
+        "trust_level": 4,
+        "urls": [BANBEIS + u for u in FILE_PAGES.values()] + ["https://institute-search.ieims.banbeis.gov.bd/"],
+        "accessed": datetime.date.today().isoformat(),
+        "publication_date": None,
+        "license": None,
+        "license_url": None,
+        "attribution": "Source: BANBEIS (banbeis.gov.bd), institution lists based on e-survey 2024",
+        "division": DIV,
+        "kind": "banbeis",
+        "notes": (f"National XLSX lists (school; college & school-and-college; madrasa; government technical; independent "
+                  f"technical; public/private university; professional) published on banbeis.gov.bd file pages "
+                  f"(object-store links), filtered to DIVISION_NAME={DIVT} and deduplicated by EIIN; same collector and "
+                  "rules as BANBEIS_INST_RAJ_2026. Fields: division, district, thana, institute type, education level, "
+                  "EIIN, name (English only), post office, e-mail, management, MPO status, for-whom, geographical "
+                  "position, area status. No coordinates, no phone numbers, no Bangla names. source_url per row is the "
+                  "BANBEIS Institute Search detail page for that EIIN (its /api/ is disallowed by robots.txt, not "
+                  "crawled). No education-board cross-check for this division. Licence not stated on the portal."),
+        "files": {},
+    }
 # --- end output helpers -----------------------------------------------------------------------------------
 
-# --- BANBEIS institution lists (e-survey 2024): Rajshahi Division -----------------------------------------
+# --- BANBEIS institution lists (e-survey 2024): one division ----------------------------------------------
 import sys, io, zipfile, xml.etree.ElementTree as ET
 from collections import Counter
 
-SOURCE_KEY = "BANBEIS_INST_RAJ_2026"
+SOURCE_KEY = f"BANBEIS_INST_{CODE.upper()}_2026"
 BANBEIS = "https://banbeis.gov.bd"
 DETAIL = "https://institute-search.ieims.banbeis.gov.bd/details/{eiin}"
 BOARD_LIST = "https://rajshahiboard.gov.bd/sonali/ins.php"  # JSON behind https://rajshahiboard.gov.bd/index.php/institute/
@@ -326,14 +430,14 @@ def category(kind, x):
 
 
 def main():
-    offline = "--offline" in sys.argv
-    rawdir = os.path.join(HERE, "raw")
+    offline = ARGS.offline
+    rawdir = os.path.join(OUT, "raw")
     os.makedirs(rawdir, exist_ok=True)
     records = {}  # eiin -> (kind, row dict, [files])
     file_urls = {}
     header = None
     for kind in FILE_PAGES:
-        raw_path = os.path.join(rawdir, f"banbeis_{kind}_rajshahi_division.csv")
+        raw_path = os.path.join(rawdir, f"banbeis_{kind}_{DIV}_division.csv")
         div_rows = []
         if not offline:
             for url in xlsx_links(kind):
@@ -347,7 +451,7 @@ def main():
                 h = [c.strip() for c in rows[hi]]
                 for rr in rows[hi + 1:]:
                     d = dict(zip(h, rr))
-                    if (d.get("DIVISION_NAME") or "").strip() == "Rajshahi":
+                    if (d.get("DIVISION_NAME") or "").strip() == DIVT:
                         d["_file"] = url.rsplit("/", 1)[-1]
                         div_rows.append(d)
             if div_rows:
@@ -369,7 +473,9 @@ def main():
             records[eiin] = (kind, d, [kind])
 
     board = set()
-    if not offline:
+    if DIV != "rajshahi":
+        pass  # the Rajshahi Education Board cross-check applies to Rajshahi Division only
+    elif not offline:
         r = get(BOARD_LIST, timeout=120)
         try:
             board = {x["eiin"] for x in r.json()["aaData"]} if r is not None else set()
@@ -385,12 +491,19 @@ def main():
     rows = []
     for eiin, (kind, d, kinds) in records.items():
         dist = norm_district(d.get("DISTRICT_NAME"))
-        upz = norm_upazila(d.get("THANA_NAME"))
+        upz = norm_upazila(d.get("THANA_NAME"), d.get("DISTRICT_NAME"))
         notes = []
         if not upz:
             notes.append(f"thana '{d.get('THANA_NAME')}' not normalised")
+            if DIV != "rajshahi" and nfc(d.get("THANA_NAME")):  # other divisions: keep the source spelling
+                upz = nfc(d.get("THANA_NAME"))
+        if not dist and DIV != "rajshahi" and nfc(d.get("DISTRICT_NAME")):
+            notes.append(f"district '{d.get('DISTRICT_NAME')}' not normalised")
+            dist = nfc(d.get("DISTRICT_NAME"))
         if upz in METRO_THANAS:
-            notes.append("metropolitan thana of Rajshahi City, not an upazila")
+            notes.append(f"metropolitan thana of {DIVT} City, not an upazila")
+        if upz in OTHER_THANAS:
+            notes.append("thana listed by the source as its own unit, not an upazila")
         cat = category(kind, d)
         if kind == "school" and cat == "education.primary_school":
             notes.append("BANBEIS level 'Govt. Primary (pre to Eight)': primary school extended to class 8")
@@ -408,7 +521,7 @@ def main():
             "area_status": d.get("AREA_STATUS_NAME"), "post_office": None if po in ("", "None") else nfc(po),
             "thana_src": d.get("THANA_NAME"), "district_src": d.get("DISTRICT_NAME"),
             "banbeis_survey_year": d.get("BANBEIS_SURVEY_YEAR") or "2024", "banbeis_lists": kinds,
-            "admin_unit": "metropolitan_thana" if upz in METRO_THANAS else "upazila",
+            "admin_unit": "metropolitan_thana" if upz in METRO_THANAS else "thana" if upz in OTHER_THANAS else "upazila",
         }
         if board and kind in ("school", "college"):
             extra["rajshahi_board_listed"] = eiin in board
@@ -419,7 +532,7 @@ def main():
             "ownership": OWN.get((d.get("MANAGEMENT_NAME") or "").strip(), ""),
             "extra_json": cj(extra), "source_url": DETAIL.format(eiin=eiin), "notes": "; ".join(notes),
         })
-    rows.sort(key=lambda r: (r["district_en"] != "Rajshahi", r["district_en"], r["upazila_en"], r["category_key"], r["name_en"]))
+    rows.sort(key=lambda r: (r["district_en"] != DIVT, r["district_en"], r["upazila_en"], r["category_key"], r["name_en"]))
     write_csv("places.csv", PLACE_COLS, rows)
 
     facts = []
@@ -432,7 +545,7 @@ def main():
                       "basis": "count_of_listed_records", "year": 2024, "source_key": SOURCE_KEY,
                       "source_url": BANBEIS + "/pages/files/69199760933eb65569ddc637", "notes": note})
     for (dist, upz, cat), n in sorted(cnt.items()):
-        facts.append({"entity_level": "thana" if upz in METRO_THANAS else "upazila", "entity_name_en": upz,
+        facts.append({"entity_level": "thana" if upz in METRO_THANAS or upz in OTHER_THANAS else "upazila", "entity_name_en": upz,
                       "district_en": dist, "upazila_en": upz, "fact": "institutions_" + cat.split(".")[1],
                       "value": n, "unit": "institutions", "basis": "count_of_listed_records", "year": 2024,
                       "source_key": SOURCE_KEY, "source_url": BANBEIS + "/pages/files/69199760933eb65569ddc637",

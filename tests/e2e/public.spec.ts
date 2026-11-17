@@ -35,9 +35,9 @@ test('place page shows evidence, source and report link; unverified places are l
   await expect(page.getByRole('note')).toContainText('যাচাই করা হয়নি');
 });
 
-test('live map: Rajshahi District first, division next, boundaries from the API', async ({ page, request }) => {
+test('live map: Rajshahi District first, division next, boundaries as static files', async ({ page, request }) => {
   await page.goto('/map');
-  await expect(page.getByRole('heading', { level: 1 })).toHaveText('লাইভ মানচিত্র — রাজশাহী');
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('লাইভ মানচিত্র');
   await expect(page.getByRole('button', { name: 'রাজশাহী জেলা' })).toHaveAttribute('aria-pressed', 'true');
   await expect(page.getByRole('button', { name: 'রাজশাহী বিভাগ' })).toBeVisible();
   await expect(page.getByRole('checkbox', { name: 'ইউনিয়নের সীমানা' })).toBeChecked();

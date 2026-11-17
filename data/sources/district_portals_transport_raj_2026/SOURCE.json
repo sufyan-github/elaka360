@@ -1,5 +1,7 @@
 {
   "key": "DISTRICT_PORTALS_TRANSPORT_RAJ_2026",
+  "division": "rajshahi",
+  "kind": "district_transport",
   "name": "District & upazila portals (Rajshahi Division) — bus terminals/stands and stations named on transport pages",
   "organization": "Deputy Commissioner / Upazila Nirbahi offices (national portal framework)",
   "source_type": "government_portal",

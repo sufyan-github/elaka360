@@ -1,5 +1,7 @@
 {
   "key": "BB_SCHEDULED_BANKS_RAJ_2026",
+  "division": "rajshahi",
+  "kind": "bb_banks",
   "name": "Bangladesh Bank — Scheduled Banks Statistics (Rajshahi Division extract)",
   "organization": "Bangladesh Bank",
   "source_type": "government_portal",

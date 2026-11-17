@@ -1,5 +1,7 @@
 {
   "key": "RAJSHAHI_POLICE_2026",
+  "division": "rajshahi",
+  "kind": "district_police",
   "name": "Rajshahi District Police — thanas, SP office and control room numbers",
   "organization": "Rajshahi District Police (Bangladesh Police)",
   "source_type": "government_portal",

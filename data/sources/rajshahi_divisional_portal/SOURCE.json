@@ -4,6 +4,8 @@
   "organization": "Office of the Divisional Commissioner, Rajshahi",
   "source_type": "government_portal",
   "trust_level": 4,
+  "division": "rajshahi",
+  "kind": "divisional_portal",
   "urls": [
     "https://rajshahidiv.gov.bd/",
     "https://rajshahidiv.gov.bd/pages/static-pages/697fb33835ce18e1c06cb283",

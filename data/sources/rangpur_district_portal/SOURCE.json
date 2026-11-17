@@ -1,0 +1,27 @@
+{
+  "key": "RANGPUR_DC_PORTAL_2026",
+  "name": "Rangpur District Administration portal — upazila/union list, pourashavas, district at-a-glance",
+  "organization": "Office of the Deputy Commissioner, Rangpur (Government of Bangladesh, a2i National Portal)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "division": "rangpur",
+  "kind": "district_portal_main",
+  "urls": [
+    "https://rangpur.gov.bd/",
+    "https://rangpur.gov.bd/pages/static-pages/6977698ec4774958d7c22ada",
+    "https://rangpur.gov.bd/pages/static-pages/6977698ec4774958d7c22b0e"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "রংপুর জেলা প্রশাসন, জাতীয় তথ্য বাতায়ন (rangpur.gov.bd)",
+  "files": {
+    "areas.csv": "79c591f08a9fc81f5ab0b943184279302d194778742e311585236a6e1cdddf20",
+    "facts.csv": "d87a197cfad42fa4df4feab8fa4e07b5168022ebaad76b8b192ee6d013dce6e1",
+    "raw/pages.csv": "95bc042d9f554fabfaa74144fed24f7c152cd59629374bc981affa3a6166bc9c",
+    "raw/rangpur_glance.txt": "8b71eb0dd3311bea22b97c1c79acbee33d0ed82dbeb3537546bcaf3543b21862",
+    "raw/rangpur_unions.txt": "45d1b3a0397924f21bce6547b6169376df91e488894062c30ef49e5cf6d080ae"
+  },
+  "notes": "Collected by the generic division mode of the a2i portal collectors (pages found through the portals' menus, names and figures parsed from the pages). No licence stated; only facts (names, counts, figures) are extracted. English district/upazila names are the project's keys, not printed."
+}

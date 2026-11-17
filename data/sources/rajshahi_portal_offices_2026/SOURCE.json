@@ -1,5 +1,7 @@
 {
   "key": "RAJSHAHI_PORTAL_OFFICES_2026",
+  "division": "rajshahi",
+  "kind": "portal_offices",
   "name": "Government offices on the national portal sites — Divisional Commissioner, Rajshahi DC & upazila portals, DC/UNO offices of Rajshahi Division",
   "organization": "Divisional / District / Upazila administrations (national portal framework)",
   "source_type": "government_portal",

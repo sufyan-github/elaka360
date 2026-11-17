@@ -1,5 +1,7 @@
 {
   "key": "BD_POLICE_CONTACTS_2020",
+  "division": "rajshahi",
+  "kind": "police_hq_2020",
   "name": "Bangladesh Police HQ — Contacts of Bangladesh Police (RMP and Rajshahi Range sheets)",
   "organization": "Bangladesh Police Headquarters",
   "source_type": "government_portal",

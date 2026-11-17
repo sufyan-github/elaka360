@@ -15,6 +15,8 @@
   "license": null,
   "license_url": null,
   "attribution": "Source: Directorate of Primary Education, IPEMIS (ipemis.dpe.gov.bd)",
+  "division": "rajshahi",
+  "kind": "dpe_ipemis",
   "notes": "Public 'প্রাথমিক বিদ্যালয় ডিরেক্টরি' (school search) of the Integrated Primary Education Management Information System, linked from dpe.gov.bd. Listing endpoint used by the public page (DataTables JSON), queried per district of Rajshahi Division (divisionId=1). Covers government primary, newly nationalised and experimental schools only (no kindergartens, NGO or ebtedayee madrasas). Fields: school code, Bangla + English name, district, upazila, union/ward, cluster, school type, teacher and student counts. No coordinates; the per-school detail page shows the head teacher's personal mobile, which is deliberately NOT collected. Live data (changes daily). No robots.txt on ipemis.dpe.gov.bd / api.ipemis.dpe.gov.bd (404). Licence not stated.",
   "files": {
     "places.csv": "4f26b10f5e11a4e90013fa49baf6d4cd37c01d619b0831b6dd8a3e3f2be28315",

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""geoBoundaries gbOpen BGD ADM4 (union / paurashava / city-ward polygons) -> Rajshahi Division, with HDX P-codes.
+"""geoBoundaries gbOpen BGD ADM4 (union / paurashava / city-ward polygons) -> one division (default Rajshahi), with HDX P-codes.
 
 COD-AB v03 on HDX has no ADM4 polygons. geoBoundaries redistributes the earlier OCHA ROAP / BBS ADM4 layer
 (HDX "administrative-boundaries-of-bangladesh-as-of-2015", year represented 2020) but strips the P-codes. The HDX
@@ -9,9 +9,12 @@ one point whose name equals the polygon name. Everything else is reported, not g
 
 Writes:  boundaries.geojson, areas.csv (centroid lat/lon), facts.csv (area_km2 computed here), SOURCE.json
 Inputs:  geoBoundaries API + GitHub release file (~340 MB, cached in --cache, not committed);
-         ../hdx_cod_ab_bgd/raw/bgd_adminpoints_rajshahi.geojson (run ../hdx_cod_ab_bgd/fetch.py first).
+         ../hdx_cod_ab_bgd/raw/bgd_adminpoints_rajshahi.geojson (run ../hdx_cod_ab_bgd/fetch.py first); for another
+         division ../hdx_cod_ab_bgd_<division>/raw/bgd_adminpoints_<division>.geojson (hdx fetch.py --division ...).
 Dependencies: Python 3 standard library + requests. Geometry helpers are imported from ../hdx_cod_ab_bgd/fetch.py.
-Run:  python3 -I data/sources/geoboundaries_bgd_adm4/fetch.py [--cache DIR]
+Run:  python3 -I data/sources/geoboundaries_bgd_adm4/fetch.py [--division rajshahi] [--out DIR] [--points FILE] [--cache DIR]
+Default (no arguments): Rajshahi Division into this folder. Another division writes to ../geoboundaries_bgd_adm4_<division>/
+with key GEOBOUNDARIES_BGD_ADM4_<DIVISION> (data/sources/DIVISIONS.md).
 """
 import argparse, datetime, importlib.util, json, os, sys, tempfile
 
@@ -25,12 +28,22 @@ KEY = "GEOBOUNDARIES_BGD_ADM4"
 API = "https://www.geoboundaries.org/api/current/gbOpen/BGD/ADM4/"
 PAGE = "https://www.geoboundaries.org/countryDownloads.html"
 SIMPLIFY_DEG = 0.0002
+KIND = "geoboundaries_adm4"
 
 
 def main():
+    global KEY
     ap = argparse.ArgumentParser()
+    ap.add_argument("--division", default="rajshahi", choices=sorted(H.DIVISIONS))
+    ap.add_argument("--out", default=None, help="output folder (default: this folder for rajshahi, else ../geoboundaries_bgd_adm4_<division>)")
+    ap.add_argument("--points", default=None, help="HDX bgd_adminpoints extract of the division (default: from the hdx_cod_ab_bgd folder of the division)")
     ap.add_argument("--cache", default=os.path.join(tempfile.gettempdir(), "elaka360_cache"))
     a = ap.parse_args()
+    _, bbs, _, div_name = H.DIVISIONS[a.division]
+    KEY = H.division_key(KEY, a.division)
+    OUT = H.out_dir(HERE, a.division, a.out)
+    points = a.points or os.path.join(H.out_dir(HDX_DIR, a.division), "raw", f"bgd_adminpoints_{a.division}.geojson")
+    os.makedirs(OUT, exist_ok=True)
     os.makedirs(a.cache, exist_ok=True)
     meta = H.get(API).json()
     gpath = os.path.join(a.cache, "geoBoundaries-BGD-ADM4.geojson")
@@ -38,13 +51,13 @@ def main():
         with H.get(meta["gjDownloadURL"], stream=True) as r, open(gpath, "wb") as f:
             for chunk in r.iter_content(1 << 20):
                 f.write(chunk)
-    pts = json.load(open(os.path.join(HDX_DIR, "raw", "bgd_adminpoints_rajshahi.geojson"), encoding="utf-8"))["features"]
+    pts = json.load(open(points, encoding="utf-8"))["features"]
     adm1 = [p for p in pts if p["properties"]["admin_level"] == 1][0]
     lv4 = [p for p in pts if p["properties"]["admin_level"] == 4]
     xs = [p["geometry"]["coordinates"][0] for p in lv4]; ys = [p["geometry"]["coordinates"][1] for p in lv4]
     B = (min(xs), min(ys), max(xs), max(ys))
 
-    # stream the national file (one feature per line) and keep polygons whose bbox can contain a BD50 label point
+    # stream the national file (one feature per line) and keep polygons whose bbox can contain a label point of the division
     cand = []
     with open(gpath, encoding="utf-8") as fh:
         for line in fh:
@@ -106,15 +119,15 @@ def main():
                       "year": meta.get("boundaryYearRepresented") or "", "source_key": KEY, "source_url": meta["gjDownloadURL"],
                       "notes": "geodesic area computed by Elaka360 from the unsimplified geoBoundaries polygon; not an official figure"})
 
-    with open(os.path.join(HERE, "boundaries.geojson"), "w", encoding="utf-8") as fh:
-        json.dump({"type": "FeatureCollection", "name": f"{KEY} Rajshahi Division (BD50) ADM4", "features": feats}, fh,
+    with open(os.path.join(OUT, "boundaries.geojson"), "w", encoding="utf-8") as fh:
+        json.dump({"type": "FeatureCollection", "name": f"{KEY} {div_name} Division (BD{bbs}) ADM4", "features": feats}, fh,
                   ensure_ascii=False, separators=(",", ":"))
-    H.write_csv(os.path.join(HERE, "areas.csv"), H.AREA_COLS, areas)
-    H.write_csv(os.path.join(HERE, "facts.csv"), H.FACT_COLS, facts)
+    H.write_csv(os.path.join(OUT, "areas.csv"), H.AREA_COLS, areas)
+    H.write_csv(os.path.join(OUT, "facts.csv"), H.FACT_COLS, facts)
     files = ["areas.csv", "boundaries.geojson", "facts.csv"]
     manifest = {
         "key": KEY,
-        "name": "geoBoundaries gbOpen Bangladesh ADM4 (unions, paurashavas, city wards), Rajshahi Division extract",
+        "name": f"geoBoundaries gbOpen Bangladesh ADM4 (unions, paurashavas, city wards), {div_name} Division extract",
         "organization": "geoBoundaries (William & Mary geoLab); original data: Bangladesh Bureau of Statistics (BBS), OCHA ROAP",
         "source_type": "humanitarian_dataset",
         "trust_level": 3,
@@ -124,20 +137,22 @@ def main():
         "license": "CC-BY-IGO-3.0",
         "license_url": "https://creativecommons.org/licenses/by/3.0/igo/legalcode",
         "attribution": "geoBoundaries (Runfola et al. 2020, PLOS ONE); data: Bangladesh Bureau of Statistics (BBS), OCHA ROAP",
-        "files": {f: H.sha256(os.path.join(HERE, f)) for f in files},
+        "files": {f: H.sha256(os.path.join(OUT, f)) for f in files},
         "notes": (f"geoBoundaries {meta.get('boundaryID')}, year represented {meta.get('boundaryYearRepresented')}, "
                   f"source update {meta.get('sourceDataUpdateDate')}, build {meta.get('buildDate')}, licence as stated by "
                   f"geoBoundaries: {meta.get('boundaryLicense')} (licence source {meta.get('licenseSource')}). "
                   "P-codes (HDX_PCODE_2020) attached from HDX COD-AB bgd_adminpoints by point-in-polygon; "
                   f"{len(feats)} polygons kept, {len(problems)} label points/polygons not assigned. "
                   "Polygons simplified (Douglas-Peucker 0.0002 deg, 5 decimals) ring by ring."),
+        "division": a.division,
+        "kind": KIND,
     }
-    json.dump(manifest, open(os.path.join(HERE, "SOURCE.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+    json.dump(manifest, open(os.path.join(OUT, "SOURCE.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     from collections import Counter
     print("kept", len(feats), Counter(f["properties"]["level"] for f in feats))
     print("problems", problems)
     print("centroid outside polygon", sum(1 for a in areas if "OUTSIDE" in a["notes"]))
-    print("boundaries.geojson", os.path.getsize(os.path.join(HERE, "boundaries.geojson")), "bytes")
+    print("boundaries.geojson", os.path.getsize(os.path.join(OUT, "boundaries.geojson")), "bytes")
 
 
 if __name__ == "__main__":

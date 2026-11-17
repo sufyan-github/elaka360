@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Extract Rajshahi-Division bank statistics from Bangladesh Bank's quarterly Scheduled Banks Statistics (BB_SCHEDULED_BANKS_RAJ_2026)."""
+"""Extract Rajshahi-Division bank statistics from Bangladesh Bank's quarterly Scheduled Banks Statistics (BB_SCHEDULED_BANKS_RAJ_2026).
+
+Usage: python3 fetch.py [--division rajshahi|rangpur] [--out DIR]   (default: Rajshahi into this folder; DIVISIONS.md)"""
 # --- polite HTTP helper (copy this block into each fetch.py; stdlib + requests only) -----------------
 # Many *.gov.bd servers send only their leaf certificate and omit the intermediate CA. Browsers fetch the
 # missing intermediate via the certificate's AIA URL; we do the same explicitly: download the published
@@ -197,6 +199,38 @@ def xj(d):
     return json.dumps(d, ensure_ascii=False, separators=(",", ":")) if d else ""
 # --- end common utilities -----------------------------------------------------------------------------
 
+# --- division selection (data/sources/DIVISIONS.md) ---------------------------------------------------------
+import argparse
+DIVISION_CODES = {"rajshahi": "raj", "rangpur": "rang", "dhaka": "dhk", "chattogram": "ctg", "khulna": "khl",
+                  "barishal": "bar", "sylhet": "syl", "mymensingh": "mym"}
+
+
+def division_setup(here, base_key, configured, extra_args=()):
+    """Parse --division/--out -> (args, out_dir, source_key). Rajshahi (default) keeps this folder and key; another
+    division writes to its own folder named per DIVISIONS.md and never touches the Rajshahi files."""
+    ap = argparse.ArgumentParser(description=(__doc__ or "").strip().split("\n")[0])
+    ap.add_argument("--division", default="rajshahi", choices=list(DIVISION_CODES))
+    ap.add_argument("--out", help="output folder (default: this folder for rajshahi, the division's own folder otherwise)")
+    for name, kw in extra_args:
+        ap.add_argument(name, **kw)
+    args = ap.parse_args()
+    if args.division not in configured:
+        ap.error("division %r is not configured in this collector yet (configured: %s)" % (args.division, ", ".join(configured)))
+    here = os.path.abspath(str(here))
+    folder = os.path.basename(here)
+    if args.division == "rajshahi":
+        name, key = folder, base_key
+    else:
+        code = DIVISION_CODES[args.division]
+        name = folder.replace("_raj_", "_%s_" % code) if "_raj_" in folder else "%s_%s" % (folder, args.division)
+        key = base_key.replace("_RAJ_", "_%s_" % code.upper()) if "_RAJ_" in base_key else "%s_%s" % (base_key, args.division.upper())
+    out = os.path.abspath(args.out) if args.out else (here if args.division == "rajshahi" else os.path.join(os.path.dirname(here), name))
+    if args.division != "rajshahi" and out == here:
+        ap.error("refusing to write another division's output into the Rajshahi folder")
+    os.makedirs(out, exist_ok=True)
+    return args, out, key
+# --- end division selection ---------------------------------------------------------------------------------
+
 # --- BB_SCHEDULED_BANKS_RAJ_2026 ----------------------------------------------------------------------
 KEY = "BB_SCHEDULED_BANKS_RAJ_2026"
 URL_LIST = "https://www.bb.org.bd/en/index.php/publication/publictn/2/14"   # Scheduled Banks Statistics (quarterly)
@@ -222,12 +256,45 @@ UPA = {"Adamdighi": "Adamdighi", "Dhunat": "Dhunat", "Dupchanchia": "Dhupchanchi
 # from the rendered page (PDF page 35, printed page 27) for the quarter in PDF_FALLBACK.
 T316 = {"quarter": "April-June 2026", "urban": 600, "rural": 542, "total": 1142}
 
+# Rangpur Division. Table-33 thana names repeat across districts (Kotwali, Fulbari, Pirganj), so the map is per district;
+# '' = metropolitan / non-upazila thana. Table-3.16 (Concld.) image: PDF page 36, printed page 28, 'Rangpur division' column.
+RANGPUR = dict(
+    dists={"Dinajpur": "Dinajpur", "Gaibandah": "Gaibandha", "Kurigram": "Kurigram", "Lalmonirhat": "Lalmonirhat",
+           "Nilphamari": "Nilphamari", "Panchagarh": "Panchagarh", "Rangpur": "Rangpur", "Thakurgaon": "Thakurgaon"},
+    upa={"Dinajpur": {"Birampur": "Birampur", "Birganj": "Birganj", "Birol": "Biral", "Bochaganj": "Bochaganj",
+                      "Chirirbandar": "Chirirbandar", "Fulbari": "Phulbari", "Ghoraghat": "Ghoraghat", "Hakimpur": "Hakimpur",
+                      "Kaharole": "Kaharole", "Khanshama": "Khansama", "Kotwali": "Dinajpur Sadar", "Nawabganj": "Nawabganj",
+                      "Parbotipur": "Parbatipur"},
+         "Gaibandha": {"Fulchhari": "Phulchhari", "Gaibandah Sadar": "Gaibandha Sadar", "Gobindaganj": "Gobindaganj",
+                       "Palashbari": "Palashbari", "Sadullapur": "Sadullapur", "Saghatta": "Saghata", "Sundarganj": "Sundarganj"},
+         "Kurigram": {"Bhurungamari": "Bhurungamari", "Chilmari": "Chilmari", "Fulbari": "Phulbari", "Kurigram Sadar": "Kurigram Sadar",
+                      "Nageswari": "Nageshwari", "Rajarhat": "Rajarhat", "Rajibpur": "Char Rajibpur", "Rowmari": "Raomari",
+                      "Ulipur": "Ulipur"},
+         "Lalmonirhat": {"Aditmari": "Aditmari", "Hatibandha": "Hatibandha", "Kaliganj": "Kaliganj",
+                         "Lalmonirhat Sadar": "Lalmonirhat Sadar", "Patgram": "Patgram"},
+         "Nilphamari": {"Dimla": "Dimla", "Domar": "Domar", "Jaldhaka": "Jaldhaka", "Kishoreganj": "Kishoreganj",
+                        "Nilphamari Sadar": "Nilphamari Sadar", "Sayedpur": "Saidpur"},
+         "Panchagarh": {"Atwari": "Atwari", "Boda": "Boda", "Debiganj": "Debiganj", "Panchagarh Sadar": "Panchagarh Sadar",
+                        "Tetulia": "Tetulia"},
+         "Rangpur": {"Badarganj": "Badarganj", "Gangachara": "Gangachara", "Kaunia": "Kaunia", "Mithapukur": "Mithapukur",
+                     "Pirgacha": "Pirgachha", "Pirganj": "Pirganj", "Taraganj": "Taraganj"},
+         "Thakurgaon": {"Baliadangi": "Baliadangi", "Haripur": "Haripur", "Pirganj": "Pirganj", "Ranisankail": "Ranisankail",
+                        "Thakurgaon Sadar": "Thakurgaon Sadar"}},
+    t316={"quarter": "April-June 2026", "urban": 345, "rural": 428, "total": 773}, next_division="Sylhet Division")
+
 
 def num(s):
     return s.replace(",", "")
 
 
 def main():
+    global HERE, RAW, KEY, DISTS, UPA, T316
+    args, out, KEY = division_setup(HERE, KEY, ["rajshahi", "rangpur"])
+    HERE, RAW = Path(out), Path(out) / "raw"
+    division, head = args.division, args.division.capitalize()
+    div_label, next_div, upa_by_dist = f"{head} Division", "Rangpur Division", None
+    if division == "rangpur":
+        DISTS, T316, next_div, upa_by_dist = RANGPUR["dists"], RANGPUR["t316"], RANGPUR["next_division"], RANGPUR["upa"]
     facts = []
     pdf_url, quarter = PDF_FALLBACK, "April-June, 2026"
     r = get(URL_LIST)
@@ -250,42 +317,44 @@ def main():
     base_note = f"Bangladesh Bank, Scheduled Banks Statistics {quarter}" + (f" (as on {asof.group(1)})" if asof else "")
     if txt:
         # Table-1: Division and district-wise per capita deposits and advances (Taka in lac)
-        i = txt.find("Rajshahi Division", txt.find("Table-1(Concl"))
+        i = txt.find(div_label, txt.find("Table-1(Concl"))
         for line in txt[i:i + 3000].splitlines():
-            m = re.match(r"^\s*(Rajshahi Division|[A-Z][a-z]+)\s+([\d,]+)\s+([\d,]+)\s+([\d.]+)\s+([\d,]+)\s+([\d.]+)\s*$", line)
+            m = re.match(r"^\s*(%s|[A-Z][a-z]+)\s+([\d,]+)\s+([\d,]+)\s+([\d.]+)\s+([\d,]+)\s+([\d.]+)\s*$" % div_label, line)
             if not m:
-                if line.strip().startswith(("Rangpur", "Sylhet")):
+                if line.strip().startswith(("Rangpur", "Sylhet") if division == "rajshahi" else ("Grand Total", "Sylhet")):
                     break
                 continue
             name = m.group(1)
-            lvl, d = ("division", "") if name == "Rajshahi Division" else ("district", DISTS.get(name, ""))
+            lvl, d = ("division", "") if name == div_label else ("district", DISTS.get(name, ""))
             if lvl == "district" and not d:
                 break
-            en = "Rajshahi" if lvl == "division" else d
+            en = head if lvl == "division" else d
             for fact, val, unit in (("bank_deposits", num(m.group(3)), "BDT lakh"), ("bank_deposits_per_capita", m.group(4), "BDT lakh per person"),
                                     ("bank_advances", num(m.group(5)), "BDT lakh"), ("bank_advances_per_capita", m.group(6), "BDT lakh per person")):
                 facts.append(dict(entity_level=lvl, entity_name_en=en, district_en=d, fact=fact, value=val, unit=unit, basis="reported",
                                   year=year, source_key=KEY, source_url=pdf_url,
                                   notes=f"{base_note}, Table-1 (all scheduled banks). Per-capita figures use Bangladesh Bank's population basis ({num(m.group(2))} persons)."))
         # Table-33: deposits by divisions, districts and thanas (all banks)
-        a = txt.find("Rajshahi Division", txt.rfind("Table-33: Deposits distributed"))
-        b = txt.find("Rangpur Division", a)
+        a = txt.find(div_label, txt.rfind("Table-33: Deposits distributed"))
+        b = txt.find(next_div, a)
         cur = ""
         for line in txt[a:b].splitlines():
             m = re.match(r"^\s*([A-Za-z_][A-Za-z_ ]*?)\s+([\d,]+)\s+(\d+)\s+([\d.]+%)\s*$", line)
             if not m:
                 continue
             name = m.group(1).strip()
-            if name == "Rajshahi Division":
-                lvl, d, en, up = "division", "", "Rajshahi", ""
+            if name == div_label:
+                lvl, d, en, up = "division", "", head, ""
             elif name.endswith(" District"):
                 cur = DISTS.get(name[:-9], "")
                 lvl, d, en, up = "district", cur, cur, ""
             else:
-                lvl, d, en, up = "thana", cur, name, UPA.get(name, "")
+                lvl, d, en, up = "thana", cur, name, (UPA.get(name, "") if upa_by_dist is None else upa_by_dist.get(cur, {}).get(name, ""))
             note = f"{base_note}, Table-33 (all banks; thana-level as published by Bangladesh Bank)."
             if lvl == "thana" and not up:
                 note += " Thana is a metropolitan/non-upazila thana or a spelling not mapped (upazila_en empty)."
+            if division != "rajshahi" and lvl == "thana" and name == "Kotwali" and up:
+                note += f" 'Kotwali' = {up} (Kotwali) thana."
             if name == "Kotwali_Bogura":
                 note += " 'Kotwali_Bogura' = Bogura Sadar (Kotwali) thana as spelled by the source."
                 up = "Bogura Sadar"
@@ -296,7 +365,7 @@ def main():
                                   basis="reported", year=year, source_key=KEY, source_url=pdf_url, notes=note))
     if pdf_url == PDF_FALLBACK:
         for k in ("urban", "rural", "total"):
-            facts.append(dict(entity_level="division", entity_name_en="Rajshahi", fact=f"scheduled_bank_branches_{k}" if k != "total" else "scheduled_bank_branches",
+            facts.append(dict(entity_level="division", entity_name_en=head, fact=f"scheduled_bank_branches_{k}" if k != "total" else "scheduled_bank_branches",
                               value=T316[k], unit="branches", basis="reported", year=2026, source_key=KEY, source_url=pdf_url,
                               notes=f"Bangladesh Bank, Scheduled Banks Statistics {T316['quarter']}, Table-3.16 'Region-wise position of scheduled bank branches' "
                                     "(end of quarter); transcribed from the table image. No district-level branch counts are published."))
@@ -304,7 +373,8 @@ def main():
         print("NOTE: newer quarter published — Table-3.16 (image) must be re-transcribed by hand; not written")
     write_csv("facts.csv", FACT_COLS, facts)
     write_manifest(dict(
-        key=KEY, name="Bangladesh Bank — Scheduled Banks Statistics (Rajshahi Division extract)", organization="Bangladesh Bank",
+        key=KEY, division=division, kind="bb_banks",
+        name=f"Bangladesh Bank — Scheduled Banks Statistics ({head} Division extract)", organization="Bangladesh Bank",
         source_type="government_portal", trust_level=4, urls=[URL_LIST, pdf_url], accessed=__import__("datetime").date.today().isoformat(),
         publication_date=None, license=None, license_url=None, attribution="Bangladesh Bank (bb.org.bd)",
         notes="No licence stated. bb.org.bd publishes no public, filterable scheduled-bank branch list (no branch names/addresses/routing "

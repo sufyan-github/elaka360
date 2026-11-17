@@ -1,5 +1,7 @@
 {
   "key": "BD_RAILWAY_RAJ_2026",
+  "division": "rajshahi",
+  "kind": "railway",
   "name": "Bangladesh Railway — station phones and district-wise station counts (Rajshahi Division)",
   "organization": "Bangladesh Railway",
   "source_type": "government_portal",

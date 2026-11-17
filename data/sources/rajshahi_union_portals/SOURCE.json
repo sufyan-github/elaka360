@@ -4,6 +4,8 @@
   "organization": "Union Parishads of Rajshahi District (Government of Bangladesh, a2i National Portal)",
   "source_type": "government_portal",
   "trust_level": 4,
+  "division": "rajshahi",
+  "kind": "union_portals",
   "urls": [
     "https://rajshahi.gov.bd/pages/static-pages/697f79bb35ce18e1c06b5300"
   ],

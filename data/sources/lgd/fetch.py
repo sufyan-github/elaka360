@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
-"""Local Government Division portal (lgd.gov.bd), Rajshahi Division -> LGD_2026.
+"""Local Government Division portal (lgd.gov.bd), one division (default Rajshahi) -> LGD_2026[_<DIVISION>].
 
-Re-runnable, self-contained (stdlib + requests). Usage: python3 -I fetch.py
+Re-runnable, self-contained (stdlib + requests). Usage: python3 -I fetch.py [--division rajshahi] [--out DIR]
 Writes raw/ excerpts, areas.csv, facts.csv and refreshes the file checksums in SOURCE.json.
+Default (no arguments): Rajshahi Division into this folder, as the first run. Another division writes to
+../lgd_<division>/ with key LGD_2026_<DIVISION> (data/sources/DIVISIONS.md); its English upazila names are looked up
+in data/seed/geo/admin_areas.csv by the Bangla name (the Rajshahi run uses the hand-made UPZ_EN table below).
 """
+import argparse
 import csv
+import datetime
 import hashlib
 import html
 import json
@@ -21,9 +26,12 @@ from urllib.parse import urlparse
 import requests
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+FOLDER = HERE  # collector folder; HERE/RAW become the output folder in main()
 RAW = os.path.join(HERE, 'raw')
+SEED = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(HERE))), 'data', 'seed', 'geo', 'admin_areas.csv')
 UA = 'Elaka360-data-pipeline (research; contact via repository)'
 ACCESSED = '2026-11-12'
+KIND = 'lgd'
 DELAY = 1.2  # seconds between requests to the same host
 # Many *.gov.bd servers do not send the Sectigo DV R36 intermediate. We add it (fetched from the
 # certificate's AIA URL) to the system roots; TLS verification stays fully enabled.
@@ -216,9 +224,9 @@ def sha256(path):
     return hashlib.sha256(open(path, 'rb').read()).hexdigest()
 
 
-def update_manifest():
+def update_manifest(template=None):
     p = os.path.join(HERE, 'SOURCE.json')
-    m = json.load(open(p, encoding='utf-8'))
+    m = json.load(open(p, encoding='utf-8')) if os.path.exists(p) else dict(template or {})
     files = {}
     for root, _, names in os.walk(HERE):
         for n in sorted(names):
@@ -233,8 +241,8 @@ def update_manifest():
         f.write('\n')
 
 
-def finish():
-    update_manifest()
+def finish(template=None):
+    update_manifest(template)
     if WARNINGS:
         print('%d warning(s); review before importing.' % len(WARNINGS), file=sys.stderr)
 
@@ -247,6 +255,11 @@ def finish():
 #  - No downloadable pourashava / union list (Excel/PDF) was found on the portal.
 # ---------------------------------------------------------------------------------------------------------------
 KEY = 'LGD_2026'
+# division -> heading on the LGD upazila page, seed admin_areas id
+DIVISIONS = {'rajshahi': ('রাজশাহী বিভাগ', '10002'), 'rangpur': ('রংপুর বিভাগ', '10007'), 'dhaka': ('ঢাকা বিভাগ', '10006'),
+             'chattogram': ('চট্টগ্রাম বিভাগ', '10001'), 'khulna': ('খুলনা বিভাগ', '10003'),
+             'barishal': ('বরিশাল বিভাগ', '10004'), 'sylhet': ('সিলেট বিভাগ', '10005'),
+             'mymensingh': ('ময়মনসিংহ বিভাগ', '10008')}
 B = 'https://lgd.gov.bd/pages/static-pages/'
 U_UPZ = B + '6941401ec4774958d7b54a3f'
 U_UP = B + '69414021c4774958d7b54bea'
@@ -276,11 +289,53 @@ UPZ_EN = {
 }
 
 
+def seed_names(div_id):
+    """District names (bn -> en) and upazila names ((district_bn, upazila_bn) -> en) of a division in the seed."""
+    rows = list(csv.DictReader(open(SEED, encoding='utf-8-sig', newline='')))
+    by = {r['id']: r for r in rows}
+    dist = {nfc(r['name_bn']): r['name_en'] for r in rows if r['level'] == 'district' and r['parent_id'] == div_id}
+    upz = {}
+    for r in rows:
+        d = by.get(r['parent_id'])
+        if r['level'] == 'upazila' and d and d['level'] == 'district' and d['parent_id'] == div_id:
+            upz[(nfc(d['name_bn']), nfc(r['name_bn']))] = r['name_en']
+    return dist, upz
+
+
+def block_of(txt, heading):
+    """The page text from `heading` to the next division heading (whichever comes first)."""
+    i = txt.find(heading)
+    if i < 0:
+        return section(txt, heading, None)
+    ends = [j for j in (txt.find(h, i + len(heading)) for h, _ in DIVISIONS.values() if h != heading) if j > 0]
+    return section(txt, heading, None)[:min(ends) - i] if ends else txt[i:]
+
+
 def main():
+    global HERE, RAW, KEY, ACCESSED
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--division', default='rajshahi', choices=sorted(DIVISIONS))
+    ap.add_argument('--out', default=None, help='output folder (default: this folder for rajshahi, else ../lgd_<division>)')
+    a = ap.parse_args()
+    heading, div_id = DIVISIONS[a.division]
+    raj = a.division == 'rajshahi'
+    HERE = os.path.abspath(a.out) if a.out else (FOLDER if raj else os.path.join(os.path.dirname(FOLDER), 'lgd_' + a.division))
+    RAW = os.path.join(HERE, 'raw')
+    os.makedirs(RAW, exist_ok=True)
+    if not raj:
+        KEY = KEY + '_' + a.division.upper()
+        ACCESSED = datetime.date.today().isoformat()
+    if raj:
+        districts, upz_en = DISTRICTS, {(d, u): e for d in DISTRICTS for u, e in UPZ_EN.items()}
+        expected = 67
+    else:
+        districts, upz_en = seed_names(div_id)
+        expected = len(upz_en)
+    dname = heading.replace(' বিভাগ', '')
     upz = page(U_UPZ)
     up = page(U_UP)
-    block = section(upz['text'], 'রাজশাহী বিভাগ', 'খুলনা বিভাগ')
-    save_raw('upazila_list_rajshahi_division.txt', upz, block)
+    block = section(upz['text'], heading, 'খুলনা বিভাগ') if raj else block_of(upz['text'], heading)
+    save_raw('upazila_list_%s_division.txt' % a.division, upz, block)
     save_raw('union_parishad_page.txt', up, section(up['text'], None, None))
     status_lines = []
     for label, u in MENU_404.items():
@@ -297,35 +352,54 @@ def main():
     note = 'LGD "উপজেলা পরিষদের তালিকা", page updated %s' % upz['updated']
     i = 0
     while i < len(lines):
-        if lines[i] in DISTRICTS and i + 1 < len(lines) and lines[i + 1].startswith('|'):
+        if lines[i] in districts and i + 1 < len(lines) and lines[i + 1].startswith('|'):
             dbn = lines[i]
-            den = DISTRICTS[dbn]
+            den = districts[dbn]
             names = [nfc(x.strip()) for x in lines[i + 1].strip('| ').split(',') if x.strip()]
             for n in names:
                 base = n[:-len(' উপজেলা')] if n.endswith(' উপজেলা') else n
-                en = UPZ_EN.get(base, '')
+                en = upz_en.get((dbn, base), '')
+                sadar = n == 'সিরাজগঞ্জ'
+                if not en and not raj and base == dbn:  # district name alone = the sadar upazila
+                    en = upz_en.get((dbn, base + ' সদর'), '')
+                    sadar = bool(en)
                 if not en:
                     warn('unmapped upazila ' + n)
                 areas.append(dict(level='upazila', name_en=en, name_bn=n, parent_level='district', parent_name_en=den,
                                   parent_name_bn=dbn, district_en=den, upazila_en=en, source_key=KEY, source_url=U_UPZ,
-                                  notes=('Printed as "%s" (sadar upazila). ' % n if n == 'সিরাজগঞ্জ' else '') +
-                                  'English name from the seed, not from LGD. ' + note))
+                                  notes=('Printed as "%s" (sadar upazila). ' % n if sadar else '') +
+                                  ('English name from the seed, not from LGD. ' if en else
+                                   'No seed upazila with this Bangla name; English name left empty. ') + note))
             facts.append(dict(entity_level='district', entity_name_en=den, district_en=den, fact='upazila_count',
                               value=str(len(names)), unit='upazilas', basis='official', year='2023', source_key=KEY,
-                              source_url=U_UPZ, notes=note + '; predates Mokamtala (Bogura) upazila.'))
+                              source_url=U_UPZ, notes=note + ('; predates Mokamtala (Bogura) upazila.' if raj else '')))
             i += 2
             continue
         i += 1
-    if len(areas) != 67:
-        warn('expected 67 upazilas for Rajshahi Division on the LGD list, got %d' % len(areas))
+    if len(areas) != expected:
+        warn('expected %d upazilas for %s Division on the LGD list, got %d' % (expected, a.division.title(), len(areas)))
     expect(up, '৪৫৭১')
-    facts.append(dict(entity_level='country', entity_name_en='Bangladesh', fact='union_parishad_count', value='4571',
-                      unit='union_parishads', basis='official', year='2023', source_key=KEY, source_url=U_UP,
-                      notes='National total (chairman count 4571 x 1) on LGD "ইউনিয়ন পরিষদ" page updated %s; no per-district '
-                            'breakdown or union names; district names link to district portals.' % up['updated']))
+    if raj:  # national figure: kept once, in the Rajshahi folder
+        facts.append(dict(entity_level='country', entity_name_en='Bangladesh', fact='union_parishad_count', value='4571',
+                          unit='union_parishads', basis='official', year='2023', source_key=KEY, source_url=U_UP,
+                          notes='National total (chairman count 4571 x 1) on LGD "ইউনিয়ন পরিষদ" page updated %s; no per-district '
+                                'breakdown or union names; district names link to district portals.' % up['updated']))
     write_csv('areas.csv', AREA_COLS, areas)
     write_csv('facts.csv', FACT_COLS, facts)
-    finish()
+    template = {
+        'key': KEY, 'name': 'Local Government Division portal (lgd.gov.bd) — %s Division extract' % a.division.title(),
+        'organization': 'Local Government Division, Ministry of LGRD&C', 'source_type': 'government_portal',
+        'trust_level': 4, 'urls': ['https://lgd.gov.bd/', U_UPZ, U_UP], 'accessed': ACCESSED, 'publication_date': None,
+        'license': None, 'license_url': None, 'attribution': 'Local Government Division (lgd.gov.bd), Bangladesh National Portal',
+        'files': {},
+        'notes': ('Not a formal LGD list/gazette, so trust 4. Only the upazila-parishad list (page updated %s) has '
+                  '%s Division content; the portal has no pourashava or union list and no downloadable directory; '
+                  'menu pages for city corporations, pourashavas, zila parishads and upazila parishads: see '
+                  'raw/menu_page_status.txt. The national union-parishad total is kept in the Rajshahi LGD_2026 folder '
+                  'only.' % (upz['updated'], a.division.title())),
+        'division': a.division, 'kind': KIND,
+    }
+    finish(template)
 
 
 if __name__ == '__main__':

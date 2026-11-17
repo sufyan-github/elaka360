@@ -22,5 +22,7 @@
     "raw/bgd_adminpoints_rajshahi.geojson": "9c39ae35b68d9e42c606f25eab94b6b8fe08768c12048c4742cba3d923af308a",
     "raw/hdx_cod_ab_bgd_package.json": "7c5aee071ef0b0f6b20c863e9af8a9025312a3a71e0d109b49c9f5a01512fd0d"
   },
-  "notes": "COD-AB v03: ADM1-ADM3 polygons, valid_on 2023-05-21, reviewed 2025-06-01, HDX resource last modified 2026-01-26T15:14:12.782628. HDX dataset_date [2023-05-21T00:00:00 TO 2025-06-01T23:59:59]; 'boundaries created by the source 01 January 2010'. No ADM4 (union) polygons in v03; union/paurashava/ward codes come from the bgd_adminpoints layer (valid_on 2020-11-13, older P-code scheme BD+div+dist+upz+union, 2 digits each). Polygons simplified (Douglas-Peucker 0.0002 deg, 5 decimals) ring by ring, so shared borders can have slivers of a few metres."
+  "notes": "COD-AB v03: ADM1-ADM3 polygons, valid_on 2023-05-21, reviewed 2025-06-01, HDX resource last modified 2026-01-26T15:14:12.782628. HDX dataset_date [2023-05-21T00:00:00 TO 2025-06-01T23:59:59]; 'boundaries created by the source 01 January 2010'. No ADM4 (union) polygons in v03; union/paurashava/ward codes come from the bgd_adminpoints layer (valid_on 2020-11-13, older P-code scheme BD+div+dist+upz+union, 2 digits each). Polygons simplified (Douglas-Peucker 0.0002 deg, 5 decimals) ring by ring, so shared borders can have slivers of a few metres.",
+  "division": "rajshahi",
+  "kind": "hdx_cod_ab"
 }

@@ -1,0 +1,4 @@
+entity_level,entity_name_en,district_en,upazila_en,code,fact,value,unit,basis,year,source_key,source_url,notes
+district,Rangpur,Rangpur,,,police_stations,8,thanas,reported,2026,RANGPUR_POLICE_2026,https://police.rangpur.gov.bd/pages/static-pages/6977394fc4774958d7c10b45,'এক নজরে': ৮টি থানা; Rangpur District Police (outside RpMP)
+district,Rangpur,Rangpur,,,police_circles,4,circles,reported,2026,RANGPUR_POLICE_2026,https://police.rangpur.gov.bd/pages/static-pages/6977394fc4774958d7c10b45,"'এক নজরে': ৪টি সার্কেল; Circles: এ সার্কেল, বি-সার্কেল, সি সার্কেল, ডি সার্কেল"
+district,Rangpur,Rangpur,,,police_investigation_centres,2,centres,reported,2026,RANGPUR_POLICE_2026,https://police.rangpur.gov.bd/pages/static-pages/6977394fc4774958d7c10b45,'এক নজরে': ২টি তদন্ত কেন্দ্র

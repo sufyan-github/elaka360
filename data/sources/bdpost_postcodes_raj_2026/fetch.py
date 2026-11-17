@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Bangladesh Post postcode booklet (scanned PDF on post.rajshahi.gov.bd): post offices of Rajshahi Division with postcodes.
 
-Re-runnable: python3 fetch.py  (stdlib + requests). Optional: ELAKA_CACHE=<dir> caches pages."""
+Re-runnable: python3 fetch.py [--division rajshahi|rangpur] [--out DIR]  (stdlib + requests; default: Rajshahi into this
+folder, DIVISIONS.md). Optional: ELAKA_CACHE=<dir> caches pages."""
 # --- polite HTTP helper (copy this block into each fetch.py; stdlib + requests only) -----------------
 # Many *.gov.bd servers send only their leaf certificate and omit the intermediate CA. Browsers fetch the
 # missing intermediate via the certificate's AIA URL; we do the same explicitly: download the published
@@ -376,6 +377,38 @@ def menu_entries(t):
     return out
 
 
+# --- division selection (data/sources/DIVISIONS.md) ---------------------------------------------------------
+import argparse
+DIVISION_CODES = {"rajshahi": "raj", "rangpur": "rang", "dhaka": "dhk", "chattogram": "ctg", "khulna": "khl",
+                  "barishal": "bar", "sylhet": "syl", "mymensingh": "mym"}
+
+
+def division_setup(here, base_key, configured, extra_args=()):
+    """Parse --division/--out -> (args, out_dir, source_key). Rajshahi (default) keeps this folder and key; another
+    division writes to its own folder named per DIVISIONS.md and never touches the Rajshahi files."""
+    ap = argparse.ArgumentParser(description=(__doc__ or "").strip().split("\n")[0])
+    ap.add_argument("--division", default="rajshahi", choices=list(DIVISION_CODES))
+    ap.add_argument("--out", help="output folder (default: this folder for rajshahi, the division's own folder otherwise)")
+    for name, kw in extra_args:
+        ap.add_argument(name, **kw)
+    args = ap.parse_args()
+    if args.division not in configured:
+        ap.error("division %r is not configured in this collector yet (configured: %s)" % (args.division, ", ".join(configured)))
+    here = os.path.abspath(str(here))
+    folder = os.path.basename(here)
+    if args.division == "rajshahi":
+        name, key = folder, base_key
+    else:
+        code = DIVISION_CODES[args.division]
+        name = folder.replace("_raj_", "_%s_" % code) if "_raj_" in folder else "%s_%s" % (folder, args.division)
+        key = base_key.replace("_RAJ_", "_%s_" % code.upper()) if "_RAJ_" in base_key else "%s_%s" % (base_key, args.division.upper())
+    out = os.path.abspath(args.out) if args.out else (here if args.division == "rajshahi" else os.path.join(os.path.dirname(here), name))
+    if args.division != "rajshahi" and out == here:
+        ap.error("refusing to write another division's output into the Rajshahi folder")
+    os.makedirs(out, exist_ok=True)
+    return args, out, key
+# --- end division selection ---------------------------------------------------------------------------------
+
 # --- BDPOST_POSTCODES_RAJ_2026 ------------------------------------------------------------------------------
 # Bangladesh Post "পোস্ট কোড" booklet, published as a scanned PDF (no text layer) on the Rajshahi DPMG portal
 # (post.rajshahi.gov.bd -> "পোস্ট কোডসমূহ"). bdpost.gov.bd itself publishes no post-office list (its "পোস্টকোড" menu
@@ -535,6 +568,111 @@ Sirajganj|Shahjadpur|কৈজুরী হাট ই, ডি, এস, ও|6773|
 Sirajganj|Tarash|তারাশ ইউ, পি, ও|6780|23|
 """
 
+# Rangpur Division: the same booklet (the old "রাজশাহী রিজিয়ন ৫০০০-৬৯৯৯" includes the Rangpur districts). Booklet p. 19
+# (PDF page 11, right column: Panchagarh, Thakurgaon), p. 20 (PDF page 12, left half: Dinajpur, Nilphamari, Rangpur,
+# Lalmonirhat, Kurigram) and p. 21 (PDF page 12, first column: Gaibandha), transcribed by hand from the page images in
+# raw/. Upazila = the postal group as printed (parent upazila post office or printed thana note); "[inferred]" marks a
+# group whose upazila is not printed and was taken from the office's known location.
+T_RANGPUR = """
+Panchagarh|Panchagarh Sadar|পঞ্চগড় হেড অফিস|5000|19|
+Panchagarh|Boda|বোদা ইউ, পি, ও|5010|19|
+Panchagarh|Debiganj|দেবীগঞ্জ ইউ, পি, ও|5020|19|
+Panchagarh|Tetulia|তেতুলিয়া ইউ, পি, ও|5030|19|
+Panchagarh|Atwari|ছোট ডাব ইউ, পি, ও|5040|19|printed "(থানা আটওয়ারী)"
+Panchagarh|Atwari|মির্জাপুর এস, ও|5041|19|
+Thakurgaon|Thakurgaon Sadar|ঠাকুরগাঁও হেড অফিস|5100|19|
+Thakurgaon|Thakurgaon Sadar|ঠাকুরগাঁও রোড এস, ও|5101|19|
+Thakurgaon|Thakurgaon Sadar|শিবগঞ্জ এস, ও|5102|19|
+Thakurgaon|Thakurgaon Sadar|রুহিয়া এস, ও|5103|19|
+Thakurgaon|Pirganj|পীরগঞ্জ ইউ, পি, ও|5110|19|
+Thakurgaon|Ranisankail|রানী সংকাইল ইউ, পি, ও|5120|19|spelt "রানী সংকাইল" in the booklet
+Thakurgaon|Ranisankail|নেকমরদ ই, ডি, এস, ও|5121|19|
+Thakurgaon|Haripur|জীবনপুর ইউ, পি, ও|5130|19|printed "(হরিপুর থানা)"
+Thakurgaon|Baliadangi|বালিয়াডাংগী ইউ, পি, ও|5140|19|
+Thakurgaon|Baliadangi|লাহিড়ী ই, ডি, এস, ও|5141|19|
+Dinajpur|Dinajpur Sadar|দিনাজপুর হেড অফিস|5200|20|district heading printed "৫২০০-৫২৯০"
+Dinajpur|Dinajpur Sadar|দিনাজপুর রাজবাড়ী ই, ডি, এস, ও|5201|20|
+Dinajpur|Biral|বিরল ইউ, পি, ও|5210|20|
+Dinajpur|Bochaganj|সেতাবগঞ্জ ইউ, পি, ও|5216|20|[inferred] Setabganj is the Bochaganj upazila seat (thana not printed)
+Dinajpur|Birganj|বীরগঞ্জ ইউ, পি, ও|5220|20|
+Dinajpur|Kaharole|মহারাজগঞ্জ ইউ, পি, ও|5226|20|printed "(কাহালোর থানা)"
+Dinajpur|Khansama|খানসামা ইউ, পি, ও|5230|20|
+Dinajpur|Khansama|পাকের হাট ই, ডি, এস, ও|5231|20|
+Dinajpur|Chirirbandar|চিরির বন্দর ইউ, পি, ও|5240|20|
+Dinajpur|Chirirbandar|রানীর বন্দর ই, ডি, এস, ও|5241|20|
+Dinajpur|Parbatipur|পার্বতীপুর ইউ, পি, ও|5250|20|
+Dinajpur|Phulbari|ফুলবাড়ী ইউ, পি, ও|5260|20|
+Dinajpur|Birampur|বিরামপুর ইউ, পি, ও|5266|20|
+Dinajpur|Hakimpur|বাংলা হিলি ইউ, পি, ও|5270|20|printed "(হাকিমপুর থানা)"
+Dinajpur|Nawabganj|নবাবগঞ্জ ইউ, পি, ও|5280|20|
+Dinajpur|Nawabganj|দাউদপুর এস, ও|5281|20|
+Dinajpur|Nawabganj|গোপালপুর এস, ও|5282|20|
+Dinajpur|Ghoraghat|ওসমানপুর ইউ, পি, ও|5290|20|printed "(ঘোড়াঘাট থানা)"
+Dinajpur|Ghoraghat|ঘোড়াঘাট এস, ও|5291|20|
+Nilphamari|Nilphamari Sadar|নীলফামারী হেড অফিস|5300|20|
+Nilphamari|Nilphamari Sadar|নীলফামারী সুগার মিলস্ ই, ডি, এস, ও|5301|20|
+Nilphamari|Saidpur|সৈয়দপুর ইউ, পি, ও|5310|20|
+Nilphamari|Saidpur|সৈয়দপুর উপ শহর এস, ও|5311|20|
+Nilphamari|Kishoreganj|কিশোরীগঞ্জ ইউ, পি, ও|5320|20|spelt "কিশোরীগঞ্জ" in the booklet
+Nilphamari|Jaldhaka|জল ঢাকা ইউ, পি, ও|5330|20|
+Nilphamari|Domar|ডোমার ইউ, পি, ও|5340|20|
+Nilphamari|Domar|চিলাহাটি এস, ও|5341|20|printed unindented after Domar UPO
+Nilphamari|Dimla|ডিমলা ইউ, পি, ও|5350|20|
+Nilphamari|Dimla|ঘগা খড়িবাড়ী এস, ও|5351|20|
+Rangpur||রংপুর হেড অফিস|5400|20|Rangpur city
+Rangpur||রংপুর উপ-শহর এস, ও|5401|20|Rangpur city
+Rangpur||আলমনগর টি, এস, ও|5402|20|Rangpur city
+Rangpur||মাহিগঞ্জ টি, এস, ও|5403|20|Rangpur city
+Rangpur||রংপুর ক্যাডেট কলেজ টি, এস, ও|5404|20|Rangpur city
+Rangpur||রংপুর কারমাইকেল টি এস ও|5405|20|Rangpur city
+Rangpur|Gangachara|গংগা চড়া ইউ, পি, ও|5410|20|
+Rangpur|Taraganj|তারাগঞ্জ ইউ, পি, ও|5420|20|
+Rangpur|Badarganj|বদরগঞ্জ ইউ, পি, ও|5430|20|
+Rangpur|Badarganj|শ্যামপুর এস, ও|5431|20|
+Rangpur|Kaunia|কাউনিয়া ইউ, পি, ও|5440|20|
+Rangpur|Kaunia|হারাগাছ এস, ও|5441|20|
+Rangpur|Pirgachha|পীরগাছা ইউ, পি, ও|5450|20|
+Rangpur|Mithapukur|মিঠাপুকুর ইউ, পি, ও|5460|20|
+Rangpur|Pirganj|পীরগঞ্জ ইউ, পি, ও|5470|20|
+Lalmonirhat|Lalmonirhat Sadar|লালমনিরহাট হেড অফিস|5500|20|
+Lalmonirhat|Lalmonirhat Sadar|মোগলহাট এস, ও|5501|20|
+Lalmonirhat|Lalmonirhat Sadar|কূলাঘাট এস, ও|5402|20|printed "৫৪০২" inside the Lalmonirhat block (5500-5599), the same code as আলমনগর টি, এস, ও (Rangpur); probably a misprint of 5502 — kept as printed
+Lalmonirhat|Aditmari|আদিতমারী ইউ, পি, ও|5510|20|
+Lalmonirhat|Kaliganj|তুষ ভান্ডার ইউ, পি, ও|5520|20|[inferred] Tushbhandar is the Kaliganj upazila seat (thana not printed)
+Lalmonirhat|Hatibandha|হাতীবান্দা ইউ, পি, ও|5530|20|spelt "হাতীবান্দা" in the booklet
+Lalmonirhat|Patgram|পাটগ্রাম ইউ, পি, ও|5540|20|
+Lalmonirhat|Patgram|বাউরা এস, ও|5541|20|
+Lalmonirhat|Patgram|বুড়ীমারী এস, ও|5542|20|
+Kurigram|Kurigram Sadar|কুড়িগ্রাম হেড অফিস|5600|20|
+Kurigram|Kurigram Sadar|পান্ডুল এস, ও|5601|20|
+Kurigram|Rajarhat|রাজারহাট ইউ, পি, ও|5610|20|
+Kurigram|Rajarhat|নাজিমখান এস, ও|5611|20|
+Kurigram|Ulipur|উলিপুর ইউ, পি, ও|5620|20|
+Kurigram|Ulipur|বজরাহাট এস, ও|5621|20|
+Kurigram|Chilmari|চিলমারী ইউ, পি, ও|5630|20|
+Kurigram|Chilmari|জোড়গাছ এস, ও|5631|20|
+Kurigram|Raomari|রৌমারী ইউ, পি, ও|5640|20|
+Kurigram|Char Rajibpur|রাজিবপুর ইউ, পি, ও|5650|20|
+Kurigram|Nageshwari|নাগেশ্বর ইউ, পি, ও|5660|20|spelt "নাগেশ্বর" in the booklet
+Kurigram|Bhurungamari|ভূরুংগামারী ইউ, পি, ও|5670|20|
+Kurigram|Phulbari|ফুলবাড়ী ইউ, পি, ও|5680|20|
+Gaibandha|Gaibandha Sadar|গাইবান্ধা হেড অফিস|5700|21|
+Gaibandha|Sadullapur|সাদুল্লাপুর ইউ, পি, ও|5710|21|
+Gaibandha|Sadullapur|নলডাংগা এস, ও|5711|21|
+Gaibandha|Sundarganj|সুন্দরগঞ্জ ইউ, পি, ও|5720|21|
+Gaibandha|Sundarganj|বামনডাঙগা এস, ও|5721|21|
+Gaibandha|Palashbari|পলাশবাড় ইউ, পি, ও|5730|21|spelt "পলাশবাড়" in the booklet
+Gaibandha|Gobindaganj|গোবিন্দগঞ্জ ইউ, পি, ও|5740|21|
+Gaibandha|Gobindaganj|মহিমাগঞ্জ এস, ও|5741|21|
+Gaibandha|Saghata|বোনারপাড়া ইউ, পি, ও|5750|21|[inferred] Bonarpara is in Saghata upazila; its group includes সাঘাটা এস, ও (thana not printed)
+Gaibandha|Saghata|সাঘাটা এস, ও|5751|21|
+Gaibandha|Phulchhari|ফুলছড়ি ইউ, পি, ও|5760|21|
+Gaibandha|Phulchhari|ভরতখালী এস, ও|5761|21|
+"""
+DIVISION, HEAD = "rajshahi", "Rajshahi"
+BY_DIV = {"rajshahi": dict(T=None, raw=["raw/postcode_booklet_pp21.png", "raw/postcode_booklet_pp22-23.png"]),
+          "rangpur": dict(T=T_RANGPUR, raw=["raw/postcode_booklet_pp18-19.png", "raw/postcode_booklet_pp20-21.png"])}
+
 
 def otype(name):
     for k in sorted(TYPES, key=len, reverse=True):
@@ -544,6 +682,13 @@ def otype(name):
 
 
 def main():
+    global OUT, SOURCE_KEY, T, DIVISION, HEAD
+    args, OUT, SOURCE_KEY = division_setup(OUT, SOURCE_KEY, list(BY_DIV))
+    DIVISION, HEAD = args.division, args.division.capitalize()
+    T = BY_DIV[DIVISION]["T"] or T
+    if DIVISION != "rajshahi":  # this part of the booklet also prints the type without commas ("টি এস ও")
+        TYPES.setdefault("টি এস ও", ("TSO", "Town Sub Post Office"))
+    used = set()
     r = get(PDF_URL, timeout=180)
     pdf_ok, sha = None, None
     if r is not None and r.status_code == 200:
@@ -559,8 +704,14 @@ def main():
         if note:
             notes.append(note)
         if not up:
-            notes.append("inside Rajshahi city; upazila/thana not given")
-        places.append({"source_key": SOURCE_KEY, "source_id": "postcode:%s" % code, "name_bn": nfc(name),
+            notes.append("inside %s city; upazila/thana not given" % HEAD)
+        if DIVISION != "rajshahi" and "[inferred]" in note:
+            notes[-1] = note.replace("[inferred] ", "upazila inferred: ")
+        sid = "postcode:%s" % code
+        if sid in used:  # a code printed twice (misprint): keep both rows, the second with the district in its id
+            sid = "%s-%s" % (sid, dist.lower())
+        used.add(sid)
+        places.append({"source_key": SOURCE_KEY, "source_id": sid, "name_bn": nfc(name),
                        "category_key": "government.post_office", "district_en": dist, "upazila_en": up,
                        "operator": "বাংলাদেশ ডাক বিভাগ (Bangladesh Post Office)", "ownership": "public",
                        "extra_json": jdump({"postcode": code, "office_type": code_t, "office_type_en": type_en,
@@ -571,11 +722,26 @@ def main():
     write_csv(os.path.join(OUT, "places.csv"), PLACE_COLS, places)
     frows = []
     for (d, u), n in sorted(facts.items()):
-        frows.append({"entity_level": "upazila" if u else "city", "entity_name_en": u or "Rajshahi City", "district_en": d,
+        frows.append({"entity_level": "upazila" if u else "city", "entity_name_en": u or "%s City" % HEAD, "district_en": d,
                       "upazila_en": u, "fact": "post_offices_with_postcode", "value": n, "unit": "post offices",
                       "basis": "listed in Bangladesh Post postcode booklet (undated scan)", "year": "",
                       "source_key": SOURCE_KEY, "source_url": PDF_URL, "notes": "postal grouping as printed"})
     write_csv(os.path.join(OUT, "facts.csv"), FACT_COLS, frows)
+    if DIVISION != "rajshahi":  # the Rajshahi SOURCE.json is maintained by hand; other divisions get theirs here
+        import datetime
+        mp = os.path.join(OUT, "SOURCE.json")
+        m = json.load(open(mp, encoding="utf-8")) if os.path.exists(mp) else {
+            "key": SOURCE_KEY, "division": DIVISION, "kind": "bdpost",
+            "name": "Bangladesh Post postcode booklet — %s Division post offices (scan on post.rajshahi.gov.bd)" % HEAD,
+            "organization": "বাংলাদেশ ডাক বিভাগ (Bangladesh Post Office) — DPMG Rajshahi Division portal",
+            "source_type": "government_portal", "trust_level": 4, "urls": [PAGE_URL, PDF_URL], "accessed": None,
+            "publication_date": None, "license": None, "license_url": None,
+            "attribution": "বাংলাদেশ ডাক বিভাগ (Bangladesh Post Office) — DPMG Rajshahi Division portal"}
+        m["accessed"] = datetime.date.today().isoformat()
+        files = ["facts.csv", "places.csv"] + BY_DIV[DIVISION]["raw"]
+        m["files"] = {f: sha256(os.path.join(OUT, f)) for f in files if os.path.exists(os.path.join(OUT, f))}
+        with open(mp, "w", encoding="utf-8") as fh:
+            fh.write(json.dumps(m, ensure_ascii=False, indent=2) + "\n")
     print(len(places), "post offices; pdf sha256", sha, file=sys.stderr)
 
 

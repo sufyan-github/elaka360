@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Tourist spots ('দর্শনীয় স্থান') listed on the national-portal district and upazila sites of Rajshahi Division.
+"""Tourist spots ('দর্শনীয় স্থান') listed on the national-portal district and upazila sites of a division (default Rajshahi).
 
-Re-runnable: python3 fetch.py  (stdlib + requests). Optional: ELAKA_CACHE=<dir> caches pages."""
+Re-runnable: python3 fetch.py [--division rangpur] [--out DIR]  (stdlib + requests). Optional: ELAKA_CACHE=<dir> caches pages."""
 # --- polite HTTP helper (copy this block into each fetch.py; stdlib + requests only) -----------------
 # Many *.gov.bd servers send only their leaf certificate and omit the intermediate CA. Browsers fetch the
 # missing intermediate via the certificate's AIA URL; we do the same explicitly: download the published
@@ -363,6 +363,124 @@ def jdump(d):
 # "দর্শনীয় স্থান" (/pages/tourist-spot) lists of the 8 district portals and all upazila portals of Rajshahi Division.
 SOURCE_KEY = "PORTAL_TOURIST_SPOTS_RAJ_2026"
 OUT = os.path.dirname(os.path.abspath(__file__))
+HEAD = "Rajshahi"  # the division's head district
+
+# --- division selection (see ../DIVISIONS.md) --------------------------------------------------------------
+# `python3 fetch.py` = `--division rajshahi`, output into this folder (unchanged behaviour). Other divisions write into
+# their own folder (default: the sibling folder named per DIVISIONS.md) and never into the Rajshahi folder.
+import argparse
+DIVISION_CHOICES = ("rajshahi", "rangpur", "dhaka", "chattogram", "khulna", "barishal", "sylhet", "mymensingh")
+DIVISION = "rajshahi"
+
+
+def parse_division_args(folders):
+    """Parse --division/--out. folders: division -> default output folder name (a sibling of this folder)."""
+    ap = argparse.ArgumentParser(description=(__doc__ or "").strip().split("\n")[0])
+    ap.add_argument("--division", default="rajshahi", choices=DIVISION_CHOICES)
+    ap.add_argument("--out", help="output folder (default: this folder for rajshahi, ../<division folder> otherwise)")
+    a = ap.parse_args()
+    if a.division not in folders:
+        raise SystemExit("this collector has no table for division %r yet (see DIVISIONS.md)" % a.division)
+    here = os.path.dirname(os.path.abspath(__file__))
+    out = os.path.abspath(a.out or os.path.join(here, "..", folders[a.division]))
+    if a.division != "rajshahi" and os.path.realpath(out) == os.path.realpath(here):
+        raise SystemExit("refusing to write %s output into the Rajshahi folder %s" % (a.division, here))
+    os.makedirs(out, exist_ok=True)
+    return a.division, out
+
+
+def write_division_manifest(out, meta):
+    """SOURCE.json for a non-default division run: meta + sha256 of every data file in the output folder."""
+    import hashlib as _h, json as _j
+    files = {}
+    for root, _, names in os.walk(out):
+        for n in sorted(names):
+            full = os.path.join(root, n)
+            rel = os.path.relpath(full, out).replace(os.sep, "/")
+            if rel in ("SOURCE.json", "fetch.py", "REPORT.md") or "__pycache__" in rel:
+                continue
+            files[rel] = _h.sha256(open(full, "rb").read()).hexdigest()
+    m = dict(meta)
+    m["files"] = dict(sorted(files.items()))
+    with open(os.path.join(out, "SOURCE.json"), "w", encoding="utf-8") as f:
+        f.write(_j.dumps(m, ensure_ascii=False, indent=2) + "\n")
+
+
+# Rangpur Division names: Bangla -> English (HDX COD-AB spellings). District hosts verified by page title (Nov 2026);
+# upazila portal subdomains verified by their home-page titles ("হোম | <upazila> উপজেলা").
+RANGPUR_DISTRICTS = {"রংপুর": "Rangpur", "পঞ্চগড়": "Panchagarh", "দিনাজপুর": "Dinajpur", "লালমনিরহাট": "Lalmonirhat",
+                     "নীলফামারী": "Nilphamari", "গাইবান্ধা": "Gaibandha", "ঠাকুরগাঁও": "Thakurgaon", "কুড়িগ্রাম": "Kurigram"}
+RANGPUR_DISTRICT_HOSTS = {"Rangpur": "rangpur.gov.bd", "Panchagarh": "panchagarh.gov.bd", "Dinajpur": "dinajpur.gov.bd",
+                          "Lalmonirhat": "lalmonirhat.gov.bd", "Nilphamari": "nilphamari.gov.bd", "Gaibandha": "gaibandha.gov.bd",
+                          "Thakurgaon": "thakurgaon.gov.bd", "Kurigram": "kurigram.gov.bd"}
+RANGPUR_UPAZILAS = {  # district -> [(english, bangla names/aliases..., portal subdomain)]
+    "Rangpur": [("Badarganj", ["বদরগঞ্জ"], "badargonj"), ("Gangachara", ["গংগাচড়া", "গঙ্গাচড়া"], "gangachara"),
+                ("Kaunia", ["কাউনিয়া"], "kaunia"), ("Rangpur Sadar", ["রংপুর সদর"], "rangpursadar"),
+                ("Mithapukur", ["মিঠাপুকুর"], "mithapukur"), ("Pirgachha", ["পীরগাছা"], "pirgacha"),
+                ("Pirganj", ["পীরগঞ্জ"], "pirgonj"), ("Taraganj", ["তারাগঞ্জ"], "taragonj")],
+    "Panchagarh": [("Atowari", ["আটোয়ারী"], "atwari"), ("Boda", ["বোদা"], "boda"), ("Debiganj", ["দেবীগঞ্জ"], "debiganj"),
+                   ("Panchagarh Sadar", ["পঞ্চগড় সদর"], "panchagarhsadar"), ("Tentulia", ["তেঁতুলিয়া", "তেতুলিয়া"], "tetulia")],
+    "Thakurgaon": [("Baliadangi", ["বালিয়াডাঙ্গী", "বালিয়াডাংগী"], "baliadangi"), ("Haripur", ["হরিপুর"], "haripur"),
+                   ("Pirganj", ["পীরগঞ্জ"], "pirganj"), ("Ranishankail", ["রাণীশংকৈল", "রানীশংকৈল"], "ranisankail"),
+                   ("Thakurgaon Sadar", ["ঠাকুরগাঁও সদর"], "thakurgaonsadar")],
+    "Nilphamari": [("Dimla", ["ডিমলা"], "dimla"), ("Domar", ["ডোমার"], "domar"), ("Jaldhaka", ["জলঢাকা"], "jaldhaka"),
+                   ("Kishoreganj", ["কিশোরগঞ্জ"], "kishorganj"), ("Nilphamari Sadar", ["নীলফামারী সদর"], "nilphamarisadar"),
+                   ("Saidpur", ["সৈয়দপুর"], "syedpur")],
+    "Lalmonirhat": [("Aditmari", ["আদিতমারী"], "aditmari"), ("Hatibandha", ["হাতীবান্ধা"], "hatibandha"),
+                    ("Kaliganj", ["কালীগঞ্জ"], "kaliganj"), ("Lalmonirhat Sadar", ["লালমনিরহাট সদর"], "sadar"),
+                    ("Patgram", ["পাটগ্রাম"], "patgram")],
+    "Gaibandha": [("Fulchhari", ["ফুলছড়ি"], "phulchari"), ("Gaibandha Sadar", ["গাইবান্ধা সদর"], "gaibandhasadar"),
+                  ("Gobindaganj", ["গোবিন্দগঞ্জ"], "gobindaganj"), ("Palashbari", ["পলাশবাড়ী", "পলাশবাড়ি"], "palashbari"),
+                  ("Sadullapur", ["সাদুল্লাপুর", "সাদুল্যাপুর"], "sadullapur"), ("Saghata", ["সাঘাটা"], "saghata"),
+                  ("Sundarganj", ["সুন্দরগঞ্জ"], "sundarganj")],
+    "Kurigram": [("Bhurungamari", ["ভূরুঙ্গামারী", "ভুরুঙ্গামারী"], "bhurungamari"), ("Rajibpur", ["রাজিবপুর", "রাজীবপুর"], "charrajibpur"),
+                 ("Chilmari", ["চিলমারী"], "chilmari"), ("Phulbari", ["ফুলবাড়ী"], "phulbari"),
+                 ("Kurigram Sadar", ["কুড়িগ্রাম সদর"], "kurigramsadar"), ("Nageshwari", ["নাগেশ্বরী"], "nageshwari"),
+                 ("Rajarhat", ["রাজারহাট"], "rajarhat"), ("Roumari", ["রৌমারী"], "rowmari"), ("Ulipur", ["উলিপুর"], "ulipur")],
+    "Dinajpur": [("Birampur", ["বিরামপুর"], "birampur"), ("Birganj", ["বীরগঞ্জ"], "birganj"), ("Birol", ["বিরল"], "birol"),
+                 ("Bochaganj", ["বোচাগঞ্জ"], "bochaganj"), ("Chirirbandar", ["চিরিরবন্দর"], "chirirbandar"),
+                 ("Fulbari", ["ফুলবাড়ী"], "fulbari"), ("Ghoraghat", ["ঘোড়াঘাট"], "ghoraghat"), ("Hakimpur", ["হাকিমপুর"], "hakimpur"),
+                 ("Kaharole", ["কাহারোল"], "kaharol"), ("Khansama", ["খানসামা"], "khansama"),
+                 ("Dinajpur Sadar", ["দিনাজপুর সদর"], "dinajpursadar"), ("Nababganj", ["নবাবগঞ্জ"], "nawabganj"),
+                 ("Parbatipur", ["পার্বতীপুর"], "parbatipur")],
+}
+# Rangpur Metropolitan Police thanas (rpmp.gov.bd), English transliterations
+RANGPUR_CITY_THANAS = {"কোতয়ালী": "Kotwali", "তাজহাট": "Tajhat", "মাহিগঞ্জ": "Mahiganj", "হারাগাছ": "Haragach",
+                       "পরশুরাম": "Parshuram", "হাজিরহাট": "Hajirhat"}
+
+
+DIVISION_TABLES = {
+    "rajshahi": dict(DISTRICTS=DISTRICTS, DISTRICT_HOSTS=DISTRICT_HOSTS, UPAZILAS=UPAZILAS, CITY_THANAS=CITY_THANAS,
+                     HEAD="Rajshahi", SOURCE_KEY="PORTAL_TOURIST_SPOTS_RAJ_2026", folder="portal_tourist_spots_raj_2026"),
+    "rangpur": dict(DISTRICTS=RANGPUR_DISTRICTS, DISTRICT_HOSTS=RANGPUR_DISTRICT_HOSTS, UPAZILAS=RANGPUR_UPAZILAS,
+                    CITY_THANAS=RANGPUR_CITY_THANAS, HEAD="Rangpur", SOURCE_KEY="PORTAL_TOURIST_SPOTS_RANG_2026",
+                    folder="portal_tourist_spots_rang_2026"),
+}
+
+
+def configure():
+    global DIVISION, OUT, DISTRICTS, DISTRICT_HOSTS, UPAZILAS, CITY_THANAS, HEAD, SOURCE_KEY
+    DIVISION, OUT = parse_division_args({k: v["folder"] for k, v in DIVISION_TABLES.items()})
+    t = DIVISION_TABLES[DIVISION]
+    DISTRICTS, DISTRICT_HOSTS, UPAZILAS, CITY_THANAS = t["DISTRICTS"], t["DISTRICT_HOSTS"], t["UPAZILAS"], t["CITY_THANAS"]
+    HEAD, SOURCE_KEY = t["HEAD"], t["SOURCE_KEY"]
+
+
+def division_manifest():
+    """SOURCE.json for a non-Rajshahi run (the Rajshahi SOURCE.json is maintained by hand)."""
+    dn = DIVISION.capitalize()
+    return {"key": SOURCE_KEY, "division": DIVISION, "kind": "tourist_spots",
+            "name": "National portal 'দর্শনীয় স্থান' (tourist spot) lists — %s Division district and upazila portals" % dn,
+            "organization": "District / Upazila administrations (national portal framework, a2i/Cabinet Division)",
+            "source_type": "government_portal", "trust_level": 4,
+            "urls": ["https://%s/pages/tourist-spot" % DISTRICT_HOSTS[HEAD], "https://<upazila>.<district>.gov.bd/pages/tourist-spot"],
+            "accessed": __import__("datetime").date.today().isoformat(), "publication_date": None, "license": None, "license_url": None,
+            "attribution": "District / Upazila administrations (national portal framework, a2i/Cabinet Division)",
+            "notes": "Server-rendered list tables (/pages/tourist-spot, paginated with ?page=N) of %d district + %d upazila portals. "
+                     "Columns used: title, location; 'transportation' and descriptions not copied; the 'contact' column is mostly a "
+                     "UNO/OC contact or directions, so no phone is taken. No coordinates are published (Google Maps links kept in "
+                     "extra_json, not used). Categories assigned by keyword rules. Licence: none stated on the source; treat as "
+                     "government public information, cite the source." % (len(DISTRICT_HOSTS), sum(len(v) for v in UPAZILAS.values()))}
 
 JUNK = re.compile(r"(জেলার দর্শনীয়|জেলার ইতিহাস|দর্শনীয় স্থান(সমূহ)?$|^দর্শনীয়|^পর্যটন স্পট$|^test)", re.I)
 
@@ -429,6 +547,7 @@ def scrape_list(base):
 
 
 def main():
+    configure()
     places, facts, seen = [], [], {}
     portals = []
     for dist, host in DISTRICT_HOSTS.items():
@@ -459,7 +578,7 @@ def main():
             maps = [h for h in r.get("_hrefs", []) if re.search(r"google\.[a-z.]+/maps|maps\.app\.goo\.gl|goo\.gl/maps", h)]
             d2, u2 = find_upazila(" ".join([title, loc]), dist)
             up = upz or u2
-            if dist == "Rajshahi" and not up:
+            if dist == HEAD and not up:
                 for bn, th in CITY_THANAS.items():
                     if bn in title + " " + loc:
                         up = None
@@ -492,6 +611,8 @@ def main():
                 r["notes"] = "; ".join(x for x in [r["notes"], "also listed on " + ", ".join(sorted(set(others)))] if x)
     write_csv(os.path.join(OUT, "places.csv"), PLACE_COLS, places)
     write_csv(os.path.join(OUT, "facts.csv"), FACT_COLS, facts)
+    if DIVISION != "rajshahi":
+        write_division_manifest(OUT, division_manifest())
     print(len(places), "places", file=sys.stderr)
 
 

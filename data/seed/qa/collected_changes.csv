@@ -125,6 +125,126 @@ area:60061,pourashava_added,Sirajganj Pourashava / সিরাজগঞ্জ �
 area:60062,pourashava_added,Ullapara Pourashava / উল্লাপাড়া পৌরসভা in Ullapara,BBS_CENSUS_2022
 wards,wards_added,618 wards (pourashavas + Rajshahi City Corporation),BBS_CENSUS_2022
 boundaries,attached,"652 polygons attached (HDX COD-AB v03 upazilas, geoBoundaries 2020 unions/pourashavas/wards)",HDX_COD_AB_BGD
+division:10007,population,sum of BBS 2022 enumerated district populations = 17610955,BBS_CENSUS_2022_RANGPUR
+city_corporation:50008,population,708384 -> 708570 (BBS 2022),BBS_CENSUS_2022_RANGPUR
+area:43772,name_bn,ফরাক্কাবাদ -> ফরক্কাবাদ (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43777,name_bn_review,seed বিজোড়া vs portal বিজোরা (similarity 0.77); not changed,RANGDIV_DISTRICT_PORTALS_2026
+area:43780,name_bn,রাণীপুকুর -> রানীপুকুর (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:44546,union_added,Palashbari / পলাশ বাড়ি in Birol (Dinajpur),BBS_CENSUS_2022_RANGPUR
+area:43734,name_bn,ঈশানিয়া -> ইশানিয়া (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43737,name_bn,রনগাঁও -> রণগাঁও (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43738,name_bn,মুর্শিদহাট -> মুশিদহাট (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43785,name_bn,ইসবপুর -> ইবসপুর (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43789,name_bn,সাইতারা -> সাইতাড়া (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43745,weak_match,Aloary = BBS Eluari (similarity 0.63),BBS_CENSUS_2022_RANGPUR
+area:43746,name_bn,আলাদিপুর -> আলাদীপুর (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43747,name_bn,কাজীহাল -> কাজিহাল (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43748,name_bn_review,seed বেতদিঘী vs portal বেতদীঘি (similarity 0.71); not changed,RANGDIV_DISTRICT_PORTALS_2026
+area:43712,name_bn,বুলাকীপুর -> বুলাকিপুর (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43764,name_bn,বোয়ালদার -> বোয়ালদাড় (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43739,name_bn,ডাবোর -> ডাবর (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43699,name_bn,মাহামুদপুর -> মাহমুদপুর (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43727,name_bn,চন্ডীপুর -> চন্ডিপুর (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43947,name_bn_review,seed দরবস্ত ইয়নিয়ন vs portal দরবস্ত (similarity 0.60); not changed,RANGDIV_DISTRICT_PORTALS_2026
+area:43925,union_not_in_bbs,Palashbari (Palashbari) has no BBS 2022 counterpart,BBS_CENSUS_2022_RANGPUR
+area:43936,name_bn,কচুয়া -> কচুয়াই (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:44143,name_bn,ভূরুঙ্গামারী -> ভুরুঙ্গামারী (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:44145,name_bn,আন্ধারীরঝাড় -> আন্ধারীঝাড় (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:44147,name_bn,বঙ্গসোনাহাট -> বঙ্গঁসোনাহাট (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:44138,name_bn,বল্লভেরখাস -> বলস্নভেরখাস (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:44157,name_bn,নাজিমখাঁন -> নজিমখাঁন (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:44547,union_added,Char Shoulmari / চর শৌলমারী in Rowmari (Kurigram),BBS_CENSUS_2022_RANGPUR
+area:44163,name_bn,দুর্গাপুর -> দূর্গাপুর (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43834,name_bn,দূর্গাপুর -> দুর্গাপুর (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43815,name_bn,সিন্দুর্ণা -> সিন্দুর্না (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43819,name_bn,ভেলাগুড়ি -> ভেলাগুড়ী (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43806,name_bn,তুষভান্ডার -> তুষভাণ্ডার (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43854,name_bn,পশ্চিম ছাতনাই -> পশ্চিশ ছাতনাই (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43856,name_bn_review,seed ডিমলা সদর vs portal ডিমলা (similarity 0.77); not changed,RANGDIV_DISTRICT_PORTALS_2026
+area:43861,name_bn_review,seed ঝুনাগাছ চাপানী vs portal ঝুনাগাছ (similarity 0.70); not changed,RANGDIV_DISTRICT_PORTALS_2026
+area:43862,name_bn,টেপা খরীবাড়ী -> টেপা খড়িবাড়ী (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43863,name_bn,পুর্ব ছাতনাই -> পূর্ব ছাতনাই (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43845,name_bn,ভোগডাবুড়ী -> ভোগডাবুড়ি (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43853,name_bn,হরিণচরা -> হরিণচড়া (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43871,name_bn,কাঠালী -> কাঁঠালী (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43886,name_bn,খোকসাবাড়ী -> খোকশাবাড়ী (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43897,name_bn,লক্ষ্মীচাপ -> লক্ষীচাপ (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43682,name_bn,আলোয়াখোয়া -> আলোয়াখোওয়া (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43670,weak_match,Banghari = BBS Benghari Banagram (similarity 0.58),BBS_CENSUS_2022_RANGPUR
+area:43669,name_bn,ময়দান দীঘি -> ময়দানদিঘি (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43670,name_bn,বেংহারী -> বেংহারি (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43671,name_bn,কাজলদীঘি কালিগঞ্জ -> কাজলদিঘী কালিয়াগঞ্জ (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43674,name_bn_review,seed মাড়েয়া বামনহাট vs portal মাড়েয়া (similarity 0.70); not changed,RANGDIV_DISTRICT_PORTALS_2026
+area:43677,name_bn,পাচপীর -> পাঁচপীর (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43659,name_bn,শালডাঙ্গা -> শালডাংগা (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43660,name_bn,দেবীগঞ্জ সদর -> দেবীগঞ্জ (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43663,name_bn_review,seed সোনাহার মল্লিকাদহ vs portal সোনাহার (similarity 0.61); not changed,RANGDIV_DISTRICT_PORTALS_2026
+area:43667,name_bn,চেংঠী হাজরা ডাঙ্গা -> চেংঠি হাজরাডাঙ্গা (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43649,name_bn,সাতমেরা -> সাতমেড়া (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43651,name_bn,হাড়িভাসা -> হাড়িভাষা (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43654,name_bn_review,seed কামাত কাজল দীঘি vs portal কাঃ কাজলদিঘি (similarity 0.75); not changed,RANGDIV_DISTRICT_PORTALS_2026
+area:43656,name_bn_review,seed মাগুরা vs portal মাগুড়া (similarity 0.77); not changed,RANGDIV_DISTRICT_PORTALS_2026
+area:43657,name_bn,গরিনাবাড়ী -> গড়িনাবাড়ী (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43687,name_bn,বুড়াবুড়ী -> বুড়াবুড়ি (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43690,name_bn,তেতুলিয়া -> তেঁতুলিয়া (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:43691,name_bn_review,seed তিমাইহাট vs portal তিরনইহাট (similarity 0.75); not changed,RANGDIV_DISTRICT_PORTALS_2026
+area:44062,name_bn,মধুপুর -> মধূপুর (official portal spelling),RANGPUR_DC_PORTAL_2026
+area:44064,name_bn,বিষ্ণপুর -> বিষ্ণুপুর (official portal spelling),RANGPUR_DC_PORTAL_2026
+area:44051,name_bn,মর্ণেয়া -> মর্নেয়া (official portal spelling),RANGPUR_DC_PORTAL_2026
+area:44054,name_bn,নোহালী -> নোহলী (official portal spelling),RANGPUR_DC_PORTAL_2026
+area:44046,union_not_in_bbs,Kholeya (Gangachara) has no BBS 2022 counterpart,BBS_CENSUS_2022_RANGPUR
+area:44548,union_added,Khaleya / খলেয়া in Rangpur Sadar (Rangpur),BBS_CENSUS_2022_RANGPUR
+area:44036,union_not_in_bbs,Uttam (Rangpur Sadar) has no BBS 2022 counterpart,BBS_CENSUS_2022_RANGPUR
+area:44037,union_not_in_bbs,Porshuram (Rangpur Sadar) has no BBS 2022 counterpart,BBS_CENSUS_2022_RANGPUR
+area:44038,union_not_in_bbs,Topodhan (Rangpur Sadar) has no BBS 2022 counterpart,BBS_CENSUS_2022_RANGPUR
+area:44039,union_not_in_bbs,Satgara (Rangpur Sadar) has no BBS 2022 counterpart,BBS_CENSUS_2022_RANGPUR
+area:44040,union_not_in_bbs,Rajendrapur (Rangpur Sadar) has no BBS 2022 counterpart,BBS_CENSUS_2022_RANGPUR
+area:44043,union_not_in_bbs,Dorshona (Rangpur Sadar) has no BBS 2022 counterpart,BBS_CENSUS_2022_RANGPUR
+area:44044,union_not_in_bbs,Tampat (Rangpur Sadar) has no BBS 2022 counterpart,BBS_CENSUS_2022_RANGPUR
+area:44070,name_bn,খোরাগাছ -> খোড়াগাছ (official portal spelling),RANGPUR_DC_PORTAL_2026
+area:44085,name_bn,দূর্গাপুর -> দুর্গাপুর (official portal spelling),RANGPUR_DC_PORTAL_2026
+area:44111,weak_match,Saula = BBS Chhaola (similarity 0.55),BBS_CENSUS_2022_RANGPUR
+area:44108,name_bn,কল্যাণী -> কল্যানী (official portal spelling),RANGPUR_DC_PORTAL_2026
+area:44111,name_bn,ছাওলা -> ছওলা (official portal spelling),RANGPUR_DC_PORTAL_2026
+area:44087,name_bn,চৈত্রকোল -> চৈত্রকল (official portal spelling),RANGPUR_DC_PORTAL_2026
+area:44089,name_bn,বড়দরগাহ -> বড়দরগা (official portal spelling),RANGPUR_DC_PORTAL_2026
+area:44101,name_bn,পাঁচগাছী -> পাচগাছী (official portal spelling),RANGPUR_DC_PORTAL_2026
+area:44027,name_bn_review,seed চারোল vs portal চাড়োল (similarity 0.73); not changed,RANGDIV_DISTRICT_PORTALS_2026
+area:44033,name_bn,বড়বাড়ী -> বড়বাড়ি (official portal spelling),RANGDIV_DISTRICT_PORTALS_2026
+area:44549,union_added,Senua / — in Thakurgaon Sadar (Thakurgaon),BBS_CENSUS_2022_RANGPUR
+area:60063,pourashava_added,Birampur Pourashava / বিরামপুর পৌরসভা in Birampur,BBS_CENSUS_2022_RANGPUR
+area:60064,pourashava_added,Birganj Pourashava / বীরগঞ্জ পৌরসভা in Birganj,BBS_CENSUS_2022_RANGPUR
+area:60065,pourashava_added,Birol Pourashava / বিরল পৌরসভা in Birol,BBS_CENSUS_2022_RANGPUR
+area:60066,pourashava_added,Setabganj Pourashava / বোচাগঞ্জ পৌরসভা in Bochaganj,BBS_CENSUS_2022_RANGPUR
+area:60067,pourashava_added,Fulbari Pourashava / ফুলবাড়ী পৌরসভা in Fulbari,BBS_CENSUS_2022_RANGPUR
+area:60068,pourashava_added,Ghoraghat Pourashava / ঘোড়াঘাট পৌরসভা in Ghoraghat,BBS_CENSUS_2022_RANGPUR
+area:60069,pourashava_added,Hakimpur Pourashava / হাকিমপুর পৌরসভা in Hakimpur,BBS_CENSUS_2022_RANGPUR
+area:60070,pourashava_added,Dinajpur Pourashava / দিনাজপুর পৌরসভা in Dinajpur Sadar,BBS_CENSUS_2022_RANGPUR
+area:60071,pourashava_added,Parbatipur Pourashava / পার্বতীপুর পৌরসভা in Parbatipur,BBS_CENSUS_2022_RANGPUR
+area:60072,pourashava_added,Gaibandha Pourashava / গাইবান্ধা পৌরসভা in Gaibandha Sadar,BBS_CENSUS_2022_RANGPUR
+area:60073,pourashava_added,Gobindaganj Pourashava / গোবিন্দগঞ্জ পৌরসভা in Gobindaganj,BBS_CENSUS_2022_RANGPUR
+area:60074,pourashava_added,Palashbari Pourashava / পলাশবাড়ী পৌরসভা in Palashbari,BBS_CENSUS_2022_RANGPUR
+area:60075,pourashava_added,Sundarganj Pourashava / সুন্দরগঞ্জ পৌরসভা in Sundarganj,BBS_CENSUS_2022_RANGPUR
+area:60076,pourashava_added,Kurigram Pourashava / কুড়িগ্রাম পৌরসভা in Kurigram Sadar,BBS_CENSUS_2022_RANGPUR
+area:60077,pourashava_added,Nageshwari Pourashava / নাগেশ্বরী পৌরসভা in Nageshwari,BBS_CENSUS_2022_RANGPUR
+area:60078,pourashava_added,Ulipur Pourashava / উলিপুর পৌরসভা in Ulipur,BBS_CENSUS_2022_RANGPUR
+area:60079,pourashava_added,Lalmonirhat Pourashava / লালমনিরহাট পৌরসভা in Lalmonirhat Sadar,BBS_CENSUS_2022_RANGPUR
+area:60080,pourashava_added,Patgram Pourashava / পাটগ্রাম পৌরসভা in Patgram,BBS_CENSUS_2022_RANGPUR
+area:60081,pourashava_added,Domar Pourashava / ডোমার পৌরসভা in Domar,BBS_CENSUS_2022_RANGPUR
+area:60082,pourashava_added,Jaldhaka Pourashava / জলঢাকা পৌরসভা in Jaldhaka,BBS_CENSUS_2022_RANGPUR
+area:60083,pourashava_added,Nilphamari Pourashava / নীলফামারী পৌরসভা in Nilphamari Sadar,BBS_CENSUS_2022_RANGPUR
+area:60084,pourashava_added,Saidpur Pourashava / সৈয়দপুর পৌরসভা in Syedpur,BBS_CENSUS_2022_RANGPUR
+area:60085,pourashava_added,Boda Pourashava / — in Boda,BBS_CENSUS_2022_RANGPUR
+area:60086,pourashava_added,Debiganj Pourashava / — in Debiganj,BBS_CENSUS_2022_RANGPUR
+area:60087,pourashava_added,Panchagarh Pourashava / — in Panchagarh Sadar,BBS_CENSUS_2022_RANGPUR
+area:60088,pourashava_added,Badarganj Pourashava / বদরগঞ্জ পৌরসভা in Badargonj,BBS_CENSUS_2022_RANGPUR
+area:60089,pourashava_added,Haragachh (Kaunia) Pourashava / — in Kaunia,BBS_CENSUS_2022_RANGPUR
+area:60090,pourashava_added,Pirganj Pourashava / পীরগঞ্জ পৌরসভা in Pirgonj,BBS_CENSUS_2022_RANGPUR
+area:60091,pourashava_added,Pirganj Pourashava / পীরগঞ্জ পৌরসভা in Pirganj,BBS_CENSUS_2022_RANGPUR
+area:60092,pourashava_added,Ranishankail Pourashava / রাণীশংকৈল পৌরসভা in Ranisankail,BBS_CENSUS_2022_RANGPUR
+area:60093,pourashava_added,Thakurgaon Pourashava / ঠাকুরগাঁও পৌরসভা in Thakurgaon Sadar,BBS_CENSUS_2022_RANGPUR
+wards:rangpur,wards_added,324 wards (pourashavas + Rangpur City Corporation),BBS_CENSUS_2022_RANGPUR
+boundaries:rangpur,attached,"562 polygons attached (HDX COD-AB v03 upazilas, geoBoundaries 2020 unions/pourashavas/wards)",HDX_COD_AB_BGD_RANGPUR
 ruet,place_evidence,secondary -> official via UGC_UNIVERSITIES_RAJ_2026:ugc:rajshahi-university-of-engineering-technology-ruet,UGC_UNIVERSITIES_RAJ_2026
 ruet,place_merged,UGC_UNIVERSITIES_RAJ_2026:ugc:rajshahi-university-of-engineering-technology-ruet (0.91),UGC_UNIVERSITIES_RAJ_2026
 university-of-rajshahi,place_evidence,secondary -> official via UGC_UNIVERSITIES_RAJ_2026:ugc:university-of-rajshahi,UGC_UNIVERSITIES_RAJ_2026
@@ -535,3 +655,783 @@ kajipur-thana-kazipur,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRan
 kamarakhnd-thana-kamarkhand,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-71 (0.86),BD_POLICE_CONTACTS_2020
 rayagnj-thana-raigonj,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-78 (0.86),BD_POLICE_CONTACTS_2020
 belkuchi-thana-belkuchi,place_merged,BD_POLICE_CONTACTS_2020:bdpol2020-RajshahiRange-85 (0.86),BD_POLICE_CONTACTS_2020
+CAAB_AIRPORTS_RANG_2026:caab-spd,place_point_dropped,"25.760375,88.758469 is not inside Nilphamari district",CAAB_AIRPORTS_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11956,place_point_dropped,"25.56412,89.09523 is not inside Rangpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11971,place_point_dropped,"25.64025,89.9912 is not inside Rangpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11975,place_point_dropped,"25.62607,89.9921 is not inside Rangpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11983,place_point_dropped,"25.62201,89.89024 is not inside Rangpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11984,place_point_dropped,"25.67374,89.9224 is not inside Rangpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:12012,place_point_dropped,"25.89135,89.29019 is not inside Rangpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:12060,place_point_dropped,"25.50309,89.09921 is not inside Rangpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:33089,place_point_dropped,"25.9409,88.2298 is not inside Rangpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:1596,place_point_dropped,"25.426697,89.381369 is not inside Rangpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:16749,place_point_dropped,"25.34206,89.20201 is not inside Rangpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:12135,place_point_dropped,"25.09165,89.269 is not inside Rangpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:12150,place_point_dropped,"25.05011,89.24356 is not inside Rangpur district",DGHS_HRIS_FACILITIES_RANG_2026
+praim-medikel-kolej-rongpur-rangpur,place_merged,DGHS_HRIS_FACILITIES_RANG_2026:hris:16825 (1.00),DGHS_HRIS_FACILITIES_RANG_2026
+rangpur-medical-college-rangpur,place_merged,DGHS_HRIS_FACILITIES_RANG_2026:hris:16826 (1.00),DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:12190,place_point_dropped,"25.4424,89.06123 is not inside Rangpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:22174,place_point_dropped,"25.7458,89.6523 is not inside Rangpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:34116,place_point_dropped,"25.859895,88.65515 is not inside Rangpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:25774,place_point_dropped,"25.4125,89.6325 is not inside Rangpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:29905,place_point_dropped,"25.2145,89.5263 is not inside Rangpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:29359,place_point_dropped,"25.2145,89.3652 is not inside Rangpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:35167,place_point_dropped,"25.22442,89.2755 is not inside Rangpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:27289,place_point_dropped,"25.9856,89.7458 is not inside Rangpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:12224,place_point_dropped,"25.79814,89.96048 is not inside Rangpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:12233,place_point_dropped,"25.78941,89.4586 is not inside Rangpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:35033,place_point_dropped,"25.25135,89.26599 is not inside Rangpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10832,place_point_dropped,"25.37078,88.27592 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10833,place_point_dropped,"25.38036,88.29458 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10835,place_point_dropped,"25.3744,88.35163 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10839,place_point_dropped,"25.37226,88.33599 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10845,place_point_dropped,"25.33484,88.30356 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10836,place_point_dropped,"25.36514,88.34019 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:23145,place_point_dropped,"25.36004,88.30257 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10837,place_point_dropped,"25.36425,88.3623 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10838,place_point_dropped,"25.33593,88.34437 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10843,place_point_dropped,"25.41131,88.33237 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10846,place_point_dropped,"25.31287,88.3332 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10840,place_point_dropped,"25.38599,88.34306 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10857,place_point_dropped,"25.41335,88.30502 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10858,place_point_dropped,"25.41454,88.29154 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10859,place_point_dropped,"25.42371,88.30326 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10854,place_point_dropped,"25.36004,88.30257 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10830,place_point_dropped,"25.44109,88.37176 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10855,place_point_dropped,"25.35295,88.33036 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10851,place_point_dropped,"25.45249,88.32013 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10856,place_point_dropped,"25.37253,88.30366 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10844,place_point_dropped,"25.4207,88.34474 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10848,place_point_dropped,"25.4056,88.37135 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10849,place_point_dropped,"25.3937,88.37169 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:24808,place_point_dropped,"25.36004,88.30257 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10850,place_point_dropped,"25.41411,88.36537 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10841,place_point_dropped,"25.37435,88.31267 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10831,place_point_dropped,"25.44124,88.35567 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10847,place_point_dropped,"25.32362,88.3442 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10842,place_point_dropped,"25.39063,88.33192 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10852,place_point_dropped,"25.44286,88.30253 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10853,place_point_dropped,"25.44238,88.33404 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:23146,place_point_dropped,"25.36004,88.30257 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:24809,place_point_dropped,"25.36004,88.30257 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10834,place_point_dropped,"25.35583,88.29006 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10877,place_point_dropped,"25.20579,88.56581 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:30347,place_point_dropped,"25.51029,88.352837 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:38602,place_point_dropped,"25.614822,88.121669 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:30326,place_point_dropped,"25.29,88.99 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10909,place_point_dropped,"25.5121,88.36095 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10889,place_point_dropped,"25.57087,88.40166 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10897,place_point_dropped,"25.52299,88.42296 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10880,place_point_dropped,"25.5252,88.35157 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10888,place_point_dropped,"25.55315,88.39518 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10892,place_point_dropped,"25.54222,88.38521 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10886,place_point_dropped,"25.55539,88.31054 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10893,place_point_dropped,"25.54239,88.39497 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10883,place_point_dropped,"25.56175,88.38344 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10894,place_point_dropped,"25.59427,88.38054 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10881,place_point_dropped,"25.54492,88.36521 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10898,place_point_dropped,"25.49552,88.4103 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10895,place_point_dropped,"26.00512,88.36464 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10882,place_point_dropped,"25.53501,88.34568 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10910,place_point_dropped,"25.5016,88.38069 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10904,place_point_dropped,"25.5824,88.40443 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10911,place_point_dropped,"25.50404,88.37044 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10884,place_point_dropped,"25.52468,88.38081 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10903,place_point_dropped,"25.59043,88.3902 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10902,place_point_dropped,"25.55304,88.33257 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10899,place_point_dropped,"25.51418,88.42105 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10887,place_point_dropped,"25.53162,88.32007 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10906,place_point_dropped,"26.00299,88.33248 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10907,place_point_dropped,"25.59033,88.32019 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10912,place_point_dropped,"25.53096,88.36539 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10901,place_point_dropped,"25.56445,88.32336 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10908,place_point_dropped,"25.58581,88.36284 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:25033,place_point_dropped,"25.283896,88.421585 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10929,place_point_dropped,"25.862629,88.451441 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10926,place_point_dropped,"25.48592,88.26062 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10921,place_point_dropped,"25.48451,88.281862 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10930,place_point_dropped,"25.49382,88.25363 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10922,place_point_dropped,"25.53334,88.29529 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10923,place_point_dropped,"25.53153,88.29369 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10934,place_point_dropped,"25.3912,88.48231 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10949,place_point_dropped,"25.44488,88.49551 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10940,place_point_dropped,"25.36381,88.48572 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10952,place_point_dropped,"25.44348,88.5143 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10958,place_point_dropped,"25.32159,88.46137 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10943,place_point_dropped,"25.37431,88.45237 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10953,place_point_dropped,"25.43293,88.5025 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10962,place_point_dropped,"25.41456,88.47313 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10938,place_point_dropped,"25.40345,88.46015 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10946,place_point_dropped,"25.33484,88.45191 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:36136,place_point_dropped,"25.25411,88.255 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10944,place_point_dropped,"25.37024,88.42193 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10935,place_point_dropped,"25.40109,88.49034 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10959,place_point_dropped,"25.33401,88.48401 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10954,place_point_dropped,"25.4208,88.50018 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10950,place_point_dropped,"25.46099,88.49103 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10964,place_point_dropped,"25.43542,88.48364 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10941,place_point_dropped,"25.36045,88.47425 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10961,place_point_dropped,"25.43139,88.48017 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10936,place_point_dropped,"25.40571,88.45224 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10937,place_point_dropped,"25.40038,88.47336 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10948,place_point_dropped,"25.36119,88.42511 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10955,place_point_dropped,"25.44299,88.494 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10956,place_point_dropped,"25.4634,88.46099 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10963,place_point_dropped,"25.41538,88.4423 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10942,place_point_dropped,"25.38063,88.48315 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10957,place_point_dropped,"25.46158,88.47026 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10945,place_point_dropped,"25.40427,88.44413 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10966,place_point_dropped,"25.44396,88.44517 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10960,place_point_dropped,"25.33271,88.47018 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10951,place_point_dropped,"25.46564,88.49024 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:22454,place_point_dropped,"25.74058,89.26114 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10990,place_point_dropped,"25.30114,88.45373 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10986,place_point_dropped,"25.37588,88.41146 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10971,place_point_dropped,"25.34588,88.38262 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10984,place_point_dropped,"25.30256,88.4155 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10981,place_point_dropped,"25.4305,88.43339 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10996,place_point_dropped,"25.44267,88.43084 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10972,place_point_dropped,"25.35414,88.38547 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10977,place_point_dropped,"25.42069,88.38331 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10973,place_point_dropped,"25.34484,88.38485 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10997,place_point_dropped,"25.43548,88.39416 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10967,place_point_dropped,"25.315,88.38102 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10988,place_point_dropped,"25.39569,88.41109 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10974,place_point_dropped,"25.34143,88.36562 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10982,place_point_dropped,"25.40386,88.41264 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10978,place_point_dropped,"25.39217,88.37426 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11000,place_point_dropped,"25.32463,88.40597 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11001,place_point_dropped,"25.32181,88.39596 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10968,place_point_dropped,"25.32151,88.35259 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10989,place_point_dropped,"25.37311,88.40219 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10979,place_point_dropped,"25.43064,88.39511 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10993,place_point_dropped,"25.35179,88.42458 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10985,place_point_dropped,"25.30457,88.39563 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10980,place_point_dropped,"25.41022,88.43182 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10987,place_point_dropped,"25.38348,88.41357 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10994,place_point_dropped,"25.36267,88.41565 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10995,place_point_dropped,"25.36004,88.40564 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10969,place_point_dropped,"25.32465,88.37301 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10975,place_point_dropped,"25.35249,88.37253 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11002,place_point_dropped,"25.33262,88.40181 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10983,place_point_dropped,"25.42045,88.42533 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10999,place_point_dropped,"25.44329,88.41216 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:10998,place_point_dropped,"25.46152,88.4309 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:26332,place_point_dropped,"26.63524,88.06959 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:30456,place_point_dropped,"25.237511,88.777611 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:1213,place_point_dropped,"25.896785,88.345674 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:19217,place_point_dropped,"25.30133,88.54109 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11007,place_point_dropped,"25.26333,88.57342 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11009,place_point_dropped,"25.26507,88.52077 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:17499,place_point_dropped,"25.451011,88.476637 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11011,place_point_dropped,"25.26427,88.56572 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11005,place_point_dropped,"25.26172,88.5544 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:23144,place_point_dropped,"25.29278,88.55702 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:30915,place_point_dropped,"25.37663,88.59549 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:29389,place_point_dropped,"26.58739,88.34191 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:1216,place_point_dropped,"25.14408,89.17002 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:1217,place_point_dropped,"25.17137,89.1027 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:1219,place_point_dropped,"25.17459,89.1322 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11024,place_point_dropped,"25.1714,89.15151 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11021,place_point_dropped,"25.18219,89.09295 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11022,place_point_dropped,"25.15259,89.10346 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11018,place_point_dropped,"25.14107,89.14436 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11015,place_point_dropped,"25.19148,89.11352 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11019,place_point_dropped,"25.1502,89.1639 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11016,place_point_dropped,"25.19182,89.13449 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11017,place_point_dropped,"25.21237,89.13467 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11020,place_point_dropped,"25.14428,89.12385 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11025,place_point_dropped,"25.18419,89.15052 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11023,place_point_dropped,"25.16301,89.09469 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11026,place_point_dropped,"25.15432,89.12462 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:31442,place_point_dropped,"25.65159,88.14975 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:28848,place_point_dropped,"26.437469,88.058578 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11030,place_point_dropped,"25.18366,89.03168 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11031,place_point_dropped,"25.17436,89.04119 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:26315,place_point_dropped,"25.27828,88.99178 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:1220,place_point_dropped,"25.17093,89.00452 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11045,place_point_dropped,"25.48502,88.42462 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11042,place_point_dropped,"25.50301,88.35298 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11036,place_point_dropped,"25.49388,88.37494 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11048,place_point_dropped,"25.4543,88.34065 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11046,place_point_dropped,"25.47241,88.42115 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11037,place_point_dropped,"25.49195,88.3902 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11034,place_point_dropped,"25.50549,88.33086 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11035,place_point_dropped,"25.4937,88.31069 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11043,place_point_dropped,"25.48421,88.32097 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11044,place_point_dropped,"25.50153,88.34237 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11039,place_point_dropped,"25.4652,88.38523 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:16917,place_point_dropped,"25.46016,88.33066 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11038,place_point_dropped,"25.4813,88.38098 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11040,place_point_dropped,"25.45141,88.38599 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11047,place_point_dropped,"25.4601,88.4105 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11041,place_point_dropped,"25.45589,88.36202 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11049,place_point_dropped,"25.47283,88.31044 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11057,place_point_dropped,"25.49122,88.4414 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11066,place_point_dropped,"25.52489,88.43498 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11061,place_point_dropped,"25.54033,88.46134 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11050,place_point_dropped,"25.56205,88.44092 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11063,place_point_dropped,"25.1817,88.47372 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11058,place_point_dropped,"25.47445,88.44189 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11067,place_point_dropped,"25.50264,88.45539 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11064,place_point_dropped,"25.49027,88.48274 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11060,place_point_dropped,"25.53375,88.44502 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11052,place_point_dropped,"25.59241,88.43394 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11068,place_point_dropped,"25.50187,88.4176 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11065,place_point_dropped,"25.4959,88.48332 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11056,place_point_dropped,"25.52492,88.47595 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11059,place_point_dropped,"25.47528,88.45517 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11053,place_point_dropped,"25.57399,88.43591 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11051,place_point_dropped,"25.56532,88.44445 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11062,place_point_dropped,"25.55598,88.46497 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:17796,place_point_dropped,"25.924314,88.799316 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11054,place_point_dropped,"25.51118,88.48194 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:1224,place_point_dropped,"25.52034,88.46531 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:1225,place_point_dropped,"25.13436,89.02162 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:1226,place_point_dropped,"25.19414,89.07032 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:1227,place_point_dropped,"25.23369,89.07032 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11090,place_point_dropped,"25.20504,89.02592 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11072,place_point_dropped,"25.26276,89.06019 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11073,place_point_dropped,"25.26018,89.05587 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11079,place_point_dropped,"25.2445,89.03074 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11088,place_point_dropped,"25.20429,89.1912 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11076,place_point_dropped,"25.22597,89.08154 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11084,place_point_dropped,"25.13256,89.05024 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11074,place_point_dropped,"25.25561,89.08183 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11089,place_point_dropped,"25.23422,89.10326 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11077,place_point_dropped,"25.23465,89.05507 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11091,place_point_dropped,"25.19523,89.05056 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11069,place_point_dropped,"25.21364,89.06406 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11081,place_point_dropped,"25.18222,89.01073 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11087,place_point_dropped,"25.21499,89.11238 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11070,place_point_dropped,"25.21394,89.07532 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11071,place_point_dropped,"25.18512,89.06373 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11078,place_point_dropped,"25.24164,89.08209 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11092,place_point_dropped,"25.22141,89.04442 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:2215,place_point_dropped,"25.25039,89.04553 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11118,place_point_dropped,"25.34324,88.51252 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11119,place_point_dropped,"25.31592,88.52122 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11098,place_point_dropped,"25.36293,88.53257 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11104,place_point_dropped,"25.32145,88.58268 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11101,place_point_dropped,"25.35004,88.56385 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11094,place_point_dropped,"25.4136,88.54578 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11099,place_point_dropped,"25.36228,88.51585 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11111,place_point_dropped,"25.42518,88.5203 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11102,place_point_dropped,"25.34364,88.54356 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11115,place_point_dropped,"25.36375,88.50568 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11122,place_point_dropped,"25.36262,88.58009 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11103,place_point_dropped,"25.34302,88.53249 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11095,place_point_dropped,"25.42545,88.52334 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11100,place_point_dropped,"25.38172,88.53531 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11116,place_point_dropped,"25.39382,88.50257 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11112,place_point_dropped,"25.40591,88.51264 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11117,place_point_dropped,"25.3612,88.50003 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11113,place_point_dropped,"25.39517,88.51282 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11120,place_point_dropped,"25.34202,88.50271 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:17169,place_point_dropped,"25.06745,88.97819 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11128,place_point_dropped,"25.40531,88.55319 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11124,place_point_dropped,"25.37118,88.57051 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:39805,place_point_dropped,"25.419761,88.611854 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:39737,place_point_dropped,"25.34675,88.664253 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:22316,place_point_dropped,"25.34675,88.66425 is not inside Dinajpur district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:1245,place_point_dropped,"25.5698,89.6987 is not inside Gaibandha district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:36270,place_point_dropped,"25.33851,89.73243 is not inside Gaibandha district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:29313,place_point_dropped,"25.6524,89.5624 is not inside Gaibandha district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:36777,place_point_dropped,"25.244683,89.283438 is not inside Gaibandha district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11204,place_point_dropped,"25.24475,89.273 is not inside Gaibandha district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:32781,place_point_dropped,"25.74058,89.26114 is not inside Gaibandha district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:31464,place_point_dropped,"25.499437,88.967144 is not inside Gaibandha district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:32094,place_point_dropped,"25.74058,89.26114 is not inside Gaibandha district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:26338,place_point_dropped,"25.74058,89.26114 is not inside Gaibandha district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:16274,place_point_dropped,"26.02233,89.46854 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:1305,place_point_dropped,"26.09058,89.426224 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:1301,place_point_dropped,"26.08374,89.4468 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:16275,place_point_dropped,"26.02237,89.46856 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:27247,place_point_dropped,"26.28186,89.257637 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:16277,place_point_dropped,"26.02233,89.46855 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:1303,place_point_dropped,"26.04313,89.46856 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:1304,place_point_dropped,"26.02236,89.46854 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:18028,place_point_dropped,"26.02233,89.46856 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11381,place_point_dropped,"26.04737,89.4003 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:17953,place_point_dropped,"26.537532,88.431314 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11376,place_point_dropped,"26.02235,89.42631 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:17956,place_point_dropped,"26.077623,89.46854 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:17945,place_point_dropped,"26.02233,89.426224 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:18020,place_point_dropped,"26.02236,89.42632 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:17955,place_point_dropped,"26.02233,89.46854 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:17942,place_point_dropped,"26.08374,89.46854 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:24938,place_point_dropped,"26.02237,89.46855 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11383,place_point_dropped,"26.07938,89.36517 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11385,place_point_dropped,"26.09057,89.42823 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:17703,place_point_dropped,"26.02236,89.46856 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:19248,place_point_dropped,"26.02236,89.426224 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:17952,place_point_dropped,"26.02236,89.46855 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11380,place_point_dropped,"26.08374,89.44681 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:24939,place_point_dropped,"26.0837,89.44679 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11384,place_point_dropped,"26.188567,89.64625 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:17951,place_point_dropped,"26.448101,88.412292 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:17947,place_point_dropped,"26.02237,89.46854 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:17943,place_point_dropped,"26.08375,89.426226 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:19249,place_point_dropped,"26.077624,89.46856 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11378,place_point_dropped,"26.07582,89.40561 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:17950,place_point_dropped,"26.02236,89.46855 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11379,place_point_dropped,"26.04312,89.46855 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:17954,place_point_dropped,"26.02233,89.46855 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:17944,place_point_dropped,"26.04314,89.46856 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:24937,place_point_dropped,"26.02236,89.46854 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11377,place_point_dropped,"26.09057,89.42823 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:17948,place_point_dropped,"26.08374,89.46855 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:26266,place_point_dropped,"26.28,89.26 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:38998,place_point_dropped,"25.913128,89.43885 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:17265,place_point_dropped,"25.415343,89.77742 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:17264,place_point_dropped,"25.459756,89.632373 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:39552,place_point_dropped,"25.364653,89.765778 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11392,place_point_dropped,"25.37502,89.39457 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:33778,place_point_dropped,"25.67654,89.98768 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11387,place_point_dropped,"25.32374,89.38346 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11393,place_point_dropped,"25.36591,89.39613 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11394,place_point_dropped,"25.35122,89.3988 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11390,place_point_dropped,"25.37078,89.40952 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11391,place_point_dropped,"25.38768,89.41423 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11395,place_point_dropped,"25.33822,89.40224 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11388,place_point_dropped,"25.347,89.40575 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11389,place_point_dropped,"25.32926,89.3962 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11418,place_point_dropped,"25.49549,89.43118 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11433,place_point_dropped,"25.45008,89.40582 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11422,place_point_dropped,"25.50284,89.41773 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11423,place_point_dropped,"25.51306,89.41651 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11419,place_point_dropped,"25.5046,89.40672 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11424,place_point_dropped,"25.49999,89.43893 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11435,place_point_dropped,"25.49053,89.41667 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11436,place_point_dropped,"25.48363,89.4211 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11420,place_point_dropped,"25.53994,89.40434 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11432,place_point_dropped,"25.45322,89.40288 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11427,place_point_dropped,"25.51134,89.36888 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:30505,place_point_dropped,"25.3652,89.5264 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11457,place_point_dropped,"26.03446,89.39832 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11458,place_point_dropped,"26.03044,89.38211 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11448,place_point_dropped,"25.59423,89.40819 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11452,place_point_dropped,"25.952573,89.199631 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11461,place_point_dropped,"26.0146,89.43382 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11445,place_point_dropped,"26.01595,89.47328 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11464,place_point_dropped,"25.5989,89.37976 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11454,place_point_dropped,"25.56441,89.40422 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11455,place_point_dropped,"25.56467,89.39655 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11465,place_point_dropped,"26.00201,89.39527 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11443,place_point_dropped,"25.58719,89.48782 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11441,place_point_dropped,"25.55852,89.49245 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11440,place_point_dropped,"25.55482,89.49098 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11456,place_point_dropped,"25.57944,89.38138 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11466,place_point_dropped,"26.00104,89.40641 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11451,place_point_dropped,"25.56783,89.42231 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11460,place_point_dropped,"26.0266,89.36237 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11449,place_point_dropped,"25.57293,89.42949 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11462,place_point_dropped,"26.01557,89.01963 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11467,place_point_dropped,"26.01314,89.40772 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11463,place_point_dropped,"26.00217,89.4237 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11446,place_point_dropped,"26.00279,89.46043 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11439,place_point_dropped,"25.5803,89.43689 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:38618,place_point_dropped,"25.108978,89.108977 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11406,place_point_dropped,"25.58164,89.25712 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11396,place_point_dropped,"25.5437,89.35923 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11402,place_point_dropped,"25.56008,89.34975 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11410,place_point_dropped,"26.0087,89.35476 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11411,place_point_dropped,"26.59398,89.30188 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11412,place_point_dropped,"25.59951,89.31815 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11413,place_point_dropped,"26.00021,89.29537 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11403,place_point_dropped,"25.55762,89.33059 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11407,place_point_dropped,"25.00303,89.36505 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11404,place_point_dropped,"25.57775,89.35049 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11400,place_point_dropped,"25.54104,89.37895 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11397,place_point_dropped,"25.55414,89.35863 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11405,place_point_dropped,"25.57101,89.3381 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11398,place_point_dropped,"25.5454,89.34335 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11401,place_point_dropped,"25.55101,89.32692 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11414,place_point_dropped,"25.55973,89.32073 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11409,place_point_dropped,"25.57955,89.36721 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11415,place_point_dropped,"25.58076,89.32001 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:2218,place_point_dropped,"25.30069,88.56544 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11470,place_point_dropped,"25.46671,89.33196 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11477,place_point_dropped,"25.49012,89.34172 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11484,place_point_dropped,"25.48512,89.35441 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11471,place_point_dropped,"25.45191,89.30851 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11488,place_point_dropped,"25.46399,89.31681 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11474,place_point_dropped,"25.51452,89.3407 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11475,place_point_dropped,"25.50232,89.33818 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11489,place_point_dropped,"25.48077,89.31508 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11490,place_point_dropped,"25.48655,89.34871 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11485,place_point_dropped,"25.48311,89.35191 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11478,place_point_dropped,"25.495011,89.33821 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11479,place_point_dropped,"25.48313,89.34313 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11472,place_point_dropped,"25.47773,89.33496 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11486,place_point_dropped,"25.47591,89.34802 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11491,place_point_dropped,"25.47398,89.30541 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11468,place_point_dropped,"25.4495,89.30943 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11481,place_point_dropped,"25.43992,89.32074 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11476,place_point_dropped,"25.50067,89.33409 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11482,place_point_dropped,"25.4421,89.3384 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11483,place_point_dropped,"25.45232,89.32309 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11487,place_point_dropped,"25.48212,89.35312 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11492,place_point_dropped,"25.36813,89.48908 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:18002,place_point_dropped,"25.49129,89.85886 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11508,place_point_dropped,"25.37244,89.51589 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11505,place_point_dropped,"25.31986,89.50165 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11498,place_point_dropped,"25.4176,89.49728 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:17999,place_point_dropped,"25.4282,89.60414 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11506,place_point_dropped,"25.3266,89.49113 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11494,place_point_dropped,"25.35377,89.48993 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11502,place_point_dropped,"25.29144,89.48292 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11495,place_point_dropped,"25.34511,89.48775 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11503,place_point_dropped,"25.29831,89.49891 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11499,place_point_dropped,"25.38985,89.49113 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11509,place_point_dropped,"25.36369,89.52513 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11510,place_point_dropped,"25.35244,89.51413 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11497,place_point_dropped,"25.37273,89.50211 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:31045,place_point_dropped,"25.907192,89.03687 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:1327,place_point_dropped,"26.571866,89.831573 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11545,place_point_dropped,"25.42715,89.34725 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11528,place_point_dropped,"25.41928,89.38879 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11551,place_point_dropped,"25.36992,89.36833 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11550,place_point_dropped,"25.36602,89.36839 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11552,place_point_dropped,"25.37573,89.38892 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11525,place_point_dropped,"25.40771,89.39221 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11518,place_point_dropped,"25.44665,89.4094 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11511,place_point_dropped,"25.34844,89.35807 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11514,place_point_dropped,"25.35405,89.36315 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11526,place_point_dropped,"25.40913,89.38912 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11532,place_point_dropped,"25.43515,89.37419 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11533,place_point_dropped,"25.43107,89.36802 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11542,place_point_dropped,"25.42323,89.40386 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11543,place_point_dropped,"25.41384,89.40741 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11534,place_point_dropped,"25.42278,89.37917 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11535,place_point_dropped,"25.42337,89.38495 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11527,place_point_dropped,"25.40169,89.3987 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11553,place_point_dropped,"25.37641,89.38536 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11529,place_point_dropped,"25.40783,89.3852 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11530,place_point_dropped,"25.40997,89.40221 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11537,place_point_dropped,"25.37015,89.35043 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11538,place_point_dropped,"25.37702,89.35408 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11544,place_point_dropped,"25.41811,89.39795 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11541,place_point_dropped,"25.34983,89.35201 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11539,place_point_dropped,"25.3745,89.35454 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11540,place_point_dropped,"25.3665,89.3692 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11554,place_point_dropped,"25.36364,89.38349 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11513,place_point_dropped,"25.36523,89.36632 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11520,place_point_dropped,"25.4308,89.41405 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11547,place_point_dropped,"25.42282,89.36355 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11555,place_point_dropped,"25.36404,89.37368 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11512,place_point_dropped,"25.3516,89.36735 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11546,place_point_dropped,"25.43005,89.33111 is not inside Kurigram district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:36419,place_point_dropped,"25.778484,89.273411 is not inside Lalmonirhat district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:36053,place_point_dropped,"26.175923,89.51656 is not inside Lalmonirhat district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:18054,place_point_dropped,"26.092586,89.292565 is not inside Lalmonirhat district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:17957,place_point_dropped,"26.175954,89.256145 is not inside Lalmonirhat district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:17962,place_point_dropped,"26.187465,89.516245 is not inside Lalmonirhat district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11595,place_point_dropped,"26.20165,89.20827 is not inside Lalmonirhat district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:32663,place_point_dropped,"25.74058,89.261139 is not inside Lalmonirhat district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11662,place_point_dropped,"25.99336,89.4883 is not inside Lalmonirhat district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:36414,place_point_dropped,"25.403837,88.535718 is not inside Lalmonirhat district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11720,place_point_dropped,"26.11,88.563 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11707,place_point_dropped,"26.065,88.575 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11704,place_point_dropped,"26.124,88.542 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11712,place_point_dropped,"26.091,88.593 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11722,place_point_dropped,"26.094,88.58 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11708,place_point_dropped,"26.094,88.563 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11725,place_point_dropped,"26.162,88.541 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11709,place_point_dropped,"26.092,88.572 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11710,place_point_dropped,"26.071,88.553 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11705,place_point_dropped,"26.083,88.541 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11723,place_point_dropped,"26.08,88.582 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11721,place_point_dropped,"26.132,88.565 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11711,place_point_dropped,"26.08,88.565 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11713,place_point_dropped,"26.121,88.58 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11724,place_point_dropped,"26.061,88.581 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11727,place_point_dropped,"26.143,88.55 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11706,place_point_dropped,"26.134,88.532 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:38404,place_point_dropped,"26.39977,88.896349 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11739,place_point_dropped,"26.034,88.513 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11750,place_point_dropped,"26.031,88.482 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11738,place_point_dropped,"26.072,88.474 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11741,place_point_dropped,"26.082,88.474 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11735,place_point_dropped,"26.055,88.465 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11736,place_point_dropped,"26.053,88.482 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11737,place_point_dropped,"26.061,88.51 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11749,place_point_dropped,"26.052,88.514 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11729,place_point_dropped,"26.092,88.521 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11751,place_point_dropped,"26.08995,88.463 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11732,place_point_dropped,"26.073,88.483 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11748,place_point_dropped,"26.091,88.524 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11734,place_point_dropped,"26.085,88.491 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11744,place_point_dropped,"26.135,88.48 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11745,place_point_dropped,"26.131,88.5112 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11740,place_point_dropped,"26.052,88.511 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:39653,place_point_dropped,"26.120994,88.76034 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:37265,place_point_dropped,"26.120994,88.76034 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11764,place_point_dropped,"26.004,88.594 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11784,place_point_dropped,"26.023,88.532 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11785,place_point_dropped,"26.002,88.535 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11769,place_point_dropped,"25.591,89.011 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11770,place_point_dropped,"25.583,89.063 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11775,place_point_dropped,"26.0,88.572 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11771,place_point_dropped,"25.593,89.02 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11757,place_point_dropped,"26.05,88.535 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11778,place_point_dropped,"25.59,88.554 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11772,place_point_dropped,"25.585,89.04 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11780,place_point_dropped,"26.002,88.563 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11758,place_point_dropped,"26.034,88.554 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11762,place_point_dropped,"26.045,88.562 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11779,place_point_dropped,"25.59,88.584 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11776,place_point_dropped,"25.585,89.01 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11777,place_point_dropped,"25.583,88.592 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11774,place_point_dropped,"26.022,88.581 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11773,place_point_dropped,"25.581,89.032 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11754,place_point_dropped,"26.033,89.585 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11781,place_point_dropped,"26.025,88.555 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11763,place_point_dropped,"26.05,88.545 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11814,place_point_dropped,"25.555,89.04 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11799,place_point_dropped,"25.552,89.015 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11810,place_point_dropped,"25.561,88.595 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11811,place_point_dropped,"25.57,88.592 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11791,place_point_dropped,"25.523,89.014 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11790,place_point_dropped,"25.56,89.013 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:24165,place_point_dropped,"25.521,89.0 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11805,place_point_dropped,"25.501,89.044 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11806,place_point_dropped,"25.505,89.034 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11786,place_point_dropped,"25.502,89.005 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11795,place_point_dropped,"25.551,89.05 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11796,place_point_dropped,"25.542,89.034 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11797,place_point_dropped,"25.541,89.041 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11815,place_point_dropped,"25.561,89.051 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:24173,place_point_dropped,"25.505,89.037 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11803,place_point_dropped,"25.515,89.043 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11788,place_point_dropped,"25.571,89.024 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11800,place_point_dropped,"25.533,89.014 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:24175,place_point_dropped,"25.213,88.562 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11807,place_point_dropped,"25.524,88.572 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11808,place_point_dropped,"25.535,88.591 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11816,place_point_dropped,"25.55,89.033 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11794,place_point_dropped,"25.545,89.055 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11801,place_point_dropped,"25.523,89.032 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11813,place_point_dropped,"25.890521,88.017159 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11802,place_point_dropped,"25.54,89.022 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11793,place_point_dropped,"25.512,89.012 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11798,place_point_dropped,"25.53,89.054 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11789,place_point_dropped,"25.575,89.013 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11792,place_point_dropped,"25.505,89.023 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11787,place_point_dropped,"25.532,89.0 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11804,place_point_dropped,"25.512,89.031 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:1453,place_point_dropped,"25.535,89.004 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+nilphamari-medical-college-nilphamari,place_merged,DGHS_HRIS_FACILITIES_RANG_2026:hris:24634 (1.00),DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:1457,place_point_dropped,"25.5548,88.5042 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11858,place_point_dropped,"25.474,88.543 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11852,place_point_dropped,"25.444,88.535 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11854,place_point_dropped,"25.48,88.514 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11859,place_point_dropped,"25.48,88.553 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11863,place_point_dropped,"25.511,88.555 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11861,place_point_dropped,"25.51,88.572 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11862,place_point_dropped,"25.505,88.582 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11853,place_point_dropped,"25.445,88.562 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11855,place_point_dropped,"25.492,88.544 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11860,place_point_dropped,"25.474,88.564 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11856,place_point_dropped,"25.465,88.513 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11864,place_point_dropped,"25.495,88.544 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11857,place_point_dropped,"25.532,89.0 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:39190,place_point_dropped,"25.622101,88.643765 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:38230,place_point_dropped,"25.622101,88.643765 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:1464,place_point_dropped,"25.47,88.534 is not inside Nilphamari district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11873,place_point_dropped,"26.16266,88.27358 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11869,place_point_dropped,"26.1322,88.29393 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11874,place_point_dropped,"26.16135,88.25581 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11871,place_point_dropped,"26.17284,88.24315 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11878,place_point_dropped,"26.278062,88.038704 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11872,place_point_dropped,"26.20551,88.27091 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11870,place_point_dropped,"26.12448,88.32174 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:16382,place_point_dropped,"25.632545,88.878545 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:16384,place_point_dropped,"25.254785,88.263588 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:16385,place_point_dropped,"25.784512,88.895623 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:16386,place_point_dropped,"25.545856,88.788524 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:16387,place_point_dropped,"25.521223,88.141215 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:16388,place_point_dropped,"25.854565,88.232524 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:1497,place_point_dropped,"25.254728,88.263582 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:1498,place_point_dropped,"25.454121,88.784574 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11898,place_point_dropped,"26.13595,88.37307 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11891,place_point_dropped,"26.18032,88.38454 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11894,place_point_dropped,"26.18242,88.32552 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:22857,place_point_dropped,"26.1311,88.35056 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11879,place_point_dropped,"26.14173,88.41543 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11880,place_point_dropped,"26.16235,88.443 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:22858,place_point_dropped,"26.254785,88.784574 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11900,place_point_dropped,"26.1421,88.39195 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11887,place_point_dropped,"26.13118,88.35058 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11896,place_point_dropped,"26.14236,88.39193 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11884,place_point_dropped,"26.13325,88.36345 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11881,place_point_dropped,"26.16235,88.43322 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11893,place_point_dropped,"26.18329,88.40031 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11890,place_point_dropped,"26.18145,88.34354 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11886,place_point_dropped,"26.13113,88.35055 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11889,place_point_dropped,"26.13324,88.31262 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:18067,place_point_dropped,"26.18244,88.32557 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11882,place_point_dropped,"26.16435,88.35213 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11883,place_point_dropped,"26.18149,88.34353 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11897,place_point_dropped,"26.13592,88.37308 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11901,place_point_dropped,"26.14234,88.39196 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11899,place_point_dropped,"26.13599,88.37304 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11888,place_point_dropped,"26.25478,88.232524 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:22465,place_point_dropped,"26.31041,88.09579 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11904,place_point_dropped,"26.12516,88.43216 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11907,place_point_dropped,"26.05595,88.40482 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11905,place_point_dropped,"26.13143,88.45186 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:13166,place_point_dropped,"26.01192,88.663781 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11915,place_point_dropped,"26.10442,88.40574 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11918,place_point_dropped,"26.04115,88.45409 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:13168,place_point_dropped,"26.05539,88.422781 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11912,place_point_dropped,"26.166185,88.787537 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11908,place_point_dropped,"26.05372,88.39559 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11924,place_point_dropped,"26.09407,88.44482 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11916,place_point_dropped,"26.11206,88.40489 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:1500,place_point_dropped,"26.06582,88.45205 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:22469,place_point_dropped,"25.613733,89.284725 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11927,place_point_dropped,"26.18032,88.38455 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11931,place_point_dropped,"26.20419,88.29356 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11944,place_point_dropped,"26.28062,88.32269 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11941,place_point_dropped,"26.2321,88.33534 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11942,place_point_dropped,"26.22364,88.34407 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11932,place_point_dropped,"26.20098,88.3033 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11929,place_point_dropped,"26.2144,88.32336 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11940,place_point_dropped,"26.16392,88.29401 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11945,place_point_dropped,"26.23071,88.31458 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11934,place_point_dropped,"26.33139,88.23481 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11946,place_point_dropped,"26.37175,88.24301 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11955,place_point_dropped,"26.30122,88.2426 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11947,place_point_dropped,"26.29046,88.2518 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11954,place_point_dropped,"26.31571,88.22075 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:11949,place_point_dropped,"26.25437,88.30377 is not inside Panchagarh district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:1667,place_point_dropped,"26.0,88.1325 is not inside Thakurgaon district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:19240,place_point_dropped,"25.545162,88.334964 is not inside Thakurgaon district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:1675,place_point_dropped,"25.621622,88.644382 is not inside Thakurgaon district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:21127,place_point_dropped,"26.255062,88.621696 is not inside Thakurgaon district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:32375,place_point_dropped,"26.255062,88.621696 is not inside Thakurgaon district",DGHS_HRIS_FACILITIES_RANG_2026
+DGHS_HRIS_FACILITIES_RANG_2026:hris:35066,place_point_dropped,"26.270871,88.595175 is not inside Thakurgaon district",DGHS_HRIS_FACILITIES_RANG_2026
+begum-rokeya-university-rangpur,place_merged,BANBEIS_INST_RANG_2026:eiin:136613 (1.00),BANBEIS_INST_RANG_2026
+teesta-university-rangpur,place_merged,BANBEIS_INST_RANG_2026:eiin:140244 (1.00),BANBEIS_INST_RANG_2026
+hajee-mohammad-danesh-science-and-technology-university-dinajpur,place_merged,BANBEIS_INST_RANG_2026:eiin:136622 (0.89),BANBEIS_INST_RANG_2026
+kurigram-agricultural-university-kurigram,place_merged,BANBEIS_INST_RANG_2026:eiin:140210 (1.00),BANBEIS_INST_RANG_2026
+dokchai-govt-primary-school-bochaganj,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:1471 (1.00),DPE_IPEMIS_PRIMARY_RANG_2026
+dakhsin-hazratpur-govt-primary-school-chirirbandar,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:945 (0.94),DPE_IPEMIS_PRIMARY_RANG_2026
+boroil-govt-primary-school-dinajpur-sadar,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:1000 (1.00),DPE_IPEMIS_PRIMARY_RANG_2026
+rangamati-rifles-govt-primary-school-fulbari,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:1270 (1.00),DPE_IPEMIS_PRIMARY_RANG_2026
+basudabpur-govt-primary-school-hakimpur,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:1593 (0.87),DPE_IPEMIS_PRIMARY_RANG_2026
+balapara-govt-primary-school-khansama,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:791 (1.00),DPE_IPEMIS_PRIMARY_RANG_2026
+nalya-govt-primary-school-nawabganj,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:1117 (0.88),DPE_IPEMIS_PRIMARY_RANG_2026
+chalkmusha-govt-primary-school-parbatipur,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:1177 (1.00),DPE_IPEMIS_PRIMARY_RANG_2026
+parul-govt-primary-school-phulchari,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:4039 (1.00),DPE_IPEMIS_PRIMARY_RANG_2026
+dakkhin-dhanghara-govt-primary-school-gaibandha-sadar,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:3741 (1.00),DPE_IPEMIS_PRIMARY_RANG_2026
+digholkandi-govt-primary-school-palashbari,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:3926 (1.00),DPE_IPEMIS_PRIMARY_RANG_2026
+burailpara-govt-primary-school-sundarganj,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:4365 (1.00),DPE_IPEMIS_PRIMARY_RANG_2026
+gosidanga-govt-primary-school-bhurungamari,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:3466 (1.00),DPE_IPEMIS_PRIMARY_RANG_2026
+baliamari-govt-primary-school-charrajibpur,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:3614 (1.00),DPE_IPEMIS_PRIMARY_RANG_2026
+sajaiyer-char-govt-primary-school-charrajibpur,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:3623 (0.93),DPE_IPEMIS_PRIMARY_RANG_2026
+datiarchar-govt-primary-school-chilmari,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:3303 (1.00),DPE_IPEMIS_PRIMARY_RANG_2026
+chandipur-govt-primary-school-nageshwari,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:3373 (1.00),DPE_IPEMIS_PRIMARY_RANG_2026
+panimaskuti-model-govt-primary-school-phulbari,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:3419 (1.00),DPE_IPEMIS_PRIMARY_RANG_2026
+khitab-kha-govt-primary-school-rajarhat,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:3529 (0.92),DPE_IPEMIS_PRIMARY_RANG_2026
+boalmari-govt-primary-school-rowmari,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:3581 (0.91),DPE_IPEMIS_PRIMARY_RANG_2026
+takanigram-government-primary-school-rowmari,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:42205 (0.87),DPE_IPEMIS_PRIMARY_RANG_2026
+mohishkhocha-dakkshinpara-govt-primary-school-aditmari,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:2809 (0.87),DPE_IPEMIS_PRIMARY_RANG_2026
+sarodubi-govt-primary-school-hatibandha,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:3025 (1.00),DPE_IPEMIS_PRIMARY_RANG_2026
+gossairhat-govt-primary-school-kaliganj,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:2847 (1.00),DPE_IPEMIS_PRIMARY_RANG_2026
+khochabari-model-govt-primary-school-lalmonirhat-sadar,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:2999 (1.00),DPE_IPEMIS_PRIMARY_RANG_2026
+putimary-jamshedia-govt-primary-school-lalmonirhat-sadar,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:2981 (0.91),DPE_IPEMIS_PRIMARY_RANG_2026
+1no-bhotehat-khata-govt-primary-school-patgram,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:2872 (0.90),DPE_IPEMIS_PRIMARY_RANG_2026
+paschim-chhatnai-govt-primary-school-dimla,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:1761 (0.93),DPE_IPEMIS_PRIMARY_RANG_2026
+chhitmirgang-shalongram-govt-primary-school-jaldhaka,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:1677 (0.92),DPE_IPEMIS_PRIMARY_RANG_2026
+magura-shahpara-govt-primary-school-kishorganj,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:1669 (1.00),DPE_IPEMIS_PRIMARY_RANG_2026
+gurguri-govt-primary-school-nilphamari-sadar,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:1917 (1.00),DPE_IPEMIS_PRIMARY_RANG_2026
+majhgram-govt-primary-school-boda,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:267 (1.00),DPE_IPEMIS_PRIMARY_RANG_2026
+bangla-bandha-govt-primary-school-tetulia,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:52 (1.00),DPE_IPEMIS_PRIMARY_RANG_2026
+gedura-malani-govt-primary-school-haripur,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:697 (1.00),DPE_IPEMIS_PRIMARY_RANG_2026
+ranisonkail-model-govt-primary-school-ranisankail,place_merged,DPE_IPEMIS_PRIMARY_RANG_2026:ipemis:658 (1.00),DPE_IPEMIS_PRIMARY_RANG_2026
+rangpur-city-corporation-rangpur-sadar,place_merged,RANGPUR_PORTAL_OFFICES_2026:rpcc.gov.bd (1.00),RANGPUR_PORTAL_OFFICES_2026
+rongpur-metroplitan-pulish-hedkoyartars-rangpur,place_merged,RANGPUR_PORTAL_OFFICES_2026:rpmp.gov.bd (0.90),RANGPUR_PORTAL_OFFICES_2026
+pulish-suparer-karyalay-rongpur-rangpur,place_merged,RANGPUR_PORTAL_OFFICES_2026:police.rangpur.gov.bd (1.00),RANGPUR_PORTAL_OFFICES_2026
+rangpur-civil-surgeon-office-rangpur-sadar,place_merged,RANGPUR_PORTAL_OFFICES_2026:cs.rangpur.gov.bd (0.92),RANGPUR_PORTAL_OFFICES_2026
+office-of-the-superintendent-of-drugs-drug-administration-rangpur,place_merged,RANGPUR_PORTAL_OFFICES_2026:dgda.rangpur.gov.bd (1.00),RANGPUR_PORTAL_OFFICES_2026
+bodaragnj-thana-badargonj,place_merged,RANGPUR_PORTAL_OFFICES_2026:police.badargonj.rangpur.gov.bd (1.00),RANGPUR_PORTAL_OFFICES_2026
+fayar-sarbhis-o-sibhil-difens-rongpur-niyntran-koksh-rangpur,place_merged,RANGPUR_PORTAL_OFFICES_2026:fireservice.badargonj.rangpur.gov.bd (0.90),RANGPUR_PORTAL_OFFICES_2026
+badarganj-upazila-health-complex-badargonj,place_merged,RANGPUR_PORTAL_OFFICES_2026:health.badargonj.rangpur.gov.bd (1.00),RANGPUR_PORTAL_OFFICES_2026
+gonggachra-model-thana-gangachara,place_merged,RANGPUR_PORTAL_OFFICES_2026:police.gangachara.rangpur.gov.bd (0.90),RANGPUR_PORTAL_OFFICES_2026
+gangachara-upazila-health-complex-gangachara,place_merged,RANGPUR_PORTAL_OFFICES_2026:health.gangachara.rangpur.gov.bd (0.89),RANGPUR_PORTAL_OFFICES_2026
+kauniya-thana-kaunia,place_merged,RANGPUR_PORTAL_OFFICES_2026:police.kaunia.rangpur.gov.bd (1.00),RANGPUR_PORTAL_OFFICES_2026
+kownia-upazila-health-complex-kaunia,place_merged,RANGPUR_PORTAL_OFFICES_2026:health.kaunia.rangpur.gov.bd (1.00),RANGPUR_PORTAL_OFFICES_2026
+mithapukur-thana-mithapukur,place_merged,RANGPUR_PORTAL_OFFICES_2026:police.mithapukur.rangpur.gov.bd (1.00),RANGPUR_PORTAL_OFFICES_2026
+pirgachha-thana-pirgacha,place_merged,RANGPUR_PORTAL_OFFICES_2026:police.pirgacha.rangpur.gov.bd (0.86),RANGPUR_PORTAL_OFFICES_2026
+piragnj-thana-pirgonj,place_merged,RANGPUR_PORTAL_OFFICES_2026:police.pirgonj.rangpur.gov.bd (1.00),RANGPUR_PORTAL_OFFICES_2026
+upazila-family-planning-office-pirganj-rangpur-pirgonj,place_merged,RANGPUR_PORTAL_OFFICES_2026:fpo.pirgonj.rangpur.gov.bd (1.00),RANGPUR_PORTAL_OFFICES_2026
+taragnj-thana-taragonj,place_merged,RANGPUR_PORTAL_OFFICES_2026:police.taragonj.rangpur.gov.bd (1.00),RANGPUR_PORTAL_OFFICES_2026
+taraganj-upazila-health-complex-taragonj,place_merged,RANGPUR_PORTAL_OFFICES_2026:hfwc.taragonj.rangpur.gov.bd (1.00),RANGPUR_PORTAL_OFFICES_2026
+bonarpara-saghata,place_merged,DISTRICT_PORTALS_TRANSPORT_RANG_2026:dpt-13 (0.90),DISTRICT_PORTALS_TRANSPORT_RANG_2026
+tajhat-jomidar-bari-rangpur-sadar,place_merged,PORTAL_TOURIST_SPOTS_RANG_2026:rangpur.gov.bd:69770076c4774958d7bd5730 (1.00),PORTAL_TOURIST_SPOTS_RANG_2026
+shibram-adarsha-sundarganj,place_merged,PORTAL_TOURIST_SPOTS_RANG_2026:gaibandha.gov.bd:69770074c4774958d7bd561e (1.00),PORTAL_TOURIST_SPOTS_RANG_2026
+horipur-jomidar-bari-haripur,place_merged,PORTAL_TOURIST_SPOTS_RANG_2026:haripur.thakurgaon.gov.bd:69770075c4774958d7bd5687 (0.91),PORTAL_TOURIST_SPOTS_RANG_2026
+kotyali-thana-rangpur-city,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RRMP-34 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+tajhat-thana-rangpur-city,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RRMP-44 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+mahignj-thana-rangpur-city,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RRMP-56 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+haragachh-thana-rangpur-city,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RRMP-66 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+porshuram-thana-rangpur-city,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RRMP-78 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+hajirhat-thana-rangpur-city,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RRMP-88 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+gonggachra-model-thana-gangachara,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-rangpur-33 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+bodaragnj-thana-badargonj,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-rangpur-40 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+taragnj-thana-taragonj,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-rangpur-47 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+mithapukur-thana-mithapukur,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-rangpur-54 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+piragnj-thana-pirgonj,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-rangpur-61 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+pirgachha-thana-pirgacha,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-rangpur-68 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+kauniya-thana-kaunia,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-rangpur-75 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+gaibandha-sodar-thana-gaibandha-sadar,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-gaibandha-22 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+sadullapur-thana-sadullapur,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-gaibandha-29 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+sundaragnj-thana-sundarganj,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-gaibandha-36 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+polashbari-thana-palashbari,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-gaibandha-43 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+gobindagnj-thana-gobindaganj,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-gaibandha-50 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+saghata-thana-saghata,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-gaibandha-57 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+fulachhri-thana-phulchari,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-gaibandha-64 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+kurigram-thana-kurigram-sadar,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-kurigram-26 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+rajarhat-thana-rajarhat,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-kurigram-33 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+fulbari-thana-phulbari,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-kurigram-40 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+nageshbri-thana-nageshwari,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-kurigram-47 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+bhuranggamari-thana-bhurungamari,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-kurigram-54 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+ulipur-thana-ulipur,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-kurigram-61 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+chilmari-thana-chilmari,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-kurigram-68 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+roumari-thana-rowmari,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-kurigram-75 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+lalamnirhat-sodar-thana-lalmonirhat-sadar,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-lalmonirhat-20 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+aditmari-thana-aditmari,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-lalmonirhat-27 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+kalignj-thana-kaliganj,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-lalmonirhat-27-kaligonj (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+hatibandha-thana-hatibandha,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-lalmonirhat-34 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+patgram-thana-patgram,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-lalmonirhat-41 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+nilfamari-sodar-thana-nilphamari-sadar,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-nilphamari-22 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+soiyadpur-thana-syedpur,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-nilphamari-29 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+joldhaka-thana-jaldhaka,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-nilphamari-36 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+kishoragnj-thana-kishorganj,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-nilphamari-43 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+domar-thana-domar,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-nilphamari-50 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+dimla-thana-dimla,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-nilphamari-57 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+dinajpur-sodar-thana-dinajpur-sadar,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-dinajpur-28 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+chirirabndar-thana-chirirbandar,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-dinajpur-35 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+biral-thana-birol,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-dinajpur-42 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+parbtipur-model-thana-parbatipur,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-dinajpur-49 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+biragnj-thana-birganj,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-dinajpur-56 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+bochagnj-thana-bochaganj,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-dinajpur-63 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+kaharol-thana-kaharol,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-dinajpur-70 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+khansama-thana-khansama,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-dinajpur-77 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+fulbari-thana-fulbari,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-dinajpur-84 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+birampur-thana-birampur,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-dinajpur-91 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+nobabagnj-thana-nawabganj,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-dinajpur-98 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+ghoraghat-thana-ghoraghat,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-dinajpur-105 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+hakimpur-thana-hakimpur,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-dinajpur-112 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+thakurgao-sodar-thana-thakurgaon-sadar,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-thakurgaon-22 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+baliyadanggi-thana-baliadangi,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-thakurgaon-29 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+ranishangkoil-thana-ranisankail,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-thakurgaon-36 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+piragnj-thana-pirganj,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-thakurgaon-43 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+horipur-thana-haripur,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-thakurgaon-50 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+ponchagar-sodar-thana-panchagarh-sadar,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-panchagarh-20 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+boda-thana-boda,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-panchagarh-27 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+atoyari-thana-atwari,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-panchagarh-34 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+tetuliya-thana-tetulia,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-panchagarh-41 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR
+debignj-thana-debiganj,place_merged,BD_POLICE_CONTACTS_2020_RANGPUR:bdpol2020-RangpurRange-panchagarh-48 (0.86),BD_POLICE_CONTACTS_2020_RANGPUR

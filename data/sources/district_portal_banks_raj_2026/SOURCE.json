@@ -1,5 +1,7 @@
 {
   "key": "DISTRICT_PORTAL_BANKS_RAJ_2026",
+  "division": "rajshahi",
+  "kind": "district_banks",
   "name": "District portals — bank branch/office phone lists (Rajshahi, Natore, Naogaon)",
   "organization": "Deputy Commissioner's offices (district portals)",
   "source_type": "government_portal",

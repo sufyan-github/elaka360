@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Fetch bank branch/office phone lists from Rajshahi-Division district portals (DISTRICT_PORTAL_BANKS_RAJ_2026)."""
+"""Fetch bank branch/office phone lists from a division's district portals (default Rajshahi Division, DISTRICT_PORTAL_BANKS_RAJ_2026).
+
+Usage: python3 fetch.py [--division rangpur] [--out DIR]  (rangpur -> DISTRICT_PORTAL_BANKS_RANG_2026)."""
 # --- polite HTTP helper (copy this block into each fetch.py; stdlib + requests only) -----------------
 # Many *.gov.bd servers send only their leaf certificate and omit the intermediate CA. Browsers fetch the
 # missing intermediate via the certificate's AIA URL; we do the same explicitly: download the published
@@ -221,6 +223,9 @@ def row(dist, sid, name, phone, url, extra, notes, upa=""):
 
 
 def main():
+    configure()
+    if DIVISION != "rajshahi":
+        return SITES[DIVISION]["run"]()
     places, n = [], 0
     pages = {}
     for d, u in URLS.items():
@@ -309,7 +314,7 @@ def main():
                                       "From the Naogaon DC portal bank list (name and number as printed)."))
     write_csv("places.csv", PLACE_COLS, places)
     write_manifest(dict(
-        key=KEY, name="District portals — bank branch/office phone lists (Rajshahi, Natore, Naogaon)",
+        key=KEY, division="rajshahi", kind="district_banks", name="District portals — bank branch/office phone lists (Rajshahi, Natore, Naogaon)",
         organization="Deputy Commissioner's offices (district portals)", source_type="government_portal", trust_level=4,
         urls=list(URLS.values()) + list(OTHER.values()), accessed=__import__("datetime").date.today().isoformat(), publication_date=None,
         license=None, license_url=None, attribution="District portals rajshahi.gov.bd, natore.gov.bd, naogaon.gov.bd",
@@ -317,6 +322,178 @@ def main():
               "routing numbers or coordinates. Bogura, Joypurhat and Sirajganj portals list bank names only (no branches/contacts); "
               "Chapainawabganj's page is an unnamed file attachment; Pabna Sadar's page is a copied Google-Maps listing — none used."),
         ["places.csv"] + sorted(f"raw/{p.name}" for p in RAW.glob("*.txt")))
+
+
+# --- division selection (see ../DIVISIONS.md) --------------------------------------------------------------
+# `python3 fetch.py` = `--division rajshahi`, output into this folder (unchanged behaviour). Other divisions write into
+# their own folder (default: the sibling folder named per DIVISIONS.md) and never into the Rajshahi folder.
+import argparse
+DIVISION_CHOICES = ("rajshahi", "rangpur", "dhaka", "chattogram", "khulna", "barishal", "sylhet", "mymensingh")
+DIVISION = "rajshahi"
+
+
+def parse_division_args(folders):
+    """Parse --division/--out. folders: division -> default output folder name (a sibling of this folder)."""
+    ap = argparse.ArgumentParser(description=(__doc__ or "").strip().split("\n")[0])
+    ap.add_argument("--division", default="rajshahi", choices=DIVISION_CHOICES)
+    ap.add_argument("--out", help="output folder (default: this folder for rajshahi, ../<division folder> otherwise)")
+    a = ap.parse_args()
+    if a.division not in folders:
+        raise SystemExit("this collector has no table for division %r yet (see DIVISIONS.md)" % a.division)
+    here = os.path.dirname(os.path.abspath(__file__))
+    out = os.path.abspath(a.out or os.path.join(here, "..", folders[a.division]))
+    if a.division != "rajshahi" and os.path.realpath(out) == os.path.realpath(here):
+        raise SystemExit("refusing to write %s output into the Rajshahi folder %s" % (a.division, here))
+    os.makedirs(out, exist_ok=True)
+    return a.division, out
+
+
+def write_division_manifest(out, meta):
+    """SOURCE.json for a non-default division run: meta + sha256 of every data file in the output folder."""
+    import hashlib as _h, json as _j
+    files = {}
+    for root, _, names in os.walk(out):
+        for n in sorted(names):
+            full = os.path.join(root, n)
+            rel = os.path.relpath(full, out).replace(os.sep, "/")
+            if rel in ("SOURCE.json", "fetch.py", "REPORT.md") or "__pycache__" in rel:
+                continue
+            files[rel] = _h.sha256(open(full, "rb").read()).hexdigest()
+    m = dict(meta)
+    m["files"] = dict(sorted(files.items()))
+    with open(os.path.join(out, "SOURCE.json"), "w", encoding="utf-8") as f:
+        f.write(_j.dumps(m, ensure_ascii=False, indent=2) + "\n")
+
+
+# --- DISTRICT_PORTAL_BANKS_RANG_2026 (Rangpur Division) ---------------------------------------------------------------
+RANG_KEY = "DISTRICT_PORTAL_BANKS_RANG_2026"
+RANG_URLS = {
+    "Panchagarh": "https://panchagarh.gov.bd/pages/static-pages/69773725c4774958d7c0d34e",
+    "Nilphamari": "https://nilphamari.gov.bd/pages/static-pages/6977535ec4774958d7c1bad7",
+    "Kurigram": "https://kurigram.gov.bd/pages/static-pages/6977614ec4774958d7c215ca",
+}
+# Checked but not usable (kept for the report / SOURCE.json urls)
+RANG_OTHER = {
+    "Rangpur": "https://rangpur.gov.bd/pages/static-pages/6977242ec4774958d7c0a048",          # bank names only (+ image)
+    "Gaibandha": "https://gaibandha.gov.bd/pages/static-pages/69771ca6c4774958d7c05746",      # bank names only
+    "Thakurgaon": "https://thakurgaon.gov.bd/pages/static-pages/697769a8c4774958d7c23719",    # two unnamed PDF attachments
+    "Dinajpur": "https://dinajpur.gov.bd/pages/static-pages/ব্যাংক-3abb1c-69774bd4c4774958d7c16c05",  # see notes
+}
+
+
+def landline_only(s):
+    """Phone numbers of a cell, ASCII; mobiles (01...) are dropped (may be managers' personal numbers)."""
+    keep, dropped = [], 0
+    for p in phone_norm(s).split("; "):
+        if not p:
+            continue
+        if re.sub(r"\D", "", p).startswith("01"):
+            dropped += 1
+        else:
+            keep.append(p)
+    return "; ".join(keep), dropped
+
+
+def rrow(dist, sid, name, phone, url, extra, notes, upa=""):
+    r = row(dist, sid, name, phone, url, extra, notes, upa)
+    r["source_key"] = RANG_KEY
+    return r
+
+
+def main_rangpur():
+    places, dropped = [], {}
+    pages = {}
+    for d, u in RANG_URLS.items():
+        r = get(u)
+        if r is None or not r.ok:
+            print("unavailable", u)
+            continue
+        pages[d] = r.text
+        lines = content_text(r.text)
+        if d == "Panchagarh":  # keep serial + bank cell only (the manager column holds officers' names)
+            lines = []
+            for tr in re.findall(r"<tr\b.*?</tr>", r.text, flags=re.S):
+                tds = re.findall(r"<t[dh]\b[^>]*>(.*?)</t[dh]>", tr, flags=re.S)
+                if len(tds) >= 2:
+                    lines.append(clean(tds[0]) + " | " + "; ".join(x for x in (clean(y) for y in re.findall(r"<p\b[^>]*>(.*?)</p>", tds[1], flags=re.S) or [tds[1]]) if x))
+        # mobile numbers (possibly managers' personal numbers) are redacted in raw/
+        save_raw(f"{d.lower()}_banks.txt", "\n".join(re.sub(r"(?<![০-৯0-9])[০০]?[০0][১1][৩-৯3-9][০-৯0-9]{2}-?[০-৯0-9]{6}(?![০-৯0-9])", "[mobile redacted]", l) for l in lines))
+    if "Panchagarh" in pages:  # one cell per bank: <p> name </p><p> address lines </p><p> mobile </p><p> landline </p><p> website </p>
+        n = 0
+        for tr in re.findall(r"<tr\b.*?</tr>", pages["Panchagarh"], flags=re.S):
+            tds = re.findall(r"<td\b[^>]*>(.*?)</td>", tr, flags=re.S)
+            if len(tds) < 2 or not re.search("ব্যাংক|বাংক", clean(tds[1])) or "ঠিকানা" in clean(tds[1]):
+                continue
+            ps = [clean(x) for x in re.findall(r"<p\b[^>]*>(.*?)</p>", tds[1], flags=re.S)]
+            ps = [x for x in ps if x]
+            if not ps:
+                continue
+            name, rest = ps[0], ps[1:]
+            web = next((x for x in rest if x.startswith("http")), "")
+            nums = [x for x in rest if re.fullmatch(r"[০-৯0-9\-\s]+", x)]
+            addr = ", ".join(x for x in rest if x not in nums and x != web).rstrip("।")
+            ph, dr = landline_only(" / ".join(nums))
+            dropped["Panchagarh"] = dropped.get("Panchagarh", 0) + dr
+            n += 1
+            r = rrow("Panchagarh", f"dpb-pan-{n:03d}", name, ph, RANG_URLS["Panchagarh"], {"bank_website": web},
+                     "From the Panchagarh DC portal bank list (name, address and landline as printed; branch mobile number and "
+                     "manager's name not copied). Website as displayed (several link targets on the page point to another bank).")
+            r["address"] = addr
+            places.append(r)
+    if "Nilphamari" in pages:
+        n = 0
+        for t in tables(pages["Nilphamari"]):
+            for cells in t:
+                if len(cells) >= 3 and re.match(r"^[০-৯0-9]+$", cells[0]) and "ব্যাংক" in cells[1] + ("ব্যাংক" if "রাকাব" in cells[1] else ""):
+                    ph, dr = landline_only(cells[2])
+                    dropped["Nilphamari"] = dropped.get("Nilphamari", 0) + dr
+                    n += 1
+                    places.append(rrow("Nilphamari", f"dpb-nil-{n:03d}", cells[1], ph, RANG_URLS["Nilphamari"],
+                                       {"bank_website": cells[3] if len(cells) > 3 else ""},
+                                       "From the Nilphamari DC portal bank list (name as printed, spaces missing in the source). "
+                                       "Only landline numbers kept; " + ("mobile number not copied." if dr else "landline as printed (no area code where none given).")))
+    if "Kurigram" in pages:  # rows: '<post>, <bank>' | landline  -> one row per bank (branch posts) / regional office
+        groups = {}
+        for t in tables(pages["Kurigram"]):
+            for cells in t:
+                if len(cells) < 2 or "," not in cells[0] or not re.search(r"[০-৯0-9]{4}", cells[1]):
+                    continue
+                post, bank = [x.strip() for x in cells[0].split(",", 1)]
+                regional = post.startswith("আঞ্ছলিক") or post.startswith("আঞ্চলিক")
+                k = (bank, regional)
+                g = groups.setdefault(k, {"bank": bank, "regional": regional, "numbers": {}})
+                g["numbers"][post] = phone_norm(cells[1])
+        n = 0
+        for (bank, regional), g in groups.items():
+            n += 1
+            name = "%s%s, কুড়িগ্রাম" % (bank, " আঞ্চলিক কার্যালয়" if regional else "")
+            places.append(rrow("Kurigram", f"dpb-kur-{n:03d}", name, "; ".join(g["numbers"].values()), RANG_URLS["Kurigram"],
+                               {"office_numbers": g["numbers"], "office_type": "regional office" if regional else ""},
+                               "Kurigram DC portal lists numbers by post ('<post>, <bank>'); name composed from the bank and the district"
+                               + (" ('আঞ্ছলিক ব্যাবস্থাপক' = regional manager)" if regional else "") + "; branch not named (Kurigram town)."))
+    write_csv("places.csv", PLACE_COLS, places)
+    write_manifest(dict(
+        key=RANG_KEY, division="rangpur", kind="district_banks",
+        name="District portals — bank branch/office phone lists (Panchagarh, Nilphamari, Kurigram)",
+        organization="Deputy Commissioner's offices (district portals)", source_type="government_portal", trust_level=4,
+        urls=list(RANG_URLS.values()) + list(RANG_OTHER.values()), accessed=__import__("datetime").date.today().isoformat(),
+        publication_date=None, license=None, license_url=None,
+        attribution="District portals panchagarh.gov.bd, nilphamari.gov.bd, kurigram.gov.bd",
+        notes="No licence stated; lists are undated. Only landline numbers are kept (branch mobile numbers dropped: %s). No coordinates "
+              "or routing numbers. Rangpur and Gaibandha portals list bank names only; Thakurgaon's page is two unnamed PDF "
+              "attachments; Lalmonirhat has no bank page; Dinajpur's page gives national hotlines and alternative street names per "
+              "bank (not branch data) — none used." % ", ".join("%s %d" % kv for kv in dropped.items())),
+        ["places.csv"] + sorted(f"raw/{p.name}" for p in RAW.glob("*.txt")))
+
+
+SITES = {"rajshahi": dict(folder="district_portal_banks_raj_2026"), "rangpur": dict(folder="district_portal_banks_rang_2026", run=main_rangpur)}
+
+
+def configure():
+    global DIVISION, HERE, RAW
+    DIVISION, out = parse_division_args({k: v["folder"] for k, v in SITES.items()})
+    HERE = Path(out)
+    RAW = HERE / "raw"
 
 
 if __name__ == "__main__":

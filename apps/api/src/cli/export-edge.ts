@@ -28,7 +28,10 @@ const ROOT = resolve(__dirname, '../../../..');
 const OUT = join(ROOT, 'db', 'd1', 'out');
 const WEB = join(ROOT, 'apps', 'web', 'public', 'data');
 const LIST_CHUNK = 2000;                 // ids per area_lists row (keeps each D1 statement well under 100 KB)
-const MAP_SCOPES = [20015, 10002];       // Rajshahi District, Rajshahi Division (apps/web/components/map/LiveMap.tsx)
+// live map: per collected division, its head district and the whole division (apps/web/components/map/LiveMap.tsx);
+// order = data/sources/DIVISIONS.md
+const DIVISION_HEADS: [number, number][] = [[10002, 20015], [10007, 20059], [10006, 20047], [10001, 20008], [10003, 20027],
+  [10004, 20033], [10005, 20036], [10008, 20062]];
 const MAP_LEVELS = { coarse: ['upazila', 'city_corporation'], fine: ['union', 'pourashava'] };
 const MAX_GEOMETRY_CHARS = 90_000;       // D1 statements are limited to 100 KB
 const EV = ['official', 'secondary', 'community', 'unverified'];
@@ -148,15 +151,23 @@ async function main() {
     }
 
     // ------------------------------------------------------------------ static files for the website
-    for (const id of MAP_SCOPES) {
-      for (const [group, lv] of Object.entries(MAP_LEVELS)) write(join(WEB, 'map', `b-${id}-${group}.json`), await geo.childBoundaries(id, lv));
-    }
-    // pins: everything with a location inside Rajshahi Division (the map's widest scope)
+    // a division is on the map once it has places with a location; per division: boundaries + pins, listed in scopes.json
     const pinFields = ['slug', 'name_bn', 'name_en', 'category_key', 'subcategory_key', 'area_label_bn', 'area_label_en',
                        'evidence_level', 'production_eligible', 'lat', 'lon', 'district_id'] as const;
-    const pins = summaries.filter((s) => s.lat !== null && s.division_id === 10002)
-      .map((s) => pinFields.map((f) => (s as unknown as Record<string, unknown>)[f] ?? null));
-    write(join(WEB, 'map', 'pins-10002.json'), { fields: pinFields, rows: pins });
+    const scopes: { id: number; kind: 'district' | 'division'; division_id: number; name_bn: string; name_en: string }[] = [];
+    for (const [divId, headId] of DIVISION_HEADS) {
+      const inDiv = summaries.filter((s) => s.lat !== null && s.division_id === divId);
+      if (!inDiv.length) continue;
+      for (const [id, kind] of [[headId, 'district'], [divId, 'division']] as const) {
+        for (const [group, lv] of Object.entries(MAP_LEVELS)) write(join(WEB, 'map', `b-${id}-${group}.json`), await geo.childBoundaries(id, lv));
+        const a = areaSummary.get(id)!;
+        scopes.push({ id, kind, division_id: divId, name_bn: a.name_bn, name_en: a.name_en });
+      }
+      write(join(WEB, 'map', `pins-${divId}.json`), {
+        fields: pinFields, rows: inDiv.map((s) => pinFields.map((f) => (s as unknown as Record<string, unknown>)[f] ?? null)),
+      });
+    }
+    write(join(WEB, 'map', 'scopes.json'), scopes);
 
     // search index: areas (excluding the country) and places, as field lists + rows
     const aFields = ['id', 'level', 'parent_id', 'name_bn', 'name_en', 'slug', 'path', 'verified', 'evidence_level', 'production_eligible'] as const;

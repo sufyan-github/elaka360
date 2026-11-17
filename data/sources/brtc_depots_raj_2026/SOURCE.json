@@ -1,5 +1,7 @@
 {
   "key": "BRTC_DEPOTS_RAJ_2026",
+  "division": "rajshahi",
+  "kind": "brtc",
   "name": "BRTC — bus depots in Rajshahi Division",
   "organization": "Bangladesh Road Transport Corporation (BRTC)",
   "source_type": "government_portal",

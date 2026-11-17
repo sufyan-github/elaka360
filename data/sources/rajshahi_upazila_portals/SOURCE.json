@@ -4,6 +4,8 @@
   "organization": "Upazila Nirbahi Officers' offices, Rajshahi District (Government of Bangladesh, a2i National Portal)",
   "source_type": "government_portal",
   "trust_level": 4,
+  "division": "rajshahi",
+  "kind": "upazila_portals",
   "urls": [
     "https://bagha.rajshahi.gov.bd/",
     "https://bagmara.rajshahi.gov.bd/",

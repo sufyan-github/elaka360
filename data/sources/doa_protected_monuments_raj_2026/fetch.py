@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Department of Archaeology (archaeology.gov.bd) gazetted protected monuments of Rajshahi Division, one PDF per district.
 
+Usage: python3 fetch.py [--division rajshahi|rangpur] [--out DIR]   (default: Rajshahi into this folder; DIVISIONS.md)
+
 Re-runnable: python3 fetch.py  (stdlib + requests). Optional: ELAKA_CACHE=<dir> caches pages."""
 # --- polite HTTP helper (copy this block into each fetch.py; stdlib + requests only) -----------------
 # Many *.gov.bd servers send only their leaf certificate and omit the intermediate CA. Browsers fetch the
@@ -274,6 +276,46 @@ CITY_THANAS = {"বোয়ালিয়া": "Boalia", "রাজপাড�
                "দামকুড়া": "Damkura", "বেলপুকুর": "Belpukur", "কর্ণহার": "Karnahar", "পবা": "Paba"}
 
 
+# Rangpur Division (DIVISIONS.md): district/upazila names, Bangla spellings as used on the portals
+RANGPUR_DISTRICTS = {"পঞ্চগড়": "Panchagarh", "দিনাজপুর": "Dinajpur", "লালমনিরহাট": "Lalmonirhat", "নীলফামারী": "Nilphamari",
+                     "গাইবান্ধা": "Gaibandha", "ঠাকুরগাঁও": "Thakurgaon", "রংপুর": "Rangpur", "কুড়িগ্রাম": "Kurigram"}
+RANGPUR_UPAZILAS = {
+    "Panchagarh": [("Panchagarh Sadar", ["পঞ্চগড় সদর"], "panchagarhsadar"), ("Atwari", ["আটোয়ারী", "আটোয়ারি"], "atwari"),
+                   ("Boda", ["বোদা"], "boda"), ("Debiganj", ["দেবীগঞ্জ", "দেবিগঞ্জ"], "debiganj"),
+                   ("Tetulia", ["তেঁতুলিয়া", "তেতুলিয়া"], "tetulia")],
+    "Dinajpur": [("Dinajpur Sadar", ["দিনাজপুর সদর", "কোতোয়ালী"], "dinajpursadar"), ("Birampur", ["বিরামপুর"], "birampur"),
+                 ("Birganj", ["বীরগঞ্জ", "বিরগঞ্জ"], "birganj"), ("Biral", ["বিরল"], "birol"),
+                 ("Bochaganj", ["বোচাগঞ্জ", "সেতাবগঞ্জ"], "bochaganj"), ("Chirirbandar", ["চিরিরবন্দর"], "chirirbandar"),
+                 ("Phulbari", ["ফুলবাড়ী", "ফুলবাড়ি"], "fulbari"), ("Ghoraghat", ["ঘোড়াঘাট"], "ghoraghat"),
+                 ("Hakimpur", ["হাকিমপুর"], "hakimpur"), ("Kaharole", ["কাহারোল"], "kaharol"), ("Khansama", ["খানসামা"], "khansama"),
+                 ("Nawabganj", ["নবাবগঞ্জ"], "nawabganj"), ("Parbatipur", ["পার্বতীপুর"], "parbatipur")],
+    "Lalmonirhat": [("Lalmonirhat Sadar", ["লালমনিরহাট সদর"], "sadar"), ("Aditmari", ["আদিতমারী"], "aditmari"),
+                    ("Hatibandha", ["হাতীবান্ধা", "হাতিবান্ধা"], "hatibandha"), ("Kaliganj", ["কালীগঞ্জ"], "kaliganj"),
+                    ("Patgram", ["পাটগ্রাম"], "patgram")],
+    "Nilphamari": [("Nilphamari Sadar", ["নীলফামারী সদর"], "nilphamarisadar"), ("Dimla", ["ডিমলা"], "dimla"),
+                   ("Domar", ["ডোমার"], "domar"), ("Jaldhaka", ["জলঢাকা"], "jaldhaka"), ("Kishoreganj", ["কিশোরগঞ্জ"], "kishorganj"),
+                   ("Saidpur", ["সৈয়দপুর"], "syedpur")],
+    "Gaibandha": [("Gaibandha Sadar", ["গাইবান্ধা সদর"], "gaibandhasadar"), ("Phulchhari", ["ফুলছড়ি", "ফুলছড়ী"], "phulchari"),
+                  ("Gobindaganj", ["গোবিন্দগঞ্জ"], "gobindaganj"), ("Palashbari", ["পলাশবাড়ী", "পলাশবাড়ি"], "palashbari"),
+                  ("Sadullapur", ["সাদুল্লাপুর"], "sadullapur"), ("Saghata", ["সাঘাটা"], "saghata"),
+                  ("Sundarganj", ["সুন্দরগঞ্জ"], "sundarganj")],
+    "Thakurgaon": [("Thakurgaon Sadar", ["ঠাকুরগাঁও সদর"], "thakurgaonsadar"), ("Baliadangi", ["বালিয়াডাঙ্গী", "বালিয়াডাঙ্গি"], "baliadangi"),
+                   ("Haripur", ["হরিপুর"], "haripur"), ("Pirganj", ["পীরগঞ্জ"], "pirganj"),
+                   ("Ranisankail", ["রাণীশংকৈল", "রানীশংকৈল"], "ranisankail")],
+    "Rangpur": [("Rangpur Sadar", ["রংপুর সদর"], "rangpursadar"), ("Badarganj", ["বদরগঞ্জ"], "badargonj"),
+                ("Gangachara", ["গংগাচড়া", "গঙ্গাচড়া"], "gangachara"), ("Kaunia", ["কাউনিয়া"], "kaunia"),
+                ("Mithapukur", ["মিঠাপুকুর"], "mithapukur"), ("Pirgachha", ["পীরগাছা"], "pirgacha"), ("Pirganj", ["পীরগঞ্জ"], "pirgonj"),
+                ("Taraganj", ["তারাগঞ্জ"], "taragonj")],
+    "Kurigram": [("Kurigram Sadar", ["কুড়িগ্রাম সদর"], "kurigramsadar"), ("Bhurungamari", ["ভুরুঙ্গামারী"], "bhurungamari"),
+                 ("Char Rajibpur", ["চর রাজিবপুর", "রাজিবপুর"], "charrajibpur"), ("Chilmari", ["চিলমারী"], "chilmari"),
+                 ("Phulbari", ["ফুলবাড়ী", "ফুলবাড়ি"], "phulbari"), ("Nageshwari", ["নাগেশ্বরী"], "nageshwari"),
+                 ("Rajarhat", ["রাজারহাট"], "rajarhat"), ("Raomari", ["রৌমারী"], "rowmari"), ("Ulipur", ["উলিপুর"], "ulipur")],
+}
+# Rangpur Metropolitan Police thanas (city fallback when no upazila is named)
+RANGPUR_CITY_THANAS = {"কোতোয়ালী": "Kotwali", "তাজহাট": "Tajhat", "মাহিগঞ্জ": "Mahiganj", "হারাগাছ": "Haragachh",
+                       "পরশুরাম": "Parshuram", "হাজীরহাট": "Hajirhat"}
+
+
 def find_upazila(text, district=None):
     """First upazila (English) whose Bangla name occurs in text; restricted to district if given."""
     t = nfc(text)
@@ -291,6 +333,7 @@ def find_upazila(text, district=None):
 
 # --- optional QA: point-in-polygon against HDX COD-AB upazila polygons in the repo (if present) -----------
 _POLYS = None
+HDX_FOLDER = "hdx_cod_ab_bgd"  # the division's HDX COD-AB extract (hdx_cod_ab_bgd_<division> for other divisions)
 
 
 def _load_polys():
@@ -299,7 +342,7 @@ def _load_polys():
         return _POLYS
     _POLYS = []
     here = os.path.dirname(os.path.abspath(__file__))
-    fn = os.path.join(here, "..", "hdx_cod_ab_bgd", "boundaries.geojson")
+    fn = os.path.join(here, "..", HDX_FOLDER, "boundaries.geojson")
     if os.path.exists(fn):
         for f in json.load(open(fn, encoding="utf-8"))["features"]:
             p = f["properties"]
@@ -431,6 +474,38 @@ def _conv(s):
     return unicodedata.normalize("NFC", u)
 
 
+# --- division selection (data/sources/DIVISIONS.md) ---------------------------------------------------------
+import argparse
+DIVISION_CODES = {"rajshahi": "raj", "rangpur": "rang", "dhaka": "dhk", "chattogram": "ctg", "khulna": "khl",
+                  "barishal": "bar", "sylhet": "syl", "mymensingh": "mym"}
+
+
+def division_setup(here, base_key, configured, extra_args=()):
+    """Parse --division/--out -> (args, out_dir, source_key). Rajshahi (default) keeps this folder and key; another
+    division writes to its own folder named per DIVISIONS.md and never touches the Rajshahi files."""
+    ap = argparse.ArgumentParser(description=(__doc__ or "").strip().split("\n")[0])
+    ap.add_argument("--division", default="rajshahi", choices=list(DIVISION_CODES))
+    ap.add_argument("--out", help="output folder (default: this folder for rajshahi, the division's own folder otherwise)")
+    for name, kw in extra_args:
+        ap.add_argument(name, **kw)
+    args = ap.parse_args()
+    if args.division not in configured:
+        ap.error("division %r is not configured in this collector yet (configured: %s)" % (args.division, ", ".join(configured)))
+    here = os.path.abspath(str(here))
+    folder = os.path.basename(here)
+    if args.division == "rajshahi":
+        name, key = folder, base_key
+    else:
+        code = DIVISION_CODES[args.division]
+        name = folder.replace("_raj_", "_%s_" % code) if "_raj_" in folder else "%s_%s" % (folder, args.division)
+        key = base_key.replace("_RAJ_", "_%s_" % code.upper()) if "_RAJ_" in base_key else "%s_%s" % (base_key, args.division.upper())
+    out = os.path.abspath(args.out) if args.out else (here if args.division == "rajshahi" else os.path.join(os.path.dirname(here), name))
+    if args.division != "rajshahi" and out == here:
+        ap.error("refusing to write another division's output into the Rajshahi folder")
+    os.makedirs(out, exist_ok=True)
+    return args, out, key
+# --- end division selection ---------------------------------------------------------------------------------
+
 # --- DOA_PROTECTED_MONUMENTS_RAJ_2026 -----------------------------------------------------------------------
 # Department of Archaeology: "রাজশাহী বিভাগের সংরক্ষিত পুরাকীর্তি" page -> one PDF per district (gazetted protected
 # monuments with GPS and gazette references). The PDFs are typed in Bijoy/SutonnyMJ (ANSI) with a few rows in
@@ -442,11 +517,35 @@ SOURCE_KEY = "DOA_PROTECTED_MONUMENTS_RAJ_2026"
 OUT = os.path.dirname(os.path.abspath(__file__))
 RAW = os.path.join(OUT, "raw")
 LIST_URL = "https://archaeology.gov.bd/pages/static-pages/6922df29933eb65569e20433"
+DIVISION, HEAD = "rajshahi", "Rajshahi"
+LAT_RANGE, LON_RANGE = (23.7, 25.5), (87.9, 90.0)
+# per division: list page "<division> বিভাগের সংরক্ষিত পুরাকীর্তি", district names, upazilas, city thanas, lat/lon sanity box
+BY_DIV = {
+    "rajshahi": dict(list_url=LIST_URL, districts=DISTRICTS, upazilas=UPAZILAS, thanas=CITY_THANAS, head="Rajshahi",
+                     lat=(23.7, 25.5), lon=(87.9, 90.0)),
+    "rangpur": dict(list_url="https://archaeology.gov.bd/pages/static-pages/6922dca5933eb65569e1169f", districts=RANGPUR_DISTRICTS,
+                    upazilas=RANGPUR_UPAZILAS, thanas=RANGPUR_CITY_THANAS, head="Rangpur", lat=(24.9, 26.7), lon=(87.9, 90.0)),
+}
+
+
+def _same_upazila(a, b):
+    """Rajshahi compares names exactly (as before); other divisions allow HDX spelling variants (Birol/Biral, Roumari/Raomari)."""
+    if DIVISION == "rajshahi":
+        return a == b
+    import difflib
+    k = lambda s: re.sub(r"[^a-z]", "", s.lower().replace("ph", "f").replace("w", "b").replace("sadar", ""))
+    x, y = k(a), k(b)
+    if "citycorporation" in x + y and "sadar" in (a + b).lower():
+        return True
+    return x == y or x.endswith(y) or y.endswith(x) or difflib.SequenceMatcher(None, x, y).ratio() >= 0.75
 
 HDR_KEYS = {"loc": ["Ae¯’vb", "অবস্থান"], "gps": ["wRI", "জিও"], "gaz": ["cÖÁvcb", "প্রজ্ঞাপন"], "desc": ["mswÿß", "সংক্ষিপ্ত"]}
 SKIP = ["director_general", "feb, Gd-4", "ভবন, এফ-৪", "AvMviMvuI"]
 ENG = re.compile(r"\b(and|in|by|of|Ref|Protected|Monuments|Mounds|Bangladesh|District|Department|Archaeology|Museums|Gazette|Notification|No)\b")
 TEXT_FIXES = {"হহম্নত": "হেমন্ত"}  # PDF text-layer artefacts in Unicode rows (visible text checked on the page image)
+# other divisions: Bijoy-conversion slips (reph after a vowel sign; 'Ý' read as ন্ব) checked against the rendered pages
+TEXT_FIXES_BY_DIV = {"rangpur": {"সদার্রপাড়া": "সর্দারপাড়া", "চক্রবতীর্": "চক্রবর্তী", "মুন্বিবাড়ি": "মুন্সিবাড়ি"}}
+HEADER_TAIL = None  # other divisions: the header's second line ("নাম ... AwW©‡bU") is skipped, not glued to the last row
 
 
 def _segs(line):
@@ -457,6 +556,8 @@ def parse_layout(txt):
     cols, rows, cur = None, [], None
     for line in txt.splitlines():
         if not line.strip() or any(k in line for k in SKIP):
+            continue
+        if HEADER_TAIL and HEADER_TAIL.search(line):
             continue
         if any(k in line for k in HDR_KEYS["gps"]) and any(k in line for k in HDR_KEYS["loc"]):
             c = {"name": 4}
@@ -575,6 +676,17 @@ def pdf_text(pdf_path, txt_path):
 
 
 def main():
+    global OUT, RAW, SOURCE_KEY, LIST_URL, DISTRICTS, UPAZILAS, CITY_THANAS, DIVISION, HEAD, LAT_RANGE, LON_RANGE, HDX_FOLDER
+    args, OUT, SOURCE_KEY = division_setup(OUT, SOURCE_KEY, list(BY_DIV))
+    DIVISION, cfg = args.division, BY_DIV[args.division]
+    LIST_URL, DISTRICTS, UPAZILAS, CITY_THANAS, HEAD = cfg["list_url"], cfg["districts"], cfg["upazilas"], cfg["thanas"], cfg["head"]
+    LAT_RANGE, LON_RANGE = cfg["lat"], cfg["lon"]
+    if DIVISION != "rajshahi":
+        global HEADER_TAIL
+        HDX_FOLDER = "hdx_cod_ab_bgd_%s" % DIVISION
+        TEXT_FIXES.update(TEXT_FIXES_BY_DIV.get(DIVISION, {}))
+        HEADER_TAIL = re.compile(r"^\s*নাম\s*$|^\s*নাম\s{2,}.*AwW©‡bU")
+    RAW = os.path.join(OUT, "raw")
     os.makedirs(RAW, exist_ok=True)
     t = fetch_text(LIST_URL)
     w = widget(t)
@@ -603,7 +715,7 @@ def main():
         txt = pdf_text(base + ".pdf", base + ".txt")
         rows = parse_layout(txt)
         facts.append({"entity_level": "district", "entity_name_en": d, "district_en": d, "fact": "protected_monuments_gazetted",
-                      "value": e["count"], "unit": "monuments", "basis": "count stated on the DoA Rajshahi Division page",
+                      "value": e["count"], "unit": "monuments", "basis": "count stated on the DoA %s Division page" % HEAD,
                       "year": (e["published"][-4:] if e["published"] else ""), "source_key": SOURCE_KEY, "source_url": LIST_URL,
                       "notes": "list published %s; %d rows parsed from the PDF" % (e["published"], len(rows))})
         for r in rows:
@@ -622,7 +734,7 @@ def main():
             locs = [x for x in dict.fromkeys(loc.split(" ")) if x]
             up_d, up = find_upazila(loc, d)
             thana = None
-            if not up and d == "Rajshahi":
+            if not up and d == HEAD:
                 for bn, en in CITY_THANAS.items():
                     if bn in loc:
                         up = thana = en
@@ -636,10 +748,10 @@ def main():
                     for n in (n1, n2):
                         if n and n not in notes:
                             notes.append(n)
-                    if lat is not None and not (23.7 < lat < 25.5):
-                        notes.append("latitude %s outside Rajshahi Division — not used" % lat); lat = None
-                    if lon is not None and not (87.9 < lon < 90.0):
-                        notes.append("longitude %s outside Rajshahi Division — not used" % lon); lon = None
+                    if lat is not None and not (LAT_RANGE[0] < lat < LAT_RANGE[1]):
+                        notes.append("latitude %s outside %s Division — not used" % (lat, HEAD)); lat = None
+                    if lon is not None and not (LON_RANGE[0] < lon < LON_RANGE[1]):
+                        notes.append("longitude %s outside %s Division — not used" % (lon, HEAD)); lon = None
                     if lat is None or lon is None:
                         lat = lon = None
                 else:
@@ -649,7 +761,7 @@ def main():
                     if qd and qd != d:
                         notes.append("QA: published point falls in %s/%s (HDX COD-AB polygons), not in %s District — coordinates not used (see extra_json)" % (qd, qu, d))
                         lat = lon = None
-                    elif qd and up and qu and qu != up and not thana:
+                    elif qd and up and qu and not _same_upazila(qu, up) and not thana:
                         notes.append("QA: point falls in %s/%s (HDX COD-AB polygons), not %s as listed — check" % (qd, qu, up))
                 if lat is not None:
                     k = (lat, lon)
@@ -659,7 +771,7 @@ def main():
                 if len(pairs) > 1 and not sub:
                     notes.append("source gives %d coordinate pairs; first used" % len(pairs))
                 if thana:
-                    notes.append("upazila_en holds the Rajshahi metropolitan thana (%s), not an upazila" % thana)
+                    notes.append("upazila_en holds the %s metropolitan thana (%s), not an upazila" % (HEAD, thana))
                 if not up:
                     notes.append("upazila not recognised in location text")
                 places.append({
@@ -673,6 +785,21 @@ def main():
                     "source_url": e["pdf"] or LIST_URL, "notes": "; ".join(notes)})
     write_csv(os.path.join(OUT, "places.csv"), PLACE_COLS, places)
     write_csv(os.path.join(OUT, "facts.csv"), FACT_COLS, facts)
+    if DIVISION != "rajshahi":  # the Rajshahi SOURCE.json is maintained by hand; other divisions get theirs here
+        files = ["facts.csv", "places.csv"] + sorted("raw/" + f for f in os.listdir(RAW))
+        mp = os.path.join(OUT, "SOURCE.json")
+        m = json.load(open(mp, encoding="utf-8")) if os.path.exists(mp) else {
+            "key": SOURCE_KEY, "division": DIVISION, "kind": "doa_monuments",
+            "name": "Department of Archaeology — gazetted protected monuments, %s Division (district PDF lists)" % HEAD,
+            "organization": "প্রত্নতত্ত্ব অধিদপ্তর (Department of Archaeology), Ministry of Cultural Affairs",
+            "source_type": "government_portal", "trust_level": 4, "urls": [LIST_URL], "accessed": None, "publication_date": None,
+            "license": None, "license_url": None,
+            "attribution": "প্রত্নতত্ত্ব অধিদপ্তর (Department of Archaeology), Ministry of Cultural Affairs"}
+        import datetime
+        m["accessed"] = datetime.date.today().isoformat()
+        m["files"] = {f: sha256(os.path.join(OUT, f)) for f in files if os.path.exists(os.path.join(OUT, f))}
+        with open(mp, "w", encoding="utf-8") as fh:
+            fh.write(json.dumps(m, ensure_ascii=False, indent=2) + "\n")
     print(len(places), "places", file=sys.stderr)
 
 

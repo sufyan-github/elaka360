@@ -1,0 +1,25 @@
+{
+  "key": "RANGPUR_POLICE_2026",
+  "division": "rangpur",
+  "kind": "district_police",
+  "name": "Rangpur District Police — SP office and thanas",
+  "organization": "Rangpur District Police (Bangladesh Police)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://police.rangpur.gov.bd/",
+    "https://police.rangpur.gov.bd/pages/static-pages/6977394fc4774958d7c10b45",
+    "https://police.<upazila>.rangpur.gov.bd/"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Office of the Superintendent of Police, Rangpur (police.rangpur.gov.bd) and the thana portals",
+  "notes": "No licence stated. police.rangpur.gov.bd publishes no contact table; SP office from the Superintendent's officer card, thanas from each thana's portal officer cards (office landline, OC's police official mobile, *.gov.bd e-mail). Personal e-mails, other mobiles and officers' names are not copied. The 'এক নজরে' page gives 8 thanas; only the 7 upazila thana portals were found (police.rangpursadar.rangpur.gov.bd is the old Kotwali thana, now RpMP).",
+  "files": {
+    "places.csv": "69c5a98be2985ebbb1bc660a5265fb430ac3d63e2e2fac18da87ea667c5b0b84",
+    "facts.csv": "c369a038d40e11bfbc89928415920d5de1a9592f0bf2c8c4400778917e06d3b6",
+    "raw/rangpur_police_glance.txt": "2ecf1363abbe910a354142daed1b52ca1a9ba41b3d3e374fc52edf6e1c670379"
+  }
+}

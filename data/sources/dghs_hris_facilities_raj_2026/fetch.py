@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""DGHS / MoHFW HRIS Facility Registry — Rajshahi Division facilities.
+"""DGHS / MoHFW HRIS Facility Registry — facilities of one division (default Rajshahi).
 
 Source: https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list (public report, no login;
 robots.txt allows everything). The report offers an Excel export (`ret=excel`) of the filtered list; we request
@@ -7,13 +7,37 @@ division_id[]=3 (Rajshahi) with a fixed column set, then normalise to places.csv
 
 Usage: python3 fetch.py            # download fresh export, keep a contact-sanitised CSV copy in raw/, rebuild CSVs
        python3 fetch.py --offline  # rebuild CSVs from the committed raw/ export
+       python3 fetch.py --division rangpur [--out DIR] [--offline]
+                                   # another division (see ../DIVISIONS.md); default output is the sibling folder
+                                   # dghs_hris_facilities_<code>_2026, the Rajshahi files are never touched
 Stdlib + requests only.
 """
-import csv, collections, datetime, hashlib, json, os, re, sys, unicodedata, zipfile
+import argparse, csv, collections, datetime, hashlib, json, os, re, sys, unicodedata, zipfile
 import xml.etree.ElementTree as ET
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-KEY = "DGHS_HRIS_FACILITIES_RAJ_2026"
+# division -> (code from DIVISIONS.md, HRIS division_id, seed division id, generous lat box, generous lon box)
+DIVISIONS = {
+    "rajshahi": ("raj", 3, 10002, (23.7, 25.5), (87.9, 90.0)),
+    "rangpur": ("rang", 4, 10007, (24.8, 26.8), (87.9, 90.1)),
+    "dhaka": ("dhk", 1, 10006, (22.9, 25.0), (89.2, 91.3)),
+    "chattogram": ("ctg", 2, 10001, (20.5, 24.4), (90.4, 92.8)),
+    "khulna": ("khl", 5, 10003, (21.5, 24.3), (88.0, 90.1)),
+    "barishal": ("bar", 6, 10004, (21.6, 23.2), (89.7, 91.1)),
+    "sylhet": ("syl", 7, 10005, (23.9, 25.3), (90.9, 92.6)),
+    "mymensingh": ("mym", 8, 10008, (24.0, 25.5), (89.6, 91.3)),
+}
+_ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+_ap.add_argument("--division", default="rajshahi", choices=sorted(DIVISIONS))
+_ap.add_argument("--out", default=None, help="output folder (default: this folder for Rajshahi, else the sibling folder)")
+_ap.add_argument("--offline", action="store_true", help="rebuild from raw/ in the output folder without network")
+ARGS = _ap.parse_args()
+DIV = ARGS.division
+DIVT = DIV.title()
+CODE, HRIS_DIV, SEED_DIV, LAT, LON = DIVISIONS[DIV]
+OUT = os.path.abspath(ARGS.out) if ARGS.out else (
+    HERE if DIV == "rajshahi" else os.path.join(os.path.dirname(HERE), f"dghs_hris_facilities_{CODE}_2026"))
+KEY = f"DGHS_HRIS_FACILITIES_{CODE.upper()}_2026"
 BASE = "https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list"
 PROFILE = "https://hris.mohfw.gov.bd/public/facility-registry/facilities/{id}/profile"
 COLUMNS = ("id,name,name_bn,code,email_1,mobile_1,official_contact_no,land_phone_1,website_url,mailing_address,"
@@ -21,7 +45,8 @@ COLUMNS = ("id,name,name_bn,code,email_1,mobile_1,official_contact_no,land_phone
            "facility_healthcare_level_name,facility_location_type_name,division_name,district_name,"
            "city_corporation_name,upazila_name,paurasava_name,union_name,is_private,establishment_year,"
            "approved_bed_number,revenue_bed_number,latest_bed_count")
-RAW = os.path.join(HERE, "raw", "hris_organization_list_rajshahi_division.csv")
+RAW_REL = f"raw/hris_organization_list_{DIV}_division.csv"
+RAW = os.path.join(OUT, *RAW_REL.split("/"))
 # Contact columns are blanked for private/NGO rows before anything is written to disk (may be personal numbers).
 PRIVATE_BLANK = ("Email", "Mobile 1", "Official Contact No", "Land Phone 1", "Website Url", "Mailing Address")
 
@@ -143,7 +168,7 @@ def read_xlsx(path):
 # ------------------------------------------------------------------ download
 def download():
     import tempfile
-    params = {"submit": "Run", "is_active": "1", "division_id[]": "3", "columns_csv": COLUMNS, "ret": "excel"}
+    params = {"submit": "Run", "is_active": "1", "division_id[]": str(HRIS_DIV), "columns_csv": COLUMNS, "ret": "excel"}
     r = get(BASE, params=params, timeout=600)
     if r is None or r.status_code != 200 or not r.content.startswith(b"PK"):
         print("export download failed:", r and r.status_code, file=sys.stderr)
@@ -181,7 +206,8 @@ HOSPITAL_TYPES = {"10-bed Hospital", "20-bed Hospital", "25-bed Hospital", "30-b
 CLINIC_TYPES = {"Union Health Center", "Union Health Sub Center", "Union Health & Family Welfare Center (UH&FWC)",
                 "Maternal & Child Welfare Centre (MCWC)", "Blood Bank", "Chest Disease Clinic", "Leprosy Clinic",
                 "School Health Clinic", "Urban Dispensary", "Family Planning Clinic", "Sadar Clinic",
-                "Maternal & Child Health Unit (MCH Unit)"}
+                "Maternal & Child Health Unit (MCH Unit)",
+                "Urban Primary Health Care Center"}  # UPHC: not present in the Rajshahi export
 TRAINING_TYPES = {"Nursing College/Nursing Institute", "Nursing College ( NC)", "Nursing Institute (NI)",
                   "Medical Assistants` Training School", "Regional Population Training Institute (RPTI)",
                   "Training Institute (TI)", "Regional Training Center (RTC)", "Regional Training Center",
@@ -237,14 +263,36 @@ def phone(s):
     return s
 
 
-UPAZILA_FIX = {"Matihar": "Motihar", "Mohonpur": "Mohanpur", "Baghmara": "Bagmara"}
-METRO_THANAS = {"Boalia", "Rajpara", "Motihar", "Matihar", "Shah Makhdum", "Chandrima", "Kashiadanga", "Katakhali",
-                "Belpukur", "Damkura", "Karnahar", "Airport", "Paba Metro"}
-LAT, LON = (23.7, 25.5), (87.9, 90.0)  # generous Rajshahi Division bounding box
+# per division: registry upazila spellings -> standard names, and metropolitan thanas stored as "upazilas"
+_UPAZILA_FIX = {
+    "rajshahi": {"Matihar": "Motihar", "Mohonpur": "Mohanpur", "Baghmara": "Bagmara"},
+    "rangpur": {"Rajibpur": "Char Rajibpur"},
+}
+_METRO_THANAS = {
+    "rajshahi": {"Boalia", "Rajpara", "Motihar", "Matihar", "Shah Makhdum", "Chandrima", "Kashiadanga", "Katakhali",
+                 "Belpukur", "Damkura", "Karnahar", "Airport", "Paba Metro"},
+    # Rangpur Metropolitan Police thanas
+    "rangpur": {"Kotwali", "Rangpur Kotwali", "Tajhat", "Mahiganj", "Haragach", "Parshuram", "Hajirhat"},
+}
+UPAZILA_FIX = _UPAZILA_FIX.get(DIV, {})
+METRO_THANAS = _METRO_THANAS.get(DIV, set())
+# LAT, LON: generous division bounding box (from DIVISIONS above)
 
 
 def load_district_polys():
     """Optional QA: district polygons from the sibling HDX folder (if present)."""
+    if DIV != "rajshahi":
+        # sibling HDX folder of that division if collected, else the seed's district polygons of the division
+        p = os.path.join(HERE, "..", f"hdx_cod_ab_bgd_{DIV}", "boundaries.geojson")
+        if os.path.isfile(p):
+            g = json.load(open(p, encoding="utf-8"))
+            return [(f["properties"]["name_en"], f["geometry"]) for f in g["features"] if f["properties"].get("level") == "district"]
+        p = os.path.join(HERE, "..", "..", "seed", "geo", "districts.geojson")
+        if not os.path.isfile(p):
+            return None
+        g = json.load(open(p, encoding="utf-8"))
+        return [(f["properties"]["name_en"], f["geometry"]) for f in g["features"]
+                if f["properties"].get("division_id") == SEED_DIV] or None
     p = os.path.join(HERE, "..", "hdx_cod_ab_bgd", "boundaries.geojson")
     if not os.path.isfile(p):
         return None
@@ -305,10 +353,10 @@ def build():
                     notes.append(f"coordinates fall in {d} district, registry says {g('District')} — check")
                     stats["coord_district_mismatch"] += 1
                 elif polys and d is None:
-                    notes.append("coordinates fall outside Rajshahi Division polygons — check")
+                    notes.append(f"coordinates fall outside {DIVT} Division polygons — check")
                     stats["coord_outside_division"] += 1
             else:
-                notes.append(f"registry coordinates {g('Latitude')},{g('Longitude')} outside Rajshahi Division — dropped")
+                notes.append(f"registry coordinates {g('Latitude')},{g('Longitude')} outside {DIVT} Division — dropped")
                 stats["coord_out_of_range"] += 1
         except ValueError:
             if g("Latitude") or g("Longitude"):
@@ -369,32 +417,32 @@ def build():
             for p in v:
                 others = ",".join(x["source_id"] for x in v if x is not p)
                 p["notes"] = "; ".join(filter(None, [p["notes"], f"possible duplicate registration of {others} (same name and upazila)"]))
-    places.sort(key=lambda p: (p["district_en"] != "Rajshahi", p["district_en"], p["upazila_en"], p["category_key"], p["name_en"]))
+    places.sort(key=lambda p: (p["district_en"] != DIVT, p["district_en"], p["upazila_en"], p["category_key"], p["name_en"]))
     cols = "source_key,source_id,name_bn,name_en,category_key,lat,lon,address,district_en,upazila_en,phone,website,email,opening_hours,operator,ownership,extra_json,source_url,notes".split(",")
-    with open(os.path.join(HERE, "places.csv"), "w", encoding="utf-8", newline="") as f:
+    with open(os.path.join(OUT, "places.csv"), "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, cols); w.writeheader(); w.writerows(places)
 
-    # facts: counts of listed records by facility type per district and per Rajshahi upazila/thana
+    # facts: counts of listed records by facility type per district and per upazila/thana of the head district
     year = datetime.date.today().year
     fcols = "entity_level,entity_name_en,district_en,upazila_en,code,fact,value,unit,basis,year,source_key,source_url,notes".split(",")
     facts = []
-    rep = BASE + "?submit=Run&is_active=1&division_id%5B0%5D=3"
+    rep = BASE + f"?submit=Run&is_active=1&division_id%5B0%5D={HRIS_DIV}"
     def add(level, name, dist, upz, fact, val, note=""):
         facts.append(dict(entity_level=level, entity_name_en=name, district_en=dist, upazila_en=upz, code="", fact=fact,
                           value=val, unit="facilities", basis="count_of_listed_records", year=year, source_key=KEY,
                           source_url=rep, notes=note))
-    add("division", "Rajshahi", "", "", "health_registry_facilities_total", len(recs), "all active registry entries incl. private, offices, training institutes")
+    add("division", DIVT, "", "", "health_registry_facilities_total", len(recs), "all active registry entries incl. private, offices, training institutes")
     by_d = collections.Counter(r.get("District") or "(none)" for r in recs)
     by_dt = collections.Counter((r.get("District") or "(none)", r.get("Type")) for r in recs)
     for d, n in sorted(by_d.items()):
         add("district", d, d if d != "(none)" else "", "", "health_registry_facilities_total", n)
     for (d, t), n in sorted(by_dt.items()):
         add("district", d, d if d != "(none)" else "", "", "health_registry_facilities:" + t, n)
-    by_ut = collections.Counter((r.get("Upazila") or "(none)", r.get("Type")) for r in recs if r.get("District") == "Rajshahi")
+    by_ut = collections.Counter((r.get("Upazila") or "(none)", r.get("Type")) for r in recs if r.get("District") == DIVT)
     for (u, t), n in sorted(by_ut.items()):
         uu = UPAZILA_FIX.get(u, u)
-        add("thana" if u in METRO_THANAS else "upazila", uu, "Rajshahi", uu if u != "(none)" else "", "health_registry_facilities:" + t, n)
-    with open(os.path.join(HERE, "facts.csv"), "w", encoding="utf-8", newline="") as f:
+        add("thana" if u in METRO_THANAS else "upazila", uu, DIVT, uu if u != "(none)" else "", "health_registry_facilities:" + t, n)
+    with open(os.path.join(OUT, "facts.csv"), "w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fcols); w.writeheader(); w.writerows(facts)
 
     print(f"{len(recs)} registry rows -> {len(places)} places ({sum(1 for p in places if p['lat'])} with coordinates); "
@@ -406,20 +454,50 @@ def sha(p):
     return hashlib.sha256(open(p, "rb").read()).hexdigest()
 
 
+def new_manifest(accessed):
+    """SOURCE.json for a division other than Rajshahi (the Rajshahi manifest is maintained by hand)."""
+    return {
+        "key": KEY,
+        "name": f"DGHS / MoHFW HRIS Facility Registry — organisation list, {DIVT} Division",
+        "organization": "Directorate General of Health Services (DGHS), Ministry of Health and Family Welfare",
+        "source_type": "government_portal",
+        "trust_level": 4,
+        "urls": [BASE + f"?submit=Run&is_active=1&division_id%5B0%5D={HRIS_DIV}",
+                 "https://hris.mohfw.gov.bd/public/facility-registry"],
+        "accessed": accessed,
+        "publication_date": None,
+        "license": None,
+        "license_url": None,
+        "attribution": "Source: DGHS Facility Registry (hris.mohfw.gov.bd), Ministry of Health and Family Welfare, Bangladesh",
+        "division": DIV,
+        "kind": "dghs_hris",
+        "files": {},
+        "notes": (f"Public report of the MoHFW HRIS Facility Registry. Excel export (ret=excel) of all active entries "
+                  f"filtered to {DIVT} Division (division_id {HRIS_DIV}), same collector and rules as "
+                  "DGHS_HRIS_FACILITIES_RAJ_2026. Registry is live and self-reported by facilities; coordinates are as "
+                  "entered by facilities (QA flags in notes). Contacts kept only for non-private facilities; private/NGO "
+                  "contacts and addresses and facility-head names not collected. No licence stated on the site."),
+    }
+
+
 def update_manifest(accessed):
-    p = os.path.join(HERE, "SOURCE.json")
+    p = os.path.join(OUT, "SOURCE.json")
     if not os.path.isfile(p):
-        return
-    m = json.load(open(p, encoding="utf-8"))
-    m["files"] = {rel: sha(os.path.join(HERE, rel)) for rel in
-                  ("places.csv", "facts.csv", "raw/hris_organization_list_rajshahi_division.csv")
-                  if os.path.isfile(os.path.join(HERE, rel))}
+        if DIV == "rajshahi":
+            return
+        m = new_manifest(accessed)
+    else:
+        m = json.load(open(p, encoding="utf-8"))
+    m["files"] = {rel: sha(os.path.join(OUT, rel)) for rel in
+                  ("places.csv", "facts.csv", RAW_REL)
+                  if os.path.isfile(os.path.join(OUT, rel))}
     with open(p, "w", encoding="utf-8") as f:
         json.dump(m, f, ensure_ascii=False, indent=2); f.write("\n")
 
 
 if __name__ == "__main__":
-    if "--offline" not in sys.argv:
+    os.makedirs(OUT, exist_ok=True)
+    if not ARGS.offline:
         if not download() and not os.path.isfile(RAW):
             sys.exit("no export available")
     build()

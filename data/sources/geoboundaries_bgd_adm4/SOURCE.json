@@ -19,5 +19,7 @@
     "boundaries.geojson": "bfa2132c9101c106cc739435d3649e538778a4f74192df9efbdf73fec6cb5070",
     "facts.csv": "091635cea74daa4d25643aa0ca12bc5cea2915116e4f1be85c55165ac8f26661"
   },
-  "notes": "geoBoundaries BGD-ADM4-29066614, year represented 2020, source update Thu Jan 19 07:31:04 2023, build Dec 12, 2023, licence as stated by geoBoundaries: Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO) (licence source data.humdata.org/dataset/administrative-boundaries-of-bangladesh-as-of-2015). P-codes (HDX_PCODE_2020) attached from HDX COD-AB bgd_adminpoints by point-in-polygon; 654 polygons kept, 0 label points/polygons not assigned. Polygons simplified (Douglas-Peucker 0.0002 deg, 5 decimals) ring by ring."
+  "notes": "geoBoundaries BGD-ADM4-29066614, year represented 2020, source update Thu Jan 19 07:31:04 2023, build Dec 12, 2023, licence as stated by geoBoundaries: Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO) (licence source data.humdata.org/dataset/administrative-boundaries-of-bangladesh-as-of-2015). P-codes (HDX_PCODE_2020) attached from HDX COD-AB bgd_adminpoints by point-in-polygon; 654 polygons kept, 0 label points/polygons not assigned. Polygons simplified (Douglas-Peucker 0.0002 deg, 5 decimals) ring by ring.",
+  "division": "rajshahi",
+  "kind": "geoboundaries_adm4"
 }

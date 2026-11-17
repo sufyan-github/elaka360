@@ -1,0 +1,21 @@
+{
+  "key": "BRTC_DEPOTS_RANG_2026",
+  "division": "rangpur",
+  "kind": "brtc",
+  "name": "BRTC — bus depots in Rangpur Division",
+  "organization": "Bangladesh Road Transport Corporation (BRTC)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Bangladesh Road Transport Corporation (brtc.gov.bd)",
+  "notes": "No licence stated. BRTC lists depots with the unit head's name/mobile; only depot names and office landlines are kept. 2 depot(s) of Rangpur Division listed. No addresses or coordinates.",
+  "files": {
+    "places.csv": "76d328b093a7ea190c9f84ddd4159b468aac32334b330be98c531c9c464cdedd"
+  }
+}

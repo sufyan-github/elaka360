@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Fetch thana / SP-office / control-room numbers for RMP and Rajshahi Range from the Police HQ contact workbook (BD_POLICE_CONTACTS_2020)."""
+"""Fetch thana / SP-office / control-room numbers for RMP and Rajshahi Range from the Police HQ contact workbook (BD_POLICE_CONTACTS_2020).
+
+Usage: python3 fetch.py [--division rajshahi|rangpur] [--out DIR]   (default: Rajshahi into this folder; DIVISIONS.md)"""
 # --- polite HTTP helper (copy this block into each fetch.py; stdlib + requests only) -----------------
 # Many *.gov.bd servers send only their leaf certificate and omit the intermediate CA. Browsers fetch the
 # missing intermediate via the certificate's AIA URL; we do the same explicitly: download the published
@@ -197,6 +199,38 @@ def xj(d):
     return json.dumps(d, ensure_ascii=False, separators=(",", ":")) if d else ""
 # --- end common utilities -----------------------------------------------------------------------------
 
+# --- division selection (data/sources/DIVISIONS.md) ---------------------------------------------------------
+import argparse
+DIVISION_CODES = {"rajshahi": "raj", "rangpur": "rang", "dhaka": "dhk", "chattogram": "ctg", "khulna": "khl",
+                  "barishal": "bar", "sylhet": "syl", "mymensingh": "mym"}
+
+
+def division_setup(here, base_key, configured, extra_args=()):
+    """Parse --division/--out -> (args, out_dir, source_key). Rajshahi (default) keeps this folder and key; another
+    division writes to its own folder named per DIVISIONS.md and never touches the Rajshahi files."""
+    ap = argparse.ArgumentParser(description=(__doc__ or "").strip().split("\n")[0])
+    ap.add_argument("--division", default="rajshahi", choices=list(DIVISION_CODES))
+    ap.add_argument("--out", help="output folder (default: this folder for rajshahi, the division's own folder otherwise)")
+    for name, kw in extra_args:
+        ap.add_argument(name, **kw)
+    args = ap.parse_args()
+    if args.division not in configured:
+        ap.error("division %r is not configured in this collector yet (configured: %s)" % (args.division, ", ".join(configured)))
+    here = os.path.abspath(str(here))
+    folder = os.path.basename(here)
+    if args.division == "rajshahi":
+        name, key = folder, base_key
+    else:
+        code = DIVISION_CODES[args.division]
+        name = folder.replace("_raj_", "_%s_" % code) if "_raj_" in folder else "%s_%s" % (folder, args.division)
+        key = base_key.replace("_RAJ_", "_%s_" % code.upper()) if "_RAJ_" in base_key else "%s_%s" % (base_key, args.division.upper())
+    out = os.path.abspath(args.out) if args.out else (here if args.division == "rajshahi" else os.path.join(os.path.dirname(here), name))
+    if args.division != "rajshahi" and out == here:
+        ap.error("refusing to write another division's output into the Rajshahi folder")
+    os.makedirs(out, exist_ok=True)
+    return args, out, key
+# --- end division selection ---------------------------------------------------------------------------------
+
 # --- BD_POLICE_CONTACTS_2020 --------------------------------------------------------------------------
 import io, zipfile, xml.etree.ElementTree as ET
 KEY = "BD_POLICE_CONTACTS_2020"
@@ -228,6 +262,34 @@ UPA = {
     "Sirajganj": {"Sirajgonj": "Sirajganj Sadar", "Shahjadpur": "Shahjadpur", "Ullapara": "Ullahpara", "Chowhali": "Chauhali",
                   "Tarash": "Tarash", "Kazipur": "Kazipur", "Kamarkhond": "Kamarkhanda", "Raygonj": "Raiganj", "Belkuchi": "Belkuchi"},
 }
+# Rangpur Division: sheets 'RRMP' (Rangpur Metropolitan Police) and 'Rangpur Range' (one block per district)
+RANGPUR = dict(
+    sheets=["RRMP", "Rangpur Range"], metro="Rangpur Metropolitan Police", metro_short="RpMP", head="Rangpur",
+    dist={"Rangpur": "Rangpur", "Gaibandha": "Gaibandha", "Kurigram": "Kurigram", "Lalmonirhat": "Lalmonirhat",
+          "Nilphamari": "Nilphamari", "Dinajpur": "Dinajpur", "Thakurgaon": "Thakurgaon", "Panchagarh": "Panchagarh"},
+    upa={"RRMP": {"Kotwali": "Kotwali", "Tajhat": "Tajhat", "Mahiganj": "Mahiganj", "Haragach": "Haragachh",
+                  "Poshuram": "Parshuram", "Hazirhat": "Hajirhat"},
+         "Rangpur": {"Gangachara": "Gangachara", "Badarganj": "Badarganj", "Taraganj": "Taraganj", "Mithapukura": "Mithapukur",
+                     "Pirganj": "Pirganj", "Pirgachha": "Pirgachha", "Kaunya": "Kaunia"},
+         "Gaibandha": {"Gaibandha": "Gaibandha Sadar", "Sadullapur": "Sadullapur", "Sundarganj": "Sundarganj",
+                       "Palashbari": "Palashbari", "Gobindaganj": "Gobindaganj", "Saghata": "Saghata", "Phulachari": "Phulchhari"},
+         "Kurigram": {"Kurigram": "Kurigram Sadar", "Rajarhat": "Rajarhat", "Phulbari": "Phulbari", "Nageshwari": "Nageshwari",
+                      "Bhurungabari": "Bhurungamari", "Ulipur": "Ulipur", "Chilmari": "Chilmari", "Roumari": "Raomari",
+                      "Rajibpur": "Char Rajibpur"},
+         "Lalmonirhat": {"Lalmonirhat": "Lalmonirhat Sadar", "Aditmari": "Aditmari", "Kaligonj": "Kaliganj",
+                         "Hatibandha": "Hatibandha", "Patgram": "Patgram"},
+         "Nilphamari": {"Nilphamari": "Nilphamari Sadar", "Syedpur": "Saidpur", "JalaDhaka": "Jaldhaka",
+                        "Kishoreganj": "Kishoreganj", "Domar": "Domar", "Dimla": "Dimla"},
+         "Dinajpur": {"Kotwali": "Dinajpur Sadar", "Chirirbandar": "Chirirbandar", "Birala": "Biral", "Parbatipur": "Parbatipur",
+                      "Birganj": "Birganj", "BOChaganj": "Bochaganj", "Kaharol": "Kaharole", "Khansama": "Khansama",
+                      "Phulbari": "Phulbari", "Birampur": "Birampur", "Nawabganj": "Nawabganj", "Ghoraghat": "Ghoraghat",
+                      "Hakimpur": "Hakimpur"},
+         "Thakurgaon": {"Thakurgaon": "Thakurgaon Sadar", "Baliadangi": "Baliadangi", "RaniShankail": "Ranisankail",
+                        "Pirganj": "Pirganj", "Haripur": "Haripur"},
+         "Panchagarh": {"Panchagarh": "Panchagarh Sadar", "Boda": "Boda", "Atwari": "Atwari", "Tetulia": "Tetulia",
+                        "Debiganj": "Debiganj"}},
+    raw="police_contacts_2020_rrmp_rangpur_range.csv")
+DIVISION = "rajshahi"
 NS = {"m": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
 
 
@@ -263,6 +325,10 @@ def read_sheet(data, name):
 
 
 def thana_key(post):
+    if DIVISION != "rajshahi":  # this sheet also writes 'thana' in lower case and 'RoumariThana' without a space
+        s = re.sub(r"^OC\s+", "", post.strip())
+        s = re.sub(r"\s*(Thana|PS)$", "", s, flags=re.I).strip()
+        return re.sub(r"\s+", " ", re.sub(r"\s+Model$", "", s, flags=re.I).strip())
     s = re.sub(r"^OC\s+", "", post.strip())
     s = re.sub(r"\s+(Thana|PS)$", "", s).strip()
     s = re.sub(r"\s+Model$", "", s, flags=re.I).strip()
@@ -270,6 +336,15 @@ def thana_key(post):
 
 
 def main():
+    global HERE, RAW, KEY, SHEETS, DIST, UPA, DIVISION
+    args, out, KEY = division_setup(HERE, KEY, ["rajshahi", "rangpur"])
+    HERE, RAW, DIVISION = Path(out), Path(out) / "raw", args.division
+    metro_sheet, range_sheet, metro, metro_short, head = "RMP", "Rajshahi Range", "Rajshahi Metropolitan Police", "rmp", "Rajshahi"
+    raw_name = "police_contacts_2020_rmp_rajshahi_range.csv"
+    if DIVISION == "rangpur":
+        SHEETS, DIST, UPA, raw_name = RANGPUR["sheets"], RANGPUR["dist"], RANGPUR["upa"], RANGPUR["raw"]
+        metro_sheet, range_sheet, metro, metro_short, head = "RRMP", "Rangpur Range", RANGPUR["metro"], "rpmp", RANGPUR["head"]
+    used_ids = set()
     places = []
     xurl = XLSX_FALLBACK
     r = get(URL_PAGE)
@@ -291,54 +366,71 @@ def main():
             first = row[0] if row else ""
             if first.startswith("Unit/Office Name:"):
                 office = first.split(":", 1)[1].strip().rstrip(".")
-                dist = "Rajshahi" if sheet == "RMP" else next((v for k, v in DIST.items() if k.lower() in office.lower()), "")
+                dist = head if sheet == metro_sheet else next((v for k, v in DIST.items() if k.lower() in office.lower()), "")
                 if "Range Office" in office:
                     dist = ""
+                if DIVISION != "rajshahi" and sheet != metro_sheet and not re.search(r"District|SP Office", office):
+                    dist = ""  # range office ('DIG Rangpur Range') and RRF blocks are not collected
                 last_thana = None
                 continue
             if first and not first[0].isdigit() and "Unit/Office" not in first and not first.startswith("SL"):
-                if sheet == "Rajshahi Range" and first.strip() and len([c for c in row if c]) == 1:
+                if sheet == range_sheet and first.strip() and len([c for c in row if c]) == 1:
                     office, dist, last_thana = first.strip(), "", None   # e.g. 'RRF Rajshahi' — not collected
                     continue
             row = row + [""] * (7 - len(row))
             sl, desig, post, official, current, new, email = [re.sub(r"\s+", " ", x).strip() for x in row[:7]]
-            email = email.replace(" ", "")
+            if DIVISION == "rajshahi":
+                email = email.replace(" ", "")
+            else:  # several addresses separated by spaces; 'x @ police.gov.bd.' written with spaces and a full stop
+                email = re.sub(r"\s*@\s*", "@", email)
+                email = "; ".join(e.strip(".") for e in email.split() if "@" in e)
             if not dist:
                 continue
-            upa_map = UPA["RMP" if sheet == "RMP" else dist]
+            upa_map = UPA[metro_sheet if sheet == metro_sheet else dist]
             if re.match(r"^OC\s", post):
                 key = thana_key(post)
                 upa = upa_map.get(key, "")
-                unit = "metropolitan_thana" if sheet == "RMP" else "district_police_thana"
+                unit = "metropolitan_thana" if sheet == metro_sheet else "district_police_thana"
+                sid = f"bdpol2020-{sheet.replace(' ', '')}-{sl}"
+                if DIVISION != "rajshahi" and sheet != metro_sheet:  # serials restart in every district block
+                    sid = f"bdpol2020-{sheet.replace(' ', '')}-{dist.lower()}-{sl}"
+                dup_note = ""
+                if DIVISION != "rajshahi" and sid in used_ids:  # the sheet repeats a serial number (e.g. Lalmonirhat 'OC Kaligonj' copies Aditmari's SL 27)
+                    sid = f"{sid}-{re.sub(r'[^a-z]', '', key.lower())}"
+                    dup_note = "Serial number repeated in the source (row copied from the previous thana; official number/e-mail may belong to it). "
+                used_ids.add(sid)
                 last_thana = dict(
-                    source_key=KEY, source_id=f"bdpol2020-{sheet.replace(' ', '')}-{sl}", name_bn="", name_en=post[3:].strip(),
+                    source_key=KEY, source_id=sid, name_bn="", name_en=post[3:].strip(),
                     category_key="emergency.police_station", district_en=dist, upazila_en=upa, phone=new, email=email,
-                    operator="Rajshahi Metropolitan Police" if sheet == "RMP" else f"{dist} District Police", ownership="public",
+                    operator=metro if sheet == metro_sheet else f"{dist} District Police", ownership="public",
                     _extra={"unit": unit, "office_in_source": office, "oc_new_number": new, "oc_current_number_2020": current,
                             "official_landline_raw": official},
                     source_url=xurl,
                     notes="Numbers as of the Police HQ list uploaded 03-10-2020 ('New Number' = official 01320-series SIM). "
-                          + ("upazila_en holds the RMP metropolitan thana. " if sheet == "RMP" else "")
+                          + dup_note
+                          + (f"upazila_en holds the {metro_short.upper() if DIVISION == 'rajshahi' else 'RpMP'} metropolitan thana. " if sheet == metro_sheet else "")
                           + ("" if upa else "Thana is not an upazila (or name not mapped); upazila_en left empty. "))
                 places.append(last_thana)
             elif last_thana and re.search(r"duty officer", desig + " " + post, re.I):
                 last_thana["_extra"]["duty_officer_new_number"] = new
                 if current:
                     last_thana["_extra"]["duty_officer_current_number_2020"] = current
-            elif desig == "SP" and post in ("1", "01", "") and sl == "1" and "SP Office" in office:
+            elif desig == "SP" and post in ("1", "01", "") and sl == "1" and ("SP Office" in office or (DIVISION != "rajshahi" and "District" in office)):
                 places.append(dict(
-                    source_key=KEY, source_id=f"bdpol2020-sp-{dist.lower()}", name_bn="", name_en=office,
+                    source_key=KEY, source_id=f"bdpol2020-sp-{dist.lower()}", name_bn="",
+                    name_en=office if "SP Office" in office else f"SP Office, {dist}",
                     category_key="government.sp_office", district_en=dist, phone=new, email=email,
                     operator=f"{dist} District Police", ownership="public",
                     _extra={"sp_new_number": new, "sp_current_number_2020": current, "official_landline_raw": official},
-                    source_url=xurl, notes="Phone = Superintendent of Police official number (role SIM) from the 2020 HQ list"))
+                    source_url=xurl, notes="Phone = Superintendent of Police official number (role SIM) from the 2020 HQ list"
+                                           + ("" if "SP Office" in office else f"; name composed from the sheet heading '{office}'")))
             elif re.match(r"^(RMP )?Control Room$", desig, re.I) or desig == "Hotline":
-                cid = f"bdpol2020-control-{dist.lower() if sheet != 'RMP' else 'rmp'}"
+                cid = f"bdpol2020-control-{dist.lower() if sheet != metro_sheet else metro_short}"
                 ex = next((p for p in places if p["source_id"] == cid), None)
                 if ex is None:
                     ex = dict(source_key=KEY, source_id=cid, name_bn="",
-                              name_en=("RMP Control Room" if sheet == "RMP" else f"Control Room, {office}"),
-                              category_key="emergency", district_en=dist, phone="", operator=("Rajshahi Metropolitan Police" if sheet == "RMP" else f"{dist} District Police"),
+                              name_en=(f"{metro_short.upper() if DIVISION == 'rajshahi' else 'RpMP'} Control Room" if sheet == metro_sheet else f"Control Room, {office}"),
+                              category_key="emergency", district_en=dist, phone="", operator=(metro if sheet == metro_sheet else f"{dist} District Police"),
                               ownership="public", _extra={}, source_url=xurl, notes="Police control room numbers from the 2020 HQ list")
                     places.append(ex)
                 nums = [x for x in (new, current) if x]
@@ -352,22 +444,24 @@ def main():
     for p in places:
         p["extra_json"] = xj(p.pop("_extra"))
     RAW.mkdir(exist_ok=True)
-    with open(RAW / "police_contacts_2020_rmp_rajshahi_range.csv", "w", newline="", encoding="utf-8") as f:
+    with open(RAW / raw_name, "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["sheet", "sl", "designation", "post", "official_number", "current_number", "new_number", "email"])
         for row in raw_rows:
             w.writerow((row + [""] * 8)[:8])
     write_csv("places.csv", PLACE_COLS, places)
     write_manifest(dict(
-        key=KEY, name="Bangladesh Police HQ — Contacts of Bangladesh Police (RMP and Rajshahi Range sheets)",
+        key=KEY, division=DIVISION, kind="police_hq_2020",
+        name=f"Bangladesh Police HQ — Contacts of Bangladesh Police ({SHEETS[0]} and {SHEETS[1]} sheets)",
         organization="Bangladesh Police Headquarters", source_type="government_portal", trust_level=4,
         urls=[URL_PAGE, xurl], accessed=__import__("datetime").date.today().isoformat(), publication_date="2020-10-03",
         license=None, license_url=None, attribution="Bangladesh Police (police.gov.bd)",
-        notes="No licence stated. XLSX 'Contacts Of Bangladesh Police' uploaded 03-10-2020 (Last-Modified 2020-10-03). Only the RMP and "
-              "Rajshahi Range sheets are used (raw/ keeps those rows as CSV; the full 1.5 MB workbook is re-downloaded by fetch.py). "
+        notes=f"No licence stated. XLSX 'Contacts Of Bangladesh Police' uploaded 03-10-2020 (Last-Modified 2020-10-03). Only the {SHEETS[0]} and "
+              f"{SHEETS[1]} sheets are used (raw/ keeps those rows as CSV; the full 1.5 MB workbook is re-downloaded by fetch.py). "
               "Designations only, no personal names. Old 2020 numbers: the 01320-series 'New Number' values match the 2026 district/RMP "
-              "portals where checked; the 'Current Number' column is the pre-2020 numbering."),
-        ["places.csv", "raw/police_contacts_2020_rmp_rajshahi_range.csv"])
+              "portals where checked; the 'Current Number' column is the pre-2020 numbering."
+              + ("" if DIVISION == "rajshahi" else " For this division the 2026 portals were not cross-checked by this collector.")),
+        ["places.csv", "raw/" + raw_name])
 
 
 if __name__ == "__main__":

@@ -1,0 +1,38 @@
+{
+  "key": "RANG_RANGE_POLICE_PORTALS_2026",
+  "division": "rangpur",
+  "kind": "range_police",
+  "name": "District police portals of Rangpur Range (Panchagarh, Dinajpur, Lalmonirhat, Nilphamari, Gaibandha, Thakurgaon, Kurigram)",
+  "organization": "Bangladesh Police — district police units of Rangpur Range",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://police.panchagarh.gov.bd/",
+    "https://police.dinajpur.gov.bd/",
+    "https://police.lalmonirhat.gov.bd/",
+    "https://police.nilphamari.gov.bd/",
+    "https://police.gaibandha.gov.bd/",
+    "https://police.thakurgaon.gov.bd/",
+    "https://police.kurigram.gov.bd/",
+    "https://police.nilphamari.gov.bd/pages/static-pages/69771cbac4774958d7c060ac",
+    "https://police.thakurgaon.gov.bd/pages/static-pages/697759cfc4774958d7c1d4ce",
+    "https://police.kurigram.gov.bd/pages/static-pages/69773952c4774958d7c10c9e",
+    "https://police.dinajpur.gov.bd/pages/static-pages/69771ccfc4774958d7c06a85",
+    "https://police.lalmonirhat.gov.bd/pages/static-pages/6977242cc4774958d7c09f62",
+    "https://police.kurigram.gov.bd/pages/static-pages/6977371ec4774958d7c0cf56",
+    "https://police.<upazila>.<district>.gov.bd/"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "District and thana police portals (police.<district>.gov.bd, police.<upazila>.<district>.gov.bd)",
+  "notes": "No licence stated. SP offices from the Superintendent's officer card; thanas from each thana's own portal officer cards (office landline, OC's police official mobile, *.gov.bd e-mail) except Kurigram, whose district contact table lists every OC. Personal e-mails, other mobiles and officers' names are not copied. Rangpur District is in RANGPUR_POLICE_2026.",
+  "files": {
+    "places.csv": "6839811019cc0a57ff31d89dfee2a6d4d43946cce529c5adba8b809d8cb35cc8",
+    "facts.csv": "0871549e7594869528ce126d9efd4d6694c60d0fac075edb4e1e89b3194dec46",
+    "raw/kurigram_police_contact.txt": "80fc9a863739252073c927748de4f41a1f3b23739880174fda8d32b4c4a0013f",
+    "raw/nilphamari_police_thana_list.txt": "5469b13c30600d9b7d4355431f2f8fd57a3e54868a3998e77422f108518efef2",
+    "raw/thakurgaon_police_thana_list.txt": "ccf489da28ee4e611562ac0617fc54e7277c7c6fd43445ac58f4962534e55956"
+  }
+}

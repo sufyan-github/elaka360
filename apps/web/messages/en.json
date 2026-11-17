@@ -387,8 +387,8 @@
     "retry": "Try again"
   },
   "MapPage": {
-    "title": "Live map — Rajshahi",
-    "subtitle": "Rajshahi District first, then the whole division: boundaries down to unions and every place with a known location."
+    "title": "Live map",
+    "subtitle": "Each collected division: its head district first, then the whole division — boundaries down to unions and every place with a known location."
   },
   "MapExplorer": {
     "cat": {
@@ -691,10 +691,6 @@
     "scope": "Area",
     "category": "Category",
     "layers": "Layers",
-    "scopes": {
-      "district": "Rajshahi District",
-      "division": "Rajshahi Division"
-    },
     "layer": {
       "coarse": "Upazila boundaries",
       "fine": "Union boundaries",
@@ -729,6 +725,10 @@
     "openArea": "Open the area page",
     "close": "Close",
     "failed": "The map could not be loaded. Check your internet connection.",
-    "note": "Boundaries: geoBoundaries / HDX (OCHA). Places: government registers (DGHS, BANBEIS, DPE, UGC, Department of Archaeology, police, fire service, portals). Most schools and offices have no published coordinates yet, so they appear in the area panel but not as pins."
+    "note": "Boundaries: geoBoundaries / HDX (OCHA). Places: government registers (DGHS, BANBEIS, DPE, UGC, Department of Archaeology, police, fire service, portals). Most schools and offices have no published coordinates yet, so they appear in the area panel but not as pins.",
+    "kind": {
+      "district": "District",
+      "division": "Division"
+    }
   }
 }

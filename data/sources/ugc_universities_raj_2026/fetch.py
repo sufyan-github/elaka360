@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Fetch the UGC (University Grants Commission) university register and keep universities in Rajshahi Division.
 
-stdlib + requests only. Usage: python3 fetch.py [--offline]   (--offline rebuilds places.csv from raw/)."""
+stdlib + requests only. Usage: python3 fetch.py [--division rajshahi|rangpur] [--out DIR] [--offline]
+(--offline rebuilds places.csv from raw/). Default: Rajshahi Division into this folder (DIVISIONS.md)."""
 # --- polite HTTP helper (copy this block into each fetch.py; stdlib + requests only) -----------------
 # Many *.gov.bd servers send only their leaf certificate and omit the intermediate CA. Browsers fetch the
 # missing intermediate via the certificate's AIA URL; we do the same explicitly: download the published
@@ -151,6 +152,35 @@ def norm_upazila(s):
     return _UPAZILA_ALIASES.get(_key(s), "")
 # --- end normalisation -----------------------------------------------------------------------------------
 
+# --- other divisions: district / upazila names (BBS English spellings; latin keys as _key() makes them) -----------
+# district -> [(standard English upazila, [spelling keys])]; looked up only inside the district that was found.
+OTHER_UPAZILAS = {
+    "rangpur": {
+        "Panchagarh": [("Panchagarh Sadar", ["panchagarhsadar"]), ("Atwari", ["atwari", "atowari"]), ("Boda", ["boda"]),
+                       ("Debiganj", ["debiganj", "debigonj"]), ("Tetulia", ["tetulia", "tentulia"])],
+        "Dinajpur": [("Dinajpur Sadar", ["dinajpursadar"]), ("Birampur", ["birampur"]), ("Birganj", ["birganj", "birgonj"]),
+                     ("Biral", ["biral", "birol"]), ("Bochaganj", ["bochaganj", "bochagonj"]), ("Chirirbandar", ["chirirbandar"]),
+                     ("Phulbari", ["phulbari", "fulbari"]), ("Ghoraghat", ["ghoraghat"]), ("Hakimpur", ["hakimpur"]),
+                     ("Kaharole", ["kaharole", "kaharol"]), ("Khansama", ["khansama"]), ("Nawabganj", ["nawabganj"]),
+                     ("Parbatipur", ["parbatipur"])],
+        "Lalmonirhat": [("Lalmonirhat Sadar", ["lalmonirhatsadar"]), ("Aditmari", ["aditmari"]), ("Hatibandha", ["hatibandha"]),
+                        ("Kaliganj", ["kaliganj", "kaligonj"]), ("Patgram", ["patgram"])],
+        "Nilphamari": [("Nilphamari Sadar", ["nilphamarisadar"]), ("Dimla", ["dimla"]), ("Domar", ["domar"]),
+                       ("Jaldhaka", ["jaldhaka"]), ("Kishoreganj", ["kishoreganj", "kishorganj"]), ("Saidpur", ["saidpur", "syedpur"])],
+        "Gaibandha": [("Gaibandha Sadar", ["gaibandhasadar"]), ("Phulchhari", ["phulchhari", "fulchhari", "phulchari"]),
+                      ("Gobindaganj", ["gobindaganj", "gobindagonj"]), ("Palashbari", ["palashbari"]), ("Sadullapur", ["sadullapur"]),
+                      ("Saghata", ["saghata"]), ("Sundarganj", ["sundarganj"])],
+        "Thakurgaon": [("Thakurgaon Sadar", ["thakurgaonsadar"]), ("Baliadangi", ["baliadangi"]), ("Haripur", ["haripur"]),
+                       ("Pirganj", ["pirganj"]), ("Ranisankail", ["ranisankail"])],
+        "Rangpur": [("Rangpur Sadar", ["rangpursadar"]), ("Badarganj", ["badarganj"]), ("Gangachara", ["gangachara"]),
+                    ("Kaunia", ["kaunia"]), ("Mithapukur", ["mithapukur"]), ("Pirgachha", ["pirgachha", "pirgacha"]),
+                    ("Pirganj", ["pirganj"]), ("Taraganj", ["taraganj"])],
+        "Kurigram": [("Kurigram Sadar", ["kurigramsadar"]), ("Bhurungamari", ["bhurungamari"]), ("Char Rajibpur", ["charrajibpur", "rajibpur"]),
+                     ("Chilmari", ["chilmari"]), ("Phulbari", ["phulbari", "fulbari"]), ("Nageshwari", ["nageshwari", "nageswari"]),
+                     ("Rajarhat", ["rajarhat"]), ("Raomari", ["raomari", "rowmari"]), ("Ulipur", ["ulipur"])],
+    },
+}
+
 # --- output helpers ---------------------------------------------------------------------------------------
 import csv, json, hashlib, unicodedata, datetime
 
@@ -192,6 +222,12 @@ def sha256(path):
 def update_manifest(files):
     p = os.path.join(HERE, "SOURCE.json")
     m = json.load(open(p, encoding="utf-8")) if os.path.exists(p) else {}
+    if not m:  # first run for another division: start the manifest from the Rajshahi one's provenance fields
+        m = {"key": SOURCE_KEY, "division": DIVISION, "kind": "ugc",
+             "name": "UGC university register — universities in %s Division" % DIVISION.capitalize(),
+             "organization": "University Grants Commission of Bangladesh (UGC)", "source_type": "government_portal",
+             "trust_level": 4, "urls": ["https://www.ugc.gov.bd/universities"], "accessed": None, "publication_date": None,
+             "license": None, "license_url": None, "attribution": "Source: University Grants Commission of Bangladesh (ugc.gov.bd)"}
     m["accessed"] = datetime.date.today().isoformat()
     m["files"] = {f: sha256(os.path.join(HERE, f)) for f in files if os.path.exists(os.path.join(HERE, f))}
     with open(p, "w", encoding="utf-8") as fh:
@@ -199,11 +235,44 @@ def update_manifest(files):
         fh.write("\n")
 # --- end output helpers -----------------------------------------------------------------------------------
 
-# --- UGC university register: universities located in Rajshahi Division ----------------------------------
+# --- division selection (data/sources/DIVISIONS.md) ---------------------------------------------------------
+import argparse
+DIVISION_CODES = {"rajshahi": "raj", "rangpur": "rang", "dhaka": "dhk", "chattogram": "ctg", "khulna": "khl",
+                  "barishal": "bar", "sylhet": "syl", "mymensingh": "mym"}
+
+
+def division_setup(here, base_key, configured, extra_args=()):
+    """Parse --division/--out -> (args, out_dir, source_key). Rajshahi (default) keeps this folder and key; another
+    division writes to its own folder named per DIVISIONS.md and never touches the Rajshahi files."""
+    ap = argparse.ArgumentParser(description=(__doc__ or "").strip().split("\n")[0])
+    ap.add_argument("--division", default="rajshahi", choices=list(DIVISION_CODES))
+    ap.add_argument("--out", help="output folder (default: this folder for rajshahi, the division's own folder otherwise)")
+    for name, kw in extra_args:
+        ap.add_argument(name, **kw)
+    args = ap.parse_args()
+    if args.division not in configured:
+        ap.error("division %r is not configured in this collector yet (configured: %s)" % (args.division, ", ".join(configured)))
+    here = os.path.abspath(str(here))
+    folder = os.path.basename(here)
+    if args.division == "rajshahi":
+        name, key = folder, base_key
+    else:
+        code = DIVISION_CODES[args.division]
+        name = folder.replace("_raj_", "_%s_" % code) if "_raj_" in folder else "%s_%s" % (folder, args.division)
+        key = base_key.replace("_RAJ_", "_%s_" % code.upper()) if "_RAJ_" in base_key else "%s_%s" % (base_key, args.division.upper())
+    out = os.path.abspath(args.out) if args.out else (here if args.division == "rajshahi" else os.path.join(os.path.dirname(here), name))
+    if args.division != "rajshahi" and out == here:
+        ap.error("refusing to write another division's output into the Rajshahi folder")
+    os.makedirs(out, exist_ok=True)
+    return args, out, key
+# --- end division selection ---------------------------------------------------------------------------------
+
+# --- UGC university register: universities located in Rajshahi Division (or --division) -------------------
 import sys, html as _html
 from collections import Counter
 
-SOURCE_KEY = "UGC_UNIVERSITIES_RAJ_2026"
+SOURCE_KEY = "UGC_UNIVERSITIES_RAJ_2026"   # Rajshahi; other divisions get their key from division_setup()
+DIVISION = "rajshahi"
 UGC = "https://www.ugc.gov.bd"
 CATEGORIES = ["public-universities", "private-universities", "international-universities", "cbhe"]
 OWNERSHIP = {"public-universities": "public", "private-universities": "private",
@@ -212,6 +281,13 @@ RAW = os.path.join(HERE, "raw", "ugc_universities_rajshahi_division.json")
 DIST_RE = [("Rajshahi", r"rajshahi"), ("Natore", r"natore"), ("Naogaon", r"naogaon"),
            ("Chapainawabganj", r"chapai ?nawab ?g[ao]nj|nawabg[ao]nj"), ("Bogura", r"\bbogura\b|\bbogra\b"),
            ("Joypurhat", r"joypurhat|jaipurhat"), ("Pabna", r"\bpabna\b"), ("Sirajganj", r"sirajg[ao]nj")]
+# district patterns per division (searched in the UGC address text, in this order)
+DIST_RE_BY_DIV = {
+    "rajshahi": DIST_RE,
+    "rangpur": [("Rangpur", r"\brangpur\b"), ("Dinajpur", r"dinajpur"), ("Thakurgaon", r"thakurgaon|thakurgoan"),
+                ("Panchagarh", r"panchagarh|panchagar\b"), ("Nilphamari", r"nilphamari|nilfamari"),
+                ("Lalmonirhat", r"lalmonirhat"), ("Kurigram", r"kurigram"), ("Gaibandha", r"gaibandha")],
+}
 OFFICIAL_FIELDS = {"vice_chancellor", "pro_vice_chancellor", "treasurer", "registrar", "contact_person"}  # not kept
 FREE_MAIL = {"gmail.com", "yahoo.com", "hotmail.com", "outlook.com", "ymail.com", "live.com"}
 
@@ -227,13 +303,28 @@ def page_props(url):
 
 def find_district(text):
     t = (text or "").lower()
+    if DIVISION != "rajshahi":
+        # an address can name a district of another division too ('Rangpur Road, Gokul, Bogura-5800'): the district
+        # mentioned last wins, and it must belong to this division
+        hits = [(m.start(), name) for div, pats in DIST_RE_BY_DIV.items() for name, rx in pats for m in _re.finditer(rx, t)]
+        if not hits:
+            return ""
+        last = max(hits)[1]
+        return last if any(last == n for n, _ in DIST_RE) else ""
     for name, rx in DIST_RE:
         if _re.search(rx, t):
             return name
     return ""
 
 
-def find_upazila(addr):
+def find_upazila(addr, district=""):
+    if DIVISION != "rajshahi":
+        words = [w for w in _re.split(r"[^a-z]+", (addr or "").lower()) if w]
+        grams = set(words) | {a + b for a, b in zip(words, words[1:])}
+        for en, keys in OTHER_UPAZILAS[DIVISION].get(district, []):
+            if grams & set(keys):
+                return en
+        return ""
     words = [w for w in _re.split(r"[^a-z]+", (addr or "").lower()) if w]
     grams = set(words) | {a + b for a, b in zip(words, words[1:])}
     extra = {"shahzadpur": "Shahjadpur"}
@@ -283,7 +374,13 @@ def clean_phones(raw):
 
 
 def main():
-    offline = "--offline" in sys.argv
+    global HERE, RAW, SOURCE_KEY, DIST_RE, DIVISION
+    args, HERE, SOURCE_KEY = division_setup(HERE, SOURCE_KEY, ["rajshahi", "rangpur"],
+                                            [("--offline", dict(action="store_true", help="rebuild places.csv from raw/"))])
+    DIVISION, DIST_RE = args.division, DIST_RE_BY_DIV[args.division]
+    RAW = os.path.join(HERE, "raw", "ugc_universities_%s_division.json" % DIVISION)
+    head = DIST_RE[0][0]  # the division's head district sorts first
+    offline = args.offline
     unis = []
     if not offline:
         for cat in CATEGORIES:
@@ -324,7 +421,7 @@ def main():
         if l.get("marker"):
             notes.append(f"UGC list marks this university with '{l['marker']}' (see UGC page legend)")
         pc = _re.findall(r"\b(\d{4})\b", addr)
-        upz = find_upazila(addr)
+        upz = find_upazila(addr, x["_district"])
         web = nfc(d.get("website") or l.get("website") or "")
         web = web.split(",")[0].strip()
         if web and not web.startswith("http"):
@@ -340,9 +437,9 @@ def main():
                               "postcode": pc[-1] if pc else None, "fax": nfc(d.get("fax")), "ugc_id": l.get("id")}),
             "source_url": f"{UGC}/university/{l['slug']}", "notes": "; ".join(notes),
         })
-    rows.sort(key=lambda r: (r["district_en"] != "Rajshahi", r["district_en"], r["ownership"], r["name_en"]))
+    rows.sort(key=lambda r: (r["district_en"] != head, r["district_en"], r["ownership"], r["name_en"]))
     write_csv("places.csv", PLACE_COLS, rows)
-    update_manifest(["places.csv", "raw/ugc_universities_rajshahi_division.json"])
+    update_manifest(["places.csv", "raw/" + os.path.basename(RAW)])
     print("places", len(rows), Counter(r["district_en"] for r in rows), Counter(r["ownership"] for r in rows))
 
 

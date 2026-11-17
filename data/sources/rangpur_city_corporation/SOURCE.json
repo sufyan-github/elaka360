@@ -1,0 +1,30 @@
+{
+  "key": "RANGPUR_CITY_CORPORATION",
+  "division": "rangpur",
+  "kind": "city_corporation",
+  "name": "Rangpur City Corporation official portal (rpcc.gov.bd)",
+  "organization": "Rangpur City Corporation",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://rpcc.gov.bd/",
+    "https://rpcc.gov.bd/pages/static-pages/6922dd53933eb65569e14850",
+    "https://rpcc.gov.bd/pages/static-pages/6922dce1933eb65569e12890",
+    "https://rpcc.gov.bd/pages/static-pages/রংপুর-সিটি-কর্পোরেশনের-ওয়ার্ড-সংখ্যা-নির্ধারন-এবং-ওয়ার্ড-ভিত্তিক-সীমানা-নির্ধারণ-eyz1ua-6a0c231d2a941ac3be730868",
+    "https://rpcc.gov.bd/pages/static-pages/6971de1126b92f94c28c23e1"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Rangpur City Corporation (rpcc.gov.bd), Bangladesh National Portal",
+  "notes": "rpcc.portal.gov.bd does not resolve; the RPCC portal is rpcc.gov.bd. Key pages: এক নজরে রংপুর সিটি কর্পোরেশন (updated 2025-04-28 17:13), অবস্থান ও আয়তন (2022-06-29 18:22), ward delimitation (scanned 2012 gazette PDF, page 2026-05-19 14:45). Ward and councillor lists are scanned images/PDFs; officials' names and phones are not copied. No ward names or mahalla lists are published.",
+  "files": {
+    "areas.csv": "bc6405c5e0c68bd9ca4960ef642a6118d95bc8e881ac10d4f8ab878fe074525f",
+    "facts.csv": "fb52fee5bcfa321bedc8d60f20e1e56e373a3e1358adce55fa4cab77a8e2333f",
+    "raw/councillors_page.txt": "1a199d5370ba449eb33572d458e33ade3ea16622649e2263381eb029fa4850d4",
+    "raw/ek_nojore_rpcc.txt": "3eb992eb3479ac1458995063fef08a1f917962e779323311578f7aba790f11bb",
+    "raw/location_area.txt": "5252dde98bb3775e17057364f745ce8cc7e838f27114644c61f226668813834e",
+    "raw/ward_delimitation_page.txt": "e653bbfd9590d68c70a9aa4ae81da0ef634ff13a2fddb09dbea0f28bc3b79674"
+  }
+}

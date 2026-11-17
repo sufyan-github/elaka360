@@ -1,5 +1,7 @@
 {
   "key": "RCC_PORTAL_2026",
+  "division": "rajshahi",
+  "kind": "city_corporation",
   "name": "Rajshahi City Corporation official portal (erajshahi.portal.gov.bd)",
   "organization": "Rajshahi City Corporation",
   "source_type": "government_portal",
