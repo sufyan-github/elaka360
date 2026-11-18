@@ -14,7 +14,7 @@
  */
 import 'reflect-metadata';
 import { createHash } from 'node:crypto';
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { closeSync, mkdirSync, openSync, writeFileSync, writeSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import type { AdminAreaSummary, AreaDetail, AreaStats, Place, PlaceSummary } from '@elaka360/shared';
 import { Db } from '../db/db.service';
@@ -40,8 +40,33 @@ const hash = (v: unknown) => createHash('sha1').update(JSON.stringify(v)).digest
 const json = (v: unknown) => JSON.stringify(v);
 function write(path: string, data: unknown) {
   mkdirSync(join(path, '..'), { recursive: true });
-  writeFileSync(path, JSON.stringify(data));
+  if (!Array.isArray(data)) return writeFileSync(path, JSON.stringify(data));
+  // large tables: one item at a time (a single string for ~500k places exceeds V8's string limit); same bytes as
+  // JSON.stringify(array), whose items here are always objects
+  const out = arrayWriter(path);
+  for (const item of data) out.push(item);
+  out.close();
 }
+/** Streams a JSON array to `path` item by item: the bytes equal JSON.stringify of the whole array. */
+function arrayWriter(path: string) {
+  mkdirSync(join(path, '..'), { recursive: true });
+  const fd = openSync(path, 'w');
+  let first = true;
+  let buf: string[] = [];
+  let size = 0;
+  const flush = () => { if (buf.length) { writeSync(fd, buf.join('')); buf = []; size = 0; } };
+  writeSync(fd, '[');
+  return {
+    push(item: unknown) {
+      const s = (first ? '' : ',') + JSON.stringify(item);
+      first = false;
+      buf.push(s); size += s.length;
+      if (size > 8_000_000) flush();
+    },
+    close() { flush(); writeSync(fd, ']'); closeSync(fd); },
+  };
+}
+const EXPORT_CONCURRENCY = Number(process.env.EXPORT_CONCURRENCY ?? 8);   // place-detail queries in flight at once
 const summaryOf = (a: AdminAreaSummary): AdminAreaSummary => ({
   id: a.id, level: a.level, parent_id: a.parent_id, name_bn: a.name_bn, name_en: a.name_en, slug: a.slug, path: a.path,
   verified: a.verified, evidence_level: a.evidence_level, production_eligible: a.production_eligible,
@@ -87,14 +112,22 @@ async function main() {
       ${PLACE_JOINS}
       ORDER BY array_position(ARRAY['official','secondary','community','unverified']::text[], p.evidence_level::text),
                p.name_en NULLS LAST, p.name_bn, p.id`);   // = PLACE_LIST_SQL's 'relevance' order, plus id for stable pages
-    const placeRows: Record<string, unknown>[] = [];
+    // place rows are streamed to disk as they are built (only their hashes are kept, for version.json); the
+    // detail queries run in small parallel batches, and rows are written in the original order
+    const placeOut = arrayWriter(join(OUT, 'places.json'));
+    const placeHashes: string[] = [];
     const points: Record<string, unknown>[] = [];
     const lists = new Map<string, number[]>();
-    for (const s of summaries) {
+    for (let b = 0; b < summaries.length; b += EXPORT_CONCURRENCY) {
+     const batch = summaries.slice(b, b + EXPORT_CONCURRENCY);
+     const details: Place[] = await Promise.all(batch.map((s) => places.bySlug(s.slug)));
+     for (const [i, s] of batch.entries()) {
       const { id, cat, sub, division_id, district_id, upazila_id, union_id, city_corporation_id, loc_id: _loc, ...summary } = s;
-      const detail: Place = await places.bySlug(summary.slug);
+      const detail: Place = details[i];
       const row = { id, slug: summary.slug, summary: json(summary), detail: json(detail) };
-      placeRows.push({ ...row, h: hash(row) });
+      const h = hash(row);
+      placeOut.push({ ...row, h });
+      placeHashes.push(h);
       if (summary.lat !== null && summary.lon !== null) {
         const pt = { id, lat: summary.lat, lon: summary.lon, division_id, district_id, upazila_id, union_id, city_corporation_id,
                      category_key: cat, subcategory_key: sub, summary: json(summary) };
@@ -106,7 +139,9 @@ async function main() {
         const k = `${aid}|${c}`;
         (lists.get(k) ?? lists.set(k, []).get(k)!).push(id);
       }
+     }
     }
+    placeOut.close();
     const listRows: Record<string, unknown>[] = [];
     for (const [k, ids] of lists) {
       const [aid, cat] = k.split('|');
@@ -115,7 +150,7 @@ async function main() {
         listRows.push({ ...row, h: hash(row) });
       }
     }
-    console.log(`places: ${placeRows.length}, points: ${points.length}, list rows: ${listRows.length} (${Date.now() - t0} ms)`);
+    console.log(`places: ${placeHashes.length}, points: ${points.length}, list rows: ${listRows.length} (${Date.now() - t0} ms)`);
 
     // ------------------------------------------------------------------ boundaries (locate, boundary endpoints)
     const bRows: Record<string, unknown>[] = [];
@@ -149,7 +184,7 @@ async function main() {
     };
     const meta = Object.entries(docs).map(([key, v]) => { const row = { key, value: json(v) }; return { ...row, h: hash(row) }; });
 
-    for (const [name, rows] of Object.entries({ areas, places: placeRows, place_points: points, area_lists: listRows, boundaries: bRows, meta })) {
+    for (const [name, rows] of Object.entries({ areas, place_points: points, area_lists: listRows, boundaries: bRows, meta })) {
       write(join(OUT, `${name}.json`), rows);
     }
 
@@ -188,7 +223,7 @@ async function main() {
       rows: summaries.map((s) => [s.slug, s.name_bn, s.name_en, catIdx.get(s.subcategory_key ?? s.category_key),
                                   s.loc_id, s.district_id, EV.indexOf(s.evidence_level)]),
     });
-    write(join(WEB, 'search', 'version.json'), { data: hash([areas.map((a) => a.h), placeRows.map((p) => p.h)]) });
+    write(join(WEB, 'search', 'version.json'), { data: hash([areas.map((a) => a.h), placeHashes]) });
     console.log(`export-edge: done in ${Date.now() - t0} ms → ${OUT}, ${WEB}/{map,search}`);
   } finally {
     await db.onModuleDestroy();

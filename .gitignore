@@ -26,3 +26,8 @@ test-results/
 db/d1/out/
 apps/web/public/data/map/
 apps/web/public/data/search/
+
+# community layers built from uncommitted sources (COLLECTION_FORMAT.md, Exceptions)
+data/seed/layers/
+db/seed/layers/
+data/sources/overture_places_*/places*.csv

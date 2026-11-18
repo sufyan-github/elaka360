@@ -1,0 +1,23 @@
+{
+  "key": "WIKIDATA_BAR_2026",
+  "division": "barishal",
+  "kind": "wikidata",
+  "name": "Wikidata — items with coordinates in Barishal Division (places, not administrative units)",
+  "organization": "Wikidata contributors (Wikimedia Foundation)",
+  "source_type": "encyclopedia",
+  "trust_level": 2,
+  "urls": [
+    "https://query.wikidata.org/",
+    "https://www.wikidata.org/"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution": "Wikidata (CC0 1.0). Wikipedia article links are references only; no article text is copied.",
+  "files": {
+    "places.csv": "9ea3bff7c4f7c28bd571de629b9f8d14cf998792fd0ef2ca6be5f67605c5719e",
+    "raw/wikidata_barishal.json": "3d1652c791355b92588e8cbc8064c8dd3aba931938499f73ba26eb5163febce9"
+  },
+  "notes": "Division item Q459723. Candidates: P625 inside each district bounding box (wikibase:box) plus P131-chain members of the division item; kept when a point lies inside the HDX COD-AB division polygon (hdx_cod_ab_bgd_barishal/boundaries.geojson). District/upazila by point-in-polygon, seed names via hdx_cod_ab_bgd_barishal/crosswalk.csv. Administrative units and settlements excluded. Community-edited data: every row is unverified. P1329 phone numbers kept in extra_json.wikidata_phone only (not published by the institution itself)."
+}

@@ -1,0 +1,1054 @@
+{
+ "release": "2026-10-21.0",
+ "schema_version": "2.0.0",
+ "extract_rows_bd_bbox": 588295,
+ "counts": {
+  "in_division_bbox": 32155,
+  "inside_division": 16816,
+  "category_approx": 2267,
+  "rows": 16799,
+  "with_phone": 12220,
+  "with_website": 6194,
+  "with_email": 8705,
+  "with_social": 16742,
+  "with_name_bn": 5237,
+  "with_upazila": 13130,
+  "in_city_corporation": 3668,
+  "category_exact": 12008,
+  "dropped_outside_division": 15339,
+  "outside_in_other_division": 2206,
+  "category_top": 1200,
+  "category_none": 1324,
+  "skipped_private_individual": 17
+ },
+ "by_top_level": {
+  "business": 7616,
+  "education": 3199,
+  "other": 2156,
+  "health": 1149,
+  "tourism": 903,
+  "government": 477,
+  "agriculture": 401,
+  "religious": 389,
+  "finance": 279,
+  "transport": 185,
+  "emergency": 45
+ },
+ "confidence_bands": {
+  "<0.2": 1167,
+  ">=0.2": 1341,
+  ">=0.3": 1349,
+  ">=0.4": 1359,
+  ">=0.5": 3027,
+  ">=0.6": 2256,
+  ">=0.7": 3185,
+  ">=0.8": 2205,
+  ">=0.9": 910
+ },
+ "operating_status": {
+  "(none)": 16747,
+  "open": 69
+ },
+ "by_dataset": {
+  "meta": 16666,
+  "Uberall": 68,
+  "Microsoft": 49,
+  "Foursquare": 14,
+  "AllThePlaces": 2
+ },
+ "by_license": {
+  "CDLA-Permissive-2.0": 16783,
+  "Apache-2.0": 14,
+  "CC0-1.0": 2
+ },
+ "by_district": {
+  "Rajshahi": 4813,
+  "Bogura": 3448,
+  "Pabna": 2236,
+  "Sirajganj": 1941,
+  "Naogaon": 1421,
+  "Natore": 1227,
+  "Chapainawabganj": 1116,
+  "Joypurhat": 597
+ },
+ "private_individual_categories": {
+  "(none)": 7,
+  "historic_site": 2,
+  "building_or_construction_service": 1,
+  "college_university": 1,
+  "social_media_agency": 1,
+  "storage_facility": 1,
+  "chemical_plant": 1,
+  "internet_marketing_service": 1,
+  "education": 1,
+  "political_organization": 1
+ },
+ "proposed_subcategories": [
+  {
+   "taxonomy_primary": "(none)",
+   "hierarchy": "",
+   "mapped_to": "other",
+   "count": 1324
+  },
+  {
+   "taxonomy_primary": "education",
+   "hierarchy": "education",
+   "mapped_to": "education",
+   "count": 395
+  },
+  {
+   "taxonomy_primary": "shopping",
+   "hierarchy": "shopping",
+   "mapped_to": "business.shopping",
+   "count": 301
+  },
+  {
+   "taxonomy_primary": "social_or_community_service",
+   "hierarchy": "community_and_government/social_or_community_service",
+   "mapped_to": "other",
+   "count": 299
+  },
+  {
+   "taxonomy_primary": "community_and_government",
+   "hierarchy": "community_and_government",
+   "mapped_to": "other",
+   "count": 189
+  },
+  {
+   "taxonomy_primary": "health_care",
+   "hierarchy": "health_care",
+   "mapped_to": "health",
+   "count": 161
+  },
+  {
+   "taxonomy_primary": "hotel",
+   "hierarchy": "lodging/hotel",
+   "mapped_to": "business",
+   "count": 150
+  },
+  {
+   "taxonomy_primary": "lodging",
+   "hierarchy": "lodging",
+   "mapped_to": "business",
+   "count": 142
+  },
+  {
+   "taxonomy_primary": "hostel",
+   "hierarchy": "lodging/hostel",
+   "mapped_to": "business",
+   "count": 84
+  },
+  {
+   "taxonomy_primary": "religious_organization",
+   "hierarchy": "cultural_and_historic/religious_organization",
+   "mapped_to": "religious",
+   "count": 79
+  },
+  {
+   "taxonomy_primary": "geographic_entities",
+   "hierarchy": "geographic_entities",
+   "mapped_to": "tourism.natural",
+   "count": 77
+  },
+  {
+   "taxonomy_primary": "building_or_construction_service",
+   "hierarchy": "services_and_business/building_or_construction_service",
+   "mapped_to": "business.service",
+   "count": 64
+  },
+  {
+   "taxonomy_primary": "arts_and_entertainment",
+   "hierarchy": "arts_and_entertainment",
+   "mapped_to": "business",
+   "count": 58
+  },
+  {
+   "taxonomy_primary": "manufacturer",
+   "hierarchy": "services_and_business/b2b_service/manufacturer",
+   "mapped_to": "business",
+   "count": 55
+  },
+  {
+   "taxonomy_primary": "library",
+   "hierarchy": "education/library",
+   "mapped_to": "education",
+   "count": 53
+  },
+  {
+   "taxonomy_primary": "bridge",
+   "hierarchy": "geographic_entities/built_feature/bridge",
+   "mapped_to": "other",
+   "count": 49
+  },
+  {
+   "taxonomy_primary": "sport_league",
+   "hierarchy": "sports_and_recreation/sport_league",
+   "mapped_to": "other",
+   "count": 48
+  },
+  {
+   "taxonomy_primary": "food_delivery_service",
+   "hierarchy": "lifestyle_services/food_service/food_delivery_service",
+   "mapped_to": "business.service",
+   "count": 45
+  },
+  {
+   "taxonomy_primary": "campus_building",
+   "hierarchy": "education/educational_facility/campus_building",
+   "mapped_to": "education",
+   "count": 44
+  },
+  {
+   "taxonomy_primary": "warehouse_club_store",
+   "hierarchy": "shopping/warehouse_club_store",
+   "mapped_to": "business.shop",
+   "count": 43
+  },
+  {
+   "taxonomy_primary": "gym",
+   "hierarchy": "sports_and_recreation/sport_or_fitness_facility/gym",
+   "mapped_to": "business.service",
+   "count": 41
+  },
+  {
+   "taxonomy_primary": "b2b_advertising_and_marketing_service",
+   "hierarchy": "services_and_business/b2b_service/b2b_office_and_professional_service/b2b_advertising_and_marketing_service",
+   "mapped_to": "business",
+   "count": 41
+  },
+  {
+   "taxonomy_primary": "spa",
+   "hierarchy": "lifestyle_services/wellness_service/spa",
+   "mapped_to": "business.service",
+   "count": 38
+  },
+  {
+   "taxonomy_primary": "travel_and_transportation",
+   "hierarchy": "travel_and_transportation",
+   "mapped_to": "transport",
+   "count": 37
+  },
+  {
+   "taxonomy_primary": "town_hall",
+   "hierarchy": "community_and_government/government_office/town_hall",
+   "mapped_to": "government",
+   "count": 36
+  },
+  {
+   "taxonomy_primary": "engineering_service",
+   "hierarchy": "services_and_business/building_or_construction_service/engineering_service",
+   "mapped_to": "business.service",
+   "count": 31
+  },
+  {
+   "taxonomy_primary": "music_venue",
+   "hierarchy": "arts_and_entertainment/performing_arts_venue/music_venue",
+   "mapped_to": "business",
+   "count": 31
+  },
+  {
+   "taxonomy_primary": "educational_research_institute",
+   "hierarchy": "education/research_institute/educational_research_institute",
+   "mapped_to": "education",
+   "count": 30
+  },
+  {
+   "taxonomy_primary": "industrial_company",
+   "hierarchy": "services_and_business/corporate_or_business_office/industrial_company",
+   "mapped_to": "business",
+   "count": 29
+  },
+  {
+   "taxonomy_primary": "auto_company",
+   "hierarchy": "services_and_business/corporate_or_business_office/auto_company",
+   "mapped_to": "business",
+   "count": 26
+  },
+  {
+   "taxonomy_primary": "corporate_or_business_office",
+   "hierarchy": "services_and_business/corporate_or_business_office",
+   "mapped_to": "business",
+   "count": 23
+  },
+  {
+   "taxonomy_primary": "stadium_arena",
+   "hierarchy": "arts_and_entertainment/stadium_arena",
+   "mapped_to": "other",
+   "count": 23
+  },
+  {
+   "taxonomy_primary": "military_site",
+   "hierarchy": "community_and_government/military_site",
+   "mapped_to": "government",
+   "count": 22
+  },
+  {
+   "taxonomy_primary": "political_organization",
+   "hierarchy": "community_and_government/civic_organization/political_organization",
+   "mapped_to": "other",
+   "count": 22
+  },
+  {
+   "taxonomy_primary": "youth_organization",
+   "hierarchy": "community_and_government/social_or_community_service/youth_organization",
+   "mapped_to": "other",
+   "count": 22
+  },
+  {
+   "taxonomy_primary": "electric_utility_provider",
+   "hierarchy": "community_and_government/public_utility/electric_utility_provider",
+   "mapped_to": "government",
+   "count": 21
+  },
+  {
+   "taxonomy_primary": "food_and_drink",
+   "hierarchy": "food_and_drink",
+   "mapped_to": "business",
+   "count": 19
+  },
+  {
+   "taxonomy_primary": "telecommunications_company",
+   "hierarchy": "services_and_business/corporate_or_business_office/telecommunications_company",
+   "mapped_to": "business",
+   "count": 19
+  },
+  {
+   "taxonomy_primary": "travel_company",
+   "hierarchy": "services_and_business/corporate_or_business_office/travel_company",
+   "mapped_to": "business",
+   "count": 19
+  },
+  {
+   "taxonomy_primary": "amusement_park",
+   "hierarchy": "arts_and_entertainment/amusement_attraction/amusement_park",
+   "mapped_to": "tourism.park",
+   "count": 18
+  },
+  {
+   "taxonomy_primary": "fitness_trainer",
+   "hierarchy": "sports_and_recreation/sport_or_fitness_facility/fitness_trainer",
+   "mapped_to": "business.service",
+   "count": 18
+  },
+  {
+   "taxonomy_primary": "movie_theater",
+   "hierarchy": "arts_and_entertainment/movie_theater",
+   "mapped_to": "business",
+   "count": 18
+  },
+  {
+   "taxonomy_primary": "public_plaza",
+   "hierarchy": "community_and_government/public_facility/public_plaza",
+   "mapped_to": "other",
+   "count": 17
+  },
+  {
+   "taxonomy_primary": "comedy_club",
+   "hierarchy": "arts_and_entertainment/performing_arts_venue/comedy_club",
+   "mapped_to": "business",
+   "count": 17
+  },
+  {
+   "taxonomy_primary": "resort",
+   "hierarchy": "lodging/resort",
+   "mapped_to": "business",
+   "count": 16
+  },
+  {
+   "taxonomy_primary": "preschool",
+   "hierarchy": "education/place_of_learning/school/preschool",
+   "mapped_to": "education",
+   "count": 15
+  },
+  {
+   "taxonomy_primary": "sports_and_recreation",
+   "hierarchy": "sports_and_recreation",
+   "mapped_to": "other",
+   "count": 15
+  },
+  {
+   "taxonomy_primary": "auditorium",
+   "hierarchy": "arts_and_entertainment/event_venue/auditorium",
+   "mapped_to": "business",
+   "count": 15
+  },
+  {
+   "taxonomy_primary": "electronic_equipment_supplier",
+   "hierarchy": "services_and_business/b2b_service/supplier_or_distributor/electronic_equipment_supplier",
+   "mapped_to": "business",
+   "count": 14
+  },
+  {
+   "taxonomy_primary": "political_party_office",
+   "hierarchy": "community_and_government/civic_organization/political_organization/political_party_office",
+   "mapped_to": "other",
+   "count": 14
+  },
+  {
+   "taxonomy_primary": "blood_and_plasma_donation_center",
+   "hierarchy": "health_care/medical_service/blood_and_plasma_donation_center",
+   "mapped_to": "health",
+   "count": 14
+  },
+  {
+   "taxonomy_primary": "chemical_plant",
+   "hierarchy": "services_and_business/b2b_service/b2b_industrial_and_machine_service/chemical_plant",
+   "mapped_to": "business",
+   "count": 13
+  },
+  {
+   "taxonomy_primary": "b2b_science_and_technology_service",
+   "hierarchy": "services_and_business/b2b_service/b2b_science_and_technology_service",
+   "mapped_to": "business",
+   "count": 13
+  },
+  {
+   "taxonomy_primary": "veterinarian",
+   "hierarchy": "lifestyle_services/animal_or_pet_service/veterinary_care/veterinarian",
+   "mapped_to": "business.service",
+   "count": 13
+  },
+  {
+   "taxonomy_primary": "pharmaceutical_company",
+   "hierarchy": "services_and_business/corporate_or_business_office/pharmaceutical_company",
+   "mapped_to": "business",
+   "count": 11
+  },
+  {
+   "taxonomy_primary": "industrial_equipment_manufacturer",
+   "hierarchy": "services_and_business/b2b_service/manufacturer/machinery_and_tool_manufacturer/industrial_equipment_manufacturer",
+   "mapped_to": "business",
+   "count": 10
+  },
+  {
+   "taxonomy_primary": "jewelry_and_watches_manufacturer",
+   "hierarchy": "services_and_business/b2b_service/manufacturer/jewelry_and_watches_manufacturer",
+   "mapped_to": "business",
+   "count": 10
+  },
+  {
+   "taxonomy_primary": "animal_or_pet_service",
+   "hierarchy": "lifestyle_services/animal_or_pet_service",
+   "mapped_to": "business.service",
+   "count": 10
+  },
+  {
+   "taxonomy_primary": "educational_camp",
+   "hierarchy": "education/educational_facility/educational_camp",
+   "mapped_to": "education",
+   "count": 10
+  },
+  {
+   "taxonomy_primary": "freight_and_cargo_service",
+   "hierarchy": "services_and_business/b2b_service/b2b_transportation_and_storage_service/freight_and_cargo_service",
+   "mapped_to": "business",
+   "count": 9
+  },
+  {
+   "taxonomy_primary": "commercial_industrial",
+   "hierarchy": "services_and_business/b2b_service/commercial_industrial",
+   "mapped_to": "business",
+   "count": 9
+  },
+  {
+   "taxonomy_primary": "art_gallery",
+   "hierarchy": "arts_and_entertainment/arts_and_crafts_space/art_gallery",
+   "mapped_to": "tourism.museum",
+   "count": 9
+  },
+  {
+   "taxonomy_primary": "sport_or_fitness_facility",
+   "hierarchy": "sports_and_recreation/sport_or_fitness_facility",
+   "mapped_to": "business.service",
+   "count": 9
+  },
+  {
+   "taxonomy_primary": "theatre_venue",
+   "hierarchy": "arts_and_entertainment/performing_arts_venue/theatre_venue",
+   "mapped_to": "business",
+   "count": 9
+  },
+  {
+   "taxonomy_primary": "food_beverage_distributor",
+   "hierarchy": "services_and_business/b2b_service/supplier_or_distributor/food_beverage_distributor",
+   "mapped_to": "business",
+   "count": 8
+  },
+  {
+   "taxonomy_primary": "bar",
+   "hierarchy": "food_and_drink/alcoholic_beverage_venue/bar",
+   "mapped_to": "business.restaurant",
+   "count": 8
+  },
+  {
+   "taxonomy_primary": "pool_billiards",
+   "hierarchy": "sports_and_recreation/sport_or_fitness_facility/pool_billiards",
+   "mapped_to": "business.service",
+   "count": 8
+  },
+  {
+   "taxonomy_primary": "cultural_center",
+   "hierarchy": "cultural_and_historic/cultural_center",
+   "mapped_to": "other.community_center",
+   "count": 8
+  },
+  {
+   "taxonomy_primary": "b2b_surgical_appliances_and_supplies",
+   "hierarchy": "services_and_business/b2b_service/b2b_medical_support_service/b2b_surgical_appliances_and_supplies",
+   "mapped_to": "business",
+   "count": 7
+  },
+  {
+   "taxonomy_primary": "environmental_conservation_organization",
+   "hierarchy": "services_and_business/environmental_or_ecological_service/environmental_conservation_organization",
+   "mapped_to": "other",
+   "count": 7
+  },
+  {
+   "taxonomy_primary": "martial_arts_club",
+   "hierarchy": "sports_and_recreation/sport_or_recreation_club/martial_arts_club",
+   "mapped_to": "other",
+   "count": 7
+  },
+  {
+   "taxonomy_primary": "clothing_company",
+   "hierarchy": "services_and_business/corporate_or_business_office/clothing_company",
+   "mapped_to": "business",
+   "count": 7
+  },
+  {
+   "taxonomy_primary": "public_utility",
+   "hierarchy": "community_and_government/public_utility",
+   "mapped_to": "government",
+   "count": 7
+  },
+  {
+   "taxonomy_primary": "energy_company",
+   "hierarchy": "services_and_business/corporate_or_business_office/energy_company",
+   "mapped_to": "business",
+   "count": 7
+  },
+  {
+   "taxonomy_primary": "textile_manufacturer",
+   "hierarchy": "services_and_business/b2b_service/manufacturer/textile_manufacturer",
+   "mapped_to": "business",
+   "count": 6
+  },
+  {
+   "taxonomy_primary": "swimming_pool",
+   "hierarchy": "sports_and_recreation/sport_or_fitness_facility/swimming_pool",
+   "mapped_to": "business.service",
+   "count": 6
+  },
+  {
+   "taxonomy_primary": "cricket_ground",
+   "hierarchy": "arts_and_entertainment/stadium_arena/stadium/cricket_ground",
+   "mapped_to": "other",
+   "count": 6
+  },
+  {
+   "taxonomy_primary": "retirement_home",
+   "hierarchy": "services_and_business/housing_or_property_service/senior_living_facility/retirement_home",
+   "mapped_to": "business.service",
+   "count": 6
+  },
+  {
+   "taxonomy_primary": "metal_fabricator",
+   "hierarchy": "services_and_business/b2b_service/manufacturer/metal_fabricator",
+   "mapped_to": "business",
+   "count": 6
+  },
+  {
+   "taxonomy_primary": "bed_and_breakfast",
+   "hierarchy": "lodging/bed_and_breakfast",
+   "mapped_to": "business",
+   "count": 5
+  },
+  {
+   "taxonomy_primary": "b2b_marketing_consultant",
+   "hierarchy": "services_and_business/b2b_service/b2b_office_and_professional_service/b2b_advertising_and_marketing_service/b2b_marketing_consultant",
+   "mapped_to": "business",
+   "count": 5
+  },
+  {
+   "taxonomy_primary": "water_utility_provider",
+   "hierarchy": "community_and_government/public_utility/water_utility_provider",
+   "mapped_to": "government",
+   "count": 5
+  },
+  {
+   "taxonomy_primary": "automation_service",
+   "hierarchy": "services_and_business/b2b_service/b2b_industrial_and_machine_service/automation_service",
+   "mapped_to": "business",
+   "count": 5
+  },
+  {
+   "taxonomy_primary": "lodge",
+   "hierarchy": "lodging/lodge",
+   "mapped_to": "business",
+   "count": 4
+  },
+  {
+   "taxonomy_primary": "railroad_freight",
+   "hierarchy": "services_and_business/b2b_service/b2b_transportation_and_storage_service/railroad_freight",
+   "mapped_to": "business",
+   "count": 4
+  },
+  {
+   "taxonomy_primary": "fairgrounds",
+   "hierarchy": "arts_and_entertainment/festival_venue/fairgrounds",
+   "mapped_to": "business",
+   "count": 4
+  },
+  {
+   "taxonomy_primary": "plastic_manufacturer",
+   "hierarchy": "services_and_business/b2b_service/manufacturer/plastic_manufacturer",
+   "mapped_to": "business",
+   "count": 4
+  },
+  {
+   "taxonomy_primary": "metal_supplier",
+   "hierarchy": "services_and_business/b2b_service/supplier_or_distributor/metal_supplier",
+   "mapped_to": "business",
+   "count": 4
+  },
+  {
+   "taxonomy_primary": "storage_facility",
+   "hierarchy": "services_and_business/storage_facility",
+   "mapped_to": "business.service",
+   "count": 4
+  },
+  {
+   "taxonomy_primary": "motel",
+   "hierarchy": "lodging/hotel/motel",
+   "mapped_to": "business",
+   "count": 4
+  },
+  {
+   "taxonomy_primary": "appliance_manufacturer",
+   "hierarchy": "services_and_business/b2b_service/manufacturer/appliance_manufacturer",
+   "mapped_to": "business",
+   "count": 4
+  },
+  {
+   "taxonomy_primary": "dance_studio",
+   "hierarchy": "sports_and_recreation/sport_or_fitness_facility/dance_studio",
+   "mapped_to": "business.service",
+   "count": 4
+  },
+  {
+   "taxonomy_primary": "public_fountain",
+   "hierarchy": "community_and_government/public_facility/public_fountain",
+   "mapped_to": "other",
+   "count": 4
+  },
+  {
+   "taxonomy_primary": "medical_research_institute",
+   "hierarchy": "education/research_institute/medical_research_institute",
+   "mapped_to": "education",
+   "count": 4
+  },
+  {
+   "taxonomy_primary": "b2b_telemarketing_service",
+   "hierarchy": "services_and_business/b2b_service/b2b_office_and_professional_service/b2b_advertising_and_marketing_service/b2b_telemarketing_service",
+   "mapped_to": "business",
+   "count": 3
+  },
+  {
+   "taxonomy_primary": "mountain_bike_trail",
+   "hierarchy": "sports_and_recreation/recreational_trail_or_path/mountain_bike_trail",
+   "mapped_to": "other",
+   "count": 3
+  },
+  {
+   "taxonomy_primary": "hotel_supply_service",
+   "hierarchy": "services_and_business/b2b_service/supplier_or_distributor/hotel_supply_service",
+   "mapped_to": "business",
+   "count": 3
+  },
+  {
+   "taxonomy_primary": "astrological_advising",
+   "hierarchy": "arts_and_entertainment/spiritual_advising/astrological_advising",
+   "mapped_to": "business",
+   "count": 3
+  },
+  {
+   "taxonomy_primary": "ferry_boat_company",
+   "hierarchy": "services_and_business/corporate_or_business_office/ferry_boat_company",
+   "mapped_to": "business",
+   "count": 3
+  },
+  {
+   "taxonomy_primary": "parking",
+   "hierarchy": "travel_and_transportation/parking",
+   "mapped_to": "transport",
+   "count": 3
+  },
+  {
+   "taxonomy_primary": "embassy",
+   "hierarchy": "community_and_government/government_office/embassy",
+   "mapped_to": "government",
+   "count": 3
+  },
+  {
+   "taxonomy_primary": "holiday_rental_home",
+   "hierarchy": "lodging/private_lodging/holiday_rental_home",
+   "mapped_to": "business",
+   "count": 3
+  },
+  {
+   "taxonomy_primary": "labor_union",
+   "hierarchy": "community_and_government/civic_organization/labor_union",
+   "mapped_to": "other",
+   "count": 3
+  },
+  {
+   "taxonomy_primary": "b2b_business_management_service",
+   "hierarchy": "services_and_business/b2b_service/b2b_office_and_professional_service/b2b_business_management_service",
+   "mapped_to": "business",
+   "count": 3
+  },
+  {
+   "taxonomy_primary": "jail_or_prison",
+   "hierarchy": "community_and_government/public_safety_service/jail_or_prison",
+   "mapped_to": "other",
+   "count": 3
+  },
+  {
+   "taxonomy_primary": "auto_manufacturer",
+   "hierarchy": "services_and_business/b2b_service/manufacturer/vehicle_manufacturer/auto_manufacturer",
+   "mapped_to": "business",
+   "count": 3
+  },
+  {
+   "taxonomy_primary": "airline",
+   "hierarchy": "travel_and_transportation/air_transport_facility_or_service/airline",
+   "mapped_to": "transport",
+   "count": 3
+  },
+  {
+   "taxonomy_primary": "wholesale_grocer",
+   "hierarchy": "services_and_business/b2b_service/wholesaler/wholesale_grocer",
+   "mapped_to": "business",
+   "count": 2
+  },
+  {
+   "taxonomy_primary": "apparel_manufacturer",
+   "hierarchy": "services_and_business/b2b_service/manufacturer/apparel_manufacturer",
+   "mapped_to": "business",
+   "count": 2
+  },
+  {
+   "taxonomy_primary": "food_consultant",
+   "hierarchy": "lifestyle_services/food_service/food_consultant",
+   "mapped_to": "business.service",
+   "count": 2
+  },
+  {
+   "taxonomy_primary": "occupational_safety",
+   "hierarchy": "services_and_business/b2b_service/b2b_industrial_and_machine_service/occupational_safety",
+   "mapped_to": "business",
+   "count": 2
+  },
+  {
+   "taxonomy_primary": "race_track",
+   "hierarchy": "sports_and_recreation/sport_or_fitness_facility/race_track",
+   "mapped_to": "business.service",
+   "count": 2
+  },
+  {
+   "taxonomy_primary": "baseball_field",
+   "hierarchy": "sports_and_recreation/sport_or_fitness_facility/sport_field/baseball_field",
+   "mapped_to": "business.service",
+   "count": 2
+  },
+  {
+   "taxonomy_primary": "public_restroom",
+   "hierarchy": "community_and_government/public_facility/public_restroom",
+   "mapped_to": "other",
+   "count": 2
+  },
+  {
+   "taxonomy_primary": "private_association",
+   "hierarchy": "services_and_business/corporate_or_business_office/private_association",
+   "mapped_to": "business",
+   "count": 2
+  },
+  {
+   "taxonomy_primary": "service_apartment",
+   "hierarchy": "lodging/service_apartment",
+   "mapped_to": "business",
+   "count": 2
+  },
+  {
+   "taxonomy_primary": "b2b_energy_and_utility_service",
+   "hierarchy": "services_and_business/b2b_service/b2b_energy_and_utility_service",
+   "mapped_to": "business",
+   "count": 2
+  },
+  {
+   "taxonomy_primary": "nutrition_service",
+   "hierarchy": "lifestyle_services/wellness_service/nutrition_service",
+   "mapped_to": "business.service",
+   "count": 2
+  },
+  {
+   "taxonomy_primary": "football_stadium",
+   "hierarchy": "arts_and_entertainment/stadium_arena/stadium/football_stadium",
+   "mapped_to": "other",
+   "count": 2
+  },
+  {
+   "taxonomy_primary": "biotechnology_company",
+   "hierarchy": "services_and_business/corporate_or_business_office/biotechnology_company",
+   "mapped_to": "business",
+   "count": 2
+  },
+  {
+   "taxonomy_primary": "massage_therapy",
+   "hierarchy": "lifestyle_services/wellness_service/massage_therapy",
+   "mapped_to": "business.service",
+   "count": 2
+  },
+  {
+   "taxonomy_primary": "go_kart_club",
+   "hierarchy": "sports_and_recreation/sport_or_recreation_club/go_kart_club",
+   "mapped_to": "other",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "import_export_service",
+   "hierarchy": "services_and_business/b2b_service/supplier_or_distributor/import_export_service",
+   "mapped_to": "business",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "laser_cutting_service",
+   "hierarchy": "services_and_business/b2b_service/b2b_industrial_and_machine_service/laser_cutting_service",
+   "mapped_to": "business",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "shooting_range",
+   "hierarchy": "sports_and_recreation/sport_or_fitness_facility/shooting_range",
+   "mapped_to": "business.service",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "granite_supplier",
+   "hierarchy": "services_and_business/b2b_service/supplier_or_distributor/granite_supplier",
+   "mapped_to": "business",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "animal_shelter",
+   "hierarchy": "lifestyle_services/animal_or_pet_service/animal_adoption_or_rescue/animal_shelter",
+   "mapped_to": "business.service",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "computer_wholesaler",
+   "hierarchy": "services_and_business/b2b_service/wholesaler/computer_wholesaler",
+   "mapped_to": "business",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "lounge",
+   "hierarchy": "food_and_drink/alcoholic_beverage_venue/lounge",
+   "mapped_to": "business.restaurant",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "plastics_company",
+   "hierarchy": "services_and_business/corporate_or_business_office/plastics_company",
+   "mapped_to": "business",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "drive_in_theater",
+   "hierarchy": "arts_and_entertainment/movie_theater/drive_in_theater",
+   "mapped_to": "business",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "meat_wholesaler",
+   "hierarchy": "services_and_business/b2b_service/wholesaler/meat_wholesaler",
+   "mapped_to": "business",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "esports_league",
+   "hierarchy": "sports_and_recreation/sport_league/esports_league",
+   "mapped_to": "other",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "cabin",
+   "hierarchy": "lodging/cabin",
+   "mapped_to": "business",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "dance_club",
+   "hierarchy": "arts_and_entertainment/nightlife_venue/dance_club",
+   "mapped_to": "business",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "rugby_pitch",
+   "hierarchy": "sports_and_recreation/sport_or_fitness_facility/sport_field/rugby_pitch",
+   "mapped_to": "business.service",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "emergency_department",
+   "hierarchy": "health_care/emergency_or_urgent_care_facility/emergency_department",
+   "mapped_to": "health",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "animal_rescue_service",
+   "hierarchy": "lifestyle_services/animal_or_pet_service/animal_adoption_or_rescue/animal_rescue_service",
+   "mapped_to": "business.service",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "opera_and_ballet",
+   "hierarchy": "arts_and_entertainment/performing_arts_venue/music_venue/opera_and_ballet",
+   "mapped_to": "business",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "taxi_service",
+   "hierarchy": "travel_and_transportation/ground_transport_facility_or_service/taxi_or_ride_share_service/taxi_service",
+   "mapped_to": "transport",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "lottery_vendor",
+   "hierarchy": "arts_and_entertainment/gaming_venue/lottery_vendor",
+   "mapped_to": "business",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "badminton_court",
+   "hierarchy": "sports_and_recreation/sport_or_fitness_facility/sport_court/badminton_court",
+   "mapped_to": "business.service",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "onsen",
+   "hierarchy": "lifestyle_services/wellness_service/public_bath_house/onsen",
+   "mapped_to": "business.service",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "pier",
+   "hierarchy": "geographic_entities/built_feature/pier",
+   "mapped_to": "other",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "performing_arts_venue",
+   "hierarchy": "arts_and_entertainment/performing_arts_venue",
+   "mapped_to": "business",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "homeless_shelter",
+   "hierarchy": "community_and_government/social_or_community_service/homeless_shelter",
+   "mapped_to": "other",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "meditation_center",
+   "hierarchy": "lifestyle_services/wellness_service/meditation_center",
+   "mapped_to": "business.service",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "pub",
+   "hierarchy": "food_and_drink/alcoholic_beverage_venue/bar/pub",
+   "mapped_to": "business.restaurant",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "pet_sitting",
+   "hierarchy": "lifestyle_services/animal_or_pet_service/pet_care_service/pet_sitting",
+   "mapped_to": "business.service",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "gymnastics_center",
+   "hierarchy": "sports_and_recreation/sport_or_fitness_facility/gymnastics_center",
+   "mapped_to": "business.service",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "pet_breeder",
+   "hierarchy": "lifestyle_services/animal_or_pet_service/pet_breeder",
+   "mapped_to": "business.service",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "horse_riding",
+   "hierarchy": "sports_and_recreation/sport_or_fitness_facility/horse_riding",
+   "mapped_to": "business.service",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "botanical_garden",
+   "hierarchy": "geographic_entities/built_feature/garden/botanical_garden",
+   "mapped_to": "other",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "surfing",
+   "hierarchy": "sports_and_recreation/sport_or_fitness_facility/water_sport/surfing",
+   "mapped_to": "business.service",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "soccer_field",
+   "hierarchy": "sports_and_recreation/sport_or_fitness_facility/sport_field/soccer_field",
+   "mapped_to": "business.service",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "fishing_club",
+   "hierarchy": "sports_and_recreation/sport_or_recreation_club/fishing_club",
+   "mapped_to": "other",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "fishing_charter",
+   "hierarchy": "sports_and_recreation/sport_or_fitness_facility/water_sport/fishing/fishing_charter",
+   "mapped_to": "business.service",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "inventory_control_service",
+   "hierarchy": "services_and_business/b2b_service/b2b_industrial_and_machine_service/inventory_control_service",
+   "mapped_to": "business",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "motorcycle_manufacturer",
+   "hierarchy": "services_and_business/b2b_service/manufacturer/vehicle_manufacturer/motorcycle_manufacturer",
+   "mapped_to": "business",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "aquarium",
+   "hierarchy": "arts_and_entertainment/animal_attraction/aquarium",
+   "mapped_to": "tourism.park",
+   "count": 1
+  },
+  {
+   "taxonomy_primary": "basketball_court",
+   "hierarchy": "sports_and_recreation/sport_or_fitness_facility/sport_court/basketball_court",
+   "mapped_to": "business.service",
+   "count": 1
+  }
+ ]
+}

@@ -39,6 +39,10 @@ def sha256(path):
     return h.hexdigest()
 
 
+# outputs of large community layers that are not committed (they may be missing; when present, checksums still apply)
+UNCOMMITTED = {"overture": re.compile(r"places(_\d+)?\.csv")}
+
+
 def check_manifest(m):
     """Problems with a source manifest (missing provenance, stale checksums)."""
     errs = []
@@ -50,6 +54,8 @@ def check_manifest(m):
     for rel, digest in (m.get("files") or {}).items():
         p = os.path.join(m["_dir"], rel)
         if not os.path.isfile(p):
+            if UNCOMMITTED.get(m.get("kind"), re.compile("$^")).fullmatch(rel):
+                continue      # large layer output, not committed: fetch.py rebuilds it (COLLECTION_FORMAT.md, Exceptions)
             errs.append(f"{m['key']}: listed file missing: {rel}")
         elif digest and sha256(p) != digest:
             errs.append(f"{m['key']}: checksum changed for {rel} (re-run fetch.py and update SOURCE.json)")
@@ -149,6 +155,8 @@ def _bbox(geom):
 class PolygonIndex:
     """Point-in-polygon lookup over GeoJSON features (bbox prefilter, even-odd rule, holes respected)."""
 
+    CELL = 0.1      # degrees; a grid of bounding boxes so a lookup scans only nearby polygons
+
     def __init__(self, features):
         self.items = []
         for f in features:
@@ -158,10 +166,18 @@ class PolygonIndex:
             b = _bbox(g)
             if b:
                 self.items.append((b, _polys(g), f))
+        self.grid = {}
+        c = self.CELL
+        for i, ((x0, y0, x1, y1), _, _) in enumerate(self.items):
+            for gx in range(int(x0 // c), int(x1 // c) + 1):
+                for gy in range(int(y0 // c), int(y1 // c) + 1):
+                    self.grid.setdefault((gx, gy), []).append(i)
 
     def find(self, lon, lat):
         hits = []
-        for (x0, y0, x1, y1), polys, f in self.items:
+        c = self.CELL
+        for i in self.grid.get((int(lon // c), int(lat // c)), ()):     # ascending: the same order as a full scan
+            (x0, y0, x1, y1), polys, f = self.items[i]
             if not (x0 <= lon <= x1 and y0 <= lat <= y1):
                 continue
             for poly in polys:

@@ -36,7 +36,9 @@
     "WIKI_RU",
     "UGC_UNIVERSITIES_RAJ_2026",
     "BANBEIS_INST_RAJ_2026",
-    "PORTAL_TOURIST_SPOTS_RAJ_2026"
+    "PORTAL_TOURIST_SPOTS_RAJ_2026",
+    "WIKIDATA_RAJ_2026",
+    "OSM_RAJ_2026"
    ]
   },
   "verified": false,
@@ -96,7 +98,9 @@
    "_sources": [
     "WIKI_RUET",
     "UGC_UNIVERSITIES_RAJ_2026",
-    "BANBEIS_INST_RAJ_2026"
+    "BANBEIS_INST_RAJ_2026",
+    "WIKIDATA_RAJ_2026",
+    "OSM_RAJ_2026"
    ]
   },
   "verified": false,
@@ -149,7 +153,8 @@
    "emergency": "24/7",
    "_sources": [
     "WIKI_RMC",
-    "DGHS_HRIS_FACILITIES_RAJ_2026"
+    "DGHS_HRIS_FACILITIES_RAJ_2026",
+    "OSM_RAJ_2026"
    ]
   },
   "verified": false,
@@ -202,7 +207,9 @@
    "_sources": [
     "WIKI_PUTHIA",
     "DOA_PROTECTED_MONUMENTS_RAJ_2026",
-    "PORTAL_TOURIST_SPOTS_RAJ_2026"
+    "PORTAL_TOURIST_SPOTS_RAJ_2026",
+    "WIKIDATA_RAJ_2026",
+    "OSM_RAJ_2026"
    ]
   },
   "verified": false,
@@ -247,7 +254,9 @@
    "founded_by": "Varendra Research Society",
    "_sources": [
     "WIKI_VRM",
-    "PORTAL_TOURIST_SPOTS_RAJ_2026"
+    "PORTAL_TOURIST_SPOTS_RAJ_2026",
+    "WIKIDATA_RAJ_2026",
+    "OSM_RAJ_2026"
    ]
   },
   "verified": false,
@@ -283,9 +292,9 @@
   "ownership": "public",
   "address_en": "Rajshahi",
   "postcode": null,
-  "lat": null,
-  "lon": null,
-  "website": null,
+  "lat": 24.3645,
+  "lon": 88.5958,
+  "website": "http://rc.gov.bd",
   "established": "1873",
   "attributes": {
    "eiin": "126490",
@@ -298,7 +307,9 @@
    "_sources": [
     "UNVERIFIED",
     "BANBEIS_INST_RAJ_2026",
-    "PORTAL_TOURIST_SPOTS_RAJ_2026"
+    "PORTAL_TOURIST_SPOTS_RAJ_2026",
+    "WIKIDATA_RAJ_2026",
+    "OSM_RAJ_2026"
    ]
   },
   "verified": false,
@@ -343,7 +354,8 @@
    "construction_date_as_stated": "930 হিজরী (1523-24 খ্রিঃ)",
    "_sources": [
     "UNVERIFIED",
-    "DOA_PROTECTED_MONUMENTS_RAJ_2026"
+    "DOA_PROTECTED_MONUMENTS_RAJ_2026",
+    "WIKIDATA_RAJ_2026"
    ]
   },
   "verified": false,

@@ -40,244 +40,275 @@
 39,GEOBOUNDARIES_BGD_ADM4,"geoBoundaries gbOpen Bangladesh ADM4 (unions, paurashavas, city wards), Rajshahi Division extract",https://www.geoboundaries.org/api/current/gbOpen/BGD/ADM4/
 40,HDX_COD_AB_BGD,"Bangladesh - Subnational Administrative Boundaries (COD-AB v03), Rajshahi Division extract",https://data.humdata.org/dataset/cod-ab-bgd
 41,LGD_2026,Local Government Division portal (lgd.gov.bd) — Rajshahi Division extract,https://lgd.gov.bd/
-42,OSM_RAJ_2026,OpenStreetMap contributors — Rajshahi Division extract (points of interest),https://www.openstreetmap.org/relation/3859335
-43,PORTAL_TOURIST_SPOTS_RAJ_2026,National portal 'দর্শনীয় স্থান' (tourist spot) lists — Rajshahi Division district and upazila portals,https://rajshahi.gov.bd/pages/tourist-spot
-44,RAJ_RANGE_POLICE_PORTALS_2026,"District police portals of Rajshahi Range (Natore, Naogaon, Chapainawabganj, Bogura, Joypurhat, Pabna, Sirajganj)",https://police.natore.gov.bd/pages/static-pages/697fdcd735ce18e1c06d8427
-45,RAJSHAHI_DC_PORTAL_2026,"Rajshahi District Administration portal — upazila/union list, pourashava list, district at-a-glance",https://rajshahi.gov.bd/pages/static-pages/697f79bb35ce18e1c06b5300
-46,RAJDIV_PORTAL_2026,Rajshahi Divisional Commissioner portal (rajshahidiv.gov.bd),https://rajshahidiv.gov.bd/
-47,RAJSHAHI_POLICE_2026,"Rajshahi District Police — thanas, SP office and control room numbers",https://police.rajshahi.gov.bd/pages/static-pages/697f6dd335ce18e1c06b1c47
-48,RAJSHAHI_PORTAL_OFFICES_2026,"Government offices on the national portal sites — Divisional Commissioner, Rajshahi DC & upazila portals, DC/UNO offices of Rajshahi Division",https://rajshahidiv.gov.bd/
-49,RAJSHAHI_UNION_PORTALS_2026,Union Parishad portals of Rajshahi District — এক নজরে (at-a-glance) pages,https://rajshahi.gov.bd/pages/static-pages/697f79bb35ce18e1c06b5300
-50,RAJSHAHI_UPAZILA_PORTALS_2026,"Upazila Administration portals of Rajshahi District (9 upazilas) — union lists, এক নজরে, pourashava pages",https://bagha.rajshahi.gov.bd/
-51,RCC_PORTAL_2026,Rajshahi City Corporation official portal (erajshahi.portal.gov.bd),https://erajshahi.portal.gov.bd/
-52,RMP_PORTAL_2026,Rajshahi Metropolitan Police official portal (rmp.gov.bd),https://rmp.gov.bd/
-53,RMP_THANAS_2026,Rajshahi Metropolitan Police — thanas and official numbers,https://rmp.gov.bd/pages/static-pages/695e3b08c4774958d7b7214e
-54,UGC_UNIVERSITIES_RAJ_2026,UGC university register — universities in Rajshahi Division,https://www.ugc.gov.bd/universities
-55,BANBEIS_INST_RANG_2026,"BANBEIS institution lists (EIIN registry, e-survey 2024) — Rangpur Division",https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637
-56,BB_SCHEDULED_BANKS_RANG_2026,Bangladesh Bank — Scheduled Banks Statistics (Rangpur Division extract),https://www.bb.org.bd/en/index.php/publication/publictn/2/14
-57,BBS_CENSUS_2022_RANGPUR,"Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Rangpur Division",https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220
-58,BD_POLICE_CONTACTS_2020_RANGPUR,Bangladesh Police HQ — Contacts of Bangladesh Police (RRMP and Rangpur Range sheets),https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf
-59,BD_RAILWAY_RANG_2026,Bangladesh Railway — station phones and district-wise station counts (Rangpur Division),https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6
-60,BDPOST_POSTCODES_RANG_2026,Bangladesh Post postcode booklet — Rangpur Division post offices (scan on post.rajshahi.gov.bd),http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af
-61,BRTC_DEPOTS_RANG_2026,BRTC — bus depots in Rangpur Division,https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0
-62,CAAB_AIRPORTS_RANG_2026,Civil Aviation Authority of Bangladesh — airports in Rangpur Division,https://www.caab.gov.bd/
-63,DGHS_BD_GEOCODES_RANGPUR,"Bangladesh GeoCodes CodeSystem (BBS geo-codes) in the DGHS Bangladesh Core FHIR IG, Rangpur Division extract",https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html
-64,DGHS_HRIS_FACILITIES_RANG_2026,"DGHS / MoHFW HRIS Facility Registry — organisation list, Rangpur Division",https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=4
-65,DGME_MEDICAL_COLLEGES_RANG_2026,DGME medical and dental college lists — Rangpur Division,https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3
-66,DISTRICT_PORTAL_BANKS_RANG_2026,"District portals — bank branch/office phone lists (Panchagarh, Nilphamari, Kurigram)",https://panchagarh.gov.bd/pages/static-pages/69773725c4774958d7c0d34e
-67,DISTRICT_PORTALS_TRANSPORT_RANG_2026,District & upazila portals (Rangpur Division) — bus terminals/stands and stations named on transport pages,https://rangpur.gov.bd/pages/static-pages/6977698ec4774958d7c22b10
-68,RANGDIV_DISTRICT_PORTALS_2026,"District administration portals — Panchagarh, Dinajpur, Lalmonirhat, Nilphamari, Gaibandha, Thakurgaon, Kurigram",https://panchagarh.gov.bd/
-69,DOA_PROTECTED_MONUMENTS_RANG_2026,"Department of Archaeology — gazetted protected monuments, Rangpur Division (district PDF lists)",https://archaeology.gov.bd/pages/static-pages/6922dca5933eb65569e1169f
-70,DPE_IPEMIS_PRIMARY_RANG_2026,DPE IPEMIS primary school directory — Rangpur Division,https://ipemis.dpe.gov.bd/search-school
-71,FSCD_STATIONS_RANG_2026,Fire Service & Civil Defence — Rangpur Division station & office numbers,https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1
-72,GEOBOUNDARIES_BGD_ADM4_RANGPUR,"geoBoundaries gbOpen Bangladesh ADM4 (unions, paurashavas, city wards), Rangpur Division extract",https://www.geoboundaries.org/api/current/gbOpen/BGD/ADM4/
-73,HDX_COD_AB_BGD_RANGPUR,"Bangladesh - Subnational Administrative Boundaries (COD-AB v03), Rangpur Division extract",https://data.humdata.org/dataset/cod-ab-bgd
-74,LGD_2026_RANGPUR,Local Government Division portal (lgd.gov.bd) — Rangpur Division extract,https://lgd.gov.bd/
-75,PORTAL_TOURIST_SPOTS_RANG_2026,National portal 'দর্শনীয় স্থান' (tourist spot) lists — Rangpur Division district and upazila portals,https://rangpur.gov.bd/pages/tourist-spot
-76,RANG_RANGE_POLICE_PORTALS_2026,"District police portals of Rangpur Range (Panchagarh, Dinajpur, Lalmonirhat, Nilphamari, Gaibandha, Thakurgaon, Kurigram)",https://police.panchagarh.gov.bd/
-77,RANGPUR_CITY_CORPORATION,Rangpur City Corporation official portal (rpcc.gov.bd),https://rpcc.gov.bd/
-78,RANGPUR_DC_PORTAL_2026,"Rangpur District Administration portal — upazila/union list, pourashavas, district at-a-glance",https://rangpur.gov.bd/
-79,RANGDIV_PORTAL_2026,Rangpur Divisional Commissioner portal (rangpurdiv.gov.bd),https://rangpurdiv.gov.bd/
-80,RANGPUR_METRO_POLICE,Rangpur Metropolitan Police official site (rpmp.gov.bd),https://rpmp.gov.bd/
-81,RANGPUR_METRO_POLICE_THANAS_2026,Rangpur Metropolitan Police — thanas and official numbers,https://rpmp.gov.bd/index.php/home/units
-82,RANGPUR_POLICE_2026,Rangpur District Police — SP office and thanas,https://police.rangpur.gov.bd/
-83,RANGPUR_PORTAL_OFFICES_2026,"Government offices on the national portal sites — Divisional Commissioner, Rangpur DC & upazila portals, DC/UNO offices of Rangpur Division",https://rangpurdiv.gov.bd/
-84,RANGPUR_UNION_PORTALS_2026,Union Parishad portals of Rangpur Division — এক নজরে (at-a-glance) pages,https://rangpur.gov.bd/pages/static-pages/6977698ec4774958d7c22b0e
-85,RANGPUR_UPAZILA_PORTALS_2026,"Upazila Administration portals of Rangpur Division — union lists, এক নজরে, pourashava pages",https://rangpursadar.rangpur.gov.bd/
-86,UGC_UNIVERSITIES_RANG_2026,UGC university register — universities in Rangpur Division,https://www.ugc.gov.bd/universities
-87,BANBEIS_INST_DHK_2026,"BANBEIS institution lists (EIIN registry, e-survey 2024) — Dhaka Division",https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637
-88,BB_SCHEDULED_BANKS_DHK_2026,Bangladesh Bank — Scheduled Banks Statistics (Dhaka Division extract),https://www.bb.org.bd/en/index.php/publication/publictn/2/14
-89,BBS_CENSUS_2022_DHAKA,"Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Dhaka Division",https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220
-90,BD_POLICE_CONTACTS_2020_DHAKA,"Bangladesh Police HQ — Contacts of Bangladesh Police (DMP, GMP and Dhaka Range sheets)",https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf
-91,BD_RAILWAY_DHK_2026,Bangladesh Railway — station phones and district-wise station counts (Dhaka Division),https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6
-92,BDPOST_POSTCODES_DHK_2026,Bangladesh Post postcode booklet — Dhaka Division post offices (scan on post.rajshahi.gov.bd),http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af
-93,BRTC_DEPOTS_DHK_2026,BRTC — bus depots in Dhaka Division,https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0
-94,CAAB_AIRPORTS_DHK_2026,Civil Aviation Authority of Bangladesh — airports in Dhaka Division,https://www.caab.gov.bd/
-95,DGHS_BD_GEOCODES_DHAKA,"Bangladesh GeoCodes CodeSystem (BBS geo-codes) in the DGHS Bangladesh Core FHIR IG, Dhaka Division extract",https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html
-96,DGHS_HRIS_FACILITIES_DHK_2026,"DGHS / MoHFW HRIS Facility Registry — organisation list, Dhaka Division",https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=1
-97,DGME_MEDICAL_COLLEGES_DHK_2026,DGME medical and dental college lists — Dhaka Division,https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3
-98,DHAKA_DC_PORTAL_2026,"Dhaka District Administration portal — upazila/union list, pourashavas, district at-a-glance",https://dhaka.gov.bd/
-99,DHKDIV_PORTAL_2026,Dhaka Divisional Commissioner portal (dhakadiv.gov.bd),https://dhakadiv.gov.bd/
-100,DHAKA_METRO_POLICE,Dhaka Metropolitan Police official site (dmp.gov.bd),https://dmp.gov.bd/find-your-local-police/
-101,DHAKA_METRO_POLICE_THANAS_2026,Dhaka Metropolitan Police — thanas and official numbers,https://dmp.gov.bd/find-your-local-police/
-102,DHAKA_NORTH_CITY_CORPORATION,Dhaka North City Corporation official portal (dncc.gov.bd),https://dncc.gov.bd/
-103,DHAKA_POLICE_2026,Dhaka District Police — SP office and thanas,https://police.dhaka.gov.bd/
-104,DHAKA_PORTAL_OFFICES_2026,"Government offices on the national portal sites — Divisional Commissioner, Dhaka DC & upazila portals, DC/UNO offices of Dhaka Division",https://dhakadiv.gov.bd/
-105,DHAKA_SOUTH_CITY_CORPORATION,Dhaka South City Corporation official portal (dscc.gov.bd),https://dscc.gov.bd/
-106,DHAKA_UNION_PORTALS_2026,Union Parishad portals of Dhaka Division — এক নজরে (at-a-glance) pages,https://narsingdi.gov.bd/pages/static-pages/6995dfcb35ce18e1c07b1d63
-107,DHAKA_UPAZILA_PORTALS_2026,"Upazila Administration portals of Dhaka Division — union lists, এক নজরে, pourashava pages",https://belabo.narsingdi.gov.bd/
-108,DHK_RANGE_POLICE_PORTALS_2026,"District police portals of Dhaka Range (Narsingdi, Shariatpur, Tangail, Manikganj, Munshiganj, Rajbari, Madaripur, Gopalganj, Faridpur, Gazipur, Narayanganj, Kishoreganj)",https://police.narsingdi.gov.bd/
-109,DISTRICT_PORTAL_BANKS_DHK_2026,"District portals — bank branch/office phone lists (Narayanganj, Tangail, Manikganj, Rajbari, Gopalganj, Faridpur)",https://narayanganj.gov.bd/pages/static-pages/69958381f2b99fa8d158a135
-110,DISTRICT_PORTALS_TRANSPORT_DHK_2026,"District & upazila portals (Dhaka Division) — bus terminals/stands, stations and ghats named on transport pages",https://dhaka.gov.bd/pages/static-pages/communication-system-jah6tq-6a841eae9ab15f91607f8f89
-111,DHKDIV_DISTRICT_PORTALS_2026,"District administration portals — Narsingdi, Gazipur, Shariatpur, Narayanganj, Tangail, Kishoreganj, Manikganj, Munshiganj, Rajbari, Madaripur, Gopalganj, Faridpur",https://narsingdi.gov.bd/
-112,DOA_PROTECTED_MONUMENTS_DHK_2026,"Department of Archaeology — gazetted protected monuments, Dhaka Division (district PDF lists)",https://archaeology.gov.bd/pages/static-pages/6922dde7933eb65569e16ff2
-113,DPE_IPEMIS_PRIMARY_DHK_2026,DPE IPEMIS primary school directory — Dhaka Division,https://ipemis.dpe.gov.bd/search-school
-114,FSCD_STATIONS_DHK_2026,Fire Service & Civil Defence — Dhaka Division station & office numbers,https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1
-115,GAZIPUR_CITY_CORPORATION,Gazipur City Corporation official portal (gcc.gov.bd),https://gcc.gov.bd/
-116,GAZIPUR_METRO_POLICE,Gazipur Metropolitan Police official site (gmp.gov.bd),https://gmp.gov.bd/
-117,GAZIPUR_METRO_POLICE_THANAS_2026,Gazipur Metropolitan Police — thanas and official numbers,https://gmp.gov.bd/range-units/units_details.php?zone_id=1
-118,GEOBOUNDARIES_BGD_ADM4_DHAKA,"geoBoundaries gbOpen Bangladesh ADM4 (unions, paurashavas, city wards), Dhaka Division extract",https://www.geoboundaries.org/api/current/gbOpen/BGD/ADM4/
-119,HDX_COD_AB_BGD_DHAKA,"Bangladesh - Subnational Administrative Boundaries (COD-AB v03), Dhaka Division extract",https://data.humdata.org/dataset/cod-ab-bgd
-120,LGD_2026_DHAKA,Local Government Division portal (lgd.gov.bd) — Dhaka Division extract,https://lgd.gov.bd/
-121,NARAYANGANJ_CITY_CORPORATION,Narayanganj City Corporation official portal (ncc.gov.bd),https://ncc.gov.bd/
-122,PORTAL_TOURIST_SPOTS_DHK_2026,National portal 'দর্শনীয় স্থান' (tourist spot) lists — Dhaka Division district and upazila portals,https://dhaka.gov.bd/pages/tourist-spot
-123,UGC_UNIVERSITIES_DHK_2026,UGC university register — universities in Dhaka Division,https://www.ugc.gov.bd/universities
-124,BANBEIS_INST_CTG_2026,"BANBEIS institution lists (EIIN registry, e-survey 2024) — Chattogram Division",https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637
-125,BB_SCHEDULED_BANKS_CTG_2026,Bangladesh Bank — Scheduled Banks Statistics (Chattogram Division extract),https://www.bb.org.bd/en/index.php/publication/publictn/2/14
-126,BBS_CENSUS_2022_CHATTOGRAM,"Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Chattogram Division",https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220
-127,BD_POLICE_CONTACTS_2020_CHATTOGRAM,Bangladesh Police HQ — Contacts of Bangladesh Police (CMP and Chattogram Range sheets),https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf
-128,BD_RAILWAY_CTG_2026,Bangladesh Railway — station phones and district-wise station counts (Chattogram Division),https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6
-129,BDPOST_POSTCODES_CTG_2026,Bangladesh Post postcode booklet — Chattogram Division post offices (scan on post.rajshahi.gov.bd),http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af
-130,BRTC_DEPOTS_CTG_2026,BRTC — bus depots in Chattogram Division,https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0
-131,CAAB_AIRPORTS_CTG_2026,Civil Aviation Authority of Bangladesh — airports in Chattogram Division,https://www.caab.gov.bd/
-132,CHATTOGRAM_CITY_CORPORATION,Chattogram City Corporation official portal (ccc.gov.bd),https://ccc.gov.bd/
-133,CHATTOGRAM_DC_PORTAL_2026,"Chattogram District Administration portal — upazila/union list, pourashavas, district at-a-glance",https://chattogram.gov.bd/
-134,CTGDIV_PORTAL_2026,Chattogram Divisional Commissioner portal (chittagongdiv.gov.bd),https://chittagongdiv.gov.bd/
-135,CHATTOGRAM_METRO_POLICE,Chattogram Metropolitan Police (police.chittagongdiv.gov.bd and cmp.gov.bd),https://police.chittagongdiv.gov.bd/pages/static-pages/at-a-glance-6ae2db41fd9ba07169122831
-136,CHATTOGRAM_METRO_POLICE_THANAS_2026,Chattogram Metropolitan Police — thanas and official numbers,https://cmp.gov.bd/index.php?cPath=295
-137,CHATTOGRAM_POLICE_2026,Chattogram District Police — SP office and thanas,https://police.chittagong.gov.bd/
-138,CHATTOGRAM_PORTAL_OFFICES_2026,"Government offices on the national portal sites — Divisional Commissioner, Chattogram DC & upazila portals, DC/UNO offices of Chattogram Division",https://chittagongdiv.gov.bd/
-139,CHATTOGRAM_UNION_PORTALS_2026,Union Parishad portals of Chattogram Division — এক নজরে (at-a-glance) pages,https://comilla.gov.bd/pages/static-pages/69912916516a96d4de40781f
-140,CHATTOGRAM_UPAZILA_PORTALS_2026,"Upazila Administration portals of Chattogram Division — union lists, এক নজরে, pourashava pages",https://debidwar.comilla.gov.bd/
-141,CTG_RANGE_POLICE_PORTALS_2026,"District police portals of Chattogram Range (Cumilla, Feni, Brahmanbaria, Rangamati, Noakhali, Chandpur, Lakshmipur, Cox's Bazar, Khagrachhari, Bandarban)",https://police.comilla.gov.bd/
-142,CUMILLA_CITY_CORPORATION,Cumilla City Corporation official portal (cocc.portal.gov.bd),https://cocc.portal.gov.bd/
-143,DGHS_BD_GEOCODES_CHATTOGRAM,"Bangladesh GeoCodes CodeSystem (BBS geo-codes) in the DGHS Bangladesh Core FHIR IG, Chattogram Division extract",https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html
-144,DGHS_HRIS_FACILITIES_CTG_2026,"DGHS / MoHFW HRIS Facility Registry — organisation list, Chattogram Division",https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=2
-145,DGME_MEDICAL_COLLEGES_CTG_2026,DGME medical and dental college lists — Chattogram Division,https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3
-146,DISTRICT_PORTAL_BANKS_CTG_2026,"District portals — bank branch/office lists (Cumilla, Feni, Brahmanbaria, Rangamati, Noakhali, Chandpur, Chattogram, Khagrachhari, Bandarban)",https://comilla.gov.bd/pages/static-pages/69912917516a96d4de40783c
-147,DISTRICT_PORTALS_TRANSPORT_CTG_2026,"District portals (Chattogram Division) — bus terminals/stands, stations, ghats and airport named on transport pages",https://chittagong.gov.bd/pages/static-pages/যোগাযোগ-ব্যবস্থা-603b1f-6991007d35ce18e1c0732d23
-148,CTGDIV_DISTRICT_PORTALS_2026,"District administration portals — Cumilla, Feni, Brahmanbaria, Rangamati, Noakhali, Chandpur, Lakshmipur, Cox's Bazar, Khagrachhari, Bandarban",https://comilla.gov.bd/
-149,DOA_PROTECTED_MONUMENTS_CTG_2026,"Department of Archaeology — gazetted protected monuments, Chattogram Division (district PDF lists)",https://archaeology.gov.bd/pages/static-pages/6922deb6933eb65569e1cce1
-150,DPE_IPEMIS_PRIMARY_CTG_2026,DPE IPEMIS primary school directory — Chattogram Division,https://ipemis.dpe.gov.bd/search-school
-151,FSCD_STATIONS_CTG_2026,Fire Service & Civil Defence — Chattogram Division station & office numbers,https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1
-152,GEOBOUNDARIES_BGD_ADM4_CHATTOGRAM,"geoBoundaries gbOpen Bangladesh ADM4 (unions, paurashavas, city wards), Chattogram Division extract",https://www.geoboundaries.org/api/current/gbOpen/BGD/ADM4/
-153,HDX_COD_AB_BGD_CHATTOGRAM,"Bangladesh - Subnational Administrative Boundaries (COD-AB v03), Chattogram Division extract",https://data.humdata.org/dataset/cod-ab-bgd
-154,LGD_2026_CHATTOGRAM,Local Government Division portal (lgd.gov.bd) — Chattogram Division extract,https://lgd.gov.bd/
-155,PORTAL_TOURIST_SPOTS_CTG_2026,National portal 'দর্শনীয় স্থান' (tourist spot) lists — Chattogram Division district and upazila portals,https://chittagong.gov.bd/pages/tourist-spot
-156,UGC_UNIVERSITIES_CTG_2026,UGC university register — universities in Chattogram Division,https://www.ugc.gov.bd/universities
-157,BANBEIS_INST_KHL_2026,"BANBEIS institution lists (EIIN registry, e-survey 2024) — Khulna Division",https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637
-158,BB_SCHEDULED_BANKS_KHL_2026,Bangladesh Bank — Scheduled Banks Statistics (Khulna Division extract),https://www.bb.org.bd/en/index.php/publication/publictn/2/14
-159,BBS_CENSUS_2022_KHULNA,"Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Khulna Division",https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220
-160,BD_POLICE_CONTACTS_2020_KHULNA,Bangladesh Police HQ — Contacts of Bangladesh Police (KMP and Khulna Range sheets),https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf
-161,BD_RAILWAY_KHL_2026,Bangladesh Railway — station phones and district-wise station counts (Khulna Division),https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6
-162,BDPOST_POSTCODES_KHL_2026,Bangladesh Post postcode booklet — Khulna Division post offices (scan on post.rajshahi.gov.bd),http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af
-163,BRTC_DEPOTS_KHL_2026,BRTC — bus depots in Khulna Division,https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0
-164,CAAB_AIRPORTS_KHL_2026,Civil Aviation Authority of Bangladesh — airports in Khulna Division,https://www.caab.gov.bd/
-165,DGHS_BD_GEOCODES_KHULNA,"Bangladesh GeoCodes CodeSystem (BBS geo-codes) in the DGHS Bangladesh Core FHIR IG, Khulna Division extract",https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html
-166,DGHS_HRIS_FACILITIES_KHL_2026,"DGHS / MoHFW HRIS Facility Registry — organisation list, Khulna Division",https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=5
-167,DGME_MEDICAL_COLLEGES_KHL_2026,DGME medical and dental college lists — Khulna Division,https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3
-168,DISTRICT_PORTAL_BANKS_KHL_2026,"District portals — bank branch/office lists (Meherpur, Narail, Chuadanga, Kushtia, Magura, Bagerhat)",https://meherpur.gov.bd/pages/static-pages/6980f68da31054345f1cefa5
-169,DISTRICT_PORTALS_TRANSPORT_KHL_2026,District portals (Khulna Division) — bus terminals and airport named on transport pages,https://khulna.gov.bd/pages/static-pages/69812047a31054345f1e0ba0
-170,KHLDIV_DISTRICT_PORTALS_2026,"District administration portals — Jashore, Satkhira, Meherpur, Narail, Chuadanga, Kushtia, Magura, Bagerhat, Jhenaidah",https://jashore.gov.bd/
-171,DOA_PROTECTED_MONUMENTS_KHL_2026,"Department of Archaeology — gazetted protected monuments, Khulna Division (district PDF lists)",https://archaeology.gov.bd/pages/static-pages/6922df45933eb65569e20fab
-172,DPE_IPEMIS_PRIMARY_KHL_2026,DPE IPEMIS primary school directory — Khulna Division,https://ipemis.dpe.gov.bd/search-school
-173,FSCD_STATIONS_KHL_2026,Fire Service & Civil Defence — Khulna Division station & office numbers,https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1
-174,GEOBOUNDARIES_BGD_ADM4_KHULNA,"geoBoundaries gbOpen Bangladesh ADM4 (unions, paurashavas, city wards), Khulna Division extract",https://www.geoboundaries.org/api/current/gbOpen/BGD/ADM4/
-175,HDX_COD_AB_BGD_KHULNA,"Bangladesh - Subnational Administrative Boundaries (COD-AB v03), Khulna Division extract",https://data.humdata.org/dataset/cod-ab-bgd
-176,KHL_RANGE_POLICE_PORTALS_2026,"District police portals of Khulna Range (Jashore, Satkhira, Meherpur, Narail, Chuadanga, Kushtia, Magura, Bagerhat, Jhenaidah)",https://police.jessore.gov.bd/
-177,KHULNA_CITY_CORPORATION,Khulna City Corporation — figures stated on official portals (KCC's own site unreachable),https://khulnacity.gov.bd/
-178,KHULNA_DC_PORTAL_2026,"Khulna District Administration portal — upazila/union list, pourashavas, district at-a-glance",https://khulna.gov.bd/
-179,KHLDIV_PORTAL_2026,Khulna Divisional Commissioner portal (khulnadiv.gov.bd),https://khulnadiv.gov.bd/
-180,KHULNA_METRO_POLICE,Khulna Metropolitan Police (police.khulnadiv.gov.bd) and the Khulna DC portal thana list,https://police.khulnadiv.gov.bd/pages/static-pages/6980f684a31054345f1ceb6e
-181,KHULNA_METRO_POLICE_THANAS_2026,Khulna Metropolitan Police — thanas and official numbers,https://police.khulnadiv.gov.bd/pages/static-pages/698101a8a31054345f1d5747
-182,KHULNA_POLICE_2026,Khulna District Police — SP office and thanas,https://police.khulna.gov.bd/
-183,KHULNA_PORTAL_OFFICES_2026,"Government offices on the national portal sites — Divisional Commissioner, Khulna DC & upazila portals, DC/UNO offices of Khulna Division",https://khulnadiv.gov.bd/
-184,KHULNA_UNION_PORTALS_2026,Union Parishad portals of Khulna Division — এক নজরে (at-a-glance) pages,https://khulna.gov.bd/pages/static-pages/6981413b35ce18e1c0700662
-185,KHULNA_UPAZILA_PORTALS_2026,"Upazila Administration portals of Khulna Division — union lists, এক নজরে, pourashava pages",https://paikgasa.khulna.gov.bd/
-186,LGD_2026_KHULNA,Local Government Division portal (lgd.gov.bd) — Khulna Division extract,https://lgd.gov.bd/
-187,PORTAL_TOURIST_SPOTS_KHL_2026,National portal 'দর্শনীয় স্থান' (tourist spot) lists — Khulna Division district and upazila portals,https://khulna.gov.bd/pages/tourist-spot
-188,UGC_UNIVERSITIES_KHL_2026,UGC university register — universities in Khulna Division,https://www.ugc.gov.bd/universities
-189,BANBEIS_INST_BAR_2026,"BANBEIS institution lists (EIIN registry, e-survey 2024) — Barishal Division",https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637
-190,BAR_RANGE_POLICE_PORTALS_2026,"District police portals of Barishal Range (Jhalokathi, Patuakhali, Pirojpur, Bhola, Barguna)",https://police.jhalakathi.gov.bd/
-191,BARISHAL_CITY_CORPORATION,Barishal City Corporation official site (barishalcity.gov.bd),https://barishalcity.gov.bd/
-192,BARISHAL_DC_PORTAL_2026,"Barishal District Administration portal — upazila/union list, pourashavas, district at-a-glance",https://barishal.gov.bd/
-193,BARDIV_PORTAL_2026,Barishal Divisional Commissioner portal (barishaldiv.gov.bd),https://barishaldiv.gov.bd/
-194,BARISHAL_METRO_POLICE,"Barishal Metropolitan Police (bmp.police.gov.bd) — thanas, history and jurisdiction",https://bmp.police.gov.bd/history
-195,BARISHAL_METRO_POLICE_THANAS_2026,Barishal Metropolitan Police — thanas and official numbers,https://bmp.police.gov.bd/contact-us
-196,BARISHAL_POLICE_2026,"Barishal District Police — SP office, thanas and control room",https://police.barisal.gov.bd/
-197,BARISHAL_PORTAL_OFFICES_2026,"Government offices on the national portal sites — Divisional Commissioner, Barishal DC & upazila portals, DC/UNO offices of Barishal Division",https://barisaldiv.gov.bd/
-198,BARISHAL_UNION_PORTALS_2026,Union Parishad portals of Barishal Division — এক নজরে (at-a-glance) pages,https://barishal.gov.bd/pages/static-pages/6978a32135ce18e1c0672269
-199,BARISHAL_UPAZILA_PORTALS_2026,"Upazila Administration portals of Barishal Division — union lists, এক নজরে, pourashava pages",https://barisalsadar.barisal.gov.bd/
-200,BB_SCHEDULED_BANKS_BAR_2026,Bangladesh Bank — Scheduled Banks Statistics (Barishal Division extract),https://www.bb.org.bd/en/index.php/publication/publictn/2/14
-201,BBS_CENSUS_2022_BARISHAL,"Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Barishal Division",https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220
-202,BD_POLICE_CONTACTS_2020_BARISHAL,Bangladesh Police HQ — Contacts of Bangladesh Police (BMP and Barisal Range sheets),https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf
-203,BD_RAILWAY_BAR_2026,Bangladesh Railway — station phones and district-wise station counts (Barishal Division),https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6
-204,BDPOST_POSTCODES_BAR_2026,Bangladesh Post postcode booklet — Barishal Division post offices (scan on post.rajshahi.gov.bd),http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af
-205,BRTC_DEPOTS_BAR_2026,BRTC — bus depots in Barishal Division,https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0
-206,CAAB_AIRPORTS_BAR_2026,Civil Aviation Authority of Bangladesh — airports in Barishal Division,https://www.caab.gov.bd/
-207,DGHS_BD_GEOCODES_BARISHAL,"Bangladesh GeoCodes CodeSystem (BBS geo-codes) in the DGHS Bangladesh Core FHIR IG, Barishal Division extract",https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html
-208,DGHS_HRIS_FACILITIES_BAR_2026,"DGHS / MoHFW HRIS Facility Registry — organisation list, Barishal Division",https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=6
-209,DGME_MEDICAL_COLLEGES_BAR_2026,DGME medical and dental college lists — Barishal Division,https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3
-210,DISTRICT_PORTAL_BANKS_BAR_2026,"District portals — bank branch/office lists (Patuakhali, Pirojpur, Bhola)",https://patuakhali.gov.bd/pages/static-pages/bank-x23c5l-6a786562a3a462c02a70c42f
-211,DISTRICT_PORTALS_TRANSPORT_BAR_2026,"District and upazila portals (Barishal Division) — launch ghats, bus stands and airport named on transport pages",https://barisal.gov.bd/pages/static-pages/6978a33735ce18e1c0672d0c
-212,BARDIV_DISTRICT_PORTALS_2026,"District administration portals — Jhalokathi, Patuakhali, Pirojpur, Bhola, Barguna",https://jhalakathi.gov.bd/
-213,DOA_PROTECTED_MONUMENTS_BAR_2026,"Department of Archaeology — gazetted protected monuments, Barishal Division (district PDF lists)",https://archaeology.gov.bd/pages/static-pages/6922e128933eb65569e2a90f
-214,DPE_IPEMIS_PRIMARY_BAR_2026,DPE IPEMIS primary school directory — Barishal Division,https://ipemis.dpe.gov.bd/search-school
-215,FSCD_STATIONS_BAR_2026,Fire Service & Civil Defence — Barishal Division station & office numbers,https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1
-216,GEOBOUNDARIES_BGD_ADM4_BARISHAL,"geoBoundaries gbOpen Bangladesh ADM4 (unions, paurashavas, city wards), Barishal Division extract",https://www.geoboundaries.org/api/current/gbOpen/BGD/ADM4/
-217,HDX_COD_AB_BGD_BARISHAL,"Bangladesh - Subnational Administrative Boundaries (COD-AB v03), Barishal Division extract",https://data.humdata.org/dataset/cod-ab-bgd
-218,LGD_2026_BARISHAL,Local Government Division portal (lgd.gov.bd) — Barishal Division extract,https://lgd.gov.bd/
-219,PORTAL_TOURIST_SPOTS_BAR_2026,National portal 'দর্শনীয় স্থান' (tourist spot) lists — Barishal Division district and upazila portals,https://barisal.gov.bd/pages/tourist-spot
-220,UGC_UNIVERSITIES_BAR_2026,UGC university register — universities in Barishal Division,https://www.ugc.gov.bd/universities
-221,BANBEIS_INST_SYL_2026,"BANBEIS institution lists (EIIN registry, e-survey 2024) — Sylhet Division",https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637
-222,BB_SCHEDULED_BANKS_SYL_2026,Bangladesh Bank — Scheduled Banks Statistics (Sylhet Division extract),https://www.bb.org.bd/en/index.php/publication/publictn/2/14
-223,BBS_CENSUS_2022_SYLHET,"Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Sylhet Division",https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220
-224,BD_POLICE_CONTACTS_2020_SYLHET,Bangladesh Police HQ — Contacts of Bangladesh Police (SMP and Sylhet Range sheets),https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf
-225,BD_RAILWAY_SYL_2026,Bangladesh Railway — station phones and district-wise station counts (Sylhet Division),https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6
-226,BDPOST_POSTCODES_SYL_2026,Bangladesh Post postcode booklet — Sylhet Division post offices (scan on post.rajshahi.gov.bd),http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af
-227,BRTC_DEPOTS_SYL_2026,BRTC — bus depots in Sylhet Division,https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0
-228,CAAB_AIRPORTS_SYL_2026,Civil Aviation Authority of Bangladesh — airports in Sylhet Division,https://www.caab.gov.bd/
-229,DGHS_BD_GEOCODES_SYLHET,"Bangladesh GeoCodes CodeSystem (BBS geo-codes) in the DGHS Bangladesh Core FHIR IG, Sylhet Division extract",https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html
-230,DGHS_HRIS_FACILITIES_SYL_2026,"DGHS / MoHFW HRIS Facility Registry — organisation list, Sylhet Division",https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=7
-231,DGME_MEDICAL_COLLEGES_SYL_2026,DGME medical and dental college lists — Sylhet Division,https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3
-232,DISTRICT_PORTAL_BANKS_SYL_2026,"District portals — bank branch/office lists (Sylhet, Habiganj, Moulvibazar)",https://sylhet.gov.bd/pages/static-pages/696cb9a8c4774958d7ba8e13
-233,DISTRICT_PORTALS_TRANSPORT_SYL_2026,"District and upazila portals (Sylhet Division) — bus terminals, railway stations, ghats and airport named on transport pages",https://sylhetsadar.sylhet.gov.bd/pages/static-pages/696cb360c4774958d7ba05b3
-234,SYLDIV_DISTRICT_PORTALS_2026,"District administration portals — Moulvibazar, Habiganj, Sunamganj",https://moulvibazar.gov.bd/
-235,DOA_PROTECTED_MONUMENTS_SYL_2026,"Department of Archaeology — gazetted protected monuments, Sylhet Division (district PDF lists)",https://archaeology.gov.bd/pages/static-pages/6922e035933eb65569e26000
-236,DPE_IPEMIS_PRIMARY_SYL_2026,DPE IPEMIS primary school directory — Sylhet Division,https://ipemis.dpe.gov.bd/search-school
-237,FSCD_STATIONS_SYL_2026,Fire Service & Civil Defence — Sylhet Division station & office numbers,https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1
-238,GEOBOUNDARIES_BGD_ADM4_SYLHET,"geoBoundaries gbOpen Bangladesh ADM4 (unions, paurashavas, city wards), Sylhet Division extract",https://www.geoboundaries.org/api/current/gbOpen/BGD/ADM4/
-239,HDX_COD_AB_BGD_SYLHET,"Bangladesh - Subnational Administrative Boundaries (COD-AB v03), Sylhet Division extract",https://data.humdata.org/dataset/cod-ab-bgd
-240,LGD_2026_SYLHET,Local Government Division portal (lgd.gov.bd) — Sylhet Division extract,https://lgd.gov.bd/
-241,PORTAL_TOURIST_SPOTS_SYL_2026,National portal 'দর্শনীয় স্থান' (tourist spot) lists — Sylhet Division district and upazila portals,https://sylhet.gov.bd/pages/tourist-spot
-242,SYL_RANGE_POLICE_PORTALS_2026,"District police portals of Sylhet Range (Moulvibazar, Habiganj, Sunamganj)",https://police.moulvibazar.gov.bd/
-243,SYLHET_CITY_CORPORATION,Sylhet City Corporation official site (scc.gov.bd),https://scc.gov.bd/
-244,SYLHET_DC_PORTAL_2026,"Sylhet District Administration portal — upazila/union list, pourashavas, district at-a-glance",https://sylhet.gov.bd/
-245,SYLDIV_PORTAL_2026,Sylhet Divisional Commissioner portal (sylhetdiv.gov.bd),https://sylhetdiv.gov.bd/
-246,SYLHET_METRO_POLICE,"Sylhet Metropolitan Police (police.sylhetdiv.gov.bd, smp.police.gov.bd) — thanas, founding and jurisdiction",https://police.sylhetdiv.gov.bd/pages/static-pages/696ca219c4774958d7b931b6
-247,SYLHET_METRO_POLICE_THANAS_2026,Sylhet Metropolitan Police — thanas and official numbers,https://police.sylhetdiv.gov.bd/pages/static-pages/696ca219c4774958d7b931b6
-248,SYLHET_POLICE_2026,Sylhet District Police — SP office and thanas,https://police.sylhet.gov.bd/
-249,SYLHET_PORTAL_OFFICES_2026,"Government offices on the national portal sites — Divisional Commissioner, Sylhet DC & upazila portals, DC/UNO offices of Sylhet Division",https://sylhetdiv.gov.bd/
-250,SYLHET_UNION_PORTALS_2026,Union Parishad portals of Sylhet Division — এক নজরে (at-a-glance) pages,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0694
-251,SYLHET_UPAZILA_PORTALS_2026,"Upazila Administration portals of Sylhet Division — union lists, এক নজরে, pourashava pages",https://sylhetsadar.sylhet.gov.bd/
-252,UGC_UNIVERSITIES_SYL_2026,UGC university register — universities in Sylhet Division,https://www.ugc.gov.bd/universities
-253,BANBEIS_INST_MYM_2026,"BANBEIS institution lists (EIIN registry, e-survey 2024) — Mymensingh Division",https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637
-254,BB_SCHEDULED_BANKS_MYM_2026,Bangladesh Bank — Scheduled Banks Statistics (Mymensingh Division extract),https://www.bb.org.bd/en/index.php/publication/publictn/2/14
-255,BBS_CENSUS_2022_MYMENSINGH,"Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Mymensingh Division",https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220
-256,BD_POLICE_CONTACTS_2020_MYMENSINGH,Bangladesh Police HQ — Contacts of Bangladesh Police (Mymenshing Range sheet),https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf
-257,BD_RAILWAY_MYM_2026,Bangladesh Railway — station phones and district-wise station counts (Mymensingh Division),https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6
-258,BDPOST_POSTCODES_MYM_2026,Bangladesh Post postcode booklet — Mymensingh Division post offices (scan on post.rajshahi.gov.bd),http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af
-259,BRTC_DEPOTS_MYM_2026,BRTC — bus depots in Mymensingh Division,https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0
-260,CAAB_AIRPORTS_MYM_2026,Civil Aviation Authority of Bangladesh — airports in Mymensingh Division,https://www.caab.gov.bd/
-261,DGHS_BD_GEOCODES_MYMENSINGH,"Bangladesh GeoCodes CodeSystem (BBS geo-codes) in the DGHS Bangladesh Core FHIR IG, Mymensingh Division extract",https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html
-262,DGHS_HRIS_FACILITIES_MYM_2026,"DGHS / MoHFW HRIS Facility Registry — organisation list, Mymensingh Division",https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=8
-263,DGME_MEDICAL_COLLEGES_MYM_2026,DGME medical and dental college lists — Mymensingh Division,https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3
-264,DISTRICT_PORTAL_BANKS_MYM_2026,"District portals — bank branch lists (Sherpur, Jamalpur, Netrokona)",https://sherpur.gov.bd/pages/static-pages/6970a1e2a31054345f1624bd
-265,DISTRICT_PORTALS_TRANSPORT_MYM_2026,"District and upazila portals (Mymensingh Division) — bus terminals, stands and railway stations named on transport pages",https://jamalpur.gov.bd/pages/static-pages/6970926ca31054345f15e8e6
-266,MYMDIV_DISTRICT_PORTALS_2026,"District administration portals — Jamalpur, Sherpur, Netrokona",https://jamalpur.gov.bd/
-267,DOA_PROTECTED_MONUMENTS_MYM_2026,"Department of Archaeology — gazetted protected monuments, Mymensingh Division (district PDF lists)",https://archaeology.gov.bd/pages/static-pages/6922dd39933eb65569e14024
-268,DPE_IPEMIS_PRIMARY_MYM_2026,DPE IPEMIS primary school directory — Mymensingh Division,https://ipemis.dpe.gov.bd/search-school
-269,FSCD_STATIONS_MYM_2026,Fire Service & Civil Defence — Mymensingh Division station & office numbers,https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1
-270,GEOBOUNDARIES_BGD_ADM4_MYMENSINGH,"geoBoundaries gbOpen Bangladesh ADM4 (unions, paurashavas, city wards), Mymensingh Division extract",https://www.geoboundaries.org/api/current/gbOpen/BGD/ADM4/
-271,HDX_COD_AB_BGD_MYMENSINGH,"Bangladesh - Subnational Administrative Boundaries (COD-AB v03), Mymensingh Division extract",https://data.humdata.org/dataset/cod-ab-bgd
-272,LGD_2026_MYMENSINGH,Local Government Division portal (lgd.gov.bd) — Mymensingh Division extract,https://lgd.gov.bd/
-273,MYM_RANGE_POLICE_PORTALS_2026,"District police portals of Mymensingh Range (Jamalpur, Sherpur, Netrokona)",https://police.jamalpur.gov.bd/
-274,MYMENSINGH_CITY_CORPORATION,Mymensingh City Corporation official site (mcc.gov.bd),https://mcc.gov.bd/
-275,MYMENSINGH_DC_PORTAL_2026,"Mymensingh District Administration portal — upazila/union list, pourashavas, district at-a-glance",https://mymensingh.gov.bd/
-276,MYMDIV_PORTAL_2026,Mymensingh Divisional Commissioner portal (mymensinghdiv.gov.bd),https://mymensinghdiv.gov.bd/
-277,MYMENSINGH_POLICE_2026,Mymensingh District Police — SP office and thanas,https://police.mymensingh.gov.bd/
-278,MYMENSINGH_PORTAL_OFFICES_2026,"Government offices on the national portal sites — Divisional Commissioner, Mymensingh DC & upazila portals, DC/UNO offices of Mymensingh Division",https://mymensinghdiv.gov.bd/
-279,MYMENSINGH_UNION_PORTALS_2026,Union Parishad portals of Mymensingh Division — এক নজরে (at-a-glance) pages,https://mymensingh.gov.bd/pages/static-pages/6973bef4c4774958d7bc1029
-280,MYMENSINGH_UPAZILA_PORTALS_2026,"Upazila Administration portals of Mymensingh Division — union lists, এক নজরে, pourashava pages",https://mymensinghsadar.mymensingh.gov.bd/
-281,PORTAL_TOURIST_SPOTS_MYM_2026,National portal 'দর্শনীয় স্থান' (tourist spot) lists — Mymensingh Division district and upazila portals,https://mymensingh.gov.bd/pages/tourist-spot
-282,UGC_UNIVERSITIES_MYM_2026,UGC university register — universities in Mymensingh Division,https://www.ugc.gov.bd/universities
+42,PORTAL_TOURIST_SPOTS_RAJ_2026,National portal 'দর্শনীয় স্থান' (tourist spot) lists — Rajshahi Division district and upazila portals,https://rajshahi.gov.bd/pages/tourist-spot
+43,RAJ_RANGE_POLICE_PORTALS_2026,"District police portals of Rajshahi Range (Natore, Naogaon, Chapainawabganj, Bogura, Joypurhat, Pabna, Sirajganj)",https://police.natore.gov.bd/pages/static-pages/697fdcd735ce18e1c06d8427
+44,RAJSHAHI_DC_PORTAL_2026,"Rajshahi District Administration portal — upazila/union list, pourashava list, district at-a-glance",https://rajshahi.gov.bd/pages/static-pages/697f79bb35ce18e1c06b5300
+45,RAJDIV_PORTAL_2026,Rajshahi Divisional Commissioner portal (rajshahidiv.gov.bd),https://rajshahidiv.gov.bd/
+46,RAJSHAHI_POLICE_2026,"Rajshahi District Police — thanas, SP office and control room numbers",https://police.rajshahi.gov.bd/pages/static-pages/697f6dd335ce18e1c06b1c47
+47,RAJSHAHI_PORTAL_OFFICES_2026,"Government offices on the national portal sites — Divisional Commissioner, Rajshahi DC & upazila portals, DC/UNO offices of Rajshahi Division",https://rajshahidiv.gov.bd/
+48,RAJSHAHI_UNION_PORTALS_2026,Union Parishad portals of Rajshahi District — এক নজরে (at-a-glance) pages,https://rajshahi.gov.bd/pages/static-pages/697f79bb35ce18e1c06b5300
+49,RAJSHAHI_UPAZILA_PORTALS_2026,"Upazila Administration portals of Rajshahi District (9 upazilas) — union lists, এক নজরে, pourashava pages",https://bagha.rajshahi.gov.bd/
+50,RCC_PORTAL_2026,Rajshahi City Corporation official portal (erajshahi.portal.gov.bd),https://erajshahi.portal.gov.bd/
+51,RMP_PORTAL_2026,Rajshahi Metropolitan Police official portal (rmp.gov.bd),https://rmp.gov.bd/
+52,RMP_THANAS_2026,Rajshahi Metropolitan Police — thanas and official numbers,https://rmp.gov.bd/pages/static-pages/695e3b08c4774958d7b7214e
+53,UGC_UNIVERSITIES_RAJ_2026,UGC university register — universities in Rajshahi Division,https://www.ugc.gov.bd/universities
+54,BANBEIS_INST_RANG_2026,"BANBEIS institution lists (EIIN registry, e-survey 2024) — Rangpur Division",https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637
+55,BB_SCHEDULED_BANKS_RANG_2026,Bangladesh Bank — Scheduled Banks Statistics (Rangpur Division extract),https://www.bb.org.bd/en/index.php/publication/publictn/2/14
+56,BBS_CENSUS_2022_RANGPUR,"Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Rangpur Division",https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220
+57,BD_POLICE_CONTACTS_2020_RANGPUR,Bangladesh Police HQ — Contacts of Bangladesh Police (RRMP and Rangpur Range sheets),https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf
+58,BD_RAILWAY_RANG_2026,Bangladesh Railway — station phones and district-wise station counts (Rangpur Division),https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6
+59,BDPOST_POSTCODES_RANG_2026,Bangladesh Post postcode booklet — Rangpur Division post offices (scan on post.rajshahi.gov.bd),http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af
+60,BRTC_DEPOTS_RANG_2026,BRTC — bus depots in Rangpur Division,https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0
+61,CAAB_AIRPORTS_RANG_2026,Civil Aviation Authority of Bangladesh — airports in Rangpur Division,https://www.caab.gov.bd/
+62,DGHS_BD_GEOCODES_RANGPUR,"Bangladesh GeoCodes CodeSystem (BBS geo-codes) in the DGHS Bangladesh Core FHIR IG, Rangpur Division extract",https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html
+63,DGHS_HRIS_FACILITIES_RANG_2026,"DGHS / MoHFW HRIS Facility Registry — organisation list, Rangpur Division",https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=4
+64,DGME_MEDICAL_COLLEGES_RANG_2026,DGME medical and dental college lists — Rangpur Division,https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3
+65,DISTRICT_PORTAL_BANKS_RANG_2026,"District portals — bank branch/office phone lists (Panchagarh, Nilphamari, Kurigram)",https://panchagarh.gov.bd/pages/static-pages/69773725c4774958d7c0d34e
+66,DISTRICT_PORTALS_TRANSPORT_RANG_2026,District & upazila portals (Rangpur Division) — bus terminals/stands and stations named on transport pages,https://rangpur.gov.bd/pages/static-pages/6977698ec4774958d7c22b10
+67,RANGDIV_DISTRICT_PORTALS_2026,"District administration portals — Panchagarh, Dinajpur, Lalmonirhat, Nilphamari, Gaibandha, Thakurgaon, Kurigram",https://panchagarh.gov.bd/
+68,DOA_PROTECTED_MONUMENTS_RANG_2026,"Department of Archaeology — gazetted protected monuments, Rangpur Division (district PDF lists)",https://archaeology.gov.bd/pages/static-pages/6922dca5933eb65569e1169f
+69,DPE_IPEMIS_PRIMARY_RANG_2026,DPE IPEMIS primary school directory — Rangpur Division,https://ipemis.dpe.gov.bd/search-school
+70,FSCD_STATIONS_RANG_2026,Fire Service & Civil Defence — Rangpur Division station & office numbers,https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1
+71,GEOBOUNDARIES_BGD_ADM4_RANGPUR,"geoBoundaries gbOpen Bangladesh ADM4 (unions, paurashavas, city wards), Rangpur Division extract",https://www.geoboundaries.org/api/current/gbOpen/BGD/ADM4/
+72,HDX_COD_AB_BGD_RANGPUR,"Bangladesh - Subnational Administrative Boundaries (COD-AB v03), Rangpur Division extract",https://data.humdata.org/dataset/cod-ab-bgd
+73,LGD_2026_RANGPUR,Local Government Division portal (lgd.gov.bd) — Rangpur Division extract,https://lgd.gov.bd/
+74,PORTAL_TOURIST_SPOTS_RANG_2026,National portal 'দর্শনীয় স্থান' (tourist spot) lists — Rangpur Division district and upazila portals,https://rangpur.gov.bd/pages/tourist-spot
+75,RANG_RANGE_POLICE_PORTALS_2026,"District police portals of Rangpur Range (Panchagarh, Dinajpur, Lalmonirhat, Nilphamari, Gaibandha, Thakurgaon, Kurigram)",https://police.panchagarh.gov.bd/
+76,RANGPUR_CITY_CORPORATION,Rangpur City Corporation official portal (rpcc.gov.bd),https://rpcc.gov.bd/
+77,RANGPUR_DC_PORTAL_2026,"Rangpur District Administration portal — upazila/union list, pourashavas, district at-a-glance",https://rangpur.gov.bd/
+78,RANGDIV_PORTAL_2026,Rangpur Divisional Commissioner portal (rangpurdiv.gov.bd),https://rangpurdiv.gov.bd/
+79,RANGPUR_METRO_POLICE,Rangpur Metropolitan Police official site (rpmp.gov.bd),https://rpmp.gov.bd/
+80,RANGPUR_METRO_POLICE_THANAS_2026,Rangpur Metropolitan Police — thanas and official numbers,https://rpmp.gov.bd/index.php/home/units
+81,RANGPUR_POLICE_2026,Rangpur District Police — SP office and thanas,https://police.rangpur.gov.bd/
+82,RANGPUR_PORTAL_OFFICES_2026,"Government offices on the national portal sites — Divisional Commissioner, Rangpur DC & upazila portals, DC/UNO offices of Rangpur Division",https://rangpurdiv.gov.bd/
+83,RANGPUR_UNION_PORTALS_2026,Union Parishad portals of Rangpur Division — এক নজরে (at-a-glance) pages,https://rangpur.gov.bd/pages/static-pages/6977698ec4774958d7c22b0e
+84,RANGPUR_UPAZILA_PORTALS_2026,"Upazila Administration portals of Rangpur Division — union lists, এক নজরে, pourashava pages",https://rangpursadar.rangpur.gov.bd/
+85,UGC_UNIVERSITIES_RANG_2026,UGC university register — universities in Rangpur Division,https://www.ugc.gov.bd/universities
+86,BANBEIS_INST_DHK_2026,"BANBEIS institution lists (EIIN registry, e-survey 2024) — Dhaka Division",https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637
+87,BB_SCHEDULED_BANKS_DHK_2026,Bangladesh Bank — Scheduled Banks Statistics (Dhaka Division extract),https://www.bb.org.bd/en/index.php/publication/publictn/2/14
+88,BBS_CENSUS_2022_DHAKA,"Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Dhaka Division",https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220
+89,BD_POLICE_CONTACTS_2020_DHAKA,"Bangladesh Police HQ — Contacts of Bangladesh Police (DMP, GMP and Dhaka Range sheets)",https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf
+90,BD_RAILWAY_DHK_2026,Bangladesh Railway — station phones and district-wise station counts (Dhaka Division),https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6
+91,BDPOST_POSTCODES_DHK_2026,Bangladesh Post postcode booklet — Dhaka Division post offices (scan on post.rajshahi.gov.bd),http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af
+92,BRTC_DEPOTS_DHK_2026,BRTC — bus depots in Dhaka Division,https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0
+93,CAAB_AIRPORTS_DHK_2026,Civil Aviation Authority of Bangladesh — airports in Dhaka Division,https://www.caab.gov.bd/
+94,DGHS_BD_GEOCODES_DHAKA,"Bangladesh GeoCodes CodeSystem (BBS geo-codes) in the DGHS Bangladesh Core FHIR IG, Dhaka Division extract",https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html
+95,DGHS_HRIS_FACILITIES_DHK_2026,"DGHS / MoHFW HRIS Facility Registry — organisation list, Dhaka Division",https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=1
+96,DGME_MEDICAL_COLLEGES_DHK_2026,DGME medical and dental college lists — Dhaka Division,https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3
+97,DHAKA_DC_PORTAL_2026,"Dhaka District Administration portal — upazila/union list, pourashavas, district at-a-glance",https://dhaka.gov.bd/
+98,DHKDIV_PORTAL_2026,Dhaka Divisional Commissioner portal (dhakadiv.gov.bd),https://dhakadiv.gov.bd/
+99,DHAKA_METRO_POLICE,Dhaka Metropolitan Police official site (dmp.gov.bd),https://dmp.gov.bd/find-your-local-police/
+100,DHAKA_METRO_POLICE_THANAS_2026,Dhaka Metropolitan Police — thanas and official numbers,https://dmp.gov.bd/find-your-local-police/
+101,DHAKA_NORTH_CITY_CORPORATION,Dhaka North City Corporation official portal (dncc.gov.bd),https://dncc.gov.bd/
+102,DHAKA_POLICE_2026,Dhaka District Police — SP office and thanas,https://police.dhaka.gov.bd/
+103,DHAKA_PORTAL_OFFICES_2026,"Government offices on the national portal sites — Divisional Commissioner, Dhaka DC & upazila portals, DC/UNO offices of Dhaka Division",https://dhakadiv.gov.bd/
+104,DHAKA_SOUTH_CITY_CORPORATION,Dhaka South City Corporation official portal (dscc.gov.bd),https://dscc.gov.bd/
+105,DHAKA_UNION_PORTALS_2026,Union Parishad portals of Dhaka Division — এক নজরে (at-a-glance) pages,https://narsingdi.gov.bd/pages/static-pages/6995dfcb35ce18e1c07b1d63
+106,DHAKA_UPAZILA_PORTALS_2026,"Upazila Administration portals of Dhaka Division — union lists, এক নজরে, pourashava pages",https://belabo.narsingdi.gov.bd/
+107,DHK_RANGE_POLICE_PORTALS_2026,"District police portals of Dhaka Range (Narsingdi, Shariatpur, Tangail, Manikganj, Munshiganj, Rajbari, Madaripur, Gopalganj, Faridpur, Gazipur, Narayanganj, Kishoreganj)",https://police.narsingdi.gov.bd/
+108,DISTRICT_PORTAL_BANKS_DHK_2026,"District portals — bank branch/office phone lists (Narayanganj, Tangail, Manikganj, Rajbari, Gopalganj, Faridpur)",https://narayanganj.gov.bd/pages/static-pages/69958381f2b99fa8d158a135
+109,DISTRICT_PORTALS_TRANSPORT_DHK_2026,"District & upazila portals (Dhaka Division) — bus terminals/stands, stations and ghats named on transport pages",https://dhaka.gov.bd/pages/static-pages/communication-system-jah6tq-6a841eae9ab15f91607f8f89
+110,DHKDIV_DISTRICT_PORTALS_2026,"District administration portals — Narsingdi, Gazipur, Shariatpur, Narayanganj, Tangail, Kishoreganj, Manikganj, Munshiganj, Rajbari, Madaripur, Gopalganj, Faridpur",https://narsingdi.gov.bd/
+111,DOA_PROTECTED_MONUMENTS_DHK_2026,"Department of Archaeology — gazetted protected monuments, Dhaka Division (district PDF lists)",https://archaeology.gov.bd/pages/static-pages/6922dde7933eb65569e16ff2
+112,DPE_IPEMIS_PRIMARY_DHK_2026,DPE IPEMIS primary school directory — Dhaka Division,https://ipemis.dpe.gov.bd/search-school
+113,FSCD_STATIONS_DHK_2026,Fire Service & Civil Defence — Dhaka Division station & office numbers,https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1
+114,GAZIPUR_CITY_CORPORATION,Gazipur City Corporation official portal (gcc.gov.bd),https://gcc.gov.bd/
+115,GAZIPUR_METRO_POLICE,Gazipur Metropolitan Police official site (gmp.gov.bd),https://gmp.gov.bd/
+116,GAZIPUR_METRO_POLICE_THANAS_2026,Gazipur Metropolitan Police — thanas and official numbers,https://gmp.gov.bd/range-units/units_details.php?zone_id=1
+117,GEOBOUNDARIES_BGD_ADM4_DHAKA,"geoBoundaries gbOpen Bangladesh ADM4 (unions, paurashavas, city wards), Dhaka Division extract",https://www.geoboundaries.org/api/current/gbOpen/BGD/ADM4/
+118,HDX_COD_AB_BGD_DHAKA,"Bangladesh - Subnational Administrative Boundaries (COD-AB v03), Dhaka Division extract",https://data.humdata.org/dataset/cod-ab-bgd
+119,LGD_2026_DHAKA,Local Government Division portal (lgd.gov.bd) — Dhaka Division extract,https://lgd.gov.bd/
+120,NARAYANGANJ_CITY_CORPORATION,Narayanganj City Corporation official portal (ncc.gov.bd),https://ncc.gov.bd/
+121,PORTAL_TOURIST_SPOTS_DHK_2026,National portal 'দর্শনীয় স্থান' (tourist spot) lists — Dhaka Division district and upazila portals,https://dhaka.gov.bd/pages/tourist-spot
+122,UGC_UNIVERSITIES_DHK_2026,UGC university register — universities in Dhaka Division,https://www.ugc.gov.bd/universities
+123,BANBEIS_INST_CTG_2026,"BANBEIS institution lists (EIIN registry, e-survey 2024) — Chattogram Division",https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637
+124,BB_SCHEDULED_BANKS_CTG_2026,Bangladesh Bank — Scheduled Banks Statistics (Chattogram Division extract),https://www.bb.org.bd/en/index.php/publication/publictn/2/14
+125,BBS_CENSUS_2022_CHATTOGRAM,"Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Chattogram Division",https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220
+126,BD_POLICE_CONTACTS_2020_CHATTOGRAM,Bangladesh Police HQ — Contacts of Bangladesh Police (CMP and Chattogram Range sheets),https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf
+127,BD_RAILWAY_CTG_2026,Bangladesh Railway — station phones and district-wise station counts (Chattogram Division),https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6
+128,BDPOST_POSTCODES_CTG_2026,Bangladesh Post postcode booklet — Chattogram Division post offices (scan on post.rajshahi.gov.bd),http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af
+129,BRTC_DEPOTS_CTG_2026,BRTC — bus depots in Chattogram Division,https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0
+130,CAAB_AIRPORTS_CTG_2026,Civil Aviation Authority of Bangladesh — airports in Chattogram Division,https://www.caab.gov.bd/
+131,CHATTOGRAM_CITY_CORPORATION,Chattogram City Corporation official portal (ccc.gov.bd),https://ccc.gov.bd/
+132,CHATTOGRAM_DC_PORTAL_2026,"Chattogram District Administration portal — upazila/union list, pourashavas, district at-a-glance",https://chattogram.gov.bd/
+133,CTGDIV_PORTAL_2026,Chattogram Divisional Commissioner portal (chittagongdiv.gov.bd),https://chittagongdiv.gov.bd/
+134,CHATTOGRAM_METRO_POLICE,Chattogram Metropolitan Police (police.chittagongdiv.gov.bd and cmp.gov.bd),https://police.chittagongdiv.gov.bd/pages/static-pages/at-a-glance-6ae2db41fd9ba07169122831
+135,CHATTOGRAM_METRO_POLICE_THANAS_2026,Chattogram Metropolitan Police — thanas and official numbers,https://cmp.gov.bd/index.php?cPath=295
+136,CHATTOGRAM_POLICE_2026,Chattogram District Police — SP office and thanas,https://police.chittagong.gov.bd/
+137,CHATTOGRAM_PORTAL_OFFICES_2026,"Government offices on the national portal sites — Divisional Commissioner, Chattogram DC & upazila portals, DC/UNO offices of Chattogram Division",https://chittagongdiv.gov.bd/
+138,CHATTOGRAM_UNION_PORTALS_2026,Union Parishad portals of Chattogram Division — এক নজরে (at-a-glance) pages,https://comilla.gov.bd/pages/static-pages/69912916516a96d4de40781f
+139,CHATTOGRAM_UPAZILA_PORTALS_2026,"Upazila Administration portals of Chattogram Division — union lists, এক নজরে, pourashava pages",https://debidwar.comilla.gov.bd/
+140,CTG_RANGE_POLICE_PORTALS_2026,"District police portals of Chattogram Range (Cumilla, Feni, Brahmanbaria, Rangamati, Noakhali, Chandpur, Lakshmipur, Cox's Bazar, Khagrachhari, Bandarban)",https://police.comilla.gov.bd/
+141,CUMILLA_CITY_CORPORATION,Cumilla City Corporation official portal (cocc.portal.gov.bd),https://cocc.portal.gov.bd/
+142,DGHS_BD_GEOCODES_CHATTOGRAM,"Bangladesh GeoCodes CodeSystem (BBS geo-codes) in the DGHS Bangladesh Core FHIR IG, Chattogram Division extract",https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html
+143,DGHS_HRIS_FACILITIES_CTG_2026,"DGHS / MoHFW HRIS Facility Registry — organisation list, Chattogram Division",https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=2
+144,DGME_MEDICAL_COLLEGES_CTG_2026,DGME medical and dental college lists — Chattogram Division,https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3
+145,DISTRICT_PORTAL_BANKS_CTG_2026,"District portals — bank branch/office lists (Cumilla, Feni, Brahmanbaria, Rangamati, Noakhali, Chandpur, Chattogram, Khagrachhari, Bandarban)",https://comilla.gov.bd/pages/static-pages/69912917516a96d4de40783c
+146,DISTRICT_PORTALS_TRANSPORT_CTG_2026,"District portals (Chattogram Division) — bus terminals/stands, stations, ghats and airport named on transport pages",https://chittagong.gov.bd/pages/static-pages/যোগাযোগ-ব্যবস্থা-603b1f-6991007d35ce18e1c0732d23
+147,CTGDIV_DISTRICT_PORTALS_2026,"District administration portals — Cumilla, Feni, Brahmanbaria, Rangamati, Noakhali, Chandpur, Lakshmipur, Cox's Bazar, Khagrachhari, Bandarban",https://comilla.gov.bd/
+148,DOA_PROTECTED_MONUMENTS_CTG_2026,"Department of Archaeology — gazetted protected monuments, Chattogram Division (district PDF lists)",https://archaeology.gov.bd/pages/static-pages/6922deb6933eb65569e1cce1
+149,DPE_IPEMIS_PRIMARY_CTG_2026,DPE IPEMIS primary school directory — Chattogram Division,https://ipemis.dpe.gov.bd/search-school
+150,FSCD_STATIONS_CTG_2026,Fire Service & Civil Defence — Chattogram Division station & office numbers,https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1
+151,GEOBOUNDARIES_BGD_ADM4_CHATTOGRAM,"geoBoundaries gbOpen Bangladesh ADM4 (unions, paurashavas, city wards), Chattogram Division extract",https://www.geoboundaries.org/api/current/gbOpen/BGD/ADM4/
+152,HDX_COD_AB_BGD_CHATTOGRAM,"Bangladesh - Subnational Administrative Boundaries (COD-AB v03), Chattogram Division extract",https://data.humdata.org/dataset/cod-ab-bgd
+153,LGD_2026_CHATTOGRAM,Local Government Division portal (lgd.gov.bd) — Chattogram Division extract,https://lgd.gov.bd/
+154,PORTAL_TOURIST_SPOTS_CTG_2026,National portal 'দর্শনীয় স্থান' (tourist spot) lists — Chattogram Division district and upazila portals,https://chittagong.gov.bd/pages/tourist-spot
+155,UGC_UNIVERSITIES_CTG_2026,UGC university register — universities in Chattogram Division,https://www.ugc.gov.bd/universities
+156,BANBEIS_INST_KHL_2026,"BANBEIS institution lists (EIIN registry, e-survey 2024) — Khulna Division",https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637
+157,BB_SCHEDULED_BANKS_KHL_2026,Bangladesh Bank — Scheduled Banks Statistics (Khulna Division extract),https://www.bb.org.bd/en/index.php/publication/publictn/2/14
+158,BBS_CENSUS_2022_KHULNA,"Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Khulna Division",https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220
+159,BD_POLICE_CONTACTS_2020_KHULNA,Bangladesh Police HQ — Contacts of Bangladesh Police (KMP and Khulna Range sheets),https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf
+160,BD_RAILWAY_KHL_2026,Bangladesh Railway — station phones and district-wise station counts (Khulna Division),https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6
+161,BDPOST_POSTCODES_KHL_2026,Bangladesh Post postcode booklet — Khulna Division post offices (scan on post.rajshahi.gov.bd),http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af
+162,BRTC_DEPOTS_KHL_2026,BRTC — bus depots in Khulna Division,https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0
+163,CAAB_AIRPORTS_KHL_2026,Civil Aviation Authority of Bangladesh — airports in Khulna Division,https://www.caab.gov.bd/
+164,DGHS_BD_GEOCODES_KHULNA,"Bangladesh GeoCodes CodeSystem (BBS geo-codes) in the DGHS Bangladesh Core FHIR IG, Khulna Division extract",https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html
+165,DGHS_HRIS_FACILITIES_KHL_2026,"DGHS / MoHFW HRIS Facility Registry — organisation list, Khulna Division",https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=5
+166,DGME_MEDICAL_COLLEGES_KHL_2026,DGME medical and dental college lists — Khulna Division,https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3
+167,DISTRICT_PORTAL_BANKS_KHL_2026,"District portals — bank branch/office lists (Meherpur, Narail, Chuadanga, Kushtia, Magura, Bagerhat)",https://meherpur.gov.bd/pages/static-pages/6980f68da31054345f1cefa5
+168,DISTRICT_PORTALS_TRANSPORT_KHL_2026,District portals (Khulna Division) — bus terminals and airport named on transport pages,https://khulna.gov.bd/pages/static-pages/69812047a31054345f1e0ba0
+169,KHLDIV_DISTRICT_PORTALS_2026,"District administration portals — Jashore, Satkhira, Meherpur, Narail, Chuadanga, Kushtia, Magura, Bagerhat, Jhenaidah",https://jashore.gov.bd/
+170,DOA_PROTECTED_MONUMENTS_KHL_2026,"Department of Archaeology — gazetted protected monuments, Khulna Division (district PDF lists)",https://archaeology.gov.bd/pages/static-pages/6922df45933eb65569e20fab
+171,DPE_IPEMIS_PRIMARY_KHL_2026,DPE IPEMIS primary school directory — Khulna Division,https://ipemis.dpe.gov.bd/search-school
+172,FSCD_STATIONS_KHL_2026,Fire Service & Civil Defence — Khulna Division station & office numbers,https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1
+173,GEOBOUNDARIES_BGD_ADM4_KHULNA,"geoBoundaries gbOpen Bangladesh ADM4 (unions, paurashavas, city wards), Khulna Division extract",https://www.geoboundaries.org/api/current/gbOpen/BGD/ADM4/
+174,HDX_COD_AB_BGD_KHULNA,"Bangladesh - Subnational Administrative Boundaries (COD-AB v03), Khulna Division extract",https://data.humdata.org/dataset/cod-ab-bgd
+175,KHL_RANGE_POLICE_PORTALS_2026,"District police portals of Khulna Range (Jashore, Satkhira, Meherpur, Narail, Chuadanga, Kushtia, Magura, Bagerhat, Jhenaidah)",https://police.jessore.gov.bd/
+176,KHULNA_CITY_CORPORATION,Khulna City Corporation — figures stated on official portals (KCC's own site unreachable),https://khulnacity.gov.bd/
+177,KHULNA_DC_PORTAL_2026,"Khulna District Administration portal — upazila/union list, pourashavas, district at-a-glance",https://khulna.gov.bd/
+178,KHLDIV_PORTAL_2026,Khulna Divisional Commissioner portal (khulnadiv.gov.bd),https://khulnadiv.gov.bd/
+179,KHULNA_METRO_POLICE,Khulna Metropolitan Police (police.khulnadiv.gov.bd) and the Khulna DC portal thana list,https://police.khulnadiv.gov.bd/pages/static-pages/6980f684a31054345f1ceb6e
+180,KHULNA_METRO_POLICE_THANAS_2026,Khulna Metropolitan Police — thanas and official numbers,https://police.khulnadiv.gov.bd/pages/static-pages/698101a8a31054345f1d5747
+181,KHULNA_POLICE_2026,Khulna District Police — SP office and thanas,https://police.khulna.gov.bd/
+182,KHULNA_PORTAL_OFFICES_2026,"Government offices on the national portal sites — Divisional Commissioner, Khulna DC & upazila portals, DC/UNO offices of Khulna Division",https://khulnadiv.gov.bd/
+183,KHULNA_UNION_PORTALS_2026,Union Parishad portals of Khulna Division — এক নজরে (at-a-glance) pages,https://khulna.gov.bd/pages/static-pages/6981413b35ce18e1c0700662
+184,KHULNA_UPAZILA_PORTALS_2026,"Upazila Administration portals of Khulna Division — union lists, এক নজরে, pourashava pages",https://paikgasa.khulna.gov.bd/
+185,LGD_2026_KHULNA,Local Government Division portal (lgd.gov.bd) — Khulna Division extract,https://lgd.gov.bd/
+186,PORTAL_TOURIST_SPOTS_KHL_2026,National portal 'দর্শনীয় স্থান' (tourist spot) lists — Khulna Division district and upazila portals,https://khulna.gov.bd/pages/tourist-spot
+187,UGC_UNIVERSITIES_KHL_2026,UGC university register — universities in Khulna Division,https://www.ugc.gov.bd/universities
+188,BANBEIS_INST_BAR_2026,"BANBEIS institution lists (EIIN registry, e-survey 2024) — Barishal Division",https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637
+189,BAR_RANGE_POLICE_PORTALS_2026,"District police portals of Barishal Range (Jhalokathi, Patuakhali, Pirojpur, Bhola, Barguna)",https://police.jhalakathi.gov.bd/
+190,BARISHAL_CITY_CORPORATION,Barishal City Corporation official site (barishalcity.gov.bd),https://barishalcity.gov.bd/
+191,BARISHAL_DC_PORTAL_2026,"Barishal District Administration portal — upazila/union list, pourashavas, district at-a-glance",https://barishal.gov.bd/
+192,BARDIV_PORTAL_2026,Barishal Divisional Commissioner portal (barishaldiv.gov.bd),https://barishaldiv.gov.bd/
+193,BARISHAL_METRO_POLICE,"Barishal Metropolitan Police (bmp.police.gov.bd) — thanas, history and jurisdiction",https://bmp.police.gov.bd/history
+194,BARISHAL_METRO_POLICE_THANAS_2026,Barishal Metropolitan Police — thanas and official numbers,https://bmp.police.gov.bd/contact-us
+195,BARISHAL_POLICE_2026,"Barishal District Police — SP office, thanas and control room",https://police.barisal.gov.bd/
+196,BARISHAL_PORTAL_OFFICES_2026,"Government offices on the national portal sites — Divisional Commissioner, Barishal DC & upazila portals, DC/UNO offices of Barishal Division",https://barisaldiv.gov.bd/
+197,BARISHAL_UNION_PORTALS_2026,Union Parishad portals of Barishal Division — এক নজরে (at-a-glance) pages,https://barishal.gov.bd/pages/static-pages/6978a32135ce18e1c0672269
+198,BARISHAL_UPAZILA_PORTALS_2026,"Upazila Administration portals of Barishal Division — union lists, এক নজরে, pourashava pages",https://barisalsadar.barisal.gov.bd/
+199,BB_SCHEDULED_BANKS_BAR_2026,Bangladesh Bank — Scheduled Banks Statistics (Barishal Division extract),https://www.bb.org.bd/en/index.php/publication/publictn/2/14
+200,BBS_CENSUS_2022_BARISHAL,"Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Barishal Division",https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220
+201,BD_POLICE_CONTACTS_2020_BARISHAL,Bangladesh Police HQ — Contacts of Bangladesh Police (BMP and Barisal Range sheets),https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf
+202,BD_RAILWAY_BAR_2026,Bangladesh Railway — station phones and district-wise station counts (Barishal Division),https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6
+203,BDPOST_POSTCODES_BAR_2026,Bangladesh Post postcode booklet — Barishal Division post offices (scan on post.rajshahi.gov.bd),http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af
+204,BRTC_DEPOTS_BAR_2026,BRTC — bus depots in Barishal Division,https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0
+205,CAAB_AIRPORTS_BAR_2026,Civil Aviation Authority of Bangladesh — airports in Barishal Division,https://www.caab.gov.bd/
+206,DGHS_BD_GEOCODES_BARISHAL,"Bangladesh GeoCodes CodeSystem (BBS geo-codes) in the DGHS Bangladesh Core FHIR IG, Barishal Division extract",https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html
+207,DGHS_HRIS_FACILITIES_BAR_2026,"DGHS / MoHFW HRIS Facility Registry — organisation list, Barishal Division",https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=6
+208,DGME_MEDICAL_COLLEGES_BAR_2026,DGME medical and dental college lists — Barishal Division,https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3
+209,DISTRICT_PORTAL_BANKS_BAR_2026,"District portals — bank branch/office lists (Patuakhali, Pirojpur, Bhola)",https://patuakhali.gov.bd/pages/static-pages/bank-x23c5l-6a786562a3a462c02a70c42f
+210,DISTRICT_PORTALS_TRANSPORT_BAR_2026,"District and upazila portals (Barishal Division) — launch ghats, bus stands and airport named on transport pages",https://barisal.gov.bd/pages/static-pages/6978a33735ce18e1c0672d0c
+211,BARDIV_DISTRICT_PORTALS_2026,"District administration portals — Jhalokathi, Patuakhali, Pirojpur, Bhola, Barguna",https://jhalakathi.gov.bd/
+212,DOA_PROTECTED_MONUMENTS_BAR_2026,"Department of Archaeology — gazetted protected monuments, Barishal Division (district PDF lists)",https://archaeology.gov.bd/pages/static-pages/6922e128933eb65569e2a90f
+213,DPE_IPEMIS_PRIMARY_BAR_2026,DPE IPEMIS primary school directory — Barishal Division,https://ipemis.dpe.gov.bd/search-school
+214,FSCD_STATIONS_BAR_2026,Fire Service & Civil Defence — Barishal Division station & office numbers,https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1
+215,GEOBOUNDARIES_BGD_ADM4_BARISHAL,"geoBoundaries gbOpen Bangladesh ADM4 (unions, paurashavas, city wards), Barishal Division extract",https://www.geoboundaries.org/api/current/gbOpen/BGD/ADM4/
+216,HDX_COD_AB_BGD_BARISHAL,"Bangladesh - Subnational Administrative Boundaries (COD-AB v03), Barishal Division extract",https://data.humdata.org/dataset/cod-ab-bgd
+217,LGD_2026_BARISHAL,Local Government Division portal (lgd.gov.bd) — Barishal Division extract,https://lgd.gov.bd/
+218,PORTAL_TOURIST_SPOTS_BAR_2026,National portal 'দর্শনীয় স্থান' (tourist spot) lists — Barishal Division district and upazila portals,https://barisal.gov.bd/pages/tourist-spot
+219,UGC_UNIVERSITIES_BAR_2026,UGC university register — universities in Barishal Division,https://www.ugc.gov.bd/universities
+220,BANBEIS_INST_SYL_2026,"BANBEIS institution lists (EIIN registry, e-survey 2024) — Sylhet Division",https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637
+221,BB_SCHEDULED_BANKS_SYL_2026,Bangladesh Bank — Scheduled Banks Statistics (Sylhet Division extract),https://www.bb.org.bd/en/index.php/publication/publictn/2/14
+222,BBS_CENSUS_2022_SYLHET,"Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Sylhet Division",https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220
+223,BD_POLICE_CONTACTS_2020_SYLHET,Bangladesh Police HQ — Contacts of Bangladesh Police (SMP and Sylhet Range sheets),https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf
+224,BD_RAILWAY_SYL_2026,Bangladesh Railway — station phones and district-wise station counts (Sylhet Division),https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6
+225,BDPOST_POSTCODES_SYL_2026,Bangladesh Post postcode booklet — Sylhet Division post offices (scan on post.rajshahi.gov.bd),http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af
+226,BRTC_DEPOTS_SYL_2026,BRTC — bus depots in Sylhet Division,https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0
+227,CAAB_AIRPORTS_SYL_2026,Civil Aviation Authority of Bangladesh — airports in Sylhet Division,https://www.caab.gov.bd/
+228,DGHS_BD_GEOCODES_SYLHET,"Bangladesh GeoCodes CodeSystem (BBS geo-codes) in the DGHS Bangladesh Core FHIR IG, Sylhet Division extract",https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html
+229,DGHS_HRIS_FACILITIES_SYL_2026,"DGHS / MoHFW HRIS Facility Registry — organisation list, Sylhet Division",https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=7
+230,DGME_MEDICAL_COLLEGES_SYL_2026,DGME medical and dental college lists — Sylhet Division,https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3
+231,DISTRICT_PORTAL_BANKS_SYL_2026,"District portals — bank branch/office lists (Sylhet, Habiganj, Moulvibazar)",https://sylhet.gov.bd/pages/static-pages/696cb9a8c4774958d7ba8e13
+232,DISTRICT_PORTALS_TRANSPORT_SYL_2026,"District and upazila portals (Sylhet Division) — bus terminals, railway stations, ghats and airport named on transport pages",https://sylhetsadar.sylhet.gov.bd/pages/static-pages/696cb360c4774958d7ba05b3
+233,SYLDIV_DISTRICT_PORTALS_2026,"District administration portals — Moulvibazar, Habiganj, Sunamganj",https://moulvibazar.gov.bd/
+234,DOA_PROTECTED_MONUMENTS_SYL_2026,"Department of Archaeology — gazetted protected monuments, Sylhet Division (district PDF lists)",https://archaeology.gov.bd/pages/static-pages/6922e035933eb65569e26000
+235,DPE_IPEMIS_PRIMARY_SYL_2026,DPE IPEMIS primary school directory — Sylhet Division,https://ipemis.dpe.gov.bd/search-school
+236,FSCD_STATIONS_SYL_2026,Fire Service & Civil Defence — Sylhet Division station & office numbers,https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1
+237,GEOBOUNDARIES_BGD_ADM4_SYLHET,"geoBoundaries gbOpen Bangladesh ADM4 (unions, paurashavas, city wards), Sylhet Division extract",https://www.geoboundaries.org/api/current/gbOpen/BGD/ADM4/
+238,HDX_COD_AB_BGD_SYLHET,"Bangladesh - Subnational Administrative Boundaries (COD-AB v03), Sylhet Division extract",https://data.humdata.org/dataset/cod-ab-bgd
+239,LGD_2026_SYLHET,Local Government Division portal (lgd.gov.bd) — Sylhet Division extract,https://lgd.gov.bd/
+240,PORTAL_TOURIST_SPOTS_SYL_2026,National portal 'দর্শনীয় স্থান' (tourist spot) lists — Sylhet Division district and upazila portals,https://sylhet.gov.bd/pages/tourist-spot
+241,SYL_RANGE_POLICE_PORTALS_2026,"District police portals of Sylhet Range (Moulvibazar, Habiganj, Sunamganj)",https://police.moulvibazar.gov.bd/
+242,SYLHET_CITY_CORPORATION,Sylhet City Corporation official site (scc.gov.bd),https://scc.gov.bd/
+243,SYLHET_DC_PORTAL_2026,"Sylhet District Administration portal — upazila/union list, pourashavas, district at-a-glance",https://sylhet.gov.bd/
+244,SYLDIV_PORTAL_2026,Sylhet Divisional Commissioner portal (sylhetdiv.gov.bd),https://sylhetdiv.gov.bd/
+245,SYLHET_METRO_POLICE,"Sylhet Metropolitan Police (police.sylhetdiv.gov.bd, smp.police.gov.bd) — thanas, founding and jurisdiction",https://police.sylhetdiv.gov.bd/pages/static-pages/696ca219c4774958d7b931b6
+246,SYLHET_METRO_POLICE_THANAS_2026,Sylhet Metropolitan Police — thanas and official numbers,https://police.sylhetdiv.gov.bd/pages/static-pages/696ca219c4774958d7b931b6
+247,SYLHET_POLICE_2026,Sylhet District Police — SP office and thanas,https://police.sylhet.gov.bd/
+248,SYLHET_PORTAL_OFFICES_2026,"Government offices on the national portal sites — Divisional Commissioner, Sylhet DC & upazila portals, DC/UNO offices of Sylhet Division",https://sylhetdiv.gov.bd/
+249,SYLHET_UNION_PORTALS_2026,Union Parishad portals of Sylhet Division — এক নজরে (at-a-glance) pages,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0694
+250,SYLHET_UPAZILA_PORTALS_2026,"Upazila Administration portals of Sylhet Division — union lists, এক নজরে, pourashava pages",https://sylhetsadar.sylhet.gov.bd/
+251,UGC_UNIVERSITIES_SYL_2026,UGC university register — universities in Sylhet Division,https://www.ugc.gov.bd/universities
+252,BANBEIS_INST_MYM_2026,"BANBEIS institution lists (EIIN registry, e-survey 2024) — Mymensingh Division",https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637
+253,BB_SCHEDULED_BANKS_MYM_2026,Bangladesh Bank — Scheduled Banks Statistics (Mymensingh Division extract),https://www.bb.org.bd/en/index.php/publication/publictn/2/14
+254,BBS_CENSUS_2022_MYMENSINGH,"Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Mymensingh Division",https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220
+255,BD_POLICE_CONTACTS_2020_MYMENSINGH,Bangladesh Police HQ — Contacts of Bangladesh Police (Mymenshing Range sheet),https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf
+256,BD_RAILWAY_MYM_2026,Bangladesh Railway — station phones and district-wise station counts (Mymensingh Division),https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6
+257,BDPOST_POSTCODES_MYM_2026,Bangladesh Post postcode booklet — Mymensingh Division post offices (scan on post.rajshahi.gov.bd),http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af
+258,BRTC_DEPOTS_MYM_2026,BRTC — bus depots in Mymensingh Division,https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0
+259,CAAB_AIRPORTS_MYM_2026,Civil Aviation Authority of Bangladesh — airports in Mymensingh Division,https://www.caab.gov.bd/
+260,DGHS_BD_GEOCODES_MYMENSINGH,"Bangladesh GeoCodes CodeSystem (BBS geo-codes) in the DGHS Bangladesh Core FHIR IG, Mymensingh Division extract",https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html
+261,DGHS_HRIS_FACILITIES_MYM_2026,"DGHS / MoHFW HRIS Facility Registry — organisation list, Mymensingh Division",https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=8
+262,DGME_MEDICAL_COLLEGES_MYM_2026,DGME medical and dental college lists — Mymensingh Division,https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3
+263,DISTRICT_PORTAL_BANKS_MYM_2026,"District portals — bank branch lists (Sherpur, Jamalpur, Netrokona)",https://sherpur.gov.bd/pages/static-pages/6970a1e2a31054345f1624bd
+264,DISTRICT_PORTALS_TRANSPORT_MYM_2026,"District and upazila portals (Mymensingh Division) — bus terminals, stands and railway stations named on transport pages",https://jamalpur.gov.bd/pages/static-pages/6970926ca31054345f15e8e6
+265,MYMDIV_DISTRICT_PORTALS_2026,"District administration portals — Jamalpur, Sherpur, Netrokona",https://jamalpur.gov.bd/
+266,DOA_PROTECTED_MONUMENTS_MYM_2026,"Department of Archaeology — gazetted protected monuments, Mymensingh Division (district PDF lists)",https://archaeology.gov.bd/pages/static-pages/6922dd39933eb65569e14024
+267,DPE_IPEMIS_PRIMARY_MYM_2026,DPE IPEMIS primary school directory — Mymensingh Division,https://ipemis.dpe.gov.bd/search-school
+268,FSCD_STATIONS_MYM_2026,Fire Service & Civil Defence — Mymensingh Division station & office numbers,https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1
+269,GEOBOUNDARIES_BGD_ADM4_MYMENSINGH,"geoBoundaries gbOpen Bangladesh ADM4 (unions, paurashavas, city wards), Mymensingh Division extract",https://www.geoboundaries.org/api/current/gbOpen/BGD/ADM4/
+270,HDX_COD_AB_BGD_MYMENSINGH,"Bangladesh - Subnational Administrative Boundaries (COD-AB v03), Mymensingh Division extract",https://data.humdata.org/dataset/cod-ab-bgd
+271,LGD_2026_MYMENSINGH,Local Government Division portal (lgd.gov.bd) — Mymensingh Division extract,https://lgd.gov.bd/
+272,MYM_RANGE_POLICE_PORTALS_2026,"District police portals of Mymensingh Range (Jamalpur, Sherpur, Netrokona)",https://police.jamalpur.gov.bd/
+273,MYMENSINGH_CITY_CORPORATION,Mymensingh City Corporation official site (mcc.gov.bd),https://mcc.gov.bd/
+274,MYMENSINGH_DC_PORTAL_2026,"Mymensingh District Administration portal — upazila/union list, pourashavas, district at-a-glance",https://mymensingh.gov.bd/
+275,MYMDIV_PORTAL_2026,Mymensingh Divisional Commissioner portal (mymensinghdiv.gov.bd),https://mymensinghdiv.gov.bd/
+276,MYMENSINGH_POLICE_2026,Mymensingh District Police — SP office and thanas,https://police.mymensingh.gov.bd/
+277,MYMENSINGH_PORTAL_OFFICES_2026,"Government offices on the national portal sites — Divisional Commissioner, Mymensingh DC & upazila portals, DC/UNO offices of Mymensingh Division",https://mymensinghdiv.gov.bd/
+278,MYMENSINGH_UNION_PORTALS_2026,Union Parishad portals of Mymensingh Division — এক নজরে (at-a-glance) pages,https://mymensingh.gov.bd/pages/static-pages/6973bef4c4774958d7bc1029
+279,MYMENSINGH_UPAZILA_PORTALS_2026,"Upazila Administration portals of Mymensingh Division — union lists, এক নজরে, pourashava pages",https://mymensinghsadar.mymensingh.gov.bd/
+280,PORTAL_TOURIST_SPOTS_MYM_2026,National portal 'দর্শনীয় স্থান' (tourist spot) lists — Mymensingh Division district and upazila portals,https://mymensingh.gov.bd/pages/tourist-spot
+281,UGC_UNIVERSITIES_MYM_2026,UGC university register — universities in Mymensingh Division,https://www.ugc.gov.bd/universities
+282,ORG_BRANCHES_RAJ_2026,Organisations' own branch and outlet lists — Rajshahi Division,https://www.sonalibank.com.bd/atm_location.php
+283,OSM_RAJ_2026,OpenStreetMap contributors — Rajshahi Division extract (points of interest),https://download.geofabrik.de/asia/bangladesh.html
+284,OVERTURE_PLACES_RAJ_2026,"Overture Maps Foundation — places theme, release 2026-10-21.0, Rajshahi Division extract",https://stac.overturemaps.org/2026-10-21.0/places/place/collection.json
+285,WIKIDATA_RAJ_2026,"Wikidata — items with coordinates in Rajshahi Division (places, not administrative units)",https://query.wikidata.org/
+286,ORG_BRANCHES_RANG_2026,Organisations' own branch and outlet lists — Rangpur Division,https://www.sonalibank.com.bd/atm_location.php
+287,OSM_RANG_2026,OpenStreetMap contributors — Rangpur Division extract (points of interest),https://download.geofabrik.de/asia/bangladesh.html
+288,OVERTURE_PLACES_RANG_2026,"Overture Maps Foundation — places theme, release 2026-10-21.0, Rangpur Division extract",https://stac.overturemaps.org/2026-10-21.0/places/place/collection.json
+289,WIKIDATA_RANG_2026,"Wikidata — items with coordinates in Rangpur Division (places, not administrative units)",https://query.wikidata.org/
+290,ORG_BRANCHES_DHK_2026,Organisations' own branch and outlet lists — Dhaka Division,https://www.sonalibank.com.bd/atm_location.php
+291,OSM_DHK_2026,OpenStreetMap contributors — Dhaka Division extract (points of interest),https://download.geofabrik.de/asia/bangladesh.html
+292,OVERTURE_PLACES_DHK_2026,"Overture Maps Foundation — places theme, release 2026-10-21.0, Dhaka Division extract",https://stac.overturemaps.org/2026-10-21.0/places/place/collection.json
+293,WIKIDATA_DHK_2026,"Wikidata — items with coordinates in Dhaka Division (places, not administrative units)",https://query.wikidata.org/
+294,ORG_BRANCHES_CTG_2026,Organisations' own branch and outlet lists — Chattogram Division,https://www.sonalibank.com.bd/atm_location.php
+295,OSM_CTG_2026,OpenStreetMap contributors — Chattogram Division extract (points of interest),https://download.geofabrik.de/asia/bangladesh.html
+296,OVERTURE_PLACES_CTG_2026,"Overture Maps Foundation — places theme, release 2026-10-21.0, Chattogram Division extract",https://stac.overturemaps.org/2026-10-21.0/places/place/collection.json
+297,WIKIDATA_CTG_2026,"Wikidata — items with coordinates in Chattogram Division (places, not administrative units)",https://query.wikidata.org/
+298,ORG_BRANCHES_KHL_2026,Organisations' own branch and outlet lists — Khulna Division,https://www.sonalibank.com.bd/atm_location.php
+299,OSM_KHL_2026,OpenStreetMap contributors — Khulna Division extract (points of interest),https://download.geofabrik.de/asia/bangladesh.html
+300,OVERTURE_PLACES_KHL_2026,"Overture Maps Foundation — places theme, release 2026-10-21.0, Khulna Division extract",https://stac.overturemaps.org/2026-10-21.0/places/place/collection.json
+301,WIKIDATA_KHL_2026,"Wikidata — items with coordinates in Khulna Division (places, not administrative units)",https://query.wikidata.org/
+302,ORG_BRANCHES_BAR_2026,Organisations' own branch and outlet lists — Barishal Division,https://www.sonalibank.com.bd/atm_location.php
+303,OSM_BAR_2026,OpenStreetMap contributors — Barishal Division extract (points of interest),https://download.geofabrik.de/asia/bangladesh.html
+304,OVERTURE_PLACES_BAR_2026,"Overture Maps Foundation — places theme, release 2026-10-21.0, Barishal Division extract",https://stac.overturemaps.org/2026-10-21.0/places/place/collection.json
+305,WIKIDATA_BAR_2026,"Wikidata — items with coordinates in Barishal Division (places, not administrative units)",https://query.wikidata.org/
+306,ORG_BRANCHES_SYL_2026,Organisations' own branch and outlet lists — Sylhet Division,https://www.sonalibank.com.bd/atm_location.php
+307,OSM_SYL_2026,OpenStreetMap contributors — Sylhet Division extract (points of interest),https://download.geofabrik.de/asia/bangladesh.html
+308,OVERTURE_PLACES_SYL_2026,"Overture Maps Foundation — places theme, release 2026-10-21.0, Sylhet Division extract",https://stac.overturemaps.org/2026-10-21.0/places/place/collection.json
+309,WIKIDATA_SYL_2026,"Wikidata — items with coordinates in Sylhet Division (places, not administrative units)",https://query.wikidata.org/
+310,ORG_BRANCHES_MYM_2026,Organisations' own branch and outlet lists — Mymensingh Division,https://www.sonalibank.com.bd/atm_location.php
+311,OSM_MYM_2026,OpenStreetMap contributors — Mymensingh Division extract (points of interest),https://download.geofabrik.de/asia/bangladesh.html
+312,OVERTURE_PLACES_MYM_2026,"Overture Maps Foundation — places theme, release 2026-10-21.0, Mymensingh Division extract",https://stac.overturemaps.org/2026-10-21.0/places/place/collection.json
+313,WIKIDATA_MYM_2026,"Wikidata — items with coordinates in Mymensingh Division (places, not administrative units)",https://query.wikidata.org/

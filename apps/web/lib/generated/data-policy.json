@@ -834,6 +834,46 @@
    "key": "UGC_UNIVERSITIES_MYM_2026",
    "name": "UGC university register — universities in Mymensingh Division",
    "url": "https://www.ugc.gov.bd/universities"
+  },
+  {
+   "key": "ORG_BRANCHES_RAJ_2026",
+   "name": "Organisations' own branch and outlet lists — Rajshahi Division",
+   "url": "https://www.sonalibank.com.bd/atm_location.php"
+  },
+  {
+   "key": "ORG_BRANCHES_RANG_2026",
+   "name": "Organisations' own branch and outlet lists — Rangpur Division",
+   "url": "https://www.sonalibank.com.bd/atm_location.php"
+  },
+  {
+   "key": "ORG_BRANCHES_DHK_2026",
+   "name": "Organisations' own branch and outlet lists — Dhaka Division",
+   "url": "https://www.sonalibank.com.bd/atm_location.php"
+  },
+  {
+   "key": "ORG_BRANCHES_CTG_2026",
+   "name": "Organisations' own branch and outlet lists — Chattogram Division",
+   "url": "https://www.sonalibank.com.bd/atm_location.php"
+  },
+  {
+   "key": "ORG_BRANCHES_KHL_2026",
+   "name": "Organisations' own branch and outlet lists — Khulna Division",
+   "url": "https://www.sonalibank.com.bd/atm_location.php"
+  },
+  {
+   "key": "ORG_BRANCHES_BAR_2026",
+   "name": "Organisations' own branch and outlet lists — Barishal Division",
+   "url": "https://www.sonalibank.com.bd/atm_location.php"
+  },
+  {
+   "key": "ORG_BRANCHES_SYL_2026",
+   "name": "Organisations' own branch and outlet lists — Sylhet Division",
+   "url": "https://www.sonalibank.com.bd/atm_location.php"
+  },
+  {
+   "key": "ORG_BRANCHES_MYM_2026",
+   "name": "Organisations' own branch and outlet lists — Mymensingh Division",
+   "url": "https://www.sonalibank.com.bd/atm_location.php"
   }
  ],
  "heldBack": [

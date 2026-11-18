@@ -21,4 +21,9 @@ echo "→ resetting schema on $host"
 for f in db/migrations/*.sql; do echo "→ $f"; "${PSQL[@]}" -f "$f"; done
 echo "→ db/seed/seed.sql"
 "${PSQL[@]}" -f db/seed/seed.sql >/dev/null
+# community layers built locally from uncommitted sources (COLLECTION_FORMAT.md, Exceptions); absent in a fresh clone
+for f in db/seed/layers/*.sql; do
+  [[ -f "$f" ]] || continue
+  echo "→ $f"; "${PSQL[@]}" -f "$f" >/dev/null
+done
 "${PSQL[@]}" -At -c "SELECT level, count(*), count(*) FILTER (WHERE production_eligible) AS public FROM admin_areas GROUP BY 1 ORDER BY 1;"

@@ -17,6 +17,21 @@ level from its source's tier (see `docs/data/DATA_TRUST_POLICY.md`).
 | `facts.csv` | other figures | One fact per row (population, area, ward count …) |
 | `REPORT.md` | yes | What was collected, counts, gaps, conflicts with other sources, licence notes |
 
+### Exceptions (owner decision, 2026-11-18)
+
+- **Data services published for programmatic use.** robots.txt is honoured everywhere except on these services, whose
+  operators publish them for scripts and bulk downloads (their robots.txt rules target web crawlers):
+  - Geofabrik extract downloads (`download.geofabrik.de/*.osm.pbf`): one download per run, checked against the
+    published `.md5`;
+  - the Wikidata Query Service (`query.wikidata.org/sparql`): one query at a time, the
+    [User-Agent policy](https://foundation.wikimedia.org/wiki/Policy:User-Agent_policy), `Retry-After` honoured, and no
+    run while the service reports an outage or aggressive rate limiting.
+  Any other host's robots.txt still applies. Each such collector names the exception in its `REPORT.md`.
+- **Dependencies beyond stdlib + `requests`:** `pyosmium` (OpenStreetMap `.pbf`) and `duckdb` (Overture GeoParquet),
+  because those datasets are published only in those formats.
+- **Large community layers** (Overture Maps places): `places*.csv` are not committed; `fetch.py --all` rebuilds them,
+  and the importer loads them as a separate, uncommitted seed layer (see `pipelines/import_collected.py`).
+
 ## `SOURCE.json`
 
 ```json

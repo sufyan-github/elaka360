@@ -1,0 +1,33 @@
+{
+  "key": "OVERTURE_PLACES_RAJ_2026",
+  "name": "Overture Maps Foundation — places theme, release 2026-10-21.0, Rajshahi Division extract",
+  "organization": "Overture Maps Foundation",
+  "source_type": "community_dataset",
+  "trust_level": 1,
+  "urls": [
+    "https://stac.overturemaps.org/2026-10-21.0/places/place/collection.json",
+    "https://overturemaps-us-west-2.s3.us-west-2.amazonaws.com/release/2026-10-21.0/theme=places/type=place/",
+    "https://docs.overturemaps.org/attribution/",
+    "https://docs.overturemaps.org/guides/places/"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": "2026-10-21",
+  "release": "2026-10-21.0",
+  "license": "Apache-2.0 AND CC0-1.0 AND CDLA-Permissive-2.0",
+  "license_url": "https://docs.overturemaps.org/attribution/",
+  "license_urls": {
+    "Apache-2.0": "https://www.apache.org/licenses/LICENSE-2.0",
+    "CC0-1.0": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "CDLA-Permissive-2.0": "https://cdla.dev/permissive-2-0/"
+  },
+  "attribution": "Overture Maps Foundation, overturemaps.org. Data from Foursquare. Copyright 2024 Foursquare Labs, Inc. All rights reserved. Available under Apache 2.0. Foursquare data was transformed to the Overture schema. Changed: 2026-03-18. NOTICE.txt (https://opensource.foursquare.com/places-notice-txt/). Data from AllThePlaces. Available under CC0 1.0. Data from Meta, Microsoft, PinMeTo, Krick, RenderSEO, DAC, BrightQuery, Birdeye, Uberall, OpenTravel Alliance. Available under CDLA Permissive 2.0.",
+  "division": "rajshahi",
+  "kind": "overture",
+  "files": {
+    "places.csv": "fd8d6b051b19202193bdc8e861106e35449d42c7c83d917842a7fccf8777a01f",
+    "raw/stats.json": "0adb74301895d29ade82c2891ffe9822627f63889e2f71101458ffaad1a7b29b",
+    "raw/category_map.csv": "4e7e16b3a56043eda2c21b1d0247132fb46e5d85a5eea4a06841524971d1bfd5",
+    "raw/FOURSQUARE_NOTICE.txt": "8af3c719030547d73e35fbd7b9840bd3a7f598ae12c4c863e29066e1f4083280"
+  },
+  "notes": "Overture places (schema 2.x: taxonomy/basic_category; the old categories field was removed in Sept 2026) read with DuckDB from s3://overturemaps-us-west-2/release/2026-10-21.0/theme=places/type=place/, bbox-filtered to Bangladesh, then assigned by point-in-polygon to HDX COD-AB upazila/city-corporation polygons (district/upazila English names from the HDX folder's crosswalk.csv). All places kept regardless of confidence (confidence is in extra_json); permanently_closed skipped; pages that are clearly a private individual (personal-name pattern, see REPORT.md) skipped. Contacts are as published by Overture (business pages); not verified. No per-record public URL is documented by Overture, so source_url is the release's STAC collection. Licence differs per upstream dataset: see extra_json.sources[].license and REPORT.md. Places is not OSM-derived (no ODbL share-alike)."
+}
