@@ -1,0 +1,26 @@
+{
+  "key": "FSCD_STATIONS_MYM_2026",
+  "division": "mymensingh",
+  "kind": "fscd",
+  "name": "Fire Service & Civil Defence — Mymensingh Division station & office numbers",
+  "organization": "Fire Service and Civil Defence Directorate (FSCD), Bangladesh",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-fireservice/2026/7/611c752a-848d-4756-a92d-a2acd735a73a.pdf",
+    "https://fireservice.gov.bd/pages/static-pages/6922e013933eb65569e25586",
+    "https://fireservice.gov.bd/pages/static-pages/6922e0b9933eb65569e28555"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": "2026-08-11",
+  "license": null,
+  "license_url": null,
+  "attribution": "Fire Service and Civil Defence Directorate, Bangladesh (fireservice.gov.bd)",
+  "notes": "No licence stated on fireservice.gov.bd. publication_date = creation date in the PDF metadata. Station names were transcribed from the rendered PDF because its text layer has broken Bangla glyph mapping; phone numbers come from the text layer. No addresses or coordinates are published.",
+  "files": {
+    "places.csv": "1a56a44089cc835ad5e9fa1cf7ee2cde15fd2149f3c89e5b77f77918843bfe68",
+    "facts.csv": "8d51cb71f167ac882a3190af783937cd7201041c22f6353cd38ffebd83967144",
+    "raw/fscd_mymensingh_division_numbers.pdf": "a1a7064a8242677f0999d43b6179cb92c10351826909b1a45c6b37a46f5db18c"
+  }
+}

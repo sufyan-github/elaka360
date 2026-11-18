@@ -1,0 +1,433 @@
+our_id,our_level,our_name_en,our_path,source_code,source_name_en,match_method,confidence,notes
+20063,district,Jamalpur,mymensingh/jamalpur,BD4539,Jamalpur,name_exact,high,source level district
+20062,district,Mymensingh,mymensingh/mymensingh,BD4561,Mymensingh,name_exact,high,source level district
+20064,district,Netrokona,mymensingh/netrokona,BD4572,Netrakona,code_district,high,source level district; spelling differs (Netrakona vs Netrokona); matched via district code BD4572
+20061,district,Sherpur,mymensingh/sherpur,BD4589,Sherpur,name_exact,high,source level district
+30481,upazila,Bokshiganj,mymensingh/jamalpur/bokshiganj,BD45390007,Bakshiganj,name_skeleton,medium,source level upazila
+30478,upazila,Dewangonj,mymensingh/jamalpur/dewangonj,BD45390015,Dewanganj,name_skeleton,medium,source level upazila
+30477,upazila,Islampur,mymensingh/jamalpur/islampur,BD45390029,Islampur,name_exact,high,source level upazila
+30475,upazila,Jamalpur Sadar,mymensingh/jamalpur/jamalpur-sadar,BD45390036,Jamalpur Sadar,name_exact,high,source level upazila
+30480,upazila,Madarganj,mymensingh/jamalpur/madarganj,BD45390058,Madarganj,name_exact,high,source level upazila
+30476,upazila,Melandah,mymensingh/jamalpur/melandah,BD45390061,Melandaha,name_skeleton,medium,source level upazila
+30479,upazila,Sarishabari,mymensingh/jamalpur/sarishabari,BD45390085,Sarishabari,name_exact,high,source level upazila
+30464,upazila,Bhaluka,mymensingh/mymensingh/bhaluka,BD45610013,Bhaluka,name_exact,high,source level upazila
+30467,upazila,Dhobaura,mymensingh/mymensingh/dhobaura,BD45610016,Dhobaura,name_exact,high,source level upazila
+30462,upazila,Fulbaria,mymensingh/mymensingh/fulbaria,BD45610020,Fulbaria,name_exact,high,source level upazila
+30471,upazila,Gafargaon,mymensingh/mymensingh/gafargaon,BD45610022,Gafargaon,name_exact,high,source level upazila
+30470,upazila,Gouripur,mymensingh/mymensingh/gouripur,BD45610023,Gouripur,name_exact,high,source level upazila
+30469,upazila,Haluaghat,mymensingh/mymensingh/haluaghat,BD45610024,Haluaghat,name_exact,high,source level upazila
+30472,upazila,Iswarganj,mymensingh/mymensingh/iswarganj,BD45610031,Ishwarganj,name_exact,high,source level upazila
+30466,upazila,Mymensingh Sadar,mymensingh/mymensingh/mymensingh-sadar,BD45610052,Mymensingh Sadar,name_exact,high,source level upazila
+30465,upazila,Muktagacha,mymensingh/mymensingh/muktagacha,BD45610065,Muktagachha,name_exact,high,source level upazila
+30473,upazila,Nandail,mymensingh/mymensingh/nandail,BD45610072,Nandail,name_exact,high,source level upazila
+30468,upazila,Phulpur,mymensingh/mymensingh/phulpur,BD45610081,Fulpur,name_banglish,high,source level upazila
+30474,upazila,Tarakanda,mymensingh/mymensingh/tarakanda,BD45610088,Tarakanda,name_exact,high,source level upazila
+30463,upazila,Trishal,mymensingh/mymensingh/trishal,BD45610094,Trishal,name_exact,high,source level upazila
+30485,upazila,Atpara,mymensingh/netrokona/atpara,BD45720004,Atpara,name_exact,high,source level upazila
+30482,upazila,Barhatta,mymensingh/netrokona/barhatta,BD45720009,Barhatta,name_exact,high,source level upazila
+30483,upazila,Durgapur,mymensingh/netrokona/durgapur,BD45720018,Durgapur,name_exact,high,source level upazila
+30487,upazila,Khaliajuri,mymensingh/netrokona/khaliajuri,BD45720038,Khaliajuri,name_exact,high,source level upazila
+30488,upazila,Kalmakanda,mymensingh/netrokona/kalmakanda,BD45720040,Kalmakanda,name_exact,high,source level upazila
+30484,upazila,Kendua,mymensingh/netrokona/kendua,BD45720047,Kendua,name_exact,high,source level upazila
+30486,upazila,Madan,mymensingh/netrokona/madan,BD45720056,Madan,name_exact,high,source level upazila
+30489,upazila,Mohongonj,mymensingh/netrokona/mohongonj,BD45720063,Mohanganj,name_skeleton,medium,source level upazila
+30491,upazila,Netrokona Sadar,mymensingh/netrokona/netrokona-sadar,BD45720074,Netrakona Sadar,name_skeleton,medium,source level upazila
+30490,upazila,Purbadhala,mymensingh/netrokona/purbadhala,BD45720083,Purbadhala,name_exact,high,source level upazila
+30461,upazila,Jhenaigati,mymensingh/sherpur/jhenaigati,BD45890037,Jhenaigati,name_exact,high,source level upazila
+30460,upazila,Nokla,mymensingh/sherpur/nokla,BD45890067,Nakla,name_skeleton,medium,source level upazila
+30458,upazila,Nalitabari,mymensingh/sherpur/nalitabari,BD45890070,Nalitabari,name_exact,high,source level upazila
+30457,upazila,Sherpur Sadar,mymensingh/sherpur/sherpur-sadar,BD45890088,Sherpur Sadar,name_exact,high,source level upazila
+30459,upazila,Sreebordi,mymensingh/sherpur/sreebordi,BD45890090,Sreebardi,name_skeleton,medium,source level upazila
+50012,city_corporation,Mymensingh City Corporation,mymensingh/mymensingh/mymensingh-city-corporation,BD45614000,Mymensingh City Corporation,name_exact,high,source level city_corporation
+,,,,BD45391599,Dewanganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Dewangonj
+,,,,BD45392999,Islampur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Islampur
+,,,,BD45393699,Jamalpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Jamalpur Sadar
+,,,,BD45395899,Madarganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Madarganj
+,,,,BD45396199,Melandaha Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Melandah
+,,,,BD45398599,Sarishabari Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Sarishabari
+,,,,BD45611399,Bhaluka Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Bhaluka
+,,,,BD45612099,Fulbaria Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Fulbaria
+,,,,BD45612299,Gaffargaon Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Gafargaon
+,,,,BD45612399,Gauripur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Gouripur
+,,,,BD45613199,Ishwarganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Iswarganj
+,,,,BD45615299,Mymensingh Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Mymensingh Sadar
+,,,,BD45616599,Muktagachha Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Muktagacha
+,,,,BD45617299,Nandail Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Nandail
+,,,,BD45618199,Phulpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Phulpur
+,,,,BD45619499,Trishal Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Trishal
+,,,,BD45721899,Durgapur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Durgapur
+,,,,BD45724799,Kendua Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kendua
+,,,,BD45725699,Madan Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Madan
+,,,,BD45726399,Mohanganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Mohongonj
+,,,,BD45727499,Netrokona Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Netrokona Sadar
+,,,,BD45728399,Purbadhala Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Purbadhala
+,,,,BD45896799,Nakla Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Nokla
+,,,,BD45897099,Nalitabari Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Nalitabari
+,,,,BD45898899,Sherpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Sherpur Sadar
+,,,,BD45899099,Sreebardi Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Sreebordi
+44449,union,Bagarchar,mymensingh/jamalpur/bokshiganj/bagarchar,BD45390711,Bagar Char,name_exact,high,source level union
+44452,union,Bakshigonj,mymensingh/jamalpur/bokshiganj/bakshigonj,BD45390723,Bakshiganj,name_skeleton,medium,source level union
+44450,union,Battajore,mymensingh/jamalpur/bokshiganj/battajore,BD45390735,Battajore,name_exact,high,source level union
+44448,union,Danua,mymensingh/jamalpur/bokshiganj/danua,BD45390747,Dhanua,name_banglish,high,source level union
+44454,union,Merurchar,mymensingh/jamalpur/bokshiganj/merurchar,BD45390759,Merur Char,name_exact,high,source level union
+44453,union,Nilakhia,mymensingh/jamalpur/bokshiganj/nilakhia,BD45390771,Nilakshmia,name_fuzzy,low,source level union; similarity 0.88 to 'Nilakhia'
+44451,union,Shadurpara,mymensingh/jamalpur/bokshiganj/shadurpara,BD45390783,Sadhur Para,name_banglish,high,source level union
+44429,union,Bahadurabad,mymensingh/jamalpur/dewangonj/bahadurabad,BD45391517,Bahadurabad,name_exact,high,source level union
+44426,union,Char Amkhawa,mymensingh/jamalpur/dewangonj/char-amkhawa,BD45391529,Char Aomkhaoa,name_skeleton,medium,source level union
+44430,union,Chikajani,mymensingh/jamalpur/dewangonj/chikajani,BD45391536,Chikajani,name_exact,high,source level union
+44431,union,Chukaibari,mymensingh/jamalpur/dewangonj/chukaibari,BD45391543,Chukaibari,name_exact,high,source level union
+44425,union,Dungdhara,mymensingh/jamalpur/dewangonj/dungdhara,BD45391551,Dangdhara,name_skeleton,medium,source level union
+44432,union,Dewangonj,mymensingh/jamalpur/dewangonj/dewangonj,BD45391558,Dewanganj,name_skeleton,medium,source level union
+44428,union,Hatibanga,mymensingh/jamalpur/dewangonj/hatibanga,BD45391565,Hatebhanga,name_skeleton,medium,source level union
+44427,union,Parram Rampur,mymensingh/jamalpur/dewangonj/parram-rampur,BD45391587,Par Ramrampur,name_exact,high,source level union
+44414,union,Belghacha,mymensingh/jamalpur/islampur/belghacha,BD45392913,Belgachha,name_banglish,high,source level union
+44424,union,Chargualini,mymensingh/jamalpur/islampur/chargualini,BD45392915,Char Goalini,name_skeleton,medium,source level union
+44423,union,Charputimari,mymensingh/jamalpur/islampur/charputimari,BD45392923,Char Putimari,name_exact,high,source level union
+44415,union,Chinaduli,mymensingh/jamalpur/islampur/chinaduli,BD45392931,Chinadulli,name_exact,high,source level union
+44422,union,Gaibandha,mymensingh/jamalpur/islampur/gaibandha,BD45392939,Gaibandha,name_exact,high,source level union
+44421,union,Gualerchar,mymensingh/jamalpur/islampur/gualerchar,BD45392947,Goaler Char,name_skeleton,medium,source level union
+44418,union,Islampur,mymensingh/jamalpur/islampur/islampur,BD45392955,Islampur,name_exact,high,source level union
+44413,union,Kulkandi,mymensingh/jamalpur/islampur/kulkandi,BD45392963,Kulkandi,name_exact,high,source level union
+44417,union,Noarpara,mymensingh/jamalpur/islampur/noarpara,BD45392971,Noarpara,name_exact,high,source level union
+44420,union,Palabandha,mymensingh/jamalpur/islampur/palabandha,BD45392979,Palbandha,name_skeleton,medium,source level union
+44419,union,Partharshi,mymensingh/jamalpur/islampur/partharshi,BD45392987,Patharsi,name_fuzzy,medium,source level union; similarity 0.93 to 'Partharshi'
+44416,union,Shapdari,mymensingh/jamalpur/islampur/shapdari,BD45392994,Sapdhari,name_banglish,high,source level union
+44394,union,Bashchara,mymensingh/jamalpur/jamalpur-sadar/bashchara,BD45393613,Banshchara,name_fuzzy,medium,source level union; similarity 0.93 to 'Bashchara'
+44393,union,Ghorada,mymensingh/jamalpur/jamalpur-sadar/ghorada,BD45393617,Ghoradhap,name_fuzzy,medium,source level union; similarity 0.92 to 'Ghorada'
+44400,union,Digpait,mymensingh/jamalpur/jamalpur-sadar/digpait,BD45393619,Digpaith,name_banglish,high,source level union
+44391,union,Itail,mymensingh/jamalpur/jamalpur-sadar/itail,BD45393623,Itail,name_exact,high,source level union
+44387,union,Kendua,mymensingh/jamalpur/jamalpur-sadar/kendua,BD45393635,Kendua,name_exact,high,source level union
+44389,union,Laxirchar,mymensingh/jamalpur/jamalpur-sadar/laxirchar,BD45393641,Lakshmir Char,name_fuzzy,medium,source level union; similarity 0.95 to 'Laxirchar'
+44399,union,Mesta,mymensingh/jamalpur/jamalpur-sadar/mesta,BD45393647,Meshta,name_exact,high,source level union
+44392,union,Narundi,mymensingh/jamalpur/jamalpur-sadar/narundi,BD45393653,Narundi,name_exact,high,source level union
+44395,union,Ranagacha,mymensingh/jamalpur/jamalpur-sadar/ranagacha,BD45393659,Ranagachha,name_exact,high,source level union
+44401,union,Rashidpur,mymensingh/jamalpur/jamalpur-sadar/rashidpur,BD45393665,Rashidpur,name_exact,high,source level union
+44397,union,Shahbajpur,mymensingh/jamalpur/jamalpur-sadar/shahbajpur,BD45393671,Sahabajpur,name_fuzzy,medium,source level union; similarity 0.95 to 'Shahbajpur'
+44388,union,Sharifpur,mymensingh/jamalpur/jamalpur-sadar/sharifpur,BD45393677,Sharifpur,name_exact,high,source level union
+44396,union,Sheepur,mymensingh/jamalpur/jamalpur-sadar/sheepur,BD45393683,Sreepur,name_fuzzy,medium,source level union; similarity 0.91 to 'Sheepur'
+44398,union,Titpalla,mymensingh/jamalpur/jamalpur-sadar/titpalla,BD45393689,Titpalla,name_exact,high,source level union
+44390,union,Tolshirchar,mymensingh/jamalpur/jamalpur-sadar/tolshirchar,BD45393695,Tulsir Char,name_skeleton,medium,source level union
+44446,union,Adarvita,mymensingh/jamalpur/madarganj/adarvita,BD45395811,Adarbhita,name_banglish,high,source level union
+44444,union,Balijuri,mymensingh/jamalpur/madarganj/balijuri,BD45395823,Balijuri,name_exact,high,source level union
+44441,union,Char Pakerdah,mymensingh/jamalpur/madarganj/char-pakerdah,BD45395835,Char Pakerdaha,name_skeleton,medium,source level union
+44443,union,Gunaritala,mymensingh/jamalpur/madarganj/gunaritala,BD45395847,Gunaritala,name_exact,high,source level union
+44445,union,Jorekhali,mymensingh/jamalpur/madarganj/jorekhali,BD45395859,Jorekhali,name_exact,high,source level union
+44442,union,Karaichara,mymensingh/jamalpur/madarganj/karaichara,BD45395871,Karaichara,name_exact,high,source level union
+44447,union,Sidhuli,mymensingh/jamalpur/madarganj/sidhuli,BD45395883,Sidhuli,name_exact,high,source level union
+44407,union,Adra,mymensingh/jamalpur/melandah/adra,BD45396117,Adra,name_exact,high,source level union
+44408,union,Charbani Pakuria,mymensingh/jamalpur/melandah/charbani-pakuria,BD45396119,Char Banipakuri,name_skeleton,medium,source level union
+44402,union,Durmot,mymensingh/jamalpur/melandah/durmot,BD45396128,Durmut,name_skeleton,medium,source level union
+44409,union,Fulkucha,mymensingh/jamalpur/melandah/fulkucha,BD45396138,Fulkocha,name_skeleton,medium,source level union
+44410,union,Ghuserpara,mymensingh/jamalpur/melandah/ghuserpara,BD45396147,Ghosher Para,name_skeleton,medium,source level union
+44411,union,Jhaugara,mymensingh/jamalpur/melandah/jhaugara,BD45396157,Jhaugara,name_exact,high,source level union
+44403,union,Kulia,mymensingh/jamalpur/melandah/kulia,BD45396166,Kulia,name_exact,high,source level union
+44404,union,Mahmudpur,mymensingh/jamalpur/melandah/mahmudpur,BD45396176,Mahmudpur,name_exact,high,source level union
+44405,union,Nangla,mymensingh/jamalpur/melandah/nangla,BD45396185,Nangla,name_exact,high,source level union
+44406,union,Nayanagar,mymensingh/jamalpur/melandah/nayanagar,BD45396195,Nayanagar,name_exact,high,source level union
+44412,union,Shuampur,mymensingh/jamalpur/melandah/shuampur,BD45396197,Shaympur,name_skeleton,medium,source level union
+44436,union,Aona,mymensingh/jamalpur/sarishabari/aona,BD45398510,Aona,name_exact,high,source level union
+44438,union,Bhatara,mymensingh/jamalpur/sarishabari/bhatara,BD45398521,Bhatara,name_exact,high,source level union
+44435,union,Doail,mymensingh/jamalpur/sarishabari/doail,BD45398531,Doail,name_exact,high,source level union
+44439,union,Kamrabad,mymensingh/jamalpur/sarishabari/kamrabad,BD45398542,Kamrabad,name_exact,high,source level union
+44440,union,Mahadan,mymensingh/jamalpur/sarishabari/mahadan,BD45398552,Mahadan,name_exact,high,source level union
+44437,union,Pingna,mymensingh/jamalpur/sarishabari/pingna,BD45398563,Pingna,name_exact,high,source level union
+44434,union,Pogaldigha,mymensingh/jamalpur/sarishabari/pogaldigha,BD45398573,Pogaldigha,name_exact,high,source level union
+44433,union,Satpoa,mymensingh/jamalpur/sarishabari/satpoa,BD45398584,Satpoa,name_exact,high,source level union
+44272,union,Bhaluka,mymensingh/mymensingh/bhaluka/bhaluka,BD45611314,Bhaluka,name_exact,high,source level union
+44268,union,Varadoba,mymensingh/mymensingh/bhaluka/varadoba,BD45611317,Bharadoba,name_banglish,high,source level union
+44271,union,Birunia,mymensingh/mymensingh/bhaluka/birunia,BD45611325,Birunia,name_exact,high,source level union
+44270,union,Dakatia,mymensingh/mymensingh/bhaluka/dakatia,BD45611334,Dakatia,name_exact,high,source level union
+44269,union,Dhitpur,mymensingh/mymensingh/bhaluka/dhitpur,BD45611343,Dhitpur,name_exact,high,source level union
+44275,union,Habirbari,mymensingh/mymensingh/bhaluka/habirbari,BD45611351,Habirbari,name_exact,high,source level union
+44274,union,Kachina,mymensingh/mymensingh/bhaluka/kachina,BD45611360,Kachina,name_exact,high,source level union
+44273,union,Mallikbari,mymensingh/mymensingh/bhaluka/mallikbari,BD45611369,Mallikbari,name_exact,high,source level union
+44267,union,Meduari,mymensingh/mymensingh/bhaluka/meduari,BD45611377,Meduary,name_banglish,high,source level union
+44276,union,Rajoi,mymensingh/mymensingh/bhaluka/rajoi,BD45611386,Rajai,name_fuzzy,low,source level union; similarity 0.80 to 'Rajoi'
+44266,union,Uthura,mymensingh/mymensingh/bhaluka/uthura,BD45611394,Uthura,name_exact,high,source level union
+44306,union,Baghber,mymensingh/mymensingh/dhobaura/baghber,BD45611610,Baghber,name_exact,high,source level union
+44300,union,Dakshin Maijpara,mymensingh/mymensingh/dhobaura/dakshin-maijpara,BD45611631,Dakshin Maij Para,name_exact,high,source level union
+44302,union,Dhobaura,mymensingh/mymensingh/dhobaura/dhobaura,BD45611636,Dobaura,name_banglish,high,source level union
+44301,union,Gamaritola,mymensingh/mymensingh/dhobaura/gamaritola,BD45611642,Gamaritala,name_skeleton,medium,source level union
+44304,union,Goatala,mymensingh/mymensingh/dhobaura/goatala,BD45611647,Guatala,name_skeleton,medium,source level union
+44305,union,Ghoshgaon,mymensingh/mymensingh/dhobaura/ghoshgaon,BD45611652,Ghoshgaon,name_exact,high,source level union
+44303,union,Porakandulia,mymensingh/mymensingh/dhobaura/porakandulia,BD45611673,Pora Kandulia,name_exact,high,source level union
+44251,union,Asimpatuli,mymensingh/mymensingh/fulbaria/asimpatuli,BD45612011,Achim Patuli,name_fuzzy,medium,source level union; similarity 0.90 to 'Asimpatuli'
+44246,union,Bakta,mymensingh/mymensingh/fulbaria/bakta,BD45612017,Bakta,name_exact,high,source level union
+44253,union,Balian,mymensingh/mymensingh/fulbaria/balian,BD45612023,Balian,name_exact,high,source level union
+44252,union,Vobanipur,mymensingh/mymensingh/fulbaria/vobanipur,BD45612029,Bhabanipur,name_skeleton,medium,source level union
+44241,union,Deukhola,mymensingh/mymensingh/fulbaria/deukhola,BD45612035,Deokhola,name_skeleton,medium,source level union
+44248,union,Enayetpur,mymensingh/mymensingh/fulbaria/enayetpur,BD45612041,Enayetpur,name_exact,high,source level union
+44245,union,Fulbaria,mymensingh/mymensingh/fulbaria/fulbaria,BD45612047,Fulbaria,name_exact,high,source level union
+44249,union,Kaladaha,mymensingh/mymensingh/fulbaria/kaladaha,BD45612053,Kaladaha,name_exact,high,source level union
+44244,union,Kushmail,mymensingh/mymensingh/fulbaria/kushmail,BD45612059,Kushmail,name_exact,high,source level union
+44242,union,Naogaon,mymensingh/mymensingh/fulbaria/naogaon,BD45612077,Naogaon,name_exact,high,source level union
+44243,union,Putijana,mymensingh/mymensingh/fulbaria/putijana,BD45612083,Putijana,name_exact,high,source level union
+44250,union,Radhakanai,mymensingh/mymensingh/fulbaria/radhakanai,BD45612089,Radhakanai,name_exact,high,source level union
+44247,union,Rangamatia,mymensingh/mymensingh/fulbaria/rangamatia,BD45612094,Rangamatia,name_exact,high,source level union
+44350,union,Barobaria,mymensingh/mymensingh/gafargaon/barobaria,BD45612211,Barabaria,name_skeleton,medium,source level union
+44351,union,Charalgi,mymensingh/mymensingh/gafargaon/charalgi,BD45612212,Char Algi,name_exact,high,source level union
+44361,union,Dotterbazar,mymensingh/mymensingh/gafargaon/dotterbazar,BD45612218,Datter Bazar,name_skeleton,medium,source level union
+44356,union,Gafargaon,mymensingh/mymensingh/gafargaon/gafargaon,BD45612225,Gaffargaon,name_exact,high,source level union
+44357,union,Josora,mymensingh/mymensingh/gafargaon/josora,BD45612231,Jessora,name_skeleton,medium,source level union
+44354,union,Longair,mymensingh/mymensingh/gafargaon/longair,BD45612237,Langair,name_skeleton,medium,source level union
+44358,union,Moshakhali,mymensingh/mymensingh/gafargaon/moshakhali,BD45612244,Mashakhali,name_skeleton,medium,source level union
+44362,union,Niguari,mymensingh/mymensingh/gafargaon/niguari,BD45612250,Nigair,name_skeleton,medium,source level union
+44355,union,Paithol,mymensingh/mymensingh/gafargaon/paithol,BD45612256,Paithal,name_skeleton,medium,source level union
+44359,union,Panchbagh,mymensingh/mymensingh/gafargaon/panchbagh,BD45612263,Panchbhag,name_banglish,high,source level union
+44349,union,Rasulpur,mymensingh/mymensingh/gafargaon/rasulpur,BD45612269,Rasulpur,name_exact,high,source level union
+44353,union,Raona,mymensingh/mymensingh/gafargaon/raona,BD45612275,Raona,name_exact,high,source level union
+44352,union,Saltia,mymensingh/mymensingh/gafargaon/saltia,BD45612282,Saltia,name_exact,high,source level union
+44363,union,Tangabo,mymensingh/mymensingh/gafargaon/tangabo,BD45612288,Tengaba,name_skeleton,medium,source level union
+44360,union,Usthi,mymensingh/mymensingh/gafargaon/usthi,BD45612294,Usthi,name_exact,high,source level union
+44340,union,Achintapur,mymensingh/mymensingh/gouripur/achintapur,BD45612315,Achintapur,name_exact,high,source level union
+44347,union,Bhangnamari,mymensingh/mymensingh/gouripur/bhangnamari,BD45612318,Bhangnamari,name_exact,high,source level union
+44342,union,Bokainagar,mymensingh/mymensingh/gouripur/bokainagar,BD45612322,Bokainagar,name_exact,high,source level union
+44346,union,Douhakhola,mymensingh/mymensingh/gouripur/douhakhola,BD45612327,Dowhakhala,name_skeleton,medium,source level union
+44343,union,Gouripur,mymensingh/mymensingh/gouripur/gouripur,BD45612331,Gauripur,name_skeleton,medium,source level union
+44341,union,Mailakanda,mymensingh/mymensingh/gouripur/mailakanda,BD45612349,Mailakanda,name_exact,high,source level union
+44344,union,Maoha,mymensingh/mymensingh/gouripur/maoha,BD45612358,Maoha,name_exact,high,source level union
+44345,union,Ramgopalpur,mymensingh/mymensingh/gouripur/ramgopalpur,BD45612372,Ramgopalpur,name_exact,high,source level union
+44339,union,Sahanati,mymensingh/mymensingh/gouripur/sahanati,BD45612381,Sahanati,name_exact,high,source level union
+44348,union,Sidhla,mymensingh/mymensingh/gouripur/sidhla,BD45612385,Sidhla,name_exact,high,source level union
+44337,union,Amtoil,mymensingh/mymensingh/haluaghat/amtoil,BD45612417,Amtail,name_skeleton,medium,source level union
+44327,union,Bhubankura,mymensingh/mymensingh/haluaghat/bhubankura,BD45612420,Bhubankura,name_exact,high,source level union
+44332,union,Bildora,mymensingh/mymensingh/haluaghat/bildora,BD45612421,Bildora,name_exact,high,source level union
+44335,union,Dhara,mymensingh/mymensingh/haluaghat/dhara,BD45612433,Dhara,name_exact,high,source level union
+44336,union,Dhurail,mymensingh/mymensingh/haluaghat/dhurail,BD45612440,Dhurail,name_exact,high,source level union
+44331,union,Gazirbhita,mymensingh/mymensingh/haluaghat/gazirbhita,BD45612447,Gazir Bhita,name_exact,high,source level union
+44330,union,Haluaghat,mymensingh/mymensingh/haluaghat/haluaghat,BD45612461,Haluaghat,name_exact,high,source level union
+44328,union,Jugli,mymensingh/mymensingh/haluaghat/jugli,BD45612467,Jugli,name_exact,high,source level union
+44329,union,Kaichapur,mymensingh/mymensingh/haluaghat/kaichapur,BD45612474,Kaichapur,name_exact,high,source level union
+44334,union,Narail,mymensingh/mymensingh/haluaghat/narail,BD45612481,Narail,name_exact,high,source level union
+44333,union,Sakuai,mymensingh/mymensingh/haluaghat/sakuai,BD45612484,Sakuai,name_exact,high,source level union
+44338,union,Swadeshi,mymensingh/mymensingh/haluaghat/swadeshi,BD45612494,Swadeshi,name_exact,high,source level union
+44367,union,Atharabari,mymensingh/mymensingh/iswarganj/atharabari,BD45613111,Atharabari,name_exact,high,source level union
+44374,union,Barahit,mymensingh/mymensingh/iswarganj/barahit,BD45613113,Barahit,name_exact,high,source level union
+44364,union,Iswarganj,mymensingh/mymensingh/iswarganj/iswarganj,BD45613140,Ishwarganj,name_exact,high,source level union
+44371,union,Jatia,mymensingh/mymensingh/iswarganj/jatia,BD45613145,Jatia,name_exact,high,source level union
+44369,union,Maijbagh,mymensingh/mymensingh/iswarganj/maijbagh,BD45613154,Maijbagh,name_exact,high,source level union
+44370,union,Magtula,mymensingh/mymensingh/iswarganj/magtula,BD45613163,Magtala,name_skeleton,medium,source level union
+44368,union,Rajibpur,mymensingh/mymensingh/iswarganj/rajibpur,BD45613167,Rajibpur,name_exact,high,source level union
+44365,union,Sarisha,mymensingh/mymensingh/iswarganj/sarisha,BD45613176,Sarisha,name_exact,high,source level union
+44366,union,Sohagi,mymensingh/mymensingh/iswarganj/sohagi,BD45613185,Sohagi,name_exact,high,source level union
+44373,union,Tarundia,mymensingh/mymensingh/iswarganj/tarundia,BD45613190,Tarundia,name_exact,high,source level union
+44372,union,Uchakhila,mymensingh/mymensingh/iswarganj/uchakhila,BD45613194,Uchakhila,name_exact,high,source level union
+44290,union,Aqua,mymensingh/mymensingh/mymensingh-sadar/aqua,BD45615223,Akua,name_banglish,high,source level union
+44287,union,Austadhar,mymensingh/mymensingh/mymensingh-sadar/austadhar,BD45615225,Ashtadhar,name_skeleton,medium,source level union
+44299,union,Boyra,mymensingh/mymensingh/mymensingh-sadar/boyra,BD45615227,Baira (kewatkhali),name_fuzzy,low,source level union; similarity 0.80 to 'Boyra'
+44298,union,Vabokhali,mymensingh/mymensingh/mymensingh-sadar/vabokhali,BD45615229,Bhabkhali,name_skeleton,medium,source level union
+44288,union,Bororchar,mymensingh/mymensingh/mymensingh-sadar/bororchar,BD45615231,Borar Char,name_skeleton,medium,source level union
+44296,union,Char Ishwardia,mymensingh/mymensingh/mymensingh-sadar/char-ishwardia,BD45615233,Char Ishwardia,name_exact,high,source level union
+44292,union,Charnilaxmia,mymensingh/mymensingh/mymensingh-sadar/charnilaxmia,BD45615240,Char Nilakshmia,name_banglish,high,source level union
+44289,union,Dapunia,mymensingh/mymensingh/mymensingh-sadar/dapunia,BD45615247,Dapunia,name_exact,high,source level union
+44297,union,Ghagra,mymensingh/mymensingh/mymensingh-sadar/ghagra,BD45615254,Ghagra,name_exact,high,source level union
+44291,union,Khagdohor,mymensingh/mymensingh/mymensingh-sadar/khagdohor,BD45615267,Khagdahar,name_skeleton,medium,source level union
+44293,union,Kushtia,mymensingh/mymensingh/mymensingh-sadar/kushtia,BD45615274,Kushtia,name_exact,high,source level union
+44294,union,Paranganj,mymensingh/mymensingh/mymensingh-sadar/paranganj,BD45615288,Paranganj,name_exact,high,source level union
+44295,union,Sirta,mymensingh/mymensingh/mymensingh-sadar/sirta,BD45615294,Sirta,name_exact,high,source level union
+44278,union,Borogram,mymensingh/mymensingh/muktagacha/borogram,BD45616516,Baragram,name_skeleton,medium,source level union
+44281,union,Basati,mymensingh/mymensingh/muktagacha/basati,BD45616517,Basati,name_exact,high,source level union
+44284,union,Daogaon,mymensingh/mymensingh/muktagacha/daogaon,BD45616525,Daogaon,name_exact,high,source level union
+44277,union,Dulla,mymensingh/mymensingh/muktagacha/dulla,BD45616534,Dulla,name_exact,high,source level union
+44283,union,Ghoga,mymensingh/mymensingh/muktagacha/ghoga,BD45616543,Ghoga,name_exact,high,source level union
+44285,union,Kashimpur,mymensingh/mymensingh/muktagacha/kashimpur,BD45616551,Kashimpur,name_exact,high,source level union
+44286,union,Kheruajani,mymensingh/mymensingh/muktagacha/kheruajani,BD45616560,Kheruajani,name_exact,high,source level union
+44280,union,Kumargata,mymensingh/mymensingh/muktagacha/kumargata,BD45616569,Kumarghata,name_banglish,high,source level union
+44282,union,Mankon,mymensingh/mymensingh/muktagacha/mankon,BD45616577,Mankon,name_exact,high,source level union
+44279,union,Tarati,mymensingh/mymensingh/muktagacha/tarati,BD45616594,Tarati,name_exact,high,source level union
+44383,union,Achargaon,mymensingh/mymensingh/nandail/achargaon,BD45617213,Achargaon,name_exact,high,source level union
+44375,union,Batagoir,mymensingh/mymensingh/nandail/batagoir,BD45617215,Betagair,name_skeleton,medium,source level union
+44377,union,Chandipasha,mymensingh/mymensingh/nandail/chandipasha,BD45617223,Chandipasha,name_exact,high,source level union
+44378,union,Gangail,mymensingh/mymensingh/nandail/gangail,BD45617231,Gangail,name_exact,high,source level union
+44386,union,Jahangirpur,mymensingh/mymensingh/nandail/jahangirpur,BD45617239,Jahangirpur,name_exact,high,source level union
+44385,union,Kharua,mymensingh/mymensingh/nandail/kharua,BD45617247,Kharua,name_exact,high,source level union
+44380,union,Muajjempur,mymensingh/mymensingh/nandail/muajjempur,BD45617255,Moazzempur,name_skeleton,medium,source level union
+44384,union,Mushulli,mymensingh/mymensingh/nandail/mushulli,BD45617263,Musuli,name_exact,high,source level union
+44376,union,Nandail,mymensingh/mymensingh/nandail/nandail,BD45617271,Nandail,name_exact,high,source level union
+44379,union,Rajgati,mymensingh/mymensingh/nandail/rajgati,BD45617279,Rajgati,name_exact,high,source level union
+44381,union,Sherpur,mymensingh/mymensingh/nandail/sherpur,BD45617287,Sherpur,name_exact,high,source level union
+44382,union,Singroil,mymensingh/mymensingh/nandail/singroil,BD45617294,Singrail,name_skeleton,medium,source level union
+44316,union,Balia,mymensingh/mymensingh/phulpur/balia,BD45618111,Balia,name_exact,high,source level union
+44309,union,Vaitkandi,mymensingh/mymensingh/phulpur/vaitkandi,BD45618118,Bhaitkandi,name_banglish,high,source level union
+44314,union,Baola,mymensingh/mymensingh/phulpur/baola,BD45618127,Baola,name_exact,high,source level union
+44315,union,Payari,mymensingh/mymensingh/phulpur/payari,BD45618154,Payari,name_exact,high,source level union
+44311,union,Phulpur,mymensingh/mymensingh/phulpur/phulpur,BD45618158,Phulpur,name_exact,high,source level union
+44317,union,Rahimganj,mymensingh/mymensingh/phulpur/rahimganj,BD45618163,Rahimganj,name_exact,high,source level union
+44307,union,Rambhadrapur,mymensingh/mymensingh/phulpur/rambhadrapur,BD45618167,Rambhadrapur,name_exact,high,source level union
+44321,union,Rupasi,mymensingh/mymensingh/phulpur/rupasi,BD45618176,Rupasi,name_exact,high,source level union
+44308,union,Sondhara,mymensingh/mymensingh/phulpur/sondhara,BD45618181,Sandhara,name_skeleton,medium,source level union
+44310,union,Singheshwar,mymensingh/mymensingh/phulpur/singheshwar,BD45618190,Singheshwar,name_exact,high,source level union
+44264,union,Amirabari,mymensingh/mymensingh/trishal/amirabari,BD45619413,Amirabari,name_exact,high,source level union
+44255,union,Bailor,mymensingh/mymensingh/trishal/bailor,BD45619415,Bailar,name_skeleton,medium,source level union
+44261,union,Balipara,mymensingh/mymensingh/trishal/balipara,BD45619419,Bali Para,name_exact,high,source level union
+44254,union,Dhanikhola,mymensingh/mymensingh/trishal/dhanikhola,BD45619428,Dhanikhola,name_exact,high,source level union
+44259,union,Harirampur,mymensingh/mymensingh/trishal/harirampur,BD45619438,Harirampur,name_exact,high,source level union
+44257,union,Kanihari,mymensingh/mymensingh/trishal/kanihari,BD45619447,Kanihari,name_exact,high,source level union
+44256,union,Kanthal,mymensingh/mymensingh/trishal/kanthal,BD45619457,Kanthal,name_exact,high,source level union
+44263,union,Mathbari,mymensingh/mymensingh/trishal/mathbari,BD45619461,Mathbari,name_exact,high,source level union
+44262,union,Mokshapur,mymensingh/mymensingh/trishal/mokshapur,BD45619463,Mokshapur,name_exact,high,source level union
+44265,union,Rampur,mymensingh/mymensingh/trishal/rampur,BD45619466,Rampur,name_exact,high,source level union
+44260,union,Sakhua,mymensingh/mymensingh/trishal/sakhua,BD45619476,Sakhua,name_exact,high,source level union
+44258,union,Trishal,mymensingh/mymensingh/trishal/trishal,BD45619485,Trishal,name_exact,high,source level union
+44485,union,Baniyajan,mymensingh/netrokona/atpara/baniyajan,BD45720411,Baniajan,name_banglish,high,source level union
+44484,union,Lunesshor,mymensingh/netrokona/atpara/lunesshor,BD45720435,Loneshwar,name_skeleton,medium,source level union
+44482,union,Shormushia,mymensingh/netrokona/atpara/shormushia,BD45720447,Sarmaisa,name_skeleton,medium,source level union
+44488,union,Sukhari,mymensingh/netrokona/atpara/sukhari,BD45720459,Sukhari,name_exact,high,source level union
+44486,union,Teligati,mymensingh/netrokona/atpara/teligati,BD45720483,Teligati,name_exact,high,source level union
+44455,union,Asma,mymensingh/netrokona/barhatta/asma,BD45720911,Asma,name_exact,high,source level union
+44458,union,Barhatta,mymensingh/netrokona/barhatta/barhatta,BD45720923,Barhatta,name_exact,high,source level union
+44457,union,Baushi,mymensingh/netrokona/barhatta/baushi,BD45720935,Baushi,name_exact,high,source level union
+44456,union,Chhiram,mymensingh/netrokona/barhatta/chhiram,BD45720947,Chhiram,name_exact,high,source level union
+44459,union,Raypur,mymensingh/netrokona/barhatta/raypur,BD45720959,Roypur,name_skeleton,medium,source level union
+44460,union,Sahata,mymensingh/netrokona/barhatta/sahata,BD45720971,Sahata,name_exact,high,source level union
+44461,union,Singdha,mymensingh/netrokona/barhatta/singdha,BD45720983,Singdha,name_exact,high,source level union
+44467,union,Bakaljora,mymensingh/netrokona/durgapur/bakaljora,BD45721812,Bakaljora,name_exact,high,source level union
+44466,union,Birisiri,mymensingh/netrokona/durgapur/birisiri,BD45721817,Birisiri,name_exact,high,source level union
+44465,union,Chandigarh,mymensingh/netrokona/durgapur/chandigarh,BD45721825,Chandigarh,name_exact,high,source level union
+44462,union,Durgapur,mymensingh/netrokona/durgapur/durgapur,BD45721851,Durgapur,name_exact,high,source level union
+44468,union,Gawkandia,mymensingh/netrokona/durgapur/gawkandia,BD45721869,Gaokandia,name_exact,high,source level union
+44463,union,Kakoirgora,mymensingh/netrokona/durgapur/kakoirgora,BD45721877,Kakairgara,name_skeleton,medium,source level union
+44464,union,Kullagora,mymensingh/netrokona/durgapur/kullagora,BD45721886,Kullagora,name_exact,high,source level union
+44499,union,Chakua,mymensingh/netrokona/khaliajuri/chakua,BD45723813,Chakua,name_exact,high,source level union
+44502,union,Gazipur,mymensingh/netrokona/khaliajuri/gazipur,BD45723827,Gazipur,name_exact,high,source level union
+44500,union,Khaliajuri,mymensingh/netrokona/khaliajuri/khaliajuri,BD45723840,Khaliajuri,name_exact,high,source level union
+44497,union,Krishnapur,mymensingh/netrokona/khaliajuri/krishnapur,BD45723854,Krishnapur,name_exact,high,source level union
+44501,union,Mendipur,mymensingh/netrokona/khaliajuri/mendipur,BD45723867,Mendipur,name_exact,high,source level union
+44498,union,Nogor,mymensingh/netrokona/khaliajuri/nogor,BD45723881,Nagar,name_skeleton,medium,source level union
+44503,union,Koilati,mymensingh/netrokona/kalmakanda/koilati,BD45724023,Kailati,name_skeleton,medium,source level union
+44506,union,Kolmakanda,mymensingh/netrokona/kalmakanda/kolmakanda,BD45724035,Kalmakanda,name_skeleton,medium,source level union
+44510,union,Kharnoi,mymensingh/netrokona/kalmakanda/kharnoi,BD45724047,Kharnai,name_skeleton,medium,source level union
+44508,union,Lengura,mymensingh/netrokona/kalmakanda/lengura,BD45724059,Lengura,name_exact,high,source level union
+44504,union,Najirpur,mymensingh/netrokona/kalmakanda/najirpur,BD45724071,Nazirpur,name_banglish,high,source level union
+44505,union,Pogla,mymensingh/netrokona/kalmakanda/pogla,BD45724083,Pogla,name_exact,high,source level union
+44507,union,Rongchati,mymensingh/netrokona/kalmakanda/rongchati,BD45724095,Rangchhati,name_skeleton,medium,source level union
+44469,union,Asujia,mymensingh/netrokona/kendua/asujia,BD45724711,Asujia,name_exact,high,source level union
+44475,union,Bolaishimul,mymensingh/netrokona/kendua/bolaishimul,BD45724713,Balaishimul,name_skeleton,medium,source level union
+44478,union,Chirang,mymensingh/netrokona/kendua/chirang,BD45724720,Chirang,name_exact,high,source level union
+44470,union,Dalpa,mymensingh/netrokona/kendua/dalpa,BD45724727,Dalpa,name_exact,high,source level union
+44471,union,Goraduba,mymensingh/netrokona/kendua/goraduba,BD45724733,Garadoba,name_skeleton,medium,source level union
+44472,union,Gonda,mymensingh/netrokona/kendua/gonda,BD45724740,Ganda,name_skeleton,medium,source level union
+44477,union,Kandiura,mymensingh/netrokona/kendua/kandiura,BD45724747,Kandiura,name_exact,high,source level union
+44474,union,Maska,mymensingh/netrokona/kendua/maska,BD45724761,Mashka,name_exact,high,source level union
+44481,union,Muzafarpur,mymensingh/netrokona/kendua/muzafarpur,BD45724767,Muzaffarpur,name_exact,high,source level union
+44476,union,Noapara,mymensingh/netrokona/kendua/noapara,BD45724774,Noapara,name_exact,high,source level union
+44480,union,Paikura,mymensingh/netrokona/kendua/paikura,BD45724781,Paikura,name_exact,high,source level union
+44473,union,Sandikona,mymensingh/netrokona/kendua/sandikona,BD45724794,Sandikona,name_exact,high,source level union
+44489,union,Fathepur,mymensingh/netrokona/madan/fathepur,BD45725610,Fatehpur,name_skeleton,medium,source level union
+44493,union,Gobindasree,mymensingh/netrokona/madan/gobindasree,BD45725621,Gobindasree,name_exact,high,source level union
+44495,union,Chandgaw,mymensingh/netrokona/madan/chandgaw,BD45725631,Chandgaon,name_fuzzy,medium,source level union; similarity 0.93 to 'Chandgaw'
+44496,union,Kytail,mymensingh/netrokona/madan/kytail,BD45725642,Kaitail,name_skeleton,medium,source level union
+44494,union,Madan,mymensingh/netrokona/madan/madan,BD45725652,Madan,name_exact,high,source level union
+44492,union,Magan,mymensingh/netrokona/madan/magan,BD45725663,Maghan,name_banglish,high,source level union
+44490,union,Nayekpur,mymensingh/netrokona/madan/nayekpur,BD45725673,Nayekpur,name_exact,high,source level union
+44491,union,Teosree,mymensingh/netrokona/madan/teosree,BD45725684,Tiasree,name_skeleton,medium,source level union
+44511,union,Borokashia Birampur,mymensingh/netrokona/mohongonj/borokashia-birampur,BD45726310,Barkashia Biramp,name_fuzzy,low,source level union; similarity 0.84 to 'Borokashia Birampur'
+44512,union,Borotoli Banihari,mymensingh/netrokona/mohongonj/borotoli-banihari,BD45726321,Baratali Banihari,name_skeleton,medium,source level union
+44517,union,Gaglajur,mymensingh/netrokona/mohongonj/gaglajur,BD45726331,Gaglajur,name_exact,high,source level union
+44514,union,Maghan Siadar,mymensingh/netrokona/mohongonj/maghan-siadar,BD45726342,Maghan Siadhar,name_banglish,high,source level union
+44515,union,Somaj Sohildeo,mymensingh/netrokona/mohongonj/somaj-sohildeo,BD45726363,Samaj Sahildeo,name_skeleton,medium,source level union
+44516,union,Suair,mymensingh/netrokona/mohongonj/suair,BD45726373,Suair,name_exact,high,source level union
+44513,union,Tetulia,mymensingh/netrokona/mohongonj/tetulia,BD45726384,Tentulia,name_fuzzy,medium,source level union; similarity 0.93 to 'Tetulia'
+44533,union,Amtola,mymensingh/netrokona/netrokona-sadar/amtola,BD45727413,Amtala,name_skeleton,medium,source level union
+44529,union,Chollisha,mymensingh/netrokona/netrokona-sadar/chollisha,BD45727415,Challisha,name_skeleton,medium,source level union
+44531,union,Dokkhin Bishiura,mymensingh/netrokona/netrokona-sadar/dokkhin-bishiura,BD45727423,Dakshin Bishiura,name_fuzzy,medium,source level union; similarity 0.88 to 'Dokkhin Bishiura'
+44530,union,Kailati,mymensingh/netrokona/netrokona-sadar/kailati,BD45727431,Kailati,name_exact,high,source level union
+44540,union,Kaliara Babragati,mymensingh/netrokona/netrokona-sadar/kaliara-babragati,BD45727439,Kaliara Gabragat,name_fuzzy,medium,source level union; similarity 0.90 to 'Kaliara Babragati'
+44532,union,Modonpur,mymensingh/netrokona/netrokona-sadar/modonpur,BD45727454,Madanpur,name_skeleton,medium,source level union
+44539,union,Medni,mymensingh/netrokona/netrokona-sadar/medni,BD45727455,Medni,name_exact,high,source level union
+44537,union,Mougati,mymensingh/netrokona/netrokona-sadar/mougati,BD45727463,Maugati,name_skeleton,medium,source level union
+44538,union,Rouha,mymensingh/netrokona/netrokona-sadar/rouha,BD45727479,Rauha,name_fuzzy,medium,source level union; similarity 0.89 to 'Rouha'
+44535,union,Singher Bangla,mymensingh/netrokona/netrokona-sadar/singher-bangla,BD45727487,Singhar Bangla,name_skeleton,medium,source level union
+44536,union,Thakurakona,mymensingh/netrokona/netrokona-sadar/thakurakona,BD45727494,Thakurakona,name_exact,high,source level union
+44527,union,Agia,mymensingh/netrokona/purbadhala/agia,BD45728313,Agia,name_exact,high,source level union
+44523,union,Bairaty,mymensingh/netrokona/purbadhala/bairaty,BD45728315,Bairati,name_banglish,high,source level union
+44522,union,Bishkakuni,mymensingh/netrokona/purbadhala/bishkakuni,BD45728323,Bishkakuni,name_exact,high,source level union
+44526,union,Dhalamulgaon,mymensingh/netrokona/purbadhala/dhalamulgaon,BD45728331,Dhala Mulgaon,name_exact,high,source level union
+44519,union,Ghagra,mymensingh/netrokona/purbadhala/ghagra,BD45728339,Ghagra,name_exact,high,source level union
+44525,union,Gohalakanda,mymensingh/netrokona/purbadhala/gohalakanda,BD45728355,Gohalakanda,name_exact,high,source level union
+44524,union,Hogla,mymensingh/netrokona/purbadhala/hogla,BD45728363,Hogla,name_exact,high,source level union
+44520,union,Jaria,mymensingh/netrokona/purbadhala/jaria,BD45728371,Jaria,name_exact,high,source level union
+44518,union,Khalishaur,mymensingh/netrokona/purbadhala/khalishaur,BD45728379,Khalishaur,name_exact,high,source level union
+44521,union,Narandia,mymensingh/netrokona/purbadhala/narandia,BD45728387,Narandia,name_exact,high,source level union
+44528,union,Purbadhala,mymensingh/netrokona/purbadhala/purbadhala,BD45728394,Purbadhala,name_exact,high,source level union
+44235,union,Dansail,mymensingh/sherpur/jhenaigati/dansail,BD45893712,Dhanshail,name_banglish,high,source level union
+44237,union,Gouripur,mymensingh/sherpur/jhenaigati/gouripur,BD45893715,Gauripur,name_skeleton,medium,source level union
+44238,union,Jhenaigati,mymensingh/sherpur/jhenaigati/jhenaigati,BD45893725,Jhenaigati,name_exact,high,source level union
+44234,union,Kansa,mymensingh/sherpur/jhenaigati/kansa,BD45893743,Kangsha,name_fuzzy,medium,source level union; similarity 0.91 to 'Kansa'
+44240,union,Malijhikanda,mymensingh/sherpur/jhenaigati/malijhikanda,BD45893750,Malijhikanda,name_exact,high,source level union
+44236,union,Nolkura,mymensingh/sherpur/jhenaigati/nolkura,BD45893760,Nalkura,name_skeleton,medium,source level union
+44229,union,Baneshwardi,mymensingh/sherpur/nokla/baneshwardi,BD45896717,Baneshwardi,name_exact,high,source level union
+44233,union,Chandrakona,mymensingh/sherpur/nokla/chandrakona,BD45896719,Chandrakona,name_exact,high,source level union
+44232,union,Choraustadhar,mymensingh/sherpur/nokla/choraustadhar,BD45896728,Char Ashtadhar,name_skeleton,medium,source level union
+44225,union,Gonopoddi,mymensingh/sherpur/nokla/gonopoddi,BD45896738,Ganapaddi,name_skeleton,medium,source level union
+44228,union,Gourdwar,mymensingh/sherpur/nokla/gourdwar,BD45896747,Gourdwar,name_exact,high,source level union
+44226,union,Nokla,mymensingh/sherpur/nokla/nokla,BD45896757,Nakla,name_skeleton,medium,source level union
+44230,union,Pathakata,mymensingh/sherpur/nokla/pathakata,BD45896766,Pathakata,name_exact,high,source level union
+44231,union,Talki,mymensingh/sherpur/nokla/talki,BD45896776,Talki,name_exact,high,source level union
+44227,union,Urpha,mymensingh/sherpur/nokla/urpha,BD45896785,Urpha,name_exact,high,source level union
+44212,union,Bagber,mymensingh/sherpur/nalitabari/bagber,BD45897030,Baghber,name_banglish,high,source level union
+44211,union,Juganiya,mymensingh/sherpur/nalitabari/juganiya,BD45897034,Jogania,name_skeleton,medium,source level union
+44209,union,Kakorkandhi,mymensingh/sherpur/nalitabari/kakorkandhi,BD45897038,Kakarkandi,name_skeleton,medium,source level union
+44213,union,Koloshpar,mymensingh/sherpur/nalitabari/koloshpar,BD45897041,Kalaspur,name_skeleton,medium,source level union
+44210,union,Nalitabari,mymensingh/sherpur/nalitabari/nalitabari,BD45897051,Nalitabari,name_exact,high,source level union
+44207,union,Nayabil,mymensingh/sherpur/nalitabari/nayabil,BD45897055,Nayabil,name_exact,high,source level union
+44205,union,Morichpuran,mymensingh/sherpur/nalitabari/morichpuran,BD45897072,Marichpura,name_fuzzy,low,source level union; similarity 0.84 to 'Morichpuran'
+44206,union,Rajnogor,mymensingh/sherpur/nalitabari/rajnogor,BD45897077,Rajnagar,name_skeleton,medium,source level union
+44214,union,Rupnarayankura,mymensingh/sherpur/nalitabari/rupnarayankura,BD45897094,Rupnarayankura,name_exact,high,source level union
+44191,union,Bajitkhila,mymensingh/sherpur/sherpur-sadar/bajitkhila,BD45898811,Bajitkhila,name_exact,high,source level union
+44202,union,Balairchar,mymensingh/sherpur/sherpur-sadar/balairchar,BD45898813,Balair Char,name_exact,high,source level union
+44201,union,Betmari Ghughurakandi,mymensingh/sherpur/sherpur-sadar/betmari-ghughurakandi,BD45898815,Betmari Ghughurakandi,name_exact,high,source level union
+44195,union,Vatshala,mymensingh/sherpur/sherpur-sadar/vatshala,BD45898820,Bhatsala,name_banglish,high,source level union
+44199,union,Chor Mochoriya,mymensingh/sherpur/sherpur-sadar/chor-mochoriya,BD45898827,Char Mucharia,name_skeleton,medium,source level union
+44190,union,Chorsherpur,mymensingh/sherpur/sherpur-sadar/chorsherpur,BD45898840,Char Sherpur,name_skeleton,medium,source level union
+44192,union,Gajir Khamar,mymensingh/sherpur/sherpur-sadar/gajir-khamar,BD45898854,Ghazir Khamar,name_banglish,high,source level union
+44189,union,Kamararchor,mymensingh/sherpur/sherpur-sadar/kamararchor,BD45898861,Kamarer Char,name_skeleton,medium,source level union
+44198,union,Kamariya,mymensingh/sherpur/sherpur-sadar/kamariya,BD45898867,Kamaria,name_banglish,high,source level union
+44194,union,Pakuriya,mymensingh/sherpur/sherpur-sadar/pakuriya,BD45898881,Pakuria,name_banglish,high,source level union
+44221,union,Bhelua,mymensingh/sherpur/sreebordi/bhelua,BD45899015,Bhelua,name_exact,high,source level union
+44224,union,Garjaripa,mymensingh/sherpur/sreebordi/garjaripa,BD45899031,Garjaripa,name_exact,high,source level union
+44219,union,Gosaipur,mymensingh/sherpur/sreebordi/gosaipur,BD45899039,Gosaipur,name_exact,high,source level union
+44217,union,Kakilakura,mymensingh/sherpur/sreebordi/kakilakura,BD45899047,Kakilakura,name_exact,high,source level union
+44222,union,Kharia Kazirchar,mymensingh/sherpur/sreebordi/kharia-kazirchar,BD45899055,Kharia Kazir Char,name_exact,high,source level union
+44223,union,Kurikahonia,mymensingh/sherpur/sreebordi/kurikahonia,BD45899063,Kurikahania,name_skeleton,medium,source level union
+44215,union,Ranishimul,mymensingh/sherpur/sreebordi/ranishimul,BD45899071,Rani Shimul,name_exact,high,source level union
+44216,union,Singabaruna,mymensingh/sherpur/sreebordi/singabaruna,BD45899079,Singa Baruna,name_exact,high,source level union
+44220,union,Sreebordi,mymensingh/sherpur/sreebordi/sreebordi,BD45899086,Sreebardi,name_skeleton,medium,source level union
+44218,union,Tatihati,mymensingh/sherpur/sreebordi/tatihati,BD45899094,Tantihati,name_fuzzy,medium,source level union; similarity 0.94 to 'Tatihati'
+,,,,BD45618112,Balikhan,unmatched,none,source level union; no candidates under parent
+44312,union,Banihala,mymensingh/mymensingh/tarakanda/banihala,BD45618113,Banihala,name_exact_other_parent,medium,"source level union; source parent Phulpur, our parent Tarakanda; check parent change"
+44313,union,Biska,mymensingh/mymensingh/tarakanda/biska,BD45618122,Bishka,name_exact_other_parent,medium,"source level union; source parent Phulpur, our parent Tarakanda; check parent change"
+44320,union,Dhakua,mymensingh/mymensingh/tarakanda/dhakua,BD45618131,Dhakua,name_exact_other_parent,medium,"source level union; source parent Phulpur, our parent Tarakanda; check parent change"
+44323,union,Galagaon,mymensingh/mymensingh/tarakanda/galagaon,BD45618136,Galagaon,name_exact_other_parent,medium,"source level union; source parent Phulpur, our parent Tarakanda; check parent change"
+44319,union,Kakni,mymensingh/mymensingh/tarakanda/kakni,BD45618140,Kakni,name_exact_other_parent,medium,"source level union; source parent Phulpur, our parent Tarakanda; check parent change"
+44324,union,Kamargaon,mymensingh/mymensingh/tarakanda/kamargaon,BD45618145,Kamargaon,name_exact_other_parent,medium,"source level union; source parent Phulpur, our parent Tarakanda; check parent change"
+44325,union,Kamaria,mymensingh/mymensingh/tarakanda/kamaria,BD45618149,Kamaria,name_exact_other_parent,medium,"source level union; source parent Phulpur, our parent Tarakanda; check parent change"
+44326,union,Rampur,mymensingh/mymensingh/tarakanda/rampur,BD45618172,Rampur,name_exact_other_parent,medium,"source level union; source parent Phulpur, our parent Tarakanda; check parent change"
+44322,union,Tarakanda,mymensingh/mymensingh/tarakanda/tarakanda,BD45618194,Tarakanda,name_exact_other_parent,medium,"source level union; source parent Phulpur, our parent Tarakanda; check parent change"
+,,,,BD45720423,Duaz,unmatched,none,source level union; best candidates: Duoj 0.75; Shunoi 0.22
+,,,,BD45720471,Sonai,unmatched,none,source level union; best candidates: Shunoi 0.60; Duoj 0.22
+,,,,BD45724011,Bara Kharpan,unmatched,none,source level union; best candidates: Borokhapon 0.63
+,,,,BD45724788,Roailbari,unmatched,none,source level union; best candidates: Roailbari Amtala 0.75
+,,,,BD45727447,Lakshmiganj,unmatched,none,source level union; best candidates: Lokkhiganj 0.78; Rouha 0.14
+,,,,BD45893717,Hatibandha Malijhikanda,unmatched,none,source level union; best candidates: Hatibandha 0.62; Kansa 0.32
+,,,,BD45897069,Nunni,unmatched,none,source level union; best candidates: Nonni 0.75; Ramchondrokura 0.24
+,,,,BD45897075,Poragaon,unmatched,none,source level union; best candidates: Puraga 0.71; Ramchondrokura 0.38
+,,,,BD45897086,Ramchandrakura Mandalia,unmatched,none,source level union; best candidates: Ramchondrokura 0.65; Puraga 0.30
+,,,,BD45898833,Char Pakshimari,unmatched,none,source level union; best candidates: Chorpokhimari 0.78; Rouha 0.12
+,,,,BD45898847,Dhala,unmatched,none,source level union; best candidates: Dhola 0.75; Rouha 0.25
+,,,,BD45898874,Lakshmanpur,unmatched,none,source level union; best candidates: Losmonpur 0.74; Chorpokhimari 0.38
+,,,,BD45898888,Rauha Betmari,unmatched,none,source level union; best candidates: Rouha 0.50; Chorpokhimari 0.43
+44193,union,Dhola,mymensingh/sherpur/sherpur-sadar/dhola,,,no_source_unit,none,no HDX unit matched under Sherpur Sadar
+44196,union,Losmonpur,mymensingh/sherpur/sherpur-sadar/losmonpur,,,no_source_unit,none,no HDX unit matched under Sherpur Sadar
+44197,union,Rouha,mymensingh/sherpur/sherpur-sadar/rouha,,,no_source_unit,none,no HDX unit matched under Sherpur Sadar
+44200,union,Chorpokhimari,mymensingh/sherpur/sherpur-sadar/chorpokhimari,,,no_source_unit,none,no HDX unit matched under Sherpur Sadar
+44203,union,Puraga,mymensingh/sherpur/nalitabari/puraga,,,no_source_unit,none,no HDX unit matched under Nalitabari
+44204,union,Nonni,mymensingh/sherpur/nalitabari/nonni,,,no_source_unit,none,no HDX unit matched under Nalitabari
+44208,union,Ramchondrokura,mymensingh/sherpur/nalitabari/ramchondrokura,,,no_source_unit,none,no HDX unit matched under Nalitabari
+44239,union,Hatibandha,mymensingh/sherpur/jhenaigati/hatibandha,,,no_source_unit,none,no HDX unit matched under Jhenaigati
+44318,union,Balikha,mymensingh/mymensingh/tarakanda/balikha,,,no_source_unit,none,no HDX unit matched under Tarakanda
+44479,union,Roailbari Amtala,mymensingh/netrokona/kendua/roailbari-amtala,,,no_source_unit,none,no HDX unit matched under Kendua
+44483,union,Shunoi,mymensingh/netrokona/atpara/shunoi,,,no_source_unit,none,no HDX unit matched under Atpara
+44487,union,Duoj,mymensingh/netrokona/atpara/duoj,,,no_source_unit,none,no HDX unit matched under Atpara
+44509,union,Borokhapon,mymensingh/netrokona/kalmakanda/borokhapon,,,no_source_unit,none,no HDX unit matched under Kalmakanda
+44534,union,Lokkhiganj,mymensingh/netrokona/netrokona-sadar/lokkhiganj,,,no_source_unit,none,no HDX unit matched under Netrokona Sadar

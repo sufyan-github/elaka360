@@ -1,0 +1,23 @@
+{
+  "key": "BD_POLICE_CONTACTS_2020_MYMENSINGH",
+  "division": "mymensingh",
+  "kind": "police_hq_2020",
+  "name": "Bangladesh Police HQ — Contacts of Bangladesh Police (Mymenshing Range sheet)",
+  "organization": "Bangladesh Police Headquarters",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf",
+    "https://www.police.gov.bd/storage/upload/announcement/EcDDy28T7DJdOqyuVB2CSiTjUAX8kTiy1HBoOPHj.xlsx"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": "2020-10-03",
+  "license": null,
+  "license_url": null,
+  "attribution": "Bangladesh Police (police.gov.bd)",
+  "notes": "No licence stated. XLSX 'Contacts Of Bangladesh Police' uploaded 03-10-2020 (Last-Modified 2020-10-03). Only the Mymenshing Range sheet is used (raw/ keeps those rows as CSV; the full 1.5 MB workbook is re-downloaded by fetch.py). Designations only, no personal names. Old 2020 numbers: the 01320-series 'New Number' values match the 2026 district/RMP portals where checked; the 'Current Number' column is the pre-2020 numbering. For this division the 2026 portals were not cross-checked by this collector.",
+  "files": {
+    "places.csv": "53bc44b1597ed0580e16f841db4ddfea417f9da456137c67772473c31454aa86",
+    "raw/police_contacts_2020_mymensingh_range.csv": "c2a63d59e0e14bf6e9d6eba66db56fec84fd16358071a3c1f9613263681a251e"
+  }
+}

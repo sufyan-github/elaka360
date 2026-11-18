@@ -47,7 +47,8 @@ COLUMNS = ("id,name,name_bn,code,email_1,mobile_1,official_contact_no,land_phone
            "approved_bed_number,revenue_bed_number,latest_bed_count")
 RAW_REL = f"raw/hris_organization_list_{DIV}_division.csv"
 RAW = os.path.join(OUT, *RAW_REL.split("/"))
-# Contact columns are blanked for private/NGO rows before anything is written to disk (may be personal numbers).
+# Contact columns are blanked for private/NGO rows before anything is written to disk (may be personal numbers);
+# for every division, non-*.gov.bd e-mails of the other rows too (see GOV_MAIL_ONLY).
 PRIVATE_BLANK = ("Email", "Mobile 1", "Official Contact No", "Land Phone 1", "Website Url", "Mailing Address")
 
 # --- polite HTTP helper (copy this block into each fetch.py; stdlib + requests only) -----------------
@@ -181,6 +182,7 @@ def download():
         os.unlink(t.name)
     head = [(h or "").strip() for h in rows[0]]
     os.makedirs(os.path.dirname(RAW), exist_ok=True)
+    blanked = 0
     with open(RAW, "w", encoding="utf-8", newline="") as f:
         w = csv.writer(f)
         w.writerow(head)
@@ -190,8 +192,16 @@ def download():
                 for k in PRIVATE_BLANK:
                     if k in d:
                         d[k] = ""
+            else:
+                if GOV_MAIL_ONLY and d.get("Email") and not d["Email"].lower().rsplit("@", 1)[-1].endswith(".gov.bd"):
+                    d["Email"] = ""  # possibly a staff member's own mailbox: not kept in raw/ either
+                    blanked += 1
+                if GOV_MAIL_ONLY:
+                    for k in ("Mailing Address", "Website Url"):
+                        if k in d:
+                            d[k] = strip_non_gov_mail(d[k])
             w.writerow([d.get(h, "") for h in head])
-    print("saved", RAW, len(rows) - 1, "rows")
+    print("saved", RAW, len(rows) - 1, "rows" + (f"; {blanked} non-*.gov.bd e-mails of non-private rows blanked" if GOV_MAIL_ONLY else ""))
     return True
 
 
@@ -267,15 +277,118 @@ def phone(s):
 _UPAZILA_FIX = {
     "rajshahi": {"Matihar": "Motihar", "Mohonpur": "Mohanpur", "Baghmara": "Bagmara"},
     "rangpur": {"Rajibpur": "Char Rajibpur"},
+    # Dhaka: spellings as in the BANBEIS / IPEMIS Dhaka outputs; metro thanas only lose doubled spaces / odd case
+    "dhaka": {"Manohardi": "Monohardi", "Roypura": "Raipura", "Serajdikhan": "Sirajdikhan",
+              "Uttara  Paschim": "Uttara Paschim", "Uttara  Purba": "Uttara Purba",
+              "Sher-e-bangla Nagar": "Sher-e-Bangla Nagar"},
+    # Chattogram: spellings as in the BANBEIS / IPEMIS Chattogram outputs
+    "chattogram": {"Anowara": "Anwara", "Fatikchari": "Fatikchhari", "Lalmi": "Lalmai", "Banchharampur": "Bancharampur",
+                   "Khagrachari Sadar": "Khagrachhari Sadar", "Lakshmichari": "Lakshmichhari", "Mahalchari": "Mahalchhari",
+                   "Manikchari": "Manikchhari", "Baghaichari": "Baghaichhari", "Belaichari": "Belaichhari",
+                   "Juraichari": "Jurachhari", "Kowkhali": "Kawkhali", "Naikhongchari": "Naikhongchhari",
+                   "Rowangchari": "Rowangchhari"},
+    # Khulna: spellings as in the BANBEIS / IPEMIS Khulna outputs
+    "khulna": {"Chaugacha": "Chaugachha", "Jhikargacha": "Jhikargachha", "Monirampur": "Manirampur",
+               "Paikgacha": "Paikgachha"},
+    # Barishal: spellings as in the BANBEIS / IPEMIS Barishal outputs
+    "barishal": {"Kanthalia": "Kathalia", "Charfession": "Char Fasson"},
+    # Sylhet: spellings as in the BANBEIS / IPEMIS Sylhet outputs
+    "sylhet": {"Maulvibazar Sadar": "Moulvibazar Sadar", "Dharampasha": "Dharmapasha", "Sulla": "Shalla"},
+    # Mymensingh: the seed's English upazila spellings (as in the BANBEIS / IPEMIS Mymensingh outputs); the registry
+    # writes Gouripur both as "Gouripur" and "Gauripur", and Gafargaon both as "Gafargaon" and "Gaffargaon"
+    "mymensingh": {"Bakshiganj": "Bokshiganj", "Dewanganj": "Dewangonj", "Melandaha": "Melandah",
+                   "Gaffargaon": "Gafargaon", "Gauripur": "Gouripur", "Ishwarganj": "Iswarganj",
+                   "Mohanganj": "Mohongonj", "Nakla": "Nokla", "Sreebardi": "Sreebordi"},
 }
 _METRO_THANAS = {
     "rajshahi": {"Boalia", "Rajpara", "Motihar", "Matihar", "Shah Makhdum", "Chandrima", "Kashiadanga", "Katakhali",
                  "Belpukur", "Damkura", "Karnahar", "Airport", "Paba Metro"},
     # Rangpur Metropolitan Police thanas
     "rangpur": {"Kotwali", "Rangpur Kotwali", "Tajhat", "Mahiganj", "Haragach", "Parshuram", "Hajirhat"},
+    # Dhaka Metropolitan Police thanas (as the registry spells them) and Gazipur Metropolitan Police thanas
+    "dhaka": {"Adabor", "Badda", "Banani", "Bangshal", "Bhasan Tek", "Bhatara", "Biman Bandar", "Cantonment",
+              "Chak Bazar", "Dakshinkhan", "Darus Salam", "Demra", "Dhanmondi", "Gendaria", "Gulshan", "Hazaribagh",
+              "Jatrabari", "Kadamtali", "Kafrul", "Kalabagan", "Kamrangir Char", "Khilgaon", "Khilkhet", "Kotwali",
+              "Lalbag", "Lalbagh", "Mirpur", "Mohammadpur", "Motijheel", "Mugda Para", "New Market", "Pallabi",
+              "Paltan", "Ramna", "Rampura", "Rupnagar", "Sabujbag", "Sabujbagh", "Shah Ali", "Shahbag", "Shahbagh",
+              "Shajahanpur", "Shahjahanpur", "Sher-e-Bangla Nagar", "Sher-e-bangla Nagar", "Shyampur", "Sutrapur",
+              "Tejgaon", "Tejgaon Ind. Area", "Turag", "Uttar Khan", "Uttara", "Uttara  Paschim", "Uttara  Purba",
+              "Wari",
+              "Tongi", "Tongi East", "Tongi West", "Gacha", "Basan", "Kashimpur", "Konabari", "Pubail"},
+    # Chattogram Metropolitan Police thanas (as the registry spells them; "Chittogram Port" is the registry's own unit
+    # inside the city corporation). Karnaphuli is an upazila (formerly a CMP thana) and stays one.
+    "chattogram": {"Akbar Shah", "Bakalia", "Bandar", "Bayejid Bostami", "Chak Bazar", "Chandgaon", "Chittogram Port",
+                   "Double Mooring", "EPZ", "Halishahar", "Khulshi", "Kotwali", "Pahartali", "Panchlaish", "Patenga",
+                   "Sadarghat"},
+    # Khulna Metropolitan Police thanas (as the registry spells them); only in Khulna District (see METRO_DISTRICT:
+    # Daulatpur is also an upazila of Kushtia)
+    "khulna": {"Daulatpur", "Khalishpur", "Khan Jahan Ali", "Khulna Sadar", "Sonadanga", "Harintana", "Labanchara",
+               "Aranghata"},
+    # Barishal Metropolitan Police thanas; only in Barishal District (see METRO_DISTRICT: Kotwali is a town thana in
+    # other districts too). The registry puts Barishal city under the upazila "Barishal Sadar" (none occur in 2026-11).
+    "barishal": {"Kotwali", "Airport", "Kawnia", "Bandar"},
+    # Sylhet Metropolitan Police thanas (as the registry spells them); only in Sylhet District (see METRO_DISTRICT).
+    # Dakshin Surma is both an SMP thana and an upazila of Sylhet District: the registry value is kept as the upazila
+    # (see _METRO_AMBIG).
+    "sylhet": {"Kotwali", "Jalalabad", "Airport", "Shahparan", "Shah Paran", "Moglabazar", "Mogla Bazar"},
 }
+# Mymensingh: no metropolitan thanas (the registry's 2026-11 export has none; Mymensingh city lies in the upazila
+# "Mymensingh Sadar", with City Corporation "Mymensingh City Corporation"), so no set for it.
+# per division: district of the metropolitan thanas when a thana name is also an upazila elsewhere in the division
+_METRO_DISTRICT = {"khulna": "Khulna", "barishal": "Barishal", "sylhet": "Sylhet"}
+# per division: registry upazila values that are both an upazila and a metropolitan thana of the same district; kept as
+# the upazila, flagged when the row names a city corporation
+_METRO_AMBIG = {"sylhet": {"Dakshin Surma": ("registry upazila 'Dakshin Surma' with City Corporation '{cc}': may be the "
+                                             "Sylhet Metropolitan Police thana Dakshin Surma rather than the upazila "
+                                             "(kept as the upazila) — check")}}
+# per division: note on metropolitan-thana rows (none for the earlier divisions)
+_METRO_NOTE = {
+    "chattogram": "registry upazila field is a Chattogram Metropolitan Police thana, kept as given (not an upazila)",
+    "khulna": "registry upazila field is a Khulna Metropolitan Police thana, kept as given (not an upazila)",
+    "barishal": "registry upazila field is a Barishal Metropolitan Police thana, kept as given (not an upazila)",
+    "sylhet": "registry upazila field is a Sylhet Metropolitan Police thana, kept as given (not an upazila)",
+}
+# per division: registry upazila values that are not upazilas of the division (kept as given, flagged)
+_UPAZILA_DOUBT = {
+    "dhaka": {"Senbagh": "Senbagh is an upazila of Noakhali (Chattogram Division), not of {d} — check",
+              "Sreebardi": "Sreebardi is an upazila of Sherpur (Mymensingh Division), not of {d} — check",
+              "Madhabpur": "Madhabpur is an upazila of Habiganj (Sylhet Division), not of {d} — check"},
+    "chattogram": {"Banaripara": "Banaripara is an upazila of Barishal (Barishal Division), not of {d} — check",
+                   "Chittogram Port": ("'Chittogram Port' is the registry's own unit inside Chattogram City Corporation, "
+                                       "not a CMP thana name, and it holds facilities from several thanas — check")},
+    "barishal": {"Manohardi": "Manohardi is an upazila of Narsingdi (Dhaka Division), not of Barishal Division — check"},
+    "mymensingh": {"Monoharganj": "Monoharganj is an upazila of Cumilla (Chattogram Division), not of {d} — check"},
+}
+# per division: city corporations of the division as the registry names them (others are flagged; none set before)
+_CITY_CORPS = {"chattogram": {"Chattogram City Corporation", "Cumilla City Corporation"},
+               "khulna": {"Khulna City Corporation"}, "barishal": {"Barishal City Corporation"},
+               "sylhet": {"Sylhet City Corporation"}, "mymensingh": {"Mymensingh City Corporation"}}
+# per division: registry rows for the Rohingya (FDMN) camps in Cox's Bazar, recognised by the registry's own wording
+_CAMP_RE = {"chattogram": re.compile(r"\bFDMN\b|refug?z?ee camp|rohingya", re.I)}
 UPAZILA_FIX = _UPAZILA_FIX.get(DIV, {})
 METRO_THANAS = _METRO_THANAS.get(DIV, set())
+UPAZILA_DOUBT = _UPAZILA_DOUBT.get(DIV, {})
+METRO_NOTE = _METRO_NOTE.get(DIV)
+METRO_DISTRICT = _METRO_DISTRICT.get(DIV)
+CITY_CORPS = _CITY_CORPS.get(DIV)
+CAMP_RE = _CAMP_RE.get(DIV)
+METRO_AMBIG = _METRO_AMBIG.get(DIV, {})
+# Free-mail addresses on public facilities are often the staff member's own mailbox (name + birth year), so for
+# every division only government mailboxes (*.gov.bd, mostly *.dghs.gov.bd) are copied; free-mail and misspelt
+# domains are not, and they are blanked in raw/ too.
+GOV_MAIL_ONLY = True
+# The same mailboxes also turn up inside other free-text fields ("Mailing Address", "Website Url"): those are
+# removed from the text too (and from raw/), keeping any *.gov.bd address and the rest of the text.
+_MAIL_IN_TEXT = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(?:\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}")
+
+
+def strip_non_gov_mail(text):
+    """Text with every non-*.gov.bd e-mail address removed; '' if nothing but separators is left."""
+    if not text or "@" not in text:
+        return text
+    out = _MAIL_IN_TEXT.sub(lambda m: m.group(0) if m.group(0).lower().endswith(".gov.bd") else "", text)
+    out = re.sub(r"\s{2,}", " ", out).strip(" ,;:/|-")
+    return out if re.search(r"\w", out) else ""
 # LAT, LON: generous division bounding box (from DIVISIONS above)
 
 
@@ -310,7 +423,9 @@ def in_ring(x, y, ring):
     return inside
 
 
-DIST_ALIAS = {"chapainababganj": "chapainawabganj", "nawabganj": "chapainawabganj", "bogra": "bogura"}
+DIST_ALIAS = {"chapainababganj": "chapainawabganj", "nawabganj": "chapainawabganj", "bogra": "bogura",
+              "khagrachari": "khagrachhari", "comilla": "cumilla", "chittagong": "chattogram", "coxsbazar": "coxsbazar",
+              "jessore": "jashore", "norail": "narail", "maulvibazar": "moulvibazar", "netrakona": "netrokona"}
 
 
 def dkey(name):
@@ -367,7 +482,7 @@ def build():
                  "agency": g("Agency") or None, "level": g("Facility Level Name") or None,
                  "healthcare_level": g("Facility Healthcare Level Name") or None,
                  "location_type": g("Facility Location Type Name") or None,
-                 "city_corporation": g("City Corporation") if g("City Corporation") and not g("City Corporation").startswith("Upazilas of") else None,
+                 "city_corporation": g("City Corporation") if g("City Corporation") and not g("City Corporation").startswith("Upazilas") else None,
                  "paurasava": g("Paurasava") if g("Paurasava") and not g("Paurasava").lower().startswith("unions of") else None,
                  "union_or_ward": g("Union") or None,
                  "established": g("Establishment Year") if re.fullmatch(r"(1[89]|20)\d\d", g("Establishment Year")) else None,
@@ -375,8 +490,18 @@ def build():
                  "beds_revenue": int(g("Revenue Bed Number")) if g("Revenue Bed Number").isdigit() and int(g("Revenue Bed Number")) > 0 else None,
                  "beds_latest": int(g("Latest Bed Count")) if g("Latest Bed Count").isdigit() and int(g("Latest Bed Count")) > 0 else None,
                  "private": private}
-        if upz in METRO_THANAS:
+        if upz in METRO_THANAS and (not METRO_DISTRICT or g("District") == METRO_DISTRICT):
             extra["admin_unit"] = "metropolitan_thana"
+            if METRO_NOTE:
+                notes.append(METRO_NOTE)
+        if upz in METRO_AMBIG and extra.get("city_corporation") and (not METRO_DISTRICT or g("District") == METRO_DISTRICT):
+            notes.append(METRO_AMBIG[upz].format(cc=extra["city_corporation"]))
+        if CITY_CORPS and extra["city_corporation"] and extra["city_corporation"] not in CITY_CORPS:
+            notes.append(f"registry City Corporation '{extra['city_corporation']}' is not in {DIVT} Division — check")
+        if CAMP_RE and (CAMP_RE.search(g("Name")) or CAMP_RE.search(t)):
+            notes.append("registry lists this as a Rohingya (FDMN) camp facility, kept as given")
+        if upz in UPAZILA_DOUBT:
+            notes.append(UPAZILA_DOUBT[upz].format(d=g("District") or "the district"))
         if upz != upz_n:
             extra["upazila_src"] = upz
         extra = {k: v for k, v in extra.items() if v not in (None, "")}
@@ -392,7 +517,10 @@ def build():
             ph = "; ".join(nums)
             e = g("Email").lower()
             em = e if re.fullmatch(r"[^@\s]+@[^@\s]+\.[a-z]{2,}", e) else ""
-            w = g("Website Url")
+            if em and GOV_MAIL_ONLY and not em.split("@", 1)[1].endswith(".gov.bd"):
+                em = ""
+                stats["non_gov_mail_not_copied"] += 1
+            w = strip_non_gov_mail(g("Website Url")) if GOV_MAIL_ONLY else g("Website Url")
             web = w if w.startswith("http") else ""
         else:
             notes.append("private/NGO facility: contacts not collected")
@@ -402,7 +530,7 @@ def build():
             notes.append("registry gives no district")
         places.append({
             "source_key": KEY, "source_id": f"hris:{g('ID')}", "name_bn": nfc(g("Name (Bangla)")), "name_en": nfc(g("Name")),
-            "category_key": cat, "lat": lat, "lon": lon, "address": nfc(g("Mailing Address")) if not private else "",
+            "category_key": cat, "lat": lat, "lon": lon, "address": nfc(strip_non_gov_mail(g("Mailing Address")) if GOV_MAIL_ONLY else g("Mailing Address")) if not private else "",
             "district_en": g("District"), "upazila_en": upz_n, "phone": ph, "website": web, "email": em,
             "opening_hours": "", "operator": g("Agency"), "ownership": ownership,
             "extra_json": json.dumps(extra, ensure_ascii=False, separators=(",", ":")),
@@ -496,7 +624,7 @@ def update_manifest(accessed):
 
 
 if __name__ == "__main__":
-    os.makedirs(OUT, exist_ok=True)
+    # no os.makedirs(OUT) here: download() creates OUT/raw only after a successful export, so an outage writes nothing
     if not ARGS.offline:
         if not download() and not os.path.isfile(RAW):
             sys.exit("no export available")

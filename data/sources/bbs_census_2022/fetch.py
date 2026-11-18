@@ -4,8 +4,8 @@
   python3 -I fetch.py [--division rajshahi] [--out DIR] [--cache DIR] [--offline] [--refresh]
 
 Default (no arguments): Rajshahi Division into this folder, exactly as the first run. Another division (district
-table below; Rangpur so far) writes to ../bbs_census_2022_<division>/ with raw/c01_<division>_division.csv and
-source key BBS_CENSUS_2022_<DIVISION> (data/sources/DIVISIONS.md). File names below are those of the Rajshahi run.
+table below; Rangpur, Dhaka, Chattogram, Khulna, Barishal, Sylhet and Mymensingh) writes to ../bbs_census_2022_<division>/
+with raw/c01_<division>_division.csv and source key BBS_CENSUS_2022_<DIVISION> (data/sources/DIVISIONS.md). File names below are those of the Rajshahi run.
 
 Downloads from bbs.gov.bd (Census 2022 publication page) and rebuilds:
 
@@ -60,9 +60,47 @@ DIVISIONS = {
         ("Kurigram", "KURIGRAM", "49"), ("Dinajpur", "DINAJPUR", "27"), ("Thakurgaon", "THAKURGAON", "94"),
         ("Lalmonirhat", "LALMONIRHAT", "52"), ("Panchagarh", "PANCHAGARH", "77"),
     ]),
-    # dhaka, chattogram, khulna, barishal, sylhet, mymensingh: district table not written yet
-    "dhaka": None, "chattogram": None, "khulna": None, "barishal": None, "sylhet": None, "mymensingh": None,
+    "dhaka": ("Dhaka", "30", [  # order of the Community Report list on the BBS page
+        ("Dhaka", "DHAKA", "26"), ("Narayanganj", "NARAYANGANJ", "67"), ("Gazipur", "GAZIPUR", "33"),
+        ("Manikganj", "MANIKGANJ", "56"), ("Narsingdi", "NARSINGDI", "68"), ("Faridpur", "FARIDPUR", "29"),
+        ("Gopalganj", "GOPALGANJ", "35"), ("Rajbari", "RAJBARI", "82"), ("Shariatpur", "SHARIATPUR", "86"),
+        ("Kishoreganj", "KISHOREGANJ", "48"), ("Munshiganj", "MUNSHIGANJ", "59"), ("Madaripur", "MADARIPUR", "54"),
+        ("Tangail", "TANGAIL", "93"),
+    ]),
+    "chattogram": ("Chattogram", "20", [  # order of the Community Report list on the BBS page; labels as printed there
+        ("Chattogram", "CHATTOGRAM", "15"), ("Cox's Bazar", "COX\u2019S BAZAR", "22"), ("Bandarban", "BANDARBAN", "03"),
+        ("Rangamati", "RANGAMATI", "84"), ("Noakhali", "NOAKHALI", "75"), ("Feni", "FENI", "30"),
+        ("Cumilla", "CUMILLA", "19"), ("Chandpur", "CHANDPUR", "13"), ("Brahmanbaria", "BRAHMMANBARIA", "12"),
+        ("Khagrachhari", "KHAGRACHHARI", "46"), ("Lakshmipur", "LAKSHMIPUR", "51"),
+    ]),
+    "khulna": ("Khulna", "40", [  # order of the Community Report list on the BBS page; labels as printed there
+        ("Khulna", "KHULNA", "47"), ("Bagerhat", "BAGERHAT", "01"), ("Satkhira", "SATKHIRA", "87"),
+        ("Jhenaidah", "JHENAIDAH", "44"), ("Chuadanga", "CHUADANGA", "18"), ("Magura", "MAGURA", "55"),
+        ("Kushtia", "KUSHTIA", "50"), ("Meherpur", "MEHERPUR", "57"), ("Jashore", "JASHORE", "41"),
+        ("Narail", "NARAIL", "65"),
+    ]),
+    "barishal": ("Barishal", "10", [  # order of the Community Report list on the BBS page; District Series labels
+        ("Barishal", "BARISHAL", "06"), ("Bhola", "BHOLA", "09"), ("Pirojpur", "PIROJPUR", "79"),
+        ("Patuakhali", "PATUAKHALI", "78"), ("Barguna", "BARGUNA", "04"), ("Jhalokathi", "JHALOKATHI", "42"),
+    ]),
+    "sylhet": ("Sylhet", "60", [  # order of the Community Report list on the BBS page; labels as printed there
+        ("Sylhet", "SYLHET", "91"), ("Habiganj", "HABIGANJ", "36"), ("Moulvibazar", "MAULVIBAZAR", "58"),
+        ("Sunamganj", "SUNAMGANJ", "90"),
+    ]),
+    "mymensingh": ("Mymensingh", "45", [  # order of the Community Report list on the BBS page; labels as printed there
+        ("Mymensingh", "MYMENSINGH", "61"), ("Jamalpur", "JAMALPUR", "39"), ("Sherpur", "SHERPUR", "89"),
+        ("Netrokona", "NETRAKONA", "72"),
+    ]),
 }
+
+# Districts whose Community Report label on the BBS page differs from the District Series label (the label in DISTRICTS)
+COMMUNITY_LABELS = {"Patuakhali": "PATUAKHAL", "Jhalokathi": "JHALAKHATI"}
+
+# Districts whose Community Report Excel (sheet C-01) lacks the Union/Ward codes: union rows have none and ward rows
+# repeat the paurashava code (Jhenaidah; the C-01 table in the Community Report PDF is printed the same way). For these
+# the codes are taken from the "List of Geocodes of <district> District" in the Community Report PDF (BBS-printed), kept
+# in raw/community_report_geocodes.txt; the C-01 rows in raw/ stay as printed.
+GEOCODE_LIST_DISTRICTS = {"Jhenaidah"}
 
 # URLs as resolved on 2026-11-12; used when the listing page cannot be parsed.
 OS = "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/"
@@ -181,9 +219,12 @@ def resolve(fx):
                   lambda m: " {%s|%s} " % (re.sub(r"<[^>]+>", "", m.group(2)).strip(), m.group(1)), body)
     flat = " ".join(html.unescape(re.sub(r"<[^>]+>", " ", flat)).split())
     for name, label, _ in DISTRICTS:
-        m = re.search(re.escape(label) + r"\s*:\s*\{PDF\|([^}]+)\}\s*,\s*\{Excel\|([^}]+)\}", flat)
+        # "LABEL: {PDF|..}, {Excel|..}"; Noakhali and Feni print the label itself as a link: "{LABEL|..} : {PDF|..} .."
+        m = re.search(re.escape(COMMUNITY_LABELS.get(name, label)) + r"(?:\|[^}]*\})?\s*:\s*\{PDF\|([^}]+)\}\s*,\s*\{Excel\|([^}]+)\}", flat)
         if m:
             out["community_xlsx"][name] = m.group(2)
+            if name in GEOCODE_LIST_DISTRICTS:  # Community Report PDF page (only where its geocode list is needed)
+                out.setdefault("community_page", {})[name] = m.group(1)
         for href, txt in anchors:  # district series: anchor text is exactly the label
             if txt == label and "/pages/files/" in href:
                 out["district_page"][name] = href
@@ -197,6 +238,14 @@ def resolve(fx):
                 out["district_pdf"][name] = links[0]
         except Exception as e:  # noqa: BLE001
             print(f"warning: district page {name} failed ({e}); using pinned PDF URL", file=sys.stderr)
+    for name, url in sorted((out.get("community_page") or {}).items()):
+        try:
+            t = fx.text(url)
+            links = re.findall(r'href="(https://objectstorage[^"]+\.pdf)"', t[t.find("content-files"):][:6000])
+            if links:
+                out.setdefault("community_pdf", {})[name] = links[0]
+        except Exception as e:  # noqa: BLE001
+            print(f"warning: community report page {name} failed ({e}); using pinned PDF URL", file=sys.stderr)
     return out
 
 
@@ -253,15 +302,25 @@ C01_COLS = ["district_code", "city_corporation_code", "upazila_thana_code", "pau
 
 def c01_rows(path):
     """Table C-01 as dicts with C01_COLS keys (header-driven; Rajshahi's sheet has an extra City Corporation column)."""
-    rows = read_sheet(path, "C-01")
+    try:
+        rows = read_sheet(path, "C-01")
+    except KeyError:  # Barguna's workbook names the sheet "C01", Mymensingh's "C_01"
+        try:
+            sheet, rows = "C01", read_sheet(path, "C01")
+        except KeyError:
+            sheet, rows = "C_01", read_sheet(path, "C_01")
+        assert any("Table C-01" in c for r in rows[:3] for c in r), f"sheet {sheet} is not Table C-01"
     hi = next(i for i, r in enumerate(rows) if "District" in [c.strip() for c in r])
-    h = [c.strip() for c in rows[hi]]
+    # spaces around "/" ignored (Pirojpur prints "Village/ Mahalla")
+    h = [re.sub(r"\s*/\s*", "/", c.strip()) for c in rows[hi]]
     idx = {"district_code": h.index("District"),
            "city_corporation_code": h.index("City Corporation") if "City Corporation" in h else None,
            "upazila_thana_code": h.index("Upazila/Thana"), "paurashava_code": h.index("Paurashava"),
            "union_ward_code": h.index("Union/Ward"), "mauza_code": h.index("Mauza"),
            "village_mahalla_code": h.index("Village/Mahalla")}
     nm = next(i for i, c in enumerate(h) if c.startswith("Administrative Unit"))
+    # Cox's Bazar's sheet has an extra (empty) "Area (Acres)" column between the name and the household columns
+    off = nm + 1 if len(h) > nm + 1 and h[nm + 1].startswith("Area") else nm
     out = []
     for r in rows[hi + 3:]:
         r = [str(x).strip() for x in r] + [""] * (nm + 10)
@@ -270,7 +329,7 @@ def c01_rows(path):
         d = {k: (r[i] if i is not None else "") for k, i in idx.items()}
         d["name"] = r[nm]
         for j, k in enumerate(C01_COLS[8:], start=1):
-            d[k] = r[nm + j]
+            d[k] = r[off + j]
         out.append(d)
     return out
 
@@ -287,12 +346,19 @@ def pdf_pages(path):
 def key_findings_excerpt(pages, district):
     """Lines of the Key Findings table from 'Administrative Units' to 'Sex Ratio', with PDF page markers."""
     out, state, cur = [], 0, None  # state 0 = not started, 1 = inside, 2 = done
+    sec01 = None  # "01" printed on a line of its own, "Administrative Units" on the next (Manikganj)
     for pno, p in enumerate(pages, 1):
         if state == 2:
             break
         for ln in p.splitlines():
             if state == 0 and re.match(r"^\s*0?1\s+Administrative Units?\s*$", ln):
                 state = 1
+            elif state == 0 and sec01 and re.match(r"^\s*Administrative Units?\s*$", ln):
+                state = 1
+                cur = pno
+                out += [f"## PDF page {pno}", sec01]
+            elif state == 0 and ln.strip():
+                sec01 = ln.rstrip() if re.match(r"^\s*0?1\s*$", ln) else None
             if state == 1 and cur != pno:
                 cur = pno
                 out.append(f"## PDF page {pno}")
@@ -327,6 +393,97 @@ def union_statistics_d01(pages):
     return out
 
 
+def geocode_list_excerpt(pages, district):
+    """Lines of the "List of Geocodes of <district> District" in a Community Report PDF, with PDF page markers."""
+    out = []
+    for pno, p in enumerate(pages, 1):
+        i = p.find(f"List of Geocodes of {district} District")
+        if i < 0 and not out:
+            continue
+        if out and ("Chapter 1" in p or not re.search(r"^\s*\d{2,3}\s+[-_]\s+\S", p, re.M)):
+            break
+        out.append(f"## PDF page {pno}")
+        out += [ln.rstrip() for ln in (p[i:] if i >= 0 else p).splitlines() if ln.strip()]
+    return out
+
+
+def parse_geocode_list(text):
+    """{district: {("union", upazila, name) | ("ward", upazila, paurashava, name): code}} from the excerpt. The list is
+    printed in up to three columns per page; each column is read top to bottom, the upazila and paurashava headings
+    setting the context for the unions and wards below them."""
+    out = {}
+    for block in re.split(r"^=== ", text, flags=re.M)[1:]:
+        head, *lines = block.splitlines()
+        codes, upz, paura = out.setdefault(head.split("|")[0].strip(), {}), None, None
+        pages, cur = [], None
+        for ln in lines:
+            if ln.startswith("## PDF page"):
+                cur = []
+                pages.append(cur)
+            elif cur is not None:
+                cur.append(ln)
+        for pg in pages:
+            hits = [(m.start(), m.group(1), " ".join(m.group(2).split()))
+                    for ln_no, ln in enumerate(pg)
+                    for m in re.finditer(r"(\d{2,3})\s+[-_]\s+(.+?)(?=\s{2,}\d{2,3}\s+[-_]|\s*$)", ln)]
+            starts = sorted({x for x, _, _ in hits})
+            cols = []  # column left edges: positions more than 10 characters apart
+            for x in starts:
+                if not cols or x - cols[-1] > 10:
+                    cols.append(x)
+            per_col = [[] for _ in cols]
+            for ln in pg:
+                for m in re.finditer(r"(\d{2,3})\s+[-_]\s+(.+?)(?=\s{2,}\d{2,3}\s+[-_]|\s*$)", ln):
+                    c = max(k for k, x in enumerate(cols) if x <= m.start() + 10)
+                    per_col[c].append((m.group(1), " ".join(m.group(2).split())))
+            for col in per_col:
+                for code, name in col:
+                    if name.endswith("Upazila") and len(code) == 2:
+                        upz, paura = code, None
+                    elif name.endswith("Paurashava") and len(code) == 2:
+                        paura = code
+                    elif name.endswith("Union") and len(code) == 3:
+                        codes[("union", upz, name.lower())] = code
+                        paura = None
+                    elif name.startswith("Ward") and len(code) == 3 and paura:
+                        codes[("ward", upz, paura, name.lower())] = code
+    return out
+
+
+def fill_union_ward_codes(rows, codes, dname):
+    """C-01 rows of a district without Union/Ward codes -> copies with the codes from the geocode list (see
+    GEOCODE_LIST_DISTRICTS). Names are compared ignoring case (Excel "Sbk Union", list "SBK Union"). Mauza and village
+    rows take the code of the union/ward row above them."""
+    out, cur = [], None
+    for r in rows:
+        r = dict(r)
+        name = " ".join(r["name"].split())
+        if r["name"] in ("Rural", "Urban"):
+            out.append(r)
+            continue
+        if not r["mauza_code"] and not r["village_mahalla_code"]:
+            cur = None
+            key = None
+            if r["paurashava_code"] and r["union_ward_code"] == r["paurashava_code"] and name.endswith("Paurashava"):
+                r["union_ward_code"] = ""  # the paurashava row itself repeats its code in the Union/Ward column
+                r["code_note"] = "Union/Ward column of the Excel repeats the paurashava code; left empty"
+            elif r["paurashava_code"] and r["union_ward_code"] == r["paurashava_code"]:
+                key = ("ward", r["upazila_thana_code"], r["paurashava_code"], name.lower())
+            elif not r["paurashava_code"] and not r["union_ward_code"] and name.endswith("Union"):
+                key = ("union", r["upazila_thana_code"], name.lower())
+            if key:
+                if key not in codes:
+                    raise SystemExit(f"{dname}: no code for {key} in the Community Report geocode list")
+                r["union_ward_code"] = cur = codes[key]
+                r["code_note"] = ("Union/Ward code from the Community Report PDF 'List of Geocodes' (the Excel C-01 "
+                                  + ("repeats the paurashava code" if key[0] == "ward" else "leaves it empty") + ")")
+        elif cur and (not r["union_ward_code"] or r["union_ward_code"] == r["paurashava_code"]):
+            r["union_ward_code"] = cur
+            r["code_note"] = "Union/Ward code from the Community Report PDF 'List of Geocodes' (row above)"
+        out.append(r)
+    return out
+
+
 # ------------------------------------------------------------------ build
 
 def strip_generic(name):
@@ -343,6 +500,10 @@ def classify(r):
         # Rangpur's "Cantonment" (code 998) sits in a city-corporation thana but is not a city ward
         if "cantonment" in r["name"].lower():
             return "cantonment"
+        # Sundarbans Reserve Forest units (Nalian / Chandpai / Satkhira Range, "Sundarban (Reserve Forest)") are printed
+        # in the Union/Ward column with code 997 (Khulna Division) but are not union parishads
+        if r["union_ward_code"] == "997" and not (r["paurashava_code"] or r["city_corporation_code"]):
+            return "reserve_forest"
         return "ward" if r["paurashava_code"] or r["city_corporation_code"] else "union"
     if r["paurashava_code"]:
         return "pourashava"
@@ -363,6 +524,8 @@ def build(urls):
     c01 = list(csv.DictReader(open(os.path.join(RAW, f"c01_{DIVISION_SLUG}_division.csv"), encoding="utf-8")))
     kf = open(os.path.join(RAW, "district_report_key_findings.txt"), encoding="utf-8").read()
     d01 = open(os.path.join(RAW, "union_statistics_D01.txt"), encoding="utf-8").read().splitlines()
+    gpath = os.path.join(RAW, "community_report_geocodes.txt")
+    glist = parse_geocode_list(open(gpath, encoding="utf-8").read()) if os.path.isfile(gpath) else {}
 
     areas, facts = [], []
 
@@ -377,6 +540,8 @@ def build(urls):
     by_dist = {}
     for r in c01:
         by_dist.setdefault(r["district_file"], []).append(r)
+    for dname in glist:
+        by_dist[dname] = fill_union_ward_codes(by_dist[dname], glist[dname], dname)
     for dname, _, dcode in DISTRICTS:
         rows = by_dist[dname]
         url = urls["community_xlsx"][dname]
@@ -387,19 +552,21 @@ def build(urls):
             if r["name"] in ("Rural", "Urban"):
                 last.setdefault("loc", {})[r["name"]] = r
                 continue
+            if not r["name"].strip():  # unlabelled row (Cumilla: all zeros after Comilla Cantonment's "Urban" row)
+                continue
             r = dict(r)
             r["level"] = classify(r)
             units.append(r)
             last = r
             if r["level"] == "upazila":
-                upz_name[r["upazila_thana_code"]] = strip_generic(r["name"])
+                upz_name[(r["city_corporation_code"], r["upazila_thana_code"])] = strip_generic(r["name"])
             if r["level"] == "thana":
-                upz_name[r["upazila_thana_code"]] = r["name"].strip()
+                upz_name[(r["city_corporation_code"], r["upazila_thana_code"])] = r["name"].strip()
             if r["level"] == "city_corporation":
                 cc_name[r["city_corporation_code"]] = r["name"].strip()
         def ukey(x):
             return (x["city_corporation_code"], x["upazila_thana_code"], x["paurashava_code"], x["union_ward_code"])
-        parent_of = {ukey(x): x for x in units if x["level"] in ("union", "ward", "cantonment")}
+        parent_of = {ukey(x): x for x in units if x["level"] in ("union", "ward", "cantonment", "reserve_forest")}
         # paurashavas that are split across upazilas (same code under 2 upazilas)
         pcount = {}
         for u in units:
@@ -410,7 +577,10 @@ def build(urls):
             lvl = u["level"]
             if lvl == "village":
                 continue
-            upz = upz_name.get(u["upazila_thana_code"], "") if lvl not in ("district", "city_corporation") else ""
+            # keyed by (city corporation, upazila/thana code): Narayanganj City Corporation has Bandar and Narayanganj
+            # Sadar thanas with the same codes (06, 58) as the Bandar and Narayanganj Sadar upazilas
+            upz = (upz_name.get((u["city_corporation_code"], u["upazila_thana_code"]), "")
+                   if lvl not in ("district", "city_corporation") else "")
             name = u["name"].strip() if lvl in ("district", "city_corporation", "thana", "ward") \
                 else strip_generic(u["name"])
             if lvl == "mouza":  # C-01 footnote: "Asterisk (*) denotes Mauza" — a row marker, not part of the name
@@ -421,12 +591,17 @@ def build(urls):
                 note.append("unit split across parents; figures are for this part only")
             if lvl == "pourashava" and pcount.get(u["paurashava_code"], 0) > 1:
                 note.append(f"paurashava listed under {pcount[u['paurashava_code']]} upazilas; figures are for the part in {upz}")
+            if u.get("code_note"):
+                note.append(u["code_note"])
             if lvl == "cantonment" and u["city_corporation_code"]:
                 note.append("printed as a ward row (code 998) of a city-corporation thana in C-01; not a numbered city ward")
             elif lvl == "cantonment":
                 note.append("printed in the Union/Ward column of C-01 with a union-style code; not a union parishad"
                             + (" (the District Report's union total counts it, Union Statistics Table D01 does not)"
                                if DIVISION_SLUG == "rajshahi" else ""))
+            if lvl == "reserve_forest":
+                note.append("Sundarbans Reserve Forest unit printed in the Union/Ward column of C-01 (code 997); "
+                            "not a union parishad")
             # parent
             if lvl == "district":
                 parent = ("division", DIVISION)
@@ -438,7 +613,7 @@ def build(urls):
                 parent = ("district", dname)
             elif lvl == "pourashava":
                 parent = ("upazila", upz)
-            elif lvl in ("union", "cantonment"):
+            elif lvl in ("union", "cantonment", "reserve_forest"):
                 parent = ("thana" if u["city_corporation_code"] else "upazila", upz)
             elif lvl == "ward":
                 if u["paurashava_code"]:
@@ -463,7 +638,8 @@ def build(urls):
                  n + "; final enumerated count incl. floating population (not PEC-adjusted)")
             fact(lvl, name, dname, upz, code, "households", u["hh_total"], "households", "enumerated", url,
                  n + "; all households except floating households")
-            if lvl in ("district", "city_corporation", "thana", "upazila", "pourashava", "union", "cantonment"):
+            if lvl in ("district", "city_corporation", "thana", "upazila", "pourashava", "union", "cantonment",
+                       "reserve_forest"):
                 fact(lvl, name, dname, upz, code, "population_male", u["pop_male"], "persons", "enumerated", url, n)
                 fact(lvl, name, dname, upz, code, "population_female", u["pop_female"], "persons", "enumerated", url, n)
                 fact(lvl, name, dname, upz, code, "population_hijra", u["pop_hijra"], "persons", "enumerated", url, n)
@@ -513,6 +689,11 @@ def build(urls):
                     if others:
                         fact(lvl, name, dname, upz, code, "cantonment_count", str(len(others)), "cantonments",
                              "derived", url, n + "; " + dn + "; listed in the Union/Ward column: " + ", ".join(others))
+                    forest = [x["name"] for x in sub if x["level"] == "reserve_forest"]
+                    if forest:
+                        fact(lvl, name, dname, upz, code, "reserve_forest_unit_count", str(len(forest)), "units",
+                             "derived", url, n + "; " + dn + "; Sundarbans Reserve Forest units listed in the Union/Ward "
+                             "column (code 997), not counted as unions: " + ", ".join(forest))
                 if lvl in ("city_corporation", "thana"):
                     fact(lvl, name, dname, upz, code, "ward_count",
                          str(len({x["union_ward_code"] for x in sub if x["level"] == "ward"})), "wards", "derived",
@@ -530,6 +711,7 @@ def build(urls):
     labels = {"City Corporation": ("city_corporation_count", "city corporations"),
               "Upazila": ("upazila_count", "upazilas"), "Metro Thana": ("metro_thana_count", "thanas"),
               "Paurashava": ("pourashava_count", "paurashavas"), "City Ward": ("city_ward_count", "wards"),
+              "City Corporation Ward": ("city_ward_count", "wards"),  # Narayanganj's label
               "Paura Ward": ("paura_ward_count", "wards"), "Union": ("union_count", "unions"),
               "Mauza": ("mouza_count", "mouzas"), "Village": ("village_count", "villages"),
               "Mahalla": ("mahalla_count", "mahallas")}
@@ -541,6 +723,8 @@ def build(urls):
         sec, pending = None, False
         vals = {}
         for ln in lines:
+            # control characters that pdftotext leaves after some numbers ("1273\x03", Chandpur) would end the value
+            ln = re.sub(r"[\x00-\x08\x0b-\x1f]", "", ln)
             m = re.match(r"## PDF page (\d+)", ln)
             if m and "narrative" not in ln:
                 page = page or m.group(1)
@@ -555,10 +739,11 @@ def build(urls):
             if m and not re.search(r"\d{3,}", m.group(2)):
                 sec, pending = m.group(2), False
                 continue
-            # label, optional footnote digit glued to it (e.g. "Mauza1"), then the 2022 value
-            m = re.match(r"^\s+([A-Za-z][A-Za-z \-]*?[A-Za-z])\d?\s{2,}([\d][\d ,\.]*?)(\s{2,}|$)", ln)
+            # label, optional footnote digit glued to it (e.g. "Mauza1"), then the 2022 value; labels may contain an
+            # apostrophe ("Cox’s Bazar"), read as a plain ASCII apostrophe
+            m = re.match(r"^\s+([A-Za-z][A-Za-z \-'\u2019]*?[A-Za-z])\d?\s{2,}([\d][\d ,\.]*?)(\s{2,}|$)", ln)
             if m:
-                vals.setdefault((sec, m.group(1).strip()), m.group(2).replace(" ", "").replace(",", ""))
+                vals.setdefault((sec, m.group(1).strip().replace("\u2019", "'")), m.group(2).replace(" ", "").replace(",", ""))
         # does the table belong to this district? (Naogaon's report prints Jamalpur's key findings)
         own = any(k[1] == dname or (dname == "Chapainawabganj" and k[1].startswith("Chapai")) for k in vals)
         base_note = f"District Report: {dname} (June 2024), Key Findings table, PDF page {page}"
@@ -566,6 +751,10 @@ def build(urls):
             print(f"warning: key findings in the {dname} report belong to another district; skipped", file=sys.stderr)
         else:
             for (sec, lab), v in vals.items():
+                # Chattogram prints "City Mahalla" and "Mahalla" on separate lines: the plain line is then not the
+                # district total, so neither is kept (as for Narayanganj's City/Paura Mahalla lines)
+                if lab == "Mahalla" and (sec, "City Mahalla") in vals:
+                    continue
                 if sec and sec.startswith("Administrative Unit") and lab in labels:
                     f, unit = labels[lab]
                     fact("district", dname, dname, "", dcode_of(dname), f, str(int(v)), unit, "as stated", url,
@@ -693,6 +882,14 @@ def main():
             out.append(f"=== {dname} | {urls['district_pdf'][dname]}")
             out += key_findings_excerpt(pdf_pages(p), dname)
         open(os.path.join(RAW, "district_report_key_findings.txt"), "w", encoding="utf-8").write("\n".join(out) + "\n")
+        glines = []
+        for dname, _, _ in DISTRICTS:
+            if dname in GEOCODE_LIST_DISTRICTS:
+                u = urls["community_pdf"][dname]
+                glines.append(f"=== {dname} | {u}")
+                glines += geocode_list_excerpt(pdf_pages(fx.file(u, f"community_{dname}.pdf", a.refresh)), dname)
+        if glines:
+            open(os.path.join(RAW, "community_report_geocodes.txt"), "w", encoding="utf-8").write("\n".join(glines) + "\n")
         p = fx.file(urls["union_statistics"], "union_statistics.pdf", a.refresh)
         lines = union_statistics_d01(pdf_pages(p))
         open(os.path.join(RAW, "union_statistics_D01.txt"), "w", encoding="utf-8").write(

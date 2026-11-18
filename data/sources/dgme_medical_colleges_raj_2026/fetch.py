@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Fetch DGME (Directorate General of Medical Education) medical & dental college lists; keep Rajshahi Division.
 
-stdlib + requests only. Usage: python3 fetch.py [--division rajshahi|rangpur] [--out DIR]
+stdlib + requests only. Usage: python3 fetch.py [--division rajshahi|rangpur|dhaka|chattogram|khulna|barishal|sylhet|mymensingh] [--out DIR]
 Default: Rajshahi Division into this folder (DIVISIONS.md)."""
 # --- polite HTTP helper (copy this block into each fetch.py; stdlib + requests only) -----------------
 # Many *.gov.bd servers send only their leaf certificate and omit the intermediate CA. Browsers fetch the
@@ -261,7 +261,69 @@ BY_DIV = {  # division -> (Bangla district names, English words of the governmen
                  "নীলফামারী": "Nilphamari", "লালমনিরহাট": "Lalmonirhat", "কুড়িগ্রাম": "Kurigram", "গাইবান্ধা": "Gaibandha"},
                 {"Rangpur": ["rangpur"], "Dinajpur": ["dinajpur"], "Thakurgaon": ["thakurgaon"], "Panchagarh": ["panchagarh"],
                  "Nilphamari": ["nilphamari"], "Lalmonirhat": ["lalmonirhat"], "Kurigram": ["kurigram"], "Gaibandha": ["gaibandha"]}),
+    # Dhaka: Bangla spelling variants seen on government pages map to the same district
+    "dhaka": ({"ঢাকা": "Dhaka", "গাজীপুর": "Gazipur", "গাজিপুর": "Gazipur", "নারায়ণগঞ্জ": "Narayanganj", "নারায়নগঞ্জ": "Narayanganj",
+               "নরসিংদী": "Narsingdi", "নরসিংদি": "Narsingdi", "টাঙ্গাইল": "Tangail", "টাংগাইল": "Tangail",
+               "কিশোরগঞ্জ": "Kishoreganj", "মানিকগঞ্জ": "Manikganj", "মুন্সীগঞ্জ": "Munshiganj", "মুন্সিগঞ্জ": "Munshiganj",
+               "রাজবাড়ী": "Rajbari", "রাজবাড়ি": "Rajbari", "মাদারীপুর": "Madaripur", "মাদারিপুর": "Madaripur",
+               "গোপালগঞ্জ": "Gopalganj", "ফরিদপুর": "Faridpur", "শরীয়তপুর": "Shariatpur", "শরিয়তপুর": "Shariatpur"},
+              {"Dhaka": ["dhaka"], "Gazipur": ["gazipur"], "Narayanganj": ["narayanganj"], "Narsingdi": ["narsingdi"],
+               "Tangail": ["tangail"], "Kishoreganj": ["kishoreganj", "kishorganj"], "Manikganj": ["manikganj"],
+               "Munshiganj": ["munshiganj"], "Rajbari": ["rajbari"], "Madaripur": ["madaripur"], "Gopalganj": ["gopalganj"],
+               "Faridpur": ["faridpur"], "Shariatpur": ["shariatpur"]}),    # Chattogram: Bangla spelling variants seen on government pages map to the same district (keys NFC-normalised below)
+    "chattogram": ({"চট্টগ্রাম": "Chattogram", "কক্সবাজার": "Cox's Bazar", "কুমিল্লা": "Cumilla", "ফেনী": "Feni", "ফেনি": "Feni",
+                    "নোয়াখালী": "Noakhali", "নোয়াখালি": "Noakhali", "লক্ষ্মীপুর": "Lakshmipur", "লক্ষীপুর": "Lakshmipur",
+                    "চাঁদপুর": "Chandpur", "ব্রাহ্মণবাড়িয়া": "Brahmanbaria", "ব্রাহ্মনবাড়িয়া": "Brahmanbaria",
+                    "ব্রাক্ষণবাড়িয়া": "Brahmanbaria", "রাঙ্গামাটি": "Rangamati", "রাঙামাটি": "Rangamati",
+                    "খাগড়াছড়ি": "Khagrachhari", "বান্দরবান": "Bandarban"},
+                   {"Chattogram": ["chattogram", "chattagram", "chittagong"], "Cox's Bazar": ["cox's bazar", "coxs bazar", "cox’s bazar"],
+                    "Cumilla": ["cumilla", "comilla"], "Feni": ["feni"], "Noakhali": ["noakhali"],
+                    "Lakshmipur": ["lakshmipur", "laxmipur"], "Chandpur": ["chandpur"], "Brahmanbaria": ["brahmanbaria"],
+                    "Rangamati": ["rangamati"], "Khagrachhari": ["khagrachhari", "khagrachari"], "Bandarban": ["bandarban"]}),
+    # Khulna: Bangla spelling variants seen on government pages map to the same district (keys NFC-normalised below)
+    "khulna": ({"খুলনা": "Khulna", "যশোর": "Jashore", "যশোহর": "Jashore", "সাতক্ষীরা": "Satkhira", "সাতক্ষিরা": "Satkhira",
+                "বাগেরহাট": "Bagerhat", "নড়াইল": "Narail", "মাগুরা": "Magura", "ঝিনাইদহ": "Jhenaidah", "ঝিনাইদাহ": "Jhenaidah",
+                "চুয়াডাঙ্গা": "Chuadanga", "চুয়াডাংগা": "Chuadanga", "কুষ্টিয়া": "Kushtia", "মেহেরপুর": "Meherpur"},
+               {"Khulna": ["khulna"], "Jashore": ["jashore", "jessore"], "Satkhira": ["satkhira"], "Bagerhat": ["bagerhat"],
+                "Narail": ["narail"], "Magura": ["magura"], "Jhenaidah": ["jhenaidah", "jhenidah"], "Chuadanga": ["chuadanga"],
+                "Kushtia": ["kushtia"], "Meherpur": ["meherpur"]}),
+    # Barishal: Bangla spelling variants seen on government pages map to the same district (keys NFC-normalised below)
+    "barishal": ({"বরিশাল": "Barishal", "ভোলা": "Bhola", "পটুয়াখালী": "Patuakhali", "পটুয়াখালি": "Patuakhali",
+                  "পিরোজপুর": "Pirojpur", "ঝালকাঠি": "Jhalokathi", "ঝালকাঠী": "Jhalokathi", "বরগুনা": "Barguna"},
+                 {"Barishal": ["barishal", "barisal"], "Bhola": ["bhola"], "Patuakhali": ["patuakhali"], "Pirojpur": ["pirojpur"],
+                  "Jhalokathi": ["jhalokathi", "jhalakathi", "jhalokati", "jhalakati"], "Barguna": ["barguna"]}),
+    # Sylhet: Bangla spelling variants seen on government pages map to the same district (keys NFC-normalised below)
+    "sylhet": ({"সিলেট": "Sylhet", "মৌলভীবাজার": "Moulvibazar", "মৌলভিবাজার": "Moulvibazar", "হবিগঞ্জ": "Habiganj",
+                "সুনামগঞ্জ": "Sunamganj"},
+               {"Sylhet": ["sylhet"], "Moulvibazar": ["moulvibazar", "maulvibazar", "moulvi bazar"], "Habiganj": ["habiganj"],
+                "Sunamganj": ["sunamganj"]}),
+    # Mymensingh: Bangla spelling variants seen on government pages map to the same district (keys NFC-normalised below)
+    "mymensingh": ({"ময়মনসিংহ": "Mymensingh", "জামালপুর": "Jamalpur", "শেরপুর": "Sherpur", "নেত্রকোনা": "Netrokona",
+                    "নেত্রকোণা": "Netrokona"},
+                   {"Mymensingh": ["mymensingh"], "Jamalpur": ["jamalpur"], "Sherpur": ["sherpur"],
+                    "Netrokona": ["netrokona", "netrakona"]}),
 }
+BY_DIV = {d: ({unicodedata.normalize("NFC", k): v for k, v in bn.items()}, en) if d != "rajshahi" else (bn, en)
+          for d, (bn, en) in BY_DIV.items()}
+# dental units whose name on the dental page is spelt differently from the parent college on the MBBS page
+# (unit name before 'ডেন্টাল ইউনিট' -> parent's DGME college code); checked by hand against the two DGME tables
+UNIT_PARENT_BY_HAND = {"dhaka": {
+    "এম এইচ সমরিতা মেডিকেল কলেজ": 141,     # এমএইচ সামারিতা মেডিকেল কলেজ, ঢাকা
+    "গ্রীন লাইফ মেডিকেল কলেজ": 139,         # গ্রিন লাইফ মেডিকেল কলেজ, ধানমন্ডি, ঢাকা
+    "ডেলটা মেডিকেল কলেজ": 131,              # ডেল্টা মেডিকেল কলেজ, ঢাকা
+    "কুমুদিনি মেডিকেল কলেজ": 116,            # কুমুদিনী উইমেন্স মেডিকেল কলেজ, টাঙ্গাইল
+    "ইব্রাহীম মেডিকেল কলেজ": 118,            # ইব্রাহিম মেডিকেল কলেজ, ঢাকা
+    "সমাজ ভিত্তিক মেডিকেল কলেজ": 102,        # গণস্বাস্থ্য সমাজভিত্তিক মেডিকেল কলেজ, সাভার, ঢাকা (unit: ', সাভার')
+}, "sylhet": {
+    "এমএজি ওসমানী মেডিকেল কলেজ": 15,         # সিলেট এম.এ.জি. ওসমানী মেডিকেল কলেজ, সিলেট
+}}
+# Bangla district names of all divisions: a college whose name ends in another division's district is not matched by a
+# district word found elsewhere in its name (other divisions only)
+ALL_BN_DISTRICTS = set("""পঞ্চগড় দিনাজপুর লালমনিরহাট নীলফামারী গাইবান্ধা ঠাকুরগাঁও রংপুর কুড়িগ্রাম রাজশাহী নাটোর নওগাঁ
+চাঁপাইনবাবগঞ্জ বগুড়া জয়পুরহাট পাবনা সিরাজগঞ্জ ঢাকা গাজীপুর নারায়ণগঞ্জ নরসিংদী টাঙ্গাইল কিশোরগঞ্জ মানিকগঞ্জ মুন্সীগঞ্জ
+রাজবাড়ী মাদারীপুর গোপালগঞ্জ ফরিদপুর শরীয়তপুর চট্টগ্রাম কক্সবাজার কুমিল্লা ফেনী নোয়াখালী লক্ষ্মীপুর চাঁদপুর ব্রাহ্মণবাড়িয়া
+রাঙ্গামাটি খাগড়াছড়ি বান্দরবান খুলনা যশোর সাতক্ষীরা বাগেরহাট নড়াইল মাগুরা ঝিনাইদহ চুয়াডাঙ্গা কুষ্টিয়া মেহেরপুর বরিশাল
+ভোলা পটুয়াখালী পিরোজপুর ঝালকাঠি বরগুনা সিলেট মৌলভীবাজার হবিগঞ্জ সুনামগঞ্জ ময়মনসিংহ জামালপুর শেরপুর নেত্রকোনা নেত্রকোণা""".split())
 
 
 def fetch_html(url):
@@ -295,6 +357,8 @@ def district_of(name):
     tail = name.split(",")[-1].strip()
     if tail in BN_DISTRICTS:
         return BN_DISTRICTS[tail]
+    if DIVISION != "rajshahi" and unicodedata.normalize("NFC", tail) in {unicodedata.normalize("NFC", d) for d in ALL_BN_DISTRICTS}:
+        return ""
     for bn, en in BN_DISTRICTS.items():
         if bn in name:
             return en
@@ -346,7 +410,7 @@ def main():
             year, seats, gender = num(cells[3]), num(cells[4]), None
         else:
             gender, seats, year = cells[3], num(cells[4]), num(cells[5]) if len(cells) > 5 else None
-        own = "armed_forces" if "আর্মি" in name else mode
+        own = "armed_forces" if ("আর্মি" in name or "নেভি" in name) else mode  # Army / Navy Medical College
         en, web = gov_web.get(dist, ("", "")) if mode == "government" else ("", "")
         rows.append({"source_key": SOURCE_KEY, "source_id": f"dgme_mbbs:{num(cells[1]) or name}",
                      "name_bn": name, "name_en": en, "category_key": "education.medical_college",
@@ -357,7 +421,8 @@ def main():
                      "source_url": MEDICAL_PAGE,
                      "notes": "; ".join(n for n in [
                          "English name and website from the DGME 'সরকারী মেডিকেল কলেজ (সকল)' page, matched by district" if en else "",
-                         "listed in the private-college table; Army Medical College (armed forces)" if own == "armed_forces" else ""] if n)})
+                         "listed in the private-college table; %s Medical College (armed forces)" % ("Navy" if "নেভি" in name else "Army")
+                         if own == "armed_forces" else ""] if n)})
 
     # dental colleges / units
     section = ("government", "college")
@@ -375,11 +440,11 @@ def main():
         if len(cells) < 3 or cells[0] in ("ক্রম", "") or "মোট" in cells[0]:
             continue
         name, dist = cells[1], district_of(cells[1])
-        if not dist:
-            continue
         year = num(cells[2])
         seats = num(cells[3]) if len(cells) > 3 else None
-        if section[1] == "unit":
+        if not dist and not (DIVISION != "rajshahi" and section[1] == "unit"):
+            continue
+        if section[1] == "unit":  # (other divisions: a unit without a district suffix may still match its parent by name)
             units.append((section[0], name, dist, cells[2], seats))
             continue
         rows.append({"source_key": SOURCE_KEY, "source_id": f"dgme_dental:{name}", "name_bn": name, "name_en": "",
@@ -392,9 +457,17 @@ def main():
     for own, name, dist, yr, seats in units:
         parent = name.split("ডেন্টাল ইউনিট")[0].strip()
         hit = next((r for r in rows if r["district_en"] == dist and r["name_bn"].split(",")[0].strip() == parent), None)
+        if not hit and not dist:  # no district suffix: the parent's exact name, any district of this division
+            hit = next((r for r in rows if r["source_id"].startswith("dgme_mbbs") and r["name_bn"].split(",")[0].strip() == parent), None)
+        by_hand = False
+        if not hit and nfc(parent) in UNIT_PARENT_BY_HAND.get(DIVISION, {}):
+            code = UNIT_PARENT_BY_HAND[DIVISION][nfc(parent)]
+            hit, by_hand = next((r for r in rows if r["source_id"] == "dgme_mbbs:%d" % code), None), True
         if hit:
             hit["extra_json"].update({"dental_unit": True, "dental_unit_year_established": num(yr), "bds_seats": seats})
-        else:
+            if by_hand:
+                hit["notes"] = "; ".join(n for n in [hit["notes"], "dental unit listed by DGME as '%s' (spelling differs; matched by hand)" % name] if n)
+        elif dist:
             print("dental unit without parent:", name)
 
     for r in rows:

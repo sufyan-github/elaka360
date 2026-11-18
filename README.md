@@ -30,7 +30,7 @@ apps/admin       Next.js 15 staff app (TOTP 2FA): dashboard, verification, areas
 apps/api         NestJS 11 modular monolith over PostgreSQL 16 + PostGIS (raw parameterised SQL), OpenAPI at /docs
 packages/shared  domain types, Bangla formatting (lakh/crore, ০-৯), labels, search keys
 packages/ui      design tokens (light/dark, category colours) + Tailwind v4 theme
-db/migrations    0001–0009, additive        db/seed/seed.sql   generated seed
+db/migrations    0001–0009, additive        db/seed            generated seed (seed.sql loads the per-division parts)
 data/sources     nuhil/bangladesh-geocode (MIT) + compact copy of Consolidated Master v3.0
 data/seed        generated CSV/JSON/GeoJSON + QA reports      pipelines   seed builder, trust policy, reconciliation, validator
 scripts          db reset/migrate, SQL checker, smoke + integration tests     tests/e2e   Playwright
@@ -61,7 +61,7 @@ DATABASE_URL=postgres://elaka360:elaka360@localhost:5432/elaka360 node apps/api/
 | Command | What it does |
 |---|---|
 | `pnpm build` / `typecheck` / `test` / `lint` | All workspaces via Turborepo |
-| `pnpm seed:build` | Regenerate `data/seed`, `db/seed/seed.sql`, generated docs |
+| `pnpm seed:build` | Regenerate `data/seed`, `db/seed/` (seed.sql and its per-division parts), generated docs |
 | `python3 pipelines/validate_seed.py` | Trust-policy, duplicate, parent, junk-name and master-reconciliation checks |
 | `pnpm db:reset` | **Dev only**: drop, migrate, seed (refuses non-local hosts) |
 | `bash scripts/db-migrate.sh` | Apply pending migrations safely (staging/production) |

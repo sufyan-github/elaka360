@@ -98,8 +98,10 @@ def trust_of(key):
 
 
 def register_sources(SRC, SOURCE_META):
-    """Add every collected source to the data_sources registry (deterministic: sorted by folder)."""
-    for m in _manifests():
+    """Add every collected source to the data_sources registry. Ids follow DIVISIONS order, then folder name, so a new
+    division only appends ids: earlier divisions' seed files stay byte-identical."""
+    div_index = {d["name"]: i for i, d in enumerate(DIVISIONS)}
+    for m in sorted(_manifests(), key=lambda m: (div_index.get(division_of(m), len(div_index)), os.path.basename(m["_dir"]))):
         problems.extend(check_manifest(m))
         k = m["key"]
         if k in SRC:
@@ -125,6 +127,51 @@ def _best(target_en, candidates, key=lambda c: c["name_en"], threshold=0.72):
         if s > score:
             best, score = c, s
     return (best, score) if score >= threshold else (None, score)
+
+
+_DIRS = {"uttar": "N", "uttor": "N", "north": "N", "dakkhin": "S", "dakshin": "S", "dakshhin": "S", "dakhin": "S",
+         "dokkhin": "S", "south": "S", "purba": "E", "purbo": "E", "east": "E", "paschim": "W", "pashchim": "W",
+         "poschim": "W", "pashim": "W", "pachim": "W", "west": "W", "madhya": "M", "maddho": "M",
+         "dakkin": "S", "dakshi": "S", "nourth": "N"}
+_DIR_GLUED = re.compile(r"^(%s)([a-z]{3,})$|^([a-z]{3,}?)(%s)$" % ("|".join(_DIRS), "|".join(_DIRS)))
+
+
+def _dir_split(n):
+    """Direction words of a romanised name and the rest; also inside one word ('Eastjuri', 'Chitoshiwest')."""
+    words = []
+    for w in re.findall(r"[a-z]+", (n or "").lower()):
+        m = None if w in _DIRS else _DIR_GLUED.match(w)
+        words += [x for x in m.groups() if x] if m else [w]
+    return {_DIRS[w] for w in words if w in _DIRS}, " ".join(w for w in words if w not in _DIRS)
+
+
+def moved_union_similarity(a, b):
+    """en_similarity with direction words compared as a set: 'Uttar Bangshikunda' = 'Bongshikunda North' only."""
+    (da, ra), (db, rb) = _dir_split(a), _dir_split(b)
+    return en_similarity(ra, rb) if da == db and ra and rb else 0.0
+
+
+def _letter_dir(name, other_rest):
+    """Seed names abbreviate a direction to a last letter ('Akhauran', 'Nabinagarw'): read it only when dropping the
+    letter makes the name closer to the other name without its direction word."""
+    w = re.sub(r"[^a-z]", "", (name or "").lower())
+    if len(w) > 4 and w[-1] in "nsew" and other_rest and \
+            en_similarity(w[:-1], other_rest) > en_similarity(w, other_rest):
+        return {w[-1].upper()}
+    return set()
+
+
+def dir_similarity(a, b, boost=True):
+    """en_similarity, but 0 when both names carry direction words and they differ (Matlab Uttar != Matlab South)."""
+    (da, ra), (db, rb) = _dir_split(a), _dir_split(b)
+    if da and not db:
+        db = _letter_dir(b, ra)
+    elif db and not da:
+        da = _letter_dir(a, rb)
+    if da and db:
+        # same direction words: compare the rest too ('Uttar Hamchadi' / 'Hamsadi (North)')
+        return 0.0 if da != db else max(en_similarity(a, b), en_similarity(ra, rb) if boost and ra and rb else 0.0)
+    return en_similarity(a, b)
 
 
 def _assign(sources, targets, sim, threshold):
@@ -160,6 +207,19 @@ def apply_admin(rows, add, uniq):
             _apply_admin_division(rows, add, uniq, div, m)
 
 
+# BBS 2022 upazila names that differ from the seed's beyond spelling; each pair checked against the seed's Bangla name
+UPAZILA_ALIASES = {
+    "Cumilla": {"Adarsha Sadar": "Comilla Sadar",     # seed কুমিল্লা সদর (Cumilla Adarsha Sadar)
+                "Sadar Dakkhin": "Sadarsouth"},       # seed সদর দক্ষিণ (Cumilla Sadar Dakshin)
+    # seed জিয়ানগর is Indurkani's former name: HDX's 2020 point for upazila 10-79-90 is named Zianagar, and the seed's
+    # three Zianagar unions (Balipara, Pattashi, Parerhat) are BBS 2022 Indurkani unions
+    "Pirojpur": {"Indurkani": "Zianagar"},
+    # seed দক্ষিণ সুনামগঞ্জ is Shantiganj's former name (Dakshin Sunamganj): HDX's 2020 point BD609027 has that name and
+    # BBS 2022 Shantiganj (60-90-87) has the seed South Sunamganj's 8 unions
+    "Sunamganj": {"Shantiganj": "South Sunamganj"},
+}
+
+
 def _apply_admin_division(rows, add, uniq, div, bbs_manifest):
     BBS = bbs_manifest["key"]
     DIVISION_ID = div["id"]
@@ -187,13 +247,17 @@ def _apply_admin_division(rows, add, uniq, div, bbs_manifest):
     bbs_by_level = defaultdict(list)
     for a in bbs_areas:
         bbs_by_level[a["level"]].append(a)
-    d_of = {}
+    d_of = {}   # lower-case BBS district name -> seed row (BBS prints "Cox'S Bazar" on its district row)
+    districts_lc = {k.lower(): v for k, v in districts.items()}
     for a in bbs_by_level["district"]:
-        d = districts.get(a["name_en"])
+        # district_en carries the seed spelling where BBS prints another ("Netrakona" -> Netrokona); lower-level rows
+        # are filtered by district_en too
+        dkey = (a.get("district_en") or a["name_en"]).lower()
+        d = districts_lc.get(dkey)
         if not d:
             log(f"bbs:{a['code']}", "unmatched", f"BBS district {a['name_en']} not in seed", BBS)
             continue
-        d_of[a["name_en"]] = d
+        d_of[dkey] = d
         official(d, a["code"], f"Matched to BBS Census 2022 district {a['code']}.")
         area = facts.get(a["code"], {}).get("area_km2")
         if area:
@@ -207,9 +271,11 @@ def _apply_admin_division(rows, add, uniq, div, bbs_manifest):
     # upazilas (+ RCC)
     upz_of = {}   # bbs upazila code -> seed row
     for dname, d in d_of.items():
-        bbs_up = [a for a in bbs_by_level["upazila"] if a["district_en"] == dname]
+        bbs_up = [a for a in bbs_by_level["upazila"] if a["district_en"].lower() == dname]
         cands = [r for r in kids[d["id"]] if r["level"] == "upazila"]
-        sim = lambda a, c: 1.0 if upazila_key(c["name_en"]) == upazila_key(a["name_en"]) else en_similarity(a["name_en"], c["name_en"])
+        alias = UPAZILA_ALIASES.get(d["name_en"], {})
+        sim = lambda a, c: 1.0 if upazila_key(c["name_en"]) == upazila_key(a["name_en"]) or alias.get(a["name_en"]) == c["name_en"] \
+            else dir_similarity(a["name_en"], c["name_en"])
         for i, (j, _) in _assign(bbs_up, cands, sim, 0.6).items():
             a, u = bbs_up[i], cands[j]
             upz_of[a["code"]] = u
@@ -220,7 +286,7 @@ def _apply_admin_division(rows, add, uniq, div, bbs_manifest):
     # city corporations: matched by name within their district; wards counted from the census
     cc_of = {}   # BBS city corporation code -> seed row
     for a in bbs_by_level["city_corporation"]:
-        d = d_of.get(a["district_en"]) or next((x for x in d_of.values() if a["code"].startswith(x.get("bbs_code") or "~")), None)
+        d = d_of.get(a["district_en"].lower()) or next((x for x in d_of.values() if a["code"].startswith(x.get("bbs_code") or "~")), None)
         cands = [r for r in rows if r["level"] == "city_corporation" and (d is None or r["parent_id"] == d["id"])]
         cc, _ = _best(re.sub(r"\s*city corporation", "", a["name_en"], flags=re.I), cands,
                       key=lambda r: r["name_en"].replace(" City Corporation", ""), threshold=0.8)
@@ -235,8 +301,10 @@ def _apply_admin_division(rows, add, uniq, div, bbs_manifest):
             log("city_corporation:50005", "population", f"{before} -> {cc['population_2022']} (BBS 2022 C-01; RCC এক নজরে agrees)", BBS)
             continue
         official(cc, a["code"], f"Matched to BBS Census 2022 city corporation {a['code']}.")
+        # "Ward No. 98 (Restricted Area)" (Dhaka North, cantonment) is a census unit, not a city corporation ward
         nums = {re.search(r"(\d+)", w["name_en"]).group(1) for w in bbs_by_level["ward"]
-                if w["code"].startswith(a["code"] + "-") and re.search(r"(\d+)", w["name_en"])}
+                if w["code"].startswith(a["code"] + "-") and re.search(r"(\d+)", w["name_en"])
+                and "restricted" not in w["name_en"].lower()}
         if nums:
             cc.update(wards_count=len(nums))
         log(f"city_corporation:{cc['id']}", "population", f"{before} -> {cc['population_2022']} (BBS 2022)", BBS)
@@ -258,24 +326,54 @@ def _apply_admin_division(rows, add, uniq, div, bbs_manifest):
                 out.append(p)
         return out
 
+    # unions that moved to a newer upazila (e.g. Madhyanagar, carved out of Dharmapasha): the census lists them under the
+    # new upazila, the seed still under the old one. Move a seed union when its old upazila has more seed unions than
+    # census unions, the new one fewer, and the names match with the same direction words (Uttar/North ...).
+    by_district = defaultdict(list)
+    for code, u in sorted(upz_of.items()):
+        by_district[u["parent_id"]].append((code, u))
+    for _, ups in by_district.items():
+        wanting, orphans = [], []
+        for code, u in ups:
+            bbs_u = [a for a in bbs_by_level["union"] if a["code"].startswith(code + "-")]
+            seed_u = [r for r in kids[u["id"]] if r["level"] == "union"]
+            m = _assign(bbs_u, seed_u, lambda a, s: dir_similarity(a["name_en"], s["name_en"]), 0.72)
+            if len(bbs_u) > len(seed_u):
+                wanting += [(u, a) for i, a in enumerate(bbs_u) if i not in m]
+            elif len(seed_u) > len(bbs_u):
+                orphans += [s for j, s in enumerate(seed_u) if j not in {x[0] for x in m.values()}]
+        if not wanting or not orphans:
+            continue
+        mv = _assign(wanting, orphans, lambda w, s: moved_union_similarity(w[1]["name_en"], s["name_en"]), 0.85)
+        for i, (j, sc) in mv.items():
+            u, a = wanting[i]
+            s = orphans[j]
+            old = by_id[s["parent_id"]]
+            kids[old["id"]].remove(s)
+            s["parent_id"] = u["id"]
+            kids[u["id"]].append(s)
+            s["path"] = uniq(f"{u['path']}/{s['slug']}")
+            s["notes"] = "; ".join(x for x in [s.get("notes"), f"Moved from {old['name_en']} to {u['name_en']}: BBS Census 2022 lists it there ({a['code']})"] if x)
+            log(f"area:{s['id']}", "reparented", f"{s['name_en']}: {old['name_en']} -> {u['name_en']} (BBS {a['code']} {a['name_en']}, similarity {sc:.2f})", BBS)
+
     # unions
     next_union = max(r["id"] for r in rows if r["level"] == "union") + 1
     for code, u in sorted(upz_of.items()):
         bbs_u = sorted((a for a in bbs_by_level["union"] if a["code"].startswith(code + "-")), key=lambda a: a["code"])
         seed_u = sorted((r for r in kids[u["id"]] if r["level"] == "union"), key=lambda r: r["id"])
-        match = _assign(bbs_u, seed_u, lambda a, s: en_similarity(a["name_en"], s["name_en"]), 0.72)
+        match = _assign(bbs_u, seed_u, lambda a, s: dir_similarity(a["name_en"], s["name_en"]), 0.72)
         # leftovers on both sides: pair them by best similarity, accepting weaker matches (same upazila, same count)
         left_b = [i for i in range(len(bbs_u)) if i not in match]
         left_s = [j for j in range(len(seed_u)) if j not in {m[0] for m in match.values()}]
         if left_b and left_s:
-            extra = _assign([bbs_u[i] for i in left_b], [seed_u[j] for j in left_s], lambda a, s: en_similarity(a["name_en"], s["name_en"]), 0.45)
+            extra = _assign([bbs_u[i] for i in left_b], [seed_u[j] for j in left_s], lambda a, s: dir_similarity(a["name_en"], s["name_en"], boost=False), 0.45)
             for i, (j, sc) in extra.items():
                 match[left_b[i]] = (left_s[j], sc)
                 log(f"area:{seed_u[left_s[j]]['id']}", "weak_match", f"{seed_u[left_s[j]]['name_en']} = BBS {bbs_u[left_b[i]]['name_en']} (similarity {sc:.2f})", BBS)
             # exactly one left on each side after that: the same union under two spellings (e.g. Khatteshawr = Raninagar)
             left_b = [i for i in range(len(bbs_u)) if i not in match]
             left_s = [j for j in range(len(seed_u)) if j not in {m[0] for m in match.values()}]
-            if len(left_b) == 1 and len(left_s) == 1:
+            if len(left_b) == 1 and len(left_s) == 1 and dir_similarity(bbs_u[left_b[0]]["name_en"], seed_u[left_s[0]]["name_en"]) > 0:
                 match[left_b[0]] = (left_s[0], 0.0)
                 log(f"area:{seed_u[left_s[0]]['id']}", "paired_by_count", f"{seed_u[left_s[0]]['name_en']} = BBS {bbs_u[left_b[0]]['name_en']} (only unmatched pair in {u['name_en']})", BBS)
         district_en = by_id[u["parent_id"]]["name_en"]
@@ -392,6 +490,8 @@ def _apply_admin_division(rows, add, uniq, div, bbs_manifest):
                 slug=f"ward-{n}", path=uniq(f"{parent['path']}/ward-{n}"), source_ref=f"bbs:{a['code']}", verified=False,
                 data_source=BBS, evidence_level="official", evidence_source=BBS, notes=None)
         official(r, a["code"], f"Listed in BBS Census 2022 ({a['code']}).")
+        if "restricted" in a["name_en"].lower():
+            r["notes"] = f"BBS 2022 lists '{a['name_en']}': a census unit for the cantonment, not counted among the city corporation's wards."
         r["_before"] = (False, False)
         if parent["level"] == "city_corporation":
             cc_wards[(parent["id"], n)] = r
@@ -410,7 +510,12 @@ def _attach_boundaries(rows, div, cc_of):
         return
     hdx, gb = hm["_dir"], (gm["_dir"] if gm else None)
     # city wards are matched by number inside their city corporation: HDX/geoBoundaries code prefix BD<div><district>
-    cc_prefix = {"BD" + "".join(code.split("-")[:2]): cc for code, cc in cc_of.items()}
+    # Only where a district has one city corporation: Dhaka district's North and South share a prefix, and its 2020
+    # ward polygons use the old undivided Dhaka City Corporation numbers, so they are never joined by number.
+    by_pre = defaultdict(list)
+    for code, cc in cc_of.items():
+        by_pre["BD" + "".join(code.split("-")[:2])].append(cc)
+    cc_prefix = {pre: ccs[0] for pre, ccs in by_pre.items() if len(ccs) == 1}
     by_id = {r["id"]: r for r in rows}
     xwalk = {}
     for x in read_csv(os.path.join(hdx, "crosswalk.csv")):
@@ -435,6 +540,23 @@ def _attach_boundaries(rows, div, cc_of):
                 n += 1
     log("boundaries" if div["id"] == 10002 else f"boundaries:{div['name']}", "attached",
         f"{n} polygons attached (HDX COD-AB v03 upazilas, geoBoundaries 2020 unions/pourashavas/wards)", hm["key"])
+
+
+# City-thana names that other sources write differently from BBS 2022 (beyond spelling). Lookups are always limited to
+# the city corporations of the place's own district, so "Bandar" in Narayanganj still means Narayanganj's Bandar thana.
+THANA_ALIASES = {"bandar": "Chattogram Port", "port": "Chattogram Port", "chittagong port": "Chattogram Port",
+                 "chittogram port": "Chattogram Port", "chawkbazar": "Chalk Bazar", "chak bazar": "Chalk Bazar",
+                 "pachlaish": "Panchlaish"}
+
+
+def thana_key(name):
+    """'Bangshal Thana' / 'Mohammadpur Model Thana' / 'Mohammadpur' -> one key."""
+    n = re.sub(r"\s*(model\s+)?(police\s+station|police\s+thana|thana|p\.?s\.?)\s*$", "", name or "", flags=re.I)
+    n = THANA_ALIASES.get(n.strip().lower(), n)
+    n = re.sub(r"\bindustrial(\s+area)?\b|\bI/A\b", "shilpa elaka", n, flags=re.I)
+    for a, b in (("east", "purba"), ("west", "paschim"), ("north", "uttar"), ("south", "dakshin")):
+        n = re.sub(rf"\b{a}\b", b, n, flags=re.I)
+    return latin_key(n)
 
 
 # ------------------------------------------------------------------ places
@@ -625,6 +747,16 @@ def build_places(rows, base_places, cat_by_key, district_features):
         for r in rows:
             if r["level"] == "city_corporation" and r["parent_id"] in {d["id"] for d in districts.values()}:
                 cc_by_d[r["parent_id"]].append(r)
+        # census thanas inside a city corporation (BBS code <div>-<district>-<cc>-<thana>); a thana listed under two
+        # city corporations (Dhanmondi, Ramna, Sher-e-Bangla Nagar in Dhaka) is not assigned to either
+        cc_by_code = {r["bbs_code"]: r["id"] for r in rows if r["level"] == "city_corporation" and r.get("bbs_code")}
+        thana_cc = defaultdict(set)
+        bm = source(div["name"], "bbs_census")
+        if bm:
+            for a in read_csv(os.path.join(bm["_dir"], "areas.csv")):
+                cc_id = cc_by_code.get("-".join(a["code"].split("-")[:3])) if a["level"] == "thana" else None
+                if cc_id:
+                    thana_cc[thana_key(a["name_en"])].add(cc_id)
         metro_thanas = set()
         for mm in sources(div["name"], "metro_police_thanas"):
             metro_thanas |= {latin_key(x["upazila_en"]) for x in read_csv(os.path.join(mm["_dir"], "places.csv")) if x.get("upazila_en")}
@@ -691,10 +823,37 @@ def build_places(rows, base_places, cat_by_key, district_features):
                 elif thana in PABA_THANAS and d["id"] == RAJSHAHI_DISTRICT_ID:
                     upz = upazila_of(d, "Paba")
                 elif r.get("upazila_en"):
-                    upz = upazila_of(d, r["upazila_en"])
+                    multi_cc = len(cc_by_d[d["id"]]) > 1
+                    tk0 = thana_key(r["upazila_en"])
+                    if tk0 not in thana_cc and cc_by_d[d["id"]]:   # spelling variant of a census city thana (Bakolia/Bakalia)
+                        own_keys = [k for k in thana_cc if thana_cc[k] & {c["id"] for c in cc_by_d[d["id"]]}]
+                        close = [k for k in own_keys if en_similarity(tk0, k) >= 0.85]
+                        tk0 = close[0] if len(close) == 1 else tk0
+                    exact_thana = tk0 in thana_cc and not any(
+                        upazila_key(u["name_en"]) == upazila_key(r["upazila_en"]) for u in upz_by_d[d["id"]])
+                    # a census city thana (Demra, Bakalia) must not fall to a similar-looking upazila (Dhamrai, Boalkhali)
+                    upz = None if exact_thana else upazila_of(d, r["upazila_en"])
+                    if exact_thana and not multi_cc:
+                        own = thana_cc[tk0] & {c["id"] for c in cc_by_d[d["id"]]}
+                        cc = next(iter(own)) if len(own) == 1 else None
                     # a metro-police thana that is not an upazila: the district's only city corporation
-                    if not upz and DIVISION_ID != 10002 and thana in metro_thanas and len(cc_by_d[d["id"]]) == 1:
+                    if not upz and DIVISION_ID != 10002 and thana in metro_thanas and len(cc_by_d[d["id"]]) == 1 \
+                            and not (any(cc_by_d[d["id"]][0]["id"] in v for v in thana_cc.values()) and not exact_thana):
+                        # the district's only city corporation, unless the census lists that city corporation's thanas
+                        # and this one is not among them (Khulna's Aranghata, Harintana, Labanchara)
                         cc = cc_by_d[d["id"]][0]["id"]
+                    elif not upz and len(cc_by_d[d["id"]]) > 1:
+                        tk = thana_key(r["upazila_en"])
+                        if tk not in thana_cc:   # spelling variants (Adabor/Adabar, Hazaribag/Hazaribagh): one close match only
+                            close = [k for k in thana_cc if en_similarity(tk, k) >= 0.85]
+                            tk = close[0] if len(close) == 1 else tk
+                        hit_cc = thana_cc.get(tk, set()) & {c["id"] for c in cc_by_d[d["id"]]}
+                        if len(hit_cc) != 1 and extra.get("city_corporation"):   # the registry's own city-corporation field
+                            named = [c for c in cc_by_d[d["id"]] if en_similarity(re.sub(r"(?i)\s*city\s*corp\w*", "", extra["city_corporation"]),
+                                                                                   c["name_en"].replace(" City Corporation", "")) >= 0.85]
+                            hit_cc = {named[0]["id"]} if len(named) == 1 else hit_cc
+                        if len(hit_cc) == 1:
+                            cc = next(iter(hit_cc))
                 if lat is not None:
                     hit = dist_poly.find(lon, lat)
                     if not hit or hit[0]["properties"].get("district_id") != d["id"]:
@@ -718,7 +877,12 @@ def build_places(rows, base_places, cat_by_key, district_features):
                 phones = []
                 for ph in re.split(r"[;,/]| or ", r.get("phone") or ""):
                     ph = re.sub(r"[^\d+\-]", "", ph.strip())
-                    if len(re.sub(r"\D", "", ph)) >= 5 and ph not in phones:
+                    digits = re.sub(r"\D", "", ph)
+                    if len(set(digits[-8:])) <= 1:     # placeholder such as 01700000000 / 01111111111 / 000000
+                        if digits:
+                            log(rid, "phone_dropped", f"{ph!r} looks like a placeholder", key)
+                        continue
+                    if len(digits) >= 5 and ph not in phones:
                         phones.append(ph)
                 email = (re.split(r"[;,\s]+", r.get("email") or "") or [""])[0] or None
                 if email and (personal_mail and not OFFICIAL_MAIL.search(email) or "@" not in email):

@@ -1,0 +1,30 @@
+{
+  "key": "SYLHET_DC_PORTAL_2026",
+  "name": "Sylhet District Administration portal — upazila/union list, pourashavas, district at-a-glance",
+  "organization": "Office of the Deputy Commissioner, Sylhet (Government of Bangladesh, a2i National Portal)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "division": "sylhet",
+  "kind": "district_portal_main",
+  "urls": [
+    "https://sylhet.gov.bd/",
+    "https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0691",
+    "https://sylhet.gov.bd/pages/static-pages/list-of-upazila-1r6o9p-6aafaf75d9cbf60b24abe905",
+    "https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0694",
+    "https://bangladesh.gov.bd/views/union-list"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "সিলেট জেলা প্রশাসন, জাতীয় তথ্য বাতায়ন (sylhet.gov.bd)",
+  "files": {
+    "areas.csv": "af926886b3dda0f1f3af272f9f5f3ea3992b08249297c3888458b0b8966eea12",
+    "facts.csv": "f476db5526d30e53f8996e2d71a235a4948be2e5c858b442a9bbf5a1d0913576",
+    "raw/pages.csv": "95a2653bc2e21bbdb763894c8a8d89ddce41f9f30d6e2988927c059a5b9258d8",
+    "raw/sylhet_glance.txt": "6d18896a153dbc992c6ae98ce958ac0a5144bcfd1c5d8f7101c661e8cc540bbf",
+    "raw/sylhet_unions.txt": "dbe50014b6a9846a4fc02f4e3ea2690678488704de7b927241b29690c1318a7b",
+    "raw/sylhet_upazilas.txt": "b582cd379f6f7b02d324c73a26100a82aa84ede35576b1c310c7ebe484355d2e"
+  },
+  "notes": "Collected by the generic division mode of the a2i portal collectors (pages found through the portals' menus, names and figures parsed from the pages). No licence stated; only facts (names, counts, figures) are extracted. English district/upazila names are the project's keys, not printed."
+}

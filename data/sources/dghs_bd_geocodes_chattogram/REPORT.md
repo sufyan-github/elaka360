@@ -1,0 +1,34 @@
+# DGHS bd-geocodes (BBS geocodes) — Chattogram Division
+
+- **Source:** DGHS Bangladesh Core FHIR Implementation Guide, CodeSystem `bd-geocodes` v0.5.0 (2026-10-15), 1,591 codes nationally (318 under division 20). https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html
+- **Run:** `python3 -I data/sources/dghs_bd_geocodes/fetch.py --division chattogram` (accessed 2026-11-17). Key `DGHS_BD_GEOCODES_CHATTOGRAM`, division `chattogram`, kind `dghs_geocodes`.
+- **Licence:** CC0-1.0 (the guide's licence field).
+- **Code layout (inferred, as for Rajshahi):** 2 digits division (20) · 4 district · 6 city corporation (201516 Chattogram, 201950 Cumilla) · 8 upazila or city thana · 10 paurashava.
+- **Coverage:**
+  - 11 districts, 2 city corporations, 105 upazila codes (104 upazilas plus a second Eidgaon code, below).
+  - 15 city thanas, all in Chattogram City Corporation: Akbarshah, Bayejid Bostami, Bakalia, Chalk Bazar, Chandgaon, Chittogram Port, Double Mooring, EPZ, Halishahar, Kotwali, Khulshi, Pahartali, Panchlaish, Patenga, Sadarghat.
+  - 59 paurashavas.
+  - **No unions:** the "Unions Of … Upazila" placeholders are skipped.
+- **Cumilla City Corporation has no thanas here.** Cumilla Adarsha Sadar (20195067) and Cumilla Sadar Dakshin (20195033) sit in the city corporation's code space but have "Unions Of …" groups, so they are read as upazilas, as for Rangpur Sadar. The 11 "Chittagong City Corp." 10-digit entries (parts of the city corporation inside its thanas) are skipped, as for Dhaka.
+- **Doubtful codes, kept as printed and flagged in `notes`:** Eidgaon is listed twice, as `20220032` (equal to HDX v03 `BD20220032`) and `20220075`. Duplicate or renumbering; unresolved. `20220075` is unmatched in the crosswalk.
+- **fetch.py change:** hand-checked upazila table `UNIT_SEED_BY_DIV["chattogram"]` (method `code_hand_checked`). Without it, the fuzzy tier paired Matlab Uttar with Matlab South.
+  - Matlab Dakshin 20130076 → Matlab South (30056)
+  - Matlab Uttar 20130079 → Matlab North (30058)
+  - Cumilla Adarsha Sadar 20195067 → Comilla Sadar (30011)
+  - Cumilla Sadar Dakshin 20195033 → Sadarsouth (30014)
+  - Kowkhali 20840025 → Kawkhali (30035)
+- **Rerun check:** Rajshahi/Rangpur/Dhaka reruns into a scratch folder differ from the committed folders only in pourashava crosswalk rows. The seed gained pourashavas after those folders were built; the HEAD version of fetch.py gives identical output.
+- **Agreement with HDX v03:** the 8-digit upazila codes equal the HDX v03 P-codes minus `BD` for 102 of 105. Exceptions:
+  - Cumilla Adarsha Sadar `20195067` vs HDX `BD20190067`.
+  - Cumilla Sadar Dakshin `20195033` vs `BD20190033`.
+  - The second Eidgaon code `20220075`.
+  - City-corporation codes are 6 digits here vs 8 in HDX (`201516` vs `BD20151600`).
+- **Crosswalk:**
+  - Districts 11/11; city corporations 2/2 (50003, 50009).
+  - Upazilas 104/104: 88 exact, 4 banglish, 6 skeleton, 1 fuzzy (Lalmi↔Lalmai, medium), 5 hand-checked. 1 source code unmatched (Eidgaon `20220075`).
+  - Paurashavas 0/59: the seed has no Chattogram pourashavas.
+- **Paurashavas (59):** Chattogram 12, Cumilla 8, Noakhali 8, Chandpur 7, Feni 5, Brahmanbaria 4, Cox's Bazar 4, Lakshmipur 4, Khagrachari 3, Bandarban 2, Rangamati 2.
+  - Spellings as printed: "…Paurasava", "COX'S BAZAR PAURASHAVA", "Roypur Paurasava" (Raipur), district "Khagrachari".
+- **Sets disagree between sources:** BBS 2022 has 62 paurashavas (Chattogram 14, Brahmanbaria 5). HDX 2020 points have 59, including the former Comilla and Comilla Dakshin Paurashavas.
+- **Hill districts:** listed like the other districts (upazilas and paurashavas only); nothing on their own local-government bodies.
+- **Code vintage:** not stated by DGHS.

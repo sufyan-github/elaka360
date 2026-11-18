@@ -1,0 +1,30 @@
+{
+  "key": "GAZIPUR_CITY_CORPORATION",
+  "division": "dhaka",
+  "kind": "city_corporation",
+  "city": 50011,
+  "name": "Gazipur City Corporation official portal (gcc.gov.bd)",
+  "organization": "Gazipur City Corporation",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://gcc.gov.bd/",
+    "https://gcc.gov.bd/pages/static-pages/6922ddc3933eb65569e16266",
+    "https://gcc.gov.bd/pages/static-pages/6922db77933eb65569e0a43d",
+    "https://gcc.gov.bd/pages/static-pages/location-and-area-imso6t-6af96b33ab933af2b0e1e94a"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Gazipur City Corporation (gcc.gov.bd), Bangladesh National Portal",
+  "notes": "Key page: এক নজরে গাজীপুর সিটি কর্পোরেশন (updated 2026-09-09 15:09; English facts table + zone table with ward ranges and areas). Ward/zone boundary PDF not transcribed. Counts of schools, markets etc. on the same page are marked \"Approx.\" and are not copied.",
+  "files": {
+    "areas.csv": "f753d33852597c3745c96714f62b3c82baff2d9cd0e2e7fef9a1159d658c1766",
+    "facts.csv": "69f312dfb14f1bb9dd8b4b369e3f18b3453c0d4cea982f6348ce149c36b94c29",
+    "raw/ek_nojore_gcc.txt": "c6bc165531cb7e8bd03189c1e86eef44e061c7498c273ad2b52394fc2179c876",
+    "raw/history.txt": "245c5044982d54e6d0e0241c6d4ff47c2a07509ac98fa7027f1b099e03693a97",
+    "raw/ward_boundaries_page.txt": "dc1576f5f110b23c9ba1130e6c738613aed827205f421c7f762f73c5e140b152",
+    "raw/zones.txt": "311eadfb5bdac507f3f8c2d22ebe5cb919647202bdb2ba772d074ef6a9db6b4e"
+  }
+}

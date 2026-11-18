@@ -1,0 +1,26 @@
+{
+  "key": "BD_RAILWAY_BAR_2026",
+  "division": "barishal",
+  "kind": "railway",
+  "name": "Bangladesh Railway — station phones and district-wise station counts (Barishal Division)",
+  "organization": "Bangladesh Railway",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6",
+    "https://railway.gov.bd/pages/files/6919975c933eb65569ddc4da",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-railway/2026/5/f526722f-5331-425f-b5a6-e13b91b509a3.pdf"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Bangladesh Railway (railway.gov.bd)",
+  "notes": "No railway in Barishal Division. The Information Book 2023-24 Table-4 ('District-wise station & route kilometers', 49 districts, 542 stations) has no row for Barishal, Bhola, Patuakhali, Pirojpur, Jhalokathi or Barguna, and the 'important stations' BTCL phone list names no station in the division; places.csv and facts.csv are header-only and both texts are kept in raw/ as evidence. No licence stated. railway.gov.bd publishes no station register; eticket.railway.gov.bd robots.txt disallows all crawling, so its station list was not used.",
+  "files": {
+    "places.csv": "3caf89d7e57fd29352f18ff6881a7bae15bfdbe9816b7433c575dff10ece7630",
+    "facts.csv": "e5b258ac493207d372f46a3ccf054ec6e00dfc1eaba29e3edf56f19dafe15368",
+    "raw/railway_important_station_phones.txt": "752630f5f74541f480f1fb9f787b998a5b20961b14a99cda310b462f49f92273",
+    "raw/infobook_2023_24_table4.txt": "6c40ecc2a699a4717aad619b7f19a8f947ae1dc3d51430cc80616913e6611245"
+  }
+}

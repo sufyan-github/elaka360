@@ -1,0 +1,42 @@
+{
+  "key": "DOA_PROTECTED_MONUMENTS_KHL_2026",
+  "division": "khulna",
+  "kind": "doa_monuments",
+  "name": "Department of Archaeology — gazetted protected monuments, Khulna Division (district PDF lists)",
+  "organization": "প্রত্নতত্ত্ব অধিদপ্তর (Department of Archaeology), Ministry of Cultural Affairs",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://archaeology.gov.bd/pages/static-pages/6922df45933eb65569e20fab"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "প্রত্নতত্ত্ব অধিদপ্তর (Department of Archaeology), Ministry of Cultural Affairs",
+  "notes": "Page 'খুলনা বিভাগের সংরক্ষিত পুরাকীর্তি' links one PDF per district for all 10 districts (105 monuments; lists published 2024-08-31, Kushtia 2026-06-25, Bagerhat 2026-08-10). PDFs mix Bijoy/SutonnyMJ text (converted to Unicode by fetch.py, bijoy2uni) and Unicode text layers; Khulna-07 and Bagerhat-20 have broken Unicode text layers and were read from the rendered pages (ROW_FIXES_BY_DIV['khulna']); three conversion slips are fixed in TEXT_FIXES_BY_DIV['khulna'] after checking the rendered pages. Photo captions are dropped. Coordinates are as published (DMS, one row in decimal degrees) and checked against the HDX COD-AB Khulna polygons (hdx_cod_ab_bgd_khulna): one point outside its district and two unparseable or out-of-range ones are not used (kept in extra_json). Descriptions are not copied; only a construction-date phrase. Licence not stated.",
+  "files": {
+    "facts.csv": "949f87d0b95bef82107377fbb155beee078f30b9b4d6f2d77c5279a0ce09e4a7",
+    "places.csv": "7e51cd953f07dc911d2dedea6bb50d6891d1064b428383283492b5c8245f5424",
+    "raw/doa_bagerhat.pdf": "cb74fbe635a412108950eeaa0d57fd5c9c519e427883b23015fa898b38b0de7b",
+    "raw/doa_bagerhat.txt": "f4df857d6dd407158c5b7298157d6afd93b85b9fa20d07303ac1a214fb621d3e",
+    "raw/doa_chuadanga.pdf": "f2fa8472c9fcc0900b25c986bd5078bba6491ccd86a5aad1cb1e6b20f09ddefe",
+    "raw/doa_chuadanga.txt": "d006056747d999de36e47f10a4d741248432b532f72073cd427ba192110540b9",
+    "raw/doa_jashore.pdf": "2f429e8c88f9e9b73957221fa3953241f887e6bda6bec561217c91f2b7a84dcb",
+    "raw/doa_jashore.txt": "184a355c98186cf2e980ed3805197065fb8ee794f09067cc9a87d11a4a3155c0",
+    "raw/doa_jhenaidah.pdf": "0b1ff646e440c82935c37d5f1c134c0301833f2167f715de92a0f921e67965e8",
+    "raw/doa_jhenaidah.txt": "13d5095b6811efba40e38a28ff54ca6f88df1e6fd9080a9019d04c378352015d",
+    "raw/doa_khulna.pdf": "0bfc7e6aa22f697a6e07fbc95a286c1937de63f406f1605beda551bffc062957",
+    "raw/doa_khulna.txt": "2bf9f95c8d0f0d8cbcc9cb42c89115a57bcf191c57d53ad2b534a7751c9ec6b8",
+    "raw/doa_kushtia.pdf": "e2d8cb9231aa564e26998bd24a10d88e2fddafa731f012e3d9f36b7547019eed",
+    "raw/doa_kushtia.txt": "7b611107beaf764f63bbec2d8fabe7e150b0a28e273ebb5a7a259d6063282819",
+    "raw/doa_magura.pdf": "12dc0a2d496f6d12c43c2966754c28bbfc6d7f24c8f5af3df7e1d4f3edb2203b",
+    "raw/doa_magura.txt": "194437457b16a8ca166fc5395ac0827c95cf56f41eea508c529522646ca6eec0",
+    "raw/doa_meherpur.pdf": "ecdd72bfaf0c225beceb7e792cdf3650c5218b8c6e4580adad71fc9ec014394a",
+    "raw/doa_meherpur.txt": "24144c99258724265e4cca57e4d58194a52dcca0a3a2e9465fffcea0f4a33913",
+    "raw/doa_narail.pdf": "9a571c0e052fd9ffbbba2300fb6623e930799535eee601c0ea7e37a7c1fc7696",
+    "raw/doa_narail.txt": "5e34dd93a3fe904618c55ee664879e2cb17588b833c98c1420d0e90e635b8def",
+    "raw/doa_satkhira.pdf": "fafec490f148e93f3f7ae286930477a1fd72c1dad125dbf331dcc2330c6e1a0f",
+    "raw/doa_satkhira.txt": "e70da477f32121bfefa9026284b0ff7461bebdc0d3a7f7842b030dbfae56aca2"
+  }
+}

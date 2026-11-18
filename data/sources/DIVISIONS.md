@@ -56,6 +56,18 @@ Folder names, applied to the Rajshahi folder name:
   - `rmp` → `rangpur_metro_police`
   - `rmp_thanas_2026` → `rangpur_metro_police_thanas_2026`
 
+A division with more than one city corporation or metropolitan police force gets one folder per city, and every city
+source's `SOURCE.json` also carries `"city": <seed city-corporation id>`, so the importer can tell them apart:
+
+| Division | City corporation folders (seed id) | Metro police folders |
+|---|---|---|
+| Dhaka | `dhaka_north_city_corporation` (50001), `dhaka_south_city_corporation` (50002), `narayanganj_city_corporation` (50010), `gazipur_city_corporation` (50011) | `dhaka_metro_police` + `dhaka_metro_police_thanas_2026` (DMP, `"city": [50001, 50002]`), `gazipur_metro_police` + `gazipur_metro_police_thanas_2026` (GMP, 50011) |
+| Chattogram | `chattogram_city_corporation` (50003), `cumilla_city_corporation` (50009) | `chattogram_metro_police` (CMP) |
+| Rajshahi | `rcc` (50005); `bogura_city_corporation` (50013) when collected | `rmp` |
+
+Each metro thana row names the city corporation it lies in (`area_en`) where the source says so; a thana that spans two
+city corporations, or one the source does not place, leaves it empty with a note.
+
 `SOURCE.json` keys follow the same rule in upper case:
 - `DGHS_HRIS_FACILITIES_RAJ_2026` → `DGHS_HRIS_FACILITIES_RANG_2026`.
 - `RAJSHAHI_…` → `RANGPUR_…`.

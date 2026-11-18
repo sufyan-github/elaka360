@@ -1,0 +1,27 @@
+{
+  "key": "LGD_2026_CHATTOGRAM",
+  "name": "Local Government Division portal (lgd.gov.bd) — Chattogram Division extract",
+  "organization": "Local Government Division, Ministry of LGRD&C",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://lgd.gov.bd/",
+    "https://lgd.gov.bd/pages/static-pages/6941401ec4774958d7b54a3f",
+    "https://lgd.gov.bd/pages/static-pages/69414021c4774958d7b54bea"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Local Government Division (lgd.gov.bd), Bangladesh National Portal",
+  "files": {
+    "areas.csv": "6ffcb3cd6db0c55c6d12ab26edda45d48f8304b3e8d6ebceab6a5f2269156599",
+    "facts.csv": "56577955192a7c410094f75489e84aa3bd5cd157612089de84a217724da35e84",
+    "raw/menu_page_status.txt": "767858f847067e15015ae4d90550b1199ceea9509dec17e4a645474dd3f6e93f",
+    "raw/union_parishad_page.txt": "cced2964ef8390c71440d6d1ee4e776efd65073e3cbfc03b476a2294e8e0ecbb",
+    "raw/upazila_list_chattogram_division.txt": "75e94be95387af2764aa98b37b4cf3a3b2f58b8169f2eda97741233607184c5a"
+  },
+  "notes": "Not a formal LGD list/gazette, so trust 4. Only the upazila-parishad list (page updated 2023-05-31 19:36) has Chattogram Division content; the portal has no pourashava or union list and no downloadable directory; menu pages for city corporations, pourashavas, zila parishads and upazila parishads: see raw/menu_page_status.txt. The national union-parishad total is kept in the Rajshahi LGD_2026 folder only.",
+  "division": "chattogram",
+  "kind": "lgd"
+}

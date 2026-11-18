@@ -1,0 +1,26 @@
+{
+  "key": "BDPOST_POSTCODES_CTG_2026",
+  "division": "chattogram",
+  "kind": "bdpost",
+  "name": "Bangladesh Post postcode booklet — Chattogram Division post offices (scan on post.rajshahi.gov.bd)",
+  "organization": "বাংলাদেশ ডাক বিভাগ (Bangladesh Post Office) — DPMG Rajshahi Division portal",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-post-rajshahi/2024/12/e548300c14de4897aa9516b65816e29f.pdf"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "বাংলাদেশ ডাক বিভাগ (Bangladesh Post Office) — DPMG Rajshahi Division portal",
+  "notes": "Same undated scanned booklet as the Rajshahi, Rangpur and Dhaka runs (no text layer). Chattogram Division's offices are in the booklet's 'চট্টগ্রাম রিজিয়ন': p. 15 (Brahmanbaria, Cumilla; the Sylhet-Division districts on pp. 14-15 are left out), pp. 16-17 (Chandpur, Lakshmipur, Noakhali, Feni, Chattogram GPO/port/city offices) and pp. 18-19 (Chattogram city and district, Khagrachhari, Rangamati, Bandarban, Cox's Bazar, up to the heading 'রাজশাহী রিজিয়ন'); only these were transcribed, by hand, from the page images (raw/*.png, PDF pages 9, 10 and 11 rotated). fetch.py verifies the PDF hash and re-emits the transcription. Four postcodes are partly faint and were read with the printed district range; four office names are uncertain readings (flagged). Branch post offices are not in the booklet. Licence: none stated on the source; treat as government public information, cite the source.",
+  "files": {
+    "facts.csv": "b064d76207710d615f8def05f001e5a85a004481709295a4d465c51e73d486c2",
+    "places.csv": "cbb2392ae232e18f2bd1856d0360ea71ef7bb0b097b1c1792eee35841509b5aa",
+    "raw/postcode_booklet_pp14-15.png": "10576b75cd5438debc8f5f984d58c0ce6f6556da961decfe40f99c93ab198166",
+    "raw/postcode_booklet_pp16-17.png": "f9780665b0f6522b8854a7c86910ad5f13ded7ae97514b44c3f1c2c332e7e485",
+    "raw/postcode_booklet_pp18-19.png": "542d96ce05d3a3846a0e3ee0af5134aed16eec470e63fa425a342fc14c5e3e13"
+  }
+}

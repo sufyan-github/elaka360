@@ -20,6 +20,7 @@ Default (no arguments): Rajshahi Division into this folder, exactly as the first
 HDX_COD_AB_BGD_<DIVISION>, and its own SOURCE.json.
 The ~38 MB HDX zip is cached in --cache (default: $TMPDIR/elaka360_cache) and is not committed.
 """
+from collections import Counter
 import argparse, csv, datetime, difflib, hashlib, io, json, math, os, re, sys, tempfile, time, unicodedata, zipfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -250,9 +251,73 @@ def parenthetical_variants(s):
     return [x.strip() for x in out if x.strip()]
 
 
-def match_names(src, ours):
+# Bangla direction words in romanised union names (Uttar Gobindapur = Gobindapur (North)); used only when a division
+# turns it on (DIRECTION_WORD_DIVS), so the earlier divisions' crosswalks are unchanged.
+DIRECTION_WORDS = {"uttar": "North", "north": "North", "dakshin": "South", "dakkhin": "South", "dakhsin": "South",
+                   "dakhin": "South", "dhakhin": "South", "dakkin": "South", "south": "South", "purba": "East",
+                   "east": "East", "paschim": "West", "pashchim": "West", "pachim": "West", "west": "West"}
+DIRECTION_WORD_DIVS = {"chattogram", "khulna", "barishal", "sylhet"}
+
+
+def direction_split(name):
+    """(name without its direction word, direction in English or None). A name with two different directions, or
+    nothing left besides the direction, is returned unchanged with direction None. A one-word name with the direction
+    glued on (Purbagujra, Uttarhowla, Chitoshiwest) is split when at least 4 letters remain."""
+    words = re.findall(r"[A-Za-z]+", name or "")
+    dirs = {DIRECTION_WORDS[w.lower()] for w in words if w.lower() in DIRECTION_WORDS}
+    if not dirs and re.fullmatch(r"[A-Za-z]+", (name or "").strip()):
+        alts = "|".join(DIRECTION_WORDS)
+        m = re.fullmatch(r"(" + alts + r")([a-z]{4,})", name.strip(), re.I) or \
+            re.fullmatch(r"([a-z]{4,}?)(north|south|east|west)", name.strip(), re.I)
+        if m:
+            d, base = (m.group(1), m.group(2)) if m.group(1).lower() in DIRECTION_WORDS else (m.group(2), m.group(1))
+            return base, DIRECTION_WORDS[d.lower()]
+    if len(dirs) != 1:
+        return name, None
+    base = re.sub(r"\b(" + "|".join(DIRECTION_WORDS) + r")\b", " ", name, flags=re.I)
+    base = re.sub(r"\(\s*\)", " ", base)
+    base = re.sub(r"\(\s+", "(", re.sub(r"\s+\)", ")", " ".join(base.split())))
+    return (base, dirs.pop()) if re.search(r"[A-Za-z]", base) else (name, None)
+
+
+def match_names(src, ours, directions=False):
     """src/ours: lists of (key, name_en). One-to-one matching, never forced.
+    directions=True: direction words (Uttar/Dakshin/Purba/Paschim = North/South/East/West) are taken out of both names
+    before comparing; a pair whose names carry different directions is never considered, and a pair where only one
+    name carries a direction is at most 'low' confidence and only considered when neither list has another name with
+    the same remainder (Paschim/Purba Rupasdi vs one Rupushdi stays unmatched).
     Returns {src_key: (our_key or None, method, confidence, note)}."""
+    sdir, odir = {}, {}
+    if directions:
+        src_orig, ours_orig = dict(src), dict(ours)
+        for k, n in src:
+            sdir[k] = direction_split(n)
+        for k, n in ours:
+            odir[k] = direction_split(n)
+        src = [(k, sdir[k][0]) for k, _ in src]
+        ours = [(k, odir[k][0]) for k, _ in ours]
+        sib_s = Counter(skeleton(n) for _, n in src)
+        sib_o = Counter(skeleton(n) for _, n in ours)
+
+    def ok_dir(sk, ok):
+        if not directions:
+            return True
+        if sdir[sk][1] and odir[ok][1]:
+            return sdir[sk][1] == odir[ok][1]
+        if sdir[sk][1] or odir[ok][1]:  # one-sided: only when the remainder is unique on both sides
+            return sib_s[skeleton(sdir[sk][0])] == 1 and sib_o[skeleton(odir[ok][0])] == 1
+        return True
+
+    def one_sided(sk, ok):
+        return directions and bool(sdir[sk][1]) != bool(odir[ok][1])
+
+    def dir_note(sk, ok, note):
+        if directions and (sdir[sk][1] or odir[ok][1]):
+            note = "; ".join(x for x in (note, (f"direction word read as {sdir[sk][1] or odir[ok][1]}" +
+                                                (" on one side only" if one_sided(sk, ok) else "") +
+                                                f": '{src_orig[sk]}' ~ '{ours_orig[ok]}'")) if x)
+        return note
+
     res = {}
     tiers = [
         ("name_exact", "high", lambda a, b: latin_key(GENERIC.sub(" ", a)) == latin_key(GENERIC.sub(" ", b))),
@@ -266,7 +331,7 @@ def match_names(src, ours):
         for sk, sn in pending:
             cands, via = [], {}
             for ok, on in ours:
-                if ok in taken:
+                if ok in taken or not ok_dir(sk, ok):
                     continue
                 hit = [(v, w) for v in parenthetical_variants(sn) for w in parenthetical_variants(on) if eq(v, w)]
                 if hit:
@@ -275,7 +340,8 @@ def match_names(src, ours):
                     if (v, w) != (sn, on):
                         via[ok] = f"matched on name variant '{v}' ~ '{w}'"
             if len(cands) == 1:
-                res[sk] = (cands[0], method, conf, via.get(cands[0], ""))
+                res[sk] = (cands[0], method, "low" if one_sided(sk, cands[0]) else conf,
+                           dir_note(sk, cands[0], via.get(cands[0], "")))
                 taken[cands[0]] = sk
             elif len(cands) > 1:
                 res[sk] = (None, "ambiguous", "none", f"{method}: {len(cands)} candidates")
@@ -286,7 +352,7 @@ def match_names(src, ours):
     for sk, sn in pending:
         scored = []
         for ok, on in ours:
-            if ok in taken:
+            if ok in taken or not ok_dir(sk, ok):
                 continue
             r = max(difflib.SequenceMatcher(None, banglish_key(v), banglish_key(w)).ratio()
                     for v in parenthetical_variants(sn) for w in parenthetical_variants(on))
@@ -294,11 +360,15 @@ def match_names(src, ours):
         scored.sort(reverse=True)
         if scored and scored[0][0] >= 0.8 and (len(scored) == 1 or scored[0][0] - scored[1][0] >= 0.08):
             res[sk] = (scored[0][1], "name_fuzzy", "low" if scored[0][0] < 0.88 else "medium",
-                       f"similarity {scored[0][0]:.2f} to '{scored[0][2]}'")
+                       dir_note(sk, scored[0][1], f"similarity {scored[0][0]:.2f} to '{scored[0][2]}'"))
             taken[scored[0][1]] = sk
         else:
+            if directions:
+                scored = [(r, ok, ours_orig[ok]) for r, ok, on in scored]
             best = "; ".join(f"{on} {r:.2f}" for r, ok, on in scored[:2])
-            res[sk] = (None, "unmatched", "none", f"best candidates: {best}" if best else "no candidates under parent")
+            res[sk] = (None, "unmatched", "none", f"best candidates: {best}" if best else
+                       ("no candidates without a conflicting direction word under parent" if directions and any(
+                           not ok_dir(sk, ok) for ok, _ in ours) else "no candidates under parent"))
     return res
 
 
@@ -325,13 +395,53 @@ DISTRICT_SEED_BY_DIV = {
     "rajshahi": DISTRICT_SEED,
     "rangpur": {"BD5527": "Dinajpur", "BD5532": "Gaibandha", "BD5549": "Kurigram", "BD5552": "Lalmonirhat",
                 "BD5573": "Nilphamari", "BD5577": "Panchagarh", "BD5585": "Rangpur", "BD5594": "Thakurgaon"},
+    "dhaka": {"BD3026": "Dhaka", "BD3029": "Faridpur", "BD3033": "Gazipur", "BD3035": "Gopalganj", "BD3048": "Kishoreganj",
+              "BD3054": "Madaripur", "BD3056": "Manikganj", "BD3059": "Munshiganj", "BD3067": "Narayanganj",
+              "BD3068": "Narsingdi", "BD3082": "Rajbari", "BD3086": "Shariatpur", "BD3093": "Tangail"},
+    "chattogram": {"BD2003": "Bandarban", "BD2012": "Brahmanbaria", "BD2013": "Chandpur", "BD2015": "Chattogram",
+                   "BD2019": "Cumilla", "BD2022": "Cox's Bazar", "BD2030": "Feni", "BD2046": "Khagrachhari",
+                   "BD2051": "Lakshmipur", "BD2075": "Noakhali", "BD2084": "Rangamati"},
+    "khulna": {"BD4001": "Bagerhat", "BD4018": "Chuadanga", "BD4041": "Jashore", "BD4044": "Jhenaidah", "BD4047": "Khulna",
+               "BD4050": "Kushtia", "BD4055": "Magura", "BD4057": "Meherpur", "BD4065": "Narail", "BD4087": "Satkhira"},
+    "barishal": {"BD1004": "Barguna", "BD1006": "Barishal", "BD1009": "Bhola", "BD1042": "Jhalokathi",
+                 "BD1078": "Patuakhali", "BD1079": "Pirojpur"},
+    "sylhet": {"BD6036": "Habiganj", "BD6058": "Moulvibazar", "BD6090": "Sunamganj", "BD6091": "Sylhet"},
+    "mymensingh": {"BD4539": "Jamalpur", "BD4561": "Mymensingh", "BD4572": "Netrokona", "BD4589": "Sherpur"},
+}
+# per division: source code -> seed admin_areas id for units the name matcher cannot pair (or pairs wrongly), decided by
+# hand from the Bangla seed name. Chattogram: "Uttar"/"Dakkhin" are North/South (the fuzzy tier paired Matlab Uttar
+# with Matlab South), and Cumilla's Adarsha Sadar / Sadar Dakkhin are the seed's Comilla Sadar (কুমিল্লা সদর) / Sadarsouth
+# (সদর দক্ষিণ). Divisions without an entry are matched by name only, as before.
+UNIT_SEED_BY_DIV = {
+    "chattogram": {"BD20130076": "30056", "BD20130079": "30058", "BD20190067": "30011", "BD20190033": "30014"},
+    # Khulna: Dacope = seed Dakop (দাকোপ; no tier pairs them); Paikgachha = seed Paikgasa (পাইকগাছা; only a low fuzzy pair)
+    "khulna": {"BD40470017": "30213", "BD40470064": "30206"},
+    # Barishal: v03 Indurkani = seed Zianagar (জিয়ানগর); HDX's own 2020 point for the same upazila (BD107990) is named
+    # Zianagar, and its three unions (Bali Para, Parerhat, Pattashi) are the seed Zianagar's three unions
+    "barishal": {"BD10790090": "30245"},
+    # Sylhet: v03 Shantiganj = seed South Sunamganj (দক্ষিণ সুনামগঞ্জ, "Dakshin Sunamganj"); the upazila was renamed and
+    # recoded (2020 point BD609027 Dakshin Sunamganj, see UPAZILA_RECODED_BY_DIV), and its eight 2020 unions are the seed
+    # South Sunamganj's eight unions
+    "sylhet": {"BD60900087": "30301"},
+}
+# per division: 2020 label-point P-code of an upazila -> v03 P-code, for upazilas renamed with a new code since 2020
+# (decided by hand: same unions under both). Without this the 2020 point would be read as a city thana and its unions
+# would have no upazila. Divisions without an entry behave as before.
+UPAZILA_RECODED_BY_DIV = {
+    # Sylhet: Dakshin Sunamganj (2020 BD609027; its 8 union points Durgapasha … Shimulbak) = v03 Shantiganj (BD60900087),
+    # BBS 2022 geocode 60-90-87 Shantiganj with the same 8 unions
+    "sylhet": {"BD609027": "BD60900087"},
 }
 
 
-def build_crosswalk(units, seed_rows, by_id, source_label, district_key=lambda code: code[:6], district_map=DISTRICT_SEED):
+def build_crosswalk(units, seed_rows, by_id, source_label, district_key=lambda code: code[:6], district_map=DISTRICT_SEED,
+                    pinned=None, directions=False):
     """units: dicts with level, code, name_en, parent_code (district P-code for upazila; upazila code for union ...).
     district_map: district code -> seed district name_en (default Rajshahi); None = match districts by name.
+    pinned: source code -> seed id, hand-checked pairs applied before name matching (method code_hand_checked).
+    directions: passed to match_names (direction words must agree), for unions and below only.
     Returns crosswalk rows (one per source unit + one per unmatched seed unit)."""
+    pinned = pinned or {}
     out = []
     seed_by_level_parent = {}
     for r in seed_rows:
@@ -379,11 +489,21 @@ def build_crosswalk(units, seed_rows, by_id, source_label, district_key=lambda c
                     row(None, u, "unmatched", "none", f"parent {pcode} not matched to a seed unit")
                 continue
             cands = [r for l in lvl_ours for r in seed_by_level_parent.get((l, parent_id), [])]
+            for u in [u for u in us if pinned.get(u["code"]) in {r["id"] for r in cands}]:
+                r = by_id[pinned[u["code"]]]
+                code2our[u["code"]] = r["id"]; matched_our.add(r["id"])
+                row(r, u, "code_hand_checked", "high", f"hand-checked pair ({u['name_en']} = {r['name_en']} {r['name_bn']}); "
+                    "the name matcher does not pair these")
+                us = [x for x in us if x is not u]
+                cands = [x for x in cands if x["id"] != r["id"]]
+            if not us:
+                continue
             if not cands:
                 for u in us:
                     row(None, u, "no_seed_unit", "none", f"our seed has no {lvl_src} under {by_id[parent_id]['name_en']}")
                 continue
-            res = match_names([(u["code"], u["name_en"]) for u in us], [(r["id"], r["name_en"]) for r in cands])
+            res = match_names([(u["code"], u["name_en"]) for u in us], [(r["id"], r["name_en"]) for r in cands],
+                              directions and lvl_src in ("pourashava", "union"))
             for u in us:
                 oid, method, conf, note = res[u["code"]]
                 r = by_id.get(oid) if oid else None
@@ -400,7 +520,8 @@ def build_crosswalk(units, seed_rows, by_id, source_label, district_key=lambda c
         for d, items in by_dist.items():
             pool = [r for r in seed_rows if r["level"] in lvl_ours and r["id"] not in matched_our
                     and by_id.get(r["parent_id"], {}).get("parent_id") == d]
-            res2 = match_names([(u["code"], u["name_en"]) for u, *_ in items], [(r["id"], r["name_en"]) for r in pool])
+            res2 = match_names([(u["code"], u["name_en"]) for u, *_ in items], [(r["id"], r["name_en"]) for r in pool],
+                               directions and lvl_src in ("pourashava", "union"))
             for u, parent_id, method, note in items:
                 oid, m2, c2, n2 = res2[u["code"]]
                 r = by_id.get(oid) if oid and m2 in ("name_exact", "name_banglish", "name_skeleton") else None
@@ -463,6 +584,7 @@ def main():
     ap.add_argument("--out", default=None, help="output folder (default: this folder for rajshahi, else ../hdx_cod_ab_bgd_<division>)")
     ap.add_argument("--cache", default=os.path.join(tempfile.gettempdir(), "elaka360_cache"))
     a = ap.parse_args()
+    recoded = UPAZILA_RECODED_BY_DIV.get(a.division, {})
     global KEY, DIV_PCODE
     _, bbs, seed_id, div_name = DIVISIONS[a.division]
     KEY = division_key(KEY, a.division)
@@ -501,7 +623,7 @@ def main():
     div = adm[1][0]["properties"]
     lvl_name = {1: "division", 2: "district", 3: "upazila"}
     pt3 = {f["properties"]["adm3_pcode"]: f["properties"] for f in pts if f["properties"]["admin_level"] == 3}
-    old3 = {f["properties"]["adm3_pcode"][:6] + f["properties"]["adm3_pcode"][-2:] for f in adm[3]}
+    old3 = {f["properties"]["adm3_pcode"][:6] + f["properties"]["adm3_pcode"][-2:] for f in adm[3]} | set(recoded)
     city_pts = any(c not in old3 for c in pt3)  # 2020 level-3 points that are city thanas, not v03 upazilas
     for lvl in (1, 2, 3):
         for f in sorted(adm[lvl], key=lambda f: f["properties"][f"adm{lvl}_pcode"]):
@@ -519,9 +641,10 @@ def main():
                 "upazila_en": name if level == "upazila" else "", "source_key": KEY}, "geometry": g})
             notes = [f"COD-AB v03, valid_on {p.get('valid_on')}"]
             if lvl == 3:
-                old = code[:6] + code[-2:]
+                old = next((k for k, v in recoded.items() if v == code), code[:6] + code[-2:])
                 if level == "upazila" and old in pt3:
-                    notes.append(f"2020 P-code {old} ({pt3[old]['name']})")
+                    notes.append(f"2020 P-code {old} ({pt3[old]['name']})" + ("; renamed and recoded since 2020 "
+                                 "(same unions; hand-checked)" if old in recoded else ""))
                 elif level == "upazila":
                     notes.append("no 2020 label point for this upazila (created after the 2020 list or merged in it)")
                 if level == "city_corporation":
@@ -548,6 +671,7 @@ def main():
     for f in adm[3]:
         c = f["properties"]["adm3_pcode"]
         v03_by_old[c[:6] + c[-2:]] = c
+    v03_by_old.update(recoded)
     for f in sorted(pts, key=lambda f: (f["properties"]["admin_level"], f["properties"].get("adm4_pcode") or f["properties"].get("adm3_pcode") or "")):
         p = f["properties"]
         x, y = f["geometry"]["coordinates"][:2]
@@ -578,7 +702,8 @@ def main():
     write_csv(os.path.join(OUT, "facts.csv"), FACT_COLS, facts)
 
     seed_rows, by_id = load_seed(seed_id)
-    xw, _ = build_crosswalk(units, seed_rows, by_id, "HDX", district_map=DISTRICT_SEED_BY_DIV.get(a.division))
+    xw, _ = build_crosswalk(units, seed_rows, by_id, "HDX", district_map=DISTRICT_SEED_BY_DIV.get(a.division),
+                            pinned=UNIT_SEED_BY_DIV.get(a.division), directions=a.division in DIRECTION_WORD_DIVS)
     write_csv(os.path.join(OUT, "crosswalk.csv"), XW_COLS, xw)
 
     files = ["areas.csv", "boundaries.geojson", "facts.csv", "crosswalk.csv", f"raw/bgd_adminpoints_{a.division}.geojson",

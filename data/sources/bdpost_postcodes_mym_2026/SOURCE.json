@@ -1,0 +1,24 @@
+{
+  "key": "BDPOST_POSTCODES_MYM_2026",
+  "division": "mymensingh",
+  "kind": "bdpost",
+  "name": "Bangladesh Post postcode booklet — Mymensingh Division post offices (scan on post.rajshahi.gov.bd)",
+  "organization": "বাংলাদেশ ডাক বিভাগ (Bangladesh Post Office) — DPMG Rajshahi Division portal",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-post-rajshahi/2024/12/e548300c14de4897aa9516b65816e29f.pdf"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "বাংলাদেশ ডাক বিভাগ (Bangladesh Post Office) — DPMG Rajshahi Division portal",
+  "notes": "Same undated scanned booklet as the earlier division runs (no text layer). Mymensingh Division's offices are in the booklet's Dhaka region: p. 12 (PDF page 8, left half: 'জামালপুর জেলা ২০০০-২০৯৯', 'শেরপুর জেলা ২১০০-২১৯৯', 'ময়মনসিংহ জেলা ২২০০-২২৯৯', up to 'কিশোরগঞ্জ জেলা ২৩০০-২৩৯৯', Dhaka Division, already collected) and p. 13 (PDF page 8, right half, first column: 'নেত্রকোনা জেলা ২৪০০-২৪৯৯'); only these were transcribed, by hand, from raw/postcode_booklet_pp12-13.png (PDF page 8 at its native 150 dpi, rotated; the same file as in the Sylhet folder). fetch.py verifies the PDF hash (unchanged) and re-emits the transcription. The booklet prints Bokshiganj (2140) under Sherpur and Dhobaura (2416, 2417) under Netrokona: they carry their seed districts (Jamalpur, Mymensingh) and a note. Dharmapasha (2450) and Madhyanagar (2456), printed in the Netrokona section, are in Sunamganj District (Sylhet Division) and are left out. All 78 codes are legible; six faint codes and four uncertain name readings are flagged. Branch post offices are not in the booklet. Licence: none stated on the source; treat as government public information, cite the source.",
+  "files": {
+    "facts.csv": "570043325e6b6d3aae4e73ed12c7d235aed490453f1a238b6b09bbb9d4f0c091",
+    "places.csv": "416de2ded785c70bf128ddf3934ef3523412f46b75282991dd7a4e7f68e90fc2",
+    "raw/postcode_booklet_pp12-13.png": "3ae8ad841f7b78903177ff4829911b022b3562354c7e5ca99cba6bd8e4172355"
+  }
+}

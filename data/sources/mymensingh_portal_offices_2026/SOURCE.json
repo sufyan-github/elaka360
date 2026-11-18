@@ -1,0 +1,24 @@
+{
+  "key": "MYMENSINGH_PORTAL_OFFICES_2026",
+  "division": "mymensingh",
+  "kind": "portal_offices",
+  "name": "Government offices on the national portal sites — Divisional Commissioner, Mymensingh DC & upazila portals, DC/UNO offices of Mymensingh Division",
+  "organization": "Divisional / District / Upazila administrations (national portal framework)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://mymensinghdiv.gov.bd/",
+    "https://mymensingh.gov.bd/",
+    "https://<upazila>.mymensingh.gov.bd/",
+    "https://mymensingh.gov.bd/pages/static-pages/6973bef4c4774958d7bc1029"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Divisional / District / Upazila administrations (national portal framework)",
+  "notes": "Office list = menu entries under 'সরকারি অফিসসমূহ' / 'সরকারী অফিস' / 'স্থানীয় সরকার' / 'পৌরসভা' plus the DC/UNO portals themselves; union parishads from the Mymensingh DC portal's union list. Contacts = office landline and *.gov.bd e-mail from the office head's officer card or the 'যোগাযোগ' page; mobile numbers, personal e-mails and officials' names are not collected. No addresses/coordinates are published in a structured way. Licence: none stated on the source; treat as government public information, cite the source. Union parishads: the DC portal list gives the upazila as a merged (rowspan) cell; rows outside every upazila cell, or whose name the upazila's own portal ('ইউনিয়ন সমূহ' page) does not list while exactly one other upazila portal of the district does, take the upazila from the upazila portals (noted per row, DC-list value kept in extra_json). Decorative marks in Mymensingh menu titles ('●', '*', '►') are dropped (title as listed in extra_json); a bare 'পৌরসভা' / 'থানা' title becomes '<upazila> পৌরসভা' / '<upazila> থানা' (noted). Menu links to 'www.<office>…gov.bd' hosts (self-signed certificates) and 'www.mcc.gov.bd' are read as the hosts without 'www.', which serve the office portals; hosts that still fail TLS are skipped and noted per row. No Mymensingh Metropolitan Police exists (police.gov.bd lists eight metropolitan units), so no office is mapped to a metropolitan thana.",
+  "files": {
+    "places.csv": "84512b0d9cae2fa43bc3224638f7539c1e16a57d42667c9e93916c16fbe09d2b"
+  }
+}

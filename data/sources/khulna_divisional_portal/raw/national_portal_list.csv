@@ -1,0 +1,638 @@
+level,district_en,upazila_en,name_bn,printed,geo_name_bn,website,bbs
+upazila,Bagerhat,Chitalmari,,চিতলমারী উপজেলা,,https://chitalmari.bagerhat.gov.bd/,1-14
+upazila,Bagerhat,Fakirhat,,ফকিরহাট উপজেলা,,https://fakirhat.bagerhat.gov.bd/,1-34
+upazila,Bagerhat,Kachua,,কচুয়া উপজেলা,,https://kachua.bagerhat.gov.bd/,1-38
+upazila,Bagerhat,Mollahat,,মোল্লাহাট উপজেলা,,https://mollahat.bagerhat.gov.bd/,1-56
+upazila,Bagerhat,Mongla,,মোংলা উপজেলা,,https://mongla.bagerhat.gov.bd/,1-58
+upazila,Bagerhat,Morrelganj,,মোরেলগঞ্জ উপজেলা,,https://morrelganj.bagerhat.gov.bd/,1-60
+upazila,Bagerhat,Rampal,,রামপাল উপজেলা,,https://rampal.bagerhat.gov.bd/,1-73
+upazila,Bagerhat,Sarankhola,,শরণখোলা উপজেলা,,https://sarankhola.bagerhat.gov.bd/,1-
+upazila,Chuadanga,Alamdanga,,আলমডাঙ্গা উপজেলা,,https://alamdanga.chuadanga.gov.bd/,18-7
+upazila,Chuadanga,Chuadanga Sadar,,চুয়াডাঙ্গা সদর উপজেলা,,https://chuadangasadar.chuadanga.gov.bd/,18-23
+upazila,Chuadanga,Damurhuda,,দামুড়হুদা উপজেলা,,https://damurhuda.chuadanga.gov.bd/,18-31
+upazila,Chuadanga,Jibannagar,,জীবননগর উপজেলা,,https://jibannagar.chuadanga.gov.bd/,18-55
+upazila,Jashore,Abhaynagar,,অভয়নগর উপজেলা,,https://abhaynagar.jashore.gov.bd/,41-4
+upazila,Jashore,Bagherpara,,বাঘারপাড়া উপজেলা,,https://bagherpara.jashore.gov.bd/,41-9
+upazila,Jashore,Chougachha,,চৌগাছা উপজেলা,,https://chougachha.jashore.gov.bd/,41-11
+upazila,Jashore,Jhikargacha,,ঝিকরগাছা উপজেলা,,https://jhikargacha.jashore.gov.bd/,41-23
+upazila,Jashore,Keshabpur,,কেশবপুর উপজেলা,,https://keshabpur.jashore.gov.bd/,41-38
+upazila,Jashore,Jessore Sadar,,যশোর সদর উপজেলা,,https://sadar.jashore.gov.bd/,41-47
+upazila,Jashore,Manirampur,,মণিরামপুর উপজেলা,,https://manirampur.jashore.gov.bd/,41-61
+upazila,Jashore,Sharsha,,শার্শা উপজেলা,,https://sharsha.jashore.gov.bd/,41-90
+upazila,Jhenaidah,Harinakundu,,হরিণাকুন্ডু উপজেলা,,https://harinakundu.jhenaidah.gov.bd/,44-14
+upazila,Jhenaidah,Jhenaidah Sadar,,ঝিনাইদহ সদর উপজেলা,,https://sadar.jhenaidah.gov.bd/,44-19
+upazila,Jhenaidah,Kaliganj,,কালীগঞ্জ উপজেলা,,https://kaliganj.jhenaidah.gov.bd/,44-33
+upazila,Jhenaidah,Kotchandpur,,কোটচাঁদপুর উপজেলা,,https://kotchandpur.jhenaidah.gov.bd/,44-42
+upazila,Jhenaidah,Moheshpur,,মহেশপুর উপজেলা,,https://moheshpur.jhenaidah.gov.bd/,44-71
+upazila,Jhenaidah,Shailkupa,,শৈলকুপা উপজেলা,,https://shailkupa.jhenaidah.gov.bd/,44-80
+upazila,Khulna,Botiaghata,,বটিয়াঘাটা উপজেলা,,https://botiaghata.khulna.gov.bd/,47-12
+upazila,Khulna,Dakop,,দাকোপ উপজেলা,,https://dacope.khulna.gov.bd/,47-17
+upazila,Khulna,Dumuria,,ডুমুরিয়া উপজেলা,,https://dumuria.khulna.gov.bd/,47-30
+upazila,Khulna,Koyra,,কয়রা উপজেলা,,https://koyra.khulna.gov.bd/,47-53
+upazila,Khulna,Paikgasa,,পাইকগাছা উপজেলা,,https://paikgasa.khulna.gov.bd/,47-64
+upazila,Khulna,Fultola,,ফুলতলা উপজেলা,,https://fultola.khulna.gov.bd/,47-69
+upazila,Khulna,Rupsha,,রূপসা উপজেলা,,https://rupsha.khulna.gov.bd/,47-75
+upazila,Khulna,Terokhada,,তেরখাদা উপজেলা,,https://terokhada.khulna.gov.bd/,47-94
+upazila,Khulna,Digholia,,দিঘলিয়া উপজেলা,,https://digholia.khulna.gov.bd/,47-40
+upazila,Kushtia,Bheramara,,ভেড়ামারা উপজেলা,,https://bheramara.kushtia.gov.bd/,50-15
+upazila,Kushtia,Daulatpur,,দৌলতপুর উপজেলা,,https://daulatpur.kushtia.gov.bd/,50-39
+upazila,Kushtia,Khoksa,,খোকসা উপজেলা,,https://khoksa.kushtia.gov.bd/,50-63
+upazila,Kushtia,Kumarkhali,,কুমারখালী উপজেলা,,https://kumarkhali.kushtia.gov.bd/,50-71
+upazila,Kushtia,Kushtia Sadar,,কুষ্টিয়া সদর উপজেলা,,https://kushtiasadar.kushtia.gov.bd/,50-79
+upazila,Kushtia,Mirpur,,মিরপুর উপজেলা,,https://mirpur.kushtia.gov.bd/,50-94
+upazila,Magura,Magura Sadar,,মাগুরা সদর উপজেলা,,https://magurasadar.magura.gov.bd/,55-57
+upazila,Magura,Mohammadpur,,মহম্মদপুর উপজেলা,,https://mohammadpur.magura.gov.bd/,55-66
+upazila,Magura,Shalikha,,শালিখা উপজেলা,,https://shalikha.magura.gov.bd/,55-85
+upazila,Magura,Sreepur,,শ্রীপুর উপজেলা,,https://sreepur.magura.gov.bd/,55-95
+upazila,Meherpur,Gangni,,গাংনী উপজেলা,,https://gangni.meherpur.gov.bd/,57-47
+upazila,Meherpur,Mujibnagar,,মুজিবনগর উপজেলা,,https://mujibnagar.meherpur.gov.bd/,57-60
+upazila,Meherpur,Meherpur Sadar,,মেহেরপুর সদর উপজেলা,,https://meherpursadar.meherpur.gov.bd/,57-87
+upazila,Narail,Kalia,,কালিয়া উপজেলা,,https://kalia.narail.gov.bd/,65-28
+upazila,Narail,Lohagara,,লোহাগড়া উপজেলা,,https://lohagara.narail.gov.bd/,65-52
+upazila,Narail,Narail Sadar,,নড়াইল সদর উপজেলা,,https://narailsadar.narail.gov.bd/,65-76
+upazila,Satkhira,Assasuni,,আশাশুনি উপজেলা,,https://assasuni.satkhira.gov.bd/,87-4
+upazila,Satkhira,Debhata,,দেবহাটা উপজেলা,,https://debhata.satkhira.gov.bd/,87-25
+upazila,Satkhira,Kalaroa,,কলারোয়া উপজেলা,,https://kalaroa.satkhira.gov.bd/,87-43
+upazila,Satkhira,Kaliganj,,কালিগঞ্জ উপজেলা,,https://kaliganj.satkhira.gov.bd/,87-47
+upazila,Satkhira,Satkhira Sadar,,সাতক্ষীরা সদর উপজেলা,,https://satkhirasadar.satkhira.gov.bd/,87-82
+upazila,Satkhira,Shyamnagar,,শ্যামনগর উপজেলা,,https://shyamnagar.satkhira.gov.bd/,87-86
+upazila,Satkhira,Tala,,তালা উপজেলা,,https://tala.satkhira.gov.bd/,87-90
+upazila,Bagerhat,Bagerhat Sadar,,বাগেরহাট সদর উপজেলা,,https://sadar.bagerhat.gov.bd/,1-
+union,Kushtia,Daulatpur,প্রাগপুর,প্রাগপুর ইউনিয়ন,,https://pragpurup.kushtia.gov.bd/,50-39-
+union,Kushtia,Kumarkhali,চরসাদীপুর,১১ নং চরসাদীপুর ইউনিয়ন,,https://11nocharsadipurup.kushtia.gov.bd/,50-71-
+union,Khulna,Botiaghata,গঙ্গারামপুর,গঙ্গারামপুর ইউনিয়ন,,https://gongarampurup.khulna.gov.bd/,47-12-
+union,Chuadanga,Chuadanga Sadar,গড়াইটুপি,গড়াইটুপি ইউনিয়ন,,https://goraitupiup.chuadanga.gov.bd/,18-23-
+union,Narail,Kalia,বাবরা-হাচলা,বাবরা-হাচলা ইউনিয়ন,,https://babrahaslaup.narail.gov.bd/,65-28-
+union,Jashore,Chougachha,জগদীশপুর,জগদীশপুর ইউনিয়ন,,https://jagadishpurup6.jashore.gov.bd/,41-11-
+union,Bagerhat,Bagerhat Sadar,যাত্রাপুর,যাত্রাপুর ইউনিয়ন,,https://jatharapurup.bagerhat.gov.bd/,1--
+union,Narail,Narail Sadar,হবখালী,হবখালী ইউনিয়ন,,https://habokhaliup.narail.gov.bd/,65-76-
+union,Meherpur,Mujibnagar,বাগোয়ান,বাগোয়ান ইউনিয়ন,,https://bagowanup.meherpur.gov.bd/,57-60-
+union,Chuadanga,Chuadanga Sadar,আলুকদিয়া,আলুকদিয়া ইউনিয়ন,,https://alukdia.chuadanga.gov.bd/,18-23-
+union,Kushtia,Khoksa,জয়ন্তীহাজরা,৮ নং জয়ন্তীহাজরা ইউনিয়ন,,https://8nojoyntihazraup.kushtia.gov.bd/,50-63-
+union,Narail,Kalia,চাচুড়ী,চাচুড়ী ইউনিয়ন,,https://chacuriup.narail.gov.bd/,65-28-
+union,Narail,Kalia,খাসিয়াল,খাসিয়াল ইউনিয়ন,,https://khashialup.narail.gov.bd/,65-28-
+union,Chuadanga,Chuadanga Sadar,মাখালডাঙ্গা,মাখালডাঙ্গা ইউনিয়ন পরিষদ,,https://makhaldangaup.chuadanga.gov.bd/,18-23-
+union,Chuadanga,Jibannagar,কেডিকে,কেডিকে ইউনিয়ন,,https://kdkup.chuadanga.gov.bd/,18-55-
+union,Jashore,Sharsha,উলশী,উলশী ইউনিয়ন,,https://ulshiup.jashore.gov.bd/,41-90-
+union,Bagerhat,Bagerhat Sadar,বেমরতা,বেমরতা ইউনিয়ন,,https://bamortaup.bagerhat.gov.bd/,1--
+union,Jashore,Jessore Sadar,নওয়াপাড়া,নওয়াপাড়া ইউনিয়ন,,https://noaparaup4.jashore.gov.bd/,41-47-
+union,Magura,Magura Sadar,আঠারখাদা,আঠারখাদা ইউনিয়ন,,https://atharokhadaup.magura.gov.bd/,55-57-
+union,Khulna,Dumuria,খর্ণিয়া,খর্ণিয়া ইউনিয়ন,,https://khorniaup.khulna.gov.bd/,47-30-
+union,Khulna,Terokhada,সাচিয়াদাহ,সাচিয়াদাহ ইউনিয়ন,,https://sochiadahoup.khulna.gov.bd/,47-94-
+union,Chuadanga,Jibannagar,মনোহরপুর,মনোহরপুর,,https://monohorpurup.chuadanga.gov.bd/,18-55-
+union,Jashore,Keshabpur,হাসানপুর,হাসানপুর ইউনিয়ন,,https://hasanpurup.jashore.gov.bd/,41-38-
+union,Kushtia,Mirpur,ধূবইল,ধূবইল ইউনিয়ন,,https://dhubailup.kushtia.gov.bd/,50-94-
+union,Kushtia,Daulatpur,রিফাইতপুর,৯ নং রিফাইতপুর ইউনিয়ন,,https://9norefaitpurup.kushtia.gov.bd/,50-39-
+union,Khulna,Terokhada,ছাগলাদহ,ছাগলাদহ ইউনিয়ন,,https://chagladohoup.khulna.gov.bd/,47-94-
+union,Jashore,Chougachha,সরুপদাহ,সরুপদাহ ইউনিয়ন,,https://swarupdahaup9.jashore.gov.bd/,41-11-
+union,Narail,Narail Sadar,সেখহাটী,সেখহাটী ইউনিয়ন,,https://sheikhatiup.narail.gov.bd/,65-76-
+union,Khulna,Dumuria,গুটুদিয়া,গুটুদিয়া ইউনিয়ন,,https://ghutudiaup.khulna.gov.bd/,47-30-
+union,Bagerhat,Bagerhat Sadar,বিষ্ণুপুর,বিষ্ণুপুর ইউনিয়ন,,https://bishnapurup.bagerhat.gov.bd/,1--
+union,Chuadanga,Damurhuda,কুড়ালগাছী,কুড়ালগাছী ইউনিয়ন,,https://kurulgachhi.chuadanga.gov.bd/,18-31-
+union,Kushtia,Kushtia Sadar,জিয়ারাখী,৬ নং জিয়ারাখী ইউনিয়ন,,https://6noziaraakhiup.kushtia.gov.bd/,50-79-
+union,Bagerhat,Bagerhat Sadar,ষাটগুম্বজ,ষাটগুম্বজ ইউনিয়ন,,https://shaitgombojup.bagerhat.gov.bd/,1--
+union,Kushtia,Kushtia Sadar,আব্দালপুর,১১ নং আব্দালপুর ইউনিয়ন,,https://11noabdulpurup.kushtia.gov.bd/,50-79-
+union,Magura,Magura Sadar,রাঘবদাইড়,রাঘবদাইড় ইউনিয়ন,,https://raghobdairup.magura.gov.bd/,55-57-
+union,Narail,Kalia,বড়নাল-ইলিয়াছাবাদ,বড়নাল-ইলিয়াছাবাদ ইউনিয়ন,,https://boronaleliasabadup.narail.gov.bd/,65-28-
+union,Magura,Magura Sadar,শত্রুজিৎপুর,শত্রুজিৎপুর ইউনিয়ন,,https://satrijitpurup.magura.gov.bd/,55-57-
+union,Jashore,Keshabpur,মঙ্গলকোট,মঙ্গলকোট ইউনিয়ন,,https://mongolkotup.jashore.gov.bd/,41-38-
+union,Bagerhat,Rampal,বাঁশতলী,বাঁশতলী ইউনিয়ন,,https://bastoliup.bagerhat.gov.bd/,1-73-
+union,Khulna,Paikgasa,গড়ইখালী,গড়ইখালী ইউনিয়ন,,https://goroikhaliup.khulna.gov.bd/,47-64-
+union,Kushtia,Kushtia Sadar,বটতৈল,৪ নং বটতৈল ইউনিয়ন,,https://4nobottailup.kushtia.gov.bd/,50-79-
+union,Narail,Narail Sadar,বাশগ্রাম,বাশগ্রাম ইউনিয়ন,,https://bashgramup.narail.gov.bd/,65-76-
+union,Khulna,Rupsha,টিএসবি,টিএসবি ইউনিয়ন,,https://tsbup.khulna.gov.bd/,47-75-
+union,Jhenaidah,Harinakundu,কাপাশহাটিয়া,কাপাশহাটিয়া ইউনিয়ন,,https://kapashatiaup.jhenaidah.gov.bd/,44-14-
+union,Jashore,Abhaynagar,শুভরাড়া,শুভরাড়া ইউনিয়ন,,https://subhararaup.jashore.gov.bd/,41-4-
+union,Bagerhat,Sarankhola,রায়েন্দা,রায়েন্দা ইউনিয়ন,,https://rayendaup.bagerhat.gov.bd/,1--
+union,Satkhira,Tala,তেতুলিয়া,তেতুলিয়া ইউনিয়ন,,https://tentuliaup5.satkhira.gov.bd/,87-90-
+union,Bagerhat,Sarankhola,সাউথখালী,সাউথখালী ইউনিয়ন,,https://southkhaliup.bagerhat.gov.bd/,1--
+union,Khulna,Terokhada,আজগড়া,আজগড়া ইউনিয়ন,,https://ajgoraup.khulna.gov.bd/,47-94-
+union,Jhenaidah,Moheshpur,এস,"এস, বি, কে ইউনিয়ন",,https://sbkup.jhenaidah.gov.bd/,44-71-
+union,Chuadanga,Jibannagar,রায়পুর,রায়পুর ইউনিয়ন,,https://raypurup.chuadanga.gov.bd/,18-55-
+union,Jashore,Chougachha,সিংহঝুলি,সিংহঝুলি ইউনিয়ন,,https://singhajhuliup3.jashore.gov.bd/,41-11-
+union,Chuadanga,Damurhuda,নাটুদহ,নাটুদহ ইউনিয়ন,,https://natudahup.chuadanga.gov.bd/,18-31-
+union,Kushtia,Kushtia Sadar,হরিনারায়নপুর,১২ নং হরিনারায়নপুর ইউনিয়ন,,https://12noharinarayanpurup.kushtia.gov.bd/,50-79-
+union,Satkhira,Kalaroa,দেয়ারা,দেয়ারা ইউনিয়ন,,https://dearaup.satkhira.gov.bd/,87-43-
+union,Satkhira,Tala,সরুলিয়া,সরুলিয়া ইউনিয়ন,,https://saruliaup3.satkhira.gov.bd/,87-90-
+union,Khulna,Dumuria,ভান্ডারপাড়া,ভান্ডারপাড়া ইউনিয়ন,,https://vandarparaup.khulna.gov.bd/,47-30-
+union,Satkhira,Tala,ধানদিয়া,ধানদিয়া ইউনিয়ন,,https://dhandiaup1.satkhira.gov.bd/,87-90-
+union,Jashore,Jessore Sadar,দেয়ারা মডেল,দেয়ারা মডেল ইউনিয়ন,,https://dearamodelup.jashore.gov.bd/,41-47-
+union,Jashore,Jessore Sadar,কচুয়া,কচুয়া ইউনিয়ন,,https://kachuaup13.jashore.gov.bd/,41-47-
+union,Jhenaidah,Kotchandpur,এলাঙ্গী,এলাঙ্গী ইউনিয়ন,এলাঙ্গী,https://elangiup.jhenaidah.gov.bd/,44-42-47
+union,Bagerhat,Bagerhat Sadar,খানপুর,খানপুর ইউনিয়ন,খানপুর,https://khanpurup.bagerhat.gov.bd/,1--47
+union,Jashore,Keshabpur,সাতবাড়িয়া,সাতবাড়িয়া ইউনিয়ন,সাতবাড়ীয়া,https://satbariaup.jashore.gov.bd/,41-38-76
+union,Chuadanga,Damurhuda,হাওলী,হাওলী ইউনিয়ন,ঝাঐল,https://hawli.chuadanga.gov.bd/,18-31-57
+union,Bagerhat,Bagerhat Sadar,ডেমা,ডেমা ইউনিয়ন,ডেমা,https://demaup.bagerhat.gov.bd/,1--35
+union,Bagerhat,Bagerhat Sadar,গোটাপাড়া,গোটাপাড়া ইউনিয়ন,গোটাপাড়া,https://gotaparaup.bagerhat.gov.bd/,1--51
+union,Bagerhat,Bagerhat Sadar,কাড়াপাড়া,কাড়াপাড়া ইউনিয়ন,কাড়াপাড়া,https://karaparaup.bagerhat.gov.bd/,1--69
+union,Bagerhat,Chitalmari,চরবানিয়ারী,চরবানিয়ারী ইউনিয়ন,চরবানিয়ারী,https://charbaniriup.bagerhat.gov.bd/,1-14-15
+union,Bagerhat,Chitalmari,বড়বাড়িয়া,বড়বাড়িয়া ইউনিয়ন,বড়বাড়িয়া,https://barobariaup.bagerhat.gov.bd/,1-14-19
+union,Bagerhat,Chitalmari,চিতলমারী,চিতলমারী ইউনিয়ন,চিতলমারী,https://chitalmariup.bagerhat.gov.bd/,1-14-31
+union,Bagerhat,Chitalmari,হিজলা,হিজলা ইউনিয়ন,হিজলা,https://hizlaup.bagerhat.gov.bd/,1-14-47
+union,Bagerhat,Chitalmari,সন্তোষপুর,সন্তোষপুর ইউনিয়ন,সন্তোষপুর,https://shantoshpurup.bagerhat.gov.bd/,1-14-63
+union,Bagerhat,Chitalmari,কলাতলা,কলাতলা ইউনিয়ন,কলাতলা,https://kalatalaup.bagerhat.gov.bd/,1-14-66
+union,Bagerhat,Chitalmari,শিবপুর,শিবপুর ইউনিয়ন,শিবপুর,https://shibpurup.bagerhat.gov.bd/,1-14-79
+union,Bagerhat,Fakirhat,বাহিরদিয়া-মানসা,বাহিরদিয়া-মানসা ইউনিয়ন,বাহিরদিয়া-মানসা,https://bahirdiamansaup.bagerhat.gov.bd/,1-34-10
+union,Bagerhat,Fakirhat,বেতাগা,বেতাগা ইউনিয়ন,বেতাগা,https://betagaup.bagerhat.gov.bd/,1-34-21
+union,Bagerhat,Fakirhat,ফকিরহাট,ফকিরহাট ইউনিয়ন,ফকিরহাট,https://fakirhatup.bagerhat.gov.bd/,1-34-31
+union,Bagerhat,Fakirhat,লখপুর,লখপুর ইউনিয়ন,লখপুর,https://lakhpurup.bagerhat.gov.bd/,1-34-42
+union,Bagerhat,Fakirhat,মূলঘর,মূলঘর ইউনিয়ন,মূলঘর,https://mulgharup.bagerhat.gov.bd/,1-34-52
+union,Bagerhat,Fakirhat,নলধা-মৌভোগ,নলধা-মৌভোগ ইউনিয়ন,নলধা-মৌভোগ,https://naldhamauvhogup.bagerhat.gov.bd/,1-34-63
+union,Bagerhat,Fakirhat,পিলজংগ,পিলজংগ ইউনিয়ন,পিলজংগ,https://piljangaup.bagerhat.gov.bd/,1-34-73
+union,Bagerhat,Fakirhat,শুভদিয়া,শুভদিয়া ইউনিয়ন,শুভদিয়া,https://suvhadiaup.bagerhat.gov.bd/,1-34-84
+union,Bagerhat,Kachua,বাধাল,বাধাল ইউনিয়ন,বাধাল,https://badhalup.bagerhat.gov.bd/,1-38-15
+union,Bagerhat,Kachua,ধোপাখালী,ধোপাখালী ইউনিয়ন,ধোপাখালী,https://dhopakhaliup.bagerhat.gov.bd/,1-38-28
+union,Bagerhat,Kachua,গজালিয়া,গজালিয়া ইউনিয়ন,গজালিয়া,https://gojaliaup.bagerhat.gov.bd/,1-38-38
+union,Bagerhat,Kachua,গোপালপুর,গোপালপুর ইউনিয়ন,গোপালপুর,https://gopalpurup.bagerhat.gov.bd/,1-38-47
+union,Bagerhat,Kachua,কচুয়া,কচুয়া ইউনিয়ন,কচুয়া,https://kachuaup.bagerhat.gov.bd/,1-38-57
+union,Bagerhat,Kachua,মঘিয়া,মঘিয়া ইউনিয়ন,মঘিয়া,https://moghiaup.bagerhat.gov.bd/,1-38-66
+union,Bagerhat,Kachua,রাড়ীপাড়া,রাড়ীপাড়া ইউনিয়ন,রাড়ীপাড়া,https://rariparaup.bagerhat.gov.bd/,1-38-76
+union,Bagerhat,Mollahat,আটজুড়ী,আটজুড়ী ইউনিয়ন,আটজুড়ী,https://atjuriup.bagerhat.gov.bd/,1-56-17
+union,Bagerhat,Mollahat,চুনখোলা,চুনখোলা ইউনিয়ন,চুনখোলা,https://chunkholaup.bagerhat.gov.bd/,1-56-28
+union,Bagerhat,Mollahat,গাংনী,গাংনী ইউনিয়ন,গাংনী,https://gangniup.bagerhat.gov.bd/,1-56-38
+union,Bagerhat,Mollahat,গাওলা,গাওলা ইউনিয়ন,গাওলা,https://gaolaup.bagerhat.gov.bd/,1-56-47
+union,Bagerhat,Mollahat,কোদালিয়া,কোদালিয়া ইউনিয়ন,কোদালিয়া,https://kodaliaup.bagerhat.gov.bd/,1-56-76
+union,Bagerhat,Mollahat,কুলিয়া,কুলিয়া ইউনিয়ন,কুলিয়া,https://kuliaup.bagerhat.gov.bd/,1-56-85
+union,Bagerhat,Mollahat,উদয়পুর,উদয়পুর ইউনিয়ন,উদয়পুর,https://udoypurup.bagerhat.gov.bd/,1-56-95
+union,Bagerhat,Mongla,চাঁদপাই,চাঁদপাই ইউনিয়ন,চাঁদপাই,https://chadpaiup.bagerhat.gov.bd/,1-58-23
+union,Bagerhat,Mongla,বুড়িরডাঙ্গা,বুড়িরডাঙ্গা ইউনিয়ন,বুড়িরডাঙ্গা,https://burrirdanggaup.bagerhat.gov.bd/,1-58-27
+union,Bagerhat,Mongla,চিলা,চিলা ইউনিয়ন,চিলা,https://chilaup.bagerhat.gov.bd/,1-58-29
+union,Bagerhat,Mongla,মিঠাখালী,মিঠাখালী ইউনিয়ন,মিঠাখালী,https://mithakhaliup.bagerhat.gov.bd/,1-58-59
+union,Bagerhat,Mongla,সোনাইলতলা,সোনাইলতলা ইউনিয়ন,সোনাইলতলা,https://sonailtalaup.bagerhat.gov.bd/,1-58-83
+union,Bagerhat,Mongla,সুন্দরবন,সুন্দরবন ইউনিয়ন,সুন্দরবন,https://sundarbanup.bagerhat.gov.bd/,1-58-89
+union,Bagerhat,Morrelganj,বহরবুনিয়া,বহরবুনিয়া ইউনিয়ন,বহরবুনিয়া,https://baharbuniaup.bagerhat.gov.bd/,1-60-10
+union,Bagerhat,Morrelganj,বলইবুনিয়া,বলইবুনিয়া ইউনিয়ন,বলইবুনিয়া,https://balaibuniaup.bagerhat.gov.bd/,1-60-11
+union,Bagerhat,Morrelganj,বনগ্রাম,বনগ্রাম ইউনিয়ন,বনগ্রাম,https://banagramup.bagerhat.gov.bd/,1-60-17
+union,Bagerhat,Morrelganj,বারইখালী,বারইখালী ইউনিয়ন,বারইখালী,https://baraikhaliup.bagerhat.gov.bd/,1-60-23
+union,Bagerhat,Morrelganj,চিংড়াখালী,চিংড়াখালী ইউনিয়ন,চিংড়াখালী,https://chingrakhaliup.bagerhat.gov.bd/,1-60-29
+union,Bagerhat,Morrelganj,দৈবজ্ঞহাটি,দৈবজ্ঞহাটি ইউনিয়ন,দৈবজ্ঞহাটী,https://daibagnyahatiup.bagerhat.gov.bd/,1-60-35
+union,Bagerhat,Morrelganj,হোগলাবুনিয়া,হোগলাবুনিয়া ইউনিয়ন,হোগলাবুনিয়া,https://hoglabuniaup.bagerhat.gov.bd/,1-60-41
+union,Bagerhat,Morrelganj,হোগলাপাশা,হোগলাপাশা ইউনিয়ন,হোগলাপাশা,https://hoglapashaup.bagerhat.gov.bd/,1-60-47
+union,Bagerhat,Morrelganj,জিউধরা,জিউধরা ইউনিয়ন,জিউধরা,https://jiudharaup.bagerhat.gov.bd/,1-60-53
+union,Bagerhat,Morrelganj,খাউলিয়া,খাউলিয়া ইউনিয়ন,খাউলিয়া,https://khauliaup.bagerhat.gov.bd/,1-60-59
+union,Bagerhat,Morrelganj,মোড়েলগঞ্জ,মোড়েলগঞ্জ ইউনিয়ন,মোরেলগঞ্জ,https://morrelganjup.bagerhat.gov.bd/,1-60-65
+union,Bagerhat,Morrelganj,নিশানবাড়িয়া,নিশানবাড়িয়া ইউনিয়ন,নিশানবাড়ীয়া,https://nishanbariaup.bagerhat.gov.bd/,1-60-71
+union,Bagerhat,Morrelganj,পঞ্চকরণ,পঞ্চকরণ ইউনিয়ন,পঞ্চকরণ,https://panchakaranup.bagerhat.gov.bd/,1-60-77
+union,Bagerhat,Morrelganj,পুটিখালী,পুটিখালী ইউনিয়ন,পুটিখালী,https://putikhaliup.bagerhat.gov.bd/,1-60-83
+union,Bagerhat,Morrelganj,রামচন্দ্রপুর,রামচন্দ্রপুর ইউনিয়ন,রামচন্দ্রপুর,https://ramchandrapurup.bagerhat.gov.bd/,1-60-89
+union,Bagerhat,Morrelganj,তেলিগাতী,তেলিগাতী ইউনিয়ন,তেলিগাতী,https://teligatiup.bagerhat.gov.bd/,1-60-95
+union,Bagerhat,Rampal,বাইনতলা,বাইনতলা ইউনিয়ন,বাইনতলা,https://baintalaup.bagerhat.gov.bd/,1-73-10
+union,Bagerhat,Rampal,ভোজপাতিয়া,ভোজপাতিয়া ইউনিয়ন,ভোজপাতিয়া,https://vospatiaup.bagerhat.gov.bd/,1-73-17
+union,Bagerhat,Rampal,গৌরম্ভা,গৌরম্ভা ইউনিয়ন,গৌরম্ভা,https://gouramvaup.bagerhat.gov.bd/,1-73-41
+union,Bagerhat,Rampal,হুড়কা,হুড়কা ইউনিয়ন,হুড়কা,https://hurkaup.bagerhat.gov.bd/,1-73-47
+union,Bagerhat,Rampal,উজলকুড়,উজলকুড় ইউনিয়ন,উজলকুড়,https://uzzalkurup.bagerhat.gov.bd/,1-73-94
+union,Bagerhat,Rampal,মল্লিকেরবেড়,মল্লিকেরবেড় ইউনিয়ন,মল্লিকেরবেড়,https://mollikerbarup.bagerhat.gov.bd/,1-73-53
+union,Bagerhat,Rampal,পেড়িখালী,পেড়িখালী ইউনিয়ন,পেড়িখালী,https://perikhaliup.bagerhat.gov.bd/,1-73-71
+union,Bagerhat,Rampal,রাজনগর,রাজনগর ইউনিয়ন,রাজনগর,https://rajnagarup.bagerhat.gov.bd/,1-73-77
+union,Bagerhat,Rampal,রামপাল,রামপাল ইউনিয়ন,রামপাল,https://rampalup.bagerhat.gov.bd/,1-73-83
+union,Bagerhat,Sarankhola,ধানসাগর,ধানসাগর ইউনিয়ন,ধানসাগর,https://dhanshagorup.bagerhat.gov.bd/,1--19
+union,Bagerhat,Sarankhola,খোন্তাকাটা,খোন্তাকাটা ইউনিয়ন,খোন্তাকাটা,https://khontakataup.bagerhat.gov.bd/,1--38
+union,Chuadanga,Alamdanga,আইলহাঁস,আইলহাঁস ইউনিয়ন,আইলহাঁস,https://ailhashup.chuadanga.gov.bd/,18-7-11
+union,Chuadanga,Alamdanga,বেলগাছি,বেলগাছি ইউনিয়ন,বেলগাছি,https://belgachiup.chuadanga.gov.bd/,18-7-13
+union,Chuadanga,Alamdanga,বাড়াদী,বাড়াদী ইউনিয়ন,বাড়াদী,https://baradiup.chuadanga.gov.bd/,18-7-15
+union,Chuadanga,Alamdanga,ভাংবাড়ীয়া,ভাংবাড়ীয়া ইউনিয়ন,ভাংবাড়ীয়া,https://bhangbaria.chuadanga.gov.bd/,18-7-23
+union,Chuadanga,Alamdanga,চিৎলা,চিৎলা ইউনিয়ন,চিৎলা,https://chitlaup.chuadanga.gov.bd/,18-7-27
+union,Chuadanga,Alamdanga,ডাউকী,ডাউকী ইউনিয়ন,ডাউকী,https://daukiup.chuadanga.gov.bd/,18-7-31
+union,Chuadanga,Alamdanga,গাংনী,গাংনী ইউনিয়ন,গাংনী,https://gangniup.chuadanga.gov.bd/,18-7-39
+union,Chuadanga,Alamdanga,হারদী,হারদী ইউনিয়ন,হারদী,https://hardiup.chuadanga.gov.bd/,18-7-47
+union,Chuadanga,Alamdanga,কালিদাসপুর,কালিদাসপুর ইউনিয়ন,কালিদাসপুর,https://kalidashpurup.chuadanga.gov.bd/,18-7-51
+union,Chuadanga,Alamdanga,জামজামি,জামজামি ইউনিয়ন,জামজামী,https://jamjamiup.chuadanga.gov.bd/,18-7-55
+union,Chuadanga,Alamdanga,জেহালা,জেহালা ইউনিয়ন,জেহালা,https://jehalaup.chuadanga.gov.bd/,18-7-63
+union,Chuadanga,Alamdanga,খাদিমপুর,খাদিমপুর ইউনিয়ন,খাদিমপুর,https://khadimpurup.chuadanga.gov.bd/,18-7-71
+union,Chuadanga,Alamdanga,খাসকররা,খাসকররা ইউনিয়ন,খাসকররা,https://kashkoraraup.chuadanga.gov.bd/,18-7-79
+union,Chuadanga,Alamdanga,কুমারী,কুমারী ইউনিয়ন,কুমারী,https://kumariup.chuadanga.gov.bd/,18-7-87
+union,Chuadanga,Alamdanga,নাগদাহ,নাগদাহ ইউনিয়ন,নাগদাহ,https://nagdahup.chuadanga.gov.bd/,18-7-94
+union,Chuadanga,Chuadanga Sadar,বেগমপুর,বেগমপুর ইউনিয়ন,বেগমপুর,https://begumpur.chuadanga.gov.bd/,18-23-23
+union,Chuadanga,Chuadanga Sadar,কুতুবপুর,কুতুবপুর ইউনিয়ন,কুতুবপুর,https://kutubpur.chuadanga.gov.bd/,18-23-47
+union,Chuadanga,Chuadanga Sadar,মোমিনপুর,মোমিনপুর ইউনিয়ন,মোমিনপুর,https://mominpur.chuadanga.gov.bd/,18-23-59
+union,Chuadanga,Chuadanga Sadar,পদ্মবিলা,পদ্মবিলা ইউনিয়ন,পদ্মবিলা,https://padmabila.chuadanga.gov.bd/,18-23-62
+union,Chuadanga,Chuadanga Sadar,শংকরচন্দ্র,শংকরচন্দ্র ইউনিয়ন,শংকরচন্দ্র,https://shankarchandra.chuadanga.gov.bd/,18-23-71
+union,Chuadanga,Chuadanga Sadar,তিতুদহ,তিতুদহ ইউনিয়ন,তিতুদহ,https://titudah.chuadanga.gov.bd/,18-23-83
+union,Chuadanga,Damurhuda,দামুড়হুদা,দামুড়হুদা ইউনিয়ন,দামুড়হুদা,https://damurhudaup.chuadanga.gov.bd/,18-31-11
+union,Chuadanga,Damurhuda,পারকৃষ্ণপুর মদনা,পারকৃষ্ণপুর মদনা ইউনিয়ন,পারকৃষ্ণপুর মদনা,https://perkrishnopurmadna.chuadanga.gov.bd/,18-31-23
+union,Chuadanga,Damurhuda,নতিপোতা,নতিপোতা ইউনিয়ন,নতিপোতা,https://natipota.chuadanga.gov.bd/,18-31-88
+union,Chuadanga,Damurhuda,জুড়ানপুর,জুড়ানপুর ইউনিয়ন,জুড়ানপুর,https://juranpurup.chuadanga.gov.bd/,18-31-47
+union,Chuadanga,Damurhuda,কার্পাসডাঙ্গা,কার্পাসডাঙ্গা ইউনিয়ন,কার্পাসডাঙ্গা,https://karpashdanga.chuadanga.gov.bd/,18-31-59
+union,Chuadanga,Jibannagar,আন্দুলবাড়ীয়া,আন্দুলবাড়ীয়া ইউনিয়ন,আন্দুলবাড়ীয়া,https://andulbaria.chuadanga.gov.bd/,18-55-19
+union,Chuadanga,Jibannagar,বাঁকা,বাঁকা ইউনিয়ন,বাঁকা,https://bankaup.chuadanga.gov.bd/,18-55-38
+union,Chuadanga,Jibannagar,হাসাদাহ,হাসাদাহ ইউনিয়ন,হাসাদাহ,https://hasadahup.chuadanga.gov.bd/,18-55-42
+union,Chuadanga,Jibannagar,সীমান্ত,সীমান্ত ইউনিয়ন,সীমান্ত,https://shimanto.chuadanga.gov.bd/,18-55-57
+union,Chuadanga,Jibannagar,উথলী,উথলী ইউনিয়ন,উথলী,https://uthaliup.chuadanga.gov.bd/,18-55-76
+union,Jashore,Abhaynagar,বাঘুটিয়া,বাঘুটিয়া ইউনিয়ন,বাঘুটিয়া,https://baghutia.jashore.gov.bd/,41-4-10
+union,Jashore,Abhaynagar,প্রেমবাগ,প্রেমবাগ ইউনিয়ন,প্রেমবাগ,https://prambagup.jashore.gov.bd/,41-4-21
+union,Jashore,Abhaynagar,সুন্দলী,সুন্দলী ইউনিয়ন,সুন্দলী,https://sundoliup.jashore.gov.bd/,41-4-27
+union,Jashore,Abhaynagar,পায়রা,পায়রা ইউনিয়ন,পায়রা,https://payraup.jashore.gov.bd/,41-4-42
+union,Jashore,Abhaynagar,চলিশিয়া,চলিশিয়া ইউনিয়ন,চলিশিয়া,https://chalishiaup.jashore.gov.bd/,41-4-52
+union,Jashore,Abhaynagar,সিদ্দিপাশা,সিদ্দিপাশা ইউনিয়ন,সিদ্ধিপাশা,https://siddhipashaup.jashore.gov.bd/,41-4-63
+union,Jashore,Abhaynagar,শ্রীধরপুর,শ্রীধরপুর ইউনিয়ন,শ্রীধরপুর,https://sreedharpurup.jashore.gov.bd/,41-4-73
+union,Jashore,Bagherpara,বাসুয়াড়ী,বাসুয়াড়ী ইউনিয়ন,বাসুয়াড়ি,https://basuariup.jashore.gov.bd/,41-9-15
+union,Jashore,Bagherpara,বন্দবিলা,বন্দবিলা ইউনিয়ন,বন্দবিলা,https://bandabillaup.jashore.gov.bd/,41-9-19
+union,Jashore,Bagherpara,দরাজহাট,দরাজহাট ইউনিয়ন,দরাজহাট,https://darajhatup.jashore.gov.bd/,41-9-28
+union,Jashore,Bagherpara,ধলগ্রাম,ধলগ্রাম ইউনিয়ন,ধলগ্রাম,https://dhalgramup.jashore.gov.bd/,41-9-38
+union,Jashore,Bagherpara,দোহাকুলা,দোহাকুলা ইউনিয়ন,দোহাকুলা,https://dohakulaup.jashore.gov.bd/,41-9-47
+union,Jashore,Bagherpara,জামদিয়া,জামদিয়া ইউনিয়ন,জামদিয়া,https://jamdiaup.jashore.gov.bd/,41-9-57
+union,Jashore,Bagherpara,জহুরপুর,জহুরপুর ইউনিয়ন,জহুরপুর,https://jaharpurup.jashore.gov.bd/,41-9-66
+union,Jashore,Bagherpara,নারিকেলবাড়ীয়া,নারিকেলবাড়ীয়া ইউনিয়ন,নারিকেলবাড়িয়া,https://narikelbariaup.jashore.gov.bd/,41-9-76
+union,Jashore,Bagherpara,রায়পুর,রায়পুর ইউনিয়ন,রায়পুর,https://roypurup.jashore.gov.bd/,41-9-85
+union,Jashore,Chougachha,চৌগাছা,চৌগাছা ইউনিয়ন,চৌগাছা,https://chougachhaup5.jashore.gov.bd/,41-11-14
+union,Jashore,Chougachha,ধুলিয়ানী,ধুলিয়ানী ইউনিয়ন,ধুলিয়ানী,https://dhulianiup4.jashore.gov.bd/,41-11-17
+union,Jashore,Chougachha,হাকিমপুর,হাকিমপুর ইউনিয়ন,হাকিমপুর,https://hakimpurup8.jashore.gov.bd/,41-11-25
+union,Jashore,Chougachha,নারায়নপুর,নারায়নপুর ইউনিয়ন,নারায়নপুর,https://narayanpurup10.jashore.gov.bd/,41-11-51
+union,Jashore,Chougachha,পাশাপোল,পাশাপোল ইউনিয়ন,পাশাপোল,https://pashapoleup2.jashore.gov.bd/,41-11-60
+union,Jashore,Chougachha,পাতিবিলা,পাতিবিলা ইউনিয়ন,পাতিবিলা,https://patibilaup7.jashore.gov.bd/,41-11-69
+union,Jashore,Chougachha,ফুলসারা,ফুলসারা ইউনিয়ন,ফুলসারা,https://fulsaraup1.jashore.gov.bd/,41-11-77
+union,Jashore,Chougachha,সুখপুকুরিয়া,সুখপুকুরিয়া ইউনিয়ন,সুখপুকুরিয়া,https://sukpukhuriaup11.jashore.gov.bd/,41-11-94
+union,Jashore,Jhikargacha,বাঁকড়া,বাঁকড়া ইউনিয়ন,বাঁকড়া,https://bankraup.jashore.gov.bd/,41-23-25
+union,Jashore,Jhikargacha,গংগানন্দপুর,গংগানন্দপুর ইউনিয়ন,গঙ্গানন্দপুর,https://ganganandapurup.jashore.gov.bd/,41-23-29
+union,Jashore,Jhikargacha,গদখালী,গদখালী ইউনিয়ন,গদখালী,https://gadkhaliup.jashore.gov.bd/,41-23-35
+union,Jashore,Jhikargacha,হাজিরবাগ,হাজিরবাগ ইউনিয়ন,হাজিরবাগ,https://hajirbaghup.jashore.gov.bd/,41-23-41
+union,Jashore,Jhikargacha,ঝিকরগাছা,ঝিকরগাছা ইউনিয়ন,ঝিকরগাছা,https://jhikargachhaup.jashore.gov.bd/,41-23-47
+union,Jashore,Jhikargacha,মাগুরা,মাগুরা ইউনিয়ন,মাগুরা,https://maguraup.jashore.gov.bd/,41-23-53
+union,Jashore,Jhikargacha,নাভারন,নাভারন ইউনিয়ন,নাভারণ,https://nabharanup.jashore.gov.bd/,41-23-59
+union,Jashore,Jhikargacha,নির্বাসখোলা,নির্বাসখোলা ইউনিয়ন,নির্বাসখোলা,https://nibaskholaup.jashore.gov.bd/,41-23-65
+union,Jashore,Jhikargacha,পানিসারা,পানিসারা ইউনিয়ন,পানিসারা,https://panisaraup.jashore.gov.bd/,41-23-71
+union,Jashore,Jhikargacha,শংকরপুর,শংকরপুর ইউনিয়ন,শংকরপুর,https://shankarpurup.jashore.gov.bd/,41-23-83
+union,Jashore,Jhikargacha,শিমুলিয়া,শিমুলিয়া ইউনিয়ন,শিমুলিয়া,https://shimuliaup.jashore.gov.bd/,41-23-89
+union,Jashore,Keshabpur,বিদ্যানন্দকাটি,বিদ্যানন্দকাটি ইউনিয়ন,বিদ্যানন্দকাটি,https://bidyanandakatiup.jashore.gov.bd/,41-38-17
+union,Jashore,Keshabpur,গৌরীঘোনা,গৌরীঘোনা ইউনিয়ন,গেীরিঘানা,https://gaurighonaup.jashore.gov.bd/,41-38-19
+union,Jashore,Keshabpur,কেশবপুর,কেশবপুর ইউনিয়ন,কেশবপুর,https://keshabpurup.jashore.gov.bd/,41-38-28
+union,Jashore,Keshabpur,মজিদপুর,মজিদপুর ইউনিয়ন,মজিদপুর,https://majidpurup.jashore.gov.bd/,41-38-38
+union,Jashore,Keshabpur,পাঁজিয়া,পাঁজিয়া ইউনিয়ন,পাজিয়া,https://panjiaup.jashore.gov.bd/,41-38-57
+union,Jashore,Keshabpur,সাগরদাঁড়ী,সাগরদাঁড়ী ইউনিয়ন,সাগরদাড়ী,https://sagardariup.jashore.gov.bd/,41-38-66
+union,Jashore,Keshabpur,সুফলাকাটি,সুফলাকাটি ইউনিয়ন,সুফলাকাটি,https://sufalakatiup.jashore.gov.bd/,41-38-76
+union,Jashore,Keshabpur,ত্রিমোহিনী,ত্রিমোহিনী ইউনিয়ন,ত্রিমোহিনী,https://trimohiniup.jashore.gov.bd/,41-38-85
+union,Jashore,Jessore Sadar,আরবপুর,আরবপুর ইউনিয়ন,আরবপুর,https://arabpurup9.jashore.gov.bd/,41-47-10
+union,Jashore,Jessore Sadar,বসুন্দিয়া,বসুন্দিয়া ইউনিয়ন,বসুন্দিয়া,https://basundiaup.jashore.gov.bd/,41-47-11
+union,Jashore,Jessore Sadar,চাঁচড়া,চাঁচড়া ইউনিয়ন,চাচড়া,https://chanchraup.jashore.gov.bd/,41-47-23
+union,Jashore,Jessore Sadar,চূড়ামনকাটি,চূড়ামনকাটি ইউনিয়ন,চুড়ামনকাটি,https://churamankatiup.jashore.gov.bd/,41-47-29
+union,Jashore,Jessore Sadar,ফতেপুর,ফতেপুর ইউনিয়ন,ফতেপুর,https://fathehpurup.jashore.gov.bd/,41-47-41
+union,Jashore,Jessore Sadar,হৈবতপুর,হৈবতপুর ইউনিয়ন,হৈবতপুর,https://haibatpurup.jashore.gov.bd/,41-47-47
+union,Jashore,Jessore Sadar,ইছালী,ইছালী ইউনিয়ন,ইছালী,https://ichhaliup.jashore.gov.bd/,41-47-53
+union,Jashore,Jessore Sadar,কাশিমপুর,কাশিমপুর ইউনিয়ন,কাশিমপুর,https://kashimpurup6.jashore.gov.bd/,41-47-65
+union,Jashore,Jessore Sadar,লেবুতলা,লেবুতলা ইউনিয়ন,লেবুতলা,https://lebutalaup.jashore.gov.bd/,41-47-77
+union,Jashore,Jessore Sadar,নরেন্দ্রপুর,নরেন্দ্রপুর ইউনিয়ন,নরেন্দ্রপুর,https://narendrapurup.jashore.gov.bd/,41-47-83
+union,Jashore,Jessore Sadar,রামনগর,রামনগর ইউনিয়ন,রামনগর,https://ramnagarup.jashore.gov.bd/,41-47-92
+union,Jashore,Jessore Sadar,উপশহর,উপশহর ইউনিয়ন,উপশহর,https://upasaharup.jashore.gov.bd/,41-47-95
+union,Jashore,Manirampur,ভোজগাতি,ভোজগাতি ইউনিয়ন,ভোজগাতী,https://bhojgatiup.jashore.gov.bd/,41-61-10
+union,Jashore,Manirampur,চালুয়াহাটি,চালুয়াহাটি ইউনিয়ন,চালুয়াহাটি,https://chaluahatiup.jashore.gov.bd/,41-61-11
+union,Jashore,Manirampur,ঢাকুরিয়া,ঢাকুরিয়া ইউনিয়ন,ঢাকুরিয়া,https://dhakuriaup.jashore.gov.bd/,41-61-16
+union,Jashore,Manirampur,দুর্বাডাংগা,দুর্বাডাংগা ইউনিয়ন,দূর্বাডাংগা,https://durbadangaup.jashore.gov.bd/,41-61-22
+union,Jashore,Manirampur,হরিদাসকাটি,হরিদাসকাটি ইউনিয়ন,হরিদাসকাটি,https://haridaskatiup.jashore.gov.bd/,41-61-27
+union,Jashore,Manirampur,হরিহরনগর,হরিহরনগর ইউনিয়ন,হরিহরনগর,https://hariharnagarup.jashore.gov.bd/,41-61-33
+union,Jashore,Manirampur,ঝাঁপা,ঝাঁপা ইউনিয়ন,ঝাঁপা,https://jhanpaup.jashore.gov.bd/,41-61-39
+union,Jashore,Manirampur,কাশিমনগর,কাশিমনগর ইউনিয়ন,কাশিমনগর,https://kashimnagarup.jashore.gov.bd/,41-61-44
+union,Jashore,Manirampur,খানপুর,খানপুর ইউনিয়ন,খানপুর,https://khanpurup.jashore.gov.bd/,41-61-50
+union,Jashore,Manirampur,খেদাপাড়া,খেদাপাড়া ইউনিয়ন,খেদাপাড়া,https://khedaparaup.jashore.gov.bd/,41-61-55
+union,Jashore,Manirampur,কুলটিয়া,কুলটিয়া ইউনিয়ন,কুলটিয়া,https://kultiaup.jashore.gov.bd/,41-61-61
+union,Jashore,Manirampur,মনিরামপুর,মনিরামপুর ইউনিয়ন,মণিরামপুর,https://manirampurup.jashore.gov.bd/,41-61-67
+union,Jashore,Manirampur,মনোহরপুর,মনোহরপুর ইউনিয়ন,মনোহরপুর,https://manoharpurup.jashore.gov.bd/,41-61-72
+union,Jashore,Manirampur,মশ্মিমনগর,মশ্মিমনগর ইউনিয়ন,মশ্বিমনগর,https://maswimnagarup.jashore.gov.bd/,41-61-78
+union,Jashore,Manirampur,নেহালপুর,নেহালপুর ইউনিয়ন,মশ্বিমনগর,https://nehalpurup.jashore.gov.bd/,41-61-83
+union,Jashore,Manirampur,রোহিতা,রোহিতা ইউনিয়ন,রোহিতা,https://rohitaup.jashore.gov.bd/,41-61-89
+union,Jashore,Manirampur,শ্যামকুড়,শ্যামকুড় ইউনিয়ন,শয়াম্পূড়,https://shyamkurup.jashore.gov.bd/,41-61-94
+union,Jashore,Sharsha,বাগআচড়া,বাগআচড়া ইউনিয়ন,বাগআঁচড়া,https://bagachraup.jashore.gov.bd/,41-90-13
+union,Jashore,Sharsha,বাহাদুরপুর,বাহাদুরপুর ইউনিয়ন,বাহাদুরপুর,https://bahadurpurup.jashore.gov.bd/,41-90-17
+union,Jashore,Sharsha,বেনাপোল,বেনাপোল ইউনিয়ন,বেনাপোল,https://benapoleup.jashore.gov.bd/,41-90-25
+union,Jashore,Sharsha,ডিহি,ডিহি ইউনিয়ন,ডিহি,https://dihiup.jashore.gov.bd/,41-90-34
+union,Jashore,Sharsha,গোগা,গোগা ইউনিয়ন,গোগা,https://gogaup.jashore.gov.bd/,41-90-43
+union,Jashore,Sharsha,কায়বা,কায়বা ইউনিয়ন,কায়বা,https://kaybaup.jashore.gov.bd/,41-90-51
+union,Jashore,Sharsha,লক্ষণপুর,লক্ষণপুর ইউনিয়ন,লক্ষণপুর,https://lakshmanpurup.jashore.gov.bd/,41-90-60
+union,Jashore,Sharsha,নিজামপুর,নিজামপুর ইউনিয়ন,নিজামপুর,https://nizampurup.jashore.gov.bd/,41-90-69
+union,Jashore,Sharsha,পুটখালী,পুটখালী ইউনিয়ন,পুটখালী,https://putkhaliup.jashore.gov.bd/,41-90-77
+union,Jashore,Sharsha,শার্শা,শার্শা ইউনিয়ন,শার্শা,https://sharshaup.jashore.gov.bd/,41-90-86
+union,Jhenaidah,Harinakundu,ভায়না,ভায়না ইউনিয়ন,ভায়না,https://bhaynaup.jhenaidah.gov.bd/,44-14-10
+union,Jhenaidah,Harinakundu,চাঁদপুর,চাঁদপুর ইউনিয়ন,চাঁদপুর,https://chandpurup.jhenaidah.gov.bd/,44-14-21
+union,Jhenaidah,Harinakundu,দৌলতপুর,দৌলতপুর ইউনিয়ন,দৌলতপুর,https://daulatpurup.jhenaidah.gov.bd/,44-14-31
+union,Jhenaidah,Harinakundu,ফলসী,ফলসী ইউনিয়ন,ফলসী,https://falsiup.jhenaidah.gov.bd/,44-14-42
+union,Jhenaidah,Harinakundu,জোড়াদহ,জোড়াদহ ইউনিয়ন,জোড়াদহ,https://joradahup.jhenaidah.gov.bd/,44-14-52
+union,Jhenaidah,Harinakundu,রঘুনাথপুর,রঘুনাথপুর ইউনিয়ন,রঘুনাথপুর,https://raghunathpurup.jhenaidah.gov.bd/,44-14-73
+union,Jhenaidah,Harinakundu,তাহেরহুদা,তাহেরহুদা ইউনিয়ন,তাহেরহুদা,https://taherhudaup.jhenaidah.gov.bd/,44-14-84
+union,Jhenaidah,Jhenaidah Sadar,দোগাছি,দোগাছি ইউনিয়ন,দোগাছি,https://dogachhiup.jhenaidah.gov.bd/,44-19-11
+union,Jhenaidah,Jhenaidah Sadar,ফুরসন্দি,ফুরসন্দি ইউনিয়ন,ফুরসন্দি,https://furshondiup.jhenaidah.gov.bd/,44-19-13
+union,Jhenaidah,Jhenaidah Sadar,গান্না,গান্না ইউনিয়ন,গান্না,https://gannaup.jhenaidah.gov.bd/,44-19-15
+union,Jhenaidah,Jhenaidah Sadar,ঘোড়শাল,ঘোড়শাল ইউনিয়ন,ঘোড়শাল,https://ghorshalup.jhenaidah.gov.bd/,44-19-21
+union,Jhenaidah,Jhenaidah Sadar,হলিধানী,হলিধানী ইউনিয়ন,হলিধানী,https://halidhaniup.jhenaidah.gov.bd/,44-19-26
+union,Jhenaidah,Jhenaidah Sadar,হরিশংকরপুর,হরিশংকরপুর ইউনিয়ন,হরিশংকরপুর,https://harishongkorpurup.jhenaidah.gov.bd/,44-19-31
+union,Jhenaidah,Jhenaidah Sadar,কালীচরণপুর,কালীচরণপুর ইউনিয়ন,কালীচরণপুর,https://kalicharanpurup.jhenaidah.gov.bd/,44-19-42
+union,Jhenaidah,Jhenaidah Sadar,কুমড়াবাড়ীয়া,কুমড়াবাড়ীয়া ইউনিয়ন,কুমড়াবাড়ীয়া,https://kumrabariaup.jhenaidah.gov.bd/,44-19-47
+union,Jhenaidah,Jhenaidah Sadar,মধুহাটী,মধুহাটী ইউনিয়ন,মধুহাটী,https://modhuhatiup.jhenaidah.gov.bd/,44-19-52
+union,Jhenaidah,Jhenaidah Sadar,মহারাজপুর,মহারাজপুর ইউনিয়ন,মহারাজপুর,https://maharazpurup.jhenaidah.gov.bd/,44-19-58
+union,Jhenaidah,Jhenaidah Sadar,নলডাঙ্গা,নলডাঙ্গা ইউনিয়ন,নলডাঙ্গা,https://naldangaup.jhenaidah.gov.bd/,44-19-63
+union,Jhenaidah,Jhenaidah Sadar,পদ্মাকর,পদ্মাকর ইউনিয়ন,পদ্মাকর,https://padmakarup.jhenaidah.gov.bd/,44-19-68
+union,Jhenaidah,Jhenaidah Sadar,পাগলাকানাই,পাগলাকানাই ইউনিয়ন,পাগলাকানাই,https://paglakanaiup.jhenaidah.gov.bd/,44-19-73
+union,Jhenaidah,Jhenaidah Sadar,পোড়াহাটী,পোড়াহাটী ইউনিয়ন,পোড়াহাটী,https://porahatiup.jhenaidah.gov.bd/,44-19-79
+union,Jhenaidah,Jhenaidah Sadar,সাগান্না,সাগান্না ইউনিয়ন,সাগান্না,https://sagannaup.jhenaidah.gov.bd/,44-19-84
+union,Jhenaidah,Jhenaidah Sadar,সাধুহাটী,সাধুহাটী ইউনিয়ন,সাধুহাটী,https://sadhuhatiup.jhenaidah.gov.bd/,44-19-89
+union,Jhenaidah,Jhenaidah Sadar,সুরাট,সুরাট ইউনিয়ন,সুরাট,https://suratup.jhenaidah.gov.bd/,44-19-94
+union,Jhenaidah,Kaliganj,বারবাজার,বারবাজার ইউনিয়ন,বারবাজার,https://barabazarup.jhenaidah.gov.bd/,44-33-10
+union,Jhenaidah,Kaliganj,জামাল,জামাল ইউনিয়ন,জামাল,https://jamalup.jhenaidah.gov.bd/,44-33-20
+union,Jhenaidah,Kaliganj,সুন্দরপুর-দূর্গাপুর,সুন্দরপুর-দূর্গাপুর ইউনিয়ন,সুন্দরপুর দুর্গাপুর,https://sundarpurdurgapurup.jhenaidah.gov.bd/,44-33-33
+union,Jhenaidah,Kaliganj,কাষ্টভাঙ্গা,কাষ্টভাঙ্গা ইউনিয়ন,কাষ্ঠভাঙ্গা,https://kashtabhangaup.jhenaidah.gov.bd/,44-33-40
+union,Jhenaidah,Kaliganj,কোলা,কোলা ইউনিয়ন,কোলা,https://kolaup.jhenaidah.gov.bd/,44-33-47
+union,Jhenaidah,Kaliganj,মালিয়াট,মালিয়াট ইউনিয়ন,মালিয়াট,https://maliatup.jhenaidah.gov.bd/,44-33-54
+union,Jhenaidah,Kaliganj,নিয়ামতপুর,নিয়ামতপুর ইউনিয়ন,নিয়াসতপুর,https://niamatpurup.jhenaidah.gov.bd/,44-33-61
+union,Jhenaidah,Kaliganj,রায়গ্রাম,রায়গ্রাম ইউনিয়ন,রায়গ্রাম,https://raygramup.jhenaidah.gov.bd/,44-33-74
+union,Jhenaidah,Kaliganj,রাখালগাছি,রাখালগাছি ইউনিয়ন,রাখালগাছি,https://rakhalgachhiup.jhenaidah.gov.bd/,44-33-81
+union,Jhenaidah,Kaliganj,শিমলা-রোকনপুর,শিমলা-রোকনপুর ইউনিয়ন,সিমলা রোকনপুর,https://simlarokonpurup.jhenaidah.gov.bd/,44-33-88
+union,Jhenaidah,Kaliganj,ত্রিলোচনপুর,ত্রিলোচনপুর ইউনিয়ন,ত্রিলোচনপুর,https://trilochanpurup.jhenaidah.gov.bd/,44-33-94
+union,Jhenaidah,Kotchandpur,বলুহর,বলুহর ইউনিয়ন,বলুহর,https://baluharup.jhenaidah.gov.bd/,44-42-13
+union,Jhenaidah,Kotchandpur,দোড়া,দোড়া ইউনিয়ন,দোড়া,https://doraup.jhenaidah.gov.bd/,44-42-27
+union,Jhenaidah,Kotchandpur,কুশনা,কুশনা ইউনিয়ন,কুশনা,https://kushnaup.jhenaidah.gov.bd/,44-42-67
+union,Jhenaidah,Kotchandpur,সাবদালপুর,সাবদালপুর ইউনিয়ন,সাফদারপুর,https://sabdalpurup.jhenaidah.gov.bd/,44-42-81
+union,Jhenaidah,Moheshpur,আজমপুর,আজমপুর ইউনিয়ন,আজমপুর,https://azampurup.jhenaidah.gov.bd/,44-71-10
+union,Jhenaidah,Moheshpur,বাঁশবাড়ীয়া,বাঁশবাড়ীয়া ইউনিয়ন,বাঁশবাড়ীয়া,https://banshbariaup.jhenaidah.gov.bd/,44-71-11
+union,Jhenaidah,Moheshpur,ফতেপুর,ফতেপুর ইউনিয়ন,ফতেপুর,https://fatepurup.jhenaidah.gov.bd/,44-71-17
+union,Jhenaidah,Moheshpur,যাদবপুর,যাদবপুর ইউনিয়ন,যাদবপুর,https://jadabpurup.jhenaidah.gov.bd/,44-71-23
+union,Jhenaidah,Moheshpur,কাজীরবেড়,কাজীরবেড় ইউনিয়ন,কাজিরবেড়,https://kazirberup.jhenaidah.gov.bd/,44-71-29
+union,Jhenaidah,Moheshpur,মান্দারবাড়ীয়া,মান্দারবাড়ীয়া ইউনিয়ন,মান্দারবাড়ীয়া,https://manderbariaup.jhenaidah.gov.bd/,44-71-35
+union,Jhenaidah,Moheshpur,নাটিমা,নাটিমা ইউনিয়ন,নাটিমা,https://natimaup.jhenaidah.gov.bd/,44-71-53
+union,Jhenaidah,Moheshpur,নেপা,নেপা ইউনিয়ন,নেপা,https://nepaup.jhenaidah.gov.bd/,44-71-59
+union,Jhenaidah,Moheshpur,পান্থপাড়া,পান্থপাড়া ইউনিয়ন,পান্তাপাড়া,https://panthaparaup.jhenaidah.gov.bd/,44-71-65
+union,Jhenaidah,Moheshpur,শ্যামকুড়,শ্যামকুড় ইউনিয়ন,শ্যামকুড়,https://shyamkurup.jhenaidah.gov.bd/,44-71-77
+union,Jhenaidah,Moheshpur,স্বরুপপুর,স্বরুপপুর ইউনিয়ন,স্বরুপপুর,https://swaruppurup.jhenaidah.gov.bd/,44-71-89
+union,Jhenaidah,Shailkupa,আবাইপুর,আবাইপুর ইউনিয়ন,আবাইপুর,https://abaipurup.jhenaidah.gov.bd/,44-80-10
+union,Jhenaidah,Shailkupa,বগুড়া,বগুড়া ইউনিয়ন,বগুড়া,https://boguraup.jhenaidah.gov.bd/,44-80-12
+union,Jhenaidah,Shailkupa,ধলহরাচন্দ্র,ধলহরাচন্দ্র ইউনিয়ন,ধলহরাচন্দ্র,https://dhaloharachandraup.jhenaidah.gov.bd/,44-80-18
+union,Jhenaidah,Shailkupa,দিগনগর,দিগনগর ইউনিয়ন,দিগনগর,https://dignagoreup.jhenaidah.gov.bd/,44-80-25
+union,Jhenaidah,Shailkupa,দুধসর,দুধসর ইউনিয়ন,দুধসর,https://dudsharup.jhenaidah.gov.bd/,44-80-31
+union,Jhenaidah,Shailkupa,মনোহরপুর,মনোহরপুর ইউনিয়ন,মনোহরপুর,https://manoharpurup.jhenaidah.gov.bd/,44-80-37
+union,Jhenaidah,Shailkupa,ফুলহরি,ফুলহরি ইউনিয়ন,ফুলহরি,https://fulhariup.jhenaidah.gov.bd/,44-80-44
+union,Jhenaidah,Shailkupa,হাকিমপুর,হাকিমপুর ইউনিয়ন,হাকিমপুর,https://hakimpurup.jhenaidah.gov.bd/,44-80-50
+union,Jhenaidah,Shailkupa,কাঁচেরকোল,কাঁচেরকোল ইউনিয়ন,কাঁচেরকোল,https://kancherkolup.jhenaidah.gov.bd/,44-80-56
+union,Jhenaidah,Shailkupa,মির্জাপুর,মির্জাপুর ইউনিয়ন,মির্জাপুর,https://mirzapurup.jhenaidah.gov.bd/,44-80-63
+union,Jhenaidah,Shailkupa,নিত্যানন্দপুর,নিত্যানন্দপুর ইউনিয়ন,নিত্যানন্দপুর,https://nityanandapurup.jhenaidah.gov.bd/,44-80-69
+union,Jhenaidah,Shailkupa,সারুটিয়া,সারুটিয়া ইউনিয়ন,সারুটিয়া,https://sarutiaup.jhenaidah.gov.bd/,44-80-75
+union,Jhenaidah,Shailkupa,ত্রিবেনী,ত্রিবেনী ইউনিয়ন,ত্রিবেনী,https://tribeniup.jhenaidah.gov.bd/,44-80-88
+union,Jhenaidah,Shailkupa,উমেদপুর,উমেদপুর ইউনিয়ন,উমেদপুর,https://umedpurup.jhenaidah.gov.bd/,44-80-94
+union,Khulna,Botiaghata,আমিরপুর,আমিরপুর ইউনিয়ন,আমিরপুর,https://amirpurup.khulna.gov.bd/,47-12-11
+union,Khulna,Botiaghata,বালিয়াডাঙ্গা,বালিয়াডাঙ্গা ইউনিয়ন,বালিয়াডাংগা,https://baliadangaup.khulna.gov.bd/,47-12-23
+union,Khulna,Botiaghata,বটিয়াঘাটা,বটিয়াঘাটা ইউনিয়ন,বটিয়াঘাটা,https://botiaghataup.khulna.gov.bd/,47-12-35
+union,Khulna,Botiaghata,ভান্ডারকোট,ভান্ডারকোট ইউনিয়ন,ভান্ডারকোট,https://vandarkotup.khulna.gov.bd/,47-12-47
+union,Khulna,Botiaghata,জলমা,জলমা ইউনিয়ন,জলমা,https://jolmaup.khulna.gov.bd/,47-12-71
+union,Khulna,Botiaghata,সুরখালী,সুরখালী ইউনিয়ন,সুরখালী,https://surkhaliup.khulna.gov.bd/,47-12-83
+union,Khulna,Dakop,বাজুয়া,বাজুয়া ইউনিয়ন,বাজুয়া,https://bajuaup.khulna.gov.bd/,47-17-10
+union,Khulna,Dakop,বানিশান্তা,বানিশান্তা ইউনিয়ন,বানীশান্তাা,https://banishantaup.khulna.gov.bd/,47-17-13
+union,Khulna,Dakop,লাউডোব,লাউডোব ইউনিয়ন,লাউডোব,https://laudobaup.khulna.gov.bd/,47-17-21
+union,Khulna,Dakop,দাকোপ,দাকোপ ইউনিয়ন,দাকোপ,https://dakopup.khulna.gov.bd/,47-17-42
+union,Khulna,Dakop,কৈলাশগঞ্জ,কৈলাশগঞ্জ ইউনিয়ন,কৈলাশগঞ্জ,https://koilashgonjup.khulna.gov.bd/,47-17-52
+union,Khulna,Dakop,কামারখোলা,কামারখোলা ইউনিয়ন,কামারখোলা,https://kamarkholaup.khulna.gov.bd/,47-17-63
+union,Khulna,Dakop,পানখালী,পানখালী ইউনিয়ন,পানখালী,https://pankhaliup.khulna.gov.bd/,47-17-69
+union,Khulna,Dakop,সুতারখালী,সুতারখালী ইউনিয়ন,সুতারখালী,https://sutarkhaliup.khulna.gov.bd/,47-17-73
+union,Khulna,Dakop,তিলডাঙ্গা,তিলডাঙ্গা ইউনিয়ন,তিলডাংগা,https://tildangaup.khulna.gov.bd/,47-17-84
+union,Khulna,Dumuria,আটলিয়া,আটলিয়া ইউনিয়ন,আটলিয়া,https://atliaup.khulna.gov.bd/,47-30-11
+union,Khulna,Dumuria,ধামালিয়া,ধামালিয়া ইউনিয়ন,ধামালিয়া,https://dhamaliaup.khulna.gov.bd/,47-30-20
+union,Khulna,Dumuria,ডুমুরিয়া,ডুমুরিয়া ইউনিয়ন,ডুমুরিয়া,https://dumuriaup.khulna.gov.bd/,47-30-27
+union,Khulna,Dumuria,মাগুরখালি,মাগুরখালি ইউনিয়ন,মাগুরখালী,https://magurkhaliup.khulna.gov.bd/,47-30-47
+union,Khulna,Dumuria,মাগুরাঘোনা,মাগুরাঘোনা ইউনিয়ন,মাগুরাঘোনা,https://magurghonaup.khulna.gov.bd/,47-30-54
+union,Khulna,Dumuria,রঘুনাথপুর,রঘুনাথপুর ইউনিয়ন,মাগুরাঘোনা,https://raghunathpurup.khulna.gov.bd/,47-30-61
+union,Khulna,Dumuria,রংপুর,রংপুর ইউনিয়ন,রংপুর,https://rongpurup.khulna.gov.bd/,47-30-67
+union,Khulna,Dumuria,রুদাঘরা,রুদাঘরা ইউনিয়ন,রুদাঘরা,https://rudaghoraup.khulna.gov.bd/,47-30-74
+union,Khulna,Dumuria,সাহস,সাহস ইউনিয়ন,সাহস,https://sahosup.khulna.gov.bd/,47-30-81
+union,Khulna,Dumuria,শরাফপুর,শরাফপুর ইউনিয়ন,শরাফপুর,https://shorafpurup.khulna.gov.bd/,47-30-88
+union,Khulna,Dumuria,শোভনা,শোভনা ইউনিয়ন,শোভনা,https://shovnaup.khulna.gov.bd/,47-30-94
+union,Khulna,Koyra,আমাদি,আমাদি ইউনিয়ন,আমাদী,https://amadiup.khulna.gov.bd/,47-53-10
+union,Khulna,Koyra,বাগালী,বাগালী ইউনিয়ন,বাগালী,https://bagaliup.khulna.gov.bd/,47-53-11
+union,Khulna,Koyra,দক্ষিণ বেদকাশী,দক্ষিণ বেদকাশী ইউনিয়ন,দক্ষিণে বেদকাশি।,https://southbedkashiup.khulna.gov.bd/,47-53-22
+union,Khulna,Koyra,কয়রা,কয়রা ইউনিয়ন,কয়রা,https://koyraup.khulna.gov.bd/,47-53-55
+union,Khulna,Koyra,মহারাজপুর,মহারাজপুর ইউনিয়ন,মহারাজপুর,https://moharajpurup.khulna.gov.bd/,47-53-72
+union,Khulna,Koyra,মহেশ্বরীপুর,মহেশ্বরীপুর ইউনিয়ন,মহেশ্বরীপুর,https://moheswaripurup.khulna.gov.bd/,47-53-78
+union,Khulna,Koyra,উত্তর বেদকাশী,উত্তর বেদকাশী ইউনিয়ন,উত্তর বেদকাশি,https://northbedkashiup.khulna.gov.bd/,47-53-94
+union,Khulna,Paikgasa,চাঁদখালী,চাঁদখালী ইউনিয়ন,চাঁদখালীঁ,https://chandkhaliup.khulna.gov.bd/,47-64-16
+union,Khulna,Paikgasa,দেলুটি,দেলুটি ইউনিয়ন,দেলুটি,https://delutiup.khulna.gov.bd/,47-64-27
+union,Khulna,Paikgasa,গদাইপুর,গদাইপুর ইউনিয়ন,গদাইপুর,https://godaipurup.khulna.gov.bd/,47-64-33
+union,Khulna,Paikgasa,হরিঢালী,হরিঢালী ইউনিয়ন,হরিঢালী,https://horidhaliup.khulna.gov.bd/,47-64-44
+union,Khulna,Paikgasa,কপিলমুনি,কপিলমুনি ইউনিয়ন,কপিলমুনি,https://kopilmuniup.khulna.gov.bd/,47-64-50
+union,Khulna,Paikgasa,লস্কর,লস্কর ইউনিয়ন,লস্কর,https://loskorup.khulna.gov.bd/,47-64-61
+union,Khulna,Paikgasa,লতা,লতা ইউনিয়ন,লতা,https://lotaup.khulna.gov.bd/,47-64-67
+union,Khulna,Paikgasa,রাড়ুলী,রাড়ুলী ইউনিয়ন,লাড়ুলি,https://raruliup.khulna.gov.bd/,47-64-83
+union,Khulna,Paikgasa,সোলাদানা,সোলাদানা ইউনিয়ন,সোলাদানা,https://soladanaup.khulna.gov.bd/,47-64-89
+union,Khulna,Fultola,দামোদর,দামোদর ইউনিয়ন,দামোদর,https://damodarup.khulna.gov.bd/,47-69-38
+union,Khulna,Fultola,জামিরা,জামিরা ইউনিয়ন,জামিরা,https://jamiraup.khulna.gov.bd/,47-69-57
+union,Khulna,Fultola,ফুলতলা,ফুলতলা ইউনিয়ন,ফুলতলা,https://fultolaup.khulna.gov.bd/,47-69-76
+union,Khulna,Fultola,আটরা গিলাতলা,আটরা গিলাতলা ইউনিয়ন,আটরা গিলাতলা,https://atragilatolaup.khulna.gov.bd/,47-69-
+union,Khulna,Rupsha,আইচগাতী,আইচগাতী ইউনিয়ন,আইচগাতী,https://aichgatiup.khulna.gov.bd/,47-75-13
+union,Khulna,Rupsha,ঘাটভোগ,ঘাটভোগ ইউনিয়ন,ঘাটভোগ,https://ghatvogup.khulna.gov.bd/,47-75-27
+union,Khulna,Rupsha,নৈহাটি,নৈহাটি ইউনিয়ন,নৈহাটি,https://noihatiup.khulna.gov.bd/,47-75-54
+union,Khulna,Rupsha,শ্রীফলতলা,শ্রীফলতলা ইউনিয়ন,শ্রীফলতলা,https://srifoltolaup.khulna.gov.bd/,47-75-67
+union,Khulna,Terokhada,বারাসাত,বারাসাত ইউনিয়ন,বারাসাত,https://barasatup.khulna.gov.bd/,47-94-27
+union,Khulna,Terokhada,মধুপুর,মধুপুর ইউনিয়ন,মধুপুর,https://modhupurup.khulna.gov.bd/,47-94-40
+union,Khulna,Terokhada,তেরখাদা,তেরখাদা ইউনিয়ন,তেরখাদা,https://terokhadaup.khulna.gov.bd/,47-94-81
+union,Khulna,Digholia,বারাকপুর,বারাকপুর ইউনিয়ন,বারাকপুর,https://barakpurup.khulna.gov.bd/,47-40-17
+union,Khulna,Digholia,আড়ংঘাটা,আড়ংঘাটা ইউনিয়ন,আড়ংঘাটা,https://aronghataup.khulna.gov.bd/,47-40-
+union,Khulna,Digholia,যোগীপোল,যোগীপোল ইউনিয়ন,যোগীপোল,https://jogipolup.khulna.gov.bd/,47-40-
+union,Khulna,Digholia,দিঘলিয়া,দিঘলিয়া ইউনিয়ন,দিঘলিয়া,https://digholiaup.khulna.gov.bd/,47-40-57
+union,Khulna,Digholia,গাজীরহাট,গাজীরহাট ইউনিয়ন,গাজীরহাট,https://gajirhatup.khulna.gov.bd/,47-40-66
+union,Khulna,Digholia,সেনহাটি,সেনহাটি ইউনিয়ন,সেনহাটি,https://senhatiup.khulna.gov.bd/,47-40-85
+union,Kushtia,Bheramara,বাহাদুরপুর,১ নং বাহাদুরপুর ইউনিয়ন,বাহাদুরপুর,https://1nobahadurpurup.kushtia.gov.bd/,50-15-13
+union,Kushtia,Bheramara,বাহিরচর,৩ নং বাহিরচর ইউনিয়ন,বাহিরচর,https://3nobahircharup.kushtia.gov.bd/,50-15-27
+union,Kushtia,Bheramara,চাঁদগ্রাম,চাঁদগ্রাম ইউনিয়ন,চাঁদগ্রাম,https://4nochandgramup.kushtia.gov.bd/,50-15-40
+union,Kushtia,Bheramara,ধরমপুর,৫ নং ধরমপুর ইউনিয়ন,ধরমপুর,https://5nodharampurup.kushtia.gov.bd/,50-15-54
+union,Kushtia,Bheramara,জুনিয়াদহ,৬ নং জুনিয়াদহ ইউনিয়ন,জুনিয়াদহ,https://6nojuniadahup.kushtia.gov.bd/,50-15-67
+union,Kushtia,Bheramara,মোকারিমপুর,২ নং মোকারিমপুর ইউনিয়ন,মোকারিমপুর,https://2nomukarimpurup.kushtia.gov.bd/,50-15-81
+union,Kushtia,Daulatpur,আদাবাড়ীয়া,আদাবাড়ীয়া ইউনিয়ন,আদাবাড়ীয়া,https://adabariaup.kushtia.gov.bd/,50-39-11
+union,Kushtia,Daulatpur,আড়িয়া,আড়িয়া ইউনিয়ন,আড়িয়া,https://ariaup.kushtia.gov.bd/,50-39-13
+union,Kushtia,Daulatpur,বোয়ালিয়া,বোয়ালিয়া ইউনিয়ন,বোয়ালিয়া,https://boaliaup.kushtia.gov.bd/,50-39-20
+union,Kushtia,Daulatpur,চিলমারী,চিলমারী ইউনিয়ন,চিলমারী,https://chilmaryup.kushtia.gov.bd/,50-39-27
+union,Kushtia,Daulatpur,দৌলতপুর,দৌলতপুর ইউনিয়ন,দৌলতপুর,https://daulatpurup.kushtia.gov.bd/,50-39-33
+union,Kushtia,Daulatpur,হোগলবাড়ীয়া,হোগলবাড়ীয়া ইউনিয়ন,হোগলবাড়ীয়া,https://hogolbariaup.kushtia.gov.bd/,50-39-40
+union,Kushtia,Daulatpur,খলিশাকুন্ডি,খলিশাকুন্ডি ইউনিয়ন,খলিষাকুন্ডি,https://khalishakundiup.kushtia.gov.bd/,50-39-47
+union,Kushtia,Daulatpur,মরিচা,মরিচা ইউনিয়ন,মরিচা,https://morichaup.kushtia.gov.bd/,50-39-54
+union,Kushtia,Daulatpur,মথুরাপুর,মথুরাপুর ইউনিয়ন,মথুরাপুর,https://mothurapurup.kushtia.gov.bd/,50-39-61
+union,Kushtia,Daulatpur,পিয়ারপুর,পিয়ারপুর ইউনিয়ন,পিয়ারপুর,https://piarpurup.kushtia.gov.bd/,50-39-67
+union,Kushtia,Daulatpur,ফিলিপনগর,ফিলিপনগর ইউনিয়ন,ফিলিপনগর,https://philipnagorup.kushtia.gov.bd/,50-39-74
+union,Kushtia,Daulatpur,রামকৃষ্ণপুর,৫ নং রামকৃষ্ণপুর ইউনিয়ন,রামকৃষ্ণপুর,https://5noramkrishnopurup.kushtia.gov.bd/,50-39-88
+union,Kushtia,Khoksa,আমবাড়ীয়া,৯ নং আমবাড়ীয়া ইউনিয়ন,আমবাড়ীয়া,https://9noambariaup.kushtia.gov.bd/,50-63-17
+union,Kushtia,Khoksa,বেতবাড়ীয়া,৩ নং বেতবাড়ীয়া ইউনিয়ন,বেতবাড়ীয়া,https://3nobethbariaup.kushtia.gov.bd/,50-63-25
+union,Kushtia,Khoksa,গোপগ্রাম,৭ নং গোপগ্রাম ইউনিয়ন,গোপগ্রাম,https://gopgram7up.kushtia.gov.bd/,50-63-31
+union,Kushtia,Khoksa,জানিপুর,৪ নং জানিপুর ইউনিয়ন,জানিপুর,https://4nojanipurup.kushtia.gov.bd/,50-63-37
+union,Kushtia,Khoksa,খোকসা,১ নং খোকসা ইউনিয়ন,খোকসা,https://1nokhoksaup.kushtia.gov.bd/,50-63-47
+union,Kushtia,Khoksa,ওসমানপুর,২ নং ওসমানপুর ইউনিয়ন,ওসমানপুর,https://2noosmanpurup.kushtia.gov.bd/,50-63-57
+union,Kushtia,Khoksa,শোমসপুর,৬ নং শোমসপুর ইউনিয়ন,শোমসপুর,https://6noshomospurup.kushtia.gov.bd/,50-63-71
+union,Kushtia,Khoksa,শিমুলিয়া,৫ নং শিমুলিয়া ইউনিয়ন,শিমুলিয়া,https://5noshimuliaup.kushtia.gov.bd/,50-63-77
+union,Kushtia,Kumarkhali,বাগুলাট,৭ নং বাগুলাট ইউনিয়ন,বাগুলাট,https://7nobagulatup.kushtia.gov.bd/,50-71-16
+union,Kushtia,Kumarkhali,চাঁদপুর,৯ নং চাঁদপুর ইউনিয়ন,চাঁদপুর,https://9nochadpurup.kushtia.gov.bd/,50-71-17
+union,Kushtia,Kumarkhali,চাপড়া,৬ নং চাপড়া ইউনিয়ন,চাপড়া,https://6nochapraup.kushtia.gov.bd/,50-71-25
+union,Kushtia,Kumarkhali,যদুবয়রা,৮ নং যদুবয়রা ইউনিয়ন,যদুবয়রা,https://8nojaduboyraup.kushtia.gov.bd/,50-71-34
+union,Kushtia,Kumarkhali,জগন্নাথপুর,৩ নং জগন্নাথপুর ইউনিয়ন,জগন্নাথপুর,https://3nojagonnathpurup.kushtia.gov.bd/,50-71-43
+union,Kushtia,Kumarkhali,কয়া,১ নং কয়া ইউনিয়ন,কয়া,https://1nokayaup.kushtia.gov.bd/,50-71-51
+union,Kushtia,Kumarkhali,নন্দলালপুর,৫ নং নন্দলালপুর ইউনিয়ন,নন্দলালপুর,https://5nonandolalpurup.kushtia.gov.bd/,50-71-69
+union,Kushtia,Kumarkhali,পান্টি,১০ নং পান্টি ইউনিয়ন,পান্টি,https://10nopantiup.kushtia.gov.bd/,50-71-77
+union,Kushtia,Kumarkhali,সদকী,৪ নং সদকী ইউনিয়ন,সদকী,https://4nosadkiup.kushtia.gov.bd/,50-71-86
+union,Kushtia,Kumarkhali,শিলাইদহ,২ নং শিলাইদহ ইউনিয়ন,শিলাইদহ,https://2noshelaidahup.kushtia.gov.bd/,50-71-94
+union,Kushtia,Kushtia Sadar,আইলচারা,৭ নং আইলচারা ইউনিয়ন,আইলচারা,https://7noailcharaup.kushtia.gov.bd/,50-79-17
+union,Kushtia,Kushtia Sadar,আলামপুর,৫ নং আলামপুর ইউনিয়ন,আলামপুর,https://5noalampurup.kushtia.gov.bd/,50-79-18
+union,Kushtia,Kushtia Sadar,গোস্বামী দুর্গাপুর,১৪ নং গোস্বামী দুর্গাপুর ইউনিয়ন,গোস্বামীদূর্গাপুর,https://14nogoswamidurgapurup.kushtia.gov.bd/,50-79-31
+union,Kushtia,Kushtia Sadar,হাটশ হরিপুর,১ নং হাটশ হরিপুর ইউনিয়ন,হাটশ হরিপুর,https://1nohatashharipurup.kushtia.gov.bd/,50-79-44
+union,Kushtia,Kushtia Sadar,ঝাউদিয়া,৯ নং ঝাউদিয়া ইউনিয়ন,ঝাউদিয়া,https://9nojhaudiaup.kushtia.gov.bd/,50-79-63
+union,Kushtia,Kushtia Sadar,মনোহরদিয়া,১৩ নং মনোহরদিয়া ইউনিয়ন,মনোহরদিয়া,https://13nomonohardiaup.kushtia.gov.bd/,50-79-82
+union,Kushtia,Kushtia Sadar,পাটিকাবাড়ী,৮ নং পাটিকাবাড়ী ইউনিয়ন,পাটিকাবাড়ী,https://8nopatikabariup.kushtia.gov.bd/,50-79-88
+union,Kushtia,Kushtia Sadar,উজানগ্রাম,১০ নং উজানগ্রাম ইউনিযন,উজানগ্রাম,https://10noujangramup.kushtia.gov.bd/,50-79-94
+union,Kushtia,Mirpur,আমবাড়ীয়া,আমবাড়ীয়া ইউনিয়ন,আমবাড়ীয়া,https://ambariaup.kushtia.gov.bd/,50-94-13
+union,Kushtia,Mirpur,আমলা,আমলা ইউনিয়ন,আমলা,https://amlaup.kushtia.gov.bd/,50-94-14
+union,Kushtia,Mirpur,বহলবাড়ীয়া,বহলবাড়ীয়া ইউনিয়ন,বহলবাড়ীয়া,https://bahalbariaup.kushtia.gov.bd/,50-94-21
+union,Kushtia,Mirpur,বারুইপাড়া,বারুইপাড়া ইউনিয়ন,বারুইপাড়া,https://baruiparaup.kushtia.gov.bd/,50-94-29
+union,Bagerhat,Bagerhat Sadar,বারুইপাড়া,বারুইপাড়া ইউনিয়ন,বারুইপাড়া,https://baruiparaup.bagerhat.gov.bd/,1--29
+union,Kushtia,Mirpur,ছাতিয়ান,ছাতিয়ান ইউনিয়ন,ছাতিয়ান,https://chhatianup.kushtia.gov.bd/,50-94-36
+union,Kushtia,Mirpur,চিথলিয়া,চিথলিয়া ইউনিয়ন,চিথলিয়া,https://chithaliaup.kushtia.gov.bd/,50-94-43
+union,Kushtia,Mirpur,কুর্শা,কুর্শা ইউনিয়ন,কুর্শা,https://kurshaup.kushtia.gov.bd/,50-94-58
+union,Kushtia,Mirpur,মালিহাদ,১১ নং মালিহাদ ইউনিয়ন,মালিহাদ,https://11nomalihadup.kushtia.gov.bd/,50-94-65
+union,Kushtia,Mirpur,ফুলবাড়ীয়া,ফুলবাড়ীয়া ইউনিয়ন,ফুলবাড়ীয়া,https://fulbariaup.kushtia.gov.bd/,50-94-73
+union,Kushtia,Mirpur,পোড়াদহ,পোড়াদহ ইউনিয়ন,পোড়াদহ,https://poradahaup.kushtia.gov.bd/,50-94-80
+union,Kushtia,Mirpur,সদরপুর,সদরপুর ইউনিয়ন,সদরপুর,https://sadarpurup.kushtia.gov.bd/,50-94-87
+union,Kushtia,Mirpur,তালবাড়ীয়া,তালবাড়ীয়া ইউনিয়ন,তালবাড়ীয়া,https://talbariaup.kushtia.gov.bd/,50-94-
+union,Magura,Magura Sadar,বেরইল পলিতা,বেরইল পলিতা ইউনিয়ন,বেরইল পলিতা,https://baroilpolitaup.magura.gov.bd/,55-57-23
+union,Magura,Magura Sadar,বগিয়া,বগিয়া ইউনিয়ন,বগিয়া,https://bogiaup.magura.gov.bd/,55-57-25
+union,Magura,Magura Sadar,চাউলিয়া,চাউলিয়া ইউনিয়ন,চাউলিয়া,https://chawliaup.magura.gov.bd/,55-57-27
+union,Magura,Magura Sadar,গোপালগ্রাম,গোপালগ্রাম ইউনিয়ন,গোপালগ্রাম,https://gopalgramup.magura.gov.bd/,55-57-33
+union,Magura,Magura Sadar,হাজীপুর,হাজীপুর ইউনিয়ন,হাজিপুর,https://hazipurup.magura.gov.bd/,55-57-40
+union,Magura,Magura Sadar,হাজরাপুর,হাজরাপুর ইউনিয়ন,হাজরাপুর,https://hazrapurup.magura.gov.bd/,55-57-47
+union,Magura,Magura Sadar,জগদল,জগদল ইউনিয়ন,জগদল,https://jagdalup.magura.gov.bd/,55-57-54
+union,Magura,Magura Sadar,কছুন্দী,কছুন্দী ইউনিয়ন,কছুন্দী,https://kosundiup.magura.gov.bd/,55-57-61
+union,Magura,Magura Sadar,কুচিয়ামো,কুচিয়ামো ইউনিয়ন,কুচিয়ামোড়া,https://kuchiamoraup.magura.gov.bd/,55-57-67
+union,Magura,Magura Sadar,মঘী,মঘী ইউনিয়ন,মঘী,https://moghiup.magura.gov.bd/,55-57-74
+union,Magura,Mohammadpur,বাবুখালী,বাবুখালী ইউনিয়ন,বাবু খালী,https://babukhaliup.magura.gov.bd/,55-66-10
+union,Magura,Mohammadpur,বালিদিয়া,বালিদিয়া ইউনিয়ন,বালিদিয়া,https://balidiaup.magura.gov.bd/,55-66-21
+union,Magura,Mohammadpur,বিনোদপুর,বিনোদপুর ইউনিয়ন,বিনোদপুর,https://binodpurup.magura.gov.bd/,55-66-31
+union,Magura,Mohammadpur,দীঘা,দীঘা ইউনিয়ন,দীঘা,https://dighaup.magura.gov.bd/,55-66-42
+union,Magura,Mohammadpur,মহম্মদপুর,মহম্মদপুর ইউনিয়ন,মহম্মদপুর,https://mohammadpurup.magura.gov.bd/,55-66-52
+union,Magura,Mohammadpur,নহাটা,নহাটা ইউনিয়ন,নহাটা,https://nohataup.magura.gov.bd/,55-66-63
+union,Magura,Mohammadpur,পলাশবাড়ীয়া,পলাশবাড়ীয়া ইউনিয়ন,পলাশবাড়িয়া,https://palashbariaup.magura.gov.bd/,55-66-73
+union,Magura,Mohammadpur,রাজাপুর,রাজাপুর ইউনিয়ন,রাজাপুর,https://rajapurup.magura.gov.bd/,55-66-84
+union,Magura,Shalikha,আড়পাড়া,আড়পাড়া ইউনিয়ন,আড়পাড়া,https://arparaup.magura.gov.bd/,55-85-11
+union,Magura,Shalikha,আড়পাড়া,Gongarampur Union,আড়পাড়া,https://gongarampurup.magura.gov.bd/,55-85-11
+union,Magura,Shalikha,বুনাগাতী,বুনাগাতী ইউনিয়ন,বুনাগাতী,https://bunagatiup.magura.gov.bd/,55-85-23
+union,Magura,Shalikha,ধনেশ্বরগাতী,ধনেশ্বরগাতী ইউনিয়ন,ধনেশ্বরগাতী,https://dhaneshwargatiup.magura.gov.bd/,55-85-35
+union,Magura,Shalikha,শালিখা,শালিখা ইউনিয়ন,শালিখা,https://shalikhaup.magura.gov.bd/,55-85-59
+union,Magura,Shalikha,শতখালী,শতখালী ইউনিয়ন,শতখালী,https://shatakhaliup.magura.gov.bd/,55-85-71
+union,Magura,Shalikha,তালখড়ি,তালখড়ি ইউনিয়ন,তালখড়ি,https://talkhariup.magura.gov.bd/,55-85-83
+union,Magura,Sreepur,আমলসার,আমলসার ইউনিয়ন,আমলসার,https://amalsharup.magura.gov.bd/,55-95-10
+union,Magura,Sreepur,দ্বারিয়াপুর,দ্বারিয়াপুর ইউনিয়ন,দ্বারিয়াপুর,https://dariapurup.magura.gov.bd/,55-95-21
+union,Magura,Sreepur,গয়েশপুর,গয়েশপুর ইউনিয়ন,গয়েশপুর,https://goyespurup.magura.gov.bd/,55-95-31
+union,Magura,Sreepur,কাদিরপাড়া,কাদিরপাড়া  ইউনিয়ন,কাদিরপাড়া,https://kadirparaup.magura.gov.bd/,55-95-42
+union,Magura,Sreepur,নাকোল,নাকোল ইউনিয়ন,নাকোল,https://nakolup.magura.gov.bd/,55-95-52
+union,Magura,Sreepur,সব্দালপুর,সব্দালপুর ইউনিয়ন,সব্দালপুর,https://shobdalpurup.magura.gov.bd/,55-95-63
+union,Magura,Sreepur,শ্রীকোল,শ্রীকোল ইউনিয়ন,শ্রীকোল,https://sreekolup.magura.gov.bd/,55-95-73
+union,Magura,Sreepur,শ্রীপুর,শ্রীপুর ইউনিয়ন,শ্রীপুর,https://sreepurup.magura.gov.bd/,55-95-84
+union,Meherpur,Gangni,বামন্দী,বামন্দী ইউনিয়ন,বামন্দী,https://bamondiup.meherpur.gov.bd/,57-47-10
+union,Meherpur,Gangni,বামন্দী,Raipur Union,বামন্দী,https://raipurup.meherpur.gov.bd/,57-47-10
+union,Meherpur,Gangni,ধানখোলা,ধানখোলা ইউনিয়ন,ধানখোলা,https://dhankollaup.meherpur.gov.bd/,57-47-21
+union,Meherpur,Gangni,কাথুলী,কাথুলী ইউনিয়ন,কাথুলী,https://kathuli.meherpur.gov.bd/,57-47-42
+union,Meherpur,Gangni,কাজিপুর,কাজিপুর ইউনিয়ন,কাজিপুর,https://kazipurup.meherpur.gov.bd/,57-47-52
+union,Meherpur,Gangni,মটমুড়া,মটমুড়া ইউনিয়ন,মটমুড়া,https://motmuraup.meherpur.gov.bd/,57-47-63
+union,Meherpur,Gangni,সাহারবাটী,সাহারবাটী ইউনিয়ন,সাহারবাটী,https://shaharbatiup.meherpur.gov.bd/,57-47-73
+union,Meherpur,Gangni,ষোলটাকা,ষোলটাকা ইউনিয়ন,ষোলটাকা,https://sholotakaup.meherpur.gov.bd/,57-47-84
+union,Meherpur,Gangni,তেঁতুলবাড়ীয়া,তেঁতুলবাড়ীয়া ইউনিয়ন,তেঁতুলবাড়ীয়া,https://tentulbaria.meherpur.gov.bd/,57-47-94
+union,Meherpur,Mujibnagar,দারিয়াপুর,দারিয়াপুর ইউনিয়ন,দারিয়াপুর,https://dariapurup.meherpur.gov.bd/,57-60-47
+union,Meherpur,Mujibnagar,মহাজনপুর,মহাজনপুর ইউনিয়ন,মহাজনপুর,https://mohajanpurup.meherpur.gov.bd/,57-60-76
+union,Meherpur,Mujibnagar,মোনাখালী,মোনাখালী ইউনিয়ন,মোনাখালী,https://monakhali.meherpur.gov.bd/,57-60-85
+union,Meherpur,Meherpur Sadar,আমদহ,আমদহ ইউনিয়ন,আমদহ,https://amdahup.meherpur.gov.bd/,57-87-14
+union,Meherpur,Meherpur Sadar,আমঝুপি,আমঝুপি ইউনিয়ন,আমঝুপি,https://amjhupi.meherpur.gov.bd/,57-87-19
+union,Meherpur,Meherpur Sadar,বুড়িপোতা,বুড়িপোতা ইউনিয়ন,বুড়িপোতা,https://buripotaup.meherpur.gov.bd/,57-87-38
+union,Meherpur,Meherpur Sadar,কতুবপুর,কতুবপুর ইউনিয়ন,কুতবপুর,https://kutubpurup.meherpur.gov.bd/,57-87-57
+union,Meherpur,Meherpur Sadar,পিরোজপুর,পিরোজপুর ইউনিয়ন,পিরোজপুর,https://pirojpurup.meherpur.gov.bd/,57-87-95
+union,Narail,Kalia,বাঐসোনা,বাঐসোনা ইউনিয়ন,বাঐসোনা,https://baioshonaup.narail.gov.bd/,65-28-15
+union,Narail,Kalia,হামিদপুর,হামিদপুর ইউনিয়ন,হামিদপুর,https://hamidpurup.narail.gov.bd/,65-28-23
+union,Narail,Kalia,জয়নগর,জয়নগর ইউনিয়ন,জয়নগর,https://jaynagorup.narail.gov.bd/,65-28-39
+union,Narail,Kalia,কলাবাড়ীয়া,কলাবাড়ীয়া ইউনিয়ন,কলাবাড়ীয়া,https://kalabariaup.narail.gov.bd/,65-28-47
+union,Narail,Kalia,মাউলী,মাউলী ইউনিয়ন,মাউলী,https://mauliup.narail.gov.bd/,65-28-71
+union,Narail,Kalia,পহরডাঙ্গা,পহরডাঙ্গা ইউনিয়ন,পহরডাঙ্গা,https://pahordangaup.narail.gov.bd/,65-28-79
+union,Narail,Kalia,পাঁচগ্রাম,পাঁচগ্রাম ইউনিয়ন,পাঁচগ্রাম,https://panchgramup.narail.gov.bd/,65-28-83
+union,Narail,Kalia,পেড়লী,পেড়লী ইউনিয়ন,পেড়লী,https://peroliup.narail.gov.bd/,65-28-87
+union,Narail,Kalia,পুরুলিয়া,পুরুলিয়া ইউনিয়ন,পুরুলিয়া,https://puruliaup.narail.gov.bd/,65-28-94
+union,Narail,Kalia,সালামাবাদ,সালামাবাদ ইউনিয়ন,সালামাবাদ,https://salamabadup.narail.gov.bd/,65-28-95
+union,Narail,Lohagara,দিঘলিয়া,Digholiaup1 Union,দিঘলিয়া,https://digholiaup1.narail.gov.bd/,65-52-15
+union,Narail,Lohagara,ইতনা,ইতনা ইউনিয়ন,ইতনা,https://itnaup.narail.gov.bd/,65-52-18
+union,Narail,Lohagara,জয়পুর,জয়পুর ইউনিয়ন,জয়পুর,https://joypurup.narail.gov.bd/,65-52-23
+union,Narail,Lohagara,কাশিপুর,কাশিপুর ইউনিয়ন,কাশিপুর,https://kashipurup.narail.gov.bd/,65-52-31
+union,Narail,Lohagara,কোটাকোল,কোটাকোল ইউনিয়ন,কোটাকোল,https://kotakolup.narail.gov.bd/,65-52-39
+union,Narail,Lohagara,লাহুড়িয়া,লাহুড়িয়া ইউনিয়ন,লাহুড়িয়া,https://lahuriaup.narail.gov.bd/,65-52-47
+union,Narail,Lohagara,লক্ষীপাশা,লক্ষীপাশা ইউনিয়ন,লক্ষীপাশা,https://lakshmipashaup.narail.gov.bd/,65-52-55
+union,Narail,Lohagara,লোহাগড়া,লোহাগড়া ইউনিয়ন,লোহাগড়া,https://lohagoraup.narail.gov.bd/,65-52-63
+union,Narail,Lohagara,মল্লিকপুর,মল্লিকপুর ইউনিয়ন,মল্লিকপুর,https://mallikpurup.narail.gov.bd/,65-52-71
+union,Narail,Lohagara,নলদী,নলদী ইউনিয়ন,নলদী,https://naldiup.narail.gov.bd/,65-52-79
+union,Narail,Lohagara,নোয়াগ্রাম,নোয়াগ্রাম ইউনিয়ন,নোয়াগ্রাম,https://noagramup.narail.gov.bd/,65-52-87
+union,Narail,Lohagara,শালনগর,শালনগর ইউনিয়ন,শালনগর,https://salnagarup.narail.gov.bd/,65-52-94
+union,Narail,Narail Sadar,আউড়িয়া,আউড়িয়া ইউনিয়ন,আউড়িয়া,https://auriaup.narail.gov.bd/,65-76-11
+union,Narail,Narail Sadar,ভদ্রবিলা,ভদ্রবিলা ইউনিয়ন,ভদ্রবিলা,https://bhadrabilaup.narail.gov.bd/,65-76-20
+union,Narail,Narail Sadar,বিছালী,বিছালী ইউনিয়ন,বিছালী,https://bisaliup.narail.gov.bd/,65-76-27
+union,Narail,Narail Sadar,চন্ডিবরপুর,চন্ডিবরপুর ইউনিয়ন,চন্ডিবরপুর,https://chandiborpurup.narail.gov.bd/,65-76-33
+union,Narail,Narail Sadar,কলোড়া,কলোড়া ইউনিয়ন,কলোড়া,https://kaloraup.narail.gov.bd/,65-76-47
+union,Narail,Narail Sadar,মাইজপাড়া,মাইজপাড়া ইউনিয়ন,মাইজপাড়া,https://maijparaup.narail.gov.bd/,65-76-54
+union,Narail,Narail Sadar,মুলিয়া,মুলিয়া ইউনিয়ন,মুলিয়া,https://muliaup.narail.gov.bd/,65-76-61
+union,Narail,Narail Sadar,শাহাবাদ,শাহাবাদ ইউনিয়ন,শাহাবাদ,https://shahabadup.narail.gov.bd/,65-76-74
+union,Narail,Narail Sadar,সিঙ্গাশোলপুর,সিঙ্গাশোলপুর ইউনিয়ন,সিঙ্গাশোলপুর,https://singasholpurup.narail.gov.bd/,65-76-88
+union,Narail,Narail Sadar,তুলারামপুর,তুলারামপুর ইউনিয়ন,তুলারামপুর,https://tularampurup.narail.gov.bd/,65-76-94
+union,Satkhira,Assasuni,আনুলিয়া,আনুলিয়া ইউনিয়ন,আনুলিয়া,https://anuliaup.satkhira.gov.bd/,87-4-15
+union,Satkhira,Assasuni,আশাশুনি,আশাশুনি ইউনিয়ন,আশাশুনি,https://assasuniup.satkhira.gov.bd/,87-4-17
+union,Satkhira,Assasuni,বড়দল,বড়দল ইউনিয়ন,বড়দল,https://baradalup.satkhira.gov.bd/,87-4-25
+union,Satkhira,Assasuni,বুধহাটা,বুধহাটা ইউনিয়ন,বুধহাটা,https://budhhataup.satkhira.gov.bd/,87-4-34
+union,Satkhira,Assasuni,দরগাহপুর,দরগাহপুর ইউনিয়ন,দরগাহপুর,https://durgapurup.satkhira.gov.bd/,87-4-43
+union,Satkhira,Assasuni,কাদাকাটি,কাদাকাটি ইউনিয়ন,কাদাকাটি,https://kadakatiup.satkhira.gov.bd/,87-4-56
+union,Satkhira,Assasuni,খাজরা,খাজরা ইউনিয়ন,খাজরা,https://khajraup.satkhira.gov.bd/,87-4-60
+union,Satkhira,Assasuni,কুল্যা,কুল্যা ইউনিয়ন,কুল্যা,https://kullaup.satkhira.gov.bd/,87-4-69
+union,Satkhira,Assasuni,প্রতাপনগর,প্রতাপনগর ইউনিয়ন,প্রতাপনগর,https://pratapnagarup.satkhira.gov.bd/,87-4-77
+union,Satkhira,Assasuni,শোভনালী,শোভনালী ইউনিয়ন,শোভনালী,https://sobhnaliup.satkhira.gov.bd/,87-4-86
+union,Satkhira,Assasuni,শ্রীউলা,শ্রীউলা ইউনিয়ন,শ্রীউলা,https://sreeulaup.satkhira.gov.bd/,87-4-94
+union,Satkhira,Debhata,দেবহাটা,দেবহাটা ইউনিয়ন,দেবহাটা,https://debhataup.satkhira.gov.bd/,87-25-15
+union,Satkhira,Debhata,কুলিয়া,কুলিয়া ইউনিয়ন,কুলিয়া,https://kuliaup.satkhira.gov.bd/,87-25-31
+union,Satkhira,Debhata,নওয়াপাড়া,নওয়াপাড়া ইউনিয়ন,নওয়াপাড়া,https://noaparaup.satkhira.gov.bd/,87-25-47
+union,Satkhira,Debhata,পারুলিয়া,পারুলিয়া ইউনিয়ন,পারুলিয়া,https://paruliaup.satkhira.gov.bd/,87-25-63
+union,Satkhira,Debhata,সখিপুর,সখিপুর ইউনিয়ন,সখিপুর,https://sakhipurup.satkhira.gov.bd/,87-25-79
+union,Satkhira,Kalaroa,চন্দনপুর,চন্দনপুর ইউনিয়ন,চন্দনপুর,https://chandanpurup.satkhira.gov.bd/,87-43-13
+union,Satkhira,Kalaroa,লাঙ্গলঝাড়া,লাঙ্গলঝাড়া ইউনিয়ন,লাঙ্গলঝাড়া,https://langaljharaup.satkhira.gov.bd/,87-43-23
+union,Satkhira,Kalaroa,হেলাতলা,হেলাতলা ইউনিয়ন,হেলাতলা,https://helatalaup.satkhira.gov.bd/,87-43-31
+union,Satkhira,Kalaroa,জালালাবাদ,জালালাবাদ ইউনিয়ন,জালালাবাদ,https://jallabadup.satkhira.gov.bd/,87-43-39
+union,Satkhira,Kalaroa,জয়নগর,জয়নগর ইউনিয়ন,জয়নগর,https://joynagarup.satkhira.gov.bd/,87-43-47
+union,Satkhira,Kalaroa,যুগিখালী,যুগিখালী ইউনিয়ন,যোগিখালী,https://jogikhaliup.satkhira.gov.bd/,87-43-55
+union,Satkhira,Kalaroa,কেঁড়াগাছি,কেঁড়াগাছি ইউনিয়ন,কেঁড়াগাছি,https://keragachhiup.satkhira.gov.bd/,87-43-63
+union,Satkhira,Kalaroa,কেরালকাতা,কেরালকাতা ইউনিয়ন,কেরালকাতা,https://keralkataup.satkhira.gov.bd/,87-43-71
+union,Satkhira,Kalaroa,কুশোডাংগা,কুশোডাংগা ইউনিয়ন,কুশোডাঙ্গা,https://kushadangaup.satkhira.gov.bd/,87-43-79
+union,Satkhira,Kalaroa,কয়লা,কয়লা ইউনিয়ন,কয়লা,https://kailaup.satkhira.gov.bd/,87-43-87
+union,Satkhira,Kalaroa,সোনাবাড়িয়া,সোনাবাড়িয়া ইউনিয়ন,সোনাবাড়ীয়া,https://sonabariaup.satkhira.gov.bd/,87-43-94
+union,Satkhira,Kaliganj,ভাড়াশিমলা,ভাড়াশিমলা ইউনিয়ন,ভাড়াশিমলা,https://bharasimlaup.satkhira.gov.bd/,87-47-13
+union,Satkhira,Kaliganj,বিষ্ণুপুর,বিষ্ণুপুর ইউনিয়ন,বিষ্ণুপুর,https://bishnupurup.satkhira.gov.bd/,87-47-15
+union,Satkhira,Kaliganj,চাম্পাফুল,চাম্পাফুল ইউনিয়ন,চাম্পাফুল,https://champaphulup.satkhira.gov.bd/,87-47-23
+union,Satkhira,Kaliganj,দক্ষিণ শ্রীপুর,দক্ষিণ শ্রীপুর ইউনিয়ন,দক্ষিণ শ্রীপুর,https://dakshinsreepurup.satkhira.gov.bd/,87-47-31
+union,Satkhira,Kaliganj,ধলবাড়িয়া,ধলবাড়িয়া ইউনিয়ন,ধলবাড়িয়া,https://dhalbariaup.satkhira.gov.bd/,87-47-39
+union,Satkhira,Kaliganj,কৃষ্ণনগর,কৃষ্ণনগর ইউনিয়ন,কৃষ্ণনগর,https://krishnanagarup.satkhira.gov.bd/,87-47-47
+union,Satkhira,Kaliganj,কুশুলিয়া,কুশুলিয়া ইউনিয়ন,কুশুলিয়া,https://kushliaup.satkhira.gov.bd/,87-47-55
+union,Satkhira,Kaliganj,মথুরেশপুর,মথুরেশপুর ইউনিয়ন,মথুরেশপুর,https://mathureshpurup.satkhira.gov.bd/,87-47-63
+union,Satkhira,Kaliganj,মৌতলা,মৌতলা ইউনিয়ন,মৌতলা,https://mautalaup.satkhira.gov.bd/,87-47-71
+union,Satkhira,Kaliganj,নলতা,নলতা ইউনিয়ন,নলতা,https://naltaup.satkhira.gov.bd/,87-47-79
+union,Satkhira,Kaliganj,রতনপুর,রতনপুর  ইউনিয়ন,রতনপুর,https://ratanpurup.satkhira.gov.bd/,87-47-87
+union,Satkhira,Kaliganj,তারালী,তারালী ইউনিয়ন,তারালী,https://taraliup.satkhira.gov.bd/,87-47-94
+union,Satkhira,Satkhira Sadar,আগরদাড়ী,আগরদাড়ী ইউনিয়ন,আগরদাড়ী,https://agardariup.satkhira.gov.bd/,87-82-13
+union,Satkhira,Satkhira Sadar,আলিপুর,আলিপুর ইউনিয়ন,আলিপুর,https://alipurup.satkhira.gov.bd/,87-82-16
+union,Satkhira,Satkhira Sadar,বৈকারী,বৈকারী ইউনিয়ন,বৈকারী,https://baikariup.satkhira.gov.bd/,87-82-20
+union,Satkhira,Satkhira Sadar,বল্লী,বল্লী ইউনিয়ন,বল্লী,https://balliup.satkhira.gov.bd/,87-82-27
+union,Satkhira,Satkhira Sadar,বাঁশদহ,বাঁশদহ ইউনিয়ন,বাঁশদহা,https://banshdahaup.satkhira.gov.bd/,87-82-33
+union,Satkhira,Satkhira Sadar,ভোমরা,ভোমরা ইউনিয়ন,ভোমরা,https://bhomraup.satkhira.gov.bd/,87-82-40
+union,Satkhira,Satkhira Sadar,ব্রক্ষ্মরাজপুর,ব্রক্ষ্মরাজপুর ইউনিয়ন,ব্রক্ষ্মরাজপুর,https://brahmarajpurup.satkhira.gov.bd/,87-82-47
+union,Satkhira,Satkhira Sadar,ফিংড়ি,ফিংড়ি ইউনিয়ন,ফিংড়ী,https://fingriup.satkhira.gov.bd/,87-82-51
+union,Satkhira,Satkhira Sadar,ধুলিহর,ধুলিহর ইউনিয়ন,ধুলিহর,https://dhuliharup.satkhira.gov.bd/,87-82-54
+union,Satkhira,Satkhira Sadar,ঘোনা,ঘোনা ইউনিয়ন,ঘোনা,https://ghonaup.satkhira.gov.bd/,87-82-61
+union,Satkhira,Satkhira Sadar,ঝাউডাঙ্গা,ঝাউডাঙ্গা ইউনিয়ন,ঝাউডাংগা,https://jhaudangaup.satkhira.gov.bd/,87-82-67
+union,Satkhira,Satkhira Sadar,কুশখালী,কুশখালী ইউনিয়ন,কুশখালি,https://kuskhaliup.satkhira.gov.bd/,87-82-74
+union,Satkhira,Satkhira Sadar,লাবসা,লাবসা ইউনিয়ন,লাবসা,https://labsaup.satkhira.gov.bd/,87-82-81
+union,Satkhira,Satkhira Sadar,শিবপুর,শিবপুর ইউনিয়ন,শিবপুর,https://shibpurup.satkhira.gov.bd/,87-82-94
+union,Satkhira,Shyamnagar,আটুলিয়া,আটুলিয়া ইউনিয়ন,আটুলিযা,https://atuliaup.satkhira.gov.bd/,87-86-11
+union,Satkhira,Shyamnagar,ভুরুলিয়া,ভুরুলিয়া ইউনিয়ন,ভুরুলিয়া,https://bhuruliaup.satkhira.gov.bd/,87-86-15
+union,Satkhira,Shyamnagar,বুড়িগোয়ালিনী,বুড়িগোয়ালিনী ইউনিয়ন,বুড়িগোয়ালিনী,https://burigoaliniup.satkhira.gov.bd/,87-86-23
+union,Satkhira,Shyamnagar,গাবুরা,গাবুরা ইউনিয়ন,গাবুরা,https://gaburaup.satkhira.gov.bd/,87-86-31
+union,Satkhira,Shyamnagar,ঈশ্বরীপুর,ঈশ্বরীপুর ইউনিয়ন,ইশ্বরীপুর,https://ishwaripurup.satkhira.gov.bd/,87-86-39
+union,Satkhira,Shyamnagar,কৈখালী,কৈখালী ইউনিয়ন,কৈখালী,https://kaikhaliup.satkhira.gov.bd/,87-86-47
+union,Satkhira,Shyamnagar,কাশিমাড়ী,কাশিমাড়ী ইউনিয়ন,কাশিমাড়ী,https://kashimariup.satkhira.gov.bd/,87-86-55
+union,Satkhira,Shyamnagar,মুন্সীগজ্ঞ,মুন্সীগজ্ঞ ইউনিয়ন,মুন্সিগঞ্জ,https://munshiganjup.satkhira.gov.bd/,87-86-63
+union,Satkhira,Shyamnagar,নুরনগর,নুরনগর ইউনিয়ন,নূরনগর,https://nurnagarup.satkhira.gov.bd/,87-86-71
+union,Satkhira,Shyamnagar,পদ্মপুকুর,পদ্মপুকুর ইউনিয়ন,পদ্মপুকুর,https://padmapukurup.satkhira.gov.bd/,87-86-79
+union,Satkhira,Shyamnagar,রমজাননগর,রমজাননগর ইউনিয়ন,রমজাননগর,https://ramjannagarup.satkhira.gov.bd/,87-86-87
+union,Satkhira,Tala,ধানদিয়া,Maguraup8 Union,ধানদিয়া,https://maguraup8.satkhira.gov.bd/,87-90-11
+union,Satkhira,Tala,ইসলামকাটি,ইসলামকাটি ইউনিয়ন,ইসলামকাটি,https://islamkatiup7.satkhira.gov.bd/,87-90-15
+union,Satkhira,Tala,জালালপুর,জালালপুর ইউনিয়ন,জালালপুর,https://jalalpurup11.satkhira.gov.bd/,87-90-23
+union,Satkhira,Tala,খলিলনগর,খলিলনগর ইউনিয়ন,খলিলনগর,https://khalilnagarup12.satkhira.gov.bd/,87-90-31
+union,Satkhira,Tala,খলিশখালী,খলিশখালী ইউনিয়ন,খলিশখালী,https://khalishkhaliup9.satkhira.gov.bd/,87-90-39
+union,Satkhira,Tala,খেশরা,খেশরা ইউনিয়ন,খেশরা,https://khesraup10.satkhira.gov.bd/,87-90-47
+union,Satkhira,Tala,কুমিরা,কুমিরা ইউনিয়ন,কুমিরা,https://kumiraup4.satkhira.gov.bd/,87-90-55
+union,Satkhira,Tala,নগরঘাটা,নগরঘাটা ইউনিয়ন,নগরঘাটা,https://nagarghataup1.satkhira.gov.bd/,87-90-71
+union,Satkhira,Tala,তালা,তালা ইউনিয়ন,তালা,https://talaup6.satkhira.gov.bd/,87-90-87
+union,Kushtia,Kushtia Sadar,কাঞ্চনপুর,১৫ নং কাঞ্চনপুর ইউনিয়ন পরিষদ,কাঞ্চনপুর,https://kanchanpurup.kushtia.gov.bd/,50-79-15

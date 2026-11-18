@@ -1,0 +1,23 @@
+{
+  "key": "BD_POLICE_CONTACTS_2020_SYLHET",
+  "division": "sylhet",
+  "kind": "police_hq_2020",
+  "name": "Bangladesh Police HQ — Contacts of Bangladesh Police (SMP and Sylhet Range sheets)",
+  "organization": "Bangladesh Police Headquarters",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf",
+    "https://www.police.gov.bd/storage/upload/announcement/EcDDy28T7DJdOqyuVB2CSiTjUAX8kTiy1HBoOPHj.xlsx"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": "2020-10-03",
+  "license": null,
+  "license_url": null,
+  "attribution": "Bangladesh Police (police.gov.bd)",
+  "notes": "No licence stated. XLSX 'Contacts Of Bangladesh Police' uploaded 03-10-2020 (Last-Modified 2020-10-03). Only the SMP and Sylhet Range sheets are used (raw/ keeps those rows as CSV; the full 1.5 MB workbook is re-downloaded by fetch.py). Designations only, no personal names. Old 2020 numbers: the 01320-series 'New Number' values match the 2026 district/RMP portals where checked; the 'Current Number' column is the pre-2020 numbering. For this division the 2026 portals were not cross-checked by this collector.",
+  "files": {
+    "places.csv": "8c5010411d23631f1317189087683a7f5278ff406037b43a8a348567e325635b",
+    "raw/police_contacts_2020_smp_sylhet_range.csv": "a4c1e3095f17b10aab59affb836ca3a82f5cdca47cc1adb8211ceb140e5efd65"
+  }
+}

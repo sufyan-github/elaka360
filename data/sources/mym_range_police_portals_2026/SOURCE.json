@@ -1,0 +1,31 @@
+{
+  "key": "MYM_RANGE_POLICE_PORTALS_2026",
+  "division": "mymensingh",
+  "kind": "range_police",
+  "name": "District police portals of Mymensingh Range (Jamalpur, Sherpur, Netrokona)",
+  "organization": "Bangladesh Police — district police units of Mymensingh Range",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://police.jamalpur.gov.bd/",
+    "https://police.sherpur.gov.bd/",
+    "https://police.netrokona.gov.bd/",
+    "https://police.<upazila>.<district>.gov.bd/",
+    "https://police.jamalpur.gov.bd/pages/static-pages/6970a1c4a31054345f161667",
+    "https://policedig.mymensinghdiv.gov.bd/",
+    "https://policedig.mymensinghdiv.gov.bd/pages/static-pages/69708f01a31054345f15c55b",
+    "https://www.police.gov.bd/en/mymensingh_range"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "District and thana police portals (police.<district>.gov.bd, police.<upazila>.<district>.gov.bd)",
+  "notes": "No licence stated. SP offices from the Superintendent's officer card; thanas from each upazila's thana portal officer cards (office landline, OC's police official mobile, *.gov.bd e-mail); for Jamalpur, missing thana contacts, the river-police thana and the control room from the SP portal's posts table (official mobiles and police.gov.bd e-mails, no names). Personal e-mails, other mobiles and officers' names are not copied. Mymensingh Range (Range DIG's office, policedig.mymensinghdiv.gov.bd; 'এক নজরে': formed by gazette of 12 Oct 2015 from the division's 4 districts) covers Mymensingh, Jamalpur, Sherpur and Netrokona; Mymensingh District is in MYMENSINGH_POLICE_2026. There is no metropolitan police in the division. Thanas that are not upazilas have no portal here; Netrokona's thana phone list is an image and is not used. Thana counts (Jamalpur 8 incl. the Bahadurabad river-police thana, Netrokona 10) from police.gov.bd's Mymensingh Range page (undated).",
+  "files": {
+    "places.csv": "8a26a0902b274fe761aa28679251533a90888e44ebe671e476057e24a967db27",
+    "facts.csv": "57f20acad57fbe2161ed43e8c78fbb79424901d77b8679f691344d49c0b0a9fd",
+    "raw/jamalpur_police_posts.txt": "8bf736bd253dab6b3f37abced8c603160b205430533af83a17c59f5bedf46a4e",
+    "raw/police_gov_bd_mymensingh_range.txt": "9aa8d998c82d0c05fa90580bf4c260ab65c7e663221e4dc3dee75ea5e0fb9bb5"
+  }
+}

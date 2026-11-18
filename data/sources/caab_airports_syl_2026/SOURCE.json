@@ -1,0 +1,25 @@
+{
+  "key": "CAAB_AIRPORTS_SYL_2026",
+  "division": "sylhet",
+  "kind": "caab",
+  "name": "Civil Aviation Authority of Bangladesh — airports in Sylhet Division",
+  "organization": "Civil Aviation Authority of Bangladesh (CAAB)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://www.caab.gov.bd/",
+    "https://new.caab.gov.bd/airportsf.html",
+    "https://new.caab.gov.bd/contactof.html",
+    "https://new.caab.gov.bd/airports/osmani.html"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Civil Aviation Authority of Bangladesh (caab.gov.bd)",
+  "notes": "No licence stated. Airline-office and individual staff numbers on the airport pages are not collected; only the Airport Manager office phone/cell/e-mail. caab.gov.bd omits the Sectigo OV R36 intermediate (handled by the AIA helper).",
+  "files": {
+    "places.csv": "4bf15ef0782f5c30cafac1f6a53d604f28b8dafb752e57cd919d563634635347",
+    "raw/osmani.txt": "52ea2287e3885bc667b1126a4d8864786ce0a92ef2b5e4c2ba1550073766829b"
+  }
+}

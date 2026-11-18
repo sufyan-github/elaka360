@@ -1,0 +1,28 @@
+{
+  "key": "DISTRICT_PORTAL_BANKS_MYM_2026",
+  "division": "mymensingh",
+  "kind": "district_banks",
+  "name": "District portals — bank branch lists (Sherpur, Jamalpur, Netrokona)",
+  "organization": "Deputy Commissioner's offices (district portals)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://sherpur.gov.bd/pages/static-pages/6970a1e2a31054345f1624bd",
+    "https://jamalpur.gov.bd/pages/static-pages/69707648a31054345f15152c",
+    "https://netrokona.gov.bd/pages/bank-financial-org",
+    "https://mymensingh.gov.bd/pages/bank-financial-org",
+    "https://netrokona.gov.bd/pages/static-pages/697081d6a31054345f1560c0"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "District portals sherpur.gov.bd, jamalpur.gov.bd, netrokona.gov.bd",
+  "notes": "No licence stated; the lists are undated. Only landline numbers are kept (mobile numbers dropped: Sherpur 5, Netrokona 14); no e-mails (none is a government address), managers' or contact persons' names, routing numbers or coordinates. Repeated entries left out: Sherpur: 'অগ্রণী ব্যাংক লিমিটেড , শেরপুর , শেরপুর' repeats the entry 'অগ্রণী ব্যাংক লিমিটেড , শেরপুর' (same e-mail and number); Jamalpur: '২৮। জনতা ব্যাংক লিঃ, জামালপুর প্রধান শাখা।' is listed twice (kept once). Not used: Mymensingh (the DC portal's bank list is empty and its menu links only bb.org.bd), the Netrokona bank PDF (its text layer is a legacy non-Unicode Bangla font; the portal's own list is used instead).",
+  "files": {
+    "places.csv": "baa7e33e979266fc8029dd867829e558dd402ecffa7052e41851c505fff5a850",
+    "raw/jamalpur_banks.txt": "ebac3523ec5a4697fad63ceb6edc9a383b36173295602575eb1316e1a0a7908c",
+    "raw/netrokona_banks.txt": "f70de57f242dafbf2d975a0d04ce096a8a9c4cb223cd20245993f5cd696ab12f",
+    "raw/sherpur_banks.txt": "5dcc34ab42f2c7f922c9ce7848a525453b9e074b3648baef5aff2825bc232d2d"
+  }
+}

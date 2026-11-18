@@ -1,0 +1,32 @@
+{
+  "key": "BARISHAL_METRO_POLICE_THANAS_2026",
+  "division": "barishal",
+  "kind": "metro_police_thanas",
+  "city": 50007,
+  "name": "Barishal Metropolitan Police — thanas and official numbers",
+  "organization": "Barishal Metropolitan Police (Bangladesh Police)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://bmp.police.gov.bd/contact-us",
+    "https://bmp.police.gov.bd/history",
+    "https://police.barisaldiv.gov.bd/pages/static-pages/697895a335ce18e1c066a955",
+    "https://police.barisaldiv.gov.bd/pages/static-pages/69789aa235ce18e1c066ba4c",
+    "https://bmp.police.gov.bd/thana/7/kotwali-model-thana",
+    "https://bmp.police.gov.bd/thana/10/bandar-thana",
+    "https://bmp.police.gov.bd/thana/9/Kaunia-thana",
+    "https://bmp.police.gov.bd/thana/8/airport-thana"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Barishal Metropolitan Police (bmp.police.gov.bd; police.barisaldiv.gov.bd)",
+  "notes": "No licence stated. Thana list from the BMP history page (4 thanas); OC and duty-officer police official mobiles (01320-06xxxx) from BMP's 'যোগাযোগ' page; HQ address/phone from the BMP national-portal site (police.barisaldiv.gov.bd 'ডাক যোগাযোগ') and e-mails from its 'অনলাইন যোগাযোগ'; control-room and command-and-control numbers. Inspectors', beat officers' numbers and officers' names are not copied (beat pages list officers' personal mobiles and are not used). Barishal City Corporation says it consists of '৩টি থানা, ৩০টি ওয়ার্ড ও ২২৫টি মহল্লা' without naming the thanas; BMP's thana pages list (BBS 2001) BCC wards together with rural unions for Kotwali, Kaunia and Airport and only unions for Bandar, so no official source places a BMP thana wholly in the city corporation and area_en is left empty.",
+  "files": {
+    "places.csv": "896c988c31b701be5ca61acd32b912be08a2f3945917e528718db703263e29fe",
+    "facts.csv": "61fc1c5e0af05e70466f7ceba68156e0d87dd0bf95db8e64ea0ef5d47b931b4d",
+    "raw/bmp_hq_and_control_room.txt": "9e1c163cdfe23323149255d0c45c38c41a96b05bce61970929f7b5da35890206",
+    "raw/bmp_thana_numbers.txt": "d8a68ba2d115759e0dcf000ef02648fa76c3d547129beae055934b4e962fd4a4"
+  }
+}

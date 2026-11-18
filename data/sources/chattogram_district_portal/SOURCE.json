@@ -1,0 +1,30 @@
+{
+  "key": "CHATTOGRAM_DC_PORTAL_2026",
+  "name": "Chattogram District Administration portal — upazila/union list, pourashavas, district at-a-glance",
+  "organization": "Office of the Deputy Commissioner, Chattogram (Government of Bangladesh, a2i National Portal)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "division": "chattogram",
+  "kind": "district_portal_main",
+  "urls": [
+    "https://chattogram.gov.bd/",
+    "https://chattogram.gov.bd/pages/static-pages/6990c75635ce18e1c07176a0",
+    "https://chattogram.gov.bd/pages/static-pages/list-of-upazila-e2ff9f-6991007335ce18e1c0732888",
+    "https://chattogram.gov.bd/pages/static-pages/6990c49335ce18e1c0715459",
+    "https://bangladesh.gov.bd/views/union-list"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "চট্টগ্রাম জেলা প্রশাসন, জাতীয় তথ্য বাতায়ন (chattogram.gov.bd)",
+  "files": {
+    "areas.csv": "c51dcb3d42b09736e056be268844e0f06c1a92301bd16d6141581870736f9e28",
+    "facts.csv": "5e2cd55f5f7f19306e10a3e8ad71e31186a278b2a8e2541e298fa9f5e076e7fc",
+    "raw/chattogram_glance.txt": "96a0c191c010eaad7b21259ae89c0bf4b55a65d855ba40fcaa56447283417851",
+    "raw/chattogram_unions.txt": "d5c28d67efcd5608b95bd71725030706bf85cddc5453cfa6ca0eba2ae2dcfe66",
+    "raw/chattogram_upazilas.txt": "36bbc10eb30e8cf0442c5d4c300be2a95b3a0330ab531f7bb3b535f0e4e1ab0b",
+    "raw/pages.csv": "cc5a2f31d5d7503d04a529bbc8d7926837da923fab97bfd284679d8f55f9329e"
+  },
+  "notes": "Collected by the generic division mode of the a2i portal collectors (pages found through the portals' menus, names and figures parsed from the pages). No licence stated; only facts (names, counts, figures) are extracted. English district/upazila names are the project's keys, not printed."
+}

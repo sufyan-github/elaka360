@@ -19,14 +19,15 @@ Real seed data for the Elaka360 app, built from public sources. It is stack-agno
 | `seed/pilot_rajshahi/mockup_demo_fixtures_NOT_REAL.json` | Names from the mockups that couldn't be verified (Durbin Cafe and others). These are UI fixtures only; don't import them. |
 | `seed/qa/mockup_vs_verified.csv` | 26 figures in the mockups that are wrong or out of date, with the correct value and its source. |
 | `seed/qa/known_gaps.csv` | What is still missing and how to fill it. |
-| `db/migrations/*.sql`, `db/seed/seed.sql` | Postgres schema (20 tables) and inserts for everything above. |
+| `seed/places/<division>.csv` | Every place collected for a division (one file per division), with its source and evidence label. |
+| `db/migrations/*.sql`, `db/seed/` | Postgres schema and inserts for everything above. `db/seed/seed.sql` is a small driver that loads `reference.sql`, then `places/<division>.sql` and `boundaries/<division>.sql`, in one transaction; the parts are split per division so no generated file outgrows Git hosting limits. |
 
 ## Load into Postgres
 
 ```
 createdb elaka360
-psql -d elaka360 -f db/migrations/0001_init.sql
-psql -d elaka360 -f db/seed/seed.sql
+for f in db/migrations/*.sql; do psql -d elaka360 -v ON_ERROR_STOP=1 -f "$f"; done
+psql -d elaka360 -f db/seed/seed.sql   # psql only: the driver includes its parts with \ir
 ```
 
 ## ID scheme (stable)

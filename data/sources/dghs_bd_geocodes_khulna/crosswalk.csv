@@ -1,0 +1,107 @@
+our_id,our_level,our_name_en,our_path,source_code,source_name_en,match_method,confidence,notes
+20028,district,Bagerhat,khulna/bagerhat,4001,Bagerhat,name_exact,high,source level district
+20024,district,Chuadanga,khulna/chuadanga,4018,Chuadanga,name_exact,high,source level district
+20020,district,Jashore,khulna/jashore,4041,Jashore,name_exact,high,source level district
+20029,district,Jhenaidah,khulna/jhenaidah,4044,Jhenaidah,name_exact,high,source level district
+20027,district,Khulna,khulna/khulna,4047,Khulna,name_exact,high,source level district
+20025,district,Kushtia,khulna/kushtia,4050,Kushtia,name_exact,high,source level district
+20026,district,Magura,khulna/magura,4055,Magura,name_exact,high,source level district
+20022,district,Meherpur,khulna/meherpur,4057,Meherpur,name_exact,high,source level district
+20023,district,Narail,khulna/narail,4065,Narail,name_exact,high,source level district
+20021,district,Satkhira,khulna/satkhira,4087,Satkhira,name_exact,high,source level district
+30216,upazila,Bagerhat Sadar,khulna/bagerhat/bagerhat-sadar,40010008,Bagerhat Sadar,name_exact,high,source level upazila
+30223,upazila,Chitalmari,khulna/bagerhat/chitalmari,40010014,Chitalmari,name_exact,high,source level upazila
+30215,upazila,Fakirhat,khulna/bagerhat/fakirhat,40010034,Fakirhat,name_exact,high,source level upazila
+30221,upazila,Kachua,khulna/bagerhat/kachua,40010038,Kachua,name_exact,high,source level upazila
+30217,upazila,Mollahat,khulna/bagerhat/mollahat,40010056,Mollahat,name_exact,high,source level upazila
+30222,upazila,Mongla,khulna/bagerhat/mongla,40010058,Mongla,name_exact,high,source level upazila
+30220,upazila,Morrelganj,khulna/bagerhat/morrelganj,40010060,Morrelganj,name_exact,high,source level upazila
+30219,upazila,Rampal,khulna/bagerhat/rampal,40010073,Rampal,name_exact,high,source level upazila
+30218,upazila,Sarankhola,khulna/bagerhat/sarankhola,40010077,Sarankhola,name_exact,high,source level upazila
+30193,upazila,Alamdanga,khulna/chuadanga/alamdanga,40180007,Alamdanga,name_exact,high,source level upazila
+30192,upazila,Chuadanga Sadar,khulna/chuadanga/chuadanga-sadar,40180023,Chuadanga Sadar,name_exact,high,source level upazila
+30194,upazila,Damurhuda,khulna/chuadanga/damurhuda,40180031,Damurhuda,name_exact,high,source level upazila
+30195,upazila,Jibannagar,khulna/chuadanga/jibannagar,40180055,Jibannagar,name_exact,high,source level upazila
+30172,upazila,Abhaynagar,khulna/jashore/abhaynagar,40410004,Abhaynagar,name_exact,high,source level upazila
+30173,upazila,Bagherpara,khulna/jashore/bagherpara,40410009,Bagherpara,name_exact,high,source level upazila
+30174,upazila,Chougachha,khulna/jashore/chougachha,40410011,Chaugacha,name_skeleton,medium,source level upazila
+30175,upazila,Jhikargacha,khulna/jashore/jhikargacha,40410023,Jhikargacha,name_exact,high,source level upazila
+30176,upazila,Keshabpur,khulna/jashore/keshabpur,40410038,Keshabpur,name_exact,high,source level upazila
+30177,upazila,Jessore Sadar,khulna/jashore/jessore-sadar,40410047,Jashore Sadar,name_skeleton,medium,source level upazila
+30171,upazila,Manirampur,khulna/jashore/manirampur,40410061,Monirampur,name_skeleton,medium,source level upazila
+30178,upazila,Sharsha,khulna/jashore/sharsha,40410090,Sharsha,name_exact,high,source level upazila
+30226,upazila,Harinakundu,khulna/jhenaidah/harinakundu,40440014,Harinakunda,name_skeleton,medium,source level upazila
+30224,upazila,Jhenaidah Sadar,khulna/jhenaidah/jhenaidah-sadar,40440019,Jhenaidah Sadar,name_exact,high,source level upazila
+30227,upazila,Kaliganj,khulna/jhenaidah/kaliganj,40440033,Kaliganj,name_exact,high,source level upazila
+30228,upazila,Kotchandpur,khulna/jhenaidah/kotchandpur,40440042,Kotchandpur,name_exact,high,source level upazila
+30229,upazila,Moheshpur,khulna/jhenaidah/moheshpur,40440071,Maheshpur,name_skeleton,medium,source level upazila
+30225,upazila,Shailkupa,khulna/jhenaidah/shailkupa,40440080,Shailkupa,name_exact,high,source level upazila
+30213,upazila,Dakop,khulna/khulna/dakop,40470017,Dacope,code_hand_checked,high,source level upazila; hand-checked pair (Dacope = Dakop দাকোপ); the name matcher does not pair these
+30206,upazila,Paikgasa,khulna/khulna/paikgasa,40470064,Paikgacha,code_hand_checked,high,source level upazila; hand-checked pair (Paikgacha = Paikgasa পাইকগাছা); the name matcher does not pair these
+30212,upazila,Botiaghata,khulna/khulna/botiaghata,40470012,Batiaghata,name_skeleton,medium,source level upazila
+30211,upazila,Dumuria,khulna/khulna/dumuria,40470030,Dumuria,name_exact,high,source level upazila
+30208,upazila,Digholia,khulna/khulna/digholia,40470040,Dighalia,name_skeleton,medium,source level upazila
+30214,upazila,Koyra,khulna/khulna/koyra,40470053,Koyra,name_exact,high,source level upazila
+30207,upazila,Fultola,khulna/khulna/fultola,40470069,Phultala,name_skeleton,medium,source level upazila
+30209,upazila,Rupsha,khulna/khulna/rupsha,40470075,Rupsa,name_exact,high,source level upazila
+30210,upazila,Terokhada,khulna/khulna/terokhada,40470094,Terokhada,name_exact,high,source level upazila
+30201,upazila,Bheramara,khulna/kushtia/bheramara,40500015,Bheramara,name_exact,high,source level upazila
+30200,upazila,Daulatpur,khulna/kushtia/daulatpur,40500039,Daulatpur,name_exact,high,source level upazila
+30198,upazila,Khoksa,khulna/kushtia/khoksa,40500063,Khoksa,name_exact,high,source level upazila
+30197,upazila,Kumarkhali,khulna/kushtia/kumarkhali,40500071,Kumarkhali,name_exact,high,source level upazila
+30196,upazila,Kushtia Sadar,khulna/kushtia/kushtia-sadar,40500079,Kushtia Sadar,name_exact,high,source level upazila
+30199,upazila,Mirpur,khulna/kushtia/mirpur,40500094,Mirpur,name_exact,high,source level upazila
+30204,upazila,Magura Sadar,khulna/magura/magura-sadar,40550057,Magura Sadar,name_exact,high,source level upazila
+30205,upazila,Mohammadpur,khulna/magura/mohammadpur,40550066,Mohammadpur,name_exact,high,source level upazila
+30202,upazila,Shalikha,khulna/magura/shalikha,40550085,Shalikha,name_exact,high,source level upazila
+30203,upazila,Sreepur,khulna/magura/sreepur,40550095,Sreepur,name_exact,high,source level upazila
+30188,upazila,Gangni,khulna/meherpur/gangni,40570047,Gangni,name_exact,high,source level upazila
+30186,upazila,Mujibnagar,khulna/meherpur/mujibnagar,40570060,Mujibnagar,name_exact,high,source level upazila
+30187,upazila,Meherpur Sadar,khulna/meherpur/meherpur-sadar,40570087,Meherpur Sadar,name_exact,high,source level upazila
+30191,upazila,Kalia,khulna/narail/kalia,40650028,Kalia,name_exact,high,source level upazila
+30190,upazila,Lohagara,khulna/narail/lohagara,40650052,Lohagara,name_exact,high,source level upazila
+30189,upazila,Narail Sadar,khulna/narail/narail-sadar,40650076,Narail Sadar,name_exact,high,source level upazila
+30179,upazila,Assasuni,khulna/satkhira/assasuni,40870004,Assasuni,name_exact,high,source level upazila
+30180,upazila,Debhata,khulna/satkhira/debhata,40870025,Debhata,name_exact,high,source level upazila
+30181,upazila,Kalaroa,khulna/satkhira/kalaroa,40870043,Kalaroa,name_exact,high,source level upazila
+30185,upazila,Kaliganj,khulna/satkhira/kaliganj,40870047,Kaliganj,name_exact,high,source level upazila
+30182,upazila,Satkhira Sadar,khulna/satkhira/satkhira-sadar,40870082,Satkhira Sadar,name_exact,high,source level upazila
+30183,upazila,Shyamnagar,khulna/satkhira/shyamnagar,40870086,Shyamnagar,name_exact,high,source level upazila
+30184,upazila,Tala,khulna/satkhira/tala,40870090,Tala,name_exact,high,source level upazila
+50004,city_corporation,Khulna City Corporation,khulna/khulna/khulna-city-corporation,404733,Khulna City Corporation,name_exact,high,source level city_corporation
+,,,,4001000825,Bagerhat Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Bagerhat Sadar
+,,,,4001005850,Mongla Port Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Mongla
+,,,,4001006075,Morrelganj Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Morrelganj
+,,,,4018000720,Alamdanga Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Alamdanga
+,,,,4018002340,Chuadanga Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Chuadanga Sadar
+,,,,4018003160,Darshana Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Damurhuda
+,,,,4018005580,Jiban Nagar Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Jibannagar
+,,,,4041000483,Noapara Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Abhaynagar
+,,,,4041000905,Bagher Para Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Bagherpara
+,,,,4041001113,Chaugachha Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Chougachha
+,,,,4041002333,Jhikargachha Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Jhikargacha
+,,,,4041003837,Keshabpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Keshabpur
+,,,,4041004716,Jessore Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Jessore Sadar
+,,,,4041006166,Manirampur Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Manirampur
+,,,,4041009008,Benapole Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Sharsha
+,,,,4044001412,Harinakunda Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Harinakundu
+,,,,4044001916,Jhenaidah Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Jhenaidah Sadar
+,,,,4044003332,Kaliganj Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kaliganj
+,,,,4044004250,Kotchandpur Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kotchandpur
+,,,,4044007166,Maheshpur Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Moheshpur
+,,,,4044008083,Shailkupa Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Shailkupa
+,,,,4047001722,Chalna Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Dakop
+,,,,4047006466,Paikgachha Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Paikgasa
+,,,,4050001520,Bheramara Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Bheramara
+,,,,4050006330,Khoksa Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Khoksa
+,,,,4050007140,Kumarkhali Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kumarkhali
+,,,,4050007960,Kushtia Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kushtia Sadar
+,,,,4050009480,Mirpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Mirpur
+,,,,4055005750,Magura Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Magura Sadar
+,,,,4057004722,Gangni Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Gangni
+,,,,4057008733,Meherpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Meherpur Sadar
+,,,,4065002833,Kalia Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kalia
+,,,,4065005244,Lohagara Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Lohagara
+,,,,4065007666,Narail Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Narail Sadar
+,,,,4087004333,Kalaroa Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kalaroa
+,,,,4087008266,Satkhira Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Satkhira Sadar

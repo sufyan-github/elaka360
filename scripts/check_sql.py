@@ -48,7 +48,8 @@ PARAMS = {
     # admin
     "ADMIN_STATS_SQL": [],
     "AUDIT_LIST_SQL": ["NULL", "NULL", "NULL", "10", "0"],
-    "ADMIN_AREA_LIST_SQL": ["'union'", "NULL", "NULL", "'community'", "false", "'barishal/barguna'", "100", "0"],
+    # census-confirmed unions of one district: stays true as more divisions are merged (community rows shrink)
+    "ADMIN_AREA_LIST_SQL": ["'union'", "NULL", "NULL", "'official'", "true", "'barishal/barguna'", "100", "0"],
     "ADMIN_AREA_SQL": ["30134"],
     "ADMIN_PLACE_LIST_SQL": ["NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "50", "0"],
     "ADMIN_PLACE_SQL": ["1"],

@@ -1,0 +1,30 @@
+{
+  "key": "DOA_PROTECTED_MONUMENTS_SYL_2026",
+  "division": "sylhet",
+  "kind": "doa_monuments",
+  "name": "Department of Archaeology — gazetted protected monuments, Sylhet Division (district PDF lists)",
+  "organization": "প্রত্নতত্ত্ব অধিদপ্তর (Department of Archaeology), Ministry of Cultural Affairs",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://archaeology.gov.bd/pages/static-pages/6922e035933eb65569e26000"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "প্রত্নতত্ত্ব অধিদপ্তর (Department of Archaeology), Ministry of Cultural Affairs",
+  "notes": "Page 'সিলেট বিভাগের সংরক্ষিত পুরাকীর্তি' links one PDF per district for all 4 districts (17 monuments; all lists published 2024-08-31). PDFs are typed in Bijoy/SutonnyMJ (converted to Unicode by fetch.py, bijoy2uni); conversion slips (Bijoy 'k^' = শ্ব: জৈন্তাশ্বর, জৈন্তাশ্বও, পার্শ্বে; সেপ্টেম্বর) are fixed in TEXT_FIXES_BY_DIV['sylhet'] after checking the rendered pages. The photo column ('আলোকচিত্র', a '-' where there is no photo) is dropped. Coordinates are as published (DMS); Sylhet-12 has none. Point-in-polygon QA against hdx_cod_ab_bgd_sylhet ran: every point falls in its listed district and upazila (Sylhet-01/03 in the Sylhet City Corporation polygon, listed as Sylhet Sadar). Descriptions are not copied; only a construction-date phrase. Licence not stated.",
+  "files": {
+    "facts.csv": "9719785bcd81be408a43c28dd27b0c0e12ee74b48851813b6b45b79430634ff7",
+    "places.csv": "f66152d48891dd72db8819508269bb520ef4359d821207c284da948a1a513cb2",
+    "raw/doa_habiganj.pdf": "a546c6e5e4bdbad775bc9e269b32f45785cb52a67a1fb5cbc8f738a8ca42b790",
+    "raw/doa_habiganj.txt": "4488862bc10a0249a29c09e7c917debd652912288e16ee05716780795e59358e",
+    "raw/doa_moulvibazar.pdf": "5ddf88b9fd34d743d98791eeb0a14a720cd43ed6324119db5f6e9a33ae477031",
+    "raw/doa_moulvibazar.txt": "b98aa3ef54b200c64d22aae8038226213d25a984090c12bd8966ad5153d27f5c",
+    "raw/doa_sunamganj.pdf": "d43ae80eda48968edaa819db0545b5fa0964451423d0e0c751b5dd84795885ae",
+    "raw/doa_sunamganj.txt": "dca8b4b247a88dd8f5f0fbd64c464c1c626a0601090f722cffd4547af2a98c5d",
+    "raw/doa_sylhet.pdf": "4047f3bc26114480d396de5f282c4a0bef514a147c58d44a3376fa6b2c606c3c",
+    "raw/doa_sylhet.txt": "56cafa9bd369a416e4b6beb645fe328df104de603c8dc568d961b0fe8bc14d66"
+  }
+}

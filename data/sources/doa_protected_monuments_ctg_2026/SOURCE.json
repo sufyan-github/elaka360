@@ -1,0 +1,36 @@
+{
+  "key": "DOA_PROTECTED_MONUMENTS_CTG_2026",
+  "division": "chattogram",
+  "kind": "doa_monuments",
+  "name": "Department of Archaeology — gazetted protected monuments, Chattogram Division (district PDF lists)",
+  "organization": "প্রত্নতত্ত্ব অধিদপ্তর (Department of Archaeology), Ministry of Cultural Affairs",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://archaeology.gov.bd/pages/static-pages/6922deb6933eb65569e1cce1"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": "2026-08-31",
+  "license": null,
+  "license_url": null,
+  "attribution": "প্রত্নতত্ত্ব অধিদপ্তর (Department of Archaeology), Ministry of Cultural Affairs",
+  "notes": "Page 'চট্টগ্রাম বিভাগের সংরক্ষিত পুরাকীর্তি' links one PDF per district for 7 districts (64 monuments 'আগস্ট ২০২৬ পর্যন্ত'; lists published 2024-08-31, Chattogram 2026-08-31); Rangamati, Cox's Bazar, Khagrachhari and Bandarban are listed with 'সংরক্ষিত পুরাকীর্তি নেই' (written as 0 in facts.csv). PDFs mix Bijoy/SutonnyMJ text (converted to Unicode by fetch.py, bijoy2uni) and, for two Chattogram rows, a broken Unicode text layer or a page without the table header; those rows were read from the rendered pages (ROW_FIXES_BY_DIV['chattogram']). Photo captions are dropped. Coordinates are the DoA's own GPS column (DMS, parsed; a latitude label 'D.' printed one column to the right is re-attached); one unparseable value is kept in extra_json only. QA against hdx_cod_ab_bgd_chattogram polygons. Descriptions (column 7) are not copied; only a construction-date phrase is kept. Licence: none stated on the source; treat as government public information, cite the source.",
+  "files": {
+    "facts.csv": "d8fe62d89668de615897d0c279088ca4344970402a200fe02924448831c75cbe",
+    "places.csv": "c6777574dcb93bc5733dea9e6d2c5cfafa69bdfb8a882619e01beb335ac4d314",
+    "raw/doa_brahmanbaria.pdf": "1eb6aec9aba44f32ad0329172d2c65c1e4751bb1a56e9319a32991918968a027",
+    "raw/doa_brahmanbaria.txt": "f449aaffba28d78603ef93d5468fe3486c069c443d62587052205a8164d628f1",
+    "raw/doa_chandpur.pdf": "bd1ada2b8e120e08cf267c5e6445c2e66b466834bbe11c4f910207a071445803",
+    "raw/doa_chandpur.txt": "b264e381d9e5e3ebb2513c97581be53d1b957ceb5d25ff405ae407a2d58831fc",
+    "raw/doa_chattogram.pdf": "1d0ee536f9d46ca837ebfafd4fe2985d32ee34fb2b0fa89076acb9d295cd6161",
+    "raw/doa_chattogram.txt": "8c2b069af0b3737ff7d46895fa81067fbe86fc1a56c57c3d414307dbed76b730",
+    "raw/doa_cumilla.pdf": "9ce33f0aade348d40390b0dfc088cca5c04fc9e86d6eae3652aff8093cfe836b",
+    "raw/doa_cumilla.txt": "1fd49f6552022fe9251ce7fcaa07e7bf0294b155c5f80c03461cbf9f93a977a6",
+    "raw/doa_feni.pdf": "72d4a001091d4314c7bc7ed28f5400a647bf645ddd030e97366a3984a3d81b8d",
+    "raw/doa_feni.txt": "0834b2a2a9587c6835dec1dfa9ac28151b1630e5560253682f8177d53c682f43",
+    "raw/doa_lakshmipur.pdf": "db034a0fd4ae283f420d0207c28450ea67ca259453361d45c537641e630a0c82",
+    "raw/doa_lakshmipur.txt": "72ed239b32aabbf4c8edbb3fa072d390ea1ae0f45ca99a3fdeacbad7fab9211d",
+    "raw/doa_noakhali.pdf": "1a631294ce28cfdd49594665499d71f2dfb5f6f1b8c1b3d910fe1b5df3eb92ef",
+    "raw/doa_noakhali.txt": "aa27e368fdea9d067649fe454219a503d8addfb40a3a9ed77b8722b3dff0c455"
+  }
+}

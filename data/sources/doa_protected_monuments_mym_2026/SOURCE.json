@@ -1,0 +1,28 @@
+{
+  "key": "DOA_PROTECTED_MONUMENTS_MYM_2026",
+  "division": "mymensingh",
+  "kind": "doa_monuments",
+  "name": "Department of Archaeology — gazetted protected monuments, Mymensingh Division (district PDF lists)",
+  "organization": "প্রত্নতত্ত্ব অধিদপ্তর (Department of Archaeology), Ministry of Cultural Affairs",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://archaeology.gov.bd/pages/static-pages/6922dd39933eb65569e14024"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "প্রত্নতত্ত্ব অধিদপ্তর (Department of Archaeology), Ministry of Cultural Affairs",
+  "notes": "Page 'ময়মনসিংহ বিভাগের সংরক্ষিত পুরাকীর্তি' (total 18, 'জুন ২০২৬ পর্যন্ত হালানাগাদকৃত') links one PDF each for Sherpur (1 monument, list published 2024-08-31), Mymensingh (12, 2026-06-25) and Netrokona (5, 2024-08-31); Jamalpur is listed with 'সংরক্ষিত পুরাকীর্তি নেই' and no PDF (fact value 0). PDFs are typed in Bijoy/SutonnyMJ (converted to Unicode by fetch.py, bijoy2uni); conversion slips (Bijoy 'k^' = শ্ব: রাজেশ্বরী; Netrokona-04 ছাদবিহীন) are fixed in TEXT_FIXES_BY_DIV['mymensingh'] after checking the rendered pages. Mymensingh-12 (added 2026) has a broken Unicode text layer: gazette and coordinates read from the rendered page (ROW_FIXES_BY_DIV); its printed coordinates have malformed seconds and are not used. Mymensingh-01's gazette reference shares text lines with the description and is read from the rendered page. Mymensingh-04's printed coordinates fall in Sakhipur, Tangail (outside the division) and are not used. Coordinates are as published (DMS) on 15 of 18 rows. Point-in-polygon QA against hdx_cod_ab_bgd_mymensingh ran (HDX district spelling 'Netrakona' read as Netrokona): every used point falls in its listed district and upazila (Mymensingh-02/03 in the Mymensingh City Corporation polygon, listed as Mymensingh Sadar). Descriptions are not copied; only a construction-date phrase. Licence not stated.",
+  "files": {
+    "facts.csv": "6e7bd7825ea94477f8d8e5e3b2dd3dce7710493d662c192eae3732f0afbe265a",
+    "places.csv": "dab51d2dd6d282b1a3fd1ecbb50f8753ba7f0d210b32eaaf614f4a0573b15970",
+    "raw/doa_mymensingh.pdf": "cc2cd7272973710bbba7be6f957836b6c25b34a281c915b22647f244176c2014",
+    "raw/doa_mymensingh.txt": "f75afe32aca7500ac8e78d7e3dbf58b24923c87fa44d39392911b1388e420489",
+    "raw/doa_netrokona.pdf": "2d5bbf73e90f7b649748c3b0646ebafb60fb793f6c939318f466fb07be2b0911",
+    "raw/doa_netrokona.txt": "98a80bc86ae3ec5a7cb8cdde1086b117bbf8ad0ab81edefcb4fdbdb2bdf0211b",
+    "raw/doa_sherpur.pdf": "fa56f7682632e8bbd933513097158647a5536c95cab9ef7080c3e83c0205062f",
+    "raw/doa_sherpur.txt": "75bb4283dbf2d0129ace97ef7b52acd72775e9eb49d0533d8dbfcbe42059844a"
+  }
+}

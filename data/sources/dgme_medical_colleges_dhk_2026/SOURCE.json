@@ -1,0 +1,23 @@
+{
+  "key": "DGME_MEDICAL_COLLEGES_DHK_2026",
+  "division": "dhaka",
+  "kind": "dgme",
+  "name": "DGME medical and dental college lists — Dhaka Division",
+  "organization": "Directorate General of Medical Education (DGME), Ministry of Health and Family Welfare",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3",
+    "https://dgme.gov.bd/pages/static-pages/6922dfb1933eb65569e237f5",
+    "https://dgme.gov.bd/pages/static-pages/6922dcbc933eb65569e11be5"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": "2025-12-18",
+  "license": null,
+  "license_url": null,
+  "attribution": "Source: Directorate General of Medical Education (dgme.gov.bd)",
+  "notes": "Same DGME HTML tables as the Rajshahi and Rangpur runs: 'সরকারি/বেসরকারি মেডিকেল কলেজ' (college code, name, year established, MBBS seats; page updated 18 Dec 2025) and 'সরকারি/বেসরকারি ডেন্টাল কলেজ/ইউনিট' (updated 20 May 2024). Rows kept when the name's district suffix (or a district name in it) is in Dhaka Division. Dental units are attached to their parent medical college in extra_json; units listed without a district suffix are matched by the parent's exact name, and six units whose names are spelt differently from the parent were matched by hand (noted per row). English names/websites for government colleges come from the 'সরকারী মেডিকেল কলেজ (সকল)' page, matched by district only where the district has one government MBBS college (not Dhaka district, which has four). Armed Forces Medical College is listed without a place, so it is not included. No addresses, phones or coordinates. Licence not stated.",
+  "files": {
+    "places.csv": "c3e399e529d52e99ce6e582b89cbb36e32803790362b57b91708dd51382e8852"
+  }
+}

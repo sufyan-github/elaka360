@@ -29,7 +29,8 @@ def boolean(v):
 
 
 areas = read("geo/admin_areas.csv")
-places = read("places/rajshahi_division_places.csv")
+# one CSV per division (data/seed/places/<division>.csv)
+places = [p for f in sorted(os.listdir(os.path.join(SEED, "places"))) if f.endswith(".csv") for p in read(f"places/{f}")]
 sources = {r["key"]: r for r in read("reference/data_sources.csv")}
 by_id = {r["id"]: r for r in areas}
 

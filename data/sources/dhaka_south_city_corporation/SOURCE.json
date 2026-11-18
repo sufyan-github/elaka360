@@ -1,0 +1,31 @@
+{
+  "key": "DHAKA_SOUTH_CITY_CORPORATION",
+  "division": "dhaka",
+  "kind": "city_corporation",
+  "city": 50002,
+  "name": "Dhaka South City Corporation official portal (dscc.gov.bd)",
+  "organization": "Dhaka South City Corporation",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://dscc.gov.bd/",
+    "https://dscc.gov.bd/pages/static-pages/6922df02933eb65569e1f260",
+    "https://dscc.gov.bd/pages/static-pages/6922defc933eb65569e1eedf",
+    "https://dscc.gov.bd/pages/static-pages/6922dba8933eb65569e0b9ed",
+    "https://dscc.gov.bd/pages/static-pages/6922e104933eb65569e29a09"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Dhaka South City Corporation (dscc.gov.bd), Bangladesh National Portal",
+  "notes": "Key pages: এক নজরে ঢাকা দক্ষিণ (updated 2026-02-24 10:38), ইতিহাস (2024-11-16 19:11), জরুরী যোগাযোগ zone-office table (2024-09-16 01:09). The ward-location page is a scanned 2021 PDF (zones, wards, mahallas) and is not transcribed. Officials' names and phones are not copied.",
+  "files": {
+    "areas.csv": "40dab8782af6dd8528d571d9bc2cf14bef663a05cfb7aef420c0a8dadc869813",
+    "facts.csv": "c0e898f817bf2eac40a371c1a36a80a5f96f2b13de6005b50de972a1461593c0",
+    "raw/ek_nojore_dscc.txt": "502c0dd06872b4ecaa94f9392fdc0428e9683152ff0edb6db34f2fafcc98bb74",
+    "raw/history_split.txt": "b558f412e489894dc552a3a924fdcc9af050cf77f5c4fd37760e3a1bbf93e2a0",
+    "raw/ward_location_page.txt": "82921f6b8351f1379329b6124899359e933c40f9d75903b9fd54aa00898fbc2e",
+    "raw/zone_offices.txt": "5ec138f4231b35b02deeba3019f27ad05c19a229368d9dfacad792908221036d"
+  }
+}

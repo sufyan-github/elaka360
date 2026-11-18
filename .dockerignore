@@ -10,6 +10,9 @@
 data
 db/seed/*
 !db/seed/seed.sql
+!db/seed/reference.sql
+!db/seed/places/
+!db/seed/boundaries/
 docs
 tests
 test-results

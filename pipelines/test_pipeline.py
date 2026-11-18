@@ -42,3 +42,18 @@ class Reconcile(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class DirectionMatching(unittest.TestCase):
+    """North/South twins must never be paired across directions (the census and the seed spell them differently)."""
+
+    def test_direction_words_must_agree(self):
+        from import_collected import dir_similarity, moved_union_similarity
+        self.assertEqual(dir_similarity("Matlab Uttar", "Matlab South"), 0.0)
+        self.assertGreater(dir_similarity("Matlab Uttar", "Matlab North"), 0.72)
+        self.assertGreater(dir_similarity("Uttar Hamchadi", "Hamsadi (North)"), 0.72)
+        self.assertEqual(dir_similarity("Pashchim Jorkanan", "Jorkanoneast"), 0.0)   # glued direction word
+        self.assertEqual(dir_similarity("Dakkhin Akhaura", "Akhauran"), 0.0)         # one-letter abbreviation
+        self.assertGreater(dir_similarity("Dakshin Surma", "Dakshinsurma"), 0.9)
+        self.assertGreater(moved_union_similarity("Uttar Bangshikunda", "Bongshikunda North"), 0.85)
+        self.assertEqual(moved_union_similarity("Uttar Bangshikunda", "Bongshikunda South"), 0.0)

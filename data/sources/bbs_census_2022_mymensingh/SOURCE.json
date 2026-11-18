@@ -1,0 +1,39 @@
+{
+  "key": "BBS_CENSUS_2022_MYMENSINGH",
+  "name": "Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Mymensingh Division",
+  "organization": "Bangladesh Bureau of Statistics (BBS), Statistics and Informatics Division, Ministry of Planning",
+  "source_type": "census",
+  "trust_level": 4,
+  "urls": [
+    "https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/f376ca7e7ee5405f8311de650415b9d8.pdf",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/154cbde8cea641cdb85ab83f610b840c.xlsx",
+    "https://bbs.gov.bd/pages/files/6a09630afa5a21e711e51e96",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/85ce7f4f-e79a-4e27-b0e1-7904d8fab45a.pdf",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/89e86f23804e4e119149f252b777c2d6.xlsx",
+    "https://bbs.gov.bd/pages/files/6a09637cad0e9a31cc257d15",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/db13c3f5-e450-451c-9d87-c4546f933b83.pdf",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/54153bc4a5094bc495c732fb9d62369e.xlsx",
+    "https://bbs.gov.bd/pages/files/6a0963df7aa29b4dab9729b3",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/a2999d5e-8125-4cd8-9b6f-e9463b1aedff.pdf",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/6e5bb9426ce24d8e99867fe62881edc8.xlsx",
+    "https://bbs.gov.bd/pages/files/6a0965477aa29b4dab972b72",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/a9e0407a-e538-4dcf-8dfd-69fb95162789.pdf"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": "2024-06",
+  "license": null,
+  "license_url": null,
+  "attribution": "Bangladesh Bureau of Statistics, Population and Housing Census 2022",
+  "files": {
+    "areas.csv": "c5a1f0c418d6e45e8112e91fbcdaac748fca5c6af1e00b2ac421a3a6c31a3981",
+    "facts.csv": "0988fc275096997ef3190692277b98486b110aef6a728d6d4180d58864c5075f",
+    "raw/c01_mymensingh_division.csv": "1c6320f39400b4cd86abe317897b3fadc143bc354a782f4c585953a931665b26",
+    "raw/district_report_key_findings.txt": "6480a30cfccf9d62c17fed439a6c6ce5f4101c4f13f57419cdcb346b01c2c5c2",
+    "raw/resolved_urls.json": "f5982bae1ebbbdfb2c578e52bf45ab1962b3dffa48448e7c3c6fbea44a0eb879",
+    "raw/union_statistics_D01.txt": "3e9229eff85f03660520d6d9da072bbefa603ed08233e99beccb92dc9fd59bf0"
+  },
+  "notes": "Population/households are final ENUMERATED counts (census moment 00:00 15 June 2022, incl. floating population), not PEC-adjusted. Unit lists and population per district/upazila/city corporation/thana/paurashava/union/ward from the Community Report Excel files, sheet C-01 (Mymensingh's workbook names it 'C_01'; BBS 2022 geocodes; code_scheme BBS_GEOCODE_2022 = C-01 code columns joined with '-', prefixed by division 45). City-corporation units carry the city-corporation code in the geocode, so the 33 wards and 332 mahallas of Mymensingh City Corporation (45-61-40, one metro thana: Mymensingh Sadar Thana 45-61-40-52) are kept apart from paurashava wards and from Mymensingh Sadar upazila (45-61-52). Administrative-unit counts, area and density from the District Report Key Findings tables (District Series, 2024) and Union Statistics (June 2025) Table D01. basis: enumerated | as stated (printed in a BBS table) | derived (counted from the C-01 geocode rows). One non-union unit is printed in the Union/Ward column: 'Cantonment' (45-61-40-52-998, inside the city-corporation thana), kept at level cantonment, not counted as a ward or union. No forest (997) row; char unions ('Char ...', '...char') are ordinary union parishads and stay at level union. Community Report labels on the BBS page: MYMENSINGH, JAMALPUR, SHERPUR, NETRAKONA (output name Netrokona; C-01 and D01 print 'Netrakona'). Large PDFs/Excel are not committed; fetch.py --division mymensingh re-downloads them (bbs.gov.bd needs the Sectigo DV R36 intermediate, added at runtime from its AIA URL).",
+  "division": "mymensingh",
+  "kind": "bbs_census"
+}

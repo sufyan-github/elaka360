@@ -1,0 +1,29 @@
+{
+  "key": "SYLHET_METRO_POLICE_THANAS_2026",
+  "division": "sylhet",
+  "kind": "metro_police_thanas",
+  "city": 50006,
+  "name": "Sylhet Metropolitan Police — thanas and official numbers",
+  "organization": "Sylhet Metropolitan Police (Bangladesh Police)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://police.sylhetdiv.gov.bd/pages/static-pages/696ca219c4774958d7b931b6",
+    "https://smp.police.gov.bd/",
+    "https://police.sylhetdiv.gov.bd/pages/static-pages/696cb380c4774958d7ba127a",
+    "https://police.sylhetdiv.gov.bd/pages/officers",
+    "https://smp.police.gov.bd/যোগাযোগ/"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Sylhet Metropolitan Police (police.sylhetdiv.gov.bd; smp.police.gov.bd)",
+  "notes": "No licence stated. Thana list from SMP's 'এক নজরে' (6 thanas) with the Bangla names of SMP's home page. SMP publishes no thana numbers (no OC cards; zone ACs' cards are not thana contacts), so thana rows have no phone. HQ address, control room and hotline (police official mobiles) from the SMP national-portal 'যোগাযোগ'; the Commissioner's office phone, official e-mail and official mobile from the officer card. Officers' names are not copied. SMP says its area includes '27 wards of Sylhet City Corporation, 08 Unions of Sylhet Sadar Upazila and 10 Unions of South Surma Upazilla' (SMP এক নজরে) without saying which thana covers which wards or unions, and Sylhet City Corporation (scc.gov.bd, 42 wards) names no thanas, so no official source places an SMP thana in the city corporation and area_en is left empty.",
+  "files": {
+    "places.csv": "4fccb28d2838c4279d13f1fcecd15093ec3dcb318a1d36f309e8a3c1f1dd255f",
+    "facts.csv": "4b807e3916c8d1d4f6a9f9b867b95190bfb473659b79431fe981fbb07756c00a",
+    "raw/smp_hq_and_control_room.txt": "16ffb0367c3de572cff9cbf62b482a94ed2e39e15157b2072e63d4376cf57b32",
+    "raw/smp_thanas.txt": "8e76a5706d492cf9db1a821dd7ef546f16bfe7ece1fc2daa4769c2f5fa071f8b"
+  }
+}

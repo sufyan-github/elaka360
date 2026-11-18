@@ -1,0 +1,29 @@
+{
+  "key": "SYLHET_METRO_POLICE",
+  "division": "sylhet",
+  "kind": "metro_police",
+  "city": 50006,
+  "name": "Sylhet Metropolitan Police (police.sylhetdiv.gov.bd, smp.police.gov.bd) — thanas, founding and jurisdiction",
+  "organization": "Sylhet Metropolitan Police, Bangladesh Police",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://police.sylhetdiv.gov.bd/pages/static-pages/696ca219c4774958d7b931b6",
+    "https://police.sylhetdiv.gov.bd/pages/static-pages/696cb380c4774958d7ba127a",
+    "https://smp.police.gov.bd/",
+    "https://police.sylhetdiv.gov.bd/",
+    "https://scc.gov.bd/pages/static-pages/6922df09933eb65569e1f5f4"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": "2022-08-27",
+  "license": null,
+  "license_url": null,
+  "attribution": "Sylhet Metropolitan Police (police.sylhetdiv.gov.bd; smp.police.gov.bd)",
+  "notes": "SMP national-portal 'এক নজরে' (English, updated 2022-08-27 17:01): formed 26 Aug 2006, about 518.43 km2 including 27 SCC wards + 8 unions of Sylhet Sadar + 10 unions of South Surma, 6 thanas (Kotwali Model, Jalalabad, Airport, South Surma, Moglabazar, Shahporan), AOR published 10 May 2011. Bangla thana names from SMP's own site (home page list). No thana page, area or ward list per thana is published, so no thana is placed in Sylhet City Corporation. HQ address: বাড়ি নং-২২৮, সড়ক নং-১/এ, ব্লক-এফ শাহজালাল উপশহর, সিলেট ('যোগাযোগ'). Numbers are in SYLHET_METRO_POLICE_THANAS_2026.",
+  "files": {
+    "areas.csv": "b92a0a832f8ec095c61ea9fc8612c7b27bc5def13e329dd0588832920bc4bc76",
+    "facts.csv": "0f02699efc9ede3f04af4f9b7bb54dc7ea63e95544aefc84d76856a8993997c0",
+    "raw/smp_ek_nojore.txt": "d5473fa2e126136644dcdb0ea52778c114bf7d26f22f012f9719d1a9182676b6",
+    "raw/smp_home_thanas.txt": "ce0609f676ea221637aa13102a643ae80f99e1b0465eed56b1e07a9ea41fa6e9"
+  }
+}

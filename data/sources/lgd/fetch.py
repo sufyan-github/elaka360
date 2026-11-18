@@ -288,6 +288,15 @@ UPZ_EN = {
     'পোরশা': 'Porsha', 'সাপাহার': 'Sapahar',
 }
 
+# Upazilas whose LGD Bangla name differs from the seed's, hand-checked per division:
+# (district_bn, LGD name) -> (seed name_en, seed name_bn[, why; default "its former name"]).
+# Barishal: ইন্দুরকানী = seed Zianagar (জিয়ানগর, the upazila's former name; HDX's 2020 point for upazila 79-90 is named
+# Zianagar, and the seed's three Zianagar unions are BBS 2022 Indurkani unions).
+# Sylhet: ওসমানী = seed Osmaninagar (ওসমানী নগর): LGD prints the name without "নগর"; the other 12 Sylhet names on the page
+# are the seed's other 12 Sylhet upazilas, and BBS 2022, HDX v03 and DGHS list Osmaninagar in Sylhet district.
+UPZ_SEED_BY_DIV = {'barishal': {('পিরোজপুর', 'ইন্দুরকানী'): ('Zianagar', 'জিয়ানগর')},
+                   'sylhet': {('সিলেট', 'ওসমানী'): ('Osmaninagar', 'ওসমানী নগর', 'printed without "নগর"')}}
+
 
 def seed_names(div_id):
     """District names (bn -> en) and upazila names ((district_bn, upazila_bn) -> en) of a division in the seed."""
@@ -363,11 +372,16 @@ def main():
                 if not en and not raj and base == dbn:  # district name alone = the sadar upazila
                     en = upz_en.get((dbn, base + ' সদর'), '')
                     sadar = bool(en)
+                hand = None if en else UPZ_SEED_BY_DIV.get(a.division, {}).get((dbn, base))
+                if hand:
+                    en = hand[0]
                 if not en:
                     warn('unmapped upazila ' + n)
                 areas.append(dict(level='upazila', name_en=en, name_bn=n, parent_level='district', parent_name_en=den,
                                   parent_name_bn=dbn, district_en=den, upazila_en=en, source_key=KEY, source_url=U_UPZ,
                                   notes=('Printed as "%s" (sadar upazila). ' % n if sadar else '') +
+                                  ('Hand-checked: seed upazila %s (%s), %s. ' % (hand[0], hand[1], hand[2] if len(hand) > 2 else 'its former name')
+                                   if hand else '') +
                                   ('English name from the seed, not from LGD. ' if en else
                                    'No seed upazila with this Bangla name; English name left empty. ') + note))
             facts.append(dict(entity_level='district', entity_name_en=den, district_en=den, fact='upazila_count',

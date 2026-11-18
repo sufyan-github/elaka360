@@ -1,0 +1,25 @@
+{
+  "key": "DGHS_BD_GEOCODES_BARISHAL",
+  "name": "Bangladesh GeoCodes CodeSystem (BBS geo-codes) in the DGHS Bangladesh Core FHIR IG, Barishal Division extract",
+  "organization": "Directorate General of Health Services (DGHS), Ministry of Health and Family Welfare",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html",
+    "https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.json",
+    "https://fhir.dghs.gov.bd/core/ImplementationGuide-bd.fhir.core.json"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": "2026-10-15",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution": "Directorate General of Health Services (DGHS), Bangladesh — Bangladesh Core FHIR IG; codes: BBS geo-code system",
+  "files": {
+    "areas.csv": "6060fe005232581aae7c98423dbc10e02c2fac0ae9780367d39480aea7da4a75",
+    "crosswalk.csv": "015bc1fde47e971efb2de54ff32ca0262b620432ab0f4560060c5c80b076b143",
+    "raw/bd-geocodes_barishal.json": "dbd2f9c96ead3b65c56b24697e8ab2da99ee943d0068866f6f76fa96cac6dc1f"
+  },
+  "notes": "CodeSystem https://fhir.dghs.gov.bd/core/CodeSystem/bd-geocodes version 0.5.0, status draft, date 2026-10-15T00:09:54+00:00, 1591 codes nationally. Divisions, districts, upazilas/city thanas, city corporations and paurashavas only: no union-level codes (only 'Unions Of X Upazila' placeholders). The IG does not say which BBS release the codes come from. Skipped entries: 100400 Barguna N/A (district placeholder (no city corporation)); 100600 Barishal N/A (district placeholder (no city corporation)); 1006505150 Barisal City Corp. (part of the city corporation inside thana Barishal Sadar); 100900 Bhola N/A (district placeholder (no city corporation)); 104200 Jhalokati N/A (district placeholder (no city corporation)); 107800 Patuakhali N/A (district placeholder (no city corporation)); 107900 Pirojpur N/A (district placeholder (no city corporation)); plus 42 'Unions Of ... Upazila' placeholders.",
+  "division": "barishal",
+  "kind": "dghs_geocodes"
+}

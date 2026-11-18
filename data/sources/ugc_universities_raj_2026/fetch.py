@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Fetch the UGC (University Grants Commission) university register and keep universities in Rajshahi Division.
 
-stdlib + requests only. Usage: python3 fetch.py [--division rajshahi|rangpur] [--out DIR] [--offline]
+stdlib + requests only. Usage: python3 fetch.py [--division rajshahi|rangpur|dhaka|chattogram|khulna|barishal|sylhet|mymensingh] [--out DIR] [--offline]
 (--offline rebuilds places.csv from raw/). Default: Rajshahi Division into this folder (DIVISIONS.md)."""
 # --- polite HTTP helper (copy this block into each fetch.py; stdlib + requests only) -----------------
 # Many *.gov.bd servers send only their leaf certificate and omit the intermediate CA. Browsers fetch the
@@ -179,6 +179,172 @@ OTHER_UPAZILAS = {
                      ("Chilmari", ["chilmari"]), ("Phulbari", ["phulbari", "fulbari"]), ("Nageshwari", ["nageshwari", "nageswari"]),
                      ("Rajarhat", ["rajarhat"]), ("Raomari", ["raomari", "rowmari"]), ("Ulipur", ["ulipur"])],
     },
+    "dhaka": {
+        "Dhaka": [("Savar", ["savar", "saver", "ashulia"]), ("Dhamrai", ["dhamrai"]), ("Keraniganj", ["keraniganj", "keranigonj"]),
+                  ("Nawabganj", ["nawabganj", "nawabgonj"]), ("Dohar", ["dohar"])],
+        "Gazipur": [("Gazipur Sadar", ["gazipursadar", "joydebpur", "joydevpur", "jaydebpur", "tongi"]),
+                    ("Kaliakair", ["kaliakair", "kaliakoir"]), ("Kaliganj", ["kaliganj", "kaligonj"]), ("Kapasia", ["kapasia"]),
+                    ("Sreepur", ["sreepur", "sripur"])],
+        "Narayanganj": [("Narayanganj Sadar", ["narayanganjsadar", "fatullah", "siddhirganj", "siddhirgonj"]),
+                        ("Araihazar", ["araihazar"]), ("Bandar", ["bandar"]), ("Rupganj", ["rupganj", "rupgonj"]),
+                        ("Sonargaon", ["sonargaon", "sonargoan"])],
+        "Narsingdi": [("Narsingdi Sadar", ["narsingdisadar"]), ("Belabo", ["belabo", "belabu"]), ("Monohardi", ["monohardi", "manohardi"]),
+                      ("Palash", ["palash"]), ("Raipura", ["raipura"]), ("Shibpur", ["shibpur"])],
+        "Tangail": [("Tangail Sadar", ["tangailsadar"]), ("Basail", ["basail"]), ("Bhuapur", ["bhuapur"]), ("Delduar", ["delduar"]),
+                    ("Dhanbari", ["dhanbari"]), ("Ghatail", ["ghatail"]), ("Gopalpur", ["gopalpur"]), ("Kalihati", ["kalihati"]),
+                    ("Madhupur", ["madhupur"]), ("Mirzapur", ["mirzapur"]), ("Nagarpur", ["nagarpur"]),
+                    ("Sakhipur", ["sakhipur", "shakhipur"])],
+        "Kishoreganj": [("Kishoreganj Sadar", ["kishoreganjsadar", "kishorganjsadar"]), ("Austagram", ["austagram", "astagram"]),
+                        ("Bajitpur", ["bajitpur"]), ("Bhairab", ["bhairab", "bhairob"]), ("Hossainpur", ["hossainpur"]),
+                        ("Itna", ["itna"]), ("Karimganj", ["karimganj", "karimgonj"]), ("Katiadi", ["katiadi"]),
+                        ("Kuliarchar", ["kuliarchar"]), ("Mithamain", ["mithamain", "mithamoin"]), ("Nikli", ["nikli"]),
+                        ("Pakundia", ["pakundia"]), ("Tarail", ["tarail"])],
+        "Manikganj": [("Manikganj Sadar", ["manikganjsadar"]), ("Daulatpur", ["daulatpur", "doulatpur"]), ("Ghior", ["ghior", "gior"]),
+                      ("Harirampur", ["harirampur"]), ("Saturia", ["saturia"]), ("Shibalaya", ["shibalaya", "shibaloy", "shivalaya"]),
+                      ("Singair", ["singair", "singiar"])],
+        "Munshiganj": [("Munshiganj Sadar", ["munshiganjsadar"]), ("Gazaria", ["gazaria", "gajaria"]),
+                       ("Lohajang", ["lohajang", "louhajang", "louhajanj"]), ("Sirajdikhan", ["sirajdikhan"]),
+                       ("Sreenagar", ["sreenagar", "srinagar"]), ("Tongibari", ["tongibari", "tangibari"])],
+        "Rajbari": [("Rajbari Sadar", ["rajbarisadar"]), ("Baliakandi", ["baliakandi"]), ("Goalanda", ["goalanda", "goalundo"]),
+                    ("Kalukhali", ["kalukhali"]), ("Pangsha", ["pangsha", "pangsa"])],
+        "Madaripur": [("Madaripur Sadar", ["madaripursadar"]), ("Dasar", ["dasar"]), ("Kalkini", ["kalkini"]),
+                      ("Rajoir", ["rajoir"]), ("Shibchar", ["shibchar"])],
+        "Gopalganj": [("Gopalganj Sadar", ["gopalganjsadar"]), ("Kashiani", ["kashiani"]), ("Kotalipara", ["kotalipara"]),
+                      ("Muksudpur", ["muksudpur", "maksudpur"]), ("Tungipara", ["tungipara"])],
+        "Faridpur": [("Faridpur Sadar", ["faridpursadar"]), ("Alfadanga", ["alfadanga"]), ("Bhanga", ["bhanga"]),
+                     ("Boalmari", ["boalmari"]), ("Char Bhadrasan", ["charbhadrasan"]), ("Madhukhali", ["madhukhali"]),
+                     ("Nagarkanda", ["nagarkanda"]), ("Sadarpur", ["sadarpur"]), ("Saltha", ["saltha"])],
+        "Shariatpur": [("Shariatpur Sadar", ["shariatpursadar"]), ("Bhedarganj", ["bhedarganj", "bhederganj"]),
+                       ("Damudya", ["damudya"]), ("Gosairhat", ["gosairhat"]), ("Naria", ["naria"]), ("Zanjira", ["zanjira", "zajira", "jajira"])],
+    },
+    "chattogram": {
+        "Chattogram": [("Anwara", ["anwara", "anowara"]), ("Banshkhali", ["banshkhali", "bashkhali", "banskhali"]),
+                       ("Boalkhali", ["boalkhali"]), ("Chandanaish", ["chandanaish", "chandanish"]),
+                       ("Fatikchhari", ["fatikchhari", "fatikchari"]), ("Hathazari", ["hathazari", "hathhazari"]),
+                       ("Karnaphuli", ["karnaphuli", "karnafuli"]), ("Lohagara", ["lohagara", "lohagora"]),
+                       ("Mirsharai", ["mirsharai", "mirsarai", "mirersarai"]), ("Patiya", ["patiya", "potiya"]),
+                       ("Rangunia", ["rangunia"]), ("Raozan", ["raozan", "rawzan"]), ("Sandwip", ["sandwip", "sandip"]),
+                       ("Satkania", ["satkania"]), ("Sitakunda", ["sitakunda", "sitakundu", "sitakund"])],
+        "Cumilla": [("Cumilla Sadar Dakshin", ["sadardakshin", "sadarsouth"]),
+                    ("Cumilla Adarsha Sadar", ["adarshasadar", "cumillasadar", "comillasadar"]),
+                    ("Barura", ["barura"]), ("Brahmanpara", ["brahmanpara"]), ("Burichang", ["burichang", "burichong"]),
+                    ("Chandina", ["chandina"]), ("Chauddagram", ["chauddagram", "chouddagram"]), ("Daudkandi", ["daudkandi"]),
+                    ("Debidwar", ["debidwar", "debiddar"]), ("Homna", ["homna"]), ("Laksam", ["laksam"]), ("Lalmai", ["lalmai"]),
+                    ("Meghna", ["meghna"]), ("Manoharganj", ["manoharganj", "monohargonj", "monohorgonj", "manohorganj"]),
+                    ("Muradnagar", ["muradnagar"]), ("Nangalkot", ["nangalkot", "nangolkot"]), ("Titas", ["titas"])],
+        "Feni": [("Feni Sadar", ["fenisadar"]), ("Chhagalnaiya", ["chhagalnaiya", "chagalnaiya", "chhagalnaya"]),
+                 ("Daganbhuiyan", ["daganbhuiyan", "daganbhuyan", "dagonbhuiyan"]), ("Fulgazi", ["fulgazi", "phulgazi"]),
+                 ("Parshuram", ["parshuram", "parsuram"]), ("Sonagazi", ["sonagazi"])],
+        "Brahmanbaria": [("Brahmanbaria Sadar", ["brahmanbariasadar"]), ("Akhaura", ["akhaura"]), ("Ashuganj", ["ashuganj", "ashugonj"]),
+                         ("Bancharampur", ["bancharampur"]), ("Bijoynagar", ["bijoynagar", "bijaynagar"]), ("Kasba", ["kasba"]),
+                         ("Nabinagar", ["nabinagar"]), ("Nasirnagar", ["nasirnagar"]), ("Sarail", ["sarail"])],
+        "Rangamati": [("Rangamati Sadar", ["rangamatisadar"]), ("Baghaichhari", ["baghaichhari", "baghaichari"]), ("Barkal", ["barkal"]),
+                      ("Belaichhari", ["belaichhari", "belaichari"]), ("Juraichhari", ["juraichhari", "juraichari"]),
+                      ("Kaptai", ["kaptai"]), ("Kawkhali", ["kawkhali", "kaukhali"]), ("Langadu", ["langadu"]),
+                      ("Naniarchar", ["naniarchar"]), ("Rajasthali", ["rajasthali"])],
+        "Noakhali": [("Noakhali Sadar", ["noakhalisadar", "sudharam"]), ("Begumganj", ["begumganj", "begumgonj"]),
+                     ("Chatkhil", ["chatkhil"]), ("Companiganj", ["companiganj", "companigonj"]), ("Hatiya", ["hatiya", "hatia"]),
+                     ("Kabirhat", ["kabirhat"]), ("Senbagh", ["senbagh", "senbag"]), ("Sonaimuri", ["sonaimuri", "sonaimori"]),
+                     ("Subarnachar", ["subarnachar"])],
+        "Chandpur": [("Chandpur Sadar", ["chandpursadar"]), ("Faridganj", ["faridganj", "faridgonj"]), ("Haimchar", ["haimchar"]),
+                     ("Hajiganj", ["hajiganj", "hajigonj"]), ("Kachua", ["kachua"]), ("Matlab Dakshin", ["matlabdakshin", "matlabsouth"]),
+                     ("Matlab Uttar", ["matlabuttar", "matlabnorth"]), ("Shahrasti", ["shahrasti"])],
+        "Lakshmipur": [("Lakshmipur Sadar", ["lakshmipursadar", "laxmipursadar"]), ("Kamalnagar", ["kamalnagar"]),
+                       ("Raipur", ["raipur"]), ("Ramganj", ["ramganj", "ramgonj"]), ("Ramgati", ["ramgati"])],
+        "Cox's Bazar": [("Cox's Bazar Sadar", ["coxsbazarsadar", "coxbazarsadar"]), ("Chakaria", ["chakaria", "chokoria"]),
+                        ("Eidgaon", ["eidgaon"]), ("Kutubdia", ["kutubdia"]), ("Maheshkhali", ["maheshkhali", "moheshkhali"]),
+                        ("Pekua", ["pekua"]), ("Ramu", ["ramu"]), ("Teknaf", ["teknaf"]), ("Ukhia", ["ukhia", "ukhiya"])],
+        "Khagrachhari": [("Khagrachhari Sadar", ["khagrachharisadar", "khagracharisadar"]), ("Dighinala", ["dighinala"]),
+                         ("Guimara", ["guimara"]), ("Lakshmichhari", ["lakshmichhari", "laxmichhari"]),
+                         ("Mahalchhari", ["mahalchhari", "mahalchari", "mohalchari"]), ("Manikchhari", ["manikchhari", "manikchari"]),
+                         ("Matiranga", ["matiranga"]), ("Panchhari", ["panchhari", "panchari"]), ("Ramgarh", ["ramgarh"])],
+        "Bandarban": [("Bandarban Sadar", ["bandarbansadar"]), ("Alikadam", ["alikadam"]), ("Lama", ["lama"]),
+                      ("Naikhongchhari", ["naikhongchhari", "naikhongchari"]), ("Rowangchhari", ["rowangchhari", "rowangchari"]),
+                      ("Ruma", ["ruma"]), ("Thanchi", ["thanchi"])],
+    },
+    "khulna": {   # Khulna-city metropolitan thanas (Daulatpur, Khalishpur, Sonadanga, Khan Jahan Ali, Kotwali …) are not upazilas
+        "Khulna": [("Batiaghata", ["batiaghata", "botiaghata"]), ("Dacope", ["dacope", "dakop"]), ("Dighalia", ["dighalia", "digholia"]),
+                   ("Dumuria", ["dumuria"]), ("Koyra", ["koyra"]), ("Paikgachha", ["paikgachha", "paikgacha", "paikgasa"]),
+                   ("Phultala", ["phultala", "fultala", "fultola"]), ("Rupsa", ["rupsa", "rupsha"]), ("Terokhada", ["terokhada"])],
+        "Jashore": [("Jashore Sadar", ["jashoresadar", "jessoresadar"]), ("Abhaynagar", ["abhaynagar", "avaynagar", "noapara"]),
+                    ("Bagherpara", ["bagherpara", "bagharpara"]), ("Chaugachha", ["chaugachha", "chougachha", "chowgacha", "chaugacha"]),
+                    ("Jhikargachha", ["jhikargachha", "jhikargacha"]), ("Keshabpur", ["keshabpur", "keshobpur"]),
+                    ("Manirampur", ["manirampur", "monirampur"]), ("Sharsha", ["sharsha", "benapole"])],
+        "Satkhira": [("Satkhira Sadar", ["satkhirasadar"]), ("Assasuni", ["assasuni", "ashashuni"]), ("Debhata", ["debhata"]),
+                     ("Kalaroa", ["kalaroa"]), ("Kaliganj", ["kaliganj", "kaligonj"]), ("Shyamnagar", ["shyamnagar", "shymnagar"]),
+                     ("Tala", ["tala"])],
+        "Meherpur": [("Meherpur Sadar", ["meherpursadar"]), ("Gangni", ["gangni"]), ("Mujibnagar", ["mujibnagar"])],
+        "Narail": [("Narail Sadar", ["narailsadar"]), ("Kalia", ["kalia"]), ("Lohagara", ["lohagara", "lohagora"])],
+        "Chuadanga": [("Chuadanga Sadar", ["chuadangasadar"]), ("Alamdanga", ["alamdanga"]), ("Damurhuda", ["damurhuda"]),
+                      ("Jibannagar", ["jibannagar", "jibonnagar"])],
+        "Kushtia": [("Kushtia Sadar", ["kushtiasadar"]), ("Bheramara", ["bheramara"]), ("Daulatpur", ["daulatpur", "doulatpur"]),
+                    ("Khoksa", ["khoksa"]), ("Kumarkhali", ["kumarkhali"]), ("Mirpur", ["mirpur"])],
+        "Magura": [("Magura Sadar", ["magurasadar"]), ("Mohammadpur", ["mohammadpur"]), ("Shalikha", ["shalikha"]),
+                   ("Sreepur", ["sreepur", "sripur"])],
+        "Bagerhat": [("Bagerhat Sadar", ["bagerhatsadar"]), ("Chitalmari", ["chitalmari"]), ("Fakirhat", ["fakirhat"]),
+                     ("Kachua", ["kachua"]), ("Mollahat", ["mollahat"]), ("Mongla", ["mongla", "monglaport"]),
+                     ("Morrelganj", ["morrelganj", "morrelgonj"]), ("Rampal", ["rampal"]), ("Sarankhola", ["sarankhola"])],
+        "Jhenaidah": [("Jhenaidah Sadar", ["jhenaidahsadar"]), ("Harinakunda", ["harinakunda", "harinakundu"]),
+                      ("Kaliganj", ["kaliganj", "kaligonj"]), ("Kotchandpur", ["kotchandpur"]), ("Maheshpur", ["maheshpur", "moheshpur"]),
+                      ("Shailkupa", ["shailkupa"])],
+    },
+    "barishal": {   # Barishal-city metropolitan thanas (Kotwali, Kawnia, Airport, Bandar …) are not upazilas
+        "Barishal": [("Barishal Sadar", ["barishalsadar", "barisalsadar"]), ("Agailjhara", ["agailjhara", "agoiljhara"]),
+                     ("Babuganj", ["babuganj", "babugonj"]), ("Bakerganj", ["bakerganj", "bakergonj"]), ("Banaripara", ["banaripara"]),
+                     ("Gaurnadi", ["gaurnadi", "gournadi", "gouranadi"]), ("Hizla", ["hizla", "hijla"]),
+                     ("Mehendiganj", ["mehendiganj", "mehendigonj"]), ("Muladi", ["muladi"]), ("Wazirpur", ["wazirpur", "uzirpur"])],
+        "Bhola": [("Bhola Sadar", ["bholasadar"]), ("Burhanuddin", ["burhanuddin", "borhanuddin"]),
+                  ("Char Fasson", ["charfasson", "charfesson", "charfashion"]), ("Daulatkhan", ["daulatkhan", "doulatkhan"]),
+                  ("Lalmohan", ["lalmohan"]), ("Manpura", ["manpura", "monpura"]), ("Tazumuddin", ["tazumuddin", "tajumuddin"])],
+        "Jhalokathi": [("Jhalokathi Sadar", ["jhalokathisadar", "jhalakathisadar", "jhalokatisadar", "jhalakatisadar"]),
+                       ("Kanthalia", ["kanthalia", "kathalia"]), ("Nalchity", ["nalchity", "nalchiti"]), ("Rajapur", ["rajapur"])],
+        "Patuakhali": [("Patuakhali Sadar", ["patuakhalisadar"]), ("Bauphal", ["bauphal", "baufal"]), ("Dashmina", ["dashmina"]),
+                       ("Dumki", ["dumki"]), ("Galachipa", ["galachipa"]), ("Kalapara", ["kalapara", "kuakata"]),
+                       ("Mirzaganj", ["mirzaganj", "mirjaganj"]), ("Rangabali", ["rangabali"])],
+        "Pirojpur": [("Pirojpur Sadar", ["pirojpursadar"]), ("Bhandaria", ["bhandaria"]), ("Kawkhali", ["kawkhali", "kaukhali"]),
+                     ("Mathbaria", ["mathbaria", "mothbaria"]), ("Nazirpur", ["nazirpur"]),
+                     ("Nesarabad", ["nesarabad", "swarupkati", "swarupkathi"]), ("Indurkani", ["indurkani", "zianagar"])],
+        "Barguna": [("Barguna Sadar", ["bargunasadar"]), ("Amtali", ["amtali"]), ("Bamna", ["bamna"]), ("Betagi", ["betagi"]),
+                    ("Patharghata", ["patharghata", "pathorghata"]), ("Taltali", ["taltali", "taltoli"])],
+    },
+    "sylhet": {   # Sylhet-city metropolitan thanas (Kotwali, Jalalabad, Airport, Shah Poran, Moglabazar …) are not upazilas
+        "Sylhet": [("Sylhet Sadar", ["sylhetsadar"]), ("Balaganj", ["balaganj", "balagonj"]), ("Beanibazar", ["beanibazar", "bianibazar"]),
+                   ("Bishwanath", ["bishwanath", "biswanath"]), ("Companiganj", ["companiganj", "companigonj", "kompaniganj"]),
+                   ("Dakshin Surma", ["dakshinsurma", "dakhinsurma", "southsurma"]), ("Fenchuganj", ["fenchuganj", "fenchugonj"]),
+                   ("Golapganj", ["golapganj", "golapgonj"]), ("Gowainghat", ["gowainghat", "goainghat", "gowaighat"]),
+                   ("Jaintiapur", ["jaintiapur", "jaintapur", "jointiapur"]), ("Kanaighat", ["kanaighat"]),
+                   ("Osmani Nagar", ["osmaninagar"]), ("Zakiganj", ["zakiganj", "zakigonj"])],
+        "Moulvibazar": [("Moulvibazar Sadar", ["moulvibazarsadar", "maulvibazarsadar"]), ("Barlekha", ["barlekha", "baralekha"]),
+                        ("Juri", ["juri"]), ("Kamalganj", ["kamalganj", "kamalgonj", "kamolganj"]), ("Kulaura", ["kulaura"]),
+                        ("Rajnagar", ["rajnagar"]), ("Sreemangal", ["sreemangal", "srimangal", "sreemongal"])],
+        "Habiganj": [("Habiganj Sadar", ["habiganjsadar"]), ("Ajmiriganj", ["ajmiriganj"]), ("Bahubal", ["bahubal"]),
+                     ("Baniachong", ["baniachong", "baniachang", "baniyachong"]), ("Chunarughat", ["chunarughat"]),
+                     ("Lakhai", ["lakhai"]), ("Madhabpur", ["madhabpur", "madhobpur"]), ("Nabiganj", ["nabiganj", "nabigonj"]),
+                     ("Shayestaganj", ["shayestaganj", "shaistaganj", "shaistagonj"])],
+        "Sunamganj": [("Sunamganj Sadar", ["sunamganjsadar"]), ("Bishwambarpur", ["bishwambarpur", "biswambarpur"]),
+                      ("Chhatak", ["chhatak", "chatak"]), ("Derai", ["derai", "dirai"]), ("Dharmapasha", ["dharmapasha", "dharampasha"]),
+                      ("Dowarabazar", ["dowarabazar", "doarabazar"]), ("Jagannathpur", ["jagannathpur"]), ("Jamalganj", ["jamalganj"]),
+                      ("South Sunamganj", ["southsunamganj", "dakshinsunamganj", "shantiganj"]), ("Shalla", ["shalla", "sulla"]),
+                      ("Tahirpur", ["tahirpur"]), ("Madhyanagar", ["madhyanagar"])],
+    },
+    "mymensingh": {   # Mymensingh-city addresses get no upazila unless they name one (seed English spellings)
+        "Mymensingh": [("Mymensingh Sadar", ["mymensinghsadar"]), ("Bhaluka", ["bhaluka"]), ("Dhobaura", ["dhobaura"]),
+                       ("Fulbaria", ["fulbaria", "phulbaria"]), ("Gafargaon", ["gafargaon", "gaffargaon"]),
+                       ("Gouripur", ["gouripur", "gauripur"]), ("Haluaghat", ["haluaghat"]),
+                       ("Iswarganj", ["iswarganj", "ishwarganj", "ishwargonj", "iswargonj"]),
+                       ("Muktagacha", ["muktagacha", "muktagachha"]), ("Nandail", ["nandail"]),
+                       ("Phulpur", ["phulpur", "fulpur"]), ("Tarakanda", ["tarakanda"]), ("Trishal", ["trishal"])],
+        "Jamalpur": [("Jamalpur Sadar", ["jamalpursadar"]), ("Bokshiganj", ["bokshiganj", "bakshiganj", "bakshigonj"]),
+                     ("Dewangonj", ["dewangonj", "dewanganj"]), ("Islampur", ["islampur"]), ("Madarganj", ["madarganj", "madargonj"]),
+                     ("Melandah", ["melandah", "melandaha"]), ("Sarishabari", ["sarishabari", "sharishabari"])],
+        "Sherpur": [("Sherpur Sadar", ["sherpursadar"]), ("Jhenaigati", ["jhenaigati", "jhinaigati"]),
+                    ("Nalitabari", ["nalitabari"]), ("Nokla", ["nokla", "nakla"]),
+                    ("Sreebordi", ["sreebordi", "sreebardi", "sribordi", "sribardi"])],
+        "Netrokona": [("Netrokona Sadar", ["netrokonasadar", "netrakonasadar"]), ("Atpara", ["atpara"]), ("Barhatta", ["barhatta"]),
+                      ("Durgapur", ["durgapur"]), ("Kalmakanda", ["kalmakanda"]), ("Kendua", ["kendua"]),
+                      ("Khaliajuri", ["khaliajuri", "khaliajury"]), ("Madan", ["madan"]),
+                      ("Mohongonj", ["mohongonj", "mohanganj", "mohangonj"]), ("Purbadhala", ["purbadhala"])],
+    },
 }
 
 # --- output helpers ---------------------------------------------------------------------------------------
@@ -287,7 +453,29 @@ DIST_RE_BY_DIV = {
     "rangpur": [("Rangpur", r"\brangpur\b"), ("Dinajpur", r"dinajpur"), ("Thakurgaon", r"thakurgaon|thakurgoan"),
                 ("Panchagarh", r"panchagarh|panchagar\b"), ("Nilphamari", r"nilphamari|nilfamari"),
                 ("Lalmonirhat", r"lalmonirhat"), ("Kurigram", r"kurigram"), ("Gaibandha", r"gaibandha")],
+    "dhaka": [("Dhaka", r"\bdhaka\b"), ("Gazipur", r"gazipur|joydebpur"), ("Narayanganj", r"narayan ?g[ao]nj"),
+              ("Narsingdi", r"narsh?ingdi"), ("Tangail", r"tangail"), ("Kishoreganj", r"kishore?g[ao]nj"),
+              ("Manikganj", r"manikg[ao]nj"), ("Munshiganj", r"munshig[ao]nj"), ("Rajbari", r"rajbari"),
+              ("Madaripur", r"madaripur"), ("Gopalganj", r"gopalg[ao]nj"), ("Faridpur", r"faridpur"),
+              ("Shariatpur", r"shariatpur")],
+    # (UGC spellings seen: 'Chitagonj', 'Cox’s Bazar'; 'Rangamatia' is a mouza in Chattogram, not Rangamati)
+    "chattogram": [("Chattogram", r"chatt?[oa]gram|chitt?agong|chitt?ag[ao]nj|\bctg\b"), ("Cox's Bazar", r"cox['’]?s ?bazar"),
+                   ("Cumilla", r"cumilla|comilla"), ("Feni", r"\bfeni\b"), ("Noakhali", r"noakhali"),
+                   ("Lakshmipur", r"lakshmipur|laxmipur"), ("Chandpur", r"chandpur"), ("Brahmanbaria", r"brahmanbaria"),
+                   ("Rangamati", r"\brangamati\b"), ("Khagrachhari", r"khagrachh?ari"), ("Bandarban", r"bandarban")],
+    "khulna": [("Khulna", r"khulna"), ("Jashore", r"jashore|jessore"), ("Satkhira", r"satkhira"), ("Bagerhat", r"bagerhat"),
+               ("Narail", r"narail"), ("Magura", r"\bmagura\b"), ("Jhenaidah", r"jhenaidah|jhenidah"),
+               ("Chuadanga", r"chuadanga"), ("Kushtia", r"kushtia"), ("Meherpur", r"meherpur")],
+    "barishal": [("Barishal", r"barish?al"), ("Bhola", r"\bbhola\b"), ("Patuakhali", r"patuakhali"), ("Pirojpur", r"pirojpur"),
+                 ("Jhalokathi", r"jhal[ao]k[ao]th?i"), ("Barguna", r"barguna")],
+    "sylhet": [("Sylhet", r"sylhet"), ("Moulvibazar", r"moulvi ?bazar|maulvi ?bazar"), ("Habiganj", r"h[ao]big[ao]nj"),
+               ("Sunamganj", r"sunamg[ao]nj")],
+    "mymensingh": [("Mymensingh", r"mymensingh"), ("Jamalpur", r"jamalpur"), ("Sherpur", r"\bsherpur\b"),
+                   ("Netrokona", r"netr[oa]k[oa]na")],
 }
+# districts of the divisions not configured yet (none left): only used so that 'the district named last' can fall
+# outside the division ('Dhaka Trunk Road, Chattogram' is in Chattogram)
+DIST_RE_OTHER = {}
 OFFICIAL_FIELDS = {"vice_chancellor", "pro_vice_chancellor", "treasurer", "registrar", "contact_person"}  # not kept
 FREE_MAIL = {"gmail.com", "yahoo.com", "hotmail.com", "outlook.com", "ymail.com", "live.com"}
 
@@ -306,10 +494,17 @@ def find_district(text):
     if DIVISION != "rajshahi":
         # an address can name a district of another division too ('Rangpur Road, Gokul, Bogura-5800'): the district
         # mentioned last wins, and it must belong to this division
-        hits = [(m.start(), name) for div, pats in DIST_RE_BY_DIV.items() for name, rx in pats for m in _re.finditer(rx, t)]
+        hits = [(m.start(), name) for div, pats in list(DIST_RE_BY_DIV.items()) + list(DIST_RE_OTHER.items())
+                for name, rx in pats for m in _re.finditer(rx, t)]
         if not hits:
             return ""
         last = max(hits)[1]
+        if DIVISION in ("dhaka", "chattogram", "khulna", "barishal", "sylhet", "mymensingh") and last == DIST_RE[0][0]:
+            # 'Basta, Singair, Manikganj, Dhaka': a trailing 'Dhaka' after another Dhaka-Division district names the division
+            # (likewise a trailing 'Chattogram' after another Chattogram-Division district)
+            inner = [h for h in hits if h[1] != last and any(h[1] == n for n, _ in DIST_RE)]
+            if inner and max(inner)[0] < max(hits)[0]:
+                last = max(inner)[1]
         return last if any(last == n for n, _ in DIST_RE) else ""
     for name, rx in DIST_RE:
         if _re.search(rx, t):
@@ -359,8 +554,9 @@ def clean_emails(raw, website):
 def clean_phones(raw):
     """Keep landline / hotline numbers (office lines); drop mobile numbers (01x…), which may be personal."""
     out = []
-    for p in _re.split(r"[,;/]", raw or ""):
-        p = _re.sub(r"\([^)]*[A-Za-z][^)]*\)|ext\.?:?.*$", "", p, flags=_re.I).strip()
+    # a 'Cell:'/'Mobile:' label also starts a new number ('…2869899. Cell: 01773-225500')
+    for p in _re.split(r"[,;/]|\b(?:Cell|Mobile|Mob)\b\s*:?", raw or "", flags=_re.I):
+        p = _re.sub(r"\([^)]*[A-Za-z][^)]*\)|ext\.?:?.*$", "", p, flags=_re.I).strip().rstrip(".").strip()
         digits = _re.sub(r"\D", "", p)
         if len(digits) < 6:
             continue
@@ -375,7 +571,8 @@ def clean_phones(raw):
 
 def main():
     global HERE, RAW, SOURCE_KEY, DIST_RE, DIVISION
-    args, HERE, SOURCE_KEY = division_setup(HERE, SOURCE_KEY, ["rajshahi", "rangpur"],
+    args, HERE, SOURCE_KEY = division_setup(HERE, SOURCE_KEY, ["rajshahi", "rangpur", "dhaka", "chattogram", "khulna", "barishal",
+                                                                     "sylhet", "mymensingh"],
                                             [("--offline", dict(action="store_true", help="rebuild places.csv from raw/"))])
     DIVISION, DIST_RE = args.division, DIST_RE_BY_DIV[args.division]
     RAW = os.path.join(HERE, "raw", "ugc_universities_%s_division.json" % DIVISION)

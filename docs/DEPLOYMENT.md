@@ -67,7 +67,7 @@ When that exists, point the website's sign-in and account routes at it, or move 
 
 - **Never run `scripts/db-reset.sh` outside development.** It drops the schema, and it refuses non-local hosts and `NODE_ENV=production`.
 - Apply migrations with `DATABASE_URL=… bash scripts/db-migrate.sh`. It records each file's SHA-256 in `schema_migrations`, skips applied files and aborts if an applied file changed.
-- First load of reference data on an empty production database: run `db-migrate.sh`, then `psql -f db/seed/seed.sql` **once**. The seed is an initial load, not an upsert.
+- First load of reference data on an empty production database: run `db-migrate.sh`, then `bash scripts/db-seed-once.sh` (it runs `psql -f db/seed/seed.sql`, which includes the per-division parts) **once**. The seed is an initial load, not an upsert.
 - Backups: daily snapshots + point-in-time recovery on the managed database. To restore, restore the snapshot to a new instance, run `db-migrate.sh` (a no-op if current), point `DATABASE_URL` at it and run `search:reindex`.
 - Grant the first super admin after they have signed in once: `node apps/api/dist/cli/grant-role.js +8801XXXXXXXXX super_admin`.
 

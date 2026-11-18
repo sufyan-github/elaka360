@@ -49,7 +49,7 @@ let stoppedEarly = false;
 for (const t of TABLES) {
   const want = JSON.parse(readFileSync(join(OUT, `${t.name}.json`), 'utf8'));
   const have = new Map();
-  if (!dryRun || mode === '--local') {
+  {
     const res = JSON.parse(wrangler(['--json', '--command', `SELECT ${t.key.join(', ')}, h FROM ${t.name}`]));
     for (const r of res[0]?.results ?? []) have.set(keyOf(t, r), r.h);
   }

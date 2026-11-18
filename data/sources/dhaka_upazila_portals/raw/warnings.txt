@@ -1,0 +1,19 @@
+Narsingdi/Belabo: no union list menu item
+Narsingdi/Monohardi: no union rows parsed from https://monohardi.narsingdi.gov.bd/pages/static-pages/6995971735ce18e1c0784999
+Gazipur/Kaliakair: pourashava page without a name: https://kaliakair.gazipur.gov.bd/pages/static-pages/6995de4e35ce18e1c07ad199
+Shariatpur/Naria: pourashava page without a name: https://naria.shariatpur.gov.bd/pages/static-pages/6995d1d135ce18e1c07aa3fe
+Shariatpur/Damudya: pourashava page without a name: https://damudya.shariatpur.gov.bd/pages/static-pages/6995b37c35ce18e1c07992e9
+Narayanganj/Rupganj: no union list menu item
+Tangail/Basail: no union list menu item
+Tangail/Ghatail: pourashava page without a name: https://ghatail.tangail.gov.bd/pages/static-pages/6995b37b35ce18e1c0799283
+Tangail/Sakhipur: pourashava page without a name: https://sakhipur.tangail.gov.bd/pages/static-pages/6995bebe35ce18e1c079ea19
+Tangail/Dhanbari: pourashava page without a name: https://dhanbari.tangail.gov.bd/pages/static-pages/6995c36535ce18e1c07a30f8
+Kishoreganj/Itna: no union rows parsed from https://itna.kishoreganj.gov.bd/pages/static-pages/6995976a35ce18e1c0786dc8
+Kishoreganj/Bajitpur: pourashava page without a name: https://bajitpur.kishoreganj.gov.bd/pages/static-pages/69957fbcf2b99fa8d1588055
+Manikganj/Manikganj Sadar: no union list menu item
+Munshiganj/Louhajanj: no union rows parsed from https://louhajanj.munshiganj.gov.bd/pages/static-pages/6995a2c035ce18e1c078f35b
+Rajbari/Pangsa: no union rows parsed from https://pangsa.rajbari.gov.bd/pages/static-pages/6995976435ce18e1c0786b4d
+Madaripur/Rajoir: pourashava page without a name: https://rajoir.madaripur.gov.bd/pages/static-pages/6995c32535ce18e1c07a14d3
+Gopalganj/Muksudpur: pourashava page without a name: https://muksudpur.gopalganj.gov.bd/pages/static-pages/6995996a35ce18e1c0787f67
+Faridpur/Faridpur Sadar: no union list menu item
+Faridpur/Alfadanga: no union list menu item

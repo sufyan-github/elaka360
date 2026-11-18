@@ -1,0 +1,30 @@
+{
+  "key": "DHKDIV_PORTAL_2026",
+  "name": "Dhaka Divisional Commissioner portal (dhakadiv.gov.bd)",
+  "organization": "Office of the Divisional Commissioner, Dhaka",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "division": "dhaka",
+  "kind": "divisional_portal",
+  "urls": [
+    "https://dhakadiv.gov.bd/",
+    "https://dhakadiv.gov.bd/pages/static-pages/6995b63335ce18e1c079a43f",
+    "https://dhakadiv.gov.bd/pages/static-pages/6995b63335ce18e1c079a45b",
+    "https://bangladesh.gov.bd/views/union-list"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Office of the Divisional Commissioner, Dhaka (dhakadiv.gov.bd), Bangladesh National Portal",
+  "files": {
+    "areas.csv": "061a919f395282984d676352162a9a7237b04d9c1dc51f875820e3a04a5e9405",
+    "facts.csv": "2119e487df334966c88ed09f3cea73418f03e062f6974a30c9704f5937bda63b",
+    "raw/districts.txt": "33c11c7fa38bf5eae6feab16620bbe487e9f8d306943a7d144de4af5985cc380",
+    "raw/glance.txt": "91aa7538c3fc3d2b91a5067fc9025e44925dd7736f2d5deed89b6d8fe1442fa4",
+    "raw/national_portal_list.csv": "ca376709bcc777d623a9aa2c928f7da547f09bd95cdd929ef532ba6754e5b6a0",
+    "raw/pages.csv": "6b076dfd805bad2eb07e52d53a00084ba15438fc08eda54542162c655c123244",
+    "raw/warnings.txt": "a68215bd9b15ac3d88fdce910974025ef64d6c125f49ae91c348c3ade71dc8a1"
+  },
+  "notes": "Collected by the generic division mode of the a2i portal collectors (pages found through the portals' menus, names and figures parsed from the pages). No licence stated; only facts (names, counts, figures) are extracted. English district/upazila names are the project's keys, not printed."
+}

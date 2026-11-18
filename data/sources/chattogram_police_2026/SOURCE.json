@@ -1,0 +1,30 @@
+{
+  "key": "CHATTOGRAM_POLICE_2026",
+  "division": "chattogram",
+  "kind": "district_police",
+  "name": "Chattogram District Police — SP office and thanas",
+  "organization": "Chattogram District Police (Bangladesh Police)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://police.chittagong.gov.bd/",
+    "https://police.chittagong.gov.bd/pages/static-pages/699149ac516a96d4de416ce6",
+    "https://chattogramdistrict.police.gov.bd/",
+    "https://chattogramdistrict.police.gov.bd/content/<255-270>.html",
+    "https://chittagong.gov.bd/pages/static-pages/6990c75635ce18e1c07176a0",
+    "https://police.<upazila>.chittagong.gov.bd/"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Office of the Superintendent of Police, Chattogram (police.chittagong.gov.bd, chattogramdistrict.police.gov.bd), the thana portals and the Chattogram DC portal",
+  "notes": "No licence stated. SP office from the Superintendent's officer card on police.chittagong.gov.bd (+ address from 'যোগাযোগ'); the 16 district thanas from the Bangladesh Police site chattogramdistrict.police.gov.bd (one page per thana with the OC's police official mobile), enriched with the office landline and *.gov.bd e-mail of the upazila thana portals police.<upazila>.chittagong.gov.bd. Personal e-mails, other mobiles and officers' names are not copied. Chattogram city is policed by CMP (CHATTOGRAM_METRO_POLICE_THANAS_2026); police.karnafuli.chittagong.gov.bd belongs to CMP's Karnaphuli thana and is not used here.",
+  "files": {
+    "places.csv": "9e8ef01b3a2e6a9a790dbf72f6bd9966afa3578dcc226e44fa886a47595104db",
+    "facts.csv": "994162aba80d375aff464b7ee1969b5670a87a940819b0466cbe8680b5b1e6f0",
+    "raw/chattogram_dc_glance_thanas.txt": "2ce2f9bc05f737396c18c9c78cce1b38d3f4730512b3972b4d26b6741162d6eb",
+    "raw/chattogram_police_contact.txt": "48f98cec2afe069d8309ae62ab43923fca972e1602111df970311ba21340514c",
+    "raw/chattogram_police_thana_pages.txt": "ab911e3525179f88a21677c188375a6166da02ed81c17fdee6755d103a8b41a0"
+  }
+}

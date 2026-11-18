@@ -1,0 +1,66 @@
+our_id,our_level,our_name_en,our_path,source_code,source_name_en,match_method,confidence,notes
+20063,district,Jamalpur,mymensingh/jamalpur,4539,Jamalpur,name_exact,high,source level district
+20062,district,Mymensingh,mymensingh/mymensingh,4561,Mymensingh,name_exact,high,source level district
+20064,district,Netrokona,mymensingh/netrokona,4572,Netrakona,code_district,high,source level district; spelling differs (Netrakona vs Netrokona); matched via district code 4572
+20061,district,Sherpur,mymensingh/sherpur,4589,Sherpur,name_exact,high,source level district
+30481,upazila,Bokshiganj,mymensingh/jamalpur/bokshiganj,45390007,Bakshiganj,name_skeleton,medium,source level upazila
+30478,upazila,Dewangonj,mymensingh/jamalpur/dewangonj,45390015,Dewanganj,name_skeleton,medium,source level upazila
+30477,upazila,Islampur,mymensingh/jamalpur/islampur,45390029,Islampur,name_exact,high,source level upazila
+30475,upazila,Jamalpur Sadar,mymensingh/jamalpur/jamalpur-sadar,45390036,Jamalpur Sadar,name_exact,high,source level upazila
+30480,upazila,Madarganj,mymensingh/jamalpur/madarganj,45390058,Madarganj,name_exact,high,source level upazila
+30476,upazila,Melandah,mymensingh/jamalpur/melandah,45390061,Melandaha,name_skeleton,medium,source level upazila
+30479,upazila,Sarishabari,mymensingh/jamalpur/sarishabari,45390085,Sarishabari,name_exact,high,source level upazila
+30464,upazila,Bhaluka,mymensingh/mymensingh/bhaluka,45610013,Bhaluka,name_exact,high,source level upazila
+30467,upazila,Dhobaura,mymensingh/mymensingh/dhobaura,45610016,Dhobaura,name_exact,high,source level upazila
+30462,upazila,Fulbaria,mymensingh/mymensingh/fulbaria,45610020,Fulbaria,name_exact,high,source level upazila
+30471,upazila,Gafargaon,mymensingh/mymensingh/gafargaon,45610022,Gafargaon,name_exact,high,source level upazila
+30470,upazila,Gouripur,mymensingh/mymensingh/gouripur,45610023,Gouripur,name_exact,high,source level upazila
+30469,upazila,Haluaghat,mymensingh/mymensingh/haluaghat,45610024,Haluaghat,name_exact,high,source level upazila
+30472,upazila,Iswarganj,mymensingh/mymensingh/iswarganj,45610031,Ishwarganj,name_exact,high,source level upazila
+30465,upazila,Muktagacha,mymensingh/mymensingh/muktagacha,45610065,Muktagacha,name_exact,high,source level upazila
+30473,upazila,Nandail,mymensingh/mymensingh/nandail,45610072,Nandail,name_exact,high,source level upazila
+30468,upazila,Phulpur,mymensingh/mymensingh/phulpur,45610081,Phulpur,name_exact,high,source level upazila
+30474,upazila,Tarakanda,mymensingh/mymensingh/tarakanda,45610088,Tarakanda,name_exact,high,source level upazila
+30463,upazila,Trishal,mymensingh/mymensingh/trishal,45610094,Trishal,name_exact,high,source level upazila
+30466,upazila,Mymensingh Sadar,mymensingh/mymensingh/mymensingh-sadar,45614052,Mymensingh Sadar,name_exact,high,source level upazila
+30485,upazila,Atpara,mymensingh/netrokona/atpara,45720004,Atpara,name_exact,high,source level upazila
+30482,upazila,Barhatta,mymensingh/netrokona/barhatta,45720009,Barhatta,name_exact,high,source level upazila
+30483,upazila,Durgapur,mymensingh/netrokona/durgapur,45720018,Durgapur,name_exact,high,source level upazila
+30487,upazila,Khaliajuri,mymensingh/netrokona/khaliajuri,45720038,Khaliajuri,name_exact,high,source level upazila
+30488,upazila,Kalmakanda,mymensingh/netrokona/kalmakanda,45720040,Kalmakanda,name_exact,high,source level upazila
+30484,upazila,Kendua,mymensingh/netrokona/kendua,45720047,Kendua,name_exact,high,source level upazila
+30486,upazila,Madan,mymensingh/netrokona/madan,45720056,Madan,name_exact,high,source level upazila
+30489,upazila,Mohongonj,mymensingh/netrokona/mohongonj,45720063,Mohanganj,name_skeleton,medium,source level upazila
+30491,upazila,Netrokona Sadar,mymensingh/netrokona/netrokona-sadar,45720074,Netrokona Sadar,name_exact,high,source level upazila
+30490,upazila,Purbadhala,mymensingh/netrokona/purbadhala,45720083,Purbadhala,name_exact,high,source level upazila
+30461,upazila,Jhenaigati,mymensingh/sherpur/jhenaigati,45890037,Jhenaigati,name_exact,high,source level upazila
+30460,upazila,Nokla,mymensingh/sherpur/nokla,45890067,Nakla,name_skeleton,medium,source level upazila
+30458,upazila,Nalitabari,mymensingh/sherpur/nalitabari,45890070,Nalitabari,name_exact,high,source level upazila
+30457,upazila,Sherpur Sadar,mymensingh/sherpur/sherpur-sadar,45890088,Sherpur Sadar,name_exact,high,source level upazila
+30459,upazila,Sreebordi,mymensingh/sherpur/sreebordi,45890090,Sreebardi,name_skeleton,medium,source level upazila
+50012,city_corporation,Mymensingh City Corporation,mymensingh/mymensingh/mymensingh-city-corporation,456140,Mymensingh City Corporation,name_exact,high,source level city_corporation
+,,,,4539000710,Bakshiganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Bokshiganj
+,,,,4539001516,Dewanganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Dewangonj
+,,,,4539002933,Islampur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Islampur
+,,,,4539003650,Jamalpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Jamalpur Sadar
+,,,,4539005860,Madarganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Madarganj
+,,,,4539006167,Melandaha Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Melandah
+,,,,4539008583,Sarishabari Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Sarishabari
+,,,,4561001311,Bhaluka Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Bhaluka
+,,,,4561002018,Fulbaria Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Fulbaria
+,,,,4561002333,Gauripur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Gouripur
+,,,,4561003144,Ishwarganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Iswarganj
+,,,,4561006566,Muktagachha Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Muktagacha
+,,,,4561007277,Nandail Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Nandail
+,,,,4561008183,Phulpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Phulpur
+,,,,4561009488,Trishal Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Trishal
+,,,,4561405255,Mymensingh Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Mymensingh Sadar
+,,,,4572001820,Durgapur Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Durgapur
+,,,,4572004740,Kendua Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kendua
+,,,,4572005650,Madan Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Madan
+,,,,4572006360,Mohanganj Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Mohongonj
+,,,,4572007480,Netrokona Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Netrokona Sadar
+,,,,4589006722,Nakla Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Nokla
+,,,,4589007033,Nalitabari Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Nalitabari
+,,,,4589008866,Sherpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Sherpur Sadar
+,,,,4589009077,Sreebardi Pourasabha,no_seed_unit,none,source level pourashava; our seed has no pourashava under Sreebordi

@@ -1,0 +1,74 @@
+our_id,our_level,our_name_en,our_path,source_code,source_name_en,match_method,confidence,notes
+20035,district,Barguna,barishal/barguna,1004,Barguna,name_exact,high,source level district
+20033,district,Barishal,barishal/barishal,1006,Barishal,name_exact,high,source level district
+20034,district,Bhola,barishal/bhola,1009,Bhola,name_exact,high,source level district
+20030,district,Jhalokathi,barishal/jhalokathi,1042,Jhalokathi,name_exact,high,source level district
+20031,district,Patuakhali,barishal/patuakhali,1078,Patuakhali,name_exact,high,source level district
+20032,district,Pirojpur,barishal/pirojpur,1079,Pirojpur,name_exact,high,source level district
+30266,upazila,Amtali,barishal/barguna/amtali,10040009,Amtali,name_exact,high,source level upazila
+30269,upazila,Bamna,barishal/barguna/bamna,10040019,Bamna,name_exact,high,source level upazila
+30267,upazila,Barguna Sadar,barishal/barguna/barguna-sadar,10040028,Barguna Sadar,name_exact,high,source level upazila
+30268,upazila,Betagi,barishal/barguna/betagi,10040047,Betagi,name_exact,high,source level upazila
+30270,upazila,Pathorghata,barishal/barguna/pathorghata,10040085,Patharghata,name_skeleton,medium,source level upazila
+30271,upazila,Taltali,barishal/barguna/taltali,10040090,Taltali,name_exact,high,source level upazila
+30255,upazila,Agailjhara,barishal/barishal/agailjhara,10060002,Agailjhara,name_exact,high,source level upazila
+30251,upazila,Babuganj,barishal/barishal/babuganj,10060003,Babuganj,name_exact,high,source level upazila
+30250,upazila,Bakerganj,barishal/barishal/bakerganj,10060007,Bakerganj,name_exact,high,source level upazila
+30253,upazila,Banaripara,barishal/barishal/banaripara,10060010,Banaripara,name_exact,high,source level upazila
+30254,upazila,Gournadi,barishal/barishal/gournadi,10060032,Gaurnadi,name_skeleton,medium,source level upazila
+30258,upazila,Hizla,barishal/barishal/hizla,10060036,Hizla,name_exact,high,source level upazila
+30256,upazila,Mehendiganj,barishal/barishal/mehendiganj,10060062,Mehendiganj,name_exact,high,source level upazila
+30257,upazila,Muladi,barishal/barishal/muladi,10060069,Muladi,name_exact,high,source level upazila
+30252,upazila,Wazirpur,barishal/barishal/wazirpur,10060094,Wazirpur,name_exact,high,source level upazila
+30249,upazila,Barisal Sadar,barishal/barishal/barisal-sadar,10065051,Barishal Sadar,name_exact,high,source level upazila
+30259,upazila,Bhola Sadar,barishal/bhola/bhola-sadar,10090018,Bhola Sadar,name_exact,high,source level upazila
+30260,upazila,Borhan Sddin,barishal/bhola/borhan-sddin,10090021,Borhanuddin,name_fuzzy,medium,source level upazila; similarity 0.90 to 'Borhan Sddin'
+30261,upazila,Charfesson,barishal/bhola/charfesson,10090025,Charfession,name_skeleton,medium,source level upazila
+30262,upazila,Doulatkhan,barishal/bhola/doulatkhan,10090029,Daulatkhan,name_skeleton,medium,source level upazila
+30265,upazila,Lalmohan,barishal/bhola/lalmohan,10090054,Lalmohan,name_exact,high,source level upazila
+30263,upazila,Monpura,barishal/bhola/monpura,10090065,Manpura,name_skeleton,medium,source level upazila
+30264,upazila,Tazumuddin,barishal/bhola/tazumuddin,10090091,Tazumuddin,name_exact,high,source level upazila
+30230,upazila,Jhalakathi Sadar,barishal/jhalokathi/jhalakathi-sadar,10420040,Jhalokathi Sadar,name_skeleton,medium,source level upazila
+30231,upazila,Kathalia,barishal/jhalokathi/kathalia,10420043,Kanthalia,name_fuzzy,medium,source level upazila; similarity 0.93 to 'Kathalia'
+30232,upazila,Nalchity,barishal/jhalokathi/nalchity,10420073,Nalchity,name_exact,high,source level upazila
+30233,upazila,Rajapur,barishal/jhalokathi/rajapur,10420084,Rajapur,name_exact,high,source level upazila
+30234,upazila,Bauphal,barishal/patuakhali/bauphal,10780038,Bauphal,name_exact,high,source level upazila
+30237,upazila,Dashmina,barishal/patuakhali/dashmina,10780052,Dashmina,name_exact,high,source level upazila
+30236,upazila,Dumki,barishal/patuakhali/dumki,10780055,Dumki,name_exact,high,source level upazila
+30240,upazila,Galachipa,barishal/patuakhali/galachipa,10780057,Galachipa,name_exact,high,source level upazila
+30238,upazila,Kalapara,barishal/patuakhali/kalapara,10780066,Kalapara,name_exact,high,source level upazila
+30239,upazila,Mirzaganj,barishal/patuakhali/mirzaganj,10780076,Mirzaganj,name_exact,high,source level upazila
+30235,upazila,Patuakhali Sadar,barishal/patuakhali/patuakhali-sadar,10780095,Patuakhali Sadar,name_exact,high,source level upazila
+30241,upazila,Rangabali,barishal/patuakhali/rangabali,10780097,Rangabali,name_exact,high,source level upazila
+30245,upazila,Zianagar,barishal/pirojpur/zianagar,10790090,Indurkani,code_hand_checked,high,source level upazila; hand-checked pair (Indurkani = Zianagar জিয়ানগর); the name matcher does not pair these
+30246,upazila,Bhandaria,barishal/pirojpur/bhandaria,10790014,Bhandaria,name_exact,high,source level upazila
+30244,upazila,Kawkhali,barishal/pirojpur/kawkhali,10790047,Kawkhali,name_exact,high,source level upazila
+30247,upazila,Mathbaria,barishal/pirojpur/mathbaria,10790058,Mathbaria,name_exact,high,source level upazila
+30243,upazila,Nazirpur,barishal/pirojpur/nazirpur,10790076,Nazirpur,name_exact,high,source level upazila
+30242,upazila,Pirojpur Sadar,barishal/pirojpur/pirojpur-sadar,10790080,Pirojpur Sadar,name_exact,high,source level upazila
+30248,upazila,Nesarabad,barishal/pirojpur/nesarabad,10790087,Nesarabad,name_exact,high,source level upazila
+50007,city_corporation,Barishal City Corporation,barishal/barishal/barishal-city-corporation,100650,Barishal City Corporation,name_exact,high,source level city_corporation
+,,,,1004000920,Amtali Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Amtali
+,,,,1004002840,Barguna Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Barguna Sadar
+,,,,1004004760,Betagi Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Betagi
+,,,,1004008580,Patharghata Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Pathorghata
+,,,,1006000716,Bakerganj Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Bakerganj
+,,,,1006001033,Banari Para Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Banaripara
+,,,,1006003267,Gaurnadi Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Gournadi
+,,,,1006006283,Mhendiganj Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Mehendiganj
+,,,,1006006987,Muladi Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Muladi
+,,,,1009001816,Bhola Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Bhola Sadar
+,,,,1009002133,Burhanuddin Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Borhan Sddin
+,,,,1009002550,Char Fasson Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Charfesson
+,,,,1009002967,Daulatkhan Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Doulatkhan
+,,,,1009005483,Lalmohan Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Lalmohan
+,,,,1042004033,Jhalokati Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Jhalakathi Sadar
+,,,,1042007366,Nalchity Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Nalchity
+,,,,1078003816,Bauphal Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Bauphal
+,,,,1078005725,Galachipa Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Galachipa
+,,,,1078006650,Kalapara Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kalapara
+,,,,1078006660,Kuakata Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kalapara
+,,,,1078009575,Patuakhali Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Patuakhali Sadar
+,,,,1079005825,Mathbaria Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Mathbaria
+,,,,1079008050,Pirojpur Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Pirojpur Sadar
+,,,,1079008775,Swarupkati Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Nesarabad

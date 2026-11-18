@@ -89,7 +89,8 @@ def main():
         p, f = lst[0]
         pp = p["properties"]
         name = f["properties"]["shapeName"]
-        if name.strip().lower() != pp["adm4_name"].strip().lower():
+        # runs of spaces are ignored (Sylhet: polygon "Dakshin  Sukhairrajapur", point "Dakshin Sukhairrajapur")
+        if " ".join(name.split()).lower() != " ".join(pp["adm4_name"].split()).lower():
             problems.append((pp["adm4_pcode"], pp["adm4_name"], f"polygon named {name}"))
             continue
         level = H.adm4_level(name)

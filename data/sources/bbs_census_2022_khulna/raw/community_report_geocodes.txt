@@ -1,0 +1,56 @@
+=== Jhenaidah | https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/a879b3e3-207e-4123-a799-4ee1c5100e9c.pdf
+## PDF page 25
+List of Geocodes of Jhenaidah District
+                                                44 - Jhenaidah
+14    -   Harinakundu Upazila         33    -   Kaliganj Upazila                 71     -   Maheshpur Upazila
+142   -   Bhayna Union                142   -   Barobazar Union                  109    -   Azampur Union
+176   -   Chandpur Union              407   -   Jamal Union                      143    -   Banshbaria Union
+210   -   Daulatpur Union             441   -   Kashthabhanga Union              276    -   Fatepur Union
+409   -   Joradah Union               450   -   Kola Union                       409    -   Jadabpur Union
+443   -   Kapashatia Union            509   -   Maliat Union                     443    -   Kazirber Union
+609   -   Phalsi Union                543   -   Niamatpur Union                  510    -   Mandarbaria Union
+676   -   Raghunathpur Union          676   -   Rakhalgachhi Union               544    -   Natima Union
+743   -   Taherhuda Union             685   -   Roygram Union                    553    -   Nepa Union
+                                      711   -   Simla Rokanpur Union             612    -   Pantapara Union
+12    -   Harinakundu Paurashava      720   -   Sundarpur Durgapur Union         712    -   SBK Union
+001   -   Ward No. 01                 746   -   Trilochanpur Union               721    -   Shyamkur Union
+002   -   Ward No. 02                                                            730    -   Swaruppur Union
+003   -   Ward No. 03                 32    -   Kaliganj Paurashava
+004   -   Ward No. 04                 001   -   Ward No. 01                      66     -   Maheshpur Paurashava
+005   -   Ward No. 05                 002   -   Ward No. 02                      001    -   Ward No. 01
+006   -   Ward No. 06                 003   -   Ward No. 03                      002    -   Ward No. 02
+007   -   Ward No. 07                 004   -   Ward No. 04                      003    -   Ward No. 03
+008   -   Ward No. 08                 005   -   Ward No. 05                      004    -   Ward No. 04
+009   -   Ward No. 09                 006   -   Ward No. 06                      005    -   Ward No. 05
+                                      007   -   Ward No. 07                      006    -   Ward No. 06
+19    -   Jhenaidah Sadar Upazila     008   -   Ward No. 08                      007    -   Ward No. 07
+208   -   Dogachhi Union              009   -   Ward No. 09                      008    -   Ward No. 08
+275   -   Fursandi Union                                                         009    -   Ward No. 09
+309   -   Ganna Union                 42    -   Kotchandpur Upazila
+318   -   Ghorshal Union              142   -   Baluhar Union                    80     -   Shailkupa Upazila
+344   -   Halidhani Union             209   -   Dora Union                       109    -   Abaipur Union
+353   -   Harishankarpur Union        243   -   Elangi Union                     143    -   Bagura Union
+445   -   Kalicharanpur Union         442   -   Kushna Union                     210    -   Dhalharachandra Union
+454   -   Kumrabaria Union            707   -   Sabdalpur Union                  219    -   Dignagar Union
+513   -   Madhuhati Union                                                        228    -   Dudhsar Union
+522   -   Maharajpur Union            50    -   Kotchandpur Paurashava           279    -   Fulhari Union
+548   -   Naldanga Union              001   -   Ward No. 01                      346    -   Hakimpur Union
+615   -   Padmakar Union              002   -   Ward No. 02                      446    -   Kancherkol Union
+624   -   Paglakanai Union            003   -   Ward No. 03                      513    -   Manoharpur Union
+633   -   Porahati Union              004   -   Ward No. 04                      522    -   Mirzapur Union
+717   -   Sadhuhati Union             005   -   Ward No. 05                      548    -   Nityanandapur Union
+726   -   Saganna Union               006   -   Ward No. 06                      714    -   Sarutia Union
+735   -   Surat Union                 007   -   Ward No. 07                      748    -   Tribeni Union
+                                      008   -   Ward No. 08                      782    -   Umedpur Union
+16    _   Jhenaidah Paurashava        009   -   Ward No. 09
+001   -   Ward No. 01                                                            83     -   Shailkupa Paurashava
+002   -   Ward No. 02                                                            001    -   Ward No. 01
+003   -   Ward No. 03                                                            002    -   Ward No. 02
+004   -   Ward No. 04                                                            003    -   Ward No. 03
+005   -   Ward No. 05                                                            004    -   Ward No. 04
+006   -   Ward No. 06                                                            005    -   Ward No. 05
+007   -   Ward No. 07                                                            006    -   Ward No. 06
+008   -   Ward No. 08                                                            007    -   Ward No. 07
+009   -   Ward No. 09                                                            008    -   Ward No. 08
+                                                                                 009    -   Ward No. 09
+                                                 Population and Housing Census 2022, Community Report: Jhenaidah   XVII

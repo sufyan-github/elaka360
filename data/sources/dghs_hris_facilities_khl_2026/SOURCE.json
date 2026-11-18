@@ -1,0 +1,24 @@
+{
+  "key": "DGHS_HRIS_FACILITIES_KHL_2026",
+  "name": "DGHS / MoHFW HRIS Facility Registry — organisation list, Khulna Division",
+  "organization": "Directorate General of Health Services (DGHS), Ministry of Health and Family Welfare",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=5",
+    "https://hris.mohfw.gov.bd/public/facility-registry"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Source: DGHS Facility Registry (hris.mohfw.gov.bd), Ministry of Health and Family Welfare, Bangladesh",
+  "division": "khulna",
+  "kind": "dghs_hris",
+  "files": {
+    "places.csv": "68b1b8d563269e592a2ead98c957217f7b3f6c224c3e32cfad7d67f9546ec96d",
+    "facts.csv": "521eb6a288af4ad350fe8724912a8d572bed66c83451b8ba84312154bf7cdb01",
+    "raw/hris_organization_list_khulna_division.csv": "68fa6e891ca37aec02dcf4cb8ae57ea8b1811f2cc272dfadaacef00d9c0141f4"
+  },
+  "notes": "Public report of the MoHFW HRIS Facility Registry. Excel export (ret=excel) of all active entries filtered to Khulna Division (division_id 5), same collector and rules as DGHS_HRIS_FACILITIES_RAJ_2026. Registry is live and self-reported by facilities; coordinates are as entered by facilities (QA flags in notes). Contacts kept only for non-private facilities; private/NGO contacts and addresses and facility-head names not collected. No licence stated on the site."
+}

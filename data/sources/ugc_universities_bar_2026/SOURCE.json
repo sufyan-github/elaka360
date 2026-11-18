@@ -1,0 +1,22 @@
+{
+  "key": "UGC_UNIVERSITIES_BAR_2026",
+  "division": "barishal",
+  "kind": "ugc",
+  "name": "UGC university register — universities in Barishal Division",
+  "organization": "University Grants Commission of Bangladesh (UGC)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://www.ugc.gov.bd/universities"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Source: University Grants Commission of Bangladesh (ugc.gov.bd)",
+  "notes": "All universities on ugc.gov.bd (public, private, international, CBHE) were read from the page data embedded in each university page (/university/<slug>); kept where the UGC campus address names a Barishal-Division district (when an address also names another division's district, the district named last decides; a trailing 'Barishal' after another Barishal-Division district is read as the division), or, when UGC gives no address at all, where the university's name does (flagged in notes). UGC spelling 'Barisal' is recognised. Officials' names (VC, registrar etc.) are dropped. Phones: only landline/hotline numbers kept (mobile numbers dropped as possibly personal); e-mails: only the university's own domain or institutional-looking addresses. Upazila only where the address names one outside the city (no metropolitan thanas). No coordinates. Licence not stated.",
+  "files": {
+    "places.csv": "6a4ccd8fedaf8d9f1d247d0671f45f9f1344f7565069e3b24f80705c00edc783",
+    "raw/ugc_universities_barishal_division.json": "d7c26a24684c257496c4b6441ddb009e468ea50a9bce4882b8b2f1a8492a50c9"
+  }
+}

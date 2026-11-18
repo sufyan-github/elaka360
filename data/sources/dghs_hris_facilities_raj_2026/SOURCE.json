@@ -17,9 +17,9 @@
   "division": "rajshahi",
   "kind": "dghs_hris",
   "files": {
-    "places.csv": "0108aaf4f40f138e17432809ef3188b1177ff6ccb77424bb5fa3addde76cc10e",
+    "places.csv": "139c42c2901bffe6a43f8577756151cc5569a05ada576c9c049d96c60417c890",
     "facts.csv": "b57fc1271e368ba9befd2fef56dbf32f5d348a3abb974abe8089483e6aa7b6b3",
-    "raw/hris_organization_list_rajshahi_division.csv": "6a7dc8e82d9a05012c1ef619a240becaf3bf13fd685ff6545319cd7ab93cdfb9"
+    "raw/hris_organization_list_rajshahi_division.csv": "5c45dc2039d66854df7bbb2ec21e4c13de54b23f0e68baf6d3c1c18b0d6bc2b3"
   },
   "notes": "Public report of the MoHFW HRIS Facility Registry (successor of facilityregistry.dghs.gov.bd, which returned 'Service Unavailable' on 2026-11-12). Excel export (ret=excel) of all active entries filtered to Rajshahi Division (division_id 3): 5,227 rows incl. government facilities, private hospitals/clinics/diagnostic centres, health offices and training institutes. Registry is live and self-reported by facilities; coordinates are as entered by facilities (QA flags in notes). Contacts kept only for non-private facilities (DGHS-issued office mobiles/landlines and dghs.gov.bd mailboxes); private/NGO contacts and facility-head names not collected. No licence stated on the site."
 }

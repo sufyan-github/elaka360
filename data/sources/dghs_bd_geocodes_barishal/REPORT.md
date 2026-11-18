@@ -1,0 +1,33 @@
+# DGHS bd-geocodes (BBS geocodes) — Barishal Division
+
+- **Source:** DGHS Bangladesh Core FHIR Implementation Guide, CodeSystem `bd-geocodes` v0.5.0 (2026-10-15), 1,591 codes nationally. https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html
+- **Run:** `python3 -I data/sources/dghs_bd_geocodes/fetch.py --division barishal` (accessed 2026-11-18). Key `DGHS_BD_GEOCODES_BARISHAL`, division `barishal`, kind `dghs_geocodes`.
+- **Licence:** CC0-1.0 (the guide's licence field).
+- **Code layout (inferred, as for Rajshahi):** 2 digits division (10) · 4 district · 6 city corporation (100650 Barishal) · 8 upazila or city thana · 10 paurashava.
+- **Coverage:**
+  - 6 districts, 1 city corporation, 42 upazilas, 24 paurashavas.
+  - **No unions:** the 42 "Unions Of … Upazila" placeholders are skipped.
+- **Barishal Sadar:**
+  - The list has one unit, 10065051 "Barishal Sadar". It sits in the city corporation's code space, and the list also has "Unions Of Barisal Sadar (kotwali) Upazila" (1006505199) and the city part "Barisal City Corp." (1006505150, skipped).
+  - Under the existing rule (as for Rangpur Sadar) it is read as an upazila, with a note, and matched to seed Barisal Sadar (30249). There is no separate metro-thana code.
+  - Its code differs from the HDX v03 P-code of Barishal Sadar upazila (`BD10060051`). The other 41 upazila codes equal the HDX v03 P-codes minus `BD`.
+- **fetch.py change:** hand-checked upazila table `UNIT_SEED_BY_DIV["barishal"]`: Indurkani 10790090 → Zianagar (জিয়ানগর, 30245), method `code_hand_checked`.
+  - No tier pairs them; the seed's Bangla name is the upazila's former name.
+  - HDX's 2020 point for upazila 79-90 is named Zianagar.
+  - The seed's three Zianagar unions are BBS 2022 Indurkani unions.
+- **Rerun check:**
+  - Rajshahi (no `--division`), Rangpur, Dhaka, Chattogram and Khulna into a scratch folder: areas.csv and raw files identical.
+  - `crosswalk.csv` differs only in pourashava rows. The seed gained pourashavas after those folders were built; the HEAD version of fetch.py on the current seed gives identical output.
+- **Crosswalk:**
+  - Districts 6/6; city corporation 1/1 (50007).
+  - Upazilas 42/42:
+    - 33 exact.
+    - 6 skeleton: Patharghata, Gaurnadi, Charfession, Daulatkhan, Manpura↔Monpura, Jhalokathi Sadar.
+    - 2 fuzzy medium: Borhanuddin↔Borhan Sddin, Kanthalia↔Kathalia.
+    - 1 hand-checked.
+  - Paurashavas 0/24: the seed has no Barishal Division pourashavas.
+- **Paurashavas (24):** Barishal 5, Bhola 5, Patuakhali 5, Barguna 4, Pirojpur 3, Jhalokathi 2.
+  - The last two digits equal the BBS 2022 paurashava code for all 24.
+  - BBS 2022 has 26; Ujirpur and Bhandaria are missing here.
+  - Spellings as printed: "…Paurasava", "Mhendiganj Paurasava", "Burhanuddin Paurasava", "Char Fasson Paurasava", "Swarupkati Paurasava", "Jhalokati Paurasava".
+- **Code vintage:** not stated by DGHS.

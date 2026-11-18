@@ -1,0 +1,24 @@
+{
+  "key": "CHATTOGRAM_PORTAL_OFFICES_2026",
+  "division": "chattogram",
+  "kind": "portal_offices",
+  "name": "Government offices on the national portal sites — Divisional Commissioner, Chattogram DC & upazila portals, DC/UNO offices of Chattogram Division",
+  "organization": "Divisional / District / Upazila administrations (national portal framework)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://chittagongdiv.gov.bd/",
+    "https://chittagong.gov.bd/",
+    "https://<upazila>.chittagong.gov.bd/",
+    "https://chittagong.gov.bd/pages/static-pages/list-of-unions-12805e-6990c49335ce18e1c0715459"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Divisional / District / Upazila administrations (national portal framework)",
+  "notes": "Office list = menu entries under 'সরকারি অফিসসমূহ' / 'সরকারী অফিস' / 'স্থানীয় সরকার' / 'পৌরসভা' plus the DC/UNO portals themselves; union parishads from the Chattogram DC portal's union list. Contacts = office landline and *.gov.bd e-mail from the office head's officer card or the 'যোগাযোগ' page; mobile numbers, personal e-mails and officials' names are not collected. No addresses/coordinates are published in a structured way. Licence: none stated on the source; treat as government public information, cite the source.",
+  "files": {
+    "places.csv": "576d20ad71c476e20d3ae855890041ffff7203f9c16116589e73d70d4dab0f17"
+  }
+}

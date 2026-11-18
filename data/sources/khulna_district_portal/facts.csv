@@ -1,0 +1,13 @@
+entity_level,entity_name_en,district_en,upazila_en,code,fact,value,unit,basis,year,source_key,source_url,notes
+district,Khulna,Khulna,,,upazila_count_listed,9,count,count of upazilas listed,,KHULNA_DC_PORTAL_2026,https://khulna.gov.bd/pages/static-pages/upazila-parisad-list-c3cd3b-69810876a31054345f1d80fe,page updated 2026-10-08
+upazila,Rupsha,Khulna,Rupsha,,union_count,5,count,count of unions listed,,KHULNA_DC_PORTAL_2026,https://khulna.gov.bd/pages/static-pages/6981413b35ce18e1c0700662,page updated 2026-10-08
+upazila,Terokhada,Khulna,Terokhada,,union_count,6,count,count of unions listed,,KHULNA_DC_PORTAL_2026,https://khulna.gov.bd/pages/static-pages/6981413b35ce18e1c0700662,page updated 2026-10-08
+upazila,Digholia,Khulna,Digholia,,union_count,6,count,count of unions listed,,KHULNA_DC_PORTAL_2026,https://khulna.gov.bd/pages/static-pages/6981413b35ce18e1c0700662,page updated 2026-10-08
+upazila,Fultola,Khulna,Fultola,,union_count,4,count,count of unions listed,,KHULNA_DC_PORTAL_2026,https://khulna.gov.bd/pages/static-pages/6981413b35ce18e1c0700662,page updated 2026-10-08
+upazila,Dumuria,Khulna,Dumuria,,union_count,14,count,count of unions listed,,KHULNA_DC_PORTAL_2026,https://khulna.gov.bd/pages/static-pages/6981413b35ce18e1c0700662,page updated 2026-10-08
+upazila,Botiaghata,Khulna,Botiaghata,,union_count,7,count,count of unions listed,,KHULNA_DC_PORTAL_2026,https://khulna.gov.bd/pages/static-pages/6981413b35ce18e1c0700662,page updated 2026-10-08
+upazila,Dakop,Khulna,Dakop,,union_count,9,count,count of unions listed,,KHULNA_DC_PORTAL_2026,https://khulna.gov.bd/pages/static-pages/6981413b35ce18e1c0700662,page updated 2026-10-08
+upazila,Paikgasa,Khulna,Paikgasa,,union_count,10,count,count of unions listed,,KHULNA_DC_PORTAL_2026,https://khulna.gov.bd/pages/static-pages/6981413b35ce18e1c0700662,page updated 2026-10-08
+upazila,Koyra,Khulna,Koyra,,union_count,7,count,count of unions listed,,KHULNA_DC_PORTAL_2026,https://khulna.gov.bd/pages/static-pages/6981413b35ce18e1c0700662,page updated 2026-10-08
+district,Khulna,Khulna,,,union_count_listed,68,count,count of unions listed,,KHULNA_DC_PORTAL_2026,https://khulna.gov.bd/pages/static-pages/6981413b35ce18e1c0700662,page updated 2026-10-08
+district,Khulna,Khulna,,,pourashava_count_listed,2,count,count of pourashavas listed,,KHULNA_DC_PORTAL_2026,https://khulna.gov.bd/pages/static-pages/69812dec35ce18e1c06f9933,page updated 2026-10-14

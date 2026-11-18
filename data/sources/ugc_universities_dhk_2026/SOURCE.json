@@ -1,0 +1,22 @@
+{
+  "key": "UGC_UNIVERSITIES_DHK_2026",
+  "division": "dhaka",
+  "kind": "ugc",
+  "name": "UGC university register — universities in Dhaka Division",
+  "organization": "University Grants Commission of Bangladesh (UGC)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://www.ugc.gov.bd/universities"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Source: University Grants Commission of Bangladesh (ugc.gov.bd)",
+  "notes": "All 181 universities on ugc.gov.bd (public, private, international, CBHE) were read from the page data embedded in each university page (/university/<slug>); kept where the UGC campus address names a Dhaka-Division district (when an address also names another division's district, the district named last decides; a trailing 'Dhaka' after another Dhaka-Division district, as in 'Singair, Manikganj, Dhaka', is read as the division), or, when UGC gives no address at all, where the university's name does (flagged in notes). Officials' names (VC, registrar etc.) are dropped. Phones: only landline/hotline numbers kept (mobile numbers dropped as possibly personal); e-mails: only the university's own domain or institutional-looking addresses. Upazila only where the address names one outside the city (no metropolitan thanas). No coordinates. Licence not stated.",
+  "files": {
+    "places.csv": "f47632d7e4e235250ac24944e7a590aab1283bd01121f48d6f984bcfabfe10ea",
+    "raw/ugc_universities_dhaka_division.json": "57eb5b20c2a33fae3b8d3089f910ed1bb0ed92235415d4bcfeadd5a31dcc5591"
+  }
+}

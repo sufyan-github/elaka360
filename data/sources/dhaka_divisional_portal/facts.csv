@@ -1,0 +1,100 @@
+entity_level,entity_name_en,district_en,upazila_en,code,fact,value,unit,basis,year,source_key,source_url,notes
+division,Dhaka,,,,upazila_count,89,count,as stated,,DHKDIV_PORTAL_2026,https://dhakadiv.gov.bd/pages/static-pages/6995b63335ce18e1c079a43f,label 'উপজেলার সংখ্যা' value '৮৯ টি'; page updated 2026-05-21
+division,Dhaka,,,,thana_count,96,count,as stated,,DHKDIV_PORTAL_2026,https://dhakadiv.gov.bd/pages/static-pages/6995b63335ce18e1c079a43f,label 'থানার সংখ্যা' value 'পুলিশ থানা ৯৬ টি'; page updated 2026-05-21
+division,Dhaka,,,,city_corporation_count,4,count,as stated,,DHKDIV_PORTAL_2026,https://dhakadiv.gov.bd/pages/static-pages/6995b63335ce18e1c079a43f,label 'সিটি কর্পোরেশন' value '০৪ টি'; page updated 2026-05-21
+division,Dhaka,,,,union_count,885,count,as stated,,DHKDIV_PORTAL_2026,https://dhakadiv.gov.bd/pages/static-pages/6995b63335ce18e1c079a43f,label 'ইউনিয়ন পরিষদ' value '৮৮৫ টি'; page updated 2026-05-21
+division,Dhaka,,,,pourashava_count,63,count,as stated,,DHKDIV_PORTAL_2026,https://dhakadiv.gov.bd/pages/static-pages/6995b63335ce18e1c079a43f,label 'পৌরসভা' value '৬৩ টি'; page updated 2026-05-21
+division,Dhaka,,,,village_count,25244,count,as stated,,DHKDIV_PORTAL_2026,https://dhakadiv.gov.bd/pages/static-pages/6995b63335ce18e1c079a43f,label 'গ্রাম' value '২৫২৪৪ টি'; page updated 2026-05-21
+division,Dhaka,,,,mouza_count,12765,count,as stated,,DHKDIV_PORTAL_2026,https://dhakadiv.gov.bd/pages/static-pages/6995b63335ce18e1c079a43f,label 'মৌজা' value '১২৭৬৫ টি'; page updated 2026-05-21
+division,Dhaka,,,,district_count_listed,13,count,count of districts listed,,DHKDIV_PORTAL_2026,https://dhakadiv.gov.bd/pages/static-pages/6995b63335ce18e1c079a45b,page updated 2026-05-21
+division,Dhaka,,,,upazila_count_listed,89,count,count of upazilas listed,,DHKDIV_PORTAL_2026,https://dhakadiv.gov.bd/pages/static-pages/6995b63335ce18e1c079a45b,page updated 2026-05-21
+upazila,Dhamrai,Dhaka,Dhamrai,,union_portal_count,16,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Dohar,Dhaka,Dohar,,union_portal_count,8,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Keraniganj,Dhaka,Keraniganj,,union_portal_count,12,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Nawabganj,Dhaka,Nawabganj,,union_portal_count,14,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Savar,Dhaka,Savar,,union_portal_count,12,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Alfadanga,Faridpur,Alfadanga,,union_portal_count,6,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Bhanga,Faridpur,Bhanga,,union_portal_count,12,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Boalmari,Faridpur,Boalmari,,union_portal_count,10,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Charbhadrasan,Faridpur,Charbhadrasan,,union_portal_count,4,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Faridpur Sadar,Faridpur,Faridpur Sadar,,union_portal_count,11,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Madhukhali,Faridpur,Madhukhali,,union_portal_count,11,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Nagarkanda,Faridpur,Nagarkanda,,union_portal_count,9,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Sadarpur,Faridpur,Sadarpur,,union_portal_count,9,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Saltha,Faridpur,Saltha,,union_portal_count,8,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Gazipur Sadar,Gazipur,Gazipur Sadar,,union_portal_count,4,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Kaliakair,Gazipur,Kaliakair,,union_portal_count,9,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Kaliganj,Gazipur,Kaliganj,,union_portal_count,7,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Kapasia,Gazipur,Kapasia,,union_portal_count,11,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Sreepur,Gazipur,Sreepur,,union_portal_count,8,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Gopalganj Sadar,Gopalganj,Gopalganj Sadar,,union_portal_count,21,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Kashiani,Gopalganj,Kashiani,,union_portal_count,14,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Kotalipara,Gopalganj,Kotalipara,,union_portal_count,11,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Muksudpur,Gopalganj,Muksudpur,,union_portal_count,16,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Tungipara,Gopalganj,Tungipara,,union_portal_count,5,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Austagram,Kishoreganj,Austagram,,union_portal_count,8,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Bajitpur,Kishoreganj,Bajitpur,,union_portal_count,11,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Bhairab,Kishoreganj,Bhairab,,union_portal_count,7,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Hossainpur,Kishoreganj,Hossainpur,,union_portal_count,6,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Itna,Kishoreganj,Itna,,union_portal_count,9,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Karimgonj,Kishoreganj,Karimgonj,,union_portal_count,11,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Katiadi,Kishoreganj,Katiadi,,union_portal_count,9,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Kishoreganj Sadar,Kishoreganj,Kishoreganj Sadar,,union_portal_count,11,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Kuliarchar,Kishoreganj,Kuliarchar,,union_portal_count,6,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Mithamoin,Kishoreganj,Mithamoin,,union_portal_count,7,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Nikli,Kishoreganj,Nikli,,union_portal_count,7,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Pakundia,Kishoreganj,Pakundia,,union_portal_count,9,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Tarail,Kishoreganj,Tarail,,union_portal_count,7,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Dasar,Madaripur,Dasar,,union_portal_count,5,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Kalkini,Madaripur,Kalkini,,union_portal_count,10,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Madaripur Sadar,Madaripur,Madaripur Sadar,,union_portal_count,15,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Rajoir,Madaripur,Rajoir,,union_portal_count,11,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Shibchar,Madaripur,Shibchar,,union_portal_count,18,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Doulatpur,Manikganj,Doulatpur,,union_portal_count,8,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Gior,Manikganj,Gior,,union_portal_count,7,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Harirampur,Manikganj,Harirampur,,union_portal_count,13,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Manikganj Sadar,Manikganj,Manikganj Sadar,,union_portal_count,10,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Saturia,Manikganj,Saturia,,union_portal_count,9,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Shibaloy,Manikganj,Shibaloy,,union_portal_count,7,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Singiar,Manikganj,Singiar,,union_portal_count,11,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Gajaria,Munshiganj,Gajaria,,union_portal_count,8,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Louhajanj,Munshiganj,Louhajanj,,union_portal_count,10,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Munshiganj Sadar,Munshiganj,Munshiganj Sadar,,union_portal_count,9,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Sirajdikhan,Munshiganj,Sirajdikhan,,union_portal_count,14,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Sreenagar,Munshiganj,Sreenagar,,union_portal_count,14,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Tongibari,Munshiganj,Tongibari,,union_portal_count,13,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Araihazar,Narayanganj,Araihazar,,union_portal_count,10,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Bandar,Narayanganj,Bandar,,union_portal_count,5,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Narayanganj Sadar,Narayanganj,Narayanganj Sadar,,union_portal_count,7,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Rupganj,Narayanganj,Rupganj,,union_portal_count,7,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Sonargaon,Narayanganj,Sonargaon,,union_portal_count,10,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Belabo,Narsingdi,Belabo,,union_portal_count,8,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Monohardi,Narsingdi,Monohardi,,union_portal_count,12,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Narsingdi Sadar,Narsingdi,Narsingdi Sadar,,union_portal_count,14,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Palash,Narsingdi,Palash,,union_portal_count,4,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Raipura,Narsingdi,Raipura,,union_portal_count,24,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Shibpur,Narsingdi,Shibpur,,union_portal_count,9,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Baliakandi,Rajbari,Baliakandi,,union_portal_count,7,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Goalanda,Rajbari,Goalanda,,union_portal_count,4,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Kalukhali,Rajbari,Kalukhali,,union_portal_count,7,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Pangsa,Rajbari,Pangsa,,union_portal_count,10,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Rajbari Sadar,Rajbari,Rajbari Sadar,,union_portal_count,14,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Bhedarganj,Shariatpur,Bhedarganj,,union_portal_count,13,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Damudya,Shariatpur,Damudya,,union_portal_count,7,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Gosairhat,Shariatpur,Gosairhat,,union_portal_count,8,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Naria,Shariatpur,Naria,,union_portal_count,14,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Shariatpur Sadar,Shariatpur,Shariatpur Sadar,,union_portal_count,11,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Zajira,Shariatpur,Zajira,,union_portal_count,12,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Basail,Tangail,Basail,,union_portal_count,6,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Bhuapur,Tangail,Bhuapur,,union_portal_count,6,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Delduar,Tangail,Delduar,,union_portal_count,8,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Dhanbari,Tangail,Dhanbari,,union_portal_count,7,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Ghatail,Tangail,Ghatail,,union_portal_count,14,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Gopalpur,Tangail,Gopalpur,,union_portal_count,7,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Kalihati,Tangail,Kalihati,,union_portal_count,13,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Madhupur,Tangail,Madhupur,,union_portal_count,11,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Mirzapur,Tangail,Mirzapur,,union_portal_count,14,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Nagarpur,Tangail,Nagarpur,,union_portal_count,12,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Sakhipur,Tangail,Sakhipur,,union_portal_count,10,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+upazila,Tangail Sadar,Tangail,Tangail Sadar,,union_portal_count,12,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals
+division,Dhaka,,,,union_portal_count,885,count,count of union portals listed,,DHKDIV_PORTAL_2026,https://bangladesh.gov.bd/views/union-list,national portal list of union portals

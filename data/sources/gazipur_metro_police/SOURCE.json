@@ -1,0 +1,33 @@
+{
+  "key": "GAZIPUR_METRO_POLICE",
+  "division": "dhaka",
+  "kind": "metro_police",
+  "city": 50011,
+  "name": "Gazipur Metropolitan Police official site (gmp.gov.bd)",
+  "organization": "Gazipur Metropolitan Police, Bangladesh Police",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://gmp.gov.bd/",
+    "https://gmp.gov.bd/history.php",
+    "https://gmp.gov.bd/range-units/units_details.php?zone_id=1",
+    "https://gmp.gov.bd/range-units/units_details.php?zone_id=2",
+    "https://gmp.gov.bd/range-units/units_details.php?zone_id=3",
+    "https://gmp.gov.bd/range-units/units_details.php?zone_id=4",
+    "https://gmp.gov.bd/range-units/units_details.php?zone_id=5",
+    "https://gmp.gov.bd/range-units/units_details.php?zone_id=6",
+    "https://gmp.gov.bd/range-units/units_details.php?zone_id=7",
+    "https://gmp.gov.bd/range-units/units_details.php?zone_id=8"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Gazipur Metropolitan Police (gmp.gov.bd)",
+  "notes": "gmp.gov.bd is GMP's own PHP site (no update dates). 8 thanas in 4 zones; the metropolitan area is the 57 wards of Gazipur City Corporation, so each thana's area_en is Gazipur City Corporation. No ward/mouza coverage per thana is published. Phone numbers are in GAZIPUR_METRO_POLICE_THANAS_2026.",
+  "files": {
+    "areas.csv": "cd83b0d1e08aa174694b6f28359b83d4c009e76f4d1ded8efd6700cc40bc450f",
+    "facts.csv": "a45129c9a585775c9b483b2faf38b33ef256ac524b4eb6f8fb4aa9c50ab13fa0",
+    "raw/about_gmp.txt": "d22a683d304ebd077f9ae040cb55fd429b0d63c31b75916a913e46cc632af1fb"
+  }
+}

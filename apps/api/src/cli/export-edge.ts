@@ -48,6 +48,9 @@ const summaryOf = (a: AdminAreaSummary): AdminAreaSummary => ({
 });
 
 async function main() {
+  // An offline batch job, not a request: the API's 8 s per-query cap is too tight for whole-country queries on a
+  // freshly loaded (cold) database. An explicit DB_STATEMENT_TIMEOUT_MS still wins.
+  process.env.DB_STATEMENT_TIMEOUT_MS ??= '120000';
   const db = new Db();
   const geo = new GeoService(db);
   const places = new PlacesService(db);

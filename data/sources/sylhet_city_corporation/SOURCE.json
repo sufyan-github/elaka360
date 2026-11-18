@@ -1,0 +1,33 @@
+{
+  "key": "SYLHET_CITY_CORPORATION",
+  "division": "sylhet",
+  "kind": "city_corporation",
+  "city": 50006,
+  "name": "Sylhet City Corporation official site (scc.gov.bd)",
+  "organization": "Sylhet City Corporation",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://scc.gov.bd/",
+    "https://scc.gov.bd/pages/static-pages/6922df09933eb65569e1f5f4",
+    "https://scc.gov.bd/pages/static-pages/6922e132933eb65569e2acec",
+    "https://scc.gov.bd/pages/static-pages/6922db7b933eb65569e0a54f",
+    "https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0691",
+    "https://police.sylhet.gov.bd/pages/static-pages/696cafe6c4774958d7b9fb06",
+    "https://police.sylhetdiv.gov.bd/pages/static-pages/696ca219c4774958d7b931b6"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": "2026-02-25",
+  "license": null,
+  "license_url": null,
+  "attribution": "Sylhet City Corporation (scc.gov.bd); Sylhet DC portal (sylhet.gov.bd)",
+  "notes": "Key page: SCC এক নজরে (updated 2026-02-25 12:54): established ২৮ জুলাই ২০০২, ৭৯.৫০ বর্গ কিমি, ৪২ wards (৪২ general / ১৪ reserved-seat councillors), population ১০ ( লাখ আনুমানিক) (estimate, no year). Ward numbers 1-42 from the ward-secretary page (names and mobiles there are not used). The DC portal also gives 42 wards; the SP portal (27, page updated 2023) and SMP (27, its 2011 jurisdiction, page updated 2022) give an older count. scc.gov.bd publishes no ward names, ward map text or ward-to-thana assignment. Officials' names are not copied.",
+  "files": {
+    "areas.csv": "e9a5e0719bf2a849c430c0145f1e2d37432169c5fd819854cf54d79a7f235169",
+    "facts.csv": "090a4f797a49070446293cfde3ea58dcabadfde071d98a8b1b9b5ad93c88c0e6",
+    "raw/contact.txt": "5ab9856da6fdf322c69bdb7e9412f1df6e073bddeee114376a8c97cb059a50b0",
+    "raw/ek_nojore_scc.txt": "0f95d35deb05c768242c2208590a37d22ee54755ee6c72585c8416fe43f54c6b",
+    "raw/ward_count_other_portals.txt": "201921f216201a77700f141c10beca72e4b8b7aa62a6d5dc71597a5f6950d3fc",
+    "raw/ward_numbers.txt": "e27063e413e8c0c6736cba7df85ace44a8e350b72f48353de7de313f77c5c6f6"
+  }
+}

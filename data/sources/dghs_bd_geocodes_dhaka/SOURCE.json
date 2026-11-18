@@ -1,0 +1,25 @@
+{
+  "key": "DGHS_BD_GEOCODES_DHAKA",
+  "name": "Bangladesh GeoCodes CodeSystem (BBS geo-codes) in the DGHS Bangladesh Core FHIR IG, Dhaka Division extract",
+  "organization": "Directorate General of Health Services (DGHS), Ministry of Health and Family Welfare",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html",
+    "https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.json",
+    "https://fhir.dghs.gov.bd/core/ImplementationGuide-bd.fhir.core.json"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": "2026-10-15",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution": "Directorate General of Health Services (DGHS), Bangladesh — Bangladesh Core FHIR IG; codes: BBS geo-code system",
+  "files": {
+    "areas.csv": "f379f1d87da837a710c21574c25566b3bceb515c4dc3fae058b5b57a363397c1",
+    "crosswalk.csv": "3c5842882f4c4b0d1ca4a932fdc51119bd0813fc4958abcdb4814c07acad1561",
+    "raw/bd-geocodes_dhaka.json": "cb3dd4701df3e2ff5e5eaac5a019c65b5ba4f35b91f461cbc87c3fa1758abcbf"
+  },
+  "notes": "CodeSystem https://fhir.dghs.gov.bd/core/CodeSystem/bd-geocodes version 0.5.0, status draft, date 2026-10-15T00:09:54+00:00, 1591 codes nationally. Divisions, districts, upazilas/city thanas, city corporations and paurashavas only: no union-level codes (only 'Unions Of X Upazila' placeholders). The IG does not say which BBS release the codes come from. Skipped entries: 302600 Dhaka N/A (district placeholder (no city corporation)); 302900 Faridpur N/A (district placeholder (no city corporation)); 303300 Gazipur N/A (district placeholder (no city corporation)); 3033333033 Gazipur City Corporation (part of the city corporation inside thana Gazipur Sadar); 303500 Gopalganj N/A (district placeholder (no city corporation)); 304800 Kishoreganj N/A (district placeholder (no city corporation)); 305400 Madaripur N/A (district placeholder (no city corporation)); 305600 Manikganj N/A (district placeholder (no city corporation)); 305900 Munshiganj N/A (district placeholder (no city corporation)); 306700 Narayanganj N/A (district placeholder (no city corporation)); 3067445844 Narayanganj City Corp. (part of the city corporation inside thana Narayanganj Sadar); 306800 Narsingdi N/A (district placeholder (no city corporation)); 308200 Rajbari N/A (district placeholder (no city corporation)); 308600 Shariatpur N/A (district placeholder (no city corporation)); 309300 Tangail N/A (district placeholder (no city corporation)); plus 102 'Unions Of ... Upazila' placeholders.",
+  "division": "dhaka",
+  "kind": "dghs_geocodes"
+}

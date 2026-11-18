@@ -1,0 +1,13 @@
+Khulna/Paikgasa: pourashava page without a name: https://paikgasa.khulna.gov.bd/pages/static-pages/69812049a31054345f1e0c78
+Khulna/Terokhada: union page 'ইউনিয়ন সমূহ' (https://terokhada.khulna.gov.bd/pages/static-pages/6981205ea31054345f1e167a) also names people (chairmen, secretaries or UDC entrepreneurs); not used, raw text not saved
+Satkhira/Debhata: union page 'ইউনিয়ন সমূহ' (https://debhata.satkhira.gov.bd/pages/static-pages/6980e577a31054345f1ca354) also names people (chairmen, secretaries or UDC entrepreneurs); not used, raw text not saved
+Meherpur/Meherpur Sadar: union page 'ইউনিয়ন সমূহ' (https://meherpursadar.meherpur.gov.bd/pages/static-pages/6980fbfea31054345f1d253d) also names people (chairmen, secretaries or UDC entrepreneurs); not used, raw text not saved
+Meherpur/Meherpur Sadar: pourashava page without a name: https://meherpursadar.meherpur.gov.bd/pages/static-pages/69812dd735ce18e1c06f8eb0
+Chuadanga/Alamdanga: pourashava page without a name: https://alamdanga.chuadanga.gov.bd/pages/static-pages/6980f6a3a31054345f1cfad3
+Kushtia/Kushtia Sadar: pourashava page without a name: https://kushtiasadar.kushtia.gov.bd/pages/static-pages/69810957a31054345f1d9080
+Kushtia/Khoksa: pourashava page without a name: https://khoksa.kushtia.gov.bd/pages/static-pages/69810965a31054345f1d96bd
+Magura/Magura Sadar: no union rows parsed from https://magurasadar.magura.gov.bd/pages/static-pages/69812de035ce18e1c06f934c
+Bagerhat/Mollahat: no union list menu item
+Bagerhat/Mongla: union page 'ইউনিয়ন সমূহ' (https://mongla.bagerhat.gov.bd/pages/static-pages/69812ded35ce18e1c06f999e) also names people (chairmen, secretaries or UDC entrepreneurs); not used, raw text not saved
+Jhenaidah/Shailkupa: pourashava page without a name: https://shailkupa.jhenaidah.gov.bd/pages/static-pages/69810d94a31054345f1dcfcc
+Jhenaidah/Harinakundu: pourashava page without a name: https://harinakundu.jhenaidah.gov.bd/pages/static-pages/69810d98a31054345f1dd150

@@ -1,0 +1,767 @@
+{
+ "url": "https://fhir.dghs.gov.bd/core/CodeSystem/bd-geocodes",
+ "version": "0.5.0",
+ "name": "BDGeoCodesCS",
+ "title": "Bangladesh GeoCodes CodeSystem",
+ "status": "draft",
+ "date": "2026-10-15T00:09:54+00:00",
+ "publisher": "Directorate General of Health Services (DGHS), Bangladesh",
+ "description": "Bangladesh GeoCodes",
+ "count": 1591,
+ "ig_license": "CC0-1.0",
+ "ig_version": "0.5.0",
+ "concepts_khulna_division": [
+  {
+   "code": "40",
+   "display": "Khulna"
+  },
+  {
+   "code": "4001",
+   "display": "Bagerhat"
+  },
+  {
+   "code": "4018",
+   "display": "Chuadanga"
+  },
+  {
+   "code": "4041",
+   "display": "Jashore"
+  },
+  {
+   "code": "4044",
+   "display": "Jhenaidah"
+  },
+  {
+   "code": "4047",
+   "display": "Khulna"
+  },
+  {
+   "code": "4050",
+   "display": "Kushtia"
+  },
+  {
+   "code": "4055",
+   "display": "Magura"
+  },
+  {
+   "code": "4057",
+   "display": "Meherpur"
+  },
+  {
+   "code": "4065",
+   "display": "Narail"
+  },
+  {
+   "code": "4087",
+   "display": "Satkhira"
+  },
+  {
+   "code": "400100",
+   "display": "Bagerhat N/A"
+  },
+  {
+   "code": "401800",
+   "display": "Chuadanga N/A"
+  },
+  {
+   "code": "404100",
+   "display": "Jashore N/A"
+  },
+  {
+   "code": "404400",
+   "display": "Jhenaidah N/A"
+  },
+  {
+   "code": "404733",
+   "display": "Khulna City Corporation"
+  },
+  {
+   "code": "404700",
+   "display": "Khulna N/A"
+  },
+  {
+   "code": "405000",
+   "display": "Kushtia N/A"
+  },
+  {
+   "code": "405500",
+   "display": "Magura N/A"
+  },
+  {
+   "code": "405700",
+   "display": "Meherpur N/A"
+  },
+  {
+   "code": "406500",
+   "display": "Narail N/A"
+  },
+  {
+   "code": "408700",
+   "display": "Satkhira N/A"
+  },
+  {
+   "code": "40010008",
+   "display": "Bagerhat Sadar"
+  },
+  {
+   "code": "40010014",
+   "display": "Chitalmari"
+  },
+  {
+   "code": "40010034",
+   "display": "Fakirhat"
+  },
+  {
+   "code": "40010038",
+   "display": "Kachua"
+  },
+  {
+   "code": "40010056",
+   "display": "Mollahat"
+  },
+  {
+   "code": "40010058",
+   "display": "Mongla"
+  },
+  {
+   "code": "40010060",
+   "display": "Morrelganj"
+  },
+  {
+   "code": "40010073",
+   "display": "Rampal"
+  },
+  {
+   "code": "40010077",
+   "display": "Sarankhola"
+  },
+  {
+   "code": "40180007",
+   "display": "Alamdanga"
+  },
+  {
+   "code": "40180023",
+   "display": "Chuadanga Sadar"
+  },
+  {
+   "code": "40180031",
+   "display": "Damurhuda"
+  },
+  {
+   "code": "40180055",
+   "display": "Jibannagar"
+  },
+  {
+   "code": "40410004",
+   "display": "Abhaynagar"
+  },
+  {
+   "code": "40410009",
+   "display": "Bagherpara"
+  },
+  {
+   "code": "40410011",
+   "display": "Chaugacha"
+  },
+  {
+   "code": "40410023",
+   "display": "Jhikargacha"
+  },
+  {
+   "code": "40410038",
+   "display": "Keshabpur"
+  },
+  {
+   "code": "40410047",
+   "display": "Jashore Sadar"
+  },
+  {
+   "code": "40410061",
+   "display": "Monirampur"
+  },
+  {
+   "code": "40410090",
+   "display": "Sharsha"
+  },
+  {
+   "code": "40440014",
+   "display": "Harinakunda"
+  },
+  {
+   "code": "40440019",
+   "display": "Jhenaidah Sadar"
+  },
+  {
+   "code": "40440033",
+   "display": "Kaliganj"
+  },
+  {
+   "code": "40440042",
+   "display": "Kotchandpur"
+  },
+  {
+   "code": "40440071",
+   "display": "Maheshpur"
+  },
+  {
+   "code": "40440080",
+   "display": "Shailkupa"
+  },
+  {
+   "code": "40470012",
+   "display": "Batiaghata"
+  },
+  {
+   "code": "40470017",
+   "display": "Dacope"
+  },
+  {
+   "code": "40473321",
+   "display": "Daulatpur"
+  },
+  {
+   "code": "40470030",
+   "display": "Dumuria"
+  },
+  {
+   "code": "40470040",
+   "display": "Dighalia"
+  },
+  {
+   "code": "40473345",
+   "display": "Khalishpur"
+  },
+  {
+   "code": "40473348",
+   "display": "Khan Jahan Ali"
+  },
+  {
+   "code": "40473351",
+   "display": "Khulna Sadar"
+  },
+  {
+   "code": "40470053",
+   "display": "Koyra"
+  },
+  {
+   "code": "40470064",
+   "display": "Paikgacha"
+  },
+  {
+   "code": "40470069",
+   "display": "Phultala"
+  },
+  {
+   "code": "40470075",
+   "display": "Rupsa"
+  },
+  {
+   "code": "40473385",
+   "display": "Sonadanga"
+  },
+  {
+   "code": "40470094",
+   "display": "Terokhada"
+  },
+  {
+   "code": "40500015",
+   "display": "Bheramara"
+  },
+  {
+   "code": "40500039",
+   "display": "Daulatpur"
+  },
+  {
+   "code": "40500063",
+   "display": "Khoksa"
+  },
+  {
+   "code": "40500071",
+   "display": "Kumarkhali"
+  },
+  {
+   "code": "40500079",
+   "display": "Kushtia Sadar"
+  },
+  {
+   "code": "40500094",
+   "display": "Mirpur"
+  },
+  {
+   "code": "40550057",
+   "display": "Magura Sadar"
+  },
+  {
+   "code": "40550066",
+   "display": "Mohammadpur"
+  },
+  {
+   "code": "40550085",
+   "display": "Shalikha"
+  },
+  {
+   "code": "40550095",
+   "display": "Sreepur"
+  },
+  {
+   "code": "40570047",
+   "display": "Gangni"
+  },
+  {
+   "code": "40570060",
+   "display": "Mujibnagar"
+  },
+  {
+   "code": "40570087",
+   "display": "Meherpur Sadar"
+  },
+  {
+   "code": "40650028",
+   "display": "Kalia"
+  },
+  {
+   "code": "40650052",
+   "display": "Lohagara"
+  },
+  {
+   "code": "40650076",
+   "display": "Narail Sadar"
+  },
+  {
+   "code": "40870004",
+   "display": "Assasuni"
+  },
+  {
+   "code": "40870025",
+   "display": "Debhata"
+  },
+  {
+   "code": "40870043",
+   "display": "Kalaroa"
+  },
+  {
+   "code": "40870047",
+   "display": "Kaliganj"
+  },
+  {
+   "code": "40870082",
+   "display": "Satkhira Sadar"
+  },
+  {
+   "code": "40870086",
+   "display": "Shyamnagar"
+  },
+  {
+   "code": "40870090",
+   "display": "Tala"
+  },
+  {
+   "code": "4001000825",
+   "display": "Bagerhat Paurasava"
+  },
+  {
+   "code": "4001005850",
+   "display": "Mongla Port Paurasava"
+  },
+  {
+   "code": "4001006075",
+   "display": "Morrelganj Paurasava"
+  },
+  {
+   "code": "4018000720",
+   "display": "Alamdanga Paurasava"
+  },
+  {
+   "code": "4018002340",
+   "display": "Chuadanga Paurasava"
+  },
+  {
+   "code": "4018003160",
+   "display": "Darshana Paurasava"
+  },
+  {
+   "code": "4018005580",
+   "display": "Jiban Nagar Paurasava"
+  },
+  {
+   "code": "4041000483",
+   "display": "Noapara Paurasava"
+  },
+  {
+   "code": "4041000905",
+   "display": "Bagher Para Paurasava"
+  },
+  {
+   "code": "4041001113",
+   "display": "Chaugachha Paurasava"
+  },
+  {
+   "code": "4041002333",
+   "display": "Jhikargachha Paurasava"
+  },
+  {
+   "code": "4041003837",
+   "display": "Keshabpur Paurashava"
+  },
+  {
+   "code": "4041004716",
+   "display": "Jessore Paurasava"
+  },
+  {
+   "code": "4041006166",
+   "display": "Manirampur Paurasava"
+  },
+  {
+   "code": "4041009008",
+   "display": "Benapole Paurashava"
+  },
+  {
+   "code": "4044001412",
+   "display": "Harinakunda Paurashava"
+  },
+  {
+   "code": "4044001916",
+   "display": "Jhenaidah Paurasava"
+  },
+  {
+   "code": "4044003332",
+   "display": "Kaliganj Paurasava"
+  },
+  {
+   "code": "4044004250",
+   "display": "Kotchandpur Paurasava"
+  },
+  {
+   "code": "4044007166",
+   "display": "Maheshpur Paurasava"
+  },
+  {
+   "code": "4044008083",
+   "display": "Shailkupa Paurasava"
+  },
+  {
+   "code": "4047001722",
+   "display": "Chalna Paurasava"
+  },
+  {
+   "code": "4047332133",
+   "display": "Khulna City Corp."
+  },
+  {
+   "code": "4047334533",
+   "display": "Khulna City Corp."
+  },
+  {
+   "code": "4047334833",
+   "display": "Khulna City Corp."
+  },
+  {
+   "code": "4047335133",
+   "display": "Khulna City Corp."
+  },
+  {
+   "code": "4047006466",
+   "display": "Paikgachha Paurashava"
+  },
+  {
+   "code": "4047338533",
+   "display": "Khulna City Corp."
+  },
+  {
+   "code": "4050001520",
+   "display": "Bheramara Paurashava"
+  },
+  {
+   "code": "4050006330",
+   "display": "Khoksa Paurashava"
+  },
+  {
+   "code": "4050007140",
+   "display": "Kumarkhali Paurashava"
+  },
+  {
+   "code": "4050007960",
+   "display": "Kushtia Paurashava"
+  },
+  {
+   "code": "4050009480",
+   "display": "Mirpur Paurashava"
+  },
+  {
+   "code": "4055005750",
+   "display": "Magura Paurasava"
+  },
+  {
+   "code": "4057004722",
+   "display": "Gangni Paurashava"
+  },
+  {
+   "code": "4057008733",
+   "display": "Meherpur Paurashava"
+  },
+  {
+   "code": "4065002833",
+   "display": "Kalia Paurasava"
+  },
+  {
+   "code": "4065005244",
+   "display": "Lohagara Paurasava"
+  },
+  {
+   "code": "4065007666",
+   "display": "Narail Paurasava"
+  },
+  {
+   "code": "4087004333",
+   "display": "Kalaroa Paurasava"
+  },
+  {
+   "code": "4087008266",
+   "display": "Satkhira Paurasava"
+  },
+  {
+   "code": "4001000899",
+   "display": "Unions Of Bagerhat Sadar Upazila"
+  },
+  {
+   "code": "4001001499",
+   "display": "Unions Of Chitalmari Upazila"
+  },
+  {
+   "code": "4001003499",
+   "display": "Unions Of Fakirhat Upazila"
+  },
+  {
+   "code": "4001003899",
+   "display": "Unions Of Kachua Upazila"
+  },
+  {
+   "code": "4001005699",
+   "display": "Unions Of Mollahat Upazila"
+  },
+  {
+   "code": "4001005899",
+   "display": "Unions Of Mongla Upazila"
+  },
+  {
+   "code": "4001006099",
+   "display": "Unions Of Morrelganj Upazila"
+  },
+  {
+   "code": "4001007399",
+   "display": "Unions Of Rampal Upazila"
+  },
+  {
+   "code": "4001007799",
+   "display": "Unions Of Sarankhola Upazila"
+  },
+  {
+   "code": "4018000799",
+   "display": "Unions Of Alamdanga Upazila"
+  },
+  {
+   "code": "4018002399",
+   "display": "Unions Of Chuadanga Sadar Upazila"
+  },
+  {
+   "code": "4018003199",
+   "display": "Unions Of Damurhuda Upazila"
+  },
+  {
+   "code": "4018005599",
+   "display": "Unions Of Jiban Nagar Upazila"
+  },
+  {
+   "code": "4041000499",
+   "display": "Unions Of Abhaynagar Upazila"
+  },
+  {
+   "code": "4041000999",
+   "display": "Unions Of Bagher Para Upazila"
+  },
+  {
+   "code": "4041001199",
+   "display": "Unions Of Chaugachha Upazila"
+  },
+  {
+   "code": "4041002399",
+   "display": "Unions Of Jhikargachha Upazila"
+  },
+  {
+   "code": "4041003899",
+   "display": "Unions Of Keshabpur Upazila"
+  },
+  {
+   "code": "4041004799",
+   "display": "Unions Of Jessore Sadar Upazila"
+  },
+  {
+   "code": "4041006199",
+   "display": "Unions Of Manirampur Upazila"
+  },
+  {
+   "code": "4041009099",
+   "display": "Unions Of Sharsha Upazila"
+  },
+  {
+   "code": "4044001499",
+   "display": "Unions Of Harinakunda Upazila"
+  },
+  {
+   "code": "4044001999",
+   "display": "Unions Of Jhenaidah Sadar Upazila"
+  },
+  {
+   "code": "4044003399",
+   "display": "Unions Of Kaliganj Upazila"
+  },
+  {
+   "code": "4044004299",
+   "display": "Unions Of Kotchandpur Upazila"
+  },
+  {
+   "code": "4044007199",
+   "display": "Unions Of Maheshpur Upazila"
+  },
+  {
+   "code": "4044008099",
+   "display": "Unions Of Shailkupa Upazila"
+  },
+  {
+   "code": "4047001299",
+   "display": "Unions Of Batiaghata Upazila"
+  },
+  {
+   "code": "4047001799",
+   "display": "Unions Of Dacope Upazila"
+  },
+  {
+   "code": "4047332199",
+   "display": "Unions Of Daulatpur Upazila"
+  },
+  {
+   "code": "4047003099",
+   "display": "Unions Of Dumuria Upazila"
+  },
+  {
+   "code": "4047004099",
+   "display": "Unions Of Dighalia Upazila"
+  },
+  {
+   "code": "4047334899",
+   "display": "Unions Of Khan Jahan Ali Upazila"
+  },
+  {
+   "code": "4047005399",
+   "display": "Unions Of Koyra Upazila"
+  },
+  {
+   "code": "4047006499",
+   "display": "Unions Of Paikgachha Upazila"
+  },
+  {
+   "code": "4047006999",
+   "display": "Unions Of Phultala Upazila"
+  },
+  {
+   "code": "4047007599",
+   "display": "Unions Of Rupsa Upazila"
+  },
+  {
+   "code": "4047009499",
+   "display": "Unions Of Terokhada Upazila"
+  },
+  {
+   "code": "4050001599",
+   "display": "Unions Of Bheramara Upazila"
+  },
+  {
+   "code": "4050003999",
+   "display": "Unions Of Daulatpur Upazila"
+  },
+  {
+   "code": "4050006399",
+   "display": "Unions Of Khoksa Upazila"
+  },
+  {
+   "code": "4050007199",
+   "display": "Unions Of Kumarkhali Upazila"
+  },
+  {
+   "code": "4050007999",
+   "display": "Unions Of Kushtia Sadar Upazila"
+  },
+  {
+   "code": "4050009499",
+   "display": "Unions Of Mirpur Upazila"
+  },
+  {
+   "code": "4055005799",
+   "display": "Unions Of Magura Sadar Upazila"
+  },
+  {
+   "code": "4055006699",
+   "display": "Unions Of Mohammadpur Upazila"
+  },
+  {
+   "code": "4055008599",
+   "display": "Unions Of Shalikha Upazila"
+  },
+  {
+   "code": "4055009599",
+   "display": "Unions Of Sreepur Upazila"
+  },
+  {
+   "code": "4057004799",
+   "display": "Unions Of Gangni Upazila"
+  },
+  {
+   "code": "4057006099",
+   "display": "Unions Of Mujib Nagar Upazila"
+  },
+  {
+   "code": "4057008799",
+   "display": "Unions Of Meherpur Sadar Upazila"
+  },
+  {
+   "code": "4065002899",
+   "display": "Unions Of Kalia Upazila"
+  },
+  {
+   "code": "4065005299",
+   "display": "Unions Of Lohagara Upazila"
+  },
+  {
+   "code": "4065007699",
+   "display": "Unions Of Narail Sadar Upazila"
+  },
+  {
+   "code": "4087000499",
+   "display": "Unions Of Assasuni Upazila"
+  },
+  {
+   "code": "4087002599",
+   "display": "Unions Of Debhata Upazila"
+  },
+  {
+   "code": "4087004399",
+   "display": "Unions Of Kalaroa Upazila"
+  },
+  {
+   "code": "4087004799",
+   "display": "Unions Of Kaliganj Upazila"
+  },
+  {
+   "code": "4087008299",
+   "display": "Unions Of Satkhira Sadar Upazila"
+  },
+  {
+   "code": "4087008699",
+   "display": "Unions Of Shyamnagar Upazila"
+  },
+  {
+   "code": "4087009099",
+   "display": "Unions Of Tala Upazila"
+  }
+ ]
+}

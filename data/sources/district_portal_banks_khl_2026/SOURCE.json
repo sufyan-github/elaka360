@@ -1,0 +1,36 @@
+{
+  "key": "DISTRICT_PORTAL_BANKS_KHL_2026",
+  "division": "khulna",
+  "kind": "district_banks",
+  "name": "District portals — bank branch/office lists (Meherpur, Narail, Chuadanga, Kushtia, Magura, Bagerhat)",
+  "organization": "Deputy Commissioner's offices (district portals)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://meherpur.gov.bd/pages/static-pages/6980f68da31054345f1cefa5",
+    "https://narail.gov.bd/pages/static-pages/6980fbdfa31054345f1d1684",
+    "https://chuadanga.gov.bd/pages/static-pages/6981416d35ce18e1c0701b40",
+    "https://kushtia.gov.bd/pages/static-pages/69810198a31054345f1d4f4b",
+    "https://magura.gov.bd/pages/static-pages/6980fbe6a31054345f1d1a49",
+    "https://bagerhat.gov.bd/pages/static-pages/6980f69da31054345f1cf7c6",
+    "https://khulna.gov.bd/pages/static-pages/69812047a31054345f1e0bd2",
+    "https://satkhira.gov.bd/pages/bank-financial-org",
+    "https://jhenaidah.gov.bd/pages/bank-financial-org",
+    "https://jessore.gov.bd/pages/bank-financial-org"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "District portals meherpur.gov.bd, narail.gov.bd, chuadanga.gov.bd, kushtia.gov.bd, magura.gov.bd, bagerhat.gov.bd",
+  "notes": "No licence stated; lists are undated. Only landline numbers are kept (mobile numbers dropped: Meherpur 5); no e-mails, routing numbers, managers' names or coordinates. Not used: Khulna (the bank list is a PDF exported from Excel whose text layer is garbled — Bangla glyphs extract in the wrong order), Satkhira and Jhenaidah (the portals' bank module holds 4 and 1 near-empty entries), Jashore (bank module empty; menu link '#').",
+  "files": {
+    "places.csv": "e2a12d58e746cf03cb8a2ca79ce522faa864d731e7b929694e32ba43d0e00721",
+    "raw/bagerhat_banks.txt": "6ecf311daba0b533691e45f6ba93e1ad42d444683072d646f9758a9ec4be6bcf",
+    "raw/chuadanga_banks.txt": "1706fd6d4b61f6cee430e940934eb3cfb9eb1f1846c642390ceba6474541343b",
+    "raw/kushtia_banks.txt": "53e250c01700095c657ff7a44e997abd75950bd6f26d55c8e0279e320640a916",
+    "raw/magura_banks.txt": "282adeed6e9297aeaa435b77d0cca3c8984dad58cbb032358a9980d7fe2cc05c",
+    "raw/meherpur_banks.txt": "62335022b1cbbe57b61ab21b647883b2981f56a7ddd54512685c95642faa5348",
+    "raw/narail_banks.txt": "b72590a423780b32ea2d4d61e6ef3249c49f5ec92010e5edcfbda61ac0a1fbc3"
+  }
+}

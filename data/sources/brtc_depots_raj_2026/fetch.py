@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Fetch BRTC bus depots located in Rajshahi Division from brtc.gov.bd (BRTC_DEPOTS_RAJ_2026).
 
-Usage: python3 fetch.py [--division rajshahi|rangpur] [--out DIR]   (default: Rajshahi into this folder; DIVISIONS.md)"""
+Usage: python3 fetch.py [--division rajshahi|rangpur|dhaka|chattogram|khulna|barishal|sylhet|mymensingh] [--out DIR]   (default: Rajshahi into this folder; DIVISIONS.md)"""
 # --- polite HTTP helper (copy this block into each fetch.py; stdlib + requests only) -----------------
 # Many *.gov.bd servers send only their leaf certificate and omit the intermediate CA. Browsers fetch the
 # missing intermediate via the certificate's AIA URL; we do the same explicitly: download the published
@@ -243,6 +243,38 @@ DIST_BY_DIV = {
                 nfc("নীলফামারী"): "Nilphamari", nfc("সৈয়দপুর"): "Nilphamari", nfc("লালমনিরহাট"): "Lalmonirhat",
                 nfc("কুড়িগ্রাম"): "Kurigram", nfc("গাইবান্ধা"): "Gaibandha"},
 }
+# Dhaka: depots are named after a place, often a Dhaka-city locality (the page gives no district): place -> (district, upazila,
+# id slug). The district of a locality that is not a district name is added from the place name (flagged in notes).
+DHAKA_DEPOTS = {"যাত্রাবাড়ী": ("Dhaka", "", "jatrabari"), "জোয়ারসাহারা": ("Dhaka", "", "joarsahara"), "মতিঝিল": ("Dhaka", "", "motijheel"),
+                "কল্যাণপুর": ("Dhaka", "", "kalyanpur"), "মিরপুর": ("Dhaka", "", "mirpur"), "মোহাম্মদপুর": ("Dhaka", "", "mohammadpur"),
+                "গাবতলী": ("Dhaka", "", "gabtoli"), "গাজীপুর": ("Gazipur", "", "gazipur"), "নারায়ণগঞ্জ": ("Narayanganj", "", "narayanganj"),
+                "নরসিংদী": ("Narsingdi", "", "narsingdi"), "টুঙ্গীপাড়া": ("Gopalganj", "Tungipara", "tungipara")}
+DIST_BY_DIV["dhaka"] = {nfc(k): v[0] for k, v in DHAKA_DEPOTS.items()}
+DHAKA_DISTRICT_NAMES = {nfc(x) for x in ("গাজীপুর", "নারায়ণগঞ্জ", "নরসিংদী")}
+# Chattogram: depots named after a district town, and Sonapur (Noakhali; the page gives no district: flagged in notes)
+CHATTOGRAM_DEPOTS = {"কুমিল্লা": ("Cumilla", "", "cumilla"), "চট্টগ্রাম": ("Chattogram", "", "chattogram"),
+                     "সোনাপুর": ("Noakhali", "", "sonapur"), "ব্রাহ্মণবাড়িয়া": ("Brahmanbaria", "", "brahmanbaria"),
+                     "কক্সবাজার": ("Cox's Bazar", "", "coxsbazar")}
+DIST_BY_DIV["chattogram"] = {nfc(k): v[0] for k, v in CHATTOGRAM_DEPOTS.items()}
+# Khulna: one depot (Khulna); the Jhenaidah training institute and Jashore training centre are not terminals
+KHULNA_DEPOTS = {"খুলনা": ("Khulna", "", "khulna")}
+DIST_BY_DIV["khulna"] = {nfc(k): v[0] for k, v in KHULNA_DEPOTS.items()}
+# Barishal: one depot (Barishal)
+BARISHAL_DEPOTS = {"বরিশাল": ("Barishal", "", "barishal")}
+DIST_BY_DIV["barishal"] = {nfc(k): v[0] for k, v in BARISHAL_DEPOTS.items()}
+# Sylhet: one depot (Sylhet)
+SYLHET_DEPOTS = {"সিলেট": ("Sylhet", "", "sylhet")}
+DIST_BY_DIV["sylhet"] = {nfc(k): v[0] for k, v in SYLHET_DEPOTS.items()}
+# Mymensingh: one depot (Mymensingh)
+MYMENSINGH_DEPOTS = {"ময়মনসিংহ": ("Mymensingh", "", "mymensingh")}
+DIST_BY_DIV["mymensingh"] = {nfc(k): v[0] for k, v in MYMENSINGH_DEPOTS.items()}
+DEPOTS_BY_DIV = {"dhaka": ({nfc(k): v for k, v in DHAKA_DEPOTS.items()}, DHAKA_DISTRICT_NAMES),
+                 "chattogram": ({nfc(k): v for k, v in CHATTOGRAM_DEPOTS.items()},
+                                {nfc(x) for x in ("কুমিল্লা", "চট্টগ্রাম", "ব্রাহ্মণবাড়িয়া", "কক্সবাজার")}),
+                 "khulna": ({nfc(k): v for k, v in KHULNA_DEPOTS.items()}, {nfc("খুলনা")}),
+                 "barishal": ({nfc(k): v for k, v in BARISHAL_DEPOTS.items()}, {nfc("বরিশাল")}),
+                 "sylhet": ({nfc(k): v for k, v in SYLHET_DEPOTS.items()}, {nfc("সিলেট")}),
+                 "mymensingh": ({nfc(k): v for k, v in MYMENSINGH_DEPOTS.items()}, {nfc("ময়মনসিংহ")})}
 
 
 def main():
@@ -266,17 +298,24 @@ def main():
                 if not is_depot:
                     continue  # training centres are not terminals
                 office = phone_norm(row[2]) if len(row) > 2 else ""
+                dk = DHAKA_DEPOTS.get(nfc(m.group(1))) if division == "dhaka" else \
+                    DEPOTS_BY_DIV[division][0].get(nfc(m.group(1))) if division in DEPOTS_BY_DIV else None
+                district_names = DEPOTS_BY_DIV[division][1] if division in DEPOTS_BY_DIV else set()
                 places.append(dict(
-                    source_key=KEY, source_id=f"brtc-{DIST[nfc(m.group(1))].lower()}-{'depot' if is_depot else 'training'}",
+                    source_key=KEY, source_id=(f"brtc-{dk[2]}-depot" if dk else f"brtc-{DIST[nfc(m.group(1))].lower()}-{'depot' if is_depot else 'training'}"),
                     name_bn=f"বিআরটিসি {name}", name_en="", category_key="transport.bus_terminal" if is_depot else "transport",
-                    district_en=DIST[nfc(m.group(1))], phone=office, operator="বাংলাদেশ সড়ক পরিবহন কর্পোরেশন (বিআরটিসি)", ownership="public",
+                    district_en=DIST[nfc(m.group(1))], upazila_en=(dk[1] if dk else ""), phone=office, operator="বাংলাদেশ সড়ক পরিবহন কর্পোরেশন (বিআরটিসি)", ownership="public",
                     extra_json=xj({"unit_type": "bus depot" if is_depot else "training centre", "office_phone_raw": row[2] if len(row) > 2 else ""}),
                     source_url=URL,
                     notes=("BRTC bus depot (BRTC buses start here) mapped to transport.bus_terminal. " if is_depot else "BRTC training centre, not a terminal. ")
                           + "Name prefixed with 'বিআরটিসি' (source lists it under BRTC depots). Only the office number is kept; the unit head's "
                           "mobile and name are not collected." + (" Office number printed as '০২-০৫১৬৬১৪৫' (02- prefix plus old Bogura code 051); the Bogura district portal "
                           "lists BRTC as 051-66145 (বাসস্ট্যান্ড)." if "০৫১৬৬১৪৫" in row[2] else "")
-                          + (" No office number printed." if division != "rajshahi" and not office else "")))
+                          + (" No office number printed." if division != "rajshahi" and not office else "")
+                          + (f" Office number printed as '{row[2].strip()}' (02- prefix followed by the old district trunk code)."
+                             if division in ("chattogram", "khulna", "barishal") and re.match(r"^০২-০", row[2].strip()) else "")
+                          + (f" District{' and upazila' if dk[1] else ''} added from the depot's place name ({m.group(1)}); the source gives none."
+                             if dk and nfc(m.group(1)) not in district_names else "")))
     write_csv("places.csv", PLACE_COLS, places)
     write_manifest(dict(
         key=KEY, division=division, kind="brtc",

@@ -1,0 +1,14 @@
+Source: https://police.barisal.gov.bd/pages/static-pages/69789ba035ce18e1c066f78a (content updated: বৃহস্পতিবার, ২৬ এপ্রিল, ২০১৮ এ ০২:০৩ AM)
+Designation | landline | official mobile | e-mail (rows used here only)
+SP | 043162123; 043164846 | 01713374260 | spbarisal@police.gov.bd
+OC (Bakergonj PS) | 0432874011 | 01713374272 | ocbar.bak@police.gov.bd
+OC (Babugonj PS) | 0432773022 | 01713374271 | ocbar.bab@police.gov.bd
+OC, Banaarypara PS) | 0433256107 | 01713374273 | ocbar.ban@police.gov.bd
+OC (Uzirpur PS) | 0432956004 | 01713374276 | ocbar.uzi@police.gov.bd
+OC (Gouranadi PS) | 0432256115 | 01713374275 | ocbar.gou@police.gov.bd
+OC (Agoiljhara PS) | 0432356104 | 01713374274 | ocbar.ago@police.gov.bd
+OC (Hijla PS) | 0432456012 | 01713374268 | ocbar.hij@police.gov.bd
+OC (Muladi PS) | 0432675222 | 01713374270 | ocbar.mul@police.gov.bd
+OC (Mahendigonj PS) | 0432556009 | 01713374269 | ocbar.mah@police.gov.bd
+OC (Kazirhat PS) |  |  | ocbar.kaz@police.gov.bd
+Control Room | 043163780 |  | 

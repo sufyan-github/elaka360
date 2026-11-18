@@ -6,7 +6,9 @@ For Rajshahi also cross-checks EIINs against the Rajshahi Education Board public
 Usage: python3 fetch.py [--offline]   (--offline rebuilds the CSVs from raw/ without network).
        python3 fetch.py --division rangpur [--out DIR] [--offline]
            another division (see ../DIVISIONS.md); default output is the sibling folder banbeis_inst_<code>_2026,
-           the Rajshahi files are never touched."""
+           the Rajshahi files are never touched.
+       --resume  lists that an interrupted run already saved to raw/ (marked in <out>/.partial/) are not downloaded
+                 again; the marker folder is deleted when the run completes."""
 import argparse as _argparse
 # division -> code from DIVISIONS.md
 DIVISION_CODES = {"rajshahi": "raj", "rangpur": "rang", "dhaka": "dhk", "chattogram": "ctg", "khulna": "khl",
@@ -15,6 +17,7 @@ _ap = _argparse.ArgumentParser()
 _ap.add_argument("--division", default="rajshahi", choices=sorted(DIVISION_CODES))
 _ap.add_argument("--out", default=None, help="output folder (default: this folder for Rajshahi, else the sibling folder)")
 _ap.add_argument("--offline", action="store_true", help="rebuild from raw/ in the output folder without network")
+_ap.add_argument("--resume", action="store_true", help="skip lists already saved by an interrupted run (<out>/.partial/)")
 ARGS = _ap.parse_args()
 DIV = ARGS.division
 DIVT = DIV.title()
@@ -203,10 +206,380 @@ _RANG_UPAZILA_ALIASES = {
 }
 # thanas that a source lists as if they were upazilas (not metropolitan)
 _RANG_OTHER_THANAS = {"Ruhia", "Bhulli"}
+# Dhaka Division (keys are _key() of the spellings seen in the BANBEIS / IPEMIS lists)
+_DHK_DISTRICTS = ["Dhaka", "Faridpur", "Gazipur", "Gopalganj", "Kishoreganj", "Madaripur", "Manikganj", "Munshiganj",
+                  "Narayanganj", "Narsingdi", "Rajbari", "Shariatpur", "Tangail"]
+_DHK_DISTRICT_ALIASES = {
+    "dhaka": "Dhaka", "faridpur": "Faridpur", "gazipur": "Gazipur", "gopalganj": "Gopalganj", "gopalgonj": "Gopalganj",
+    "kishoreganj": "Kishoreganj", "kishorgonj": "Kishoreganj", "kishoregonj": "Kishoreganj", "kishorganj": "Kishoreganj",
+    "madaripur": "Madaripur", "manikganj": "Manikganj", "manikgonj": "Manikganj", "munshiganj": "Munshiganj",
+    "munshigonj": "Munshiganj", "narayanganj": "Narayanganj", "narayangonj": "Narayanganj", "narsingdi": "Narsingdi",
+    "narshingdi": "Narsingdi", "rajbari": "Rajbari", "shariatpur": "Shariatpur", "tangail": "Tangail",
+}
+# Dhaka Metropolitan Police thanas inside Dhaka city, kept as the source names them (not upazilas). BANBEIS uses the
+# present DMP thanas; IPEMIS uses 12 older city thana units (Mirpur, Mohammadpur, Dhanmondi, Lalbag, Kotwali, Sutrapur,
+# Cantonment, Motijheel, Ramna, Tejgaon, Gulshan, Demra).
+_DHK_METRO = {
+    "adabor": "Adabor", "badda": "Badda", "banani": "Banani", "bangshal": "Bangshal", "bhasantek": "Bhasan Tek",
+    "bhatara": "Bhatara", "bimanbandar": "Biman Bandar", "cantonment": "Cantonment", "chakbazar": "Chak Bazar",
+    "dakshinkhan": "Dakshinkhan", "darussalam": "Darus Salam", "demra": "Demra", "dhanmondi": "Dhanmondi",
+    "gendaria": "Gendaria", "gulshan": "Gulshan", "hazaribagh": "Hazaribagh", "jatrabari": "Jatrabari",
+    "kadamtali": "Kadamtali", "kafrul": "Kafrul", "kalabagan": "Kalabagan", "kamrangirchar": "Kamrangir Char",
+    "khilgaon": "Khilgaon", "khilkhet": "Khilkhet", "kotwali": "Kotwali", "lalbagh": "Lalbagh", "lalbag": "Lalbag",
+    "mirpur": "Mirpur", "mohammadpur": "Mohammadpur", "motijheel": "Motijheel", "mugdapara": "Mugda Para",
+    "newmarket": "New Market", "pallabi": "Pallabi", "paltan": "Paltan", "ramna": "Ramna", "rampura": "Rampura",
+    "rupnagar": "Rupnagar", "sabujbagh": "Sabujbagh", "shahali": "Shah Ali", "shahbagh": "Shahbagh",
+    "shahjahanpur": "Shahjahanpur", "sherebanglanagar": "Sher-E-Bangla Nagar", "shyampur": "Shyampur",
+    "sutrapur": "Sutrapur", "tejgaon": "Tejgaon", "tejgaonindarea": "Tejgaon Ind. Area", "turag": "Turag",
+    "uttarkhan": "Uttar Khan", "uttara": "Uttara", "uttarapaschim": "Uttara Paschim", "wari": "Wari",
+}
+_DHK_METRO_THANAS = set(_DHK_METRO.values())
+_DHK_UPAZILA_ALIASES = dict(_DHK_METRO, **{
+    # Dhaka
+    "dhamrai": "Dhamrai", "dohar": "Dohar", "keraniganj": "Keraniganj", "keranigonj": "Keraniganj",
+    "nawabganj": "Nawabganj", "savar": "Savar",
+    # Faridpur
+    "alfadanga": "Alfadanga", "alphadanga": "Alfadanga", "bhanga": "Bhanga", "boalmari": "Boalmari",
+    "charbhadrasan": "Char Bhadrasan", "charbhardrason": "Char Bhadrasan", "faridpursadar": "Faridpur Sadar",
+    "madhukhali": "Madhukhali", "nagarkanda": "Nagarkanda", "sadarpur": "Sadarpur", "shaltha": "Saltha",
+    "saltha": "Saltha",
+    # Gazipur (IPEMIS lists Tongi, a thana of Gazipur City, as its own unit)
+    "gazipursadar": "Gazipur Sadar", "kaliakair": "Kaliakair", "kaliakoir": "Kaliakair", "kaliganj": "Kaliganj",
+    "kaligonj": "Kaliganj", "kapasia": "Kapasia", "sreepur": "Sreepur", "tongi": "Tongi",
+    # Gopalganj
+    "gopalganjsadar": "Gopalganj Sadar", "gopalgonjsadar": "Gopalganj Sadar", "kashiani": "Kashiani",
+    "kotalipara": "Kotalipara", "muksudpur": "Muksudpur", "maksudpur": "Muksudpur", "tungipara": "Tungipara",
+    "tongipara": "Tungipara",
+    # Kishoreganj
+    "austagram": "Austagram", "astogram": "Austagram", "bajitpur": "Bajitpur", "bhairab": "Bhairab",
+    "bhairob": "Bhairab", "hossainpur": "Hossainpur", "itna": "Itna", "karimganj": "Karimganj", "karimgonj": "Karimganj",
+    "katiadi": "Katiadi", "kishoreganjsadar": "Kishoreganj Sadar", "kishoregonjsadar": "Kishoreganj Sadar",
+    "kuliarchar": "Kuliarchar", "mithamain": "Mithamain", "mithamoin": "Mithamain", "nikli": "Nikli",
+    "pakundia": "Pakundia", "tarail": "Tarail",
+    # Madaripur
+    "dasar": "Dasar", "kalkini": "Kalkini", "madaripursadar": "Madaripur Sadar", "rajoir": "Rajoir", "razoir": "Rajoir",
+    "shibchar": "Shibchar",
+    # Manikganj
+    "daulatpur": "Daulatpur", "ghior": "Ghior", "harirampur": "Harirampur", "manikganjsadar": "Manikganj Sadar",
+    "manikgonjsadar": "Manikganj Sadar", "saturia": "Saturia", "shibalaya": "Shibalaya", "shibaloy": "Shibalaya",
+    "singair": "Singair",
+    # Munshiganj
+    "gazaria": "Gazaria", "lohajang": "Lohajang", "lowhajang": "Lohajang", "munshiganjsadar": "Munshiganj Sadar",
+    "munshigonjsadar": "Munshiganj Sadar", "serajdikhan": "Sirajdikhan", "sirajdikhan": "Sirajdikhan",
+    "sreenagar": "Sreenagar", "tongibari": "Tongibari",
+    # Narayanganj
+    "araihazar": "Araihazar", "bandar": "Bandar", "narayanganjsadar": "Narayanganj Sadar",
+    "narayangonjsadar": "Narayanganj Sadar", "rupganj": "Rupganj", "rupgonj": "Rupganj", "sonargaon": "Sonargaon",
+    # Narsingdi
+    "belabo": "Belabo", "manohardi": "Monohardi", "monohardi": "Monohardi", "monohordi": "Monohardi", "narsingdisadar": "Narsingdi Sadar",
+    "palash": "Palash", "raipura": "Raipura", "roypura": "Raipura", "raypura": "Raipura", "shibpur": "Shibpur",
+    # Rajbari
+    "baliakandi": "Baliakandi", "goalanda": "Goalanda", "kalukhali": "Kalukhali", "pangsha": "Pangsha",
+    "rajbarisadar": "Rajbari Sadar",
+    # Shariatpur
+    "bhedarganj": "Bhedarganj", "bhedorganj": "Bhedarganj", "damudya": "Damudya", "damudda": "Damudya",
+    "gosairhat": "Gosairhat", "goshairhat": "Gosairhat", "naria": "Naria", "shariatpursadar": "Shariatpur Sadar",
+    "zanjira": "Zanjira", "jajira": "Zanjira",
+    # Tangail
+    "basail": "Basail", "bashail": "Basail", "bhuapur": "Bhuapur", "delduar": "Delduar", "dhanbari": "Dhanbari",
+    "ghatail": "Ghatail", "gopalpur": "Gopalpur", "kalihati": "Kalihati", "madhupur": "Madhupur", "modhupur": "Madhupur",
+    "mirzapur": "Mirzapur", "nagarpur": "Nagarpur", "sakhipur": "Sakhipur", "shokhipur": "Sakhipur",
+    "tangailsadar": "Tangail Sadar",
+})
+_DHK_OTHER_THANAS = {"Tongi"}
+# Chattogram Division (keys are _key() of the spellings seen in the BANBEIS / IPEMIS / HRIS lists)
+_CTG_DISTRICTS = ["Chattogram", "Bandarban", "Brahmanbaria", "Chandpur", "Cox's Bazar", "Cumilla", "Feni", "Khagrachhari",
+                  "Lakshmipur", "Noakhali", "Rangamati"]
+_CTG_DISTRICT_ALIASES = {
+    "chattogram": "Chattogram", "chittagong": "Chattogram", "bandarban": "Bandarban", "brahmanbaria": "Brahmanbaria",
+    "brahmonbaria": "Brahmanbaria", "brahamanbaria": "Brahmanbaria", "chandpur": "Chandpur", "coxsbazar": "Cox's Bazar", "coxbazar": "Cox's Bazar",
+    "cumilla": "Cumilla", "comilla": "Cumilla", "feni": "Feni", "khagrachhari": "Khagrachhari",
+    "khagrachari": "Khagrachhari", "lakshmipur": "Lakshmipur", "laxmipur": "Lakshmipur", "luxmipur": "Lakshmipur",
+    "noakhali": "Noakhali", "rangamati": "Rangamati",
+}
+# Chattogram Metropolitan Police thanas inside Chattogram city, kept as the source spells them (not upazilas; only
+# case and spacing normalised, e.g. IPEMIS "DOUBLEMURING" -> "Double Muring").
+# IPEMIS uses the 6 older city thana units (Kotwali, Panchlaish, Double Mooring, Chandgaon, Pahartali, Bandar);
+# BANBEIS names the port thana "Chittagong Port" (kept as given).
+# Karnaphuli is an upazila (formerly a CMP thana) and is treated as one.
+_CTG_METRO = {
+    "akbarshah": "Akbar Shah", "bakalia": "Bakalia", "bandar": "Bandar", "bayazidbostami": "Bayazid Bostami",
+    "bayejidbostami": "Bayejid Bostami", "chandgaon": "Chandgaon", "chittagongport": "Chittagong Port", "chawkbazar": "Chawkbazar", "chakbazar": "Chak Bazar",
+    "doublemooring": "Double Mooring", "doublemuring": "Double Muring", "epz": "EPZ", "halishahar": "Halishahar",
+    "khulshi": "Khulshi", "kotwali": "Kotwali", "pahartali": "Pahartali", "panchlaish": "Panchlaish",
+    "pachlaish": "Pachlaish", "patenga": "Patenga", "sadarghat": "Sadarghat",
+}
+_CTG_METRO_THANAS = set(_CTG_METRO.values())
+_CTG_UPAZILA_ALIASES = dict(_CTG_METRO, **{
+    # Bandarban
+    "alikadam": "Alikadam", "bandarbansadar": "Bandarban Sadar", "lama": "Lama", "naikhongchhari": "Naikhongchhari",
+    "naikhongchari": "Naikhongchhari", "naikhangchhari": "Naikhongchhari", "naikkhongchhari": "Naikhongchhari",
+    "rowangchhari": "Rowangchhari", "rowangchari": "Rowangchhari", "roangchhari": "Rowangchhari",
+    "ruma": "Ruma", "thanchi": "Thanchi",
+    # Brahmanbaria
+    "akhaura": "Akhaura", "ashuganj": "Ashuganj", "ashugonj": "Ashuganj", "bancharampur": "Bancharampur",
+    "banchharampur": "Bancharampur", "bijoynagar": "Bijoynagar", "brahmanbariasadar": "Brahmanbaria Sadar",
+    "brahmonbariasadar": "Brahmanbaria Sadar", "kasba": "Kasba", "kashba": "Kasba", "nabinagar": "Nabinagar",
+    "nasirnagar": "Nasirnagar", "sarail": "Sarail",
+    # Chandpur (IPEMIS "MATLAB" next to "MATLAB UTTAR" is Matlab Dakshin; district-qualified key)
+    "chandpursadar": "Chandpur Sadar", "faridganj": "Faridganj", "faridgonj": "Faridganj", "haimchar": "Haimchar",
+    "hajiganj": "Hajiganj", "hajigonj": "Hajiganj", "kachua": "Kachua", "matlabdakshin": "Matlab Dakshin",
+    "matlabdakkhin": "Matlab Dakshin", "matlabsouth": "Matlab Dakshin", "chandpur/matlab": "Matlab Dakshin",
+    "matlabuttar": "Matlab Uttar", "matlabnorth": "Matlab Uttar", "shahrasti": "Shahrasti",
+    # Chattogram
+    "anwara": "Anwara", "anowara": "Anwara", "banshkhali": "Banshkhali", "bashkhali": "Banshkhali",
+    "banskhali": "Banshkhali", "boalkhali": "Boalkhali", "chandanaish": "Chandanaish", "fatikchhari": "Fatikchhari",
+    "fatikchari": "Fatikchhari", "hathazari": "Hathazari", "karnaphuli": "Karnaphuli", "karnafuli": "Karnaphuli",
+    "lohagara": "Lohagara", "lohagora": "Lohagara", "mirsharai": "Mirsharai", "mirsarai": "Mirsharai",
+    "mireswarai": "Mirsharai", "mirerswarai": "Mirsharai", "patiya": "Patiya", "rangunia": "Rangunia",
+    "raozan": "Raozan", "rowzan": "Raozan", "sandwip": "Sandwip", "satkania": "Satkania", "sitakunda": "Sitakunda",
+    "sitakundu": "Sitakunda",
+    # Cox's Bazar (IPEMIS unit "COX'S BAZAR" is the Sadar upazila; "EIDGAH" is Eidgaon)
+    "chakaria": "Chakaria", "chakoria": "Chakaria", "chokoria": "Chakaria", "coxsbazarsadar": "Cox's Bazar Sadar",
+    "coxsbazar/coxsbazar": "Cox's Bazar Sadar", "eidgaon": "Eidgaon", "eidgah": "Eidgaon", "kutubdia": "Kutubdia",
+    "maheshkhali": "Maheshkhali", "moheshkhali": "Maheshkhali", "pekua": "Pekua", "ramu": "Ramu", "teknaf": "Teknaf",
+    "ukhia": "Ukhia", "ukhiya": "Ukhia",
+    # Cumilla (IPEMIS "COMILLA SADAR" next to "SADAR DAKHIN" and "LALMAI" is Adarsha Sadar; district-qualified key)
+    "barura": "Barura", "brahmanpara": "Brahmanpara", "burichang": "Burichang", "burichong": "Burichang",
+    "chandina": "Chandina", "chauddagram": "Chauddagram", "chowddagram": "Chauddagram", "chouddagram": "Chauddagram",
+    "cumillaadarshasadar": "Cumilla Adarsha Sadar", "comillaadarshasadar": "Cumilla Adarsha Sadar",
+    "adarshasadar": "Cumilla Adarsha Sadar", "cumilla/comillasadar": "Cumilla Adarsha Sadar",
+    "cumilla/cumillasadar": "Cumilla Adarsha Sadar", "cumillasadardakshin": "Cumilla Sadar Dakshin",
+    "comillasadardakshin": "Cumilla Sadar Dakshin", "sadardakshin": "Cumilla Sadar Dakshin",
+    "sadardakhin": "Cumilla Sadar Dakshin", "sadardakkhin": "Cumilla Sadar Dakshin", "sadarsouth": "Cumilla Sadar Dakshin",
+    "daudkandi": "Daudkandi", "debidwar": "Debidwar", "debidhar": "Debidwar", "homna": "Homna", "laksam": "Laksam",
+    "laksham": "Laksam", "lalmai": "Lalmai", "lalmi": "Lalmai", "meghna": "Meghna", "monoharganj": "Monoharganj",
+    "manoharganj": "Monoharganj", "manohargong": "Monoharganj", "manohargonj": "Monoharganj",
+    "monohargonj": "Monoharganj", "muradnagar": "Muradnagar", "nangalkot": "Nangalkot", "titas": "Titas",
+    # Feni
+    "chhagalnaiya": "Chhagalnaiya", "chagalnaiya": "Chhagalnaiya", "daganbhuiyan": "Daganbhuiyan",
+    "dagonbhuiya": "Daganbhuiyan", "daganbhuiya": "Daganbhuiyan", "fenisadar": "Feni Sadar", "fulgazi": "Fulgazi",
+    "phulgazi": "Fulgazi", "parshuram": "Parshuram", "parashuram": "Parshuram", "sonagazi": "Sonagazi",
+    # Khagrachhari
+    "dighinala": "Dighinala", "guimara": "Guimara", "khagrachharisadar": "Khagrachhari Sadar",
+    "khagracharisadar": "Khagrachhari Sadar", "lakshmichhari": "Lakshmichhari", "lakshmichari": "Lakshmichhari",
+    "laxmichhari": "Lakshmichhari", "luxmichhari": "Lakshmichhari", "mahalchhari": "Mahalchhari",
+    "mahalchari": "Mahalchhari", "manikchhari": "Manikchhari", "manikchari": "Manikchhari", "matiranga": "Matiranga",
+    "panchhari": "Panchhari", "panchari": "Panchhari", "ramgarh": "Ramgarh",
+    # Lakshmipur (Chandraganj is a thana that IPEMIS lists as its own unit)
+    "kamalnagar": "Kamalnagar", "lakshmipursadar": "Lakshmipur Sadar", "laxmipursadar": "Lakshmipur Sadar",
+    "luxmipursadar": "Lakshmipur Sadar", "raipur": "Raipur", "raypur": "Raipur", "roypur": "Raipur", "ramganj": "Ramganj",
+    "ramgonj": "Ramganj", "ramgati": "Ramgati", "chandraganj": "Chandraganj",
+    # Noakhali
+    "begumganj": "Begumganj", "chatkhil": "Chatkhil", "companiganj": "Companiganj", "companigonj": "Companiganj",
+    "hatiya": "Hatiya", "hatia": "Hatiya", "kabirhat": "Kabirhat", "noakhalisadar": "Noakhali Sadar",
+    "senbagh": "Senbagh", "senbag": "Senbagh", "sonaimuri": "Sonaimuri", "sonaimori": "Sonaimuri",
+    "subarnachar": "Subarnachar",
+    # Rangamati
+    "baghaichhari": "Baghaichhari", "baghaichari": "Baghaichhari", "barkal": "Barkal", "belaichhari": "Belaichhari",
+    "belaichari": "Belaichhari", "bilaichari": "Belaichhari", "bilaichhari": "Belaichhari", "jurachhari": "Jurachhari",
+    "juraichari": "Jurachhari", "juraichhari": "Jurachhari", "kaptai": "Kaptai", "kawkhali": "Kawkhali",
+    "kowkhali": "Kawkhali", "kaukhali": "Kawkhali", "langadu": "Langadu", "naniarchar": "Naniarchar",
+    "rajasthali": "Rajasthali", "rangamatisadar": "Rangamati Sadar",
+    # BANBEIS thana names cut off after 19 characters ("Belai Chhari  Upazi") or with a union in brackets
+    "belaichhariupazi": "Belaichhari", "juraichhariupazil": "Jurachhari", "rangamatisadarup": "Rangamati Sadar",
+    "kawkhalibetbunia": "Kawkhali",
+})
+_CTG_OTHER_THANAS = {"Chandraganj"}
+# Khulna Division (keys are _key() of the spellings seen in the BANBEIS / IPEMIS / HRIS lists)
+_KHL_DISTRICTS = ["Khulna", "Bagerhat", "Chuadanga", "Jashore", "Jhenaidah", "Kushtia", "Magura", "Meherpur", "Narail",
+                  "Satkhira"]
+_KHL_DISTRICT_ALIASES = {
+    "khulna": "Khulna", "bagerhat": "Bagerhat", "bagherhat": "Bagerhat", "chuadanga": "Chuadanga", "jashore": "Jashore",
+    "jessore": "Jashore", "jhenaidah": "Jhenaidah", "jhenaidaha": "Jhenaidah", "kushtia": "Kushtia", "magura": "Magura",
+    "meherpur": "Meherpur", "narail": "Narail", "norail": "Narail", "satkhira": "Satkhira",
+}
+# Khulna Metropolitan Police thanas inside Khulna city, kept as the source names them (not upazilas). BANBEIS and HRIS
+# use the 5 older city thanas (Khulna Sadar, Sonadanga, Khalishpur, Daulatpur, Khan Jahan Ali); IPEMIS has a single
+# city unit KHULNA SADAR. Daulatpur is also an upazila of Kushtia: a thana counts as metropolitan only in Khulna
+# District (METRO_DISTRICT).
+_KHL_METRO = {
+    "khulnasadar": "Khulna Sadar", "sonadanga": "Sonadanga", "khalishpur": "Khalishpur", "daulatpur": "Daulatpur",
+    "khanjahanali": "Khan Jahan Ali", "harintana": "Harintana", "labanchara": "Labanchara", "aranghata": "Aranghata",
+}
+_KHL_METRO_THANAS = set(_KHL_METRO.values())
+_KHL_UPAZILA_ALIASES = dict(_KHL_METRO, **{
+    # Bagerhat
+    "bagerhatsadar": "Bagerhat Sadar", "bagherhatsadar": "Bagerhat Sadar", "chitalmari": "Chitalmari",
+    "fakirhat": "Fakirhat", "kachua": "Kachua", "mollahat": "Mollahat", "mollarhat": "Mollahat", "mongla": "Mongla",
+    "morrelganj": "Morrelganj", "morelganj": "Morrelganj", "morolgonj": "Morrelganj", "rampal": "Rampal",
+    "sarankhola": "Sarankhola",
+    # Chuadanga
+    "alamdanga": "Alamdanga", "chuadangasadar": "Chuadanga Sadar", "damurhuda": "Damurhuda", "jibannagar": "Jibannagar",
+    # Jashore (BANBEIS lists Jashore town's Kotwali thana instead of Jashore Sadar; kept as a thana, see OTHER_THANAS)
+    "abhaynagar": "Abhaynagar", "avoynagar": "Abhaynagar", "bagherpara": "Bagherpara", "bagarpara": "Bagherpara",
+    "chaugachha": "Chaugachha", "chougachha": "Chaugachha", "chaugacha": "Chaugachha", "jashoresadar": "Jashore Sadar",
+    "jessoresadar": "Jashore Sadar", "jhikargachha": "Jhikargachha", "jhikargacha": "Jhikargachha",
+    "keshabpur": "Keshabpur", "manirampur": "Manirampur", "monirampur": "Manirampur", "sharsha": "Sharsha",
+    "jashore/kotwali": "Kotwali",
+    # Jhenaidah
+    "harinakunda": "Harinakunda", "harinakundu": "Harinakunda", "horinakunda": "Harinakunda",
+    "jhenaidahsadar": "Jhenaidah Sadar", "kaliganj": "Kaliganj", "kaligonj": "Kaliganj", "kotchandpur": "Kotchandpur",
+    "cotchandpur": "Kotchandpur", "maheshpur": "Maheshpur", "moheshpur": "Maheshpur", "shailkupa": "Shailkupa",
+    "soilkupa": "Shailkupa",
+    # Khulna
+    "batiaghata": "Batiaghata", "botiaghata": "Batiaghata", "dacope": "Dacope", "dakope": "Dacope", "dakop": "Dacope",
+    "dighalia": "Dighalia", "dighulia": "Dighalia", "digholia": "Dighalia", "dumuria": "Dumuria", "koyra": "Koyra",
+    "kayra": "Koyra", "paikgachha": "Paikgachha", "paikgacha": "Paikgachha", "paikgasa": "Paikgachha",
+    "phultala": "Phultala", "fultala": "Phultala", "fultola": "Phultala", "rupsa": "Rupsa", "rupsha": "Rupsa",
+    "terokhada": "Terokhada", "terakhada": "Terokhada",
+    # Kushtia ("daulatpur" above: same spelling as the Khulna city thana)
+    "bheramara": "Bheramara", "khoksa": "Khoksa", "khoksha": "Khoksa", "kumarkhali": "Kumarkhali",
+    "kushtiasadar": "Kushtia Sadar", "mirpur": "Mirpur",
+    # Magura
+    "magurasadar": "Magura Sadar", "mohammadpur": "Mohammadpur", "shalikha": "Shalikha", "sreepur": "Sreepur",
+    "shreepur": "Sreepur",
+    # Meherpur
+    "gangni": "Gangni", "meherpursadar": "Meherpur Sadar", "mujibnagar": "Mujibnagar",
+    # Narail
+    "kalia": "Kalia", "lohagara": "Lohagara", "narailsadar": "Narail Sadar",
+    # Satkhira
+    "assasuni": "Assasuni", "ashashuni": "Assasuni", "asasuni": "Assasuni", "debhata": "Debhata", "kalaroa": "Kalaroa",
+    "kolaroa": "Kalaroa", "satkhirasadar": "Satkhira Sadar", "shyamnagar": "Shyamnagar", "shamnagar": "Shyamnagar",
+    "tala": "Tala",
+})
+# BANBEIS lists Jashore's Kotwali (Jashore town police thana) as its own unit and has no Jashore Sadar unit
+_KHL_OTHER_THANAS = {"Kotwali"}
+# Barishal Division (keys are _key() of the spellings seen in the BANBEIS / IPEMIS / HRIS lists)
+_BAR_DISTRICTS = ["Barishal", "Barguna", "Bhola", "Jhalokathi", "Patuakhali", "Pirojpur"]
+_BAR_DISTRICT_ALIASES = {
+    "barishal": "Barishal", "barisal": "Barishal", "barguna": "Barguna", "bhola": "Bhola", "jhalokathi": "Jhalokathi",
+    "jhalokati": "Jhalokathi", "jhalakathi": "Jhalokathi", "patuakhali": "Patuakhali", "pirojpur": "Pirojpur",
+}
+# Barishal Metropolitan Police thanas, kept as the source names them (not upazilas); a thana counts as metropolitan
+# only in Barishal District (METRO_DISTRICT). None occur in the 2026-11 lists: BANBEIS ("Barisal Sadar (Kotwali)"),
+# IPEMIS (BARISAL SADAR) and HRIS (Barishal Sadar) list Barishal city under the Sadar upazila.
+_BAR_METRO = {"kotwali": "Kotwali", "airport": "Airport", "kawnia": "Kawnia", "bandar": "Bandar"}
+_BAR_METRO_THANAS = set(_BAR_METRO.values())
+_BAR_UPAZILA_ALIASES = dict(_BAR_METRO, **{
+    # Barishal
+    "agailjhara": "Agailjhara", "babuganj": "Babuganj", "babugonj": "Babuganj", "bakerganj": "Bakerganj",
+    "bakhergonj": "Bakerganj", "banaripara": "Banaripara", "banoripara": "Banaripara", "barishalsadar": "Barishal Sadar",
+    "barisalsadar": "Barishal Sadar", "barisalsadarkotwali": "Barishal Sadar", "gaurnadi": "Gaurnadi",
+    "gournadi": "Gaurnadi", "hizla": "Hizla", "hijla": "Hizla", "mehendiganj": "Mehendiganj", "mehendigonj": "Mehendiganj",
+    "muladi": "Muladi", "wazirpur": "Wazirpur", "uzirpur": "Wazirpur", "ujirpur": "Wazirpur",
+    # Barguna
+    "amtali": "Amtali", "bamna": "Bamna", "bargunasadar": "Barguna Sadar", "betagi": "Betagi",
+    "patharghata": "Patharghata", "taltali": "Taltali",
+    # Bhola
+    "bholasadar": "Bhola Sadar", "borhanuddin": "Borhanuddin", "burhanuddin": "Borhanuddin", "charfasson": "Char Fasson",
+    "charfashion": "Char Fasson", "charfession": "Char Fasson", "daulatkhan": "Daulatkhan", "lalmohan": "Lalmohan",
+    "manpura": "Manpura", "monpura": "Manpura", "tazumuddin": "Tazumuddin", "tozumuddin": "Tazumuddin",
+    # Jhalokathi
+    "jhalokathisadar": "Jhalokathi Sadar", "jhalokatisadar": "Jhalokathi Sadar", "kathalia": "Kathalia",
+    "kanthalia": "Kathalia", "nalchity": "Nalchity", "nolchhiti": "Nalchity", "rajapur": "Rajapur",
+    # Patuakhali
+    "bauphal": "Bauphal", "dashmina": "Dashmina", "dumki": "Dumki", "galachipa": "Galachipa", "golachipa": "Galachipa",
+    "kalapara": "Kalapara", "kolapara": "Kalapara", "mirzaganj": "Mirzaganj", "mirzagonj": "Mirzaganj",
+    "patuakhalisadar": "Patuakhali Sadar", "rangabali": "Rangabali",
+    # Pirojpur (IPEMIS truncates "SHORUPKATHI(NESARABA[D])" and still uses Indurkani's former name ZIANAGAR)
+    "bhandaria": "Bhandaria", "indurkani": "Indurkani", "zianagar": "Indurkani", "kawkhali": "Kawkhali",
+    "kaukhali": "Kawkhali", "mathbaria": "Mathbaria", "mothbaria": "Mathbaria", "nazirpur": "Nazirpur",
+    "nesarabad": "Nesarabad", "nesarabadswarupkati": "Nesarabad", "shorupkathinesaraba": "Nesarabad",
+    "pirojpursadar": "Pirojpur Sadar",
+})
+# source units that were mapped by interpretation (not only by spelling): note on each row (key: _key() of the source)
+_BAR_UPAZILA_NOTES = {
+    "zianagar": "source unit ZIANAGAR mapped to Indurkani (the upazila's current name, Zianagar its former name)",
+    "barisalsadarkotwali": ("source unit 'Barisal Sadar (Kotwali)' (Sadar upazila incl. Barishal city / Kotwali thana) "
+                            "mapped to Barishal Sadar"),
+}
+# Sylhet Division (keys are _key() of the spellings seen in the BANBEIS / IPEMIS / HRIS lists)
+_SYL_DISTRICTS = ["Sylhet", "Habiganj", "Moulvibazar", "Sunamganj"]
+_SYL_DISTRICT_ALIASES = {
+    "sylhet": "Sylhet", "habiganj": "Habiganj", "habigonj": "Habiganj", "hobigonj": "Habiganj", "hobiganj": "Habiganj",
+    "moulvibazar": "Moulvibazar", "maulvibazar": "Moulvibazar", "sunamganj": "Sunamganj", "sunamgonj": "Sunamganj",
+}
+# Sylhet Metropolitan Police thanas, kept as the source names them (not upazilas); a thana counts as metropolitan only
+# in Sylhet District (METRO_DISTRICT). Dakshin Surma is both an SMP thana and an upazila of Sylhet District: a source
+# unit of that name is taken as the upazila. None occur in the 2026-11 lists: BANBEIS and IPEMIS list Sylhet city under
+# Sylhet Sadar (and Dakshin Surma).
+_SYL_METRO = {"kotwali": "Kotwali", "jalalabad": "Jalalabad", "airport": "Airport", "shahparan": "Shahparan",
+              "shahporan": "Shahparan", "moglabazar": "Moglabazar"}
+_SYL_METRO_THANAS = set(_SYL_METRO.values())
+_SYL_UPAZILA_ALIASES = dict(_SYL_METRO, **{
+    # Sylhet
+    "sylhetsadar": "Sylhet Sadar", "balaganj": "Balaganj", "balagonj": "Balaganj", "beanibazar": "Beanibazar",
+    "bianibazar": "Beanibazar", "bishwanath": "Bishwanath", "biswanath": "Bishwanath", "companiganj": "Companiganj",
+    "companigonj": "Companiganj", "dakshinsurma": "Dakshin Surma", "dakhinsurma": "Dakshin Surma",
+    "dakkhinsurma": "Dakshin Surma", "fenchuganj": "Fenchuganj", "fenchugonj": "Fenchuganj", "golapganj": "Golapganj",
+    "golapgonj": "Golapganj", "gowainghat": "Gowainghat", "goainghat": "Gowainghat", "jaintiapur": "Jaintiapur",
+    "jaintapur": "Jaintiapur", "kanaighat": "Kanaighat", "osmaninagar": "Osmaninagar", "zakiganj": "Zakiganj",
+    "zakigonj": "Zakiganj", "jakigonj": "Zakiganj",
+    # Moulvibazar
+    "barlekha": "Barlekha", "baralekha": "Barlekha", "baralakha": "Barlekha", "juri": "Juri", "kamalganj": "Kamalganj",
+    "kamalgonj": "Kamalganj", "kamolganj": "Kamalganj", "kulaura": "Kulaura", "moulvibazarsadar": "Moulvibazar Sadar",
+    "maulvibazarsadar": "Moulvibazar Sadar", "rajnagar": "Rajnagar", "sreemangal": "Sreemangal",
+    "srimangal": "Sreemangal",
+    # Habiganj
+    "ajmiriganj": "Ajmiriganj", "ajmirigonj": "Ajmiriganj", "azmirigonj": "Ajmiriganj", "bahubal": "Bahubal",
+    "baniachong": "Baniachong", "baniachang": "Baniachong", "banichang": "Baniachong", "chunarughat": "Chunarughat",
+    "habiganjsadar": "Habiganj Sadar", "habigonjsadar": "Habiganj Sadar", "hobigonjsadar": "Habiganj Sadar",
+    "lakhai": "Lakhai", "madhabpur": "Madhabpur", "nabiganj": "Nabiganj", "nabigonj": "Nabiganj",
+    "shayestaganj": "Shayestaganj", "shaesthagonj": "Shayestaganj", "shaistaganj": "Shayestaganj",
+    # Sunamganj (BANBEIS still uses Shantiganj's former name Dakshin Sunamganj)
+    "bishwambarpur": "Bishwambarpur", "biswambarpur": "Bishwambarpur", "chhatak": "Chhatak", "chatak": "Chhatak",
+    "derai": "Derai", "dharmapasha": "Dharmapasha", "dharampasha": "Dharmapasha", "dowarabazar": "Dowarabazar",
+    "jagannathpur": "Jagannathpur", "jamalganj": "Jamalganj", "jamalgonj": "Jamalganj", "madhyanagar": "Madhyanagar",
+    "shalla": "Shalla", "sulla": "Shalla", "shantiganj": "Shantiganj", "shantigonj": "Shantiganj",
+    "dakshinsunamganj": "Shantiganj", "sunamganjsadar": "Sunamganj Sadar", "sunamgonjsadar": "Sunamganj Sadar",
+    "tahirpur": "Tahirpur",
+})
+_SYL_UPAZILA_NOTES = {
+    "dakshinsunamganj": ("source unit 'Dakshin Sunamganj' mapped to Shantiganj (the upazila's current name, Dakshin "
+                         "Sunamganj its former name)"),
+}
+# Mymensingh Division (keys are _key() of the spellings seen in the BANBEIS / IPEMIS / HRIS lists; values are the seed's
+# English names, e.g. Nokla, Sreebordi, Bokshiganj, Dewangonj, Mohongonj)
+_MYM_DISTRICTS = ["Mymensingh", "Jamalpur", "Netrokona", "Sherpur"]
+_MYM_DISTRICT_ALIASES = {
+    "mymensingh": "Mymensingh", "jamalpur": "Jamalpur", "netrokona": "Netrokona", "netrakona": "Netrokona",
+    "sherpur": "Sherpur",
+}
+# No metropolitan thanas: the 2026-11 lists (BANBEIS, IPEMIS, HRIS) have no Mymensingh Metropolitan Police thana units
+# and put Mymensingh city under the upazila Mymensingh Sadar, so _MYM_METRO_THANAS is empty and METRO_DISTRICT unset.
+_MYM_METRO_THANAS = set()
+_MYM_UPAZILA_ALIASES = {
+    # Mymensingh
+    "mymensinghsadar": "Mymensingh Sadar", "mymensingsadar": "Mymensingh Sadar", "bhaluka": "Bhaluka",
+    "dhobaura": "Dhobaura", "dhubaura": "Dhobaura", "fulbaria": "Fulbaria", "phulbaria": "Fulbaria",
+    "gafargaon": "Gafargaon", "gaffargaon": "Gafargaon", "gofargaon": "Gafargaon", "gouripur": "Gouripur",
+    "gauripur": "Gouripur", "haluaghat": "Haluaghat", "iswarganj": "Iswarganj", "ishwarganj": "Iswarganj",
+    "iswargonj": "Iswarganj", "ishwargonj": "Iswarganj", "muktagacha": "Muktagacha", "muktagachha": "Muktagacha",
+    "nandail": "Nandail", "phulpur": "Phulpur", "fulpur": "Phulpur", "tarakanda": "Tarakanda", "trishal": "Trishal",
+    "trisal": "Trishal",
+    # Jamalpur
+    "jamalpursadar": "Jamalpur Sadar", "bokshiganj": "Bokshiganj", "bakshiganj": "Bokshiganj", "bakshigonj": "Bokshiganj",
+    "bokshigonj": "Bokshiganj", "dewangonj": "Dewangonj", "dewanganj": "Dewangonj", "islampur": "Islampur",
+    "madarganj": "Madarganj", "madargonj": "Madarganj", "melandah": "Melandah", "melandaha": "Melandah",
+    "sarishabari": "Sarishabari", "sharishabari": "Sarishabari",
+    # Netrokona
+    "atpara": "Atpara", "barhatta": "Barhatta", "durgapur": "Durgapur", "kalmakanda": "Kalmakanda", "kendua": "Kendua",
+    "kandua": "Kendua", "khaliajuri": "Khaliajuri", "khaliajhuri": "Khaliajuri", "madan": "Madan",
+    "mohongonj": "Mohongonj", "mohanganj": "Mohongonj", "mohangonj": "Mohongonj", "netrokonasadar": "Netrokona Sadar",
+    "netrakonasadar": "Netrokona Sadar", "purbadhala": "Purbadhala",
+    # Sherpur
+    "sherpursadar": "Sherpur Sadar", "jhenaigati": "Jhenaigati", "jhinaigati": "Jhenaigati", "nalitabari": "Nalitabari",
+    "nokla": "Nokla", "nakla": "Nokla", "sreebordi": "Sreebordi", "sreebardi": "Sreebordi", "sribordi": "Sreebordi",
+}
 _NORM = {"rajshahi": (_RAJ_DISTRICTS, _RAJ_DISTRICT_ALIASES, _RAJ_METRO_THANAS, _RAJ_UPAZILA_ALIASES),
-         "rangpur": (_RANG_DISTRICTS, _RANG_DISTRICT_ALIASES, _RANG_METRO_THANAS, _RANG_UPAZILA_ALIASES)}
+         "rangpur": (_RANG_DISTRICTS, _RANG_DISTRICT_ALIASES, _RANG_METRO_THANAS, _RANG_UPAZILA_ALIASES),
+         "dhaka": (_DHK_DISTRICTS, _DHK_DISTRICT_ALIASES, _DHK_METRO_THANAS, _DHK_UPAZILA_ALIASES),
+         "chattogram": (_CTG_DISTRICTS, _CTG_DISTRICT_ALIASES, _CTG_METRO_THANAS, _CTG_UPAZILA_ALIASES),
+         "khulna": (_KHL_DISTRICTS, _KHL_DISTRICT_ALIASES, _KHL_METRO_THANAS, _KHL_UPAZILA_ALIASES),
+         "barishal": (_BAR_DISTRICTS, _BAR_DISTRICT_ALIASES, _BAR_METRO_THANAS, _BAR_UPAZILA_ALIASES),
+         "sylhet": (_SYL_DISTRICTS, _SYL_DISTRICT_ALIASES, _SYL_METRO_THANAS, _SYL_UPAZILA_ALIASES),
+         "mymensingh": (_MYM_DISTRICTS, _MYM_DISTRICT_ALIASES, _MYM_METRO_THANAS, _MYM_UPAZILA_ALIASES)}
 DIVISION_DISTRICTS, _DISTRICT_ALIASES, METRO_THANAS, _UPAZILA_ALIASES = _NORM.get(DIV, ([], {}, set(), {}))
-OTHER_THANAS = {"rangpur": _RANG_OTHER_THANAS}.get(DIV, set())
+UPAZILA_NOTES = {"barishal": _BAR_UPAZILA_NOTES, "sylhet": _SYL_UPAZILA_NOTES}.get(DIV, {})
+OTHER_THANAS = {"rangpur": _RANG_OTHER_THANAS, "dhaka": _DHK_OTHER_THANAS,
+                "chattogram": _CTG_OTHER_THANAS, "khulna": _KHL_OTHER_THANAS}.get(DIV, set())
+# district of the metropolitan thanas where a thana name is also an upazila elsewhere in the division (else None)
+METRO_DISTRICT = {"khulna": "Khulna", "barishal": "Barishal", "sylhet": "Sylhet"}.get(DIV)
+
+
+def is_metro(upz, district):
+    return upz in METRO_THANAS and (not METRO_DISTRICT or district == METRO_DISTRICT)
 
 
 def _key(s):
@@ -215,6 +588,11 @@ def _key(s):
 
 def norm_district(s):
     return _DISTRICT_ALIASES.get(_key(s), "")
+
+
+def upazila_note(s):
+    """note for a source unit that was mapped by interpretation (empty for spelling-only mappings)"""
+    return UPAZILA_NOTES.get(_key(s), "")
 
 
 def norm_upazila(s, district=None):
@@ -309,6 +687,8 @@ import sys, io, zipfile, xml.etree.ElementTree as ET
 from collections import Counter
 
 SOURCE_KEY = f"BANBEIS_INST_{CODE.upper()}_2026"
+# DIVISION_NAME values that the lists use for the division (old spelling accepted where it may occur)
+SRC_DIVISION_NAMES = {"chattogram": ("Chattogram", "Chittagong")}.get(DIV, (DIVT,))
 BANBEIS = "https://banbeis.gov.bd"
 DETAIL = "https://institute-search.ieims.banbeis.gov.bd/details/{eiin}"
 BOARD_LIST = "https://rajshahiboard.gov.bd/sonali/ins.php"  # JSON behind https://rajshahiboard.gov.bd/index.php/institute/
@@ -431,19 +811,22 @@ def category(kind, x):
 
 def main():
     offline = ARGS.offline
-    rawdir = os.path.join(OUT, "raw")
-    os.makedirs(rawdir, exist_ok=True)
+    rawdir = os.path.join(OUT, "raw")  # created only when a list is saved, so a failed run writes nothing
     records = {}  # eiin -> (kind, row dict, [files])
     file_urls = {}
     header = None
+    failed = []  # lists with a failed download: nothing is written for them, the run stops before the outputs
     for kind in FILE_PAGES:
         raw_path = os.path.join(rawdir, f"banbeis_{kind}_{DIV}_division.csv")
         div_rows = []
-        if not offline:
+        done_mark = os.path.join(OUT, ".partial", kind + ".done")
+        if not offline and not (ARGS.resume and os.path.exists(done_mark) and os.path.exists(raw_path)):
+            ok = True
             for url in xlsx_links(kind):
                 r = get(url, timeout=180)
                 if r is None or r.status_code != 200:
                     print("FAILED", url)
+                    ok = False
                     continue
                 file_urls.setdefault(kind, []).append(url)
                 rows = read_xlsx_bytes(r.content)
@@ -451,15 +834,22 @@ def main():
                 h = [c.strip() for c in rows[hi]]
                 for rr in rows[hi + 1:]:
                     d = dict(zip(h, rr))
-                    if (d.get("DIVISION_NAME") or "").strip() == DIVT:
+                    if (d.get("DIVISION_NAME") or "").strip() in SRC_DIVISION_NAMES:
                         d["_file"] = url.rsplit("/", 1)[-1]
                         div_rows.append(d)
+            if not ok and DIV != "rajshahi":  # keep raw/ and the outputs as they were; --resume skips the saved lists
+                failed.append(kind)
+                div_rows = []
+                continue
             if div_rows:
                 cols = sorted({k for d in div_rows for k in d}, key=lambda c: (c.startswith("_"), c))
+                os.makedirs(rawdir, exist_ok=True)
                 with open(raw_path, "w", newline="", encoding="utf-8") as f:
                     w = csv.DictWriter(f, fieldnames=cols)
                     w.writeheader()
                     w.writerows(div_rows)
+                os.makedirs(os.path.dirname(done_mark), exist_ok=True)
+                open(done_mark, "w").close()
         if not div_rows and os.path.exists(raw_path):
             div_rows = list(csv.DictReader(open(raw_path, encoding="utf-8")))
         print(kind, len(div_rows))
@@ -472,6 +862,10 @@ def main():
                 continue
             records[eiin] = (kind, d, [kind])
 
+    if not records and not failed:
+        sys.exit("no institutions of the division in the lists or raw/; nothing written")
+    if failed:
+        sys.exit(f"download failed for {failed}; nothing written for them and no outputs rebuilt (re-run with --resume)")
     board = set()
     if DIV != "rajshahi":
         pass  # the Rajshahi Education Board cross-check applies to Rajshahi Division only
@@ -481,7 +875,7 @@ def main():
             board = {x["eiin"] for x in r.json()["aaData"]} if r is not None else set()
         except (ValueError, KeyError):
             board = set()
-        if board:  # keep only EIINs of Rajshahi-Division institutions (the board list also covers Rangpur Division)
+        if board and os.path.isdir(rawdir):  # keep only EIINs of Rajshahi-Division institutions (the board list also covers Rangpur Division)
             with open(os.path.join(rawdir, "rajshahi_board_eiin_list.txt"), "w", encoding="utf-8") as f:
                 f.write("\n".join(sorted(board & set(records))) + "\n")
     elif os.path.exists(os.path.join(rawdir, "rajshahi_board_eiin_list.txt")):
@@ -500,7 +894,9 @@ def main():
         if not dist and DIV != "rajshahi" and nfc(d.get("DISTRICT_NAME")):
             notes.append(f"district '{d.get('DISTRICT_NAME')}' not normalised")
             dist = nfc(d.get("DISTRICT_NAME"))
-        if upz in METRO_THANAS:
+        if upazila_note(d.get("THANA_NAME")):
+            notes.append(upazila_note(d.get("THANA_NAME")))
+        if is_metro(upz, dist):
             notes.append(f"metropolitan thana of {DIVT} City, not an upazila")
         if upz in OTHER_THANAS:
             notes.append("thana listed by the source as its own unit, not an upazila")
@@ -521,7 +917,7 @@ def main():
             "area_status": d.get("AREA_STATUS_NAME"), "post_office": None if po in ("", "None") else nfc(po),
             "thana_src": d.get("THANA_NAME"), "district_src": d.get("DISTRICT_NAME"),
             "banbeis_survey_year": d.get("BANBEIS_SURVEY_YEAR") or "2024", "banbeis_lists": kinds,
-            "admin_unit": "metropolitan_thana" if upz in METRO_THANAS else "thana" if upz in OTHER_THANAS else "upazila",
+            "admin_unit": "metropolitan_thana" if is_metro(upz, dist) else "thana" if upz in OTHER_THANAS else "upazila",
         }
         if board and kind in ("school", "college"):
             extra["rajshahi_board_listed"] = eiin in board
@@ -545,7 +941,7 @@ def main():
                       "basis": "count_of_listed_records", "year": 2024, "source_key": SOURCE_KEY,
                       "source_url": BANBEIS + "/pages/files/69199760933eb65569ddc637", "notes": note})
     for (dist, upz, cat), n in sorted(cnt.items()):
-        facts.append({"entity_level": "thana" if upz in METRO_THANAS or upz in OTHER_THANAS else "upazila", "entity_name_en": upz,
+        facts.append({"entity_level": "thana" if is_metro(upz, dist) or upz in OTHER_THANAS else "upazila", "entity_name_en": upz,
                       "district_en": dist, "upazila_en": upz, "fact": "institutions_" + cat.split(".")[1],
                       "value": n, "unit": "institutions", "basis": "count_of_listed_records", "year": 2024,
                       "source_key": SOURCE_KEY, "source_url": BANBEIS + "/pages/files/69199760933eb65569ddc637",
@@ -553,6 +949,9 @@ def main():
     write_csv("facts.csv", FACT_COLS, facts)
     files = ["places.csv", "facts.csv"] + [f"raw/{f}" for f in sorted(os.listdir(rawdir))]
     update_manifest(files)
+    if os.path.isdir(os.path.join(OUT, ".partial")):
+        import shutil
+        shutil.rmtree(os.path.join(OUT, ".partial"))
     print("places", len(rows), "facts", len(facts))
     print(Counter(r["category_key"] for r in rows))
     print(Counter(r["district_en"] for r in rows))

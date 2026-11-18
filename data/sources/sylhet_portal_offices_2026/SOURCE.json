@@ -1,0 +1,24 @@
+{
+  "key": "SYLHET_PORTAL_OFFICES_2026",
+  "division": "sylhet",
+  "kind": "portal_offices",
+  "name": "Government offices on the national portal sites — Divisional Commissioner, Sylhet DC & upazila portals, DC/UNO offices of Sylhet Division",
+  "organization": "Divisional / District / Upazila administrations (national portal framework)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://sylhetdiv.gov.bd/",
+    "https://sylhet.gov.bd/",
+    "https://<upazila>.sylhet.gov.bd/",
+    "https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0694"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Divisional / District / Upazila administrations (national portal framework)",
+  "notes": "Office list = menu entries under 'সরকারি অফিসসমূহ' / 'সরকারী অফিস' / 'স্থানীয় সরকার' / 'পৌরসভা' plus the DC/UNO portals themselves; union parishads from the Sylhet DC portal's union list. Contacts = office landline and *.gov.bd e-mail from the office head's officer card or the 'যোগাযোগ' page; mobile numbers, personal e-mails and officials' names are not collected. No addresses/coordinates are published in a structured way. Licence: none stated on the source; treat as government public information, cite the source. sylhet.gov.bd and its sub-sites send only their leaf certificate (Let's Encrypt YR1): the CA-published intermediates are added from the AIA URLs, TLS verification stays on. The office sub-sites of the Sylhet upazila portals (x.<upazila>.sylhet.gov.bd) serve the *.sylhet.gov.bd certificate, which does not cover a second-level name: they were skipped (TLS hostname mismatch) and those offices are listed from the menus without contacts (noted per row). Decorative marks in Sylhet menu titles ('*', '►►') are dropped (title as listed in extra_json).",
+  "files": {
+    "places.csv": "f1155dc9623a15e4f5e3936566c29b8f7a88bbf07f1e4b162f9ee7fbac951547"
+  }
+}

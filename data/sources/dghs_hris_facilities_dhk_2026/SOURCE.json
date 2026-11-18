@@ -1,0 +1,24 @@
+{
+  "key": "DGHS_HRIS_FACILITIES_DHK_2026",
+  "name": "DGHS / MoHFW HRIS Facility Registry — organisation list, Dhaka Division",
+  "organization": "Directorate General of Health Services (DGHS), Ministry of Health and Family Welfare",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=1",
+    "https://hris.mohfw.gov.bd/public/facility-registry"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Source: DGHS Facility Registry (hris.mohfw.gov.bd), Ministry of Health and Family Welfare, Bangladesh",
+  "division": "dhaka",
+  "kind": "dghs_hris",
+  "files": {
+    "places.csv": "fce1144db2c551877316aebf8a8cc15a56d91532bf6b91d84473dce16f2f7673",
+    "facts.csv": "8335ff40ccc8f9d867c6162978815fce298dd17b5eb193edb5b149db1339a7bc",
+    "raw/hris_organization_list_dhaka_division.csv": "1cffd6ad06f9c58fd4f34db78b7edd7685e969d4d0afa0aada943eea80991e18"
+  },
+  "notes": "Public report of the MoHFW HRIS Facility Registry. Excel export (ret=excel) of all active entries filtered to Dhaka Division (division_id 1), same collector and rules as DGHS_HRIS_FACILITIES_RAJ_2026. Registry is live and self-reported by facilities; coordinates are as entered by facilities (QA flags in notes). Contacts kept only for non-private facilities; private/NGO contacts and addresses and facility-head names not collected. No licence stated on the site."
+}

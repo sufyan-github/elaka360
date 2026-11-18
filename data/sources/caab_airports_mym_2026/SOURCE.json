@@ -1,0 +1,24 @@
+{
+  "key": "CAAB_AIRPORTS_MYM_2026",
+  "division": "mymensingh",
+  "kind": "caab",
+  "name": "Civil Aviation Authority of Bangladesh — airports in Mymensingh Division",
+  "organization": "Civil Aviation Authority of Bangladesh (CAAB)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://www.caab.gov.bd/",
+    "https://new.caab.gov.bd/airportsf.html",
+    "https://new.caab.gov.bd/contactof.html"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Civil Aviation Authority of Bangladesh (caab.gov.bd)",
+  "notes": "No licence stated. CAAB names no airport or airfield in Mymensingh Division: the caab.gov.bd airport menu has no page for one, and the new.caab.gov.bd 'All airports' overview (three international airports; 'TWELVE DOMESTIC AIRPORTS': five operational, three needing prior approval, three with no service, one under construction) names none in Mymensingh, Jamalpur, Sherpur or Netrokona. places.csv is therefore empty (header only); raw/airportsf.txt keeps the overview text as evidence. No airfield was added from other sources.",
+  "files": {
+    "places.csv": "3caf89d7e57fd29352f18ff6881a7bae15bfdbe9816b7433c575dff10ece7630",
+    "raw/airportsf.txt": "db3499f9396da7cb6259a8cb0717a179f5ecc0c07ab425063c8f9a63685a8b39"
+  }
+}

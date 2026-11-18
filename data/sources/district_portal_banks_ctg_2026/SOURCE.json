@@ -1,0 +1,40 @@
+{
+  "key": "DISTRICT_PORTAL_BANKS_CTG_2026",
+  "division": "chattogram",
+  "kind": "district_banks",
+  "name": "District portals — bank branch/office lists (Cumilla, Feni, Brahmanbaria, Rangamati, Noakhali, Chandpur, Chattogram, Khagrachhari, Bandarban)",
+  "organization": "Deputy Commissioner's offices (district portals)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://comilla.gov.bd/pages/static-pages/69912917516a96d4de40783c",
+    "https://feni.gov.bd/pages/static-pages/6990ef0135ce18e1c072abae",
+    "https://brahmanbaria.gov.bd/pages/static-pages/6990f3a235ce18e1c072f52d",
+    "https://rangamati.gov.bd/pages/static-pages/69914374516a96d4de411143",
+    "https://noakhali.gov.bd/pages/static-pages/6990eefe35ce18e1c072aa4b",
+    "https://chandpur.gov.bd/pages/static-pages/6991384d516a96d4de40c431",
+    "https://chittagong.gov.bd/pages/static-pages/6990e67235ce18e1c0727b95",
+    "https://khagrachhari.gov.bd/pages/static-pages/699145a2516a96d4de413f1d",
+    "https://bandarban.gov.bd/pages/static-pages/69914377516a96d4de411275",
+    "https://coxsbazar.gov.bd/pages/static-pages/6991177035ce18e1c073d47d",
+    "https://lakshmipur.gov.bd/pages/bank-financial-org"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "District portals comilla.gov.bd, feni.gov.bd, brahmanbaria.gov.bd, rangamati.gov.bd, noakhali.gov.bd, chandpur.gov.bd, chittagong.gov.bd, khagrachhari.gov.bd, bandarban.gov.bd",
+  "notes": "No licence stated; lists are undated. Only landline numbers are kept (mobile numbers dropped: Feni 1, Brahmanbaria 99, Noakhali 54, Chattogram 1, Khagrachhari 2); no e-mails, routing numbers or coordinates. Cox's Bazar lists bank names and websites only and Lakshmipur's bank module has 4 names without branch or contacts — not used. Cumilla's second table (run-together text) and Brahmanbaria's legacy-font (non-Unicode) upazila table and insurance table are not parsed.",
+  "files": {
+    "places.csv": "245e2eab7417d50f156c30f655881bb3dc0f497b48d69958674215494c1abda7",
+    "raw/bandarban_banks.txt": "3ed71665de1322b70de78a5c297a08d415850d242315ad3df1ee26085426be33",
+    "raw/brahmanbaria_banks.txt": "8d84e7b41f0a9e96666d87b337dc4ad46bd8fa3145778ca61ce14ce5a16a4426",
+    "raw/chandpur_banks.txt": "23176e7108866dbf235a172af1b11320995643cc55a6e5ec860c93040a824ad6",
+    "raw/chattogram_banks.txt": "4cf93d69a62ba2e5af979822d9bf499d705146dd8c8011e71930ed8152e41afd",
+    "raw/cumilla_banks.txt": "1d88d0ae0d609d1a2387b4016f2b657e0ebd8d9ded42236cbc81e74e7da2aae4",
+    "raw/feni_banks.txt": "5c676ce7abec96d52e70fa614cf0078a0072953ccec512159fb71d1ad41bbef1",
+    "raw/khagrachhari_banks.txt": "2b2a00e7cfc7b97eb939446d06eeda45560ae17aa9e36c522192e68223234977",
+    "raw/noakhali_banks.txt": "5d61d560e552909737c82fb4ef255a0d47b7d56d7cd139a363e28a613a9df232",
+    "raw/rangamati_banks.txt": "497168f45ad41f053f9390ab0549d7d147fafaa0d1fe0ef7e0cbdc3157c9a64c"
+  }
+}

@@ -62,6 +62,9 @@ jobs:
           python3 -m unittest pipelines/test_pipeline.py
           python3 pipelines/build_seed.py > /dev/null
           git diff --stat --exit-code -- data/seed db/seed apps/web/public/geo apps/web/public/data docs/data/SOURCE_REGISTRY.md docs/data/UNRESOLVED_CONFLICTS.md
+          # generated files that were never committed (e.g. a new division's places/<division>.sql) do not show in git diff
+          untracked=$(git ls-files --others --exclude-standard -- data/seed db/seed docs/data)
+          if [ -n "$untracked" ]; then echo "Generated but not committed:"; echo "$untracked"; exit 1; fi
           python3 pipelines/validate_seed.py
 
       - name: Install (frozen lockfile)

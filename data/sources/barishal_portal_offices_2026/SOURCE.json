@@ -1,0 +1,24 @@
+{
+  "key": "BARISHAL_PORTAL_OFFICES_2026",
+  "division": "barishal",
+  "kind": "portal_offices",
+  "name": "Government offices on the national portal sites — Divisional Commissioner, Barishal DC & upazila portals, DC/UNO offices of Barishal Division",
+  "organization": "Divisional / District / Upazila administrations (national portal framework)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://barisaldiv.gov.bd/",
+    "https://barisal.gov.bd/",
+    "https://<upazila>.barisal.gov.bd/",
+    "https://barisal.gov.bd/pages/static-pages/6978a32135ce18e1c0672269"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Divisional / District / Upazila administrations (national portal framework)",
+  "notes": "Office list = menu entries under 'সরকারি অফিসসমূহ' / 'সরকারী অফিস' / 'স্থানীয় সরকার' / 'পৌরসভা' plus the DC/UNO portals themselves; union parishads from the Barishal DC portal's union list. Contacts = office landline and *.gov.bd e-mail from the office head's officer card or the 'যোগাযোগ' page; mobile numbers, personal e-mails and officials' names are not collected. No addresses/coordinates are published in a structured way. Licence: none stated on the source; treat as government public information, cite the source.",
+  "files": {
+    "places.csv": "0e45408db0098845201a91cd6d9a0eb6b4551939b0169d8940b8564bf6a4b073"
+  }
+}

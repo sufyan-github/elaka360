@@ -1,0 +1,435 @@
+{
+ "url": "https://fhir.dghs.gov.bd/core/CodeSystem/bd-geocodes",
+ "version": "0.5.0",
+ "name": "BDGeoCodesCS",
+ "title": "Bangladesh GeoCodes CodeSystem",
+ "status": "draft",
+ "date": "2026-10-15T00:09:54+00:00",
+ "publisher": "Directorate General of Health Services (DGHS), Bangladesh",
+ "description": "Bangladesh GeoCodes",
+ "count": 1591,
+ "ig_license": "CC0-1.0",
+ "ig_version": "0.5.0",
+ "concepts_mymensingh_division": [
+  {
+   "code": "45",
+   "display": "Mymensingh"
+  },
+  {
+   "code": "4539",
+   "display": "Jamalpur"
+  },
+  {
+   "code": "4561",
+   "display": "Mymensingh"
+  },
+  {
+   "code": "4572",
+   "display": "Netrakona"
+  },
+  {
+   "code": "4589",
+   "display": "Sherpur"
+  },
+  {
+   "code": "453900",
+   "display": "Jamalpur N/A"
+  },
+  {
+   "code": "456140",
+   "display": "Mymensingh City Corporation"
+  },
+  {
+   "code": "456100",
+   "display": "Mymensingh N/A"
+  },
+  {
+   "code": "457200",
+   "display": "Netrakona N/A"
+  },
+  {
+   "code": "458900",
+   "display": "Sherpur N/A"
+  },
+  {
+   "code": "45390007",
+   "display": "Bakshiganj"
+  },
+  {
+   "code": "45390015",
+   "display": "Dewanganj"
+  },
+  {
+   "code": "45390029",
+   "display": "Islampur"
+  },
+  {
+   "code": "45390036",
+   "display": "Jamalpur Sadar"
+  },
+  {
+   "code": "45390058",
+   "display": "Madarganj"
+  },
+  {
+   "code": "45390061",
+   "display": "Melandaha"
+  },
+  {
+   "code": "45390085",
+   "display": "Sarishabari"
+  },
+  {
+   "code": "45610013",
+   "display": "Bhaluka"
+  },
+  {
+   "code": "45610016",
+   "display": "Dhobaura"
+  },
+  {
+   "code": "45610020",
+   "display": "Fulbaria"
+  },
+  {
+   "code": "45610024",
+   "display": "Haluaghat"
+  },
+  {
+   "code": "45610031",
+   "display": "Ishwarganj"
+  },
+  {
+   "code": "45614052",
+   "display": "Mymensingh Sadar"
+  },
+  {
+   "code": "45610065",
+   "display": "Muktagacha"
+  },
+  {
+   "code": "45610072",
+   "display": "Nandail"
+  },
+  {
+   "code": "45610081",
+   "display": "Phulpur"
+  },
+  {
+   "code": "45610088",
+   "display": "Tarakanda"
+  },
+  {
+   "code": "45610094",
+   "display": "Trishal"
+  },
+  {
+   "code": "45720004",
+   "display": "Atpara"
+  },
+  {
+   "code": "45720009",
+   "display": "Barhatta"
+  },
+  {
+   "code": "45720018",
+   "display": "Durgapur"
+  },
+  {
+   "code": "45720038",
+   "display": "Khaliajuri"
+  },
+  {
+   "code": "45720040",
+   "display": "Kalmakanda"
+  },
+  {
+   "code": "45720047",
+   "display": "Kendua"
+  },
+  {
+   "code": "45720056",
+   "display": "Madan"
+  },
+  {
+   "code": "45720063",
+   "display": "Mohanganj"
+  },
+  {
+   "code": "45720074",
+   "display": "Netrokona Sadar"
+  },
+  {
+   "code": "45720083",
+   "display": "Purbadhala"
+  },
+  {
+   "code": "45890037",
+   "display": "Jhenaigati"
+  },
+  {
+   "code": "45890067",
+   "display": "Nakla"
+  },
+  {
+   "code": "45890070",
+   "display": "Nalitabari"
+  },
+  {
+   "code": "45890088",
+   "display": "Sherpur Sadar"
+  },
+  {
+   "code": "45610022",
+   "display": "Gafargaon"
+  },
+  {
+   "code": "45610023",
+   "display": "Gouripur"
+  },
+  {
+   "code": "45890090",
+   "display": "Sreebardi"
+  },
+  {
+   "code": "4539000710",
+   "display": "Bakshiganj Paurashava"
+  },
+  {
+   "code": "4539001516",
+   "display": "Dewanganj Paurashava"
+  },
+  {
+   "code": "4539002933",
+   "display": "Islampur Paurashava"
+  },
+  {
+   "code": "4539003650",
+   "display": "Jamalpur Paurashava"
+  },
+  {
+   "code": "4539005860",
+   "display": "Madarganj Paurashava"
+  },
+  {
+   "code": "4539006167",
+   "display": "Melandaha Paurashava"
+  },
+  {
+   "code": "4539008583",
+   "display": "Sarishabari Paurashava"
+  },
+  {
+   "code": "4561001311",
+   "display": "Bhaluka Paurashava"
+  },
+  {
+   "code": "4561002018",
+   "display": "Fulbaria Paurashava"
+  },
+  {
+   "code": "4561002333",
+   "display": "Gauripur Paurashava"
+  },
+  {
+   "code": "4561003144",
+   "display": "Ishwarganj Paurashava"
+  },
+  {
+   "code": "4561405255",
+   "display": "Mymensingh Paurashava"
+  },
+  {
+   "code": "4561006566",
+   "display": "Muktagachha Paurashava"
+  },
+  {
+   "code": "4561007277",
+   "display": "Nandail Paurashava"
+  },
+  {
+   "code": "4561008183",
+   "display": "Phulpur Paurashava"
+  },
+  {
+   "code": "4561009488",
+   "display": "Trishal Paurashava"
+  },
+  {
+   "code": "4572001820",
+   "display": "Durgapur Paurasava"
+  },
+  {
+   "code": "4572004740",
+   "display": "Kendua Paurasava"
+  },
+  {
+   "code": "4572005650",
+   "display": "Madan Paurasava"
+  },
+  {
+   "code": "4572006360",
+   "display": "Mohanganj Paurasava"
+  },
+  {
+   "code": "4572007480",
+   "display": "Netrokona Paurasava"
+  },
+  {
+   "code": "4589006722",
+   "display": "Nakla Paurashava"
+  },
+  {
+   "code": "4589007033",
+   "display": "Nalitabari Paurashava"
+  },
+  {
+   "code": "4589008866",
+   "display": "Sherpur Paurashava"
+  },
+  {
+   "code": "4539000799",
+   "display": "Unions Of Bakshiganj Upazila"
+  },
+  {
+   "code": "4539001599",
+   "display": "Unions Of Dewanganj Upazila"
+  },
+  {
+   "code": "4539002999",
+   "display": "Unions Of Islampur Upazila"
+  },
+  {
+   "code": "4539003699",
+   "display": "Unions Of Jamalpur Sadar Upazila"
+  },
+  {
+   "code": "4539005899",
+   "display": "Unions Of Madarganj Upazila"
+  },
+  {
+   "code": "4539006199",
+   "display": "Unions Of Melandaha Upazila"
+  },
+  {
+   "code": "4539008599",
+   "display": "Unions Of Sarishabari Upazila Upazila"
+  },
+  {
+   "code": "4561001399",
+   "display": "Unions Of Bhaluka Upazila"
+  },
+  {
+   "code": "4561001699",
+   "display": "Unions Of Dhobaura Upazila"
+  },
+  {
+   "code": "4561002099",
+   "display": "Unions Of Fulbaria Upazila"
+  },
+  {
+   "code": "4561002299",
+   "display": "Unions Of Gaffargaon Upazila"
+  },
+  {
+   "code": "4561002399",
+   "display": "Unions Of Gauripur Upazila"
+  },
+  {
+   "code": "4561002499",
+   "display": "Unions Of Haluaghat Upazila"
+  },
+  {
+   "code": "4561003199",
+   "display": "Unions Of Ishwarganj Upazila"
+  },
+  {
+   "code": "4561405299",
+   "display": "Unions Of Mymensingh Sadar Upazila"
+  },
+  {
+   "code": "4561006599",
+   "display": "Unions Of Muktagachha Upazila"
+  },
+  {
+   "code": "4561007299",
+   "display": "Unions Of Nandail Upazila"
+  },
+  {
+   "code": "4561008199",
+   "display": "Unions Of Phulpur Upazila"
+  },
+  {
+   "code": "4561008899",
+   "display": "Unions Of Tarakanda Upazila"
+  },
+  {
+   "code": "4561009499",
+   "display": "Unions Of Trishal Upazila"
+  },
+  {
+   "code": "4572000499",
+   "display": "Unions Of Atpara Upazila"
+  },
+  {
+   "code": "4572000999",
+   "display": "Unions Of Barhatta Upazila"
+  },
+  {
+   "code": "4572001899",
+   "display": "Unions Of Durgapur Upazila"
+  },
+  {
+   "code": "4572003899",
+   "display": "Unions Of Khaliajuri Upazila"
+  },
+  {
+   "code": "4572004099",
+   "display": "Unions Of Kalmakanda Upazila"
+  },
+  {
+   "code": "4572004799",
+   "display": "Unions Of Kendua Upazila"
+  },
+  {
+   "code": "4572005699",
+   "display": "Unions Of Madan Upazila"
+  },
+  {
+   "code": "4572006399",
+   "display": "Unions Of Mohanganj Upazila"
+  },
+  {
+   "code": "4572007499",
+   "display": "Unions Of Netrokona Sadar Upazila"
+  },
+  {
+   "code": "4572008399",
+   "display": "Unions Of Purbadhala Upazila"
+  },
+  {
+   "code": "4589003799",
+   "display": "Unions Of Jhenaigati Upazila"
+  },
+  {
+   "code": "4589006799",
+   "display": "Unions Of Nakla Upazila"
+  },
+  {
+   "code": "4589007099",
+   "display": "Unions Of Nalitabari Upazila"
+  },
+  {
+   "code": "4589008899",
+   "display": "Unions Of Sherpur Sadar Upazila"
+  },
+  {
+   "code": "4589009099",
+   "display": "Unions of Sreebardi Upazila"
+  },
+  {
+   "code": "4589009077",
+   "display": "Sreebardi Pourasabha"
+  }
+ ]
+}

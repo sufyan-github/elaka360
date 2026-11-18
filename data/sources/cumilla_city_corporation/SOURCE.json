@@ -1,0 +1,26 @@
+{
+  "key": "CUMILLA_CITY_CORPORATION",
+  "division": "chattogram",
+  "kind": "city_corporation",
+  "city": 50009,
+  "name": "Cumilla City Corporation official portal (cocc.portal.gov.bd)",
+  "organization": "Cumilla City Corporation",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://cocc.portal.gov.bd/",
+    "https://cocc.portal.gov.bd/pages/files/6922db7d933eb65569e0a5f2",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-cocc/2024/12/c91aab1a20654c8184653e46505c6fcc.pdf"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Cumilla City Corporation (cocc.portal.gov.bd), Bangladesh National Portal",
+  "notes": "The portal's এক নজরে is a scanned 5-page PDF (\"At a glance\", 2024) without a text layer: ward count, area, population (approximate) and holdings were read from page 1; fetch.py checks the PDF checksum. No ward names, thana list or establishment date are published as text. Ward-secretary list (names, mobiles) not used.",
+  "files": {
+    "areas.csv": "d6db0314ca4b1b72d320cff1d4b7e76dbea2c1b60b47ec5a5f59df5a6eedcc56",
+    "facts.csv": "1c20ae7eaa87168287a68c6832da37d3395f3d9fe42ee39f608a88e26fb61b02",
+    "raw/ek_nojore_cocc.txt": "c2e0ca83735e7eb8a8a5852c3088b30fbdf8a91974e4fa13260ca1d303e17100"
+  }
+}

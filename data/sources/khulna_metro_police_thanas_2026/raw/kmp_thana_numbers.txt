@@ -1,0 +1,12 @@
+Source: https://police.khulnadiv.gov.bd/pages/static-pages/698101a8a31054345f1d5747
+PDF: https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-police-khulnadiv/2026/2/d780b90d-e6b7-4a5d-9a1f-ee7ef22ba578.pdf
+sha256: 19713eef92ea9409a5d0d7cfb341d2f65ebfb7a6587f22f863baa048ac15efc6
+
+দৌলতপুর | Daulatpur | KMP list label (legacy font) '‡`ŠjZcyi' -> দৌলতপুর থানা | OC 01320058539 | duty officer 01320058545
+খালিশপুর | Khalishpur | KMP list label (legacy font) 'Lvwjkcyi' -> খালিশপুর থানা | OC 01320058512 | duty officer 01320058518
+খানজাহানআলী | Khan Jahan Ali | KMP list label (legacy font) 'LvbRvnvbAvjx' -> খানজাহান আলী থানা | OC 01320058593 | duty officer 01320058599
+সোনাডাঙ্গা | Sonadanga | KMP list label (legacy font) '‡mvbvWv½vg‡Wj' -> সোনাডাঙ্গা মডেল থানা | OC 01320058409 | duty officer 01320058415
+কোতয়ালী | Khulna Sadar | KMP list label (legacy font) 'Lyjbv' -> খুলনা থানা | OC 01320058382 | duty officer 01320058388
+আড়ংঘাটা | Aranghata | KMP list label (legacy font) 'AvosNvUv' -> আড়ংঘাটা থানা | OC 01320058566 | duty officer 01320058572
+হড়িণটানা | Harintana | KMP list label (legacy font) 'nwiYUvbv' -> হরিণটানা থানা | OC 01320058463 | duty officer 01320058469
+লবনচড়া | Labanchara | KMP list label (legacy font) 'jeYPiv' -> লবণচরা থানা | OC 01320058436 | duty officer 01320058442

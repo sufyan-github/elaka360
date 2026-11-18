@@ -31,6 +31,41 @@ PAGE = "https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html"
 IG_URL = "https://fhir.dghs.gov.bd/core/ImplementationGuide-bd.fhir.core.json"
 KIND = "dghs_geocodes"
 
+# City corporations whose 8-digit units with a "Unions Of X Upazila" group are metro thanas, not upazilas: in Dhaka
+# North / South the group holds the unions absorbed by the 2016 extension (HDX v03 and the seed have only 5 upazilas in
+# Dhaka district). Khulna City Corporation (404733): Daulatpur and Khan Jahan Ali have "Unions Of ... Upazila" groups, but
+# BBS 2022 has them as metro thanas of the city corporation (their unions Arangghata, Jogipol and Atra Gilatala under
+# Dighalia / Phultala upazilas), and HDX v03 and the seed have 9 upazilas in Khulna district without them. Elsewhere
+# (Rangpur Sadar, Gazipur Sadar, Bandar, Narayanganj Sadar) such a unit is read as an upazila.
+METRO_CC_WITH_UNION_GROUPS = {"302620", "302625", "404733"}
+UNION_GROUP_NOTE = {  # why the union group is not read as an upazila (default: the Dhaka case)
+    "404733": "unions listed under Dighalia / Phultala upazilas in BBS 2022",
+}
+# City corporations that the name matcher cannot pair because of a misspelling in the list; hand-checked by code.
+CC_SEED = {"302625": "50001"}  # "Dhaka North City Corperation" -> Dhaka North City Corporation
+# Upazilas the name matcher cannot pair (or pairs wrongly), hand-checked against the seed's Bangla name, per division
+# (passed to build_crosswalk as `pinned`). Chattogram: Matlab Dakshin/Uttar = Matlab South/North (মতলব দক্ষিণ/উত্তর; the
+# fuzzy tier paired Uttar with South), Cumilla Adarsha Sadar = Comilla Sadar (কুমিল্লা সদর), Cumilla Sadar Dakshin =
+# Sadarsouth (সদর দক্ষিণ), Kowkhali = Kawkhali (কাউখালী). Khulna: Dacope = Dakop (দাকোপ; no tier pairs them), Paikgacha =
+# Paikgasa (পাইকগাছা; only a low fuzzy pair). Barishal: Indurkani = Zianagar (below). Sylhet: Sulla, Shantiganj (below).
+UNIT_SEED_BY_DIV = {
+    "chattogram": {"20130076": "30056", "20130079": "30058", "20195067": "30011", "20195033": "30014",
+                   "20840025": "30035"},
+    "khulna": {"40470017": "30213", "40470064": "30206"},
+    # Barishal: Indurkani = seed Zianagar (জিয়ানগর, the upazila's former name); HDX's 2020 point for upazila 79-90 is named
+    # Zianagar, and the seed's three Zianagar unions are BBS 2022 Indurkani unions
+    "barishal": {"10790090": "30245"},
+    # Sylhet: Sulla = seed Shalla (শাল্লা; BBS 2022 60-90-86 "Shalla"; only a fuzzy 0.75 candidate); Shantiganj = seed South
+    # Sunamganj (দক্ষিণ সুনামগঞ্জ, the upazila's former name Dakshin Sunamganj; BBS 2022 60-90-87 Shantiganj has the seed
+    # South Sunamganj's eight unions; HDX's 2020 point for it is "Dakshin Sunamganj")
+    "sylhet": {"60900086": "30309", "60900087": "30301"},
+}
+# Upazila codes that the "listed under another division" check below would flag, but which are the correctly filed
+# copy, hand-checked per code against HDX COD-AB v03 and BBS 2022 (the other division's copy keeps its "probably
+# misfiled" note). Mymensingh: 45890090 Sreebardi (Sherpur) = HDX v03 BD45890090 Sreebardi and BBS 2022 45-89-90
+# Sreebardi; the Dhaka copy 30260090 is the misfiled one.
+FILED_CORRECTLY = {"45890090": "HDX COD-AB v03 BD45890090 and BBS 2022 45-89-90 place Sreebardi in Sherpur district"}
+
 
 def walk(cs):
     for c in cs:
@@ -88,6 +123,11 @@ def main():
             has_unions = re.match(r"unions of", by.get(code + "99", ""), re.I)
             if cc in by and "N/A" not in by[cc] and not has_unions:
                 add("thana", code, name, "city_corporation", by[cc], dist, "", "thana of the city corporation")
+            elif cc in METRO_CC_WITH_UNION_GROUPS:  # Dhaka North / South metro thanas with absorbed unions
+                add("thana", code, name, "city_corporation", by[cc], dist, "",
+                    f"thana of the city corporation; the list also has '{by[code + '99']}' ("
+                    + UNION_GROUP_NOTE.get(cc, "unions absorbed by the city corporation")
+                    + "), read as a metro thana, not an upazila")
             elif cc in by and "N/A" not in by[cc]:  # e.g. 55857549 Rangpur Sadar: CC code space, but has a union group
                 add("upazila", code, name, "district", dist, dist, name,
                     f"code lies under city corporation {cc} ({by[cc]}) but the list has '{by[code + '99']}', so read as an upazila")
@@ -101,11 +141,29 @@ def main():
                 skipped.append((code, name, "union-group placeholder, no union names in this list"))
             elif re.search(r"city corp", name, re.I):
                 skipped.append((code, name, f"part of the city corporation inside thana {parent}"))
-            elif re.search(r"paura|pourash", name, re.I):
+            elif re.search(r"paura|pourash|pourasab", name, re.I):  # "Pourasabha": Sreebardi (Mymensingh)
                 add("pourashava", code, name, "upazila", parent, dist, parent)
                 units.append({"level": "pourashava", "code": code, "name_en": name, "match_parent": code[:8]})
             else:
                 skipped.append((code, name, "unrecognised 10-digit entry"))
+    # 8-digit units whose number and exact name (or 'Unions Of <name> Upazila') are also listed under a district of
+    # another division: probably misfiled (Dhaka: Gaffargaon, Gauripur, Sreebardi)
+    nat = [(c["code"], (c.get("display") or "").strip()) for c in allc]
+    for r in areas:
+        if r["level"] != "upazila":
+            continue
+        elsewhere = sorted(c for c, d in nat if len(c) in (8, 10) and c[:2] != r["code"][:2] and c[4:8] == r["code"][4:8]
+                           and re.fullmatch(r"(unions of )?" + re.escape(r["name_en"]) + r"( upazila)?", d, re.I))
+        if elsewhere and r["code"] in FILED_CORRECTLY:
+            r["notes"] += (f"; the same upazila number and name are also listed under another division ("
+                           + ", ".join(f"{c} {dict(nat)[c]}" for c in elsewhere) + "); hand-checked: this code is the "
+                           "correctly filed one (" + FILED_CORRECTLY[r["code"]] + "), the other entry is probably misfiled")
+        elif elsewhere:
+            r["notes"] += (f"; doubtful: the same upazila number and name are listed under another division ("
+                           + ", ".join(f"{c} {dict(nat)[c]}" for c in elsewhere) + "), so this code is probably misfiled")
+            for p in areas:
+                if p["level"] == "pourashava" and p["code"][:8] == r["code"]:
+                    p["notes"] += f"; doubtful: parent upazila code {r['code']} is probably misfiled (see that row)"
     dup = {}
     for r in areas:
         dup.setdefault((r["level"], r["district_en"], r["name_en"].lower()), []).append(r["code"])
@@ -117,7 +175,16 @@ def main():
 
     seed_rows, by_id = H.load_seed(seed_id)
     xw, _ = H.build_crosswalk(units, seed_rows, by_id, "DGHS/BBS", district_key=lambda c: "BD" + c[:4],
-                              district_map=H.DISTRICT_SEED_BY_DIV.get(a.division))
+                              district_map=H.DISTRICT_SEED_BY_DIV.get(a.division), pinned=UNIT_SEED_BY_DIV.get(a.division))
+    for code, oid in CC_SEED.items():  # hand-checked city corporations the name matcher could not pair
+        hit = [r for r in xw if r["source_code"] == code and not r["our_id"]]
+        if hit and oid in by_id and any(r["our_id"] == oid and r["match_method"] == "no_source_unit" for r in xw):
+            o = by_id[oid]
+            hit[0].update({"our_id": oid, "our_level": o["level"], "our_name_en": o["name_en"], "our_path": o["path"],
+                           "match_method": "code_city_corporation", "confidence": "high",
+                           "notes": f"source level city_corporation; spelling differs ({hit[0]['source_name_en']} vs "
+                                    f"{o['name_en']}); matched by hand via city-corporation code {code}"})
+            xw = [r for r in xw if not (r["our_id"] == oid and r["match_method"] == "no_source_unit")]
     H.write_csv(os.path.join(OUT, "crosswalk.csv"), H.XW_COLS, xw)
 
     files = ["areas.csv", "crosswalk.csv", f"raw/bd-geocodes_{a.division}.json"]

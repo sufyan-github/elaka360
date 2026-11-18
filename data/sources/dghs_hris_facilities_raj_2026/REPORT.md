@@ -43,3 +43,9 @@ Kept only for public facilities (phone 2,213, e-mail 2,730): DGHS-issued office 
 ## Pilot places
 
 RMCH (hris:1554): DGHS code 10001560; 24.372088, 88.586359; approved beds 1,300; est. 1958. Rajshahi Medical College (hris:1553) and the Civil Surgeon office (hris:1550) are separate records.
+
+## E-mail scrub (2026-11-18)
+
+Non-`*.gov.bd` e-mail addresses were blanked in `places.csv` (98 rows) and in the raw export (100 rows), as the Chattogram run does: they were mostly gmail/yahoo mailboxes that look like staff members' own, plus misspelt domains (e.g. `cc.dghs.gpv.bd`, `gamil.com`). Only the e-mail column changed; the seed never used these addresses. Earlier Git commits still contain them.
+
+- **E-mail addresses in free-text fields (2026-11-18):** the registry also puts staff mailboxes in "Mailing Address" (and once in "Website Url"). Every non-`*.gov.bd` e-mail address is removed from those fields, in `places.csv` and in `raw/`; the rest of the text is kept (`strip_non_gov_mail` in `../dghs_hris_facilities_raj_2026/fetch.py`).

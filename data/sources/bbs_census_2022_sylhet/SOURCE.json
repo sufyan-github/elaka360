@@ -1,0 +1,39 @@
+{
+  "key": "BBS_CENSUS_2022_SYLHET",
+  "name": "Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Sylhet Division",
+  "organization": "Bangladesh Bureau of Statistics (BBS), Statistics and Informatics Division, Ministry of Planning",
+  "source_type": "census",
+  "trust_level": 4,
+  "urls": [
+    "https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/f376ca7e7ee5405f8311de650415b9d8.pdf",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/3abf605f9ab84a6686ad29688f206160.xlsx",
+    "https://bbs.gov.bd/pages/files/6a0986a0fa5a21e711e542dd",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/95bca29b-c009-4261-97f2-e0f24cc55d87.pdf",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/5f57f437a3a343d789a71c659732ceb9.xlsx",
+    "https://bbs.gov.bd/pages/files/6a09870caf5b16b9ec406952",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/1871b767-8ecd-4ec5-8073-d54d5ddd7b53.pdf",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/15c2523d9c494f65bd1ec18fa602acf4.xlsx",
+    "https://bbs.gov.bd/pages/files/6a09878faf5b16b9ec4069db",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/4c98bb76-8069-414a-9851-6cbbc4b9273f.pdf",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/952593ea389a4e3ba299fcfa3887c6c2.xlsx",
+    "https://bbs.gov.bd/pages/files/6a09880e146993cdf84f6ea7",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/9f747c1b-3459-4567-9295-bf8a7cf28cad.pdf"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": "2024-06",
+  "license": null,
+  "license_url": null,
+  "attribution": "Bangladesh Bureau of Statistics, Population and Housing Census 2022",
+  "files": {
+    "areas.csv": "9cd8df6a2391aefa0f64ef9c0ebd7088f4ae799be939aea48fc38b3b86d53929",
+    "facts.csv": "d5ffad6e2bd3e2639c4800482636efd6a33f45992f34e675717f1be79edde878",
+    "raw/c01_sylhet_division.csv": "fe601b405b16e3ff809d0c29043b898386baca8ee0bb68e8d2b22acfba320a04",
+    "raw/district_report_key_findings.txt": "e8cbaeec44855a20d7e794b17f5a7ad46c511026488439f2b57f810cd0d19a34",
+    "raw/resolved_urls.json": "64cf3a63050848b9793b65557a7f5a6a39bbd89f0be243a93f60a071b3a90f6c",
+    "raw/union_statistics_D01.txt": "3077120f4268cdfd7fc3c3797abddc19f9c87e5ee21db3b1978c3883b96471f3"
+  },
+  "notes": "Population/households are final ENUMERATED counts (census moment 00:00 15 June 2022, incl. floating population), not PEC-adjusted. Unit lists and population per district/upazila/city corporation/thana/paurashava/union/ward from the Community Report Excel files, sheet C-01 (BBS 2022 geocodes; code_scheme BBS_GEOCODE_2022 = C-01 code columns joined with '-', prefixed by division 60). City-corporation units carry the city-corporation code in the geocode, so the 27 wards and 327 mahallas of Sylhet City Corporation (60-91-50, six metro thanas: Airport, Dakkhin Surma, Jalalabad, Kotwali, Moglabazar, Shahparan) are kept apart from paurashava wards and from the Sylhet Sadar (60-91-62) and Dakkhin Surma (60-91-31) upazilas. Administrative-unit counts, area and density from the District Report Key Findings tables (District Series, May-June 2024) and Union Statistics (June 2025) Table D01. basis: enumerated | as stated (printed in a BBS table) | derived (counted from the C-01 geocode rows). One non-union unit is printed in the Union/Ward column: 'Cantonment Union' (60-91-62-998, Sylhet Sadar upazila), kept at level cantonment, not counted as a union. Tea estates ('... Te', '... Tea Garden', '... Tea Estate'), reserve forests and haors appear only as mauzas inside unions, never in the Union/Ward column. Community Report labels on the BBS page: SYLHET, HABIGANJ, MAULVIBAZAR (output name Moulvibazar), SUNAMGANJ. Large PDFs/Excel are not committed; fetch.py --division sylhet re-downloads them (bbs.gov.bd needs the Sectigo DV R36 intermediate, added at runtime from its AIA URL).",
+  "division": "sylhet",
+  "kind": "bbs_census"
+}

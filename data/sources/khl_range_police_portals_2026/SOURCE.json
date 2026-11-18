@@ -1,0 +1,32 @@
+{
+  "key": "KHL_RANGE_POLICE_PORTALS_2026",
+  "division": "khulna",
+  "kind": "range_police",
+  "name": "District police portals of Khulna Range (Jashore, Satkhira, Meherpur, Narail, Chuadanga, Kushtia, Magura, Bagerhat, Jhenaidah)",
+  "organization": "Bangladesh Police — district police units of Khulna Range",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://police.jessore.gov.bd/",
+    "https://police.satkhira.gov.bd/",
+    "https://police.meherpur.gov.bd/",
+    "https://police.narail.gov.bd/",
+    "https://police.chuadanga.gov.bd/",
+    "https://police.kushtia.gov.bd/",
+    "https://police.magura.gov.bd/",
+    "https://police.bagerhat.gov.bd/",
+    "https://police.jhenaidah.gov.bd/",
+    "https://police.<upazila>.<district>.gov.bd/",
+    "https://policedig.khulnadiv.gov.bd/"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "District and thana police portals (police.<district>.gov.bd, police.<upazila>.<district>.gov.bd)",
+  "notes": "No licence stated. SP offices from the Superintendent's officer card; thanas from each upazila's thana portal officer cards (office landline, OC's police official mobile, *.gov.bd e-mail). Personal e-mails, other mobiles and officers' names are not copied. Khulna Range (Range DIG's office, policedig.khulnadiv.gov.bd) covers the 10 districts of the division; Khulna District is in KHULNA_POLICE_2026 and Khulna city's KMP thanas in KHULNA_METRO_POLICE_THANAS_2026. Jashore's police portals are under jessore.gov.bd (police.jashore.gov.bd serves the same site). Thanas that are not upazilas have no portal here.",
+  "files": {
+    "places.csv": "fe4946a177f6b13d37e728c6b53f13bfd7972860fa92f65e4d09832a6c1bd004",
+    "facts.csv": "e5b258ac493207d372f46a3ccf054ec6e00dfc1eaba29e3edf56f19dafe15368"
+  }
+}

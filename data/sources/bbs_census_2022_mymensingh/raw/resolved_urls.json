@@ -1,0 +1,21 @@
+{
+ "union_statistics": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/f376ca7e7ee5405f8311de650415b9d8.pdf",
+ "community_xlsx": {
+  "Mymensingh": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/154cbde8cea641cdb85ab83f610b840c.xlsx",
+  "Jamalpur": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/89e86f23804e4e119149f252b777c2d6.xlsx",
+  "Sherpur": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/54153bc4a5094bc495c732fb9d62369e.xlsx",
+  "Netrokona": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/6e5bb9426ce24d8e99867fe62881edc8.xlsx"
+ },
+ "district_page": {
+  "Mymensingh": "https://bbs.gov.bd/pages/files/6a09630afa5a21e711e51e96",
+  "Jamalpur": "https://bbs.gov.bd/pages/files/6a09637cad0e9a31cc257d15",
+  "Sherpur": "https://bbs.gov.bd/pages/files/6a0963df7aa29b4dab9729b3",
+  "Netrokona": "https://bbs.gov.bd/pages/files/6a0965477aa29b4dab972b72"
+ },
+ "district_pdf": {
+  "Mymensingh": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/85ce7f4f-e79a-4e27-b0e1-7904d8fab45a.pdf",
+  "Jamalpur": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/db13c3f5-e450-451c-9d87-c4546f933b83.pdf",
+  "Sherpur": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/a2999d5e-8125-4cd8-9b6f-e9463b1aedff.pdf",
+  "Netrokona": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/a9e0407a-e538-4dcf-8dfd-69fb95162789.pdf"
+ }
+}

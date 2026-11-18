@@ -1,0 +1,27 @@
+{
+ "union_statistics": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/f376ca7e7ee5405f8311de650415b9d8.pdf",
+ "community_xlsx": {
+  "Barishal": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/c56515ca45314f6586d9d7ffae0e89a7.xlsx",
+  "Bhola": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/45edbfa4a084468ca52ebc3895b77e8f.xlsx",
+  "Pirojpur": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/e157dd0ff3ae4cfcb0f8804fec4c3011.xlsx",
+  "Patuakhali": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/9b566687c68045ba9dc4a5baf078494b.xlsx",
+  "Barguna": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/373ae6014cce4bab852b96c2cddaa21e.xlsx",
+  "Jhalokathi": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/187d1669b3fe47ca8e0a07e9bada1252.xlsx"
+ },
+ "district_page": {
+  "Barishal": "https://bbs.gov.bd/pages/files/6a05587baf5b16b9ec3f9b5a",
+  "Bhola": "https://bbs.gov.bd/pages/files/6a0559c7298ade29f2257d06",
+  "Pirojpur": "https://bbs.gov.bd/pages/files/6a055ae64cb0a0494f038909",
+  "Patuakhali": "https://bbs.gov.bd/pages/files/6a055cec146993cdf84ea85f",
+  "Barguna": "https://bbs.gov.bd/pages/files/6a0941ce4cb0a0494f040643",
+  "Jhalokathi": "https://bbs.gov.bd/pages/files/6a0942355d40ccedfd8db049"
+ },
+ "district_pdf": {
+  "Barishal": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/0516c42c-38bb-4582-b9de-c53df7d14b4a.pdf",
+  "Bhola": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/4530829e-9379-4f37-bf0c-c9b8ed289406.pdf",
+  "Pirojpur": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/78896f23-10a3-400b-96d4-190c93765706.pdf",
+  "Patuakhali": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/3243ddd9-255d-40ee-91ac-f76cde14c28a.pdf",
+  "Barguna": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/d1d976c9-eb6d-4cc1-b6b4-da30713f6a38.pdf",
+  "Jhalokathi": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/570a79fd-0d40-424b-b3b5-9154d8e50a2d.pdf"
+ }
+}

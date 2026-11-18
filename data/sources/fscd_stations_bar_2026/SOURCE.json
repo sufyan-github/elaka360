@@ -1,0 +1,26 @@
+{
+  "key": "FSCD_STATIONS_BAR_2026",
+  "division": "barishal",
+  "kind": "fscd",
+  "name": "Fire Service & Civil Defence — Barishal Division station & office numbers",
+  "organization": "Fire Service and Civil Defence Directorate (FSCD), Bangladesh",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-fireservice/2026/7/7a0d6be2-c891-44ed-bfdd-7637e218273f.pdf",
+    "https://fireservice.gov.bd/pages/static-pages/6922e013933eb65569e25586",
+    "https://fireservice.gov.bd/pages/static-pages/6922e0b9933eb65569e28555"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": "2026-08-11",
+  "license": null,
+  "license_url": null,
+  "attribution": "Fire Service and Civil Defence Directorate, Bangladesh (fireservice.gov.bd)",
+  "notes": "No licence stated on fireservice.gov.bd. publication_date = creation date in the PDF metadata. Station names were transcribed from the rendered PDF because its text layer has broken Bangla glyph mapping; phone numbers come from the text layer. No addresses or coordinates are published.",
+  "files": {
+    "places.csv": "3a0c4bfc3e8795d56df79f41a649c0c17154917ee536ef78046a0dfc95eba44f",
+    "facts.csv": "ea7afb70845f5ffe0c16009f093d76e62d947117a33b68b641b13b3ae3870413",
+    "raw/fscd_barishal_division_numbers.pdf": "15545dc564818c0da2c32fe02b6085b37b97a4c6c4014e0edc747d2613660adc"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "key": "BDPOST_POSTCODES_DHK_2026",
+  "division": "dhaka",
+  "kind": "bdpost",
+  "name": "Bangladesh Post postcode booklet — Dhaka Division post offices (scan on post.rajshahi.gov.bd)",
+  "organization": "বাংলাদেশ ডাক বিভাগ (Bangladesh Post Office) — DPMG Rajshahi Division portal",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-post-rajshahi/2024/12/e548300c14de4897aa9516b65816e29f.pdf"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "বাংলাদেশ ডাক বিভাগ (Bangladesh Post Office) — DPMG Rajshahi Division portal",
+  "notes": "Same undated scanned booklet as the Rajshahi and Rangpur runs (page last updated 2018-09-21; no text layer). Dhaka Division's offices are in the booklet's 'ঢাকা রিজিয়ন ১০০০-২৯৯৯' (p. 9 Dhaka city, Dhaka district, Narayanganj; pp. 10-11 Narayanganj, Munshiganj, Narsingdi, Gazipur, Manikganj, Tangail; pp. 12-13 Tangail, Kishoreganj) and, for the Faridpur group, in 'খুলনা রিজিয়ন' (pp. 24-25: Rajbari, Faridpur, Madaripur, Shariatpur, Gopalganj); only these districts were transcribed, by hand, from the page images (raw/*.png, PDF pages 6, 7, 8 and 14 rotated). fetch.py verifies the PDF hash and re-emits the transcription. Three postcodes are not legible in the scan and are left empty. Branch post offices are not in the booklet. Licence: none stated on the source; treat as government public information, cite the source.",
+  "files": {
+    "facts.csv": "bc6444683f53f4d8f2d6c286904006993c0fe45a5febb14b169c0d77ce820cb5",
+    "places.csv": "33034ae700c906ddc0e44210106c8c7031a2b3070bf9bd53cb1526ac8bca3ba2",
+    "raw/postcode_booklet_pp08-09.png": "cc7f19c003dea273e9aae7e652b5d1e3c2c191845bdd9aa98ffcb79f2d6e7501",
+    "raw/postcode_booklet_pp10-11.png": "5df91a74baf6bdd01d827a8579f36784654bb3f7a7dd8c59f5d94aa8f5878471",
+    "raw/postcode_booklet_pp12-13.png": "9c9e9d064c763b8c65d0cfad251807cd03a6a1c30e4853f96fdcce0a82804fe6",
+    "raw/postcode_booklet_pp24-25.png": "ba4a9940c6d4363f3e992d16faaa44938ee959585df0056d1efe3fc828e18842"
+  }
+}

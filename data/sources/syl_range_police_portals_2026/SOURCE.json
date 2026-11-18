@@ -1,0 +1,26 @@
+{
+  "key": "SYL_RANGE_POLICE_PORTALS_2026",
+  "division": "sylhet",
+  "kind": "range_police",
+  "name": "District police portals of Sylhet Range (Moulvibazar, Habiganj, Sunamganj)",
+  "organization": "Bangladesh Police — district police units of Sylhet Range",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://police.moulvibazar.gov.bd/",
+    "https://police.habiganj.gov.bd/",
+    "https://police.sunamganj.gov.bd/",
+    "https://police.<upazila>.<district>.gov.bd/",
+    "https://policedig.sylhetdiv.gov.bd/"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "District and thana police portals (police.<district>.gov.bd, police.<upazila>.<district>.gov.bd)",
+  "notes": "No licence stated. SP offices from the Superintendent's officer card; thanas from each upazila's thana portal officer cards (office landline, OC's police official mobile, *.gov.bd e-mail). Personal e-mails, other mobiles and officers' names are not copied. Sylhet Range (Range DIG's office, policedig.sylhetdiv.gov.bd) covers the 4 districts of the division; Sylhet District is in SYLHET_POLICE_2026 and Sylhet city's SMP thanas in SYLHET_METRO_POLICE_THANAS_2026. Thanas that are not upazilas have no portal here. Unavailable this run: Sunamganj: portal police.shantiganj.sunamganj.gov.bd did not respond; Sunamganj: portal police.madhyanagar.sunamganj.gov.bd: 'Site is not available: police.madhyanagar.sunamganj.gov.bd'",
+  "files": {
+    "places.csv": "f8ed5945c55ba345a33f28b15338b7816f5b6d04ec0181bf18a8ad33b5f96b09",
+    "facts.csv": "e5b258ac493207d372f46a3ccf054ec6e00dfc1eaba29e3edf56f19dafe15368"
+  }
+}

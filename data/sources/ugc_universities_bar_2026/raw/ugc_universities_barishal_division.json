@@ -1,0 +1,224 @@
+[
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 195,
+   "name_en": "Patuakhali Science And Technology University",
+   "name_bn": null,
+   "slug": "patuakhali-science-and-technology-university",
+   "website": "www.pstu.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 195,
+   "name_en": "Patuakhali Science And Technology University",
+   "name_bn": null,
+   "slug": "patuakhali-science-and-technology-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2002",
+   "present_campus": null,
+   "permanent_campus": "Patuakhali Science And Technology University, Patuakhali-8602, Bangladesh",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.pstu.ac.bd",
+   "email": "registrar@pstu.ac.bd",
+   "telephone_mobile": "04427-56008/221, 02478883476",
+   "fax": "02478883472",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Patuakhali",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 213,
+   "name_en": "University of Barishal",
+   "name_bn": null,
+   "slug": "university-of-barishal",
+   "website": "www.bu.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 213,
+   "name_en": "University of Barishal",
+   "name_bn": null,
+   "slug": "university-of-barishal",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2011",
+   "present_campus": null,
+   "permanent_campus": "Barishal University, Karnakathi, Barishal Sadar, Barishal.",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.bu.ac.bd",
+   "email": "registrar@bu.ac.bd",
+   "telephone_mobile": "0431-2177771-77",
+   "fax": "0431-61117",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Barishal",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 232,
+   "name_en": "Pirojpur Science & Technology University",
+   "name_bn": null,
+   "slug": "pirojpur-science-technology-university",
+   "website": "www.prstu.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 232,
+   "name_en": "Pirojpur Science & Technology University",
+   "name_bn": null,
+   "slug": "pirojpur-science-technology-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2022",
+   "present_campus": null,
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.prstu.ac.bd",
+   "email": "registrar@prstu.ac.bd",
+   "telephone_mobile": "+8802479938045",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Pirojpur",
+  "_basis": "name"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 316,
+   "name_en": "Global University Bangladesh",
+   "name_bn": null,
+   "slug": "global-university-bangladesh",
+   "website": "www.globaluniversity.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 316,
+   "name_en": "Global University Bangladesh",
+   "name_bn": null,
+   "slug": "global-university-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2015",
+   "present_campus": "BN Tower, Sher-E-Bangla Sarak, Central Bus Terminal, Barisal",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.globaluniversity.edu.bd",
+   "email": "info@globaluniversity.edu.bd; anisuzzamanphil@gmail.com; professormaq53@gmail.com",
+   "telephone_mobile": "0431-63332,01700 569030,",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Barishal",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 329,
+   "name_en": "University of Global Village",
+   "name_bn": null,
+   "slug": "university-of-global-village",
+   "website": "www.ugv.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 329,
+   "name_en": "University of Global Village",
+   "name_bn": null,
+   "slug": "university-of-global-village",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2016",
+   "present_campus": "874/322, C&B Road, Barisal",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.ugv.edu.bd",
+   "email": "ugvbarisal@gmail.com",
+   "telephone_mobile": "0431-61521, 2175391, 2177470, 01877774010, 01877774021, 01877774083 01877774040, 01877774050, 018777",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Barishal",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 337,
+   "name_en": "Trust University, Barishal",
+   "name_bn": null,
+   "slug": "trust-university-barishal",
+   "website": "www.trustuniversity.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 337,
+   "name_en": "Trust University, Barishal",
+   "name_bn": null,
+   "slug": "trust-university-barishal",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2018",
+   "present_campus": "Shamima Mansion, Ruiya, Nobogram Road, Barishal-8200",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.trustuniversity.edu.bd",
+   "email": "info@trustuniversity.edu.bd, registrar@trustuniversity.edu.bd",
+   "telephone_mobile": "+8804312178014, 8801844902018",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Barishal",
+  "_basis": "address"
+ }
+]

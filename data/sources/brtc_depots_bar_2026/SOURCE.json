@@ -1,0 +1,21 @@
+{
+  "key": "BRTC_DEPOTS_BAR_2026",
+  "division": "barishal",
+  "kind": "brtc",
+  "name": "BRTC — bus depots in Barishal Division",
+  "organization": "Bangladesh Road Transport Corporation (BRTC)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Bangladesh Road Transport Corporation (brtc.gov.bd)",
+  "notes": "No licence stated. BRTC lists depots with the unit head's name/mobile; only depot names and office landlines are kept. 1 depot(s) of Barishal Division listed. No addresses or coordinates.",
+  "files": {
+    "places.csv": "bef70cec34385e74b9663e3f849569dbdb35d3c5a633fbc11c6dc7eed274e4a8"
+  }
+}

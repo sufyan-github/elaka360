@@ -1,0 +1,21 @@
+{
+  "key": "BRTC_DEPOTS_DHK_2026",
+  "division": "dhaka",
+  "kind": "brtc",
+  "name": "BRTC — bus depots in Dhaka Division",
+  "organization": "Bangladesh Road Transport Corporation (BRTC)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Bangladesh Road Transport Corporation (brtc.gov.bd)",
+  "notes": "No licence stated. BRTC lists depots with the unit head's name/mobile; only depot names and office landlines are kept. 11 depot(s) of Dhaka Division listed. No addresses or coordinates.",
+  "files": {
+    "places.csv": "9fed16d09096bf1f39b65bea1826377ba818d12fa4ea5ea27cd28ec353417e38"
+  }
+}

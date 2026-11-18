@@ -1,0 +1,38 @@
+{
+  "key": "DHK_RANGE_POLICE_PORTALS_2026",
+  "division": "dhaka",
+  "kind": "range_police",
+  "name": "District police portals of Dhaka Range (Narsingdi, Shariatpur, Tangail, Manikganj, Munshiganj, Rajbari, Madaripur, Gopalganj, Faridpur, Gazipur, Narayanganj, Kishoreganj)",
+  "organization": "Bangladesh Police — district police units of Dhaka Range",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://police.narsingdi.gov.bd/",
+    "https://police.shariatpur.gov.bd/",
+    "https://police.tangail.gov.bd/",
+    "https://police.manikganj.gov.bd/",
+    "https://police.munshiganj.gov.bd/",
+    "https://police.rajbari.gov.bd/",
+    "https://police.madaripur.gov.bd/",
+    "https://police.gopalganj.gov.bd/",
+    "https://police.faridpur.gov.bd/",
+    "https://police.gazipur.gov.bd/",
+    "https://police.narayanganj.gov.bd/",
+    "https://police.kishoreganj.gov.bd/",
+    "https://police.gazipur.gov.bd/pages/static-pages/6995c8bb35ce18e1c07a52a1",
+    "https://police.narayanganj.gov.bd/pages/static-pages/at-a-glance-f2b8a1-6995aa7435ce18e1c07927f3",
+    "https://police.kishoreganj.gov.bd/pages/static-pages/6995de8c35ce18e1c07aed1e",
+    "https://police.<upazila>.<district>.gov.bd/"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "District and thana police portals (police.<district>.gov.bd, police.<upazila>.<district>.gov.bd)",
+  "notes": "No licence stated. SP offices from the Superintendent's officer card; thanas from each thana's own portal officer cards (office landline, OC's police official mobile, *.gov.bd e-mail). Personal e-mails, other mobiles and officers' names are not copied. Dhaka District is in DHAKA_POLICE_2026; Gazipur Metropolitan Police thanas are in GAZIPUR_METRO_POLICE_THANAS_2026. Unavailable this run: Manikganj: portal police.singair.manikganj.gov.bd did not respond; Madaripur: portal police.dasar.madaripur.gov.bd: 'Site is not available: police.dasar.madaripur.gov.bd'; Gopalganj: portal police.muksudpur.gopalganj.gov.bd did not respond",
+  "files": {
+    "places.csv": "3786bae88b8788594fe20bcba866644a34c695ef3595c171a2012d997be859df",
+    "facts.csv": "b5ad858d9b09bda138458d2dd169ad48dac55a7230a16559a7fdd5a4d9630e34",
+    "raw/gazipur_police_thana_list.txt": "65b442531d79dff119f5c233b9489c47fa50d1fef5fbcb0f7d5ff36dc15a619a"
+  }
+}

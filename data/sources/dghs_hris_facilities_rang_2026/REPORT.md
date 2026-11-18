@@ -64,3 +64,9 @@ The policy is the same as for Rajshahi. Phones and e-mails are kept only for non
 - Dinajpur MCH (hris:2233): 500 beds.
 - District hospitals of Gaibandha, Kurigram, Lalmonirhat, Nilphamari and Thakurgaon: 250 beds each.
 - Panchagarh District Hospital: 100 beds.
+
+## E-mail scrub (2026-11-18)
+
+Non-`*.gov.bd` e-mail addresses were blanked in `places.csv` (212 rows) and in the raw export (212 rows), as the Chattogram run does: they were mostly gmail/yahoo mailboxes that look like staff members' own, plus misspelt domains (e.g. `cc.dghs.gpv.bd`, `gamil.com`). Only the e-mail column changed; the seed never used these addresses. Earlier Git commits still contain them.
+
+- **E-mail addresses in free-text fields (2026-11-18):** the registry also puts staff mailboxes in "Mailing Address" (and once in "Website Url"). Every non-`*.gov.bd` e-mail address is removed from those fields, in `places.csv` and in `raw/`; the rest of the text is kept (`strip_non_gov_mail` in `../dghs_hris_facilities_raj_2026/fetch.py`).

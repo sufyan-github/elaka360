@@ -1,0 +1,23 @@
+{
+  "key": "BD_POLICE_CONTACTS_2020_DHAKA",
+  "division": "dhaka",
+  "kind": "police_hq_2020",
+  "name": "Bangladesh Police HQ — Contacts of Bangladesh Police (DMP, GMP and Dhaka Range sheets)",
+  "organization": "Bangladesh Police Headquarters",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf",
+    "https://www.police.gov.bd/storage/upload/announcement/EcDDy28T7DJdOqyuVB2CSiTjUAX8kTiy1HBoOPHj.xlsx"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": "2020-10-03",
+  "license": null,
+  "license_url": null,
+  "attribution": "Bangladesh Police (police.gov.bd)",
+  "notes": "No licence stated. XLSX 'Contacts Of Bangladesh Police' uploaded 03-10-2020 (Last-Modified 2020-10-03). Only the DMP, GMP and Dhaka Range sheets are used (raw/ keeps those rows as CSV; the full 1.5 MB workbook is re-downloaded by fetch.py). Designations only, no personal names. Old 2020 numbers: the 01320-series 'New Number' values match the 2026 district/RMP portals where checked; the 'Current Number' column is the pre-2020 numbering. For this division the 2026 portals were not cross-checked by this collector.",
+  "files": {
+    "places.csv": "287d5b263ba0ca8c2dfc94ba7c259bb712ae912ee405b4678319973cf586f295",
+    "raw/police_contacts_2020_dmp_gmp_dhaka_range.csv": "c64feacc5450c971d701c415d149980b8ba87f50c5ba1ccb7f80d3e6e11f788a"
+  }
+}

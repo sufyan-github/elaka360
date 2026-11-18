@@ -1,0 +1,372 @@
+[
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 187,
+   "name_en": "Shahjalal University of Science & Technology",
+   "name_bn": null,
+   "slug": "shahjalal-university-of-science-technology",
+   "website": "www.sust.edu",
+   "marker": null
+  },
+  "detail": {
+   "id": 187,
+   "name_en": "Shahjalal University of Science & Technology",
+   "name_bn": null,
+   "slug": "shahjalal-university-of-science-technology",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "1986",
+   "present_campus": null,
+   "permanent_campus": "Shahjalal University of Science & Technology, Kumargaon, Sylhet-3114, Bangladesh",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.sust.edu",
+   "email": "registrar@sust.edu",
+   "telephone_mobile": "PABX : +8802996636454,02996631379, 02996634850, 02996633825, 02996632210, 715393",
+   "fax": "+88-02996632057, 725050",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Sylhet",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 206,
+   "name_en": "Sylhet Agricultural University",
+   "name_bn": null,
+   "slug": "sylhet-agricultural-university",
+   "website": "www.sau.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 206,
+   "name_en": "Sylhet Agricultural University",
+   "name_bn": null,
+   "slug": "sylhet-agricultural-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2006",
+   "present_campus": null,
+   "permanent_campus": "Sylhet Agricultural University, Taligor, Sylhet- 3100",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.sau.ac.bd",
+   "email": "registrar@sau.ac.bd",
+   "telephone_mobile": "0821-760930, +88 01712441708",
+   "fax": "+88 02996642081",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Sylhet",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 224,
+   "name_en": "Sylhet Medical University, Sylhet",
+   "name_bn": null,
+   "slug": "sylhet-medical-university-sylhet",
+   "website": "www.bsfmmu.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 224,
+   "name_en": "Sylhet Medical University, Sylhet",
+   "name_bn": null,
+   "slug": "sylhet-medical-university-sylhet",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2018",
+   "present_campus": null,
+   "permanent_campus": "Sylhet Medical University, Mollargaon, Dakshinsurma, Sylhet. Bangladesh",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.bsfmmu.edu.bd",
+   "email": "bsfmmusylhet@gmail.com",
+   "telephone_mobile": "+88 01715 770872",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Sylhet",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 228,
+   "name_en": "Hobiganj Agricultural University",
+   "name_bn": null,
+   "slug": "hobiganj-agricultural-university",
+   "website": "www.hau.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 228,
+   "name_en": "Hobiganj Agricultural University",
+   "name_bn": null,
+   "slug": "hobiganj-agricultural-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2021",
+   "present_campus": null,
+   "permanent_campus": "Habiganj Agricultural University, Vadoi, Habiganj Sadar, Habiganj-3300",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.hau.ac.bd",
+   "email": "vc@hau.ac.bd, registraroffice@hau.ac.bd",
+   "telephone_mobile": "+8801326890712",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Habiganj",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 231,
+   "name_en": "Sunamganj Science and Technology University",
+   "name_bn": null,
+   "slug": "sunamganj-science-and-technology-university",
+   "website": "www.sstu.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 231,
+   "name_en": "Sunamganj Science and Technology University",
+   "name_bn": null,
+   "slug": "sunamganj-science-and-technology-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2020",
+   "present_campus": null,
+   "permanent_campus": "Sunamganj Science and Technology University, Sunamganj, Bangladesh",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.sstu.ac.bd",
+   "email": "registrar@sstu.ac.bd, hemayetmiah94@gmail.com, info@sstu.ac.bd",
+   "telephone_mobile": "+880 1716411748",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Sunamganj",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 256,
+   "name_en": "Leading University",
+   "name_bn": null,
+   "slug": "leading-university",
+   "website": "www.lus.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 256,
+   "name_en": "Leading University",
+   "name_bn": null,
+   "slug": "leading-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2001",
+   "present_campus": "Ragib Nagar, Kamal Bazar, South Surma, Sylhet-3100",
+   "permanent_campus": "Ragib Nagar, Kamal Bazar, South Surma, Sylhet-3100",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.lus.ac.bd",
+   "email": "info@lus.ac.bd",
+   "telephone_mobile": "88 0821-720303-06, 0821 720307, 88-01313084499",
+   "fax": "+88 0821-720307",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Sylhet",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 258,
+   "name_en": "Sylhet International University",
+   "name_bn": null,
+   "slug": "sylhet-international-university",
+   "website": "www.siu.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 258,
+   "name_en": "Sylhet International University",
+   "name_bn": null,
+   "slug": "sylhet-international-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2001",
+   "present_campus": "Shamimabad, Bagbari, Sylhet",
+   "permanent_campus": "Shamimabad, Bagbari, Sylhet",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.siu.edu.bd",
+   "email": "info@siu.edu.bd",
+   "telephone_mobile": "(0821) 720771, 717193",
+   "fax": "(0821)725644",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Sylhet",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 275,
+   "name_en": "Metropolitan University",
+   "name_bn": null,
+   "slug": "metropolitan-university",
+   "website": "www.metrouni.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 275,
+   "name_en": "Metropolitan University",
+   "name_bn": null,
+   "slug": "metropolitan-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2003",
+   "present_campus": null,
+   "permanent_campus": "Bateshwar, Sylhet-3104",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.metrouni.edu.bd",
+   "email": "info@metrouni.edu.bd, registrar@metrouni.edu.bd",
+   "telephone_mobile": "PABX: 88-0821-2870 321, 2870 328, 2870 329; 01313 050044, 01313 050066, 01715778123",
+   "fax": "88-0821-2870 331",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Sylhet",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 294,
+   "name_en": "North East University Bangladesh",
+   "name_bn": null,
+   "slug": "north-east-university-bangladesh",
+   "website": "www.neub.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 294,
+   "name_en": "North East University Bangladesh",
+   "name_bn": null,
+   "slug": "north-east-university-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2012",
+   "present_campus": "Telihaor, Sheikghat, Sylhet, Bangladesh.",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.neub.edu.bd",
+   "email": "info@neub.edu.bd, registrar@neub@edu,bd",
+   "telephone_mobile": "8802996631220-2, 01755566994, 01912402725",
+   "fax": "0821-710223",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Sylhet",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 342,
+   "name_en": "R.T.M Al-Kabir Technical University",
+   "name_bn": null,
+   "slug": "rtm-al-kabir-technical-university",
+   "website": "www.rtm-aktu.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 342,
+   "name_en": "R.T.M Al-Kabir Technical University",
+   "name_bn": null,
+   "slug": "rtm-al-kabir-technical-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2020",
+   "present_campus": "TB Gate, Tultikar Union, Sylhet - 3100",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.rtm-aktu.edu.bd",
+   "email": "info@rtm-aktu.edu.bd",
+   "telephone_mobile": "018192 1947 9 / 017 66 857 322",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Sylhet",
+  "_basis": "address"
+ }
+]

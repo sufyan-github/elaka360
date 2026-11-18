@@ -2,15 +2,10 @@
  "division": 8,
  "district": 64,
  "upazila": 495,
- "union": 4546,
+ "union": 4622,
  "city_corporation": 13,
- "pourashava": 93,
- "upazilas_without_unions": [
-  "Guimara",
-  "Eidgaon",
-  "Madhyanagar",
-  "Dasar"
- ],
+ "pourashava": 327,
+ "upazilas_without_unions": [],
  "rajshahi_district_unions_by_upazila": {
   "Paba": 8,
   "Durgapur": 7,
@@ -24,7 +19,7 @@
  },
  "rajshahi_district_unions_total": 72,
  "district_area_check_rajshahi_computed_km2": 2443.3,
- "sum_district_area_km2": 139981.0,
+ "sum_district_area_km2": 147508.0,
  "categories": {
   "top_level": 11,
   "sub": 84
@@ -33,10 +28,10 @@
   "country": 1,
   "division": 8,
   "district": 64,
-  "upazila": 126,
-  "union": 1101,
+  "upazila": 495,
+  "union": 4584,
   "city_corporation": 13,
-  "pourashava": 93
+  "pourashava": 327
  },
  "seed_vs_master_untracked": 0
 }

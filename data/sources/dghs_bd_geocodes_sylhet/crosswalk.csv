@@ -1,0 +1,66 @@
+our_id,our_level,our_name_en,our_path,source_code,source_name_en,match_method,confidence,notes
+20038,district,Habiganj,sylhet/habiganj,6036,Habiganj,name_exact,high,source level district
+20037,district,Moulvibazar,sylhet/moulvibazar,6058,Maulvibazar,code_district,high,source level district; spelling differs (Maulvibazar vs Moulvibazar); matched via district code 6058
+20039,district,Sunamganj,sylhet/sunamganj,6090,Sunamganj,name_exact,high,source level district
+20036,district,Sylhet,sylhet/sylhet,6091,Sylhet,name_exact,high,source level district
+30294,upazila,Ajmiriganj,sylhet/habiganj/ajmiriganj,60360002,Ajmiriganj,name_exact,high,source level upazila
+30293,upazila,Bahubal,sylhet/habiganj/bahubal,60360005,Bahubal,name_exact,high,source level upazila
+30295,upazila,Baniachong,sylhet/habiganj/baniachong,60360011,Baniachong,name_exact,high,source level upazila
+30297,upazila,Chunarughat,sylhet/habiganj/chunarughat,60360026,Chunarughat,name_exact,high,source level upazila
+30298,upazila,Habiganj Sadar,sylhet/habiganj/habiganj-sadar,60360044,Habiganj Sadar,name_exact,high,source level upazila
+30296,upazila,Lakhai,sylhet/habiganj/lakhai,60360068,Lakhai,name_exact,high,source level upazila
+30299,upazila,Madhabpur,sylhet/habiganj/madhabpur,60360071,Madhabpur,name_exact,high,source level upazila
+30292,upazila,Nabiganj,sylhet/habiganj/nabiganj,60360077,Nabiganj,name_exact,high,source level upazila
+30495,upazila,Shayestaganj,sylhet/habiganj/shayestaganj,60360087,Shayestaganj,name_exact,high,source level upazila
+30285,upazila,Barlekha,sylhet/moulvibazar/barlekha,60580014,Barlekha,name_exact,high,source level upazila
+30291,upazila,Juri,sylhet/moulvibazar/juri,60580035,Juri,name_exact,high,source level upazila
+30286,upazila,Kamolganj,sylhet/moulvibazar/kamolganj,60580056,Kamalganj,name_skeleton,medium,source level upazila
+30287,upazila,Kulaura,sylhet/moulvibazar/kulaura,60580065,Kulaura,name_exact,high,source level upazila
+30288,upazila,Moulvibazar Sadar,sylhet/moulvibazar/moulvibazar-sadar,60580074,Maulvibazar Sadar,name_skeleton,medium,source level upazila
+30289,upazila,Rajnagar,sylhet/moulvibazar/rajnagar,60580080,Rajnagar,name_exact,high,source level upazila
+30290,upazila,Sreemangal,sylhet/moulvibazar/sreemangal,60580083,Sreemangal,name_exact,high,source level upazila
+30309,upazila,Shalla,sylhet/sunamganj/shalla,60900086,Sulla,code_hand_checked,high,source level upazila; hand-checked pair (Sulla = Shalla শাল্লা); the name matcher does not pair these
+30301,upazila,South Sunamganj,sylhet/sunamganj/south-sunamganj,60900087,Shantiganj,code_hand_checked,high,source level upazila; hand-checked pair (Shantiganj = South Sunamganj দক্ষিণ সুনামগঞ্জ); the name matcher does not pair these
+30302,upazila,Bishwambarpur,sylhet/sunamganj/bishwambarpur,60900018,Bishwambarpur,name_exact,high,source level upazila
+30303,upazila,Chhatak,sylhet/sunamganj/chhatak,60900023,Chhatak,name_exact,high,source level upazila
+30310,upazila,Derai,sylhet/sunamganj/derai,60900029,Derai,name_exact,high,source level upazila
+30307,upazila,Dharmapasha,sylhet/sunamganj/dharmapasha,60900032,Dharampasha,name_skeleton,medium,source level upazila
+30305,upazila,Dowarabazar,sylhet/sunamganj/dowarabazar,60900033,Dowarabazar,name_exact,high,source level upazila
+30304,upazila,Jagannathpur,sylhet/sunamganj/jagannathpur,60900047,Jagannathpur,name_exact,high,source level upazila
+30308,upazila,Jamalganj,sylhet/sunamganj/jamalganj,60900050,Jamalganj,name_exact,high,source level upazila
+30493,upazila,Madhyanagar,sylhet/sunamganj/madhyanagar,60900063,Madhyanagar,name_exact,high,source level upazila
+30300,upazila,Sunamganj Sadar,sylhet/sunamganj/sunamganj-sadar,60900089,Sunamganj Sadar,name_exact,high,source level upazila
+30306,upazila,Tahirpur,sylhet/sunamganj/tahirpur,60900092,Tahirpur,name_exact,high,source level upazila
+30272,upazila,Balaganj,sylhet/sylhet/balaganj,60910008,Balaganj,name_exact,high,source level upazila
+30273,upazila,Beanibazar,sylhet/sylhet/beanibazar,60910017,Beanibazar,name_exact,high,source level upazila
+30274,upazila,Bishwanath,sylhet/sylhet/bishwanath,60910020,Bishwanath,name_exact,high,source level upazila
+30275,upazila,Companiganj,sylhet/sylhet/companiganj,60910027,Companiganj,name_exact,high,source level upazila
+30283,upazila,Dakshinsurma,sylhet/sylhet/dakshinsurma,60910031,Dakshin Surma,name_exact,high,source level upazila
+30276,upazila,Fenchuganj,sylhet/sylhet/fenchuganj,60910035,Fenchuganj,name_exact,high,source level upazila
+30277,upazila,Golapganj,sylhet/sylhet/golapganj,60910038,Golapganj,name_exact,high,source level upazila
+30278,upazila,Gowainghat,sylhet/sylhet/gowainghat,60910041,Gowainghat,name_exact,high,source level upazila
+30279,upazila,Jaintiapur,sylhet/sylhet/jaintiapur,60910053,Jaintiapur,name_exact,high,source level upazila
+30280,upazila,Kanaighat,sylhet/sylhet/kanaighat,60910059,Kanaighat,name_exact,high,source level upazila
+30284,upazila,Osmaninagar,sylhet/sylhet/osmaninagar,60910060,Osmaninagar,name_exact,high,source level upazila
+30282,upazila,Zakiganj,sylhet/sylhet/zakiganj,60910094,Zakiganj,name_exact,high,source level upazila
+30281,upazila,Sylhet Sadar,sylhet/sylhet/sylhet-sadar,60915062,Sylhet Sadar,name_exact,high,source level upazila
+50006,city_corporation,Sylhet City Corporation,sylhet/sylhet/sylhet-city-corporation,609150,Sylhet City Corporation,name_exact,high,source level city_corporation
+,,,,6036000212,Ajmiriganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Ajmiriganj
+,,,,6036002616,Chunarughat Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Chunarughat
+,,,,6036004420,Habiganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Habiganj Sadar
+,,,,6036007140,Madhabpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Madhabpur
+,,,,6036007760,Nabiganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Nabiganj
+,,,,6036008780,Shayestagang Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Shayestaganj
+,,,,6058001413,Barlekha Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Barlekha
+,,,,6058005615,Kamalganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kamolganj
+,,,,6058006525,Kulaura Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kulaura
+,,,,6058007450,Maulvibazar Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Moulvibazar Sadar
+,,,,6058008375,Sreemangal Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Sreemangal
+,,,,6090002320,Chhatak Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Chhatak
+,,,,6090002940,Derai Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Derai
+,,,,6090004750,Jagannathpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Jagannathpur
+,,,,6090008960,Sunamganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Sunamganj Sadar
+,,,,6091001716,Beani Bazar Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Beanibazar
+,,,,6091003825,Golapganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Golapganj
+,,,,6091005937,Kanaighat Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kanaighat
+,,,,6091009475,Zakiganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Zakiganj

@@ -1,0 +1,28 @@
+{
+  "key": "BARISHAL_POLICE_2026",
+  "division": "barishal",
+  "kind": "district_police",
+  "name": "Barishal District Police — SP office, thanas and control room",
+  "organization": "Barishal District Police (Bangladesh Police)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://police.barisal.gov.bd/",
+    "https://police.barisal.gov.bd/pages/officers",
+    "https://police.barisal.gov.bd/pages/static-pages/69789ba035ce18e1c066f78a",
+    "https://police.barisal.gov.bd/pages/static-pages/postal-communication-42cfb0-6978a32735ce18e1c067253e",
+    "https://police.<upazila>.barisal.gov.bd/"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Office of the Superintendent of Police, Barishal (police.barisal.gov.bd) and the thana portals",
+  "notes": "No licence stated. SP office from the Superintendent's officer card and 'ডাক যোগাযোগ' (address); thanas from the 9 upazila thana portals' officer cards (office landline, OC's police official mobile, *.gov.bd e-mail); thana list (10, incl. Kazirhat, which has no upazila portal) from the SP portal menu; gaps filled from the thana OCs' cards on the SP portal officer list, then from the SP portal's 'যোগাযোগ' contact table (content updated বৃহস্পতিবার, ২৬ এপ্রিল, ২০১৮ এ ০২:০৩ AM; designations and numbers, no names), which also gives the control room. Personal e-mails, other mobiles and officers' names are not copied. police.barisalsadar.barisal.gov.bd ('বরিশাল সদর থানা') has no content and is not in the SP portal's thana menu or contact table, so it is not a row. Barishal city is policed by BMP (BARISHAL_METRO_POLICE_THANAS_2026).",
+  "files": {
+    "places.csv": "374dc0c02dcce828fc72d2772ba7c9988b6bb97f714b96c283ac893484dab13e",
+    "facts.csv": "3449338bc3fec55cd528db597345959c09c95dc2db7b66307ec2594225274a72",
+    "raw/barishal_police_contact.txt": "b647e34e34f6bac12140f7b57aa208f4bed357d960033d648cbb450e82398f38",
+    "raw/barishal_police_menu_thanas.txt": "cc601d04e28422b64831af8c625a6e1c6069433d16151d9361587e924c00e77f"
+  }
+}

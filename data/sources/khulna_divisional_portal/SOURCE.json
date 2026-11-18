@@ -1,0 +1,32 @@
+{
+  "key": "KHLDIV_PORTAL_2026",
+  "name": "Khulna Divisional Commissioner portal (khulnadiv.gov.bd)",
+  "organization": "Office of the Divisional Commissioner, Khulna",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "division": "khulna",
+  "kind": "divisional_portal",
+  "urls": [
+    "https://khulnadiv.gov.bd/",
+    "https://khulnadiv.gov.bd/pages/static-pages/6980f6aea31054345f1cff26",
+    "https://khulnadiv.gov.bd/pages/static-pages/6981414035ce18e1c07008b0",
+    "https://khulnadiv.gov.bd/pages/static-pages/6980f6b0a31054345f1d0042",
+    "https://bangladesh.gov.bd/views/union-list"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Office of the Divisional Commissioner, Khulna (khulnadiv.gov.bd), Bangladesh National Portal",
+  "files": {
+    "areas.csv": "6d7fe8441e9aa8c978639b7e0142545ed3c2a8158a189fc9fa643391ea8e21cd",
+    "facts.csv": "94ff33ac5768a1704a264204a7b62f6d12cd03064008a3bfb5fbd42aa5b19e51",
+    "raw/districts.txt": "ca315a02f8f2d806a7251bb9d3584973a309e15e6c7e246212fc848478da776f",
+    "raw/glance.txt": "98f2ccea3312e086754ad8827f8a148d0306c1a7beb2caffed5c62d414da2343",
+    "raw/national_portal_list.csv": "970a9cd47f1b9fc3a05464c05340d07860f91e849b3035288b93c59c46ca9821",
+    "raw/pages.csv": "e5f1ea3ad227063a949d13c1e9ae3739d77f34c418cb967f48521b0b67aa20d4",
+    "raw/upazilas.txt": "a8edae0f15cd0e5a60a8f20703616a6851b6608f67bc45c07d9b5a9fb27f2f24",
+    "raw/warnings.txt": "29e0b9eb8032ad803be941ef815c619c3f000773ffd2bdca76947e0dfe6132f2"
+  },
+  "notes": "Collected by the generic division mode of the a2i portal collectors (pages found through the portals' menus, names and figures parsed from the pages). No licence stated; only facts (names, counts, figures) are extracted. English district/upazila names are the project's keys, not printed."
+}

@@ -1,0 +1,13 @@
+Mymensingh union list: 'গাজিরভিটা ইউনিয়ন পরিষদ' printed after the 10 rows that the cell 'তারাকান্দা' (Tarakanda) spans; the page gives no upazila for it, not used
+Mymensingh union list: 'বিলডোড়া ইউনিয়ন পরিষদ' printed after the 10 rows that the cell 'তারাকান্দা' (Tarakanda) spans; the page gives no upazila for it, not used
+Mymensingh union list: 'নড়াইল ইউনিয়ন পরিষদ' printed after the 10 rows that the cell 'তারাকান্দা' (Tarakanda) spans; the page gives no upazila for it, not used
+Mymensingh union list: 'ধারা ইউনিয়ন পরিষদ' printed after the 10 rows that the cell 'তারাকান্দা' (Tarakanda) spans; the page gives no upazila for it, not used
+Mymensingh union list: 'ধুরাইল ইউনিয়ন পরিষদ' printed after the 10 rows that the cell 'তারাকান্দা' (Tarakanda) spans; the page gives no upazila for it, not used
+Mymensingh union list: 'আমতৈল ইউনিয়ন পরিষদ' printed after the 10 rows that the cell 'তারাকান্দা' (Tarakanda) spans; the page gives no upazila for it, not used
+Mymensingh union list: 'স্বদেশী ইউনিয়ন পরিষদ' printed after the 10 rows that the cell 'তারাকান্দা' (Tarakanda) spans; the page gives no upazila for it, not used
+Mymensingh union list: 'কৈচাপুর ইউনিয়ন পরিষদ' printed after the 10 rows that the cell 'তারাকান্দা' (Tarakanda) spans; the page gives no upazila for it, not used
+Mymensingh union list: 'হালুয়াঘাট ইউনিয়ন পরিষদ' printed after the 10 rows that the cell 'তারাকান্দা' (Tarakanda) spans; the page gives no upazila for it, not used
+Mymensingh/Tarakanda: 'জুগলী ইউনিয়ন পরিষদ' dropped: the national list has it under Haluaghat, which the DC list does not name and which is taken from the national list
+Mymensingh/Gouripur: DC list names 8 unions, the national list 10; national list used
+Mymensingh/Phulpur: DC list names 6 unions, the national list 10; national list used
+Mymensingh/Tarakanda: DC list names 9 unions, the national list 10; national list used

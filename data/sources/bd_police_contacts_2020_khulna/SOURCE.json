@@ -1,0 +1,23 @@
+{
+  "key": "BD_POLICE_CONTACTS_2020_KHULNA",
+  "division": "khulna",
+  "kind": "police_hq_2020",
+  "name": "Bangladesh Police HQ — Contacts of Bangladesh Police (KMP and Khulna Range sheets)",
+  "organization": "Bangladesh Police Headquarters",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf",
+    "https://www.police.gov.bd/storage/upload/announcement/EcDDy28T7DJdOqyuVB2CSiTjUAX8kTiy1HBoOPHj.xlsx"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": "2020-10-03",
+  "license": null,
+  "license_url": null,
+  "attribution": "Bangladesh Police (police.gov.bd)",
+  "notes": "No licence stated. XLSX 'Contacts Of Bangladesh Police' uploaded 03-10-2020 (Last-Modified 2020-10-03). Only the KMP and Khulna Range sheets are used (raw/ keeps those rows as CSV; the full 1.5 MB workbook is re-downloaded by fetch.py). Designations only, no personal names. Old 2020 numbers: the 01320-series 'New Number' values match the 2026 district/RMP portals where checked; the 'Current Number' column is the pre-2020 numbering. For this division the 2026 portals were not cross-checked by this collector.",
+  "files": {
+    "places.csv": "a7e3e97463995ebb0a173e11ba3689a659cff592193f67ec08ca21a6a24405e4",
+    "raw/police_contacts_2020_kmp_khulna_range.csv": "c0f8d1fa9603b495dbae09f2f462045ae20c99f0a7e23950315ccbe3351449bf"
+  }
+}

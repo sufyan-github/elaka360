@@ -1,0 +1,34 @@
+{
+  "key": "GAZIPUR_METRO_POLICE_THANAS_2026",
+  "division": "dhaka",
+  "kind": "metro_police_thanas",
+  "city": 50011,
+  "name": "Gazipur Metropolitan Police — thanas and official numbers",
+  "organization": "Gazipur Metropolitan Police (Bangladesh Police)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://gmp.gov.bd/range-units/units_details.php?zone_id=1",
+    "https://gmp.gov.bd/range-units/units_details.php?zone_id=2",
+    "https://gmp.gov.bd/range-units/units_details.php?zone_id=3",
+    "https://gmp.gov.bd/range-units/units_details.php?zone_id=4",
+    "https://gmp.gov.bd/range-units/units_details.php?zone_id=5",
+    "https://gmp.gov.bd/range-units/units_details.php?zone_id=6",
+    "https://gmp.gov.bd/range-units/units_details.php?zone_id=7",
+    "https://gmp.gov.bd/range-units/units_details.php?zone_id=8",
+    "https://gmp.gov.bd/contact-us.php",
+    "https://gmp.gov.bd/history.php"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Gazipur Metropolitan Police (gmp.gov.bd)",
+  "notes": "No licence stated. Only institutional numbers (OC and duty-officer official mobiles of the 01320-07xxxx police series, the Commissioner post's mobile, control rooms, pcgmp@police.gov.bd) are collected; no officer names. Thana pages give no address; their embedded Google map (viewport only) is not used as a coordinate. Every thana lies in Gazipur City Corporation (GMP's area is GCC's 57 wards): area_en in extra_json.",
+  "files": {
+    "places.csv": "406c8fe32427e946ac374cf04e2951738aeffab030f29ccd67d5bb8834535b93",
+    "facts.csv": "27dced50f3324ab0d4c04964a172e737cedee1dfdd9b8e9b0ce20e52c3ac50b9",
+    "raw/gmp_contact.txt": "259ccc9a7795daf598c520f926e75e26a43d02dc6db0e58774deec27ed97d5f5",
+    "raw/gmp_thana_numbers.txt": "9c314bec595d2588208287831d75101bad4c466d3fa0f9d34e669a61236ffbfd"
+  }
+}

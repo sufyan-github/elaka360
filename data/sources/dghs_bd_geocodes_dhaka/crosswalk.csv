@@ -1,0 +1,174 @@
+our_id,our_level,our_name_en,our_path,source_code,source_name_en,match_method,confidence,notes
+20047,district,Dhaka,dhaka/dhaka,3026,Dhaka,name_exact,high,source level district
+20052,district,Faridpur,dhaka/faridpur,3029,Faridpur,name_exact,high,source level district
+20041,district,Gazipur,dhaka/gazipur,3033,Gazipur,name_exact,high,source level district
+20051,district,Gopalganj,dhaka/gopalganj,3035,Gopalganj,name_exact,high,source level district
+20045,district,Kishoreganj,dhaka/kishoreganj,3048,Kishoreganj,name_exact,high,source level district
+20050,district,Madaripur,dhaka/madaripur,3054,Madaripur,name_exact,high,source level district
+20046,district,Manikganj,dhaka/manikganj,3056,Manikganj,name_exact,high,source level district
+20048,district,Munshiganj,dhaka/munshiganj,3059,Munshiganj,name_exact,high,source level district
+20043,district,Narayanganj,dhaka/narayanganj,3067,Narayanganj,name_exact,high,source level district
+20040,district,Narsingdi,dhaka/narsingdi,3068,Narsingdi,name_exact,high,source level district
+20049,district,Rajbari,dhaka/rajbari,3082,Rajbari,name_exact,high,source level district
+20042,district,Shariatpur,dhaka/shariatpur,3086,Shariatpur,name_exact,high,source level district
+20044,district,Tangail,dhaka/tangail,3093,Tangail,name_exact,high,source level district
+30366,upazila,Dhamrai,dhaka/dhaka/dhamrai,30260014,Dhamrai,name_exact,high,source level upazila
+30369,upazila,Dohar,dhaka/dhaka/dohar,30260018,Dohar,name_exact,high,source level upazila
+30367,upazila,Keraniganj,dhaka/dhaka/keraniganj,30260038,Keraniganj,name_exact,high,source level upazila
+30368,upazila,Nawabganj,dhaka/dhaka/nawabganj,30260062,Nawabganj,name_exact,high,source level upazila
+30365,upazila,Savar,dhaka/dhaka/savar,30260072,Savar,name_exact,high,source level upazila
+30391,upazila,Alfadanga,dhaka/faridpur/alfadanga,30290003,Alfadanga,name_exact,high,source level upazila
+30395,upazila,Bhanga,dhaka/faridpur/bhanga,30290010,Bhanga,name_exact,high,source level upazila
+30392,upazila,Boalmari,dhaka/faridpur/boalmari,30290018,Boalmari,name_exact,high,source level upazila
+30396,upazila,Charbhadrasan,dhaka/faridpur/charbhadrasan,30290021,Char Bhadrasan,name_exact,high,source level upazila
+30390,upazila,Faridpur Sadar,dhaka/faridpur/faridpur-sadar,30290047,Faridpur Sadar,name_exact,high,source level upazila
+30397,upazila,Madhukhali,dhaka/faridpur/madhukhali,30290056,Madhukhali,name_exact,high,source level upazila
+30394,upazila,Nagarkanda,dhaka/faridpur/nagarkanda,30290062,Nagarkanda,name_exact,high,source level upazila
+30393,upazila,Sadarpur,dhaka/faridpur/sadarpur,30290084,Sadarpur,name_exact,high,source level upazila
+30398,upazila,Saltha,dhaka/faridpur/saltha,30290090,Saltha,name_exact,high,source level upazila
+30318,upazila,Kaliakair,dhaka/gazipur/kaliakair,30330032,Kaliakair,name_exact,high,source level upazila
+30317,upazila,Kaliganj,dhaka/gazipur/kaliganj,30330034,Kaliganj,name_exact,high,source level upazila
+30319,upazila,Kapasia,dhaka/gazipur/kapasia,30330036,Kapasia,name_exact,high,source level upazila
+30321,upazila,Sreepur,dhaka/gazipur/sreepur,30330086,Sreepur,name_exact,high,source level upazila
+30320,upazila,Gazipur Sadar,dhaka/gazipur/gazipur-sadar,30333330,Gazipur Sadar,name_exact,high,source level upazila
+30385,upazila,Gopalganj Sadar,dhaka/gopalganj/gopalganj-sadar,30350032,Gopalganj Sadar,name_exact,high,source level upazila
+30386,upazila,Kashiani,dhaka/gopalganj/kashiani,30350043,Kashiani,name_exact,high,source level upazila
+30388,upazila,Kotalipara,dhaka/gopalganj/kotalipara,30350051,Kotalipara,name_exact,high,source level upazila
+30389,upazila,Muksudpur,dhaka/gopalganj/muksudpur,30350058,Muksudpur,name_exact,high,source level upazila
+30387,upazila,Tungipara,dhaka/gopalganj/tungipara,30350091,Tungipara,name_exact,high,source level upazila
+30355,upazila,Austagram,dhaka/kishoreganj/austagram,30480002,Austagram,name_exact,high,source level upazila
+30354,upazila,Bajitpur,dhaka/kishoreganj/bajitpur,30480006,Bajitpur,name_exact,high,source level upazila
+30347,upazila,Bhairab,dhaka/kishoreganj/bhairab,30480011,Bhairab,name_exact,high,source level upazila
+30349,upazila,Hossainpur,dhaka/kishoreganj/hossainpur,30480027,Hossainpur,name_exact,high,source level upazila
+30345,upazila,Itna,dhaka/kishoreganj/itna,30480033,Itna,name_exact,high,source level upazila
+30353,upazila,Karimgonj,dhaka/kishoreganj/karimgonj,30480042,Karimganj,name_skeleton,medium,source level upazila
+30346,upazila,Katiadi,dhaka/kishoreganj/katiadi,30480045,Katiadi,name_exact,high,source level upazila
+30352,upazila,Kishoreganj Sadar,dhaka/kishoreganj/kishoreganj-sadar,30480049,Kishoreganj Sadar,name_exact,high,source level upazila
+30351,upazila,Kuliarchar,dhaka/kishoreganj/kuliarchar,30480054,Kuliarchar,name_exact,high,source level upazila
+30356,upazila,Mithamoin,dhaka/kishoreganj/mithamoin,30480059,Mithamain,name_skeleton,medium,source level upazila
+30357,upazila,Nikli,dhaka/kishoreganj/nikli,30480076,Nikli,name_exact,high,source level upazila
+30350,upazila,Pakundia,dhaka/kishoreganj/pakundia,30480079,Pakundia,name_exact,high,source level upazila
+30348,upazila,Tarail,dhaka/kishoreganj/tarail,30480092,Tarail,name_exact,high,source level upazila
+30494,upazila,Dasar,dhaka/madaripur/dasar,30540018,Dasar,name_exact,high,source level upazila
+30383,upazila,Kalkini,dhaka/madaripur/kalkini,30540040,Kalkini,name_exact,high,source level upazila
+30381,upazila,Madaripur Sadar,dhaka/madaripur/madaripur-sadar,30540054,Madaripur Sadar,name_exact,high,source level upazila
+30384,upazila,Rajoir,dhaka/madaripur/rajoir,30540080,Rajoir,name_exact,high,source level upazila
+30382,upazila,Shibchar,dhaka/madaripur/shibchar,30540087,Shibchar,name_exact,high,source level upazila
+30363,upazila,Doulatpur,dhaka/manikganj/doulatpur,30560010,Daulatpur,name_skeleton,medium,source level upazila
+30361,upazila,Gior,dhaka/manikganj/gior,30560022,Ghior,name_banglish,high,source level upazila
+30358,upazila,Harirampur,dhaka/manikganj/harirampur,30560028,Harirampur,name_exact,high,source level upazila
+30360,upazila,Manikganj Sadar,dhaka/manikganj/manikganj-sadar,30560046,Manikganj Sadar,name_exact,high,source level upazila
+30359,upazila,Saturia,dhaka/manikganj/saturia,30560070,Saturia,name_exact,high,source level upazila
+30362,upazila,Shibaloy,dhaka/manikganj/shibaloy,30560078,Shibalaya,name_skeleton,medium,source level upazila
+30364,upazila,Singiar,dhaka/manikganj/singiar,30560082,Singair,name_skeleton,medium,source level upazila
+30374,upazila,Gajaria,dhaka/munshiganj/gajaria,30590024,Gazaria,name_banglish,high,source level upazila
+30370,upazila,Munshiganj Sadar,dhaka/munshiganj/munshiganj-sadar,30590056,Munshiganj Sadar,name_exact,high,source level upazila
+30372,upazila,Sirajdikhan,dhaka/munshiganj/sirajdikhan,30590074,Serajdikhan,name_skeleton,medium,source level upazila
+30371,upazila,Sreenagar,dhaka/munshiganj/sreenagar,30590084,Sreenagar,name_exact,high,source level upazila
+30375,upazila,Tongibari,dhaka/munshiganj/tongibari,30590094,Tongibari,name_exact,high,source level upazila
+30328,upazila,Araihazar,dhaka/narayanganj/araihazar,30670002,Araihazar,name_exact,high,source level upazila
+30332,upazila,Sonargaon,dhaka/narayanganj/sonargaon,30670004,Sonargaon,name_exact,high,source level upazila
+30331,upazila,Rupganj,dhaka/narayanganj/rupganj,30670068,Rupganj,name_exact,high,source level upazila
+30329,upazila,Bandar,dhaka/narayanganj/bandar,30674406,Bandar,name_exact,high,source level upazila
+30330,upazila,Narayanganj Sadar,dhaka/narayanganj/narayanganj-sadar,30674458,Narayanganj Sadar,name_exact,high,source level upazila
+30311,upazila,Belabo,dhaka/narsingdi/belabo,30680007,Belabo,name_exact,high,source level upazila
+30312,upazila,Monohardi,dhaka/narsingdi/monohardi,30680052,Manohardi,name_skeleton,medium,source level upazila
+30313,upazila,Narsingdi Sadar,dhaka/narsingdi/narsingdi-sadar,30680060,Narsingdi Sadar,name_exact,high,source level upazila
+30314,upazila,Palash,dhaka/narsingdi/palash,30680063,Palash,name_exact,high,source level upazila
+30315,upazila,Raipura,dhaka/narsingdi/raipura,30680064,Roypura,name_skeleton,medium,source level upazila
+30316,upazila,Shibpur,dhaka/narsingdi/shibpur,30680076,Shibpur,name_exact,high,source level upazila
+30379,upazila,Baliakandi,dhaka/rajbari/baliakandi,30820007,Baliakandi,name_exact,high,source level upazila
+30377,upazila,Goalanda,dhaka/rajbari/goalanda,30820029,Goalanda,name_exact,high,source level upazila
+30380,upazila,Kalukhali,dhaka/rajbari/kalukhali,30820047,Kalukhali,name_exact,high,source level upazila
+30378,upazila,Pangsa,dhaka/rajbari/pangsa,30820073,Pangsha,name_exact,high,source level upazila
+30376,upazila,Rajbari Sadar,dhaka/rajbari/rajbari-sadar,30820076,Rajbari Sadar,name_exact,high,source level upazila
+30326,upazila,Bhedarganj,dhaka/shariatpur/bhedarganj,30860014,Bhedarganj,name_exact,high,source level upazila
+30327,upazila,Damudya,dhaka/shariatpur/damudya,30860025,Damudya,name_exact,high,source level upazila
+30325,upazila,Gosairhat,dhaka/shariatpur/gosairhat,30860036,Gosairhat,name_exact,high,source level upazila
+30323,upazila,Naria,dhaka/shariatpur/naria,30860065,Naria,name_exact,high,source level upazila
+30322,upazila,Shariatpur Sadar,dhaka/shariatpur/shariatpur-sadar,30860069,Shariatpur Sadar,name_exact,high,source level upazila
+30324,upazila,Zajira,dhaka/shariatpur/zajira,30860094,Zanjira,name_fuzzy,medium,source level upazila; similarity 0.92 to 'Zajira'
+30333,upazila,Basail,dhaka/tangail/basail,30930009,Basail,name_exact,high,source level upazila
+30334,upazila,Bhuapur,dhaka/tangail/bhuapur,30930019,Bhuapur,name_exact,high,source level upazila
+30335,upazila,Delduar,dhaka/tangail/delduar,30930023,Delduar,name_exact,high,source level upazila
+30344,upazila,Dhanbari,dhaka/tangail/dhanbari,30930025,Dhanbari,name_exact,high,source level upazila
+30336,upazila,Ghatail,dhaka/tangail/ghatail,30930028,Ghatail,name_exact,high,source level upazila
+30337,upazila,Gopalpur,dhaka/tangail/gopalpur,30930038,Gopalpur,name_exact,high,source level upazila
+30343,upazila,Kalihati,dhaka/tangail/kalihati,30930047,Kalihati,name_exact,high,source level upazila
+30338,upazila,Madhupur,dhaka/tangail/madhupur,30930057,Madhupur,name_exact,high,source level upazila
+30339,upazila,Mirzapur,dhaka/tangail/mirzapur,30930066,Mirzapur,name_exact,high,source level upazila
+30340,upazila,Nagarpur,dhaka/tangail/nagarpur,30930076,Nagarpur,name_exact,high,source level upazila
+30341,upazila,Sakhipur,dhaka/tangail/sakhipur,30930085,Sakhipur,name_exact,high,source level upazila
+30342,upazila,Tangail Sadar,dhaka/tangail/tangail-sadar,30930095,Tangail Sadar,name_exact,high,source level upazila
+,,,,30260022,Gaffargaon,unmatched,none,source level upazila; no candidates under parent
+,,,,30260023,Gauripur,unmatched,none,source level upazila; no candidates under parent
+,,,,30260090,Sreebardi,unmatched,none,source level upazila; no candidates under parent
+,,,,30590044,Lohajang,unmatched,none,source level upazila; best candidates: Louhajanj 0.75
+50002,city_corporation,Dhaka South City Corporation,dhaka/dhaka/dhaka-south-city-corporation,302620,Dhaka South City Corporation,name_exact,high,source level city_corporation
+50011,city_corporation,Gazipur City Corporation,dhaka/gazipur/gazipur-city-corporation,303333,Gazipur City Corporation,name_exact,high,source level city_corporation
+50010,city_corporation,Narayanganj City Corporation,dhaka/narayanganj/narayanganj-city-corporation,306744,Narayanganj City Corporation,name_exact,high,source level city_corporation
+50001,city_corporation,Dhaka North City Corporation,dhaka/dhaka/dhaka-north-city-corporation,302625,Dhaka North City Corperation,code_city_corporation,high,source level city_corporation; spelling differs (Dhaka North City Corperation vs Dhaka North City Corporation); matched by hand via city-corporation code 302625
+,,,,3026001440,Dhamrai Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Dhamrai
+,,,,3026001860,Dohar Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Dohar
+,,,,3026002222,Gaffargaon Paurashava,unmatched,none,source level pourashava; parent 30260022 not matched to a seed unit
+,,,,3026007280,Savar Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Savar
+,,,,3026009077,Sreebardi Paurashava,unmatched,none,source level pourashava; parent 30260090 not matched to a seed unit
+,,,,3029001020,Bhanga Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Bhanga
+,,,,3029001840,Boalmari Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Boalmari
+,,,,3029004760,Faridpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Faridpur Sadar
+,,,,3029005670,Madhukhali Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Madhukhali
+,,,,3029006280,Nagarkanda Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Nagarkanda
+,,,,3033003244,Kaliakair Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kaliakair
+,,,,3033003449,Kaliganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kaliganj
+,,,,3033008655,Sreepur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Sreepur
+,,,,3035003225,Gopalganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Gopalganj Sadar
+,,,,3035005150,Kotalipara Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kotalipara
+,,,,3035005865,Muksudpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Muksudpur
+,,,,3035009175,Tungipara Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Tungipara
+,,,,3048000625,Bajitpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Bajitpur
+,,,,3048001150,Bhairab Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Bhairab
+,,,,3048002762,Hossainpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Hossainpur
+,,,,3048004266,Karimganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Karimgonj
+,,,,3048004570,Katiadi Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Katiadi
+,,,,3048004975,Kishoreganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kishoreganj Sadar
+,,,,3048005488,Kuliar Char Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kuliarchar
+,,,,3048007992,Pakundia Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Pakundia
+,,,,3054004025,Kalkini Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kalkini
+,,,,3054005450,Madaripur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Madaripur Sadar
+,,,,3054008068,Rajoir Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Rajoir
+,,,,3054008775,Shibchar Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Shibchar
+,,,,3056004650,Manikganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Manikganj Sadar
+,,,,3056008287,Singair Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Singiar
+,,,,3059005633,Mirkadim Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Munshiganj Sadar
+,,,,3059005666,Munshiganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Munshiganj Sadar
+,,,,3067000215,Araihazar Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Araihazar
+,,,,3067000235,Gopaldi Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Araihazar
+,,,,3067000466,Sonargaon Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Sonargaon
+,,,,3067006833,Kanchan Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Rupganj
+,,,,3067006877,Tarabo Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Rupganj
+,,,,3068005237,Manohardi Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Monohardi
+,,,,3068006025,Madhabdi Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Narsingdi Sadar
+,,,,3068006050,Narsingdi Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Narsingdi Sadar
+,,,,3068006315,Ghorashal Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Palash
+,,,,3068006480,Roypura Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Raipura
+,,,,3068007687,Shibpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Shibpur
+,,,,3082002922,Goalandaghat Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Goalanda
+,,,,3082007333,Pangsha Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Pangsa
+,,,,3082007666,Rajbari Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Rajbari Sadar
+,,,,3086001416,Bhedarganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Bhedarganj
+,,,,3086002533,Damudya Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Damudya
+,,,,3086006550,Naria Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Naria
+,,,,3086006966,Shariatpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Shariatpur Sadar
+,,,,3086009483,Zanjira Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Zajira
+,,,,3093000908,Basail Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Basail
+,,,,3093001912,Bhuapur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Bhuapur
+,,,,3093002525,Dhanbari Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Dhanbari
+,,,,3093002837,Ghatail Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Ghatail
+,,,,3093003850,Gopalpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Gopalpur
+,,,,3093004730,Elenga Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kalihati
+,,,,3093004762,Kalihati Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kalihati
+,,,,3093005775,Madhupur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Madhupur
+,,,,3093006670,Mirzapur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Mirzapur
+,,,,3093008580,Sakhipur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Sakhipur
+,,,,3093009587,Tangail Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Tangail Sadar
+30373,upazila,Louhajanj,dhaka/munshiganj/louhajanj,,,no_source_unit,none,no DGHS/BBS unit matched under Munshiganj

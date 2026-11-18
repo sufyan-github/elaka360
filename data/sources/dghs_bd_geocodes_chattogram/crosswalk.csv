@@ -1,0 +1,178 @@
+our_id,our_level,our_name_en,our_path,source_code,source_name_en,match_method,confidence,notes
+20011,district,Bandarban,chattogram/bandarban,2003,Bandarban,name_exact,high,source level district
+20003,district,Brahmanbaria,chattogram/brahmanbaria,2012,Brahmanbaria,name_exact,high,source level district
+20006,district,Chandpur,chattogram/chandpur,2013,Chandpur,name_exact,high,source level district
+20008,district,Chattogram,chattogram/chattogram,2015,Chattogram,name_exact,high,source level district
+20001,district,Cumilla,chattogram/cumilla,2019,Cumilla,name_exact,high,source level district
+20009,district,Cox's Bazar,chattogram/coxs-bazar,2022,Cox's Bazar,name_exact,high,source level district
+20002,district,Feni,chattogram/feni,2030,Feni,name_exact,high,source level district
+20010,district,Khagrachhari,chattogram/khagrachhari,2046,Khagrachari,name_exact,high,source level district
+20007,district,Lakshmipur,chattogram/lakshmipur,2051,Lakshmipur,name_exact,high,source level district
+20005,district,Noakhali,chattogram/noakhali,2075,Noakhali,name_exact,high,source level district
+20004,district,Rangamati,chattogram/rangamati,2084,Rangamati,name_exact,high,source level district
+30098,upazila,Alikadam,chattogram/bandarban/alikadam,20030004,Alikadam,name_exact,high,source level upazila
+30097,upazila,Bandarban Sadar,chattogram/bandarban/bandarban-sadar,20030014,Bandarban Sadar,name_exact,high,source level upazila
+30101,upazila,Lama,chattogram/bandarban/lama,20030051,Lama,name_exact,high,source level upazila
+30099,upazila,Naikhongchhari,chattogram/bandarban/naikhongchhari,20030073,Naikhongchari,name_exact,high,source level upazila
+30100,upazila,Rowangchhari,chattogram/bandarban/rowangchhari,20030089,Rowangchari,name_exact,high,source level upazila
+30102,upazila,Ruma,chattogram/bandarban/ruma,20030091,Ruma,name_exact,high,source level upazila
+30103,upazila,Thanchi,chattogram/bandarban/thanchi,20030095,Thanchi,name_exact,high,source level upazila
+30029,upazila,Akhaura,chattogram/brahmanbaria/akhaura,20120002,Akhaura,name_exact,high,source level upazila
+30031,upazila,Bancharampur,chattogram/brahmanbaria/bancharampur,20120004,Banchharampur,name_exact,high,source level upazila
+30032,upazila,Bijoynagar,chattogram/brahmanbaria/bijoynagar,20120007,Bijoynagar,name_exact,high,source level upazila
+30024,upazila,Brahmanbaria Sadar,chattogram/brahmanbaria/brahmanbaria-sadar,20120013,Brahmanbaria Sadar,name_exact,high,source level upazila
+30028,upazila,Ashuganj,chattogram/brahmanbaria/ashuganj,20120033,Ashuganj,name_exact,high,source level upazila
+30025,upazila,Kasba,chattogram/brahmanbaria/kasba,20120063,Kasba,name_exact,high,source level upazila
+30030,upazila,Nabinagar,chattogram/brahmanbaria/nabinagar,20120085,Nabinagar,name_exact,high,source level upazila
+30026,upazila,Nasirnagar,chattogram/brahmanbaria/nasirnagar,20120090,Nasirnagar,name_exact,high,source level upazila
+30027,upazila,Sarail,chattogram/brahmanbaria/sarail,20120094,Sarail,name_exact,high,source level upazila
+30056,upazila,Matlab South,chattogram/chandpur/matlab-south,20130076,Matlab Dakshin,code_hand_checked,high,source level upazila; hand-checked pair (Matlab Dakshin = Matlab South মতলব দক্ষিণ); the name matcher does not pair these
+30058,upazila,Matlab North,chattogram/chandpur/matlab-north,20130079,Matlab Uttar,code_hand_checked,high,source level upazila; hand-checked pair (Matlab Uttar = Matlab North মতলব উত্তর); the name matcher does not pair these
+30055,upazila,Chandpur Sadar,chattogram/chandpur/chandpur-sadar,20130022,Chandpur Sadar,name_exact,high,source level upazila
+30059,upazila,Faridgonj,chattogram/chandpur/faridgonj,20130045,Faridganj,name_skeleton,medium,source level upazila
+30052,upazila,Haimchar,chattogram/chandpur/haimchar,20130047,Haimchar,name_exact,high,source level upazila
+30057,upazila,Hajiganj,chattogram/chandpur/hajiganj,20130049,Hajiganj,name_exact,high,source level upazila
+30053,upazila,Kachua,chattogram/chandpur/kachua,20130058,Kachua,name_exact,high,source level upazila
+30054,upazila,Shahrasti,chattogram/chandpur/shahrasti,20130095,Shahrasti,name_exact,high,source level upazila
+30072,upazila,Anwara,chattogram/chattogram/anwara,20150004,Anowara,name_exact,high,source level upazila
+30070,upazila,Banshkhali,chattogram/chattogram/banshkhali,20150008,Banshkhali,name_exact,high,source level upazila
+30071,upazila,Boalkhali,chattogram/chattogram/boalkhali,20150012,Boalkhali,name_exact,high,source level upazila
+30073,upazila,Chandanaish,chattogram/chattogram/chandanaish,20150018,Chandanaish,name_exact,high,source level upazila
+30077,upazila,Fatikchhari,chattogram/chattogram/fatikchhari,20150033,Fatikchari,name_exact,high,source level upazila
+30076,upazila,Hathazari,chattogram/chattogram/hathazari,20150037,Hathazari,name_exact,high,source level upazila
+30079,upazila,Karnafuli,chattogram/chattogram/karnafuli,20150039,Karnaphuli,name_banglish,high,source level upazila
+30075,upazila,Lohagara,chattogram/chattogram/lohagara,20150047,Lohagara,name_exact,high,source level upazila
+30067,upazila,Mirsharai,chattogram/chattogram/mirsharai,20150053,Mirsharai,name_exact,high,source level upazila
+30068,upazila,Patiya,chattogram/chattogram/patiya,20150061,Patiya,name_exact,high,source level upazila
+30065,upazila,Rangunia,chattogram/chattogram/rangunia,20150070,Rangunia,name_exact,high,source level upazila
+30078,upazila,Raozan,chattogram/chattogram/raozan,20150074,Raozan,name_exact,high,source level upazila
+30069,upazila,Sandwip,chattogram/chattogram/sandwip,20150078,Sandwip,name_exact,high,source level upazila
+30074,upazila,Satkania,chattogram/chattogram/satkania,20150082,Satkania,name_exact,high,source level upazila
+30066,upazila,Sitakunda,chattogram/chattogram/sitakunda,20150086,Sitakunda,name_exact,high,source level upazila
+30014,upazila,Sadarsouth,chattogram/cumilla/sadarsouth,20195033,Cumilla Sadar Dakshin,code_hand_checked,high,source level upazila; hand-checked pair (Cumilla Sadar Dakshin = Sadarsouth সদর দক্ষিণ); the name matcher does not pair these
+30011,upazila,Comilla Sadar,chattogram/cumilla/comilla-sadar,20195067,Cumilla Adarsha Sadar,code_hand_checked,high,source level upazila; hand-checked pair (Cumilla Adarsha Sadar = Comilla Sadar কুমিল্লা সদর); the name matcher does not pair these
+30002,upazila,Barura,chattogram/cumilla/barura,20190009,Barura,name_exact,high,source level upazila
+30003,upazila,Brahmanpara,chattogram/cumilla/brahmanpara,20190015,Brahmanpara,name_exact,high,source level upazila
+30016,upazila,Burichang,chattogram/cumilla/burichang,20190018,Burichang,name_exact,high,source level upazila
+30004,upazila,Chandina,chattogram/cumilla/chandina,20190027,Chandina,name_exact,high,source level upazila
+30005,upazila,Chauddagram,chattogram/cumilla/chauddagram,20190031,Chauddagram,name_exact,high,source level upazila
+30006,upazila,Daudkandi,chattogram/cumilla/daudkandi,20190036,Daudkandi,name_exact,high,source level upazila
+30001,upazila,Debidwar,chattogram/cumilla/debidwar,20190040,Debidwar,name_exact,high,source level upazila
+30007,upazila,Homna,chattogram/cumilla/homna,20190054,Homna,name_exact,high,source level upazila
+30008,upazila,Laksam,chattogram/cumilla/laksam,20190072,Laksam,name_exact,high,source level upazila
+30017,upazila,Lalmai,chattogram/cumilla/lalmai,20190073,Lalmi,name_fuzzy,medium,source level upazila; similarity 0.91 to 'Lalmai'
+30013,upazila,Monohargonj,chattogram/cumilla/monohargonj,20190074,Monoharganj,name_skeleton,medium,source level upazila
+30012,upazila,Meghna,chattogram/cumilla/meghna,20190075,Meghna,name_exact,high,source level upazila
+30009,upazila,Muradnagar,chattogram/cumilla/muradnagar,20190081,Muradnagar,name_exact,high,source level upazila
+30010,upazila,Nangalkot,chattogram/cumilla/nangalkot,20190087,Nangalkot,name_exact,high,source level upazila
+30015,upazila,Titas,chattogram/cumilla/titas,20190094,Titas,name_exact,high,source level upazila
+30081,upazila,Chakaria,chattogram/coxs-bazar/chakaria,20220016,Chakaria,name_exact,high,source level upazila
+30080,upazila,Coxsbazar Sadar,chattogram/coxs-bazar/coxsbazar-sadar,20220024,Cox's Bazar Sadar,name_exact,high,source level upazila
+30492,upazila,Eidgaon,chattogram/coxs-bazar/eidgaon,20220032,Eidgaon,name_exact,high,source level upazila
+30082,upazila,Kutubdia,chattogram/coxs-bazar/kutubdia,20220045,Kutubdia,name_exact,high,source level upazila
+30084,upazila,Moheshkhali,chattogram/coxs-bazar/moheshkhali,20220049,Maheshkhali,name_skeleton,medium,source level upazila
+30085,upazila,Pekua,chattogram/coxs-bazar/pekua,20220056,Pekua,name_exact,high,source level upazila
+30086,upazila,Ramu,chattogram/coxs-bazar/ramu,20220066,Ramu,name_exact,high,source level upazila
+30087,upazila,Teknaf,chattogram/coxs-bazar/teknaf,20220090,Teknaf,name_exact,high,source level upazila
+30083,upazila,Ukhiya,chattogram/coxs-bazar/ukhiya,20220094,Ukhia,name_banglish,high,source level upazila
+30018,upazila,Chhagalnaiya,chattogram/feni/chhagalnaiya,20300014,Chhagalnaiya,name_exact,high,source level upazila
+30023,upazila,Daganbhuiyan,chattogram/feni/daganbhuiyan,20300025,Daganbhuiyan,name_exact,high,source level upazila
+30019,upazila,Feni Sadar,chattogram/feni/feni-sadar,20300029,Feni Sadar,name_exact,high,source level upazila
+30021,upazila,Fulgazi,chattogram/feni/fulgazi,20300041,Fulgazi,name_exact,high,source level upazila
+30022,upazila,Parshuram,chattogram/feni/parshuram,20300051,Parshuram,name_exact,high,source level upazila
+30020,upazila,Sonagazi,chattogram/feni/sonagazi,20300094,Sonagazi,name_exact,high,source level upazila
+30089,upazila,Dighinala,chattogram/khagrachhari/dighinala,20460043,Dighinala,name_exact,high,source level upazila
+30096,upazila,Guimara,chattogram/khagrachhari/guimara,20460047,Guimara,name_exact,high,source level upazila
+30088,upazila,Khagrachhari Sadar,chattogram/khagrachhari/khagrachhari-sadar,20460049,Khagrachari Sadar,name_exact,high,source level upazila
+30091,upazila,Laxmichhari,chattogram/khagrachhari/laxmichhari,20460061,Lakshmichari,name_banglish,high,source level upazila
+30092,upazila,Mohalchari,chattogram/khagrachhari/mohalchari,20460065,Mahalchari,name_skeleton,medium,source level upazila
+30093,upazila,Manikchari,chattogram/khagrachhari/manikchari,20460067,Manikchari,name_exact,high,source level upazila
+30095,upazila,Matiranga,chattogram/khagrachhari/matiranga,20460070,Matiranga,name_exact,high,source level upazila
+30090,upazila,Panchari,chattogram/khagrachhari/panchari,20460077,Panchhari,name_exact,high,source level upazila
+30094,upazila,Ramgarh,chattogram/khagrachhari/ramgarh,20460080,Ramgarh,name_exact,high,source level upazila
+30061,upazila,Kamalnagar,chattogram/lakshmipur/kamalnagar,20510033,Kamalnagar,name_exact,high,source level upazila
+30060,upazila,Lakshmipur Sadar,chattogram/lakshmipur/lakshmipur-sadar,20510043,Lakshmipur Sadar,name_exact,high,source level upazila
+30062,upazila,Raipur,chattogram/lakshmipur/raipur,20510058,Raipur,name_exact,high,source level upazila
+30064,upazila,Ramganj,chattogram/lakshmipur/ramganj,20510065,Ramganj,name_exact,high,source level upazila
+30063,upazila,Ramgati,chattogram/lakshmipur/ramgati,20510073,Ramgati,name_exact,high,source level upazila
+30045,upazila,Begumganj,chattogram/noakhali/begumganj,20750007,Begumganj,name_exact,high,source level upazila
+30050,upazila,Chatkhil,chattogram/noakhali/chatkhil,20750010,Chatkhil,name_exact,high,source level upazila
+30044,upazila,Companiganj,chattogram/noakhali/companiganj,20750021,Companiganj,name_exact,high,source level upazila
+30046,upazila,Hatia,chattogram/noakhali/hatia,20750036,Hatiya,name_banglish,high,source level upazila
+30048,upazila,Kabirhat,chattogram/noakhali/kabirhat,20750047,Kabirhat,name_exact,high,source level upazila
+30049,upazila,Senbug,chattogram/noakhali/senbug,20750080,Senbagh,name_skeleton,medium,source level upazila
+30051,upazila,Sonaimori,chattogram/noakhali/sonaimori,20750083,Sonaimuri,name_skeleton,medium,source level upazila
+30047,upazila,Subarnachar,chattogram/noakhali/subarnachar,20750085,Subarnachar,name_exact,high,source level upazila
+30043,upazila,Noakhali Sadar,chattogram/noakhali/noakhali-sadar,20750087,Noakhali Sadar,name_exact,high,source level upazila
+30035,upazila,Kawkhali,chattogram/rangamati/kawkhali,20840025,Kowkhali,code_hand_checked,high,source level upazila; hand-checked pair (Kowkhali = Kawkhali কাউখালী); the name matcher does not pair these
+30036,upazila,Baghaichari,chattogram/rangamati/baghaichari,20840007,Baghaichari,name_exact,high,source level upazila
+30037,upazila,Barkal,chattogram/rangamati/barkal,20840021,Barkal,name_exact,high,source level upazila
+30040,upazila,Belaichari,chattogram/rangamati/belaichari,20840029,Belaichari,name_exact,high,source level upazila
+30034,upazila,Kaptai,chattogram/rangamati/kaptai,20840036,Kaptai,name_exact,high,source level upazila
+30041,upazila,Juraichari,chattogram/rangamati/juraichari,20840047,Juraichari,name_exact,high,source level upazila
+30038,upazila,Langadu,chattogram/rangamati/langadu,20840058,Langadu,name_exact,high,source level upazila
+30042,upazila,Naniarchar,chattogram/rangamati/naniarchar,20840075,Naniarchar,name_exact,high,source level upazila
+30039,upazila,Rajasthali,chattogram/rangamati/rajasthali,20840078,Rajasthali,name_exact,high,source level upazila
+30033,upazila,Rangamati Sadar,chattogram/rangamati/rangamati-sadar,20840087,Rangamati Sadar,name_exact,high,source level upazila
+,,,,20220075,Eidgaon,unmatched,none,source level upazila; no candidates under parent
+50003,city_corporation,Chattogram City Corporation,chattogram/chattogram/chattogram-city-corporation,201516,Chattogram City Corporation,name_exact,high,source level city_corporation
+50009,city_corporation,Cumilla City Corporation,chattogram/cumilla/cumilla-city-corporation,201950,Cumilla City Corporation,name_exact,high,source level city_corporation
+,,,,2003001450,Bandarban Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Bandarban Sadar
+,,,,2003005162,Lama Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Lama
+,,,,2012000222,Akhaura Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Akhaura
+,,,,2012001366,Brahmanbaria Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Brahmanbaria Sadar
+,,,,2012006376,Kasba Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kasba
+,,,,2012008588,Nabinagar Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Nabinagar
+,,,,2013002214,Chandpur Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Chandpur Sadar
+,,,,2013004535,Faridganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Faridgonj
+,,,,2013004942,Hajiganj Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Hajiganj
+,,,,2013005857,Kachua Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kachua
+,,,,2013007671,Matlab Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Matlab South
+,,,,2013007928,Sengarchar Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Matlab North
+,,,,2013009585,Shahrasti Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Shahrasti
+,,,,2015000805,Banshkhali Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Banshkhali
+,,,,2015001210,Boalkhali Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Boalkhali
+,,,,2015001812,Chandanaish Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Chandanaish
+,,,,2015003322,Fatikchhari Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Fatikchhari
+,,,,2015005308,Baroiar Hat Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Mirsharai
+,,,,2015005325,Mirsharai Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Mirsharai
+,,,,2015006133,Patiya Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Patiya
+,,,,2015007041,Rangunia Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Rangunia
+,,,,2015007450,Raozan Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Raozan
+,,,,2015007867,Sandwip Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Sandwip
+,,,,2015008275,Satkania Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Satkania
+,,,,2015008683,Sitakunda Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Sitakunda
+,,,,2019000916,Barura Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Barura
+,,,,2019002733,Chandina Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Chandina
+,,,,2019003137,Chauddagram Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Chauddagram
+,,,,2019003667,Daudkandi Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Daudkandi
+,,,,2019004070,Debidwar Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Debidwar
+,,,,2019005475,Homna Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Homna
+,,,,2019007283,Laksam Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Laksam
+,,,,2019008787,Nangalkot Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Nangalkot
+,,,,2022001633,Chakaria Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Chakaria
+,,,,2022002466,COX'S BAZAR PAURASHAVA,no_seed_unit,none,source level pourashava; our seed has no pourashava under Coxsbazar Sadar
+,,,,2022004977,Maheshkhali Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Moheshkhali
+,,,,2022009088,Teknaf Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Teknaf
+,,,,2030001415,Chhagalnaiya Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Chhagalnaiya
+,,,,2030002530,Daganbhuiyan Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Daganbhuiyan
+,,,,2030002950,Feni Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Feni Sadar
+,,,,2030005165,Parshuram Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Parshuram
+,,,,2030009480,Sonagazi Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Sonagazi
+,,,,2046004950,Khagrachhari Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Khagrachhari Sadar
+,,,,2046007062,Matiranga Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Matiranga
+,,,,2046008075,Ramgarh Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Ramgarh
+,,,,2051004325,Lakshmipur Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Lakshmipur Sadar
+,,,,2051005850,Roypur Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Raipur
+,,,,2051006575,Ramganj Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Ramganj
+,,,,2051007387,Ramgati Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Ramgati
+,,,,2075000733,Chaumohani Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Begumganj
+,,,,2075001050,Chatkhil Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Chatkhil
+,,,,2075002116,Basurhat Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Companiganj
+,,,,2075003660,Hatiya Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Hatia
+,,,,2075004766,Kabirhat Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kabirhat
+,,,,2075008075,Senbagh Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Senbug
+,,,,2075008390,Sonaimuri Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Sonaimori
+,,,,2075008783,Noakhali Paurasava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Noakhali Sadar
+,,,,2084000720,Baghaichhari Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Baghaichari
+,,,,2084008750,Rangamati Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Rangamati Sadar

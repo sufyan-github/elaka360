@@ -24,7 +24,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends postgresql-clie
 WORKDIR /app
 COPY --from=build --chown=node:node /out ./
 COPY --chown=node:node db/migrations db/migrations
-COPY --chown=node:node db/seed/seed.sql db/seed/seed.sql
+COPY --chown=node:node db/seed db/seed
 COPY --chown=node:node scripts/db-migrate.sh scripts/db-seed-once.sh scripts/
 USER node
 EXPOSE 4000

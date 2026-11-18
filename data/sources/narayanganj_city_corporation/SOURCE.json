@@ -1,0 +1,31 @@
+{
+  "key": "NARAYANGANJ_CITY_CORPORATION",
+  "division": "dhaka",
+  "kind": "city_corporation",
+  "city": 50010,
+  "name": "Narayanganj City Corporation official portal (ncc.gov.bd)",
+  "organization": "Narayanganj City Corporation",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://ncc.gov.bd/",
+    "https://ncc.gov.bd/pages/static-pages/6922df58933eb65569e215a8",
+    "https://ncc.gov.bd/pages/static-pages/6922df18933eb65569e1fd00",
+    "https://ncc.gov.bd/pages/static-pages/6922ddb8933eb65569e15ff9",
+    "https://ncc.gov.bd/pages/static-pages/6922dc20933eb65569e0e861"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Narayanganj City Corporation (ncc.gov.bd), Bangladesh National Portal",
+  "notes": "Key pages: এক নজরে সিটি কর্পোরেশন (updated 2026-06-30 23:33) and the three zone ward pages (wards 1-9, 10-18, 19-27: areas, boundaries, approximate area, BBS 2011 population, holdings). Ward boundaries (চৌহদ্দি) are not copied; ward secretaries' names and mobiles are not copied.",
+  "files": {
+    "areas.csv": "efa4de733506c2aae6201b274751817d151fd5bc1b42cb2bacfed885657e27d9",
+    "facts.csv": "e9999f4c80d8308f415e6e30837c7cc3ab04cab76c0932df7c1eed70c5c7e501",
+    "raw/ek_nojore_ncc.txt": "9cee133ca2e013e4c9da908876dfb3329933de286ee7f26147b5d8737fa43a06",
+    "raw/wards_kadam_rasul.txt": "870a7abdd34815a7147ecd00f3ac7005ae5c30afe1ae015a9330377976d79587",
+    "raw/wards_narayanganj.txt": "d153cf284b57174c34d72216a49c5264796c9b8d9911cb4c0ca6634ddd3d62bd",
+    "raw/wards_siddhirganj.txt": "228fd604b6d52b5c1c84fd269f03e79f0b6db7284e02ab61d5daf739cb992211"
+  }
+}

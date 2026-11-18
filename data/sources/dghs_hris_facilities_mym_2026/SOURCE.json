@@ -1,0 +1,24 @@
+{
+  "key": "DGHS_HRIS_FACILITIES_MYM_2026",
+  "name": "DGHS / MoHFW HRIS Facility Registry — organisation list, Mymensingh Division",
+  "organization": "Directorate General of Health Services (DGHS), Ministry of Health and Family Welfare",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=8",
+    "https://hris.mohfw.gov.bd/public/facility-registry"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Source: DGHS Facility Registry (hris.mohfw.gov.bd), Ministry of Health and Family Welfare, Bangladesh",
+  "division": "mymensingh",
+  "kind": "dghs_hris",
+  "files": {
+    "places.csv": "8eb89f03d782e6640955831b4cbce19fc4a4dc4dcf0193c6eba33e5609564b78",
+    "facts.csv": "9e6c7ef2f3feb605e88b234e73f06de79de120935c1bd0eefb3642d87e61d78b",
+    "raw/hris_organization_list_mymensingh_division.csv": "277de88eb7a2665f90961e455b362e006fc98b8fe3a66b7a625178612a500e5b"
+  },
+  "notes": "Public report of the MoHFW HRIS Facility Registry. Excel export (ret=excel) of all active entries filtered to Mymensingh Division (division_id 8), same collector and rules as DGHS_HRIS_FACILITIES_RAJ_2026. Registry is live and self-reported by facilities; coordinates are as entered by facilities (QA flags in notes). Contacts kept only for non-private facilities; private/NGO contacts and addresses and facility-head names not collected. No licence stated on the site."
+}

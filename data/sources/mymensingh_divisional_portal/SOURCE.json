@@ -1,0 +1,34 @@
+{
+  "key": "MYMDIV_PORTAL_2026",
+  "name": "Mymensingh Divisional Commissioner portal (mymensinghdiv.gov.bd)",
+  "organization": "Office of the Divisional Commissioner, Mymensingh",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "division": "mymensingh",
+  "kind": "divisional_portal",
+  "urls": [
+    "https://mymensinghdiv.gov.bd/",
+    "https://mymensinghdiv.gov.bd/pages/static-pages/69708eb0a31054345f15bd62",
+    "https://mymensinghdiv.gov.bd/pages/static-pages/69707b0aa31054345f15297e",
+    "https://mymensinghdiv.gov.bd/pages/static-pages/69708f0aa31054345f15ca7c",
+    "https://mymensinghdiv.gov.bd/pages/static-pages/69708167a31054345f1543fc",
+    "https://bangladesh.gov.bd/views/union-list"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Office of the Divisional Commissioner, Mymensingh (mymensinghdiv.gov.bd), Bangladesh National Portal",
+  "files": {
+    "areas.csv": "d4b3ac1867b1c2106ebcd3f7f5b5f7da7beb9b10066bb71cd9efceeb2872be02",
+    "facts.csv": "1a72afaf4d65e71cb28b5742060de2336205f896ee2acd7dc3b79e3efb5e2227",
+    "raw/districts.txt": "a0996866639daf0c65090bf108ca109e01507ff88314bd727da4ed9f6f127a2f",
+    "raw/glance.txt": "fc7ce409fc1a3466f356bf0a57e2aaa2ef07c8c9fc6974b4bc5e3a6ecc761ec3",
+    "raw/national_portal_list.csv": "ca15a3fd281e00229919680715c90cd26baf2f679892c28dd3e3c5ca007230f3",
+    "raw/pages.csv": "ab2ed56d8f0fa1039fb14ccca1d7e63d84fe0ba65495c3b8c81a80763e0623b5",
+    "raw/unions.txt": "c856a3eb29e6a6432ced05fcc22064ea6f6980d0ee52b1e1a59f19409d7b4946",
+    "raw/upazilas.txt": "ac95b9f3a95b59a614280ec930acd5932941a72584f3b67e2794d4b0d4fc6d25",
+    "raw/warnings.txt": "04bdbe1c2ea98f2e442daff850ebbe179e36bbe53c2b687ce648b04f8ba445cf"
+  },
+  "notes": "Collected by the generic division mode of the a2i portal collectors (pages found through the portals' menus, names and figures parsed from the pages). No licence stated; only facts (names, counts, figures) are extracted. English district/upazila names are the project's keys, not printed."
+}

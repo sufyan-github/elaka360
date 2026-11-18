@@ -1,0 +1,16 @@
+Cumilla union list: unknown upazila heading 'মোট উপজেলা- ১৮ টি'
+Feni union list: unknown upazila heading 'বাংলা'
+Noakhali: union page https://noakhali.gov.bd/pages/static-pages/69913dc7516a96d4de40eda2 names no unions
+Noakhali union list: union before any upazila heading: 'ফাইল ১'
+Noakhali union list: union before any upazila heading: 'ফাইল প্রিভিউ ওয়েব ব্রাউজারে সমর্থিত নয়'
+Noakhali union list: union before any upazila heading: 'ফাইল ১'
+Noakhali union list: union before any upazila heading: 'ডাউনলোড করুন'
+Chandpur union list: unknown upazila heading 'চাঁদপুর জেলার মোট উপজেলা: ৮ টি , মোট ইউনিয়ন: ৮৮ টি।'
+Brahmanbaria/Brahmanbaria Sadar: DC list names 10 unions, the national list 11; national list used
+Brahmanbaria/Sarail: DC list names 8 unions, the national list 9; national list used
+Cox's Bazar/Kutubdia: 'ধলঘাটা' dropped: the national list has it under Moheshkhali, which is taken from the national list
+Cox's Bazar/Kutubdia: 'মাতারবাড়ী' dropped: the national list has it under Moheshkhali, which is taken from the national list
+Cox's Bazar/Kutubdia: 'কালারমারছড়া' dropped: the national list has it under Moheshkhali, which is taken from the national list
+Cox's Bazar/Moheshkhali: DC list names 5 unions, the national list 8; national list used
+Cox's Bazar/Pekua: DC list names 2 unions, the national list 7; national list used
+Cox's Bazar/Eidgaon: DC list names 4 unions, the national list 5; national list used

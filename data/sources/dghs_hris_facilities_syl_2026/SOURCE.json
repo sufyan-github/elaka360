@@ -1,0 +1,24 @@
+{
+  "key": "DGHS_HRIS_FACILITIES_SYL_2026",
+  "name": "DGHS / MoHFW HRIS Facility Registry — organisation list, Sylhet Division",
+  "organization": "Directorate General of Health Services (DGHS), Ministry of Health and Family Welfare",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=7",
+    "https://hris.mohfw.gov.bd/public/facility-registry"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Source: DGHS Facility Registry (hris.mohfw.gov.bd), Ministry of Health and Family Welfare, Bangladesh",
+  "division": "sylhet",
+  "kind": "dghs_hris",
+  "files": {
+    "places.csv": "22b525a762bc183fbb6e597ab44079cbf9311f550505fe58d94ea03bf6878780",
+    "facts.csv": "4302537cebab23c52a0b6f28e0a3cbd3966cb28644c1304f7e43495ebf1b1beb",
+    "raw/hris_organization_list_sylhet_division.csv": "b00ff2413e1d20be3535e65668bdef1ca5872dcb27dd5bc4f8963465ba89cf41"
+  },
+  "notes": "Public report of the MoHFW HRIS Facility Registry. Excel export (ret=excel) of all active entries filtered to Sylhet Division (division_id 7), same collector and rules as DGHS_HRIS_FACILITIES_RAJ_2026. Registry is live and self-reported by facilities; coordinates are as entered by facilities (QA flags in notes). Contacts kept only for non-private facilities; private/NGO contacts and addresses and facility-head names not collected. No licence stated on the site."
+}

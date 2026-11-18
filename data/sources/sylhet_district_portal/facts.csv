@@ -1,0 +1,25 @@
+entity_level,entity_name_en,district_en,upazila_en,code,fact,value,unit,basis,year,source_key,source_url,notes
+district,Sylhet,Sylhet,,,area_km2,3452.07,km2,as stated,,SYLHET_DC_PORTAL_2026,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0691,"label 'আয়তন' value '৩,৪৫২.০৭ বর্গ কি.মি বা ১৩৩২.০০ বর্গমাইল'; page updated 2026-09-08"
+district,Sylhet,Sylhet,,,population,3853570,persons,as stated,2022,SYLHET_DC_PORTAL_2026,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0691,"label 'জনসংখ্যা' value '৩৮,৫৩,৫৭০ জন (জনশুমারি ২০২২) (পুরুষ ১৮,৯৪,২৩২ জন, মহিলা ১৯,৫৯,০৫৪ জন এবং হিজড়া ২৮৪ জন)'; page updated 2026-09-08"
+district,Sylhet,Sylhet,,,upazila_count,13,count,as stated,,SYLHET_DC_PORTAL_2026,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0691,label 'উপজেলা' value '১৩ টি'; page updated 2026-09-08
+district,Sylhet,Sylhet,,,thana_count,17,count,as stated,,SYLHET_DC_PORTAL_2026,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0691,label 'থানা' value '১৭ টি'; page updated 2026-09-08
+district,Sylhet,Sylhet,,,union_count,106,count,as stated,,SYLHET_DC_PORTAL_2026,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0691,label 'ইউনিয়ন' value '১০৬ টি'; page updated 2026-09-08
+district,Sylhet,Sylhet,,,mouza_count,1554,count,as stated,,SYLHET_DC_PORTAL_2026,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0691,"label 'মৌজা' value '১,৫৫৪ টি'; page updated 2026-09-08"
+district,Sylhet,Sylhet,,,village_count,3497,count,as stated,,SYLHET_DC_PORTAL_2026,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0691,"label 'গ্রাম' value '৩,৪৯৭ টি'; page updated 2026-09-08"
+district,Sylhet,Sylhet,,,city_corporation_count,1,count,as stated,,SYLHET_DC_PORTAL_2026,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0691,label 'সিটি কর্পোরেশন' value '০১ টি (ওয়ার্ড ৪২ টি)'; page updated 2026-09-08
+district,Sylhet,Sylhet,,,pourashava_count,5,count,as stated,,SYLHET_DC_PORTAL_2026,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0691,"label 'পৌরসভা' value '০৫ টি (গোলাপগঞ্জ-‘ক’শ্রেণী, বিয়ানীবাজার- ‘খ’শ্রেণী, জকিগঞ্জ, কানাইঘাট ও বিশ্বনাথ- ‘গ’ শ্রেণী)।'; page updated 2026-09-08"
+district,Sylhet,Sylhet,,,upazila_count_listed,13,count,count of upazilas listed,,SYLHET_DC_PORTAL_2026,https://sylhet.gov.bd/pages/static-pages/list-of-upazila-1r6o9p-6aafaf75d9cbf60b24abe905,page updated 2026-09-20
+upazila,Jaintiapur,Sylhet,Jaintiapur,,union_count,6,count,count of unions listed,,SYLHET_DC_PORTAL_2026,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0694,page updated 2026-11-16
+upazila,Dakshinsurma,Sylhet,Dakshinsurma,,union_count,8,count,count of unions listed,,SYLHET_DC_PORTAL_2026,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0694,page updated 2026-11-16
+upazila,Sylhet Sadar,Sylhet,Sylhet Sadar,,union_count,7,count,count of unions listed,,SYLHET_DC_PORTAL_2026,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0694,page updated 2026-11-16
+upazila,Golapganj,Sylhet,Golapganj,,union_count,11,count,count of unions listed,,SYLHET_DC_PORTAL_2026,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0694,page updated 2026-11-16
+upazila,Bishwanath,Sylhet,Bishwanath,,union_count,8,count,count of unions listed,,SYLHET_DC_PORTAL_2026,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0694,page updated 2026-11-16
+upazila,Companiganj,Sylhet,Companiganj,,union_count,6,count,count of unions listed,,SYLHET_DC_PORTAL_2026,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0694,page updated 2026-11-16
+upazila,Gowainghat,Sylhet,Gowainghat,,union_count,13,count,count of unions listed,,SYLHET_DC_PORTAL_2026,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0694,page updated 2026-11-16
+upazila,Fenchuganj,Sylhet,Fenchuganj,,union_count,5,count,count of unions listed,,SYLHET_DC_PORTAL_2026,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0694,page updated 2026-11-16
+upazila,Beanibazar,Sylhet,Beanibazar,,union_count,10,count,count of unions listed,,SYLHET_DC_PORTAL_2026,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0694,page updated 2026-11-16
+upazila,Osmaninagar,Sylhet,Osmaninagar,,union_count,8,count,count of unions listed,,SYLHET_DC_PORTAL_2026,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0694,page updated 2026-11-16
+upazila,Zakiganj,Sylhet,Zakiganj,,union_count,9,count,count of unions listed,,SYLHET_DC_PORTAL_2026,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0694,page updated 2026-11-16
+upazila,Balaganj,Sylhet,Balaganj,,union_count,6,count,count of unions listed,,SYLHET_DC_PORTAL_2026,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0694,page updated 2026-11-16
+upazila,Kanaighat,Sylhet,Kanaighat,,union_count,9,count,count of unions listed,,SYLHET_DC_PORTAL_2026,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0694,page updated 2026-11-16
+district,Sylhet,Sylhet,,,union_count_listed,106,count,count of unions listed,,SYLHET_DC_PORTAL_2026,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0694,page updated 2026-11-16

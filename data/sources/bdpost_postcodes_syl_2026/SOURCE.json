@@ -1,0 +1,25 @@
+{
+  "key": "BDPOST_POSTCODES_SYL_2026",
+  "division": "sylhet",
+  "kind": "bdpost",
+  "name": "Bangladesh Post postcode booklet — Sylhet Division post offices (scan on post.rajshahi.gov.bd)",
+  "organization": "বাংলাদেশ ডাক বিভাগ (Bangladesh Post Office) — DPMG Rajshahi Division portal",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-post-rajshahi/2024/12/e548300c14de4897aa9516b65816e29f.pdf"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "বাংলাদেশ ডাক বিভাগ (Bangladesh Post Office) — DPMG Rajshahi Division portal",
+  "notes": "Same undated scanned booklet as the earlier division runs (no text layer). Sylhet Division's offices are at the start of the booklet's 'চট্টগ্রাম রিজিয়ন ৩০০০-৪৯৯৯': p. 13 (PDF page 8, right half, from 'সুনামগঞ্জ জেলা ৩০০০-৩০৯৯': Sunamganj and the start of the Sylhet head-office group; faded print), p. 14 (PDF page 9, left half: Sylhet, Moulvibazar, Habiganj) and p. 15 (PDF page 9, right half, first column, up to 'ব্রাহ্মণবাড়ীয়া জেলা ৩৪০০-৩৪৯৯', Chattogram Division, already collected); only these were transcribed, by hand, from the page images (raw/postcode_booklet_pp12-13.png = PDF page 8 at its native 150 dpi, rotated; raw/postcode_booklet_pp14-15.png = PDF page 9, the same file as in the Chattogram folder). fetch.py verifies the PDF hash and re-emits the transcription. Seven offices have an illegible or misprinted code (postcode left empty); five rows that cannot be read (three on p. 13, Chhatak group; two on p. 14, Barlekha group, of which only 'জুরি' / 'দক্ষি…' and code 3252 are legible) are left out; eight name readings are uncertain or unclear (flagged). Branch post offices are not in the booklet. Licence: none stated on the source; treat as government public information, cite the source.",
+  "files": {
+    "facts.csv": "c5a240e840e17fc35e3537cf6a7d7499856854c863de6fa82637c2b751a00d64",
+    "places.csv": "f01f9e37a362a7726f4e2873043f3e567d8d7c24f2d4a13f62dafde5b9438361",
+    "raw/postcode_booklet_pp12-13.png": "3ae8ad841f7b78903177ff4829911b022b3562354c7e5ca99cba6bd8e4172355",
+    "raw/postcode_booklet_pp14-15.png": "10576b75cd5438debc8f5f984d58c0ce6f6556da961decfe40f99c93ab198166"
+  }
+}

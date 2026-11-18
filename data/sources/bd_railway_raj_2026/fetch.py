@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Fetch Bangladesh Railway station phones and district-wise station counts for Rajshahi Division (BD_RAILWAY_RAJ_2026).
 
-Usage: python3 fetch.py [--division rajshahi|rangpur] [--out DIR]   (default: Rajshahi into this folder; DIVISIONS.md)"""
+Usage: python3 fetch.py [--division rajshahi|rangpur|dhaka|chattogram|khulna|barishal|sylhet|mymensingh] [--out DIR]   (default: Rajshahi into this folder; DIVISIONS.md)"""
 # --- polite HTTP helper (copy this block into each fetch.py; stdlib + requests only) -----------------
 # Many *.gov.bd servers send only their leaf certificate and omit the intermediate CA. Browsers fetch the
 # missing intermediate via the certificate's AIA URL; we do the same explicitly: download the published
@@ -259,6 +259,47 @@ BY_DIV = {
                   "কুড়িগ্রাম": ("Kurigram", ""), "ঠাকুরগাঁও": ("Thakurgaon", ""), "নীলফামারী": ("Nilphamari", ""),
                   "সৈয়দপুর": ("Nilphamari", "Saidpur"), "দিনাজপুর": ("Dinajpur", ""), "পার্বতীপুর": ("Dinajpur", "Parbatipur"),
                   "লালমনিরহাট": ("Lalmonirhat", ""), "পঞ্চগড়": ("Panchagarh", "")}),
+    # Dhaka Division: Manikganj has no railway (no Table-4 row); Table-4 spells Kishoreganj 'Kishorganj'
+    "dhaka": dict(
+        districts=["Dhaka", "Faridpur", "Gazipur", "Gopalganj", "Kishoreganj", "Madaripur", "Munshiganj", "Narayanganj",
+                   "Narsingdi", "Rajbari", "Shariatpur", "Tangail"],
+        table4={"Dhaka": (7, "45.560"), "Faridpur": (16, "109.690"), "Gazipur": (9, "99.580"), "Gopalganj": (10, "79.150"),
+                "Kishoreganj": (12, "63.100"), "Madaripur": (1, "15.420"), "Munshiganj": (3, "27.260"), "Narayanganj": (4, "8.500"),
+                "Narsingdi": (14, "39.000"), "Rajbari": (15, "89.900"), "Shariatpur": (1, "9.260"), "Tangail": (8, "87.525")},
+        stations={"ঢাকা": ("Dhaka", ""), "তেজগাঁও": ("Dhaka", ""), "ঢাকা ক্যান্টনমেন্ট": ("Dhaka", ""),
+                  "ঢাকা বিমান বন্দর": ("Dhaka", ""), "টঙ্গী": ("Gazipur", "Gazipur Sadar"), "নরসিংদী": ("Narsingdi", ""),
+                  "ভৈরব বাজার": ("Kishoreganj", "Bhairab"), "কিশোরগঞ্জ": ("Kishoreganj", ""), "রাজবাড়ী": ("Rajbari", "")}),    # Chattogram Division: Lakshmipur, Rangamati, Khagrachhari and Bandarban have no railway (no Table-4 row); Table-4 spells
+    # Cox's Bazar 'Coxbazar'; the phone page spells Brahmanbaria 'ব্রাহ্মণবাড়ীয়া'
+    "chattogram": dict(
+        districts=["Brahmanbaria", "Chandpur", "Chattogram", "Cox's Bazar", "Cumilla", "Feni", "Noakhali"],
+        table4={"Brahmanbaria": (16, "66.600"), "Chandpur": (10, "52.050"), "Chattogram": (49, "176.830"),
+                "Cox's Bazar": (6, "46.490"), "Cumilla": (18, "101.230"), "Feni": (13, "96.560"), "Noakhali": (7, "47.310")},
+        stations={"ব্রাহ্মণবাড়ীয়া": ("Brahmanbaria", ""), "আশুগঞ্জ": ("Brahmanbaria", "Ashuganj"),
+                  "আখাউড়া": ("Brahmanbaria", "Akhaura"), "কুমিল্লা": ("Cumilla", ""), "চাঁদপুর": ("Chandpur", ""),
+                  "ফেনী": ("Feni", ""), "চট্টগ্রাম": ("Chattogram", "")}),
+    # Khulna Division: Satkhira, Meherpur and Magura have no railway (no Table-4 row); Table-4 spells Jhenaidah 'Jhenaidaha'
+    "khulna": dict(
+        districts=["Bagerhat", "Chuadanga", "Jashore", "Jhenaidah", "Khulna", "Kushtia", "Narail"],
+        table4={"Bagerhat": (6, "38.007"), "Chuadanga": (10, "56.600"), "Jashore": (12, "102.100"), "Jhenaidah": (5, "36.000"),
+                "Khulna": (8, "51.050"), "Kushtia": (10, "79.520"), "Narail": (2, "29.500")},
+        stations={nfc(k): v for k, v in {"কুষ্টিয়া": ("Kushtia", ""), "কুষ্টিয়া কোর্ট": ("Kushtia", ""), "যশোর": ("Jashore", ""),
+                                         "বেনাপোল": ("Jashore", "Sharsha"), "খুলনা": ("Khulna", "")}.items()}),
+    # Barishal Division: no railway. None of its six districts has a Table-4 row and no station of the division is on the
+    # phone list, so the run writes empty places/facts (with headers) and keeps the two raw texts as evidence.
+    "barishal": dict(districts=[], table4={}, stations={}),
+    # Sylhet Division: all four districts have a Table-4 row (Sunamganj: the Chhatak branch)
+    "sylhet": dict(
+        districts=["Habiganj", "Moulvibazar", "Sunamganj", "Sylhet"],
+        table4={"Habiganj": (14, "89.100"), "Moulvibazar": (11, "116.700"), "Sunamganj": (2, "13.300"), "Sylhet": (6, "49.400")},
+        stations={nfc(k): v for k, v in {"শায়েস্তাগঞ্জ": ("Habiganj", "Shayestaganj"), "শ্রীমঙ্গল": ("Moulvibazar", "Sreemangal"),
+                                         "কুলাউড়া": ("Moulvibazar", "Kulaura"), "সিলেট": ("Sylhet", ""),
+                                         "হবিগঞ্জ": ("Habiganj", "")}.items()}),
+    # Mymensingh Division: Sherpur has no railway (no Table-4 row); the phone page lists Netrokona, Mymensingh and Jamalpur
+    "mymensingh": dict(
+        districts=["Jamalpur", "Mymensingh", "Netrokona"],
+        table4={"Jamalpur": (21, "107.000"), "Mymensingh": (20, "146.000"), "Netrokona": (17, "66.000")},
+        stations={nfc(k): v for k, v in {"ময়মনসিংহ": ("Mymensingh", ""), "জামালপুর": ("Jamalpur", ""),
+                                         "নেত্রকোনা": ("Netrokona", "")}.items()}),
 }
 
 
@@ -314,7 +355,7 @@ def main():
         if txt:
             parsed = {}
             for m in re.finditer(r"\d+\.\s+([A-Za-z]+)\s+(\d+)\s+([\d.]+)", txt):
-                name = {"Coxbazar": "Cox's Bazar"}.get(m.group(1), m.group(1))
+                name = {"Coxbazar": "Cox's Bazar", "Kishorganj": "Kishoreganj", "Jhenaidaha": "Jhenaidah"}.get(m.group(1), m.group(1))
                 parsed[name] = (int(m.group(2)), m.group(3))
             if all(d in parsed for d in DISTRICTS):
                 table, basis_note = {d: parsed[d] for d in DISTRICTS}, "parsed from PDF page text"
@@ -330,12 +371,10 @@ def main():
                                     "Station count includes block huts, halts and goods booking points."))
     tot_st = sum(table[d][0] for d in DISTRICTS)
     tot_km = round(sum(float(table[d][1]) for d in DISTRICTS), 3)
-    facts.append(dict(entity_level="division", entity_name_en=head, fact="railway_stations", value=tot_st, unit="stations",
-                      basis="derived (sum of district rows)", year=2024, source_key=KEY, source_url=pdf_url,
-                      notes=f"Sum of the 8 {head}-division districts in Table-4 (FY 2023-2024)"))
-    facts.append(dict(entity_level="division", entity_name_en=head, fact="railway_route_km", value=tot_km, unit="km",
-                      basis="derived (sum of district rows)", year=2024, source_key=KEY, source_url=pdf_url,
-                      notes=f"Sum of the 8 {head}-division districts in Table-4 (FY 2023-2024)"))
+    for fact, val, unit in ((("railway_stations", tot_st, "stations"), ("railway_route_km", tot_km, "km")) if DISTRICTS else ()):
+        facts.append(dict(entity_level="division", entity_name_en=head, fact=fact, value=val, unit=unit,
+                          basis="derived (sum of district rows)", year=2024, source_key=KEY, source_url=pdf_url,
+                          notes=f"Sum of the {len(DISTRICTS)} {head}-division districts in Table-4 (FY 2023-2024)"))
     write_csv("places.csv", PLACE_COLS, places)
     write_csv("facts.csv", FACT_COLS, facts)
     files = ["places.csv", "facts.csv", "raw/railway_important_station_phones.txt"]

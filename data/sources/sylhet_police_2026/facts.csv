@@ -1,0 +1,2 @@
+entity_level,entity_name_en,district_en,upazila_en,code,fact,value,unit,basis,year,source_key,source_url,notes
+district,Sylhet,Sylhet,,,police_stations,17,thanas,reported,2026,SYLHET_POLICE_2026,https://police.sylhet.gov.bd/pages/static-pages/696cafe6c4774958d7b9fb06,SP portal 'একনজরে': 'থানা : ১৭ টি' (district profile next to 'উপজেলা : ১৩ টি'). The page does not say whether SMP's metropolitan thanas are included.

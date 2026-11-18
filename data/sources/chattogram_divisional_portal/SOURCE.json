@@ -1,0 +1,29 @@
+{
+  "key": "CTGDIV_PORTAL_2026",
+  "name": "Chattogram Divisional Commissioner portal (chittagongdiv.gov.bd)",
+  "organization": "Office of the Divisional Commissioner, Chattogram",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "division": "chattogram",
+  "kind": "divisional_portal",
+  "urls": [
+    "https://chittagongdiv.gov.bd/",
+    "https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94c",
+    "https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94a",
+    "https://bangladesh.gov.bd/views/union-list"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Office of the Divisional Commissioner, Chattogram (chittagongdiv.gov.bd), Bangladesh National Portal",
+  "files": {
+    "areas.csv": "05c45404d9153eea9ae4e8258b82020640c945b4edfa728bdfd8336406751aaa",
+    "facts.csv": "39099ab7f5f952726b2e689de008f1a74d53a3c4d484cdfd9c5ebb35c28035bf",
+    "raw/districts.txt": "daa643f0da8cda33ebef1c1033636f3b0b30d6824c42fbec4be46a57eb8bc1fb",
+    "raw/glance.txt": "fa4f235ad438687330c34f9573abaf6c65667d19655ce2c602a271c5a28e780f",
+    "raw/national_portal_list.csv": "4d6845cbe83ec479de271e1e4ddf4fa88f42e6bb5635f68f1b44f43486165701",
+    "raw/pages.csv": "8094d95306cf17a5844c7be9da93a918a87a5c66e3f48efc46b22a6216204918"
+  },
+  "notes": "Collected by the generic division mode of the a2i portal collectors (pages found through the portals' menus, names and figures parsed from the pages). No licence stated; only facts (names, counts, figures) are extracted. English district/upazila names are the project's keys, not printed."
+}

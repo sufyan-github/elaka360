@@ -1,0 +1,37 @@
+{
+  "key": "MYMENSINGH_CITY_CORPORATION",
+  "division": "mymensingh",
+  "kind": "city_corporation",
+  "city": 50012,
+  "name": "Mymensingh City Corporation official site (mcc.gov.bd)",
+  "organization": "Mymensingh City Corporation",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://mcc.gov.bd/",
+    "https://mcc.gov.bd/pages/static-pages/6922defd933eb65569e1efb9",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-mcc/2024/12/43ff3cda7d0a4cbab3207cdf48f3dd97.pdf",
+    "https://mcc.gov.bd/pages/static-pages/6922dd18933eb65569e137e2",
+    "https://mcc.gov.bd/pages/static-pages/6922de5a933eb65569e1a101",
+    "https://mcc.gov.bd/pages/static-pages/6922dde3933eb65569e16e7b",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-mcc/2026/3/f9e9f85c-3f97-4699-a023-0dda3d30a4df.pdf",
+    "https://mcc.gov.bd/pages/static-pages/6922dcac933eb65569e11830",
+    "https://mymensingh.gov.bd/pages/static-pages/6973bc81c4774958d7bbf28c"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Mymensingh City Corporation (mcc.gov.bd); Mymensingh DC portal (mymensingh.gov.bd)",
+  "notes": "MCC's এক নজরে and councillor list are scanned PDFs without a text layer: established 2018-10-14, 33 wards, 3 zones and the 2022 census population 576927 (male 293582, female 283345) were read from the scan (not machine-checked) and are hard-coded in fetch.py with the attachment URL; the run warns if the attachment changes. Area 91.315 km2 from the text of লোকেশন ও আয়তন. The DC portal gives the MCC population as 576722 (2022 census), a different figure. Ward numbers 1-33 (no ward names are published). Officials' names and mobiles are not copied. www.mcc.gov.bd (linked from the divisional office menu) serves a self-signed certificate and was not used.",
+  "files": {
+    "areas.csv": "bfa99feba145933aad28140f46b3e33db241e7468a0106f812766a0e0fa1adcf",
+    "facts.csv": "6bc4dc3612f1611ffb6468a88c38b54eeffb1db19e629b5c96674bf0953d8b4e",
+    "raw/contact.txt": "933945e9b264b712916871ba6bc2105c2f8d505866bfc36968d12d84c7729638",
+    "raw/councillor_list_page.txt": "78586c42fc64fd7b7f10cd527a1fc411a971c8ca417739ca6b140481f3e293a7",
+    "raw/dc_portal_population.txt": "d3117787040d987b6b4a3e3afffffb5240e547ed3ef773a13e6fba77ac5f599f",
+    "raw/ek_nojore_scanned_pdf.txt": "17953ca3f1ce67575097a41116415ef677a0139df090e417d3fa7ffd4ce44c2f",
+    "raw/history_pourashava.txt": "2168fdd48ea0ee45c62ce97e5499487ba4dacdba846a6387ad4b0f0bd17b9fba",
+    "raw/location_area.txt": "972870fa765f22ab61b1749ed7ac7a87dfa9f7e99d05531420aac40ab30c330d"
+  }
+}

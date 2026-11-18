@@ -1,0 +1,26 @@
+{
+  "key": "FSCD_STATIONS_KHL_2026",
+  "division": "khulna",
+  "kind": "fscd",
+  "name": "Fire Service & Civil Defence — Khulna Division station & office numbers",
+  "organization": "Fire Service and Civil Defence Directorate (FSCD), Bangladesh",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-fireservice/2026/7/e81a6c27-0ca4-44bd-8e9d-38a9e9baec9a.pdf",
+    "https://fireservice.gov.bd/pages/static-pages/6922e013933eb65569e25586",
+    "https://fireservice.gov.bd/pages/static-pages/6922e0b9933eb65569e28555"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": "2026-08-11",
+  "license": null,
+  "license_url": null,
+  "attribution": "Fire Service and Civil Defence Directorate, Bangladesh (fireservice.gov.bd)",
+  "notes": "No licence stated on fireservice.gov.bd. publication_date = creation date in the PDF metadata. Station names were transcribed from the rendered PDF because its text layer has broken Bangla glyph mapping; phone numbers come from the text layer. No addresses or coordinates are published.",
+  "files": {
+    "places.csv": "8b786b824bb97f8dbce10d8547c9ee1150de3a802c477d7a3ecbdde67c79f57e",
+    "facts.csv": "50c6dc2c462d8e8f8193bc8d3872459be73f97ff9698db372eb202d9fc76374e",
+    "raw/fscd_khulna_division_numbers.pdf": "096c4ae77fd1018aa9811324be93347d56176b8a91a7623293f0ceb684d58e8d"
+  }
+}

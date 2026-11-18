@@ -1,0 +1,23 @@
+{
+  "key": "DGME_MEDICAL_COLLEGES_BAR_2026",
+  "division": "barishal",
+  "kind": "dgme",
+  "name": "DGME medical and dental college lists — Barishal Division",
+  "organization": "Directorate General of Medical Education (DGME), Ministry of Health and Family Welfare",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3",
+    "https://dgme.gov.bd/pages/static-pages/6922dfb1933eb65569e237f5",
+    "https://dgme.gov.bd/pages/static-pages/6922dcbc933eb65569e11be5"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": "2025-12-18",
+  "license": null,
+  "license_url": null,
+  "attribution": "Source: Directorate General of Medical Education (dgme.gov.bd)",
+  "notes": "Same DGME HTML tables as the Rajshahi, Rangpur, Dhaka, Chattogram and Khulna runs: 'সরকারি/বেসরকারি মেডিকেল কলেজ' (college code, name, year established, MBBS seats; page updated 18 Dec 2025) and 'সরকারি/বেসরকারি ডেন্টাল কলেজ/ইউনিট' (updated 20 May 2024). Rows kept when the name's district suffix (or a district name in it) is in Barishal Division. The Sher-e-Bangla Medical College dental unit (listed without a district suffix) is attached to its parent college by exact name. English names/websites for government colleges come from the 'সরকারী মেডিকেল কলেজ (সকল)' page, matched by district where the district has one government MBBS college (Barishal: Sher-E-Bangla Medical College; Patuakhali: Patuakhali Medical College). No addresses, phones or coordinates. Licence not stated.",
+  "files": {
+    "places.csv": "6de47a4174fa46c0713aeb369aecb5f038e8ae6ac5157c309383658621f6a870"
+  }
+}
