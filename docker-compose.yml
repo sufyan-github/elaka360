@@ -19,6 +19,13 @@ services:
     ports: ["8108:8108"]
     volumes: [tsdata:/data]
 
+  # Edge database for the Cloudflare edge API (apps/edge-api): Turso's open-source libSQL server, same protocol as
+  # Turso. Load it with `pnpm edge:sync` after `pnpm edge:export`; `pnpm --filter @elaka360/edge-api dev` reads it.
+  libsql:
+    image: ghcr.io/tursodatabase/libsql-server:v0.24.33
+    ports: ["127.0.0.1:8080:8080"]
+    volumes: [libsqldata:/var/lib/sqld]
+
   # Jobs/cache (Phase 2).
 
   redis:
@@ -29,3 +36,4 @@ services:
 volumes:
   pgdata:
   tsdata:
+  libsqldata:

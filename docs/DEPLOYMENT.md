@@ -4,54 +4,63 @@
 areas, places, search, the live map and emergency numbers. Sign-in, contributions and the admin need an SMS gateway and
 the full API, so they are not deployed yet (see "Later" below).
 
-## Cloudflare (free plan)
+## Cloudflare + Turso (free plans)
 
 | Part | Where | Address |
 |---|---|---|
 | Website (`apps/web`) | Worker `elaka360-web` (OpenNext); page cache in R2 `elaka360-web-cache`, Durable Object revalidation queue | https://elaka360.abusufyan.online |
-| Public API (`apps/edge-api`) | Worker `elaka360-api` on D1 `elaka360` (APAC); reached by the website through a service binding | https://elaka360-api.abusufyan.online |
-| Map boundaries + pins, search index | static files in the website (`/data/map`, `/data/search`) | — |
+| Public API (`apps/edge-api`) | Worker `elaka360-api`, reading a **Turso** database (libSQL/SQLite, region Mumbai `aws-ap-south-1`); reached by the website through a service binding | https://elaka360-api.abusufyan.online |
+| Map boundaries and pin tiles | static files in the website (`/data/map`) | — |
 
-### How it fits the free plan
+The edge database moved from D1 to Turso in Nov 2026: with OpenStreetMap, Overture, Wikidata and organisations' branch
+lists the data is about 2.7 GB (measured as SQLite) — one Turso database on the free plan (5 GB), against D1's
+500 MB per database and 100,000 rows written per day.
+
+### How it fits the free plans
 
 - **The API is a snapshot of the reference API.**
-  - The NestJS API on PostgreSQL stays the source of truth. `apps/api/src/cli/export-edge.ts` runs its own services against a database loaded with the seed and writes every public response: area pages, place pages, ordered lists and stats.
-  - The Worker only looks these up, so each request uses little CPU (the free limit is 10 ms) and few D1 rows (5 million reads a day).
-  - In CI, `scripts/edge-parity.py` compares 39 endpoints of the Worker with the NestJS API and fails on any difference.
-- **D1 writes are limited to 100,000 rows a day, shared by every database in the account.**
-  - `scripts/d1-sync.mjs` writes only rows whose content hash changed, and it stops at `--budget`; running it again continues.
-  - A full load is about 74,000 rows, so the first load was split over two days. It loads curated places first, then places on the map, then the rest.
-- **Search runs in the browser** (`apps/web/lib/browser-search.ts`) over a static index of about 560 KB compressed, loaded on the first search. A server-side substring search would use up D1's read allowance.
-- **The map loads static files.** It refreshes them every 5 minutes, which picks up new releases.
+  - The NestJS API on PostgreSQL stays the source of truth. `apps/api/src/cli/export-edge.ts` runs its own services against a database loaded with the seed (and the Overture layer) and writes every public response: area pages, place pages, ordered lists, stats and the search tables.
+  - The Worker only looks these up, so each request uses little CPU (the Workers free limit is 10 ms) and few rows (Turso free: 500 million reads a month).
+  - In CI, `scripts/edge-parity.py` compares 39 endpoints of the Worker with the NestJS API and fails on any difference; search, which is ranked by a different engine, gets its own checks.
+- **Turso writes: 10 million rows a month.** `scripts/turso-sync.mjs` writes only rows whose content hash changed and deletes rows that disappeared; `--budget` stops a run and the next run continues. The first full load is about 1.6 million rows; a release that changes nothing writes nothing.
+- **Search runs in the edge database** (SQLite FTS5 tables `search_areas`, `search_places`): word prefixes in Bangla and English plus the Banglish key; the rowid encodes the result order, so a query reads only the rows it returns. The website calls it through `/api/search` and `/api/suggest`.
+- **The map loads static pin tiles** (0.05°, `/data/map/tiles/<x>_<y>.json`, listed in `tiles.json`) for the visible area from zoom 12, so no file comes near the 25 MiB asset limit (the densest tile, central Dhaka, is about 8.5 MB). It refreshes them every 5 minutes.
 - **Pages are cached in R2.** Home, area and place pages are refreshed every 5 minutes. `/c/<category>` renders on every visit and is the page most at risk of Cloudflare's "Error 1102" (CPU limit). Watch the Worker's metrics.
 
 ### Release (GitHub Actions, `.github/workflows/deploy.yml`)
 
 After CI passes on `main`, or when started by hand:
-1. A throwaway PostGIS database in the job is loaded with the seed, and `export-edge` runs.
-2. The changed D1 rows are synced. Exit code 10 means the write budget was reached: the run warns, and the next run finishes the load.
-3. The API Worker is deployed. The job waits until `/health` reports the commit.
+1. The Overture layer is rebuilt from its pinned release (its place files are not committed), a throwaway PostGIS database in the job is loaded with the seed and the layer, and `export-edge` runs.
+2. `turso-sync` writes the changed rows to Turso (budget 9 million per run).
+3. The API Worker is deployed with the `TURSO_DATABASE_URL` / `TURSO_AUTH_TOKEN` secrets. The job waits until `/health` reports the commit.
 4. The website is built against the live API and deployed (the R2 page cache is filled), then smoke-tested.
 
-### One-time setup (already done on 12 Nov 2026, except the GitHub secrets)
+### One-time setup
 
-- D1 `elaka360` (id in `apps/edge-api/wrangler.jsonc`), R2 bucket `elaka360-web-cache`, both Workers with custom domains, and the `EDGE_SHARED_SECRET` Worker secret on both Workers.
+- **Turso** (you, once): create a free account at turso.tech, then a database in the Mumbai region and a token, e.g. with the Turso CLI:
+  `turso db create elaka360 --location aws-ap-south-1`, `turso db show elaka360 --url` (the `libsql://…` URL) and
+  `turso db tokens create elaka360` (the token). Keep the token secret.
+- **Cloudflare** (done on 12 Nov 2026): R2 bucket `elaka360-web-cache`, both Workers with custom domains, and the `EDGE_SHARED_SECRET` Worker secret on both Workers. The old D1 database `elaka360` is no longer used and can be deleted.
 - **GitHub secrets, needed for automatic releases:**
+  - `TURSO_DATABASE_URL` and `TURSO_AUTH_TOKEN` (above).
   - `CLOUDFLARE_ACCOUNT_ID` = `d89998f5da60c9ff528edc0f2a7fca59`.
   - `CLOUDFLARE_API_TOKEN`: a custom token (My Profile → API Tokens) with these permissions:
-    - Account: **Workers Scripts – Edit**, **D1 – Edit**, **Workers R2 Storage – Edit**, **Account Settings – Read**.
+    - Account: **Workers Scripts – Edit**, **Workers R2 Storage – Edit**, **Account Settings – Read**.
     - Zone `abusufyan.online`: **Workers Routes – Edit**, **Zone – Read**, **DNS – Edit**.
   - Optional `EDGE_SHARED_SECRET`: the Workers already have one. If you set this, it replaces it on both Workers.
 - **Manual release from a signed-in machine** (`npx wrangler login`):
+  - Optional, to include Overture: `python3 data/sources/overture_places_raj_2026/fetch.py --all --release 2026-10-21.0 && pnpm seed:build`.
   - Run `pnpm db:reset`, then `pnpm --filter @elaka360/api build && pnpm edge:export`.
-  - Run `node scripts/d1-sync.mjs --remote`.
-  - In `apps/edge-api`, run `npx wrangler deploy`.
+  - Run `TURSO_DATABASE_URL=libsql://… TURSO_AUTH_TOKEN=… pnpm edge:sync`.
+  - In `apps/edge-api`: `npx wrangler secret put TURSO_DATABASE_URL`, `npx wrangler secret put TURSO_AUTH_TOKEN`, then `npx wrangler deploy`.
   - In `apps/web`, run `API_URL=https://elaka360-api.abusufyan.online NEXT_PUBLIC_SITE_URL=https://elaka360.abusufyan.online pnpm cf:build && pnpm cf:deploy`.
+- **Local edge stack:** `pnpm edge:db` (libSQL server on port 8080), `pnpm edge:export`, `pnpm edge:sync`, then
+  `pnpm --filter @elaka360/edge-api dev` (port 8789).
 
 ### Later: the full API (accounts, contributions, admin)
 
 These need the NestJS API with PostgreSQL and an SMS gateway. `apps/api/Dockerfile` and `render.yaml` prepare a Render deployment (about $13/month).
-When that exists, point the website's sign-in and account routes at it, or move those parts to D1 as well.
+When that exists, point the website's sign-in and account routes at it.
 
 ## Components
 

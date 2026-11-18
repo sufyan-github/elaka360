@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Compare the edge API Worker (D1 snapshot) with the NestJS API it was exported from.
+"""Compare the edge API Worker (Turso/libSQL snapshot) with the NestJS API it was exported from.
 
 Usage: python3 scripts/edge-parity.py [nest_url] [edge_url]   (defaults: localhost:4000, 127.0.0.1:8789)
 Exit 1 on any difference. Order is ignored where the API does not define one (map pins, boundary levels).
+Search is ranked by different engines (Typesense/Postgres vs SQLite FTS), so it gets sanity checks instead.
 """
-import json, sys, urllib.error, urllib.request
+import json, sys, urllib.error, urllib.parse, urllib.request
 
 NEST = sys.argv[1] if len(sys.argv) > 1 else 'http://localhost:4000'
 EDGE = sys.argv[2] if len(sys.argv) > 2 else 'http://127.0.0.1:8789'
@@ -28,7 +29,7 @@ IGNORE = {'request_id', 'instance', 'version', 'db', 'search', 'detail'}
 
 def get(base, path):
     try:
-        with urllib.request.urlopen(base + path, timeout=60) as r:
+        with urllib.request.urlopen(base + urllib.parse.quote(path, safe='/?=&%,.:'), timeout=60) as r:
             return r.status, json.loads(r.read())
     except urllib.error.HTTPError as e:
         return e.code, json.loads(e.read() or b'null')
@@ -54,4 +55,21 @@ for p in PATHS:
         i = next((i for i in range(min(len(a), len(b))) if a[i] != b[i]), min(len(a), len(b)))
         print(f'DIFF {p} [{sa} vs {sb}]\n  nest: …{a[max(0, i - 60):i + 100]}\n  edge: …{b[max(0, i - 60):i + 100]}')
 print(f'edge-parity: {len(PATHS) - bad}/{len(PATHS)} endpoints identical')
+
+# search on the edge: same response shape as the API, sensible results in Bangla, English and Banglish
+SEARCH = [
+    ('/v1/search?q=rajshahi', lambda j: j['areas'] and j['areas'][0]['path'] == 'rajshahi' and j['places']),
+    ('/v1/search?q=রাজশাহী', lambda j: j['areas'] and j['areas'][0]['path'] == 'rajshahi'),
+    ('/v1/search?q=rajsahi%20college&type=place', lambda j: not j['areas'] and any(p['slug'] == 'rajshahi-college' for p in j['places'])),
+    ('/v1/search?q=hospital&area=rajshahi/rajshahi&type=place', lambda j: j['places'] and not j['areas']),
+    ('/v1/search/suggest?q=রাজ', lambda j: j['items'] and j['items'][0]['kind'] == 'area'),
+    ('/v1/search?q=x', lambda j: False),     # too short: 400 below
+]
+for path, ok in SEARCH:
+    status, j = get(EDGE, path)
+    good = status == 400 if path.endswith('q=x') else status == 200 and bool(ok(j))
+    if not good:
+        bad += 1
+        print(f'SEARCH FAIL {path} [{status}] {json.dumps(j, ensure_ascii=False)[:300]}')
+print(f'edge-search: {len(SEARCH)} checks')
 sys.exit(1 if bad else 0)

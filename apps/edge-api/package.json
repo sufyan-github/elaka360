@@ -2,9 +2,9 @@
   "name": "@elaka360/edge-api",
   "version": "0.1.0",
   "private": true,
-  "description": "Public read API on Cloudflare Workers + D1 (snapshots of the NestJS API's responses)",
+  "description": "Public read API on Cloudflare Workers + Turso/libSQL (snapshots of the NestJS API's responses)",
   "scripts": {
-    "dev": "wrangler dev --port 8789",
+    "dev": "wrangler dev --port 8789 --var TURSO_DATABASE_URL:http://127.0.0.1:8080",
     "deploy": "wrangler deploy",
     "typecheck": "tsc --noEmit",
     "lint": "eslint src"
@@ -12,5 +12,9 @@
   "devDependencies": {
     "typescript": "^5.8.0",
     "wrangler": "4.155.0"
+  },
+  "dependencies": {
+    "@elaka360/shared": "workspace:*",
+    "@libsql/client": "0.18.0"
   }
 }

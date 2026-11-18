@@ -7,7 +7,7 @@ import { useRouter } from '@/i18n/navigation';
 import { localePath } from '@/lib/links';
 import { localName, otherName } from '@/lib/locale';
 
-import { suggest, type Suggestion } from '@/lib/browser-search';
+import { suggest, type Suggestion } from '@/lib/search-client';
 
 /** Search box with keyboard-accessible suggestions (combobox pattern). Stale requests are aborted. */
 export function SearchBox({ defaultValue = '', autoFocus = false }: { defaultValue?: string; autoFocus?: boolean }) {
@@ -25,10 +25,10 @@ export function SearchBox({ defaultValue = '', autoFocus = false }: { defaultVal
     const term = q.trim();
     if (term.length < 2) { setItems([]); return; }
     const t = setTimeout(() => {
-      // suggestions come from the static search index in the browser (lib/browser-search.ts)
+      // suggestions come from the API (/api/suggest → /v1/search/suggest)
       ctrl.current?.abort();
       const mine = (ctrl.current = new AbortController());
-      suggest(term)
+      suggest(term, mine.signal)
         .then((list) => { if (!mine.signal.aborted) { setItems(list.slice(0, 8)); setActive(-1); } })
         .catch(() => undefined);
     }, 180);

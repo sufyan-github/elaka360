@@ -18,10 +18,12 @@
     "e2e": "playwright test",
     "test:integration": "node --test scripts/integration-api.test.mjs",
     "edge:export": "node apps/api/dist/cli/export-edge.js",
-    "edge:sync:local": "node scripts/d1-sync.mjs --local"
+    "edge:sync": "node scripts/turso-sync.mjs",
+    "edge:db": "docker compose up -d libsql"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.5",
+    "@libsql/client": "0.18.0",
     "@playwright/test": "^1.65.0",
     "eslint": "^9.39.5",
     "globals": "^16.5.0",

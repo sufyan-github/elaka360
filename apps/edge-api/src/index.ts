@@ -1,15 +1,20 @@
 /**
- * Elaka360 public read API on Cloudflare Workers + D1.
+ * Elaka360 public read API on Cloudflare Workers, reading a Turso (libSQL / SQLite) database.
  *
- * Responses are snapshots of the NestJS API (apps/api), written to D1 by apps/api/src/cli/export-edge.ts and
- * scripts/d1-sync.mjs, so this Worker mostly looks rows up: little CPU per request (free plan: 10 ms) and few
- * D1 rows read (free plan: 5 million a day). Search runs in the browser (apps/web/lib/browser-search.ts).
+ * Responses are snapshots of the NestJS API (apps/api), written by apps/api/src/cli/export-edge.ts and loaded by
+ * scripts/turso-sync.mjs, so this Worker mostly looks rows up: little CPU per request (free plan: 10 ms) and few rows
+ * read (Turso free plan: 500 million a month). Search uses SQLite full-text tables (search_areas, search_places).
  * Sign-in, contributions and the admin API are not served here yet: they answer 503.
+ * The same code runs on a D1 binding (env.DB) when one is configured instead of TURSO_DATABASE_URL.
  */
+import { createClient, type Client, type InValue } from '@libsql/client/web';
+import { latinKey } from '@elaka360/shared';
 import { covers, distanceM, type Geometry } from './geo';
 
 export interface Env {
-  DB: D1Database;
+  DB?: D1Database;
+  TURSO_DATABASE_URL?: string;
+  TURSO_AUTH_TOKEN?: string;
   APP_VERSION?: string;
   EDGE_SHARED_SECRET?: string;
 }
@@ -23,6 +28,40 @@ interface D1PreparedStatement {
   run(): Promise<unknown>;
 }
 export interface D1Database { prepare(sql: string): D1PreparedStatement }
+
+/* ---------------------------------------------------------------- database: Turso (libSQL over HTTP) or D1 */
+
+let turso: { url: string; client: Client } | null = null;
+
+/** The D1-style interface over a libSQL client: rows come back as plain objects, whole numbers bind as integers. */
+function libsqlDatabase(client: Client): D1Database {
+  const toArgs = (v: unknown[]): InValue[] => v.map((x) => (typeof x === 'number' && Number.isInteger(x) ? BigInt(x) : x) as InValue);
+  return {
+    prepare(sql: string) {
+      let args: InValue[] = [];
+      const run = () => client.execute({ sql, args });
+      const rows = async <T>() => {
+        const r = await run();
+        return r.rows.map((row) => Object.fromEntries(r.columns.map((c, i) => [c, row[i]])) as T);
+      };
+      const stmt: D1PreparedStatement = {
+        bind(...values: unknown[]) { args = toArgs(values); return stmt; },
+        async first<T>() { return (await rows<T>())[0] ?? null; },
+        async all<T>() { return { results: await rows<T>() }; },
+        run,
+      };
+      return stmt;
+    },
+  };
+}
+
+function dbOf(env: Env): D1Database {
+  if (env.DB) return env.DB;
+  const url = env.TURSO_DATABASE_URL;
+  if (!url) throw new HttpError(503, 'Service Unavailable', 'database not configured');
+  if (turso?.url !== url) turso = { url, client: createClient({ url, authToken: env.TURSO_AUTH_TOKEN, intMode: 'number' }) };
+  return libsqlDatabase(turso.client);
+}
 
 const LEVEL_ORDER = ['country', 'division', 'district', 'upazila', 'city_corporation', 'pourashava', 'union', 'ward', 'mouza', 'village', 'thana'];
 const LEVELS = new Set(['division', 'district', 'upazila', 'city_corporation', 'pourashava', 'union', 'ward']);
@@ -166,15 +205,18 @@ async function nearby(db: D1Database, lat: number, lon: number, radius: number, 
 
 async function geojson(db: D1Database, areaId: number | undefined, cat: string | undefined, bbox: number[] | null) {
   const [w, s, e, n] = bbox ?? [-180, -90, 180, 90];
-  const area = areaId
-    ? ' AND (division_id = ?5 OR district_id = ?5 OR upazila_id = ?5 OR union_id = ?5 OR city_corporation_id = ?5)' : '';
-  const stmt = db.prepare(`SELECT lat, lon, category_key, subcategory_key, summary FROM place_points
-    WHERE lat BETWEEN ?1 AND ?2 AND lon BETWEEN ?3 AND ?4${area} LIMIT 5000`);
-  const { results } = await (areaId ? stmt.bind(s, n, w, e, areaId) : stmt.bind(s, n, w, e))
+  // filters before the limit (?5 = 0: any area, ?6 = '': any category), ordered by id: the same 5,000 as the NestJS
+  // API when more match
+  const { results } = await db.prepare(`SELECT lat, lon, category_key, subcategory_key, summary FROM place_points
+    WHERE lat BETWEEN ?1 AND ?2 AND lon BETWEEN ?3 AND ?4
+      AND (?5 = 0 OR division_id = ?5 OR district_id = ?5 OR upazila_id = ?5 OR union_id = ?5 OR city_corporation_id = ?5)
+      AND (?6 = '' OR category_key = ?6 OR subcategory_key = ?6)
+    ORDER BY id LIMIT 5000`)
+    .bind(s, n, w, e, areaId ?? 0, cat ?? '')
     .all<{ lat: number; lon: number; category_key: string; subcategory_key: string | null; summary: string }>();
   return {
     type: 'FeatureCollection',
-    features: results.filter((r) => !cat || r.category_key === cat || r.subcategory_key === cat).map((r) => {
+    features: results.map((r) => {
       const { lat: _la, lon: _lo, ...props } = parse<Record<string, unknown>>(r.summary);
       return { type: 'Feature', geometry: { type: 'Point', coordinates: [r.lon, r.lat] }, properties: props };
     }),
@@ -217,13 +259,74 @@ async function contact(req: Request, env: Env) {
   const ip = visitorIp(req, env);
   const ipHash = ip ? await sha256(`${ip}|${env.EDGE_SHARED_SECRET ?? 'elaka360'}`) : null;
   if (ipHash) {
-    const recent = await env.DB.prepare(
+    const recent = await dbOf(env).prepare(
       "SELECT count(*) AS n FROM contact_messages WHERE ip_hash = ? AND created_at > strftime('%Y-%m-%dT%H:%M:%SZ', 'now', '-1 hour')")
       .bind(ipHash).first<{ n: number }>();
     if ((recent?.n ?? 0) >= 5) throw new HttpError(429, 'Too Many Requests', 'too many messages; try again later');
   }
-  await env.DB.prepare('INSERT INTO contact_messages(email, subject, message, ip_hash) VALUES (?, ?, ?, ?)').bind(email, subject, message, ipHash).run();
+  await dbOf(env).prepare('INSERT INTO contact_messages(email, subject, message, ip_hash) VALUES (?, ?, ?, ?)').bind(email, subject, message, ipHash).run();
   return { received: true };
+}
+
+/* ---------------------------------------------------------------- search (SQLite FTS5) */
+
+const SEARCH_LEVELS = new Set(['division', 'district', 'upazila', 'city_corporation', 'pourashava', 'union']);
+
+/** Same clean-up as the API's searchText(): NFC, no LIKE wildcards, single spaces; length checked by the caller. */
+function searchText(raw: string | null, o: { min?: number; max?: number } = {}): string {
+  const q = (raw ?? '').normalize('NFC').replace(/[%_\\]/g, ' ').replace(/\s+/g, ' ').trim();
+  if (q.length < (o.min ?? 2)) throw bad(`q must be at least ${o.min ?? 2} characters`);
+  return q.slice(0, o.max ?? 80);
+}
+const ftsString = (t: string) => `"${t.replace(/"/g, '""')}"`;
+/** FTS5 query: every term must match a word prefix (Bangla or English) or, for Latin terms, the Banglish key. */
+function ftsQuery(q: string): string | null {
+  const terms = [...new Set(q.toLowerCase().split(' ').filter(Boolean))].slice(0, 5);
+  const parts = terms.map((t) => {
+    const k = /[a-z]/.test(t) ? latinKey(t) : '';
+    return k ? `(${ftsString(t)}* OR name_key:${ftsString(k)}*)` : `${ftsString(t)}*`;
+  });
+  return parts.length ? parts.join(' AND ') : null;
+}
+
+async function searchAreas(db: D1Database, q: string, o: { level?: string; areaPath?: string; limit: number; exactFirst: boolean }) {
+  const match = ftsQuery(q);
+  if (!match) return [];
+  // rowid order = level rank, so the first rows are the broadest areas; fetch a few extra to rank exact names first
+  const { results } = await db.prepare(
+    `SELECT area_id, name_bn, name_en, name_key FROM search_areas WHERE search_areas MATCH ?${o.level ? ' AND level = ?' : ''} LIMIT ?`)
+    .bind(...[match, ...(o.level ? [o.level] : []), o.areaPath ? 400 : o.limit * 3]).all<{ area_id: number; name_bn: string; name_en: string; name_key: string }>();
+  if (!results.length) return [];
+  const ql = q.toLowerCase();
+  const key = /[a-z]/i.test(q) ? latinKey(q) : '';
+  const rank = new Map(results.map((r, i) => [r.area_id, (o.exactFirst && (r.name_bn === q || r.name_en.toLowerCase() === ql || (key !== '' && r.name_key === key)) ? 0 : 1) * 1e6 + i]));
+  const rows = await db.prepare(`SELECT id, path, summary FROM areas WHERE id IN (${results.map(() => '?').join(',')})`)
+    .bind(...results.map((r) => r.area_id)).all<{ id: number; path: string; summary: string }>();
+  return rows.results
+    .filter((r) => !o.areaPath || r.path.startsWith(`${o.areaPath}/`))
+    .sort((a, b) => rank.get(a.id)! - rank.get(b.id)!)
+    .slice(0, o.limit)
+    .map((r) => parse<Record<string, unknown>>(r.summary));
+}
+
+async function searchPlaces(db: D1Database, q: string, o: { category?: string; areaId?: number; limit: number }) {
+  const match = ftsQuery(q);
+  if (!match) return [];
+  const where = [
+    ...(o.category ? [`(' ' || cat || ' ') LIKE ?`] : []),
+    ...(o.areaId ? ['areas LIKE ?'] : []),
+  ];
+  // rowid order = evidence level, so official records come first; the filters only read matching rows
+  const { results } = await db.prepare(
+    `SELECT place_id FROM search_places WHERE search_places MATCH ?${where.map((w) => ` AND ${w}`).join('')} LIMIT ?`)
+    .bind(match, ...(o.category ? [`% ${o.category} %`] : []), ...(o.areaId ? [`% ${o.areaId} %`] : []), o.limit)
+    .all<{ place_id: number }>();
+  if (!results.length) return [];
+  const ids = results.map((r) => r.place_id);
+  const rows = await db.prepare(`SELECT id, summary FROM places WHERE id IN (${ids.map(() => '?').join(',')})`).bind(...ids)
+    .all<{ id: number; summary: string }>();
+  const byId = new Map(rows.results.map((r) => [r.id, parse<Record<string, unknown>>(r.summary)]));
+  return ids.map((id) => byId.get(id)).filter((x): x is Record<string, unknown> => x !== undefined);
 }
 
 /* ---------------------------------------------------------------- routing */
@@ -232,19 +335,53 @@ type Handler = (m: string[], url: URL, req: Request, env: Env) => Promise<unknow
 const GET: [RegExp, Handler][] = [
   [/^\/health$/, async (_m, _u, _r, env) => {
     const t = Date.now();
-    await env.DB.prepare('SELECT 1').first();
-    return { status: 'ok', db: { ok: true, ms: Date.now() - t }, search: { engine: 'browser', configured: false },
+    await dbOf(env).prepare('SELECT 1').first();
+    return { status: 'ok', db: { ok: true, ms: Date.now() - t }, search: { engine: 'fts', configured: true },
       public_include_unverified: true, staff_require_2fa: true, version: env.APP_VERSION ?? 'dev' };
   }],
-  [/^\/v1\/stats\/national$/, (_m, _u, _r, env) => meta(env.DB, 'stats:national')],
-  [/^\/v1\/categories$/, (_m, _u, _r, env) => meta(env.DB, 'categories')],
+  [/^\/v1\/stats\/national$/, (_m, _u, _r, env) => meta(dbOf(env), 'stats:national')],
+  [/^\/v1\/search$/, async (_m, u, _r, env) => {
+    const q = searchText(u.searchParams.get('q'));
+    const type = u.searchParams.get('type');
+    if (type && type !== 'area' && type !== 'place') throw bad('type must be area or place');
+    const level = u.searchParams.get('level') ?? undefined;
+    if (level && !SEARCH_LEVELS.has(level)) throw bad('invalid level');
+    const cat = category(u.searchParams.get('category'));
+    const limit = intParam(u.searchParams.get('limit'), 'limit', { min: 1, max: 50, def: 20 })!;
+    const db = dbOf(env);
+    let areaPath: string | undefined;
+    let areaId: number | undefined;
+    if (u.searchParams.get('area')) {
+      areaPath = normalisePath(u.searchParams.get('area'));
+      const row = await db.prepare('SELECT id FROM areas WHERE path = ?').bind(areaPath).first<{ id: number }>();
+      if (!row) throw bad('unknown area');
+      areaId = row.id;
+    }
+    const [areas, places] = await Promise.all([
+      type === 'place' || cat ? [] : searchAreas(db, q, { level, areaPath, limit, exactFirst: true }),
+      type === 'area' || level ? [] : searchPlaces(db, q, { category: cat, areaId, limit }),
+    ]);
+    return { engine: 'fts', areas, places };
+  }],
+  [/^\/v1\/search\/suggest$/, async (_m, u, _r, env) => {
+    const q = searchText(u.searchParams.get('q'), { min: 1, max: 60 });
+    const db = dbOf(env);
+    const [areas, places] = await Promise.all([searchAreas(db, q, { limit: 8, exactFirst: false }), searchPlaces(db, q, { limit: 8 })]);
+    return {
+      items: [
+        ...areas.map((a) => ({ kind: 'area', name_bn: a.name_bn, name_en: a.name_en, href_key: a.path, detail: a.level })),
+        ...places.map((p) => ({ kind: 'place', name_bn: p.name_bn, name_en: p.name_en ?? '', href_key: p.slug, detail: p.evidence_level })),
+      ],
+    };
+  }],
+  [/^\/v1\/categories$/, (_m, _u, _r, env) => meta(dbOf(env), 'categories')],
   [/^\/v1\/categories\/([a-z_.]{2,82})$/, async (m, _u, _r, env) => {
-    const all = await meta<{ key: string; children?: { key: string }[] }[]>(env.DB, 'categories');
+    const all = await meta<{ key: string; children?: { key: string }[] }[]>(dbOf(env), 'categories');
     const found = all.find((c) => c.key === m[1]) ?? all.flatMap((c) => c.children ?? []).find((c) => c.key === m[1]);
     if (!found) throw notFound(`category not found: ${m[1]}`);
     return found;
   }],
-  [/^\/v1\/emergency-numbers$/, (_m, _u, _r, env) => meta(env.DB, 'emergency')],
+  [/^\/v1\/emergency-numbers$/, (_m, _u, _r, env) => meta(dbOf(env), 'emergency')],
   [/^\/v1\/areas$/, async (_m, u, _r, env) => {
     const level = u.searchParams.get('level') ?? 'division';
     if (!LEVELS.has(level)) throw bad(`level must be one of ${[...LEVELS].join(', ')}`);
@@ -252,42 +389,42 @@ const GET: [RegExp, Handler][] = [
     const offset = cursor.decode(u.searchParams.get('cursor'));
     const parent = intParam(u.searchParams.get('parent_id'), 'parent_id', { min: 1 });
     const stmt = parent
-      ? env.DB.prepare('SELECT summary FROM areas WHERE level = ? AND parent_id = ? ORDER BY name_en LIMIT ? OFFSET ?').bind(level, parent, limit, offset)
-      : env.DB.prepare('SELECT summary FROM areas WHERE level = ? ORDER BY name_en LIMIT ? OFFSET ?').bind(level, limit, offset);
+      ? dbOf(env).prepare('SELECT summary FROM areas WHERE level = ? AND parent_id = ? ORDER BY name_en LIMIT ? OFFSET ?').bind(level, parent, limit, offset)
+      : dbOf(env).prepare('SELECT summary FROM areas WHERE level = ? ORDER BY name_en LIMIT ? OFFSET ?').bind(level, limit, offset);
     const items = (await stmt.all<{ summary: string }>()).results.map((r) => parse(r.summary));
     return { items, next_cursor: items.length === limit ? cursor.encode(offset + limit) : null };
   }],
-  [/^\/v1\/areas\/by-path$/, (_m, u, _r, env) => areaRow(env.DB, 'path', normalisePath(u.searchParams.get('path')), 'detail')],
-  [/^\/v1\/areas\/tree$/, (_m, u, _r, env) => tree(env.DB,
+  [/^\/v1\/areas\/by-path$/, (_m, u, _r, env) => areaRow(dbOf(env), 'path', normalisePath(u.searchParams.get('path')), 'detail')],
+  [/^\/v1\/areas\/tree$/, (_m, u, _r, env) => tree(dbOf(env),
     intParam(u.searchParams.get('root_id'), 'root_id', { min: 1, def: 1 })!, intParam(u.searchParams.get('depth'), 'depth', { min: 1, max: 3, def: 2 })!)],
-  [/^\/v1\/areas\/([^/]+)$/, (m, _u, _r, env) => areaRow(env.DB, 'id', idParam(m[1]), 'detail')],
+  [/^\/v1\/areas\/([^/]+)$/, (m, _u, _r, env) => areaRow(dbOf(env), 'id', idParam(m[1]), 'detail')],
   [/^\/v1\/areas\/([^/]+)\/children$/, async (m, u, _r, env) => {
     const level = u.searchParams.get('level');
     if (level && !LEVELS.has(level)) throw bad('invalid level');
-    const d = await areaRow(env.DB, 'id', idParam(m[1]), 'detail');
+    const d = await areaRow(dbOf(env), 'id', idParam(m[1]), 'detail');
     return (d.children as { level: string }[]).filter((c) => !level || c.level === level);
   }],
-  [/^\/v1\/areas\/([^/]+)\/stats$/, (m, _u, _r, env) => areaRow(env.DB, 'id', idParam(m[1]), 'stats')],
+  [/^\/v1\/areas\/([^/]+)\/stats$/, (m, _u, _r, env) => areaRow(dbOf(env), 'id', idParam(m[1]), 'stats')],
   [/^\/v1\/areas\/([^/]+)\/boundary$/, async (m, _u, _r, env) => {
     const id = idParam(m[1]);
-    const row = await env.DB.prepare('SELECT summary, geometry FROM boundaries WHERE id = ?').bind(id).first<{ summary: string; geometry: string }>();
+    const row = await dbOf(env).prepare('SELECT summary, geometry FROM boundaries WHERE id = ?').bind(id).first<{ summary: string; geometry: string }>();
     if (!row) throw notFound(`no public boundary for area ${id}`);
     const s = parse<{ id: number; name_bn: string; name_en: string; level: string }>(row.summary);
     return { type: 'Feature', id, properties: { id, name_bn: s.name_bn, name_en: s.name_en, level: s.level }, geometry: parse(row.geometry) };
   }],
-  [/^\/v1\/geo\/locate$/, (_m, u, _r, env) => locate(env.DB, floatParam(u.searchParams.get('lat'), 'lat', 20, 27), floatParam(u.searchParams.get('lon'), 'lon', 88, 93))],
+  [/^\/v1\/geo\/locate$/, (_m, u, _r, env) => locate(dbOf(env), floatParam(u.searchParams.get('lat'), 'lat', 20, 27), floatParam(u.searchParams.get('lon'), 'lon', 88, 93))],
   [/^\/v1\/places$/, async (_m, u, _r, env) => {
     const limit = intParam(u.searchParams.get('limit'), 'limit', { min: 1, max: 100, def: 20 })!;
     const offset = cursor.decode(u.searchParams.get('cursor'));
     const sort = u.searchParams.get('sort');
     if (sort && sort !== 'relevance' && sort !== 'name') throw bad('sort must be relevance or name');
-    if (u.searchParams.get('q')) throw bad('text search runs in the browser on this deployment (see /search)');
-    const { items, total } = await placeList(env.DB, intParam(u.searchParams.get('area_id'), 'area_id', { min: 1 }),
+    if (u.searchParams.get('q')) throw bad('use /v1/search for text search on this deployment');
+    const { items, total } = await placeList(dbOf(env), intParam(u.searchParams.get('area_id'), 'area_id', { min: 1 }),
       category(u.searchParams.get('category')), limit, offset);
     return { items, total, next_cursor: offset + items.length < total ? cursor.encode(offset + limit) : null };
   }],
   [/^\/v1\/places\/nearby$/, async (_m, u, _r, env) => ({
-    items: await nearby(env.DB, floatParam(u.searchParams.get('lat'), 'lat', 20, 27), floatParam(u.searchParams.get('lon'), 'lon', 88, 93),
+    items: await nearby(dbOf(env), floatParam(u.searchParams.get('lat'), 'lat', 20, 27), floatParam(u.searchParams.get('lon'), 'lon', 88, 93),
       intParam(u.searchParams.get('radius_m'), 'radius_m', { min: 100, max: 50000, def: 2000 })!, category(u.searchParams.get('category')),
       intParam(u.searchParams.get('limit'), 'limit', { min: 1, max: 100, def: 30 })!),
     next_cursor: null,
@@ -300,23 +437,23 @@ const GET: [RegExp, Handler][] = [
       if (n.length !== 4 || n.some((x) => !Number.isFinite(x)) || n[0]! >= n[2]! || n[1]! >= n[3]!) throw bad('bbox must be west,south,east,north');
       box = n;
     }
-    return geojson(env.DB, intParam(u.searchParams.get('area_id'), 'area_id', { min: 1 }), category(u.searchParams.get('category')), box);
+    return geojson(dbOf(env), intParam(u.searchParams.get('area_id'), 'area_id', { min: 1 }), category(u.searchParams.get('category')), box);
   }],
   [/^\/v1\/places\/([^/]+)$/, async (m, _u, _r, env) => {
     if (!SLUG_RE.test(m[1]!)) throw bad('invalid slug');
-    const row = await env.DB.prepare('SELECT detail FROM places WHERE slug = ?').bind(m[1]).first<{ detail: string }>();
+    const row = await dbOf(env).prepare('SELECT detail FROM places WHERE slug = ?').bind(m[1]).first<{ detail: string }>();
     if (!row) throw notFound(`place not found: ${m[1]}`);
     return parse(row.detail);
   }],
   [/^\/v1\/places\/([^/]+)\/reviews$/, async (m, _u, _r, env) => {
     if (!SLUG_RE.test(m[1]!)) throw bad('invalid slug');
-    const row = await env.DB.prepare('SELECT id FROM places WHERE slug = ?').bind(m[1]).first();
+    const row = await dbOf(env).prepare('SELECT id FROM places WHERE slug = ?').bind(m[1]).first();
     if (!row) throw notFound(`place not found: ${m[1]}`);
     return { items: [], next_cursor: null };   // reviews need accounts, which are not served on this deployment yet
   }],
 ];
 /** Features that need accounts or the database's write side: not on this deployment yet. */
-const UNAVAILABLE = /^\/v1\/(auth|me|contributions|admin|open-data|reviews|search)(\/|$)|^\/v1\/places\/[^/]+\/reviews$/;
+const UNAVAILABLE = /^\/v1\/(auth|me|contributions|admin|open-data|reviews)(\/|$)|^\/v1\/places\/[^/]+\/reviews$/;
 
 function problem(status: number, title: string, detail: string, path: string, requestId: string, extra: Record<string, string> = {}) {
   return new Response(JSON.stringify({ type: 'about:blank', title, status, detail, instance: path, request_id: requestId }), {

@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
-import type { GeoJSONSource, Map as MlMap, MapLayerMouseEvent, Popup } from 'maplibre-gl';
+import type { GeoJSONSource, LngLatBounds, Map as MlMap, MapLayerMouseEvent, Popup } from 'maplibre-gl';
 import type { Feature, FeatureCollection, Geometry, Point } from 'geojson';
 import { LEVEL_LABEL, formatNumber, type AdminLevel, type EvidenceLevel, type Locale, type PlaceSummary } from '@elaka360/shared';
 import { Link, useRouter } from '@/i18n/navigation';
@@ -13,15 +13,33 @@ import 'maplibre-gl/dist/maplibre-gl.css';
 const STYLE_URL = process.env.NEXT_PUBLIC_MAP_STYLE_URL ?? 'https://tiles.openfreemap.org/styles/positron';
 const CATEGORIES = ['education', 'health', 'government', 'emergency', 'tourism', 'religious', 'transport', 'finance', 'agriculture', 'business', 'other'];
 const REFRESH_MS = 300_000;     // re-check the published data every 5 minutes while the tab is visible
-/** Static map data written at release time by apps/api/src/cli/export-edge.ts (no API or database call per view). */
-const pinsUrl = (divisionId: number) => `/data/map/pins-${divisionId}.json`;
+/**
+ * Static map data written at release time by apps/api/src/cli/export-edge.ts (no API or database call per view).
+ * Pins come in square tiles (tiles.json lists them with their size and the zoom from which they are shown), so a
+ * view loads only the few tiles it covers, whatever the number of places in the country.
+ */
 const boundaryUrl = (id: number, group: 'coarse' | 'fine') => `/data/map/b-${id}-${group}.json`;
+const TILE_INDEX_URL = '/data/map/tiles.json';
+const tileUrl = (key: string) => `/data/map/tiles/${key}.json`;
+const MAX_TILES = 60;
 type PinFile = { fields: string[]; rows: unknown[][] };
-const pinsCache = new Map<number, Feature<Point, PinProps & { district_id: number | null }>[]>();
-async function loadPinFile(divisionId: number, force: boolean) {
-  const cached = pinsCache.get(divisionId);
-  if (cached && !force) return cached;
-  const res = await fetch(pinsUrl(divisionId), { cache: force ? 'no-cache' : 'default' });   // no-cache = revalidate (cheap 304)
+type TileIndex = { size: number; min_zoom: number; tiles: Record<string, number> };
+type Pin = Feature<Point, PinProps & { district_id: number | null }>;
+let tileIndex: Promise<TileIndex> | null = null;
+const tileCache = new Map<string, Pin[]>();
+function loadTileIndex(force: boolean) {
+  if (!tileIndex || force) {
+    if (force) tileCache.clear();
+    tileIndex = fetch(TILE_INDEX_URL, { cache: force ? 'no-cache' : 'default' })   // no-cache = revalidate (cheap 304)
+      .then((res) => { if (!res.ok) throw new Error(String(res.status)); return res.json() as Promise<TileIndex>; });
+    tileIndex.catch(() => { tileIndex = null; });
+  }
+  return tileIndex;
+}
+async function loadTile(key: string): Promise<Pin[]> {
+  const cached = tileCache.get(key);
+  if (cached) return cached;
+  const res = await fetch(tileUrl(key));
   if (!res.ok) throw new Error(String(res.status));
   const { fields, rows } = (await res.json()) as PinFile;
   const features = rows.map((r) => {
@@ -30,8 +48,18 @@ async function loadPinFile(divisionId: number, force: boolean) {
     return { type: 'Feature' as const, geometry: { type: 'Point' as const, coordinates: [lon as number, lat as number] },
              properties: props as unknown as PinProps & { district_id: number | null } };
   });
-  pinsCache.set(divisionId, features);
+  tileCache.set(key, features);
   return features;
+}
+/** Keys of the tiles that cover a view and exist. */
+function tilesInView(b: LngLatBounds, idx: TileIndex): string[] {
+  const keys: string[] = [];
+  for (let x = Math.floor(b.getWest() / idx.size); x <= Math.floor(b.getEast() / idx.size); x++) {
+    for (let y = Math.floor(b.getSouth() / idx.size); y <= Math.floor(b.getNorth() / idx.size); y++) {
+      if (idx.tiles[`${x}_${y}`]) keys.push(`${x}_${y}`);
+    }
+  }
+  return keys;
 }
 
 /** One map scope: a division's head district or the whole division (listed in /data/map/scopes.json at release time). */
@@ -96,7 +124,7 @@ export function LiveMap({ scope, category, layers }: {
   const [selected, setSelected] = useState<AreaProps | null>(null);
   const [areaPlaces, setAreaPlaces] = useState<{ items: PlaceSummary[]; total: number } | null>(null);
 
-  /** Pins for the active scope and category, from the static file (filtered here, in the browser). */
+  /** Pins in view for the active scope and category, from the static tiles (filtered here, in the browser). */
   const loadPins = useCallback(async (force = false) => {
     const map = mapRef.current;
     if (!map || !map.getSource('places')) return;
@@ -111,7 +139,16 @@ export function LiveMap({ scope, category, layers }: {
     abortRef.current = ctl;
     setLoading(true);
     try {
-      const all = await loadPinFile(s.division_id, force);
+      const idx = await loadTileIndex(force);
+      if (ctl.signal.aborted) return;
+      const keys = map.getZoom() >= idx.min_zoom ? tilesInView(map.getBounds(), idx) : null;
+      if (!keys || keys.length > MAX_TILES) {     // zoomed out: pins only from city level (outlines stay)
+        (map.getSource('places') as GeoJSONSource | undefined)?.setData(empty);
+        setInView({ total: 0, byCat: {}, truncated: true });
+        setUpdated(new Date());
+        return;
+      }
+      const all = (await Promise.all(keys.map(loadTile))).flat();
       if (ctl.signal.aborted) return;
       const district = s.kind === 'district' ? s.id : null;
       const fc: FeatureCollection<Point, PinProps> = {

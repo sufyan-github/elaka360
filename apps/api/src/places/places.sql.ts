@@ -72,7 +72,10 @@ SELECT ${PLACE_SUMMARY_COLS} ${PLACE_JOINS}
 WHERE p.geom IS NOT NULL
   AND ${PLACE_AREA_FILTER}
   AND ($2::text IS NULL OR c.key = $2 OR sc.key = $2)
-  AND ($3::float8 IS NULL OR p.geom && ST_MakeEnvelope($3, $4, $5, $6, 4326)::geography)
+  -- the geography && (indexed) compares approximate boxes; the lat/lon test keeps exactly the points inside the bbox
+  AND ($3::float8 IS NULL OR (p.geom && ST_MakeEnvelope($3, $4, $5, $6, 4326)::geography
+                              AND p.lon BETWEEN $3 AND $5 AND p.lat BETWEEN $4 AND $6))
+ORDER BY p.id     -- a stable subset when more than 5,000 places match (same order as the edge API)
 LIMIT 5000`;
 
 /** Internal id of a public place (for reviews/saves). */

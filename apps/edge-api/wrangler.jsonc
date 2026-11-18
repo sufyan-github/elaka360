@@ -1,5 +1,7 @@
-// Public read API on Cloudflare Workers + D1 (apps/edge-api). Deployed by .github/workflows/deploy.yml, which also
-// creates the D1 database and fills in its id. The website reaches it through a service binding (no public hop).
+// Public read API on Cloudflare Workers + Turso (apps/edge-api). Deployed by .github/workflows/deploy.yml.
+// The database comes from two Worker secrets, TURSO_DATABASE_URL (libsql://<db>-<org>.turso.io) and TURSO_AUTH_TOKEN
+// (`wrangler secret put`; the deploy workflow sets them from GitHub secrets). Local dev: `pnpm dev` points at a local
+// libSQL server on port 8080. The website reaches this Worker through a service binding (no public hop).
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "elaka360-api",
@@ -8,6 +10,5 @@
   "routes": [{ "pattern": "elaka360-api.abusufyan.online", "custom_domain": true }],
   "workers_dev": false,
   "observability": { "enabled": true },
-  "d1_databases": [{ "binding": "DB", "database_name": "elaka360", "database_id": "41575ad2-bbbe-4115-941c-dbd73b49e701" }],
   "vars": { "APP_VERSION": "dev" }
 }

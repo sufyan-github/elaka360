@@ -1,5 +1,5 @@
 /**
- * Snapshot the public API into files for the Cloudflare deployment (D1 + static assets).
+ * Snapshot the public API into files for the Cloudflare deployment (Turso/libSQL edge database + static assets).
  *
  * The NestJS API on PostgreSQL stays the reference implementation: this script runs its own services against a
  * database loaded with the seed and writes their exact responses, so the edge Worker (apps/edge-api) only has to
@@ -8,13 +8,13 @@
  * Usage (from the repo root, after `pnpm --filter @elaka360/api build` and a migrated + seeded database):
  *   DATABASE_URL=postgres://… node apps/api/dist/cli/export-edge.js
  * Writes:
- *   db/d1/out/<table>.json                  rows for scripts/d1-sync.mjs (each with a content hash `h`)
- *   apps/web/public/data/map/*.json         live-map boundaries and pins (served as static files)
- *   apps/web/public/data/search/*.json      the in-browser search index
+ *   db/d1/out/<table>.json                  rows for scripts/turso-sync.mjs (each with a content hash `h`), incl. the
+ *                                           full-text search tables search_places / search_areas
+ *   apps/web/public/data/map/*.json         live-map boundaries, scopes and pin tiles (served as static files)
  */
 import 'reflect-metadata';
 import { createHash } from 'node:crypto';
-import { closeSync, mkdirSync, openSync, writeFileSync, writeSync } from 'node:fs';
+import { closeSync, mkdirSync, openSync, rmSync, writeFileSync, writeSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import type { AdminAreaSummary, AreaDetail, AreaStats, Place, PlaceSummary } from '@elaka360/shared';
 import { Db } from '../db/db.service';
@@ -35,6 +35,15 @@ const DIVISION_HEADS: [number, number][] = [[10002, 20015], [10007, 20059], [100
 const MAP_LEVELS = { coarse: ['upazila', 'city_corporation'], fine: ['union', 'pourashava'] };
 const MAX_GEOMETRY_CHARS = 90_000;       // D1 statements are limited to 100 KB
 const EV = ['official', 'secondary', 'community', 'unverified'];
+// map pins: square tiles of TILE degrees (~5.5 km), loaded by the map for the visible area from zoom 12; the densest
+// tile (central Dhaka) stays far below Cloudflare Pages' 25 MiB file limit
+const TILE = 0.05;
+const tileKey = (lon: number, lat: number) => `${Math.floor(lon / TILE)}_${Math.floor(lat / TILE)}`;
+// full-text search rows: the FTS rowid encodes the result order, so `MATCH … LIMIT n` stops after n rows (few rows
+// read): places by evidence level then id, areas by level rank then id
+const SEARCH_LEVELS = ['division', 'district', 'city_corporation', 'upazila', 'pourashava', 'union', 'ward'];
+const placeRid = (ev: string, id: number) => { if (id >= 100_000_000) throw new Error(`place id ${id} too large for the search rowid`); return (EV.indexOf(ev) + 1) * 100_000_000 + id; };
+const areaRid = (level: string, id: number) => (SEARCH_LEVELS.indexOf(level) + 1 || 9) * 10_000_000 + id;
 
 const hash = (v: unknown) => createHash('sha1').update(JSON.stringify(v)).digest('hex').slice(0, 16);
 const json = (v: unknown) => JSON.stringify(v);
@@ -103,18 +112,27 @@ async function main() {
       areas.push({ ...row, h: hash(row) });
     }
     console.log(`areas: ${areas.length} (${Date.now() - t0} ms)`);
+    const areaKeys = new Map((await db.many<{ id: number; name_key: string | null }>('SELECT id::int, name_key FROM public_admin_areas'))
+      .map((r) => [r.id, r.name_key ?? '']));
+    const searchAreas = [...areaSummary.values()].filter((a) => a.level !== 'country').map((a) => {
+      const row = { rid: areaRid(a.level, a.id), area_id: a.id, level: a.level, name_bn: a.name_bn, name_en: a.name_en ?? '',
+                    name_key: areaKeys.get(a.id) ?? '' };
+      return { ...row, h: hash(row) };
+    });
 
     // ------------------------------------------------------------------ places: detail by slug, summaries, lists
     const summaries = await db.many<PlaceSummary & { id: number; cat: string; sub: string | null; division_id: number | null;
-      district_id: number | null; upazila_id: number | null; union_id: number | null; city_corporation_id: number | null; loc_id: number | null }>(`
+      district_id: number | null; upazila_id: number | null; union_id: number | null; city_corporation_id: number | null; loc_id: number | null;
+      name_key: string | null }>(`
       SELECT p.id::int, ${PLACE_SUMMARY_COLS}, c.key AS cat, sc.key AS sub, p.division_id::int, p.district_id::int,
-             p.upazila_id::int, p.union_id::int, p.city_corporation_id::int, loc.id::int AS loc_id
+             p.upazila_id::int, p.union_id::int, p.city_corporation_id::int, loc.id::int AS loc_id, p.name_key
       ${PLACE_JOINS}
       ORDER BY array_position(ARRAY['official','secondary','community','unverified']::text[], p.evidence_level::text),
                p.name_en NULLS LAST, p.name_bn, p.id`);   // = PLACE_LIST_SQL's 'relevance' order, plus id for stable pages
     // place rows are streamed to disk as they are built (only their hashes are kept, for version.json); the
     // detail queries run in small parallel batches, and rows are written in the original order
     const placeOut = arrayWriter(join(OUT, 'places.json'));
+    const searchOut = arrayWriter(join(OUT, 'search_places.json'));
     const placeHashes: string[] = [];
     const points: Record<string, unknown>[] = [];
     const lists = new Map<string, number[]>();
@@ -122,12 +140,17 @@ async function main() {
      const batch = summaries.slice(b, b + EXPORT_CONCURRENCY);
      const details: Place[] = await Promise.all(batch.map((s) => places.bySlug(s.slug)));
      for (const [i, s] of batch.entries()) {
-      const { id, cat, sub, division_id, district_id, upazila_id, union_id, city_corporation_id, loc_id: _loc, ...summary } = s;
+      const { id, cat, sub, division_id, district_id, upazila_id, union_id, city_corporation_id, loc_id: _loc, name_key, ...summary } = s;
       const detail: Place = details[i];
       const row = { id, slug: summary.slug, summary: json(summary), detail: json(detail) };
       const h = hash(row);
       placeOut.push({ ...row, h });
       placeHashes.push(h);
+      // filters for /v1/search: category and sub-category keys, and the ids of every area the place lies in
+      const srow = { rid: placeRid(summary.evidence_level, id), place_id: id, name_bn: summary.name_bn, name_en: summary.name_en ?? '',
+                     name_key: name_key ?? '', cat: [cat, sub ?? ''].join(' ').trim(),
+                     areas: ` ${[division_id, district_id, upazila_id, union_id, city_corporation_id].filter((x) => x !== null).join(' ')} ` };
+      searchOut.push({ ...srow, h: hash(srow) });
       if (summary.lat !== null && summary.lon !== null) {
         const pt = { id, lat: summary.lat, lon: summary.lon, division_id, district_id, upazila_id, union_id, city_corporation_id,
                      category_key: cat, subcategory_key: sub, summary: json(summary) };
@@ -142,6 +165,7 @@ async function main() {
      }
     }
     placeOut.close();
+    searchOut.close();
     const listRows: Record<string, unknown>[] = [];
     for (const [k, ids] of lists) {
       const [aid, cat] = k.split('|');
@@ -184,7 +208,8 @@ async function main() {
     };
     const meta = Object.entries(docs).map(([key, v]) => { const row = { key, value: json(v) }; return { ...row, h: hash(row) }; });
 
-    for (const [name, rows] of Object.entries({ areas, place_points: points, area_lists: listRows, boundaries: bRows, meta })) {
+    for (const [name, rows] of Object.entries({ areas, place_points: points, area_lists: listRows, boundaries: bRows, meta,
+                                                search_areas: searchAreas })) {
       write(join(OUT, `${name}.json`), rows);
     }
 
@@ -193,37 +218,29 @@ async function main() {
     const pinFields = ['slug', 'name_bn', 'name_en', 'category_key', 'subcategory_key', 'area_label_bn', 'area_label_en',
                        'evidence_level', 'production_eligible', 'lat', 'lon', 'district_id'] as const;
     const scopes: { id: number; kind: 'district' | 'division'; division_id: number; name_bn: string; name_en: string }[] = [];
+    rmSync(join(WEB, 'map'), { recursive: true, force: true });     // drop tiles and files of an earlier layout
     for (const [divId, headId] of DIVISION_HEADS) {
-      const inDiv = summaries.filter((s) => s.lat !== null && s.division_id === divId);
-      if (!inDiv.length) continue;
+      if (!summaries.some((s) => s.lat !== null && s.division_id === divId)) continue;
       for (const [id, kind] of [[headId, 'district'], [divId, 'division']] as const) {
         for (const [group, lv] of Object.entries(MAP_LEVELS)) write(join(WEB, 'map', `b-${id}-${group}.json`), await geo.childBoundaries(id, lv));
         const a = areaSummary.get(id)!;
         scopes.push({ id, kind, division_id: divId, name_bn: a.name_bn, name_en: a.name_en });
       }
-      write(join(WEB, 'map', `pins-${divId}.json`), {
-        fields: pinFields, rows: inDiv.map((s) => pinFields.map((f) => (s as unknown as Record<string, unknown>)[f] ?? null)),
-      });
     }
     write(join(WEB, 'map', 'scopes.json'), scopes);
+    // pins: one file per tile, in list order; tiles.json lists the tiles that exist (the map never asks for empty ones)
+    const tiles = new Map<string, unknown[][]>();
+    for (const s of summaries) {
+      if (s.lat === null || s.lon === null) continue;
+      const k = tileKey(s.lon, s.lat);
+      (tiles.get(k) ?? tiles.set(k, []).get(k)!).push(pinFields.map((f) => (s as unknown as Record<string, unknown>)[f] ?? null));
+    }
+    for (const [k, rows] of tiles) write(join(WEB, 'map', 'tiles', `${k}.json`), { fields: pinFields, rows });
+    write(join(WEB, 'map', 'tiles.json'), { size: TILE, min_zoom: 12, tiles: Object.fromEntries([...tiles].map(([k, r]) => [k, r.length])) });
 
-    // search index: areas (excluding the country) and places, as field lists + rows
-    const aFields = ['id', 'level', 'parent_id', 'name_bn', 'name_en', 'slug', 'path', 'verified', 'evidence_level', 'production_eligible'] as const;
-    write(join(WEB, 'search', 'areas.json'), {
-      fields: aFields,
-      rows: [...areaSummary.values()].filter((a) => a.level !== 'country').map((a) => aFields.map((f) => a[f])),
-    });
-    // places: compact rows; the area label is rebuilt in the browser from the areas index (loc_id, district_id),
-    // categories are indexes into `cats`, evidence an index into EV
-    const cats = [...new Set(summaries.map((s) => s.subcategory_key ?? s.category_key))].sort();
-    const catIdx = new Map(cats.map((c, i) => [c, i]));
-    write(join(WEB, 'search', 'places.json'), {
-      fields: ['slug', 'name_bn', 'name_en', 'cat', 'loc_id', 'district_id', 'ev'],
-      cats, ev: EV,
-      rows: summaries.map((s) => [s.slug, s.name_bn, s.name_en, catIdx.get(s.subcategory_key ?? s.category_key),
-                                  s.loc_id, s.district_id, EV.indexOf(s.evidence_level)]),
-    });
-    write(join(WEB, 'search', 'version.json'), { data: hash([areas.map((a) => a.h), placeHashes]) });
+    // search runs in the edge database (search_places / search_areas); no static index any more
+    rmSync(join(WEB, 'search'), { recursive: true, force: true });
+    write(join(WEB, 'map', 'version.json'), { data: hash([areas.map((a) => a.h), placeHashes]) });
     console.log(`export-edge: done in ${Date.now() - t0} ms → ${OUT}, ${WEB}/{map,search}`);
   } finally {
     await db.onModuleDestroy();

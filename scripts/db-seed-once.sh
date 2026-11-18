@@ -13,5 +13,10 @@ if [[ "$n" != "0" ]]; then
 fi
 echo "→ loading db/seed/seed.sql (one transaction)"
 "${PSQL[@]}" -f db/seed/seed.sql >/dev/null
+# community layers built from uncommitted sources (COLLECTION_FORMAT.md, Exceptions), when they were built here
+for f in db/seed/layers/*.sql; do
+  [[ -f "$f" ]] || continue
+  echo "→ $f"; "${PSQL[@]}" -f "$f" >/dev/null
+done
 "${PSQL[@]}" -c "SELECT level, count(*) FROM admin_areas GROUP BY 1 ORDER BY 1"
 echo "db-seed-once: done"

@@ -5,21 +5,21 @@ import { useLocale, useTranslations } from 'next-intl';
 import { LEVEL_LABEL, type Locale } from '@elaka360/shared';
 import { AreaCard, PlaceCard } from '@/components/cards';
 import { EmptyState, Section } from '@/components/ui';
-import { search, type BrowserSearchResult } from '@/lib/browser-search';
+import { search, type SearchResult } from '@/lib/search-client';
 
-/** Results of /search, computed in the browser from the static index (lib/browser-search.ts). */
+/** Results of /search, from the API (/api/search → /v1/search). */
 export function SearchResults({ q, type }: { q: string; type: '' | 'area' | 'place' }) {
   const t = useTranslations('Search');
   const locale = useLocale() as Locale;
-  const [state, setState] = useState<{ q: string; result: BrowserSearchResult | null; failed: boolean }>({ q: '', result: null, failed: false });
+  const [state, setState] = useState<{ q: string; result: SearchResult | null; failed: boolean }>({ q: '', result: null, failed: false });
 
   useEffect(() => {
-    let cancelled = false;
+    const ctl = new AbortController();
     setState({ q, result: null, failed: false });
-    search(q, { type: type || undefined })
-      .then((result) => { if (!cancelled) setState({ q, result, failed: false }); })
-      .catch(() => { if (!cancelled) setState({ q, result: null, failed: true }); });
-    return () => { cancelled = true; };
+    search(q, { type: type || undefined, signal: ctl.signal })
+      .then((result) => { if (!ctl.signal.aborted) setState({ q, result, failed: false }); })
+      .catch(() => { if (!ctl.signal.aborted) setState({ q, result: null, failed: true }); });
+    return () => ctl.abort();
   }, [q, type]);
 
   if (state.failed) return <div className="mt-6"><EmptyState title={t('failedTitle')} body={t('failedBody')} /></div>;

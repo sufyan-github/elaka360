@@ -1,7 +1,7 @@
--- D1 schema for the Cloudflare edge API (apps/edge-api). Idempotent: applied before every data sync.
--- Reference tables hold snapshots of the NestJS API's own responses (apps/api/src/cli/export-edge.ts), refreshed
--- row by row by scripts/d1-sync.mjs using the content hash `h`. Keep indexes few: every index costs one extra
--- row written per insert, and the free plan allows 100,000 rows written per day.
+-- Schema of the edge database for the Cloudflare edge API (apps/edge-api): Turso / libSQL (SQLite), also usable on D1.
+-- Idempotent: applied before every data sync. Reference tables hold snapshots of the NestJS API's own responses
+-- (apps/api/src/cli/export-edge.ts), refreshed row by row by scripts/turso-sync.mjs using the content hash `h`.
+-- Keep indexes few: every index costs extra rows written (Turso free plan: 10 million rows written per month).
 
 CREATE TABLE IF NOT EXISTS areas (
   id INTEGER PRIMARY KEY, path TEXT NOT NULL UNIQUE, parent_id INTEGER, level TEXT NOT NULL, depth INTEGER NOT NULL,
@@ -26,6 +26,16 @@ CREATE TABLE IF NOT EXISTS boundaries (
   id INTEGER PRIMARY KEY, level TEXT NOT NULL, path TEXT NOT NULL, minx REAL NOT NULL, miny REAL NOT NULL, maxx REAL NOT NULL,
   maxy REAL NOT NULL, summary TEXT NOT NULL, geometry TEXT NOT NULL, h TEXT NOT NULL);
 CREATE INDEX IF NOT EXISTS boundaries_minx ON boundaries(minx);
+
+-- full-text search (SQLite FTS5). The rowid encodes the result order (places: evidence level, then id; areas: level
+-- rank, then id), so `WHERE … MATCH ? LIMIT n` returns the best rows first and stops early. Bengali vowel signs and
+-- other combining marks are token characters, so Bangla words are indexed whole; prefix indexes serve "term*" queries.
+CREATE VIRTUAL TABLE IF NOT EXISTS search_places USING fts5(
+  name_bn, name_en, name_key, place_id UNINDEXED, cat UNINDEXED, areas UNINDEXED, h UNINDEXED,
+  tokenize = "unicode61 remove_diacritics 0 tokenchars 'ঁংঃ়ািীুূৃৄ৅৆েৈ৉৊োৌ্ৗৢৣ'", prefix = '2 3');
+CREATE VIRTUAL TABLE IF NOT EXISTS search_areas USING fts5(
+  name_bn, name_en, name_key, area_id UNINDEXED, level UNINDEXED, h UNINDEXED,
+  tokenize = "unicode61 remove_diacritics 0 tokenchars 'ঁংঃ়ািীুূৃৄ৅৆েৈ৉৊োৌ্ৗৢৣ'", prefix = '2 3');
 
 -- small documents: national stats, categories, hotlines, boundary levels, data version
 CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value TEXT NOT NULL, h TEXT NOT NULL) WITHOUT ROWID;
