@@ -18,6 +18,7 @@
     "e2e": "playwright test",
     "test:integration": "node --test scripts/integration-api.test.mjs",
     "edge:export": "node apps/api/dist/cli/export-edge.js",
+    "db:duplicates": "node apps/api/dist/cli/duplicate-scan.js",
     "edge:sync": "node scripts/turso-sync.mjs",
     "edge:db": "docker compose up -d libsql"
   },

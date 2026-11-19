@@ -57,10 +57,10 @@ test.describe('admin', () => {
     await page.waitForLoadState('networkidle');
     await passTwoFactorIfAsked(page);
     await expect(page.getByRole('navigation')).toContainText('যাচাই');
-    // Live database figures, never mockup numbers: 9,070 non-country areas in the seed (all 8 divisions), 9,023 with
-    // official evidence (BBS 2022 / LGD / district portals).
-    await expect(page.locator('main')).toContainText('৯,০৭০');
-    await expect(page.locator('main')).toContainText('সরকারিভাবে যাচাইকৃত৯,০২৩');
+    // Live database figures, never mockup numbers: 174,349 non-country areas in the seed (9,070 administrative units +
+    // 165,279 BBS 2022 thanas, mouzas and villages), 174,302 with official evidence (BBS 2022 / LGD / district portals).
+    await expect(page.locator('main')).toContainText('১,৭৪,৩৪৯');
+    await expect(page.locator('main')).toContainText('সরকারিভাবে যাচাইকৃত১,৭৪,৩০২');
     await page.goto(`${ADMIN}/audit`);
     await expect(page.getByRole('table')).toBeVisible();
     await page.goto(`${ADMIN}/duplicates`);

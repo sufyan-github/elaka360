@@ -7,7 +7,7 @@ unions,Shayestaganj union and Nurpur were moved to Shayestaganj Upazila; Brahman
 upazilas,No coordinates or boundaries for upazilas/unions.,Use the BBS/HDX admin boundary sets (ADM3/ADM4).
 codes,BBS geocodes are filled for divisions only.,Add district/upazila/union geocodes from BBS.
 pourashavas,"Only Rajshahi District's 14 pourashavas are listed, and that list is unverified.",Import the LGD pourashava list (330).
-wards/villages,"No wards, mouzas or villages.",BBS mouza/village lists.
+wards/villages,"City and pourashava wards, mouzas, villages / mahallas and city thanas come from BBS Census 2022 with English names only: no Bangla names, coordinates or boundaries for mouzas and villages, and no union wards (9 per union).",Bangla names from a second official source (not transliteration); union wards from LGD.
 area,District areas are computed from boundary polygons (approximate).,Replace with BBS official areas.
 population,District/division population uses the 2022 adjusted figures; Rajshahi upazilas use enumerated figures.,Choose one basis app-wide.
 places,Only 8 pilot places; 3 are unverified and have no coordinates.,Field verification + OSM import.

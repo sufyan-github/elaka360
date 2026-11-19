@@ -16,9 +16,9 @@ import 'reflect-metadata';
 import { createHash } from 'node:crypto';
 import { closeSync, mkdirSync, openSync, rmSync, writeFileSync, writeSync } from 'node:fs';
 import { join, resolve } from 'node:path';
-import type { AdminAreaSummary, AreaDetail, AreaStats, Place, PlaceSummary } from '@elaka360/shared';
+import type { AdminAreaSummary, AdminLevel, AreaDetail, AreaStats, Place, PlaceSummary } from '@elaka360/shared';
 import { Db } from '../db/db.service';
-import { GeoService, INCLUSION_RULE } from '../geo/geo.service';
+import { COVERAGE_LEVELS, GeoService, INCLUSION_RULE } from '../geo/geo.service';
 import { PlacesService } from '../places/places.service';
 import { CategoriesController } from '../categories/categories.controller';
 import { EMERGENCY_SQL } from '../emergency/emergency.controller';
@@ -97,8 +97,11 @@ async function main() {
     const depthOf = (id: number): number => { let d = 0; let p = parent.get(id); while (p) { d++; p = parent.get(p); } return d; };
     const areas: Record<string, unknown>[] = [];
     const areaSummary = new Map<number, AdminAreaSummary>();
-    for (const r of areaRows) {
-      const detail: AreaDetail = await geo.detailByPath(r.path);
+    geo.placeCountMemo = new Map();    // mouzas and villages share their union's counts
+    for (let b = 0; b < areaRows.length; b += EXPORT_CONCURRENCY) {
+     const batch = areaRows.slice(b, b + EXPORT_CONCURRENCY);
+     const details: AreaDetail[] = await Promise.all(batch.map((r) => geo.detailByPath(r.path)));
+     for (const detail of details) {
       const a = detail.area;
       const stats: AreaStats = {
         area_id: a.id, descendant_counts: detail.descendant_counts, pending_counts: detail.pending_counts, place_counts: detail.place_counts,
@@ -110,7 +113,9 @@ async function main() {
       const row = { id: a.id, path: a.path, parent_id: a.parent_id, level: a.level, depth: depthOf(a.id), name_en: a.name_en,
                     summary: json(summary), detail: json(detail), stats: json(stats) };
       areas.push({ ...row, h: hash(row) });
+     }
     }
+    geo.placeCountMemo = null;
     console.log(`areas: ${areas.length} (${Date.now() - t0} ms)`);
     const areaKeys = new Map((await db.many<{ id: number; name_key: string | null }>('SELECT id::int, name_key FROM public_admin_areas'))
       .map((r) => [r.id, r.name_key ?? '']));
@@ -199,7 +204,12 @@ async function main() {
 
     // ------------------------------------------------------------------ small documents (meta table)
     const levels = (await db.many<{ level: string }>('SELECT DISTINCT level::text FROM public_admin_areas WHERE boundary IS NOT NULL ORDER BY 1')).map((r) => r.level);
+    // coverage reports: country, divisions, districts and upazilas (the edge serves them by id)
+    const coverage: Record<string, unknown> = {};
+    for (const r of areaRows.filter((a) => COVERAGE_LEVELS.includes(a.level as AdminLevel))) coverage[`coverage:${r.id}`] = await geo.coverage(r.id);
+    console.log(`coverage reports: ${Object.keys(coverage).length} (${Date.now() - t0} ms)`);
     const docs: Record<string, unknown> = {
+      ...coverage,
       'stats:national': await geo.nationalStats(),
       'categories': await new CategoriesController(db).tree(),
       'emergency': await db.many(EMERGENCY_SQL),

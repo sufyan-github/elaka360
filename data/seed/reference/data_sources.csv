@@ -312,3 +312,43 @@
 311,OSM_MYM_2026,OpenStreetMap contributors — Mymensingh Division extract (points of interest),https://download.geofabrik.de/asia/bangladesh.html
 312,OVERTURE_PLACES_MYM_2026,"Overture Maps Foundation — places theme, release 2026-10-21.0, Mymensingh Division extract",https://stac.overturemaps.org/2026-10-21.0/places/place/collection.json
 313,WIKIDATA_MYM_2026,"Wikidata — items with coordinates in Mymensingh Division (places, not administrative units)",https://query.wikidata.org/
+314,FUEL_STATIONS_RAJ_2026,Filling stations and LPG dealers of the state-owned oil companies — Rajshahi Division,https://pocl.gov.bd/
+315,HAAT_BAZAAR_RAJ_2026,Haat-bazaar (market) lists on the national portal — Rajshahi Division DC and upazila portals,https://rajshahi.gov.bd/pages/hatbazar
+316,LOCAL_SERVICES_RAJ_2026,"Local public-service offices (utilities, engineering, social services, cooperatives, fisheries) — Rajshahi Division",https://reb.gov.bd/pages/static-pages/6922dfe0933eb65569e24707
+317,SHELTERS_RAJ_2026,"Disaster shelters (cyclone / flood shelters, killas) on the national portal — Rajshahi Division DC and upazila portals",https://<district>.gov.bd/
+318,TRANSPORT_TOURISM_RAJ_2026,Transport and tourism lists of government agencies — Rajshahi Division,https://biwta.gov.bd/pages/static-pages/6922dce3933eb65569e12937
+319,FUEL_STATIONS_RANG_2026,Filling stations and LPG dealers of the state-owned oil companies — Rangpur Division,https://pocl.gov.bd/
+320,HAAT_BAZAAR_RANG_2026,Haat-bazaar (market) lists on the national portal — Rangpur Division DC and upazila portals,https://rangpur.gov.bd/pages/hatbazar
+321,LOCAL_SERVICES_RANG_2026,"Local public-service offices (utilities, engineering, social services, cooperatives, fisheries) — Rangpur Division",https://reb.gov.bd/pages/static-pages/6922dfe0933eb65569e24707
+322,SHELTERS_RANG_2026,"Disaster shelters (cyclone / flood shelters, killas) on the national portal — Rangpur Division DC and upazila portals",https://<district>.gov.bd/
+323,TRANSPORT_TOURISM_RANG_2026,Transport and tourism lists of government agencies — Rangpur Division,https://biwta.gov.bd/pages/static-pages/6922dce3933eb65569e12937
+324,FUEL_STATIONS_DHK_2026,Filling stations and LPG dealers of the state-owned oil companies — Dhaka Division,https://pocl.gov.bd/
+325,HAAT_BAZAAR_DHK_2026,Haat-bazaar (market) lists on the national portal — Dhaka Division DC and upazila portals,https://dhaka.gov.bd/pages/hatbazar
+326,LOCAL_SERVICES_DHK_2026,"Local public-service offices (utilities, engineering, social services, cooperatives, fisheries) — Dhaka Division",https://reb.gov.bd/pages/static-pages/6922dfe0933eb65569e24707
+327,SHELTERS_DHK_2026,"Disaster shelters (cyclone / flood shelters, killas) on the national portal — Dhaka Division DC and upazila portals",https://<district>.gov.bd/
+328,TRANSPORT_TOURISM_DHK_2026,Transport and tourism lists of government agencies — Dhaka Division,https://biwta.gov.bd/pages/static-pages/6922dce3933eb65569e12937
+329,FUEL_STATIONS_CTG_2026,Filling stations and LPG dealers of the state-owned oil companies — Chattogram Division,https://pocl.gov.bd/
+330,HAAT_BAZAAR_CTG_2026,Haat-bazaar (market) lists on the national portal — Chattogram Division DC and upazila portals,https://chittagong.gov.bd/pages/hatbazar
+331,LOCAL_SERVICES_CTG_2026,"Local public-service offices (utilities, engineering, social services, cooperatives, fisheries) — Chattogram Division",https://reb.gov.bd/pages/static-pages/6922dfe0933eb65569e24707
+332,SHELTERS_CTG_2026,"Disaster shelters (cyclone / flood shelters, killas) on the national portal — Chattogram Division DC and upazila portals",https://<district>.gov.bd/
+333,TRANSPORT_TOURISM_CTG_2026,Transport and tourism lists of government agencies — Chattogram Division,https://biwta.gov.bd/pages/static-pages/6922dce3933eb65569e12937
+334,FUEL_STATIONS_KHL_2026,Filling stations and LPG dealers of the state-owned oil companies — Khulna Division,https://pocl.gov.bd/
+335,HAAT_BAZAAR_KHL_2026,Haat-bazaar (market) lists on the national portal — Khulna Division DC and upazila portals,https://khulna.gov.bd/pages/hatbazar
+336,LOCAL_SERVICES_KHL_2026,"Local public-service offices (utilities, engineering, social services, cooperatives, fisheries) — Khulna Division",https://reb.gov.bd/pages/static-pages/6922dfe0933eb65569e24707
+337,SHELTERS_KHL_2026,"Disaster shelters (cyclone / flood shelters, killas) on the national portal — Khulna Division DC and upazila portals",https://<district>.gov.bd/
+338,TRANSPORT_TOURISM_KHL_2026,Transport and tourism lists of government agencies — Khulna Division,https://biwta.gov.bd/pages/static-pages/6922dce3933eb65569e12937
+339,FUEL_STATIONS_BAR_2026,Filling stations and LPG dealers of the state-owned oil companies — Barishal Division,https://pocl.gov.bd/
+340,HAAT_BAZAAR_BAR_2026,Haat-bazaar (market) lists on the national portal — Barishal Division DC and upazila portals,https://barisal.gov.bd/pages/hatbazar
+341,LOCAL_SERVICES_BAR_2026,"Local public-service offices (utilities, engineering, social services, cooperatives, fisheries) — Barishal Division",https://reb.gov.bd/pages/static-pages/6922dfe0933eb65569e24707
+342,SHELTERS_BAR_2026,"Disaster shelters (cyclone / flood shelters, killas) on the national portal — Barishal Division DC and upazila portals",https://<district>.gov.bd/
+343,TRANSPORT_TOURISM_BAR_2026,Transport and tourism lists of government agencies — Barishal Division,https://biwta.gov.bd/pages/static-pages/6922dce3933eb65569e12937
+344,FUEL_STATIONS_SYL_2026,Filling stations and LPG dealers of the state-owned oil companies — Sylhet Division,https://pocl.gov.bd/
+345,HAAT_BAZAAR_SYL_2026,Haat-bazaar (market) lists on the national portal — Sylhet Division DC and upazila portals,https://sylhet.gov.bd/pages/hatbazar
+346,LOCAL_SERVICES_SYL_2026,"Local public-service offices (utilities, engineering, social services, cooperatives, fisheries) — Sylhet Division",https://reb.gov.bd/pages/static-pages/6922dfe0933eb65569e24707
+347,SHELTERS_SYL_2026,"Disaster shelters (cyclone / flood shelters, killas) on the national portal — Sylhet Division DC and upazila portals",https://<district>.gov.bd/
+348,TRANSPORT_TOURISM_SYL_2026,Transport and tourism lists of government agencies — Sylhet Division,https://biwta.gov.bd/pages/static-pages/6922dce3933eb65569e12937
+349,FUEL_STATIONS_MYM_2026,Filling stations and LPG dealers of the state-owned oil companies — Mymensingh Division,https://pocl.gov.bd/
+350,HAAT_BAZAAR_MYM_2026,Haat-bazaar (market) lists on the national portal — Mymensingh Division DC and upazila portals,https://mymensingh.gov.bd/pages/hatbazar
+351,LOCAL_SERVICES_MYM_2026,"Local public-service offices (utilities, engineering, social services, cooperatives, fisheries) — Mymensingh Division",https://reb.gov.bd/pages/static-pages/6922dfe0933eb65569e24707
+352,SHELTERS_MYM_2026,"Disaster shelters (cyclone / flood shelters, killas) on the national portal — Mymensingh Division DC and upazila portals",https://<district>.gov.bd/
+353,TRANSPORT_TOURISM_MYM_2026,Transport and tourism lists of government agencies — Mymensingh Division,https://biwta.gov.bd/pages/static-pages/6922dce3933eb65569e12937

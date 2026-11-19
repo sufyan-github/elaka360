@@ -21,12 +21,13 @@ export class DuplicatesController {
 
   @Get()
   @RequireAuth('places.read')
-  @ApiOperation({ summary: 'Duplicate candidates, highest score first (status: open by default, or all)' })
-  async list(@Query('status') status?: string, @Query('limit') l?: string, @Query('cursor') c?: string) {
+  @ApiOperation({ summary: 'Duplicate candidates, highest score first (status: open by default, or all; place_id: pairs involving one place)' })
+  async list(@Query('status') status?: string, @Query('limit') l?: string, @Query('cursor') c?: string, @Query('place_id') placeId?: string) {
     const st = status === 'all' ? null : status || 'open';
     if (st && !['open', ...DECISIONS].includes(st)) throw new BadRequestException('invalid status');
     const { limit, offset } = page(l, c);
-    return paged(await this.db.many<{ total: number }>(DUP_LIST_SQL, [st, limit, offset]), limit, offset);
+    const place = placeId ? idParam(placeId) : null;
+    return paged(await this.db.many<{ total: number }>(DUP_LIST_SQL, [st, limit, offset, place]), limit, offset);
   }
 
   @Post('scan')

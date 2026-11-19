@@ -49,6 +49,29 @@ await check('rajshahi district', '/v1/areas/by-path?path=rajshahi/rajshahi', (b)
   assert.equal(b.breadcrumb.at(0).level, 'country');
   assert.ok(b.place_counts.education >= 2);
 });
+// BBS Census 2022 localities: city thanas, mouzas and villages / mahallas (pipelines/localities.py)
+await check('locality counts', '/v1/stats/national', (b) => {
+  assert.equal(b.thana, 105);
+  assert.equal(b.mouza, 60292);
+  assert.equal(b.village, 104882);
+});
+await check('thana and its wards', '/v1/areas/by-path?path=rajshahi/rajshahi/rajshahi-city-corporation/boalia-thana', (b) => {
+  assert.equal(b.area.level, 'thana');
+  assert.equal(b.area.evidence_level, 'official');
+  assert.ok(b.links.filter((l) => l.relation === 'thana_ward').length >= 5);
+  assert.equal(b.place_scope.level, 'city_corporation');           // places are filed by city corporation
+});
+await check('union lists its mouzas', '/v1/areas/by-path?path=rajshahi/rajshahi/paba/damkura', (b) => {
+  assert.ok(b.children.some((c) => c.level === 'mouza'));
+  assert.equal(b.place_scope, null);
+});
+await check('coverage report', '/v1/stats/coverage/10002', (b) => {
+  assert.equal(b.area.area.id, 10002);
+  assert.equal(b.rows.length, 8);                                   // Rajshahi Division's districts
+  assert.ok(b.area.places > 0 && b.area.villages > 0);
+  assert.ok(b.rows.every((r) => Array.isArray(r.missing)));
+});
+await check('no coverage report below upazila', '/v1/stats/coverage/40001', null, 404);
 await check('unknown area 404', '/v1/areas/by-path?path=nowhere/at-all', null, 404);
 await check('bad path 400', '/v1/areas/by-path?path=' + encodeURIComponent("a/'b"), null, 400);
 await check('categories', '/v1/categories', (b) => {

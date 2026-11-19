@@ -64,7 +64,7 @@ function dbOf(env: Env): D1Database {
 }
 
 const LEVEL_ORDER = ['country', 'division', 'district', 'upazila', 'city_corporation', 'pourashava', 'union', 'ward', 'mouza', 'village', 'thana'];
-const LEVELS = new Set(['division', 'district', 'upazila', 'city_corporation', 'pourashava', 'union', 'ward']);
+const LEVELS = new Set(['division', 'district', 'upazila', 'city_corporation', 'pourashava', 'union', 'ward', 'thana', 'mouza', 'village']);
 const LOCATE_ORDER = ['union', 'pourashava', 'city_corporation', 'upazila', 'district', 'division'];
 const SLUG_RE = /^[a-z0-9-]{1,120}$/;
 const CATEGORY_RE = /^[a-z_]{2,40}(\.[a-z_]{2,40})?$/;
@@ -340,6 +340,13 @@ const GET: [RegExp, Handler][] = [
       public_include_unverified: true, staff_require_2fa: true, version: env.APP_VERSION ?? 'dev' };
   }],
   [/^\/v1\/stats\/national$/, (_m, _u, _r, env) => meta(dbOf(env), 'stats:national')],
+  [/^\/v1\/stats\/coverage$/, (_m, _u, _r, env) => meta(dbOf(env), 'coverage:1')],
+  [/^\/v1\/stats\/coverage\/([^/]+)$/, async (m, _u, _r, env) => {
+    const id = idParam(m[1]);
+    const doc = await dbOf(env).prepare('SELECT value FROM meta WHERE key = ?').bind(`coverage:${id}`).first<{ value: string }>();
+    if (!doc) throw notFound(`no coverage report for area ${id} (country, division, district or upazila only)`);
+    return parse(doc.value);
+  }],
   [/^\/v1\/search$/, async (_m, u, _r, env) => {
     const q = searchText(u.searchParams.get('q'));
     const type = u.searchParams.get('type');
@@ -389,8 +396,8 @@ const GET: [RegExp, Handler][] = [
     const offset = cursor.decode(u.searchParams.get('cursor'));
     const parent = intParam(u.searchParams.get('parent_id'), 'parent_id', { min: 1 });
     const stmt = parent
-      ? dbOf(env).prepare('SELECT summary FROM areas WHERE level = ? AND parent_id = ? ORDER BY name_en LIMIT ? OFFSET ?').bind(level, parent, limit, offset)
-      : dbOf(env).prepare('SELECT summary FROM areas WHERE level = ? ORDER BY name_en LIMIT ? OFFSET ?').bind(level, limit, offset);
+      ? dbOf(env).prepare('SELECT summary FROM areas WHERE level = ? AND parent_id = ? ORDER BY name_en, id LIMIT ? OFFSET ?').bind(level, parent, limit, offset)
+      : dbOf(env).prepare('SELECT summary FROM areas WHERE level = ? ORDER BY name_en, id LIMIT ? OFFSET ?').bind(level, limit, offset);
     const items = (await stmt.all<{ summary: string }>()).results.map((r) => parse(r.summary));
     return { items, next_cursor: items.length === limit ? cursor.encode(offset + limit) : null };
   }],

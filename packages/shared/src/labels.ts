@@ -21,10 +21,15 @@ export const CHILD_LEVELS: Partial<Record<AdminLevel, AdminLevel[]>> = {
   division: ['district'],
   district: ['upazila', 'city_corporation'],
   upazila: ['union', 'pourashava'],
-  city_corporation: ['ward'],
+  city_corporation: ['thana', 'ward'],
   pourashava: ['ward'],
-  union: ['ward', 'village'],
+  union: ['ward', 'mouza'],
+  ward: ['mouza'],
+  mouza: ['village'],
 };
+
+/** Levels that places are filed under (places carry these area ids); other levels show their nearest such ancestor's places. */
+export const PLACE_LEVELS: AdminLevel[] = ['country', 'division', 'district', 'upazila', 'union', 'city_corporation'];
 
 /** Name in the active locale, falling back to the other one. */
 export function nameOf(x: Named, locale: Locale): string {

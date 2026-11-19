@@ -27,6 +27,9 @@ PARAMS = {
     "BOUNDARY_LEVELS_SQL": [],
     "BOUNDARY_SQL": ["20015"],
     "CHILD_BOUNDARIES_SQL": ["20015", "'{union,pourashava}'", "0.0001"],
+    "AREA_LINKS_SQL": ["80088"],                       # Boalia Thana (RCC): its wards
+    "COVERAGE_PLACES_SQL": ["10002", "'district'"],
+    "COVERAGE_AREAS_SQL": ["10002", "'{district}'"],
     # places
     "CATEGORIES_SQL": [],
     "PLACE_LIST_SQL": ["20015", "'education'", "NULL", "20", "0", "'relevance'"],
@@ -59,8 +62,9 @@ PARAMS = {
     "ADMIN_USERS_SQL": ["NULL", "NULL", "50", "0"],
     # quality
     "DUP_MATCH_SQL": ["'রাজশাহী বিশ্ববিদ্যালয়'", "'University of Rajshahi'", "1", "24.37", "88.637", "NULL"],
-    "DUP_LIST_SQL": ["NULL", "50", "0"],
+    "DUP_LIST_SQL": ["NULL", "50", "0", "NULL"],
     "DUP_BLOCKING_SQL": ["1"],
+    "DUP_BULK_SCAN_SQL": ["101"],                      # full scan; a score above 100 inserts nothing
     # open data
     "OD_AREAS_SQL": ["NULL", "1000", "0"],
     "OD_PLACES_SQL": ["NULL", "1000", "0"],
@@ -72,6 +76,7 @@ EXPECT_ROWS = {  # minimum rows each statement must return on the seed (public =
     "AREA_SEARCH_SQL": 1, "CATEGORIES_SQL": 95, "BREADCRUMB_SQL": 4, "PLACE_LIST_SQL": 2, "PLACE_COUNT_SQL": 1, "AREA_DOCS_SQL": 95,
     "PLACE_GEO_SQL": 5, "PLACE_DOCS_SQL": 5, "TREE_SQL": 73, "LOCATE_SQL": 1, "BOUNDARY_SQL": 1, "CHILD_BOUNDARIES_SQL": 80, "SUGGEST_SQL": 1,
     "ADMIN_STATS_SQL": 1, "ADMIN_AREA_LIST_SQL": 8, "ADMIN_AREA_SQL": 1, "ADMIN_PLACE_LIST_SQL": 8, "ADMIN_PLACE_SQL": 1, "ADMIN_SOURCES_SQL": 20,
+    "AREA_LINKS_SQL": 1, "COVERAGE_PLACES_SQL": 9, "COVERAGE_AREAS_SQL": 9,
     "PLACE_ID_SQL": 1, "DUP_MATCH_SQL": 1, "OD_AREAS_SQL": 95, "OD_PLACES_SQL": 5, "OD_SOURCES_SQL": 5,
 }
 

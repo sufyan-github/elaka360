@@ -288,7 +288,7 @@ test('duplicate detection: flags lookalikes, blocks publishing ≥95, staff deci
   assert.equal(blocked.status, 400);
   assert.match(blocked.json.detail, /suspected duplicate/);
 
-  const open = await call('GET', '/v1/admin/duplicates', { token: T });
+  const open = await call('GET', `/v1/admin/duplicates?place_id=${created.json.id}`, { token: T });   // the queue holds thousands
   const pair = open.json.items.find((d) => d.place_b?.id === created.json.id);
   assert.ok(pair, 'pair listed for review');
   const merged = await call('POST', `/v1/admin/duplicates/${pair.id}/decision`, { token: T, body: { decision: 'merged', note: 'Same university, created twice' } });

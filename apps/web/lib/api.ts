@@ -1,6 +1,6 @@
 import 'server-only';
 import type {
-  AdminAreaSummary, AreaDetail, AreaStats, AreaTreeNode, Category, EmergencyNumber, Locale, NationalStats, Paginated, Place, PlaceSummary, Problem, Review,
+  AdminAreaSummary, AreaDetail, AreaStats, AreaTreeNode, Category, CoverageReport, EmergencyNumber, Locale, NationalStats, Paginated, Place, PlaceSummary, Problem, Review,
 } from '@elaka360/shared';
 import { nameOf } from '@elaka360/shared';
 import { apiFetch } from './edge';
@@ -45,6 +45,7 @@ export interface SearchResult { engine: string; areas: AdminAreaSummary[]; place
 
 export const api = {
   nationalStats: () => get<NationalStats>('/v1/stats/national'),
+  coverage: (areaId?: number) => get<CoverageReport>(areaId && areaId !== 1 ? `/v1/stats/coverage/${areaId}` : '/v1/stats/coverage', 3600),
   areaStats: (id: number) => get<AreaStats>(`/v1/areas/${id}/stats`),
   tree: (rootId = 1, depth = 2) => get<AreaTreeNode>(`/v1/areas/tree${qs({ root_id: rootId, depth })}`, 3600),
   areas: (level: string, parentId?: number, limit = 200) =>

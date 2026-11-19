@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS areas (
   id INTEGER PRIMARY KEY, path TEXT NOT NULL UNIQUE, parent_id INTEGER, level TEXT NOT NULL, depth INTEGER NOT NULL,
   name_en TEXT, summary TEXT NOT NULL, detail TEXT NOT NULL, stats TEXT NOT NULL, h TEXT NOT NULL);
 CREATE INDEX IF NOT EXISTS areas_level_parent ON areas(level, parent_id);
+CREATE INDEX IF NOT EXISTS areas_level_name ON areas(level, name_en, id);   -- /v1/areas?level=village: 105k rows
 
 CREATE TABLE IF NOT EXISTS places (
   id INTEGER PRIMARY KEY, slug TEXT NOT NULL UNIQUE, summary TEXT NOT NULL, detail TEXT NOT NULL, h TEXT NOT NULL);

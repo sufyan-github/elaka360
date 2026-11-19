@@ -39,6 +39,40 @@ Exceptions that never show unsourced data, in any mode:
 
 `PUBLIC_INCLUDE_UNVERIFIED=false` switches to strict mode: non-eligible records return 404 and are left out of lists, search and counts. CI tests both modes.
 
+## Public record status (eight steps)
+
+Place pages show one status, worked out from three stored fields (`packages/shared/src/trust.ts`, `recordStatus`).
+The first rule that matches wins:
+
+| Status | When | Stored fields |
+|---|---|---|
+| Archived | kept for history | `status = archived` |
+| Inactive / closed | no longer operating | `status` is `inactive` or `closed` |
+| Needs review | sources conflict, or a review is open | `verification_status` is `disputed` or `pending` |
+| Field verified | checked by a field visit or a direct confirmation | `verification_status = verified` |
+| Officially listed (Officially Verified) | a government or institutional source lists it | `evidence_level = official` |
+| Source verified | a traceable organisation's or secondary source lists it | `evidence_level = secondary` |
+| Community verified | confirmed by trusted contributors | not produced yet: the platform does not record contributor confirmations |
+| Unverified | everything else, including every imported community dataset | `evidence_level` is `community` or `unverified` |
+
+"Officially listed" and "source verified" say a source lists the record. They are not a check that it operates today;
+only a field check sets that, and the page says so. Importing a record never makes it verified.
+
+## Confidence score
+
+Every place page also shows a 0–100 score with its parts (`confidenceOf` in `packages/shared/src/trust.ts`), labelled
+as an indicator and not a certification:
+
+| Part | Points |
+|---|---|
+| Source quality | official 40, secondary 28, community 12, none 0 |
+| Corroboration | listed by 2 sources 5, by 3 or more 10 |
+| Location | map point 20, else a written address 8 |
+| Completeness | 5 each: Bangla name, contact (phone, e-mail or website), address, sub-category |
+| Recency | field check within 1 year 10, within 3 years 5 (a source's own date does not count) |
+
+Without a recent field check a record scores at most 90.
+
 ## What changed in November 2026
 
 The v0.1 seed marked the whole nuhil hierarchy as verified and production-eligible. That is 4,540 unions, 495 upazilas and 64 districts. Under this policy:

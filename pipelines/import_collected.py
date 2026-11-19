@@ -10,7 +10,7 @@ every change is recorded in `changes` (written to data/seed/qa/collected_changes
 """
 import difflib, json, math, os, re
 from collections import defaultdict
-from collected import (PolygonIndex, SOURCES, bn_key, check_manifest, en_key, en_similarity, evidence_for, haversine_m,
+from collected import (PolygonIndex, _polys, SOURCES, bn_key, check_manifest, en_key, en_similarity, evidence_for, haversine_m,
                        manifests, name_similarity, read_csv, romanize_bn)
 from reconcile import latin_key, upazila_key
 from trust import nfc
@@ -111,7 +111,7 @@ def register_sources(SRC, SOURCE_META):
     division only appends ids: earlier divisions' seed files stay byte-identical."""
     div_index = {d["name"]: i for i, d in enumerate(DIVISIONS)}
     # the non-government sources added after all eight divisions get ids after every government source, in the same order
-    for m in sorted(_manifests(), key=lambda m: (kind_of(m) in COMMUNITY_KINDS, div_index.get(division_of(m), len(div_index)),
+    for m in sorted(_manifests(), key=lambda m: (SOURCE_BATCH.get(kind_of(m), 0), div_index.get(division_of(m), len(div_index)),
                                                  os.path.basename(m["_dir"]))):
         problems.extend(check_manifest(m))
         k = m["key"]
@@ -576,6 +576,9 @@ def thana_key(name):
 PLACE_PRIORITY = ["ugc", "dgme", "doa_monuments", "caab", "railway", "brtc", "metro_police_thanas", "district_police",
                   "range_police", "fscd", "dghs_hris", "banbeis", "dpe_ipemis", "portal_offices", "bdpost", "district_banks",
                   "district_transport", "tourist_spots", "police_hq_2020",
+                  # government lists added Nov 2026: local service offices, haat-bazaars, shelters, fuel stations,
+                  # transport and tourism lists
+                  "local_services", "haat_bazaar", "shelters", "fuel_stations", "transport_tourism",
                   # non-government sources (shown with their own evidence label): organisations' own branch lists,
                   # then encyclopedic, then community datasets
                   "org_branches", "wikidata", "osm", "overture"]   # by source kind (DIVISIONS.md)
@@ -605,6 +608,9 @@ GROUP = {"religious": "tourism"}
 # without their files.
 LAYER_KINDS = {"overture"}
 COMMUNITY_KINDS = {"osm", "overture", "org_branches", "wikidata"}    # non-government sources added Nov 2026
+# sources added in later batches get source ids after every earlier source, so existing ids never move
+SOURCE_BATCH = {**{k: 1 for k in COMMUNITY_KINDS},
+                **{k: 2 for k in ("local_services", "haat_bazaar", "shelters", "fuel_stations", "transport_tourism")}}
 # SEED_SKIP_KINDS=osm,overture builds without those source kinds (to compare against an earlier seed)
 SKIP_KINDS = {k for k in os.environ.get("SEED_SKIP_KINDS", "").split(",") if k}
 PERSONAL_MAIL_KINDS = {"dghs_hris"}     # registry mixes office mailboxes with staff gmail
@@ -1061,6 +1067,8 @@ def build_places(rows, base_places, cat_by_key, district_features):
                         register(rec, gkey)
                     st["added"] += 1
 
+    _place_in_new_upazilas(out, rows)
+
     # finalise evidence, flags and provenance
     for p in out:
         # evidence_source: the source that confirms the record; source: where its details came from (may differ for pilots)
@@ -1077,6 +1085,66 @@ def build_places(rows, base_places, cat_by_key, district_features):
 
 
 RANK = {"official": 3, "secondary": 2, "community": 1, "unverified": 0}
+
+# Upazilas created after most national lists were compiled (Lalmai 2017, Karnaphuli 2016, Guimara 2014, Eidgaon 2021,
+# Madhyanagar 2022, Dasar 2021): those lists still file their facilities under the parent upazila. (Zianagar is
+# Indurkani's former name, not a new upazila, and has no such records.)
+NEW_UPAZILAS = {("Cumilla", "Lalmai"), ("Chattogram", "Karnafuli"), ("Khagrachhari", "Guimara"), ("Cox's Bazar", "Eidgaon"),
+                ("Sunamganj", "Madhyanagar"), ("Madaripur", "Dasar")}
+NEW_UPAZILA_INSET_M = 300     # the point must lie this far inside the new upazila's boundary (boundary sets are approximate)
+
+
+def _edge_distance_m(lon, lat, geom):
+    """Shortest distance in metres from a point to the edges of a (Multi)Polygon (local equirectangular projection)."""
+    kx, ky = 111_320 * math.cos(math.radians(lat)), 110_574
+    best = float("inf")
+    for poly in _polys(geom):
+        for ring in poly:
+            for (x1, y1, *_), (x2, y2, *_) in zip(ring, ring[1:]):
+                ax, ay, bx, by = (x1 - lon) * kx, (y1 - lat) * ky, (x2 - lon) * kx, (y2 - lat) * ky
+                dx, dy = bx - ax, by - ay
+                t = max(0.0, min(1.0, -(ax * dx + ay * dy) / ((dx * dx + dy * dy) or 1e-12)))
+                best = min(best, math.hypot(ax + t * dx, ay + t * dy))
+    return best
+
+
+def _place_in_new_upazilas(places, rows):
+    """File a place under a new upazila when its point lies well inside that upazila's boundary and outside the
+    upazila it is filed under. Places inside a city corporation and places without a point are left alone. Every
+    move is logged (qa/collected_changes.csv); its union becomes the new upazila's union that holds the point, if any."""
+    by_id = {r["id"]: r for r in rows}
+    targets = [r for r in rows if r["level"] == "upazila" and r.get("_boundary")
+               and (by_id[r["parent_id"]]["name_en"], r["name_en"]) in NEW_UPAZILAS]
+    missing = NEW_UPAZILAS - {(by_id[r["parent_id"]]["name_en"], r["name_en"]) for r in targets}
+    assert not missing, f"new upazilas without a boundary: {missing}"
+    new_idx = PolygonIndex([{"type": "Feature", "geometry": r["_boundary"], "properties": {"id": r["id"]}} for r in targets])
+    target_ids = {r["id"] for r in targets}
+    union_idx = PolygonIndex([{"type": "Feature", "geometry": r["_boundary"], "properties": {"id": r["id"]}}
+                              for r in rows if r["level"] == "union" and r.get("_boundary") and r["parent_id"] in target_ids])
+    moved = 0
+    for p in places:
+        if p.get("lat") is None or p.get("city_corporation_id"):
+            continue
+        hit = new_idx.find(p["lon"], p["lat"])
+        if not hit:
+            continue
+        b = by_id[hit[0]["properties"]["id"]]
+        if p.get("upazila_id") == b["id"] or p.get("district_id") != b["parent_id"]:
+            continue
+        cur = by_id.get(p.get("upazila_id"))
+        if cur and cur.get("_boundary") and PolygonIndex([{"type": "Feature", "geometry": cur["_boundary"], "properties": {}}]).find(p["lon"], p["lat"]):
+            continue
+        if _edge_distance_m(p["lon"], p["lat"], b["_boundary"]) < NEW_UPAZILA_INSET_M:
+            continue
+        un = union_idx.find(p["lon"], p["lat"])
+        if not p.get("_layer"):     # the uncommitted layer is not logged: the committed QA files must not depend on it
+            log(p["slug"], "upazila_by_point",
+                f"{cur['name_en'] if cur else 'no upazila'} -> {b['name_en']} (point {NEW_UPAZILA_INSET_M}+ m inside its boundary)",
+                p.get("source") or "")
+            moved += 1
+        p["upazila_id"] = b["id"]
+        p["union_id"] = un[0]["properties"]["id"] if un else None
+    log("new_upazilas", "upazila_by_point_total", f"{moved} committed places", "")
 
 
 def _merge(p, rec):

@@ -19,4 +19,12 @@ BEGIN;
 \ir boundaries/barishal.sql
 \ir boundaries/sylhet.sql
 \ir boundaries/mymensingh.sql
+\ir localities/rajshahi.sql
+\ir localities/rangpur.sql
+\ir localities/dhaka.sql
+\ir localities/chattogram.sql
+\ir localities/khulna.sql
+\ir localities/barishal.sql
+\ir localities/sylhet.sql
+\ir localities/mymensingh.sql
 COMMIT;

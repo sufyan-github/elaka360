@@ -874,6 +874,171 @@
    "key": "ORG_BRANCHES_MYM_2026",
    "name": "Organisations' own branch and outlet lists — Mymensingh Division",
    "url": "https://www.sonalibank.com.bd/atm_location.php"
+  },
+  {
+   "key": "FUEL_STATIONS_RAJ_2026",
+   "name": "Filling stations and LPG dealers of the state-owned oil companies — Rajshahi Division",
+   "url": "https://pocl.gov.bd/"
+  },
+  {
+   "key": "HAAT_BAZAAR_RAJ_2026",
+   "name": "Haat-bazaar (market) lists on the national portal — Rajshahi Division DC and upazila portals",
+   "url": "https://rajshahi.gov.bd/pages/hatbazar"
+  },
+  {
+   "key": "LOCAL_SERVICES_RAJ_2026",
+   "name": "Local public-service offices (utilities, engineering, social services, cooperatives, fisheries) — Rajshahi Division",
+   "url": "https://reb.gov.bd/pages/static-pages/6922dfe0933eb65569e24707"
+  },
+  {
+   "key": "TRANSPORT_TOURISM_RAJ_2026",
+   "name": "Transport and tourism lists of government agencies — Rajshahi Division",
+   "url": "https://biwta.gov.bd/pages/static-pages/6922dce3933eb65569e12937"
+  },
+  {
+   "key": "FUEL_STATIONS_RANG_2026",
+   "name": "Filling stations and LPG dealers of the state-owned oil companies — Rangpur Division",
+   "url": "https://pocl.gov.bd/"
+  },
+  {
+   "key": "HAAT_BAZAAR_RANG_2026",
+   "name": "Haat-bazaar (market) lists on the national portal — Rangpur Division DC and upazila portals",
+   "url": "https://rangpur.gov.bd/pages/hatbazar"
+  },
+  {
+   "key": "LOCAL_SERVICES_RANG_2026",
+   "name": "Local public-service offices (utilities, engineering, social services, cooperatives, fisheries) — Rangpur Division",
+   "url": "https://reb.gov.bd/pages/static-pages/6922dfe0933eb65569e24707"
+  },
+  {
+   "key": "TRANSPORT_TOURISM_RANG_2026",
+   "name": "Transport and tourism lists of government agencies — Rangpur Division",
+   "url": "https://biwta.gov.bd/pages/static-pages/6922dce3933eb65569e12937"
+  },
+  {
+   "key": "FUEL_STATIONS_DHK_2026",
+   "name": "Filling stations and LPG dealers of the state-owned oil companies — Dhaka Division",
+   "url": "https://pocl.gov.bd/"
+  },
+  {
+   "key": "HAAT_BAZAAR_DHK_2026",
+   "name": "Haat-bazaar (market) lists on the national portal — Dhaka Division DC and upazila portals",
+   "url": "https://dhaka.gov.bd/pages/hatbazar"
+  },
+  {
+   "key": "LOCAL_SERVICES_DHK_2026",
+   "name": "Local public-service offices (utilities, engineering, social services, cooperatives, fisheries) — Dhaka Division",
+   "url": "https://reb.gov.bd/pages/static-pages/6922dfe0933eb65569e24707"
+  },
+  {
+   "key": "TRANSPORT_TOURISM_DHK_2026",
+   "name": "Transport and tourism lists of government agencies — Dhaka Division",
+   "url": "https://biwta.gov.bd/pages/static-pages/6922dce3933eb65569e12937"
+  },
+  {
+   "key": "FUEL_STATIONS_CTG_2026",
+   "name": "Filling stations and LPG dealers of the state-owned oil companies — Chattogram Division",
+   "url": "https://pocl.gov.bd/"
+  },
+  {
+   "key": "HAAT_BAZAAR_CTG_2026",
+   "name": "Haat-bazaar (market) lists on the national portal — Chattogram Division DC and upazila portals",
+   "url": "https://chittagong.gov.bd/pages/hatbazar"
+  },
+  {
+   "key": "LOCAL_SERVICES_CTG_2026",
+   "name": "Local public-service offices (utilities, engineering, social services, cooperatives, fisheries) — Chattogram Division",
+   "url": "https://reb.gov.bd/pages/static-pages/6922dfe0933eb65569e24707"
+  },
+  {
+   "key": "TRANSPORT_TOURISM_CTG_2026",
+   "name": "Transport and tourism lists of government agencies — Chattogram Division",
+   "url": "https://biwta.gov.bd/pages/static-pages/6922dce3933eb65569e12937"
+  },
+  {
+   "key": "FUEL_STATIONS_KHL_2026",
+   "name": "Filling stations and LPG dealers of the state-owned oil companies — Khulna Division",
+   "url": "https://pocl.gov.bd/"
+  },
+  {
+   "key": "HAAT_BAZAAR_KHL_2026",
+   "name": "Haat-bazaar (market) lists on the national portal — Khulna Division DC and upazila portals",
+   "url": "https://khulna.gov.bd/pages/hatbazar"
+  },
+  {
+   "key": "LOCAL_SERVICES_KHL_2026",
+   "name": "Local public-service offices (utilities, engineering, social services, cooperatives, fisheries) — Khulna Division",
+   "url": "https://reb.gov.bd/pages/static-pages/6922dfe0933eb65569e24707"
+  },
+  {
+   "key": "SHELTERS_KHL_2026",
+   "name": "Disaster shelters (cyclone / flood shelters, killas) on the national portal — Khulna Division DC and upazila portals",
+   "url": "https://<district>.gov.bd/"
+  },
+  {
+   "key": "TRANSPORT_TOURISM_KHL_2026",
+   "name": "Transport and tourism lists of government agencies — Khulna Division",
+   "url": "https://biwta.gov.bd/pages/static-pages/6922dce3933eb65569e12937"
+  },
+  {
+   "key": "FUEL_STATIONS_BAR_2026",
+   "name": "Filling stations and LPG dealers of the state-owned oil companies — Barishal Division",
+   "url": "https://pocl.gov.bd/"
+  },
+  {
+   "key": "HAAT_BAZAAR_BAR_2026",
+   "name": "Haat-bazaar (market) lists on the national portal — Barishal Division DC and upazila portals",
+   "url": "https://barisal.gov.bd/pages/hatbazar"
+  },
+  {
+   "key": "LOCAL_SERVICES_BAR_2026",
+   "name": "Local public-service offices (utilities, engineering, social services, cooperatives, fisheries) — Barishal Division",
+   "url": "https://reb.gov.bd/pages/static-pages/6922dfe0933eb65569e24707"
+  },
+  {
+   "key": "TRANSPORT_TOURISM_BAR_2026",
+   "name": "Transport and tourism lists of government agencies — Barishal Division",
+   "url": "https://biwta.gov.bd/pages/static-pages/6922dce3933eb65569e12937"
+  },
+  {
+   "key": "FUEL_STATIONS_SYL_2026",
+   "name": "Filling stations and LPG dealers of the state-owned oil companies — Sylhet Division",
+   "url": "https://pocl.gov.bd/"
+  },
+  {
+   "key": "HAAT_BAZAAR_SYL_2026",
+   "name": "Haat-bazaar (market) lists on the national portal — Sylhet Division DC and upazila portals",
+   "url": "https://sylhet.gov.bd/pages/hatbazar"
+  },
+  {
+   "key": "LOCAL_SERVICES_SYL_2026",
+   "name": "Local public-service offices (utilities, engineering, social services, cooperatives, fisheries) — Sylhet Division",
+   "url": "https://reb.gov.bd/pages/static-pages/6922dfe0933eb65569e24707"
+  },
+  {
+   "key": "TRANSPORT_TOURISM_SYL_2026",
+   "name": "Transport and tourism lists of government agencies — Sylhet Division",
+   "url": "https://biwta.gov.bd/pages/static-pages/6922dce3933eb65569e12937"
+  },
+  {
+   "key": "FUEL_STATIONS_MYM_2026",
+   "name": "Filling stations and LPG dealers of the state-owned oil companies — Mymensingh Division",
+   "url": "https://pocl.gov.bd/"
+  },
+  {
+   "key": "HAAT_BAZAAR_MYM_2026",
+   "name": "Haat-bazaar (market) lists on the national portal — Mymensingh Division DC and upazila portals",
+   "url": "https://mymensingh.gov.bd/pages/hatbazar"
+  },
+  {
+   "key": "LOCAL_SERVICES_MYM_2026",
+   "name": "Local public-service offices (utilities, engineering, social services, cooperatives, fisheries) — Mymensingh Division",
+   "url": "https://reb.gov.bd/pages/static-pages/6922dfe0933eb65569e24707"
+  },
+  {
+   "key": "TRANSPORT_TOURISM_MYM_2026",
+   "name": "Transport and tourism lists of government agencies — Mymensingh Division",
+   "url": "https://biwta.gov.bd/pages/static-pages/6922dce3933eb65569e12937"
   }
  ],
  "heldBack": [
@@ -926,8 +1091,8 @@
   },
   {
    "area": "wards/villages",
-   "gap": "No wards, mouzas or villages.",
-   "fix": "BBS mouza/village lists."
+   "gap": "City and pourashava wards, mouzas, villages / mahallas and city thanas come from BBS Census 2022 with English names only: no Bangla names, coordinates or boundaries for mouzas and villages, and no union wards (9 per union).",
+   "fix": "Bangla names from a second official source (not transliteration); union wards from LGD."
   },
   {
    "area": "area",

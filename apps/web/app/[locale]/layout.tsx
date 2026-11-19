@@ -72,6 +72,7 @@ export default async function LocaleLayout({ children, params }: Props) {
             <nav aria-label={t('footerNav')} className="flex flex-wrap gap-x-4 gap-y-2 border-t border-line pt-4">
               <Link href="/about">{t('about')}</Link>
               <Link href="/data-policy">{t('dataPolicy')}</Link>
+              <Link href="/coverage">{t('coverage')}</Link>
               <Link href="/guidelines">{t('guidelines')}</Link>
               <Link href="/privacy">{t('privacy')}</Link>
               <Link href="/terms">{t('terms')}</Link>

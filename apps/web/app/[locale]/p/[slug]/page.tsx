@@ -2,7 +2,7 @@ import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Globe, Mail, MapPin, Navigation, Phone, Star } from 'lucide-react';
-import { formatDate, formatNumber, type Locale } from '@elaka360/shared';
+import { confidenceOf, formatDate, formatNumber, recordStatus, type Locale } from '@elaka360/shared';
 import { ApiError, api, categoryName } from '@/lib/api';
 import { areaLabel, asLocale, digits, localName, otherLocale, otherName } from '@/lib/locale';
 import { localeAlternates } from '@/lib/meta';
@@ -62,6 +62,7 @@ export default async function PlacePage({ params }: Props) {
   const [categories, reviews] = await Promise.all([api.categories(), api.reviews(slug).catch(() => ({ items: [], next_cursor: null }))]);
   const Icon = categoryIcon(p.category_key);
   const hasPoint = p.lat !== null && p.lon !== null;
+  const confidence = confidenceOf(p);
   const directions = hasPoint ? `https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lon}` : null;
   // keys starting with `_` are internal (source ids, merge notes); only show plain values
   const attrs = Object.entries(p.attributes ?? {}).filter(
@@ -161,6 +162,25 @@ export default async function PlacePage({ params }: Props) {
           {!p.phones.length && !p.email && !p.website && <p className="text-muted">{t('contactUnverified')}</p>}
         </Card>
         {hasPoint && <MapView point={[p.lon!, p.lat!]} linkDistricts={false} className="mt-3 h-56" />}
+      </Section>
+
+      <Section title={t('trustTitle')} id="trust">
+        <Card className="p-4 text-sm">
+          <p><span className="font-semibold">{t(`status.${recordStatus(p)}`)}</span> — {t(`statusHint.${recordStatus(p)}`)}</p>
+          <div className="mt-3 flex items-baseline gap-2">
+            <span className="text-2xl font-bold tabular-nums">{formatNumber(confidence.score, locale)}</span>
+            <span className="text-muted">/ {formatNumber(100, locale)} · {t('confidence')}</span>
+          </div>
+          <ul className="mt-2 grid gap-1 sm:grid-cols-2">
+            {confidence.parts.map((x) => (
+              <li key={x.key} className="flex justify-between gap-2 border-b border-line py-1 last:border-0">
+                <span>{t(`confidencePart.${x.key}`)}</span>
+                <span className="tabular-nums text-muted">{formatNumber(x.points, locale)} / {formatNumber(x.max, locale)}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-2 text-xs text-muted">{t('confidenceNote')}</p>
+        </Card>
       </Section>
 
       <Section title={reviews.items.length ? t('reviewsCount', { count: formatNumber(p.rating_count, locale) }) : t('reviews')} id="reviews">

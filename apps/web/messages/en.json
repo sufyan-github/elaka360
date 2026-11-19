@@ -12,7 +12,8 @@
     "privacy": "Privacy",
     "terms": "Terms of use",
     "contact": "Contact",
-    "disclaimer": "Elaka360 is an independent initiative; it is not affiliated with the Government of Bangladesh. In an emergency, call 999."
+    "disclaimer": "Elaka360 is an independent initiative; it is not affiliated with the Government of Bangladesh. In an emergency, call 999.",
+    "coverage": "Data coverage"
   },
   "Header": {
     "home": "Elaka360 — Home",
@@ -119,7 +120,8 @@
     "sourcedCount": "{count} sourced",
     "allSourced": "All sourced",
     "pending": "{n, plural, one {{count} more area is} other {{count} more areas are}} awaiting verification.",
-    "sourcesNote": "The numbers come straight from the database. “Sourced” means matched against a source such as Wikipedia, the census or newspapers; the rest are not verified, and their pages say so. Sources: Wikipedia, BBS Census 2022 (compiled by citypopulation.de), The Financial Express; the community dataset of the administrative structure (nuhil/bangladesh-geocode) is awaiting verification. <link>Data & verification policy</link>"
+    "sourcesNote": "The numbers come straight from the database. “Sourced” means matched against a source such as Wikipedia, the census or newspapers; the rest are not verified, and their pages say so. Sources: Wikipedia, BBS Census 2022 (compiled by citypopulation.de), The Financial Express; the community dataset of the administrative structure (nuhil/bangladesh-geocode) is awaiting verification. <link>Data & verification policy</link>",
+    "localities": "Also {villages} villages and mahallas, {mouzas} mouzas and {thanas} city thanas from the 2022 census. <link>How complete is the data?</link>"
   },
   "Area": {
     "notFound": "Area not found",
@@ -141,7 +143,13 @@
     "emptyTitle": "No published places in this area yet",
     "emptyBody": "You can add a place you know — it will be published after it has been checked.",
     "addPlace": "Add a new place",
-    "website": "Official website"
+    "website": "Official website",
+    "noBanglaName": "No Bangla name for this area in any source yet; the name is shown as BBS prints it.",
+    "thanaOf": "Police thana",
+    "thanaWards": "Wards in this thana",
+    "quickSearchIn": "Quick search in {area}",
+    "placesIn": "Places in {area}",
+    "scopeNote": "Places are filed by union, upazila or city corporation, so these are the places in {area}."
   },
   "Place": {
     "notFound": "Not found",
@@ -157,7 +165,37 @@
     "reviews": "Reviews",
     "reviewsCount": "Reviews ({count})",
     "noReviews": "No reviews yet.",
-    "policyNote": "Under the <link>verification policy</link>, every fact shows its source and verification status."
+    "policyNote": "Under the <link>verification policy</link>, every fact shows its source and verification status.",
+    "trustTitle": "Record status and confidence",
+    "confidence": "confidence",
+    "status": {
+      "officially_verified": "Officially listed",
+      "source_verified": "Source verified",
+      "field_verified": "Field verified",
+      "community_verified": "Community verified",
+      "unverified": "Unverified",
+      "needs_review": "Needs review",
+      "inactive_closed": "Inactive / closed",
+      "archived": "Archived"
+    },
+    "statusHint": {
+      "officially_verified": "a government or institutional source lists it. That is not a check that it is open today.",
+      "source_verified": "a traceable organisation's or secondary source lists it, not yet a government one.",
+      "field_verified": "checked by a field visit or a direct confirmation.",
+      "community_verified": "confirmed by trusted local contributors.",
+      "unverified": "collected from a community dataset or a single listing and not yet confirmed independently.",
+      "needs_review": "its details conflict between sources or are being reviewed.",
+      "inactive_closed": "reported as no longer operating.",
+      "archived": "kept for historical reference."
+    },
+    "confidencePart": {
+      "source": "Source quality",
+      "corroboration": "Listed by more than one source",
+      "location": "Location on the map",
+      "completeness": "Details (Bangla name, contact, address, type)",
+      "recency": "Recent field check"
+    },
+    "confidenceNote": "Worked out from this record's own details: an indicator to help you judge it, not an official certification."
   },
   "PlaceAttr": {
     "faculties": "Faculties",
@@ -729,6 +767,42 @@
     "kind": {
       "district": "District",
       "division": "Division"
+    }
+  },
+  "Coverage": {
+    "title": "Data coverage",
+    "titleOf": "Data coverage: {area}",
+    "description": "How complete Elaka360's records are, area by area: places, evidence, map points, contacts and essential services.",
+    "intro": "What the database holds for each area, so gaps can be filled first. Areas with the fewest records per person are listed first.",
+    "caveat": "These are counts of records, not a measure of what exists on the ground. A missing service means no record of it here, not that there is none. No area is marked complete.",
+    "up": "Up one level",
+    "places": "Places",
+    "official": "Official source",
+    "withPoint": "On the map",
+    "withContact": "With contact",
+    "withNameBn": "Bangla name",
+    "unionsWithPlaces": "Unions with records",
+    "units": "{mouzas} mouzas and {villages} villages / mahallas (BBS Census 2022).",
+    "unfiled": "{n} places could not be filed at the next level down.",
+    "servicesTitle": "Essential services on record",
+    "rowsTitle": "By area",
+    "rowsNote": "Per 10,000 people uses the 2022 census population. Open an area to see the level below it.",
+    "colArea": "Area",
+    "colPer10k": "Per 10,000 people",
+    "colMissing": "No record of",
+    "noneMissing": "—",
+    "service": {
+      "union_parishad": "Union Parishad office",
+      "pharmacy": "Pharmacy",
+      "hospital": "Hospital / health complex",
+      "community_clinic": "Community clinic",
+      "police": "Police station",
+      "fire": "Fire station",
+      "post_office": "Post office",
+      "market": "Market / haat",
+      "bank": "Bank / ATM",
+      "transport": "Bus, rail or launch",
+      "school": "School / madrasa"
     }
   }
 }

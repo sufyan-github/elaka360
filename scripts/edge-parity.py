@@ -22,6 +22,11 @@ PATHS = [
     '/v1/places/rajshahi-college', '/v1/places/university-of-rajshahi', '/v1/places/shah-makhdum-mazar', '/v1/places/nope',
     '/v1/places/nearby?lat=24.37&lon=88.6&radius_m=2000', '/v1/places/nearby?lat=24.85&lon=89.37&radius_m=5000&category=health',
     '/v1/places/geojson?area_id=20015&bbox=88.5,24.3,88.7,24.45', '/v1/places/ruet/reviews',
+    # BBS 2022 localities and coverage reports (Phase 0, Nov 2026)
+    '/v1/stats/coverage', '/v1/stats/coverage/10002', '/v1/stats/coverage/20015', '/v1/stats/coverage/30134',
+    '/v1/stats/coverage/40001', '/v1/areas?level=thana&parent_id=50005', '/v1/areas?level=village&limit=50',
+    '/v1/areas/by-path?path=rajshahi/rajshahi/rajshahi-city-corporation/boalia-thana',
+    '/v1/areas/by-path?path=rajshahi/rajshahi/rajshahi-city-corporation/ward-9',
 ]
 UNORDERED = {'features', 'resolved_levels'}
 IGNORE = {'request_id', 'instance', 'version', 'db', 'search', 'detail'}

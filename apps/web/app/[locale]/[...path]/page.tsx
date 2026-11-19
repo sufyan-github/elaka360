@@ -65,8 +65,12 @@ export default async function AreaPage({ params }: Props) {
   const t = await getTranslations('Area');
   const d = await load(p.path);
   if (!d) notFound();
-  const { area, breadcrumb, children, descendant_counts, pending_counts, place_counts } = d;
-  const [categories, places] = await Promise.all([api.categories(), api.places({ areaId: area.id, limit: 12 })]);
+  const { area, breadcrumb, children, descendant_counts, pending_counts, place_counts, links = [], place_scope: scope = null } = d;
+  // places are filed by union, upazila, city corporation and above: other levels show their nearest such area's places
+  const placeArea = scope ?? area;
+  const [categories, places] = await Promise.all([api.categories(), api.places({ areaId: placeArea.id, limit: 12 })]);
+  const thanas = links.filter((l) => l.relation === 'thana');
+  const thanaWards = links.filter((l) => l.relation === 'thana_ward');
   const parent = breadcrumb.at(-2);
   const district = area.level === 'district' ? area : breadcrumb.find((b) => b.level === 'district');
   const mapFocus = area.level === 'division' ? { divisionId: area.id } : district ? { districtIds: [district.id] } : {};
@@ -77,7 +81,7 @@ export default async function AreaPage({ params }: Props) {
   const stats: { label: string; value: string; sub?: string }[] = [];
   if (area.area_km2) stats.push({ label: t('area'), value: formatArea(area.area_km2, locale), sub: area.area_basis === 'computed_from_polygon' ? t('areaComputed') : undefined });
   if (area.population_2022) stats.push({ label: t('population'), value: formatCompact(area.population_2022, locale), sub: t(popBasis) });
-  for (const lvl of ['district', 'upazila', 'city_corporation', 'union', 'pourashava'] as AdminLevel[]) {
+  for (const lvl of ['district', 'upazila', 'city_corporation', 'thana', 'union', 'pourashava', 'mouza', 'village'] as AdminLevel[]) {
     const n = descendant_counts[lvl];
     if (n) stats.push({ label: levelLabel(lvl, locale, n), value: formatCount(n, locale) });
   }
@@ -122,6 +126,22 @@ export default async function AreaPage({ params }: Props) {
       {area.population_basis === 'enumerated' && (
         <p className="mt-2 text-xs text-muted">{t('enumeratedNote')}</p>
       )}
+      {locale === 'bn' && !area.name_bn && <p className="mt-1 text-xs text-muted">{t('noBanglaName')}</p>}
+
+      {thanas.length > 0 && (
+        <Section id="thana" title={t('thanaOf')}>
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+            {thanas.map((c) => <AreaCard key={c.id} area={c} />)}
+          </div>
+        </Section>
+      )}
+      {thanaWards.length > 0 && (
+        <Section id="thana-wards" title={`${t('thanaWards')} (${formatNumber(thanaWards.length, locale)})`}>
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+            {thanaWards.map((c) => <AreaCard key={c.id} area={c} />)}
+          </div>
+        </Section>
+      )}
 
       {childLevels.map((lvl) => {
         const list = children.filter((c) => c.level === lvl);
@@ -150,15 +170,16 @@ export default async function AreaPage({ params }: Props) {
         <MapView {...mapFocus} areaId={area.id} className="h-72 md:h-96" />
       </Section>
 
-      <Section title={t('quickSearch')} id="categories">
+      <Section title={scope ? t('quickSearchIn', { area: titleOf(scope, locale) }) : t('quickSearch')} id="categories">
+        {scope && <p className="mb-2 text-xs text-muted">{t('scopeNote', { area: titleOf(scope, locale) })}</p>}
         <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 md:grid-cols-6">
           {categories.map((c) => (
-            <CategoryTile key={c.id} category={c} count={place_counts[c.key] ?? 0} href={`/c/${c.key}?area=${area.id}`} />
+            <CategoryTile key={c.id} category={c} count={place_counts[c.key] ?? 0} href={`/c/${c.key}?area=${placeArea.id}`} />
           ))}
         </div>
       </Section>
 
-      <Section title={t('placesTitle')} id="places">
+      <Section title={scope ? t('placesIn', { area: titleOf(scope, locale) }) : t('placesTitle')} id="places">
         {places.items.length ? (
           <div className="grid gap-3 md:grid-cols-2">
             {places.items.map((p) => <PlaceCard key={p.public_id} place={p} />)}

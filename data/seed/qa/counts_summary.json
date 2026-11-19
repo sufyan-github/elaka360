@@ -33,5 +33,22 @@
   "city_corporation": 13,
   "pourashava": 327
  },
- "seed_vs_master_untracked": 0
+ "seed_vs_master_untracked": 0,
+ "localities": {
+  "thana": 105,
+  "mouza": 60292,
+  "village": 104882,
+  "links": 525,
+  "unplaced": 448,
+  "divisions": [
+   "barishal",
+   "chattogram",
+   "dhaka",
+   "khulna",
+   "mymensingh",
+   "rajshahi",
+   "rangpur",
+   "sylhet"
+  ]
+ }
 }

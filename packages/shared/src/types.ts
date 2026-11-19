@@ -59,6 +59,16 @@ export interface AreaDetail {
   /** Descendants that exist but are not public yet (awaiting verification), per level. */
   pending_counts: LevelCounts;
   place_counts: Record<string, number>;
+  /**
+   * Areas related outside the parent–child tree: for a city ward, the metropolitan thana(s) it lies in
+   * (relation 'thana'); for a thana, its wards ('thana_ward'). BBS Census 2022.
+   */
+  links: (AdminAreaSummary & { relation: 'thana' | 'thana_ward' })[];
+  /**
+   * Places are filed by division, district, upazila, union and city corporation only. For any other level (ward,
+   * pourashava, thana, mouza, village) place_counts and place lists describe this nearest ancestor; null otherwise.
+   */
+  place_scope: AdminAreaSummary | null;
 }
 
 export interface AreaStats {
@@ -156,11 +166,49 @@ export interface NationalStats {
   union: number;
   city_corporation: number;
   pourashava: number;
+  /** Metropolitan police thanas, mouzas and villages / mahallas (BBS Census 2022). */
+  thana: number;
+  mouza: number;
+  village: number;
   places: number;
   verified_places: number;
   /** The subset with official or secondary evidence (production-eligible), per level. */
   sourced: { division: number; district: number; upazila: number; union: number; city_corporation: number; pourashava: number; places: number };
   /** How the numbers were counted (public = production-eligible records only, unless configured otherwise). */
+  inclusion_rule: string;
+}
+
+/** Essential services counted per area on the coverage page (sub-category groups; see COVERAGE_PLACES_SQL). */
+export type CoverageService = 'union_parishad' | 'pharmacy' | 'hospital' | 'community_clinic' | 'police' | 'fire' | 'post_office'
+  | 'market' | 'bank' | 'transport' | 'school';
+
+export interface CoverageRow {
+  area: AdminAreaSummary & { population_2022: number | null };
+  places: number;
+  official: number;
+  secondary: number;
+  /** Community and unverified records. */
+  community: number;
+  with_point: number;
+  with_contact: number;
+  with_name_bn: number;
+  unions: number;
+  /** Unions with at least one public place filed under them. */
+  unions_with_places: number;
+  mouzas: number;
+  villages: number;
+  services: Record<CoverageService, number>;
+  /** Essential services with no record in this area (a gap in the data, not proof that none exists). */
+  missing: CoverageService[];
+}
+
+export interface CoverageReport {
+  area: CoverageRow;
+  /** Child areas: divisions, districts, upazilas + city corporations, or unions. */
+  rows: CoverageRow[];
+  /** Places the sources could not file at the child level (e.g. no union given). */
+  unfiled: number;
+  services: CoverageService[];
   inclusion_rule: string;
 }
 

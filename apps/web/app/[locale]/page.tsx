@@ -118,6 +118,14 @@ export default async function HomePage({ params }: Props) {
               sub={sourced < total ? t('sourcedCount', { count: num(sourced) }) : t('allSourced')} />
           ))}
         </div>
+        {(stats.village ?? 0) > 0 && (
+          <p className="mt-2 text-xs text-muted">
+            {t.rich('localities', {
+              villages: num(stats.village), mouzas: num(stats.mouza), thanas: num(stats.thana),
+              link: (c) => <Link href="/coverage" className="text-secondary underline">{c}</Link>,
+            })}
+          </p>
+        )}
         {(pendingUnions > 0 || pendingUpazilas > 0) && (
           <p className="mt-2 text-xs text-muted">{t('pending', { n: pendingUnions + pendingUpazilas, count: num(pendingUnions + pendingUpazilas) })}</p>
         )}

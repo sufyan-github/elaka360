@@ -30,7 +30,7 @@ SELECT ${AREA_SUMMARY_COLS} FROM up a ORDER BY a.depth DESC`;
 export const CHILDREN_SQL = `
 SELECT ${AREA_SUMMARY_COLS} FROM public_admin_areas a
 WHERE a.parent_id = $1 AND ($2::text IS NULL OR a.level::text = $2)
-ORDER BY a.level, a.name_en`;
+ORDER BY a.level, a.name_en, a.id`;
 
 /** Descendants per level: public ones, and ones that exist but await verification. */
 export const DESCENDANT_COUNTS_SQL = `
@@ -44,6 +44,17 @@ SELECT level::text,
        count(*) FILTER (WHERE status = 'active' AND NOT (production_eligible OR elaka_include_unverified()))::int AS pending
 FROM d GROUP BY level`;
 
+/** Areas linked outside the tree (db/migrations/0010): a ward's thana(s), or a thana's wards. $1 area id */
+export const AREA_LINKS_SQL = `
+SELECT ${AREA_SUMMARY_COLS}, 'thana' AS relation
+FROM admin_area_links l JOIN public_admin_areas a ON a.id = l.linked_area_id
+WHERE l.area_id = $1 AND l.relation = 'thana'
+UNION ALL
+SELECT ${AREA_SUMMARY_COLS}, 'thana_ward' AS relation
+FROM admin_area_links l JOIN public_admin_areas a ON a.id = l.area_id
+WHERE l.linked_area_id = $1 AND l.relation = 'thana'
+ORDER BY relation, level, name_en`;
+
 export const PLACE_COUNTS_SQL = `
 SELECT c.key, count(*)::int AS n
 FROM public_places p JOIN categories c ON c.id = p.category_id
@@ -56,7 +67,7 @@ SELECT c.key, count(*)::int AS n FROM public_places p JOIN categories c ON c.id 
 export const LIST_SQL = `
 SELECT ${AREA_SUMMARY_COLS} FROM public_admin_areas a
 WHERE a.level::text = $1 AND ($2::bigint IS NULL OR a.parent_id = $2)
-ORDER BY a.name_en
+ORDER BY a.name_en COLLATE "C", a.id   -- byte order, as the edge database (SQLite) sorts
 LIMIT $3 OFFSET $4`;
 
 export const NATIONAL_STATS_SQL = `
@@ -67,6 +78,9 @@ SELECT
   count(*) FILTER (WHERE level = 'union')::int AS "union",
   count(*) FILTER (WHERE level = 'city_corporation')::int AS city_corporation,
   count(*) FILTER (WHERE level = 'pourashava')::int AS pourashava,
+  count(*) FILTER (WHERE level = 'thana')::int AS thana,
+  count(*) FILTER (WHERE level = 'mouza')::int AS mouza,
+  count(*) FILTER (WHERE level = 'village')::int AS village,
   (SELECT count(*)::int FROM public_places) AS places,
   (SELECT count(*)::int FROM public_places WHERE evidence_level = 'official') AS verified_places,
   json_build_object(
@@ -121,3 +135,57 @@ FROM public_admin_areas a, root
 WHERE a.boundary IS NOT NULL AND a.level::text = ANY($2::text[]) AND a.path LIKE root.path || '/%'
 ORDER BY a.path
 LIMIT 3000`;
+
+/**
+ * Coverage of public places under an area, per child area. $1 area id (1 = whole country), $2 child grouping:
+ * 'division' | 'district' | 'upazila' (upazilas and city corporations: a place in a city corporation is counted
+ * there) | 'union'. Rows with child_id NULL are places the source could not file at that level. `services` counts
+ * the essential-service sub-categories (keys in COVERAGE_SERVICES, geo.service.ts).
+ */
+export const COVERAGE_PLACES_SQL = `
+WITH s AS (
+  SELECT p.*, sc.key AS sub,
+         CASE $2::text WHEN 'division' THEN p.division_id WHEN 'district' THEN p.district_id
+                       WHEN 'upazila' THEN coalesce(p.city_corporation_id, p.upazila_id) WHEN 'union' THEN p.union_id END AS child_id
+  FROM public_places p LEFT JOIN categories sc ON sc.id = p.subcategory_id
+  WHERE $1::bigint = 1 OR p.division_id = $1 OR p.district_id = $1 OR p.upazila_id = $1
+)
+SELECT child_id::int, GROUPING(child_id) = 1 AS total,
+       count(*)::int AS places,
+       count(*) FILTER (WHERE evidence_level = 'official')::int AS official,
+       count(*) FILTER (WHERE evidence_level = 'secondary')::int AS secondary,
+       count(*) FILTER (WHERE evidence_level IN ('community', 'unverified'))::int AS community,
+       count(*) FILTER (WHERE lat IS NOT NULL)::int AS with_point,
+       count(*) FILTER (WHERE cardinality(phones) > 0 OR email IS NOT NULL OR website IS NOT NULL)::int AS with_contact,
+       count(*) FILTER (WHERE NOT coalesce(attributes ? '_name_bn_missing', false))::int AS with_name_bn,
+       count(DISTINCT union_id)::int AS unions_with_places,
+       json_build_object(
+         'union_parishad', count(*) FILTER (WHERE sub = 'government.union_parishad'),
+         'pharmacy', count(*) FILTER (WHERE sub = 'health.pharmacy'),
+         'hospital', count(*) FILTER (WHERE sub IN ('health.hospital', 'health.upazila_health_complex', 'health.medical_college_hospital')),
+         'community_clinic', count(*) FILTER (WHERE sub = 'health.community_clinic'),
+         'police', count(*) FILTER (WHERE sub = 'emergency.police_station'),
+         'fire', count(*) FILTER (WHERE sub = 'emergency.fire_station'),
+         'post_office', count(*) FILTER (WHERE sub = 'government.post_office'),
+         'market', count(*) FILTER (WHERE sub IN ('business.market', 'agriculture.haat')),
+         'bank', count(*) FILTER (WHERE sub IN ('finance.bank', 'finance.atm')),
+         'transport', count(*) FILTER (WHERE sub IN ('transport.bus_terminal', 'transport.bus_stop', 'transport.railway_station', 'transport.launch_ghat')),
+         'school', count(*) FILTER (WHERE sub IN ('education.primary_school', 'education.secondary_school', 'education.madrasa'))
+       ) AS services
+FROM s
+GROUP BY GROUPING SETS ((child_id), ())
+ORDER BY total DESC, child_id NULLS FIRST`;
+
+/** Child areas for COVERAGE_PLACES_SQL with their administrative units below. $1 area id, $2 child levels text[] */
+export const COVERAGE_AREAS_SQL = `
+SELECT ${AREA_SUMMARY_COLS}, a.population_2022,
+       u.unions, u.mouzas, u.villages
+FROM public_admin_areas a
+CROSS JOIN LATERAL (
+  SELECT count(*) FILTER (WHERE d.level = 'union')::int AS unions, count(*) FILTER (WHERE d.level = 'mouza')::int AS mouzas,
+         count(*) FILTER (WHERE d.level = 'village')::int AS villages
+  FROM public_admin_areas d
+  WHERE d.level IN ('union', 'mouza', 'village') AND (a.level = 'country' OR d.path LIKE a.path || '/%')   -- division paths have no country prefix
+) u
+WHERE (a.parent_id = $1 AND a.level::text = ANY($2::text[])) OR a.id = $1
+ORDER BY a.id = $1 DESC, a.level, a.name_en COLLATE "C", a.id`;

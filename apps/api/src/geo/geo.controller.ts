@@ -3,7 +3,7 @@ import { ApiOperation, ApiTags } from '@nestjs/swagger';
 import { GeoService } from './geo.service';
 import { cursor, floatParam, idParam, intParam, normalisePath } from '../common/params';
 
-const LEVELS = new Set(['division', 'district', 'upazila', 'city_corporation', 'pourashava', 'union', 'ward']);
+const LEVELS = new Set(['division', 'district', 'upazila', 'city_corporation', 'pourashava', 'union', 'ward', 'thana', 'mouza', 'village']);
 
 @ApiTags('geo')
 @Controller('v1')
@@ -14,6 +14,18 @@ export class GeoController {
   @ApiOperation({ summary: 'Live public counts for the Home "about" strip, with the inclusion rule used' })
   national() {
     return this.geo.nationalStats();
+  }
+
+  @Get('stats/coverage')
+  @ApiOperation({ summary: 'Data coverage for the whole country, per division (places, evidence, points, contacts, essential services)' })
+  coverageNational() {
+    return this.geo.coverage(1);
+  }
+
+  @Get('stats/coverage/:id')
+  @ApiOperation({ summary: 'Data coverage under a division, district or upazila, per child area; missing = no record of that service' })
+  coverage(@Param('id') id: string) {
+    return this.geo.coverage(idParam(id));
   }
 
   @Get('areas')
