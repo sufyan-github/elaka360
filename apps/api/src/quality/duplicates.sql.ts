@@ -84,6 +84,7 @@ SELECT a, b, round(score::numeric, 1),
                          'method', 'bulk_scan')
 FROM scored
 WHERE score >= $1
+  -- pairs are stored either way round; least/greatest makes this a hash anti-join (scored.a < scored.b)
   AND NOT EXISTS (SELECT 1 FROM duplicate_candidates d
-                  WHERE (d.place_a_id = scored.a AND d.place_b_id = scored.b) OR (d.place_a_id = scored.b AND d.place_b_id = scored.a))
+                  WHERE least(d.place_a_id, d.place_b_id) = scored.a AND greatest(d.place_a_id, d.place_b_id) = scored.b)
 ORDER BY a, b`;

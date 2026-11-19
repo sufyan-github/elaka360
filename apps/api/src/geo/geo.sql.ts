@@ -136,20 +136,9 @@ WHERE a.boundary IS NOT NULL AND a.level::text = ANY($2::text[]) AND a.path LIKE
 ORDER BY a.path
 LIMIT 3000`;
 
-/**
- * Coverage of public places under an area, per child area. $1 area id (1 = whole country), $2 child grouping:
- * 'division' | 'district' | 'upazila' (upazilas and city corporations: a place in a city corporation is counted
- * there) | 'union'. Rows with child_id NULL are places the source could not file at that level. `services` counts
- * the essential-service sub-categories (keys in COVERAGE_SERVICES, geo.service.ts).
- */
-export const COVERAGE_PLACES_SQL = `
-WITH s AS (
-  SELECT p.*, sc.key AS sub,
-         CASE $2::text WHEN 'division' THEN p.division_id WHEN 'district' THEN p.district_id
-                       WHEN 'upazila' THEN coalesce(p.city_corporation_id, p.upazila_id) WHEN 'union' THEN p.union_id END AS child_id
-  FROM public_places p LEFT JOIN categories sc ON sc.id = p.subcategory_id
-  WHERE $1::bigint = 1 OR p.division_id = $1 OR p.district_id = $1 OR p.upazila_id = $1
-)
+/** Columns of a coverage row (COVERAGE_PLACES_SQL / COVERAGE_NATIONAL_SQL); `services` counts the essential-service
+ *  sub-categories (keys in COVERAGE_SERVICES, geo.service.ts). */
+export const COVERAGE_AGG = `
 SELECT child_id::int, GROUPING(child_id) = 1 AS total,
        count(*)::int AS places,
        count(*) FILTER (WHERE evidence_level = 'official')::int AS official,
@@ -176,6 +165,31 @@ FROM s
 GROUP BY GROUPING SETS ((child_id), ())
 ORDER BY total DESC, child_id NULLS FIRST`;
 
+/** Child key for coverage: $2 = 'district' | 'upazila' (upazilas and city corporations: a place in a city corporation
+ *  is counted there) | 'union'. */
+export const COVERAGE_CHILD_KEY = `CASE $2::text WHEN 'division' THEN p.division_id WHEN 'district' THEN p.district_id
+       WHEN 'upazila' THEN coalesce(p.city_corporation_id, p.upazila_id) WHEN 'union' THEN p.union_id END`;
+
+/**
+ * Coverage of public places under a division, district or upazila, per child area. $1 area id, $2 child grouping
+ * (COVERAGE_CHILD_KEY). The three equality tests let the planner combine the place indexes (one area id is only ever
+ * one level). Rows with child_id NULL are places the source could not file at the child level.
+ */
+export const COVERAGE_PLACES_SQL = `
+WITH s AS (
+  SELECT p.*, sc.key AS sub, ${COVERAGE_CHILD_KEY} AS child_id
+  FROM public_places p LEFT JOIN categories sc ON sc.id = p.subcategory_id
+  WHERE p.division_id = $1 OR p.district_id = $1 OR p.upazila_id = $1
+)${COVERAGE_AGG}`;
+
+/** COVERAGE_PLACES_SQL for the whole country. $1 unused (kept for the same call shape), $2 child grouping. */
+export const COVERAGE_NATIONAL_SQL = `
+WITH s AS (
+  SELECT p.*, sc.key AS sub, ${COVERAGE_CHILD_KEY} AS child_id
+  FROM public_places p LEFT JOIN categories sc ON sc.id = p.subcategory_id
+  WHERE $1::bigint IS NOT NULL
+)${COVERAGE_AGG}`;
+
 /** Child areas for COVERAGE_PLACES_SQL with their administrative units below. $1 area id, $2 child levels text[] */
 export const COVERAGE_AREAS_SQL = `
 SELECT ${AREA_SUMMARY_COLS}, a.population_2022,
@@ -185,7 +199,11 @@ CROSS JOIN LATERAL (
   SELECT count(*) FILTER (WHERE d.level = 'union')::int AS unions, count(*) FILTER (WHERE d.level = 'mouza')::int AS mouzas,
          count(*) FILTER (WHERE d.level = 'village')::int AS villages
   FROM public_admin_areas d
-  WHERE d.level IN ('union', 'mouza', 'village') AND (a.level = 'country' OR d.path LIKE a.path || '/%')   -- division paths have no country prefix
+  -- descendants by path prefix, as a range the text_pattern_ops index can use ('0' sorts right after '/'); division
+  -- paths have no country prefix, so the country takes every path ([a-z0-9/-] all sort below '{')
+  WHERE d.level IN ('union', 'mouza', 'village')
+    AND d.path ~>=~ (CASE WHEN a.level = 'country' THEN '' ELSE a.path || '/' END)
+    AND d.path ~<~ (CASE WHEN a.level = 'country' THEN '{' ELSE a.path || '0' END)
 ) u
 WHERE (a.parent_id = $1 AND a.level::text = ANY($2::text[])) OR a.id = $1
 ORDER BY a.id = $1 DESC, a.level, a.name_en COLLATE "C", a.id`;

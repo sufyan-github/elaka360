@@ -29,6 +29,7 @@ PARAMS = {
     "CHILD_BOUNDARIES_SQL": ["20015", "'{union,pourashava}'", "0.0001"],
     "AREA_LINKS_SQL": ["80088"],                       # Boalia Thana (RCC): its wards
     "COVERAGE_PLACES_SQL": ["10002", "'district'"],
+    "COVERAGE_NATIONAL_SQL": ["1", "'division'"],
     "COVERAGE_AREAS_SQL": ["10002", "'{district}'"],
     # places
     "CATEGORIES_SQL": [],
@@ -76,7 +77,7 @@ EXPECT_ROWS = {  # minimum rows each statement must return on the seed (public =
     "AREA_SEARCH_SQL": 1, "CATEGORIES_SQL": 95, "BREADCRUMB_SQL": 4, "PLACE_LIST_SQL": 2, "PLACE_COUNT_SQL": 1, "AREA_DOCS_SQL": 95,
     "PLACE_GEO_SQL": 5, "PLACE_DOCS_SQL": 5, "TREE_SQL": 73, "LOCATE_SQL": 1, "BOUNDARY_SQL": 1, "CHILD_BOUNDARIES_SQL": 80, "SUGGEST_SQL": 1,
     "ADMIN_STATS_SQL": 1, "ADMIN_AREA_LIST_SQL": 8, "ADMIN_AREA_SQL": 1, "ADMIN_PLACE_LIST_SQL": 8, "ADMIN_PLACE_SQL": 1, "ADMIN_SOURCES_SQL": 20,
-    "AREA_LINKS_SQL": 1, "COVERAGE_PLACES_SQL": 9, "COVERAGE_AREAS_SQL": 9,
+    "AREA_LINKS_SQL": 1, "COVERAGE_PLACES_SQL": 9, "COVERAGE_NATIONAL_SQL": 9, "COVERAGE_AREAS_SQL": 9,
     "PLACE_ID_SQL": 1, "DUP_MATCH_SQL": 1, "OD_AREAS_SQL": 95, "OD_PLACES_SQL": 5, "OD_SOURCES_SQL": 5,
 }
 

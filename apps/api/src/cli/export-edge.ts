@@ -206,7 +206,12 @@ async function main() {
     const levels = (await db.many<{ level: string }>('SELECT DISTINCT level::text FROM public_admin_areas WHERE boundary IS NOT NULL ORDER BY 1')).map((r) => r.level);
     // coverage reports: country, divisions, districts and upazilas (the edge serves them by id)
     const coverage: Record<string, unknown> = {};
-    for (const r of areaRows.filter((a) => COVERAGE_LEVELS.includes(a.level as AdminLevel))) coverage[`coverage:${r.id}`] = await geo.coverage(r.id);
+    const covered = areaRows.filter((a) => COVERAGE_LEVELS.includes(a.level as AdminLevel));
+    for (let b = 0; b < covered.length; b += EXPORT_CONCURRENCY) {
+      const batch = covered.slice(b, b + EXPORT_CONCURRENCY);
+      const reports = await Promise.all(batch.map((r) => geo.coverage(r.id)));
+      batch.forEach((r, i) => { coverage[`coverage:${r.id}`] = reports[i]; });
+    }
     console.log(`coverage reports: ${Object.keys(coverage).length} (${Date.now() - t0} ms)`);
     const docs: Record<string, unknown> = {
       ...coverage,

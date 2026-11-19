@@ -120,7 +120,7 @@ export class GeoService {
     if (!area || !child) throw new NotFoundException(`no coverage report for area ${id} (country, division, district or upazila only)`);
     const [areas, counts] = await Promise.all([
       this.db.many<CoverageArea>(Q.COVERAGE_AREAS_SQL, [id, child.levels]),
-      this.db.many<CoverageCounts>(Q.COVERAGE_PLACES_SQL, [id, child.group]),
+      this.db.many<CoverageCounts>(area.level === 'country' ? Q.COVERAGE_NATIONAL_SQL : Q.COVERAGE_PLACES_SQL, [id, child.group]),
     ]);
     const byChild = new Map(counts.filter((c) => !c.total && c.child_id !== null).map((c) => [c.child_id, c]));
     const total = counts.find((c) => c.total);
