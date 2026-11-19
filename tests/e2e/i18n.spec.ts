@@ -40,7 +40,7 @@ test('English place page shows the English name first and its evidence', async (
 });
 
 test('unverified records carry the "Not verified" warning in English', async ({ page }) => {
-  await page.goto('/en/dhaka/dhaka/savar');
+  await page.goto('/en/mymensingh/mymensingh/mymensingh-sadar/aqua');   // community-only union
   await expect(page.getByRole('note')).toContainText('Not verified.');
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/);
 });

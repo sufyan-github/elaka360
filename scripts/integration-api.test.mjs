@@ -73,24 +73,25 @@ test('public reads follow the visibility mode and always carry evidence', async 
   const labelled = await labelledMode();
   const stats = await call('GET', '/v1/stats/national');
   assert.equal(stats.status, 200);
-  // Rajshahi Division's unions and upazilas carry official evidence (BBS 2022 + LGD/portal lists); elsewhere only community data
-  assert.equal(stats.json.sourced.union, 566, 'only officially sourced unions are counted as sourced');
-  assert.equal(stats.json.sourced.upazila, 68);
-  assert.equal(stats.json.union, labelled ? stats.json.union : 0);
+  // all 8 divisions collected: upazilas and unions matched to BBS 2022 + official lists carry official evidence
+  assert.equal(stats.json.sourced.union, 4584, 'only officially sourced unions are counted as sourced');
+  assert.equal(stats.json.sourced.upazila, 495);
+  assert.equal(stats.json.union, labelled ? stats.json.union : stats.json.sourced.union);   // strict: sourced only
   assert.ok(stats.json.inclusion_rule);
   const college = await call('GET', '/v1/places/shah-makhdum-mazar');   // pilot place with no source yet
   const savar = await call('GET', '/v1/areas/by-path?path=dhaka/dhaka/savar');
   if (labelled) {
-    assert.ok(stats.json.union >= 4538);
+    assert.ok(stats.json.union >= 4622);
     assert.equal(college.status, 200);
     assert.equal(college.json.production_eligible, false);
     assert.equal(college.json.evidence_level, 'unverified');
-    assert.equal(savar.json.area.evidence_level, 'community');
-    assert.equal(savar.json.area.production_eligible, false);
   } else {
     assert.equal(college.status, 404, 'unverified place hidden in strict mode');
-    assert.equal(savar.status, 404, 'community upazila hidden in strict mode');
   }
+  // Dhaka Division is collected too: Savar is officially sourced, so visible in both modes
+  assert.equal(savar.status, 200);
+  assert.equal(savar.json.area.evidence_level, 'official');
+  assert.equal(savar.json.area.production_eligible, true);
   const raj = await call('GET', '/v1/areas/by-path?path=rajshahi/rajshahi');
   assert.equal(raj.json.area.evidence_level, 'official');
   assert.equal(raj.json.descendant_counts.union, 72, 'all 72 unions are officially sourced, so visible in both modes');
@@ -164,7 +165,7 @@ test('auth: OTP, wrong code, refresh rotation, reuse revokes the session', async
 test('user features: save, review (one per place), contribution lifecycle', async () => {
   const t = await login(phone(2), 'Reviewer');
   assert.equal((await call('POST', '/v1/me/saved', { token: t.access_token, body: { place_slug: 'ruet' } })).status, 201);
-  const hiddenSave = await call('POST', '/v1/me/saved', { token: t.access_token, body: { place_slug: 'rajshahi-college' } });
+  const hiddenSave = await call('POST', '/v1/me/saved', { token: t.access_token, body: { place_slug: 'shah-makhdum-mazar' } });   // unverified pilot place
   assert.equal(hiddenSave.status, (await labelledMode()) ? 201 : 404, 'only visible places can be saved');
   const saved = await call('GET', '/v1/me/saved', { token: t.access_token });
   assert.ok(saved.json.items.some((i) => i.place?.slug === 'ruet'));

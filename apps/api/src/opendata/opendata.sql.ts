@@ -25,8 +25,9 @@ ORDER BY p.id LIMIT $2 OFFSET $3`;
 export const OD_SOURCES_SQL = `
 SELECT s.key, s.name, NULLIF(s.url, '') AS url, s.license, s.organization, s.source_type, to_char(s.access_date, 'YYYY-MM-DD') AS access_date
 FROM data_sources s
-WHERE EXISTS (SELECT 1 FROM admin_areas a WHERE a.production_eligible AND a.evidence_source_id = s.id)
-   OR EXISTS (SELECT 1 FROM places p WHERE p.production_eligible AND COALESCE(p.evidence_source_id, p.data_source_id) = s.id)
+-- sources behind at least one exported (production-eligible) record; one pass over each table
+WHERE s.id IN (SELECT a.evidence_source_id FROM admin_areas a WHERE a.production_eligible
+               UNION SELECT COALESCE(p.evidence_source_id, p.data_source_id) FROM places p WHERE p.production_eligible)
 ORDER BY s.key`;
 
 /** Count one request for a key in the current minute; returns the key's limit and the new count. $1 key hash */

@@ -17,8 +17,9 @@ test('search finds Rajshahi from Banglish and opens the district', async ({ page
 });
 
 test('unverified areas are shown with a warning and are not indexed', async ({ page }) => {
-  await page.goto('/dhaka/dhaka/savar');
-  await expect(page.getByText('কমিউনিটির তথ্য').first()).toBeVisible();          // union cards carry their evidence
+  // a seed union absent from BBS 2022 (its area is now Mymensingh city wards): community evidence only
+  await page.goto('/mymensingh/mymensingh/mymensingh-sadar/aqua');
+  await expect(page.getByText('কমিউনিটির তথ্য').first()).toBeVisible();          // its evidence badge
   await expect(page.getByRole('note')).toContainText('যাচাই করা হয়নি');
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', /noindex/);
 });

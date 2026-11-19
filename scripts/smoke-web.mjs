@@ -19,7 +19,7 @@ const pages = [
   ['/data-policy', 'যাচাই'],
   ['/contribute', 'আপনার এলাকার তথ্য যোগ করুন'],
   ['/login', 'মোবাইল নম্বর'],
-  ['/map', 'মানচিত্রে বাংলাদেশ'],
+  ['/map', 'লাইভ মানচিত্র'],
   // English (/en/...)
   ['/en', 'lang="en"'],
   ['/en', 'Information on every area'],
@@ -47,8 +47,9 @@ const altOk = /hrefLang="en" href="[^"]*\/en\/p\/ruet"/.test(alt) && /hrefLang="
 console.log(`${altOk ? 'ok  ' : 'FAIL'} hreflang alternates on /p/ruet`);
 if (!altOk) failed++;
 const nf = await fetch(WEB + '/no-such/area-here');
-// A community-only upazila: shown with an "unverified" warning (default), or 404 in strict mode.
-const hidden = await fetch(WEB + '/dhaka/dhaka/savar');
+// A community-only union (in the seed, absent from BBS 2022: its area is now city wards): shown with an
+// "unverified" warning (default), or 404 in strict mode.
+const hidden = await fetch(WEB + '/mymensingh/mymensingh/mymensingh-sadar/aqua');
 const hiddenHtml = await hidden.text();
 const hiddenOk = hidden.status === 404 || (hidden.status === 200 && hiddenHtml.includes('যাচাই করা হয়নি') && hiddenHtml.includes('noindex'));
 console.log(`${hiddenOk ? 'ok  ' : 'FAIL'} unverified area labelled + noindex (or hidden) → ${hidden.status}`);

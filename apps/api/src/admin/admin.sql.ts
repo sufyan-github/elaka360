@@ -70,10 +70,19 @@ export const ADMIN_PLACE_SQL = `SELECT ${ADMIN_PLACE_COLS} ${ADMIN_PLACE_JOINS} 
 export const ADMIN_SOURCES_SQL = `
 SELECT s.id, s.key, s.name, NULLIF(s.url, '') AS url, s.license, s.trust_level, s.source_type, s.organization,
        to_char(s.access_date, 'YYYY-MM-DD') AS access_date, to_char(s.publication_date, 'YYYY-MM-DD') AS publication_date,
-       s.evidence_notes, s.active,
-       (SELECT count(*)::int FROM admin_areas a WHERE a.evidence_source_id = s.id OR a.data_source_id = s.id)
-       + (SELECT count(*)::int FROM places p WHERE p.evidence_source_id = s.id OR p.data_source_id = s.id) AS usage_count
-FROM data_sources s ORDER BY s.trust_level DESC, s.key`;
+       s.evidence_notes, s.active, COALESCE(u.n, 0)::int AS usage_count
+FROM data_sources s
+-- records per source (as evidence or data source; a record naming the same source twice counts once), in one pass
+-- over each table: a correlated count per source scanned all places once per source (too slow at 500k+ places)
+LEFT JOIN (
+  SELECT id, count(*) AS n FROM (
+    SELECT evidence_source_id AS id FROM admin_areas WHERE evidence_source_id IS NOT NULL
+    UNION ALL SELECT data_source_id FROM admin_areas WHERE data_source_id IS DISTINCT FROM evidence_source_id AND data_source_id IS NOT NULL
+    UNION ALL SELECT evidence_source_id FROM places WHERE evidence_source_id IS NOT NULL
+    UNION ALL SELECT data_source_id FROM places WHERE data_source_id IS DISTINCT FROM evidence_source_id AND data_source_id IS NOT NULL
+  ) x GROUP BY id
+) u ON u.id = s.id
+ORDER BY s.trust_level DESC, s.key`;
 
 /** $1 status|null $2 type|null $3 scope path|null $4 limit $5 offset */
 export const ADMIN_CONTRIBUTIONS_SQL = `

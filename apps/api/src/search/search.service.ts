@@ -75,7 +75,9 @@ export class SearchService {
     const common = { q, query_by: 'name_bn,name_en,aliases', prefix: 'true', per_page: limit, num_typos: 2, typo_tokens_threshold: 1 };
     const searches: Record<string, unknown>[] = [];
     if (f.type !== 'place') searches.push({ collection: 'areas', ...common, sort_by: '_text_match:desc,level_rank:desc', ...(f.level ? { filter_by: `level:=${f.level}` } : {}) });
-    if (f.type !== 'area') searches.push({ collection: 'places', ...common, sort_by: '_text_match:desc,rank:desc', ...(f.category ? { filter_by: `category_key:=${f.category} || subcategory_key:=${f.category}` } : {}) });
+    // places: better evidence first, then text match (as the edge FTS search does). With hundreds of community
+    // copies named like an official place ("Rajshahi University"), text match alone buried the official record.
+    if (f.type !== 'area') searches.push({ collection: 'places', ...common, sort_by: 'rank:desc,_text_match:desc', ...(f.category ? { filter_by: `category_key:=${f.category} || subcategory_key:=${f.category}` } : {}) });
     const { results } = await ts.multiSearch<AreaDoc | PlaceDoc>(searches);
     const err = results.find((r) => r.error)?.error;
     if (err) throw new Error(err);
