@@ -155,14 +155,17 @@ async function placeList(db: D1Database, areaId: number | undefined, cat: string
 }
 
 async function tree(db: D1Database, rootId: number, depth: number) {
-  const root = await db.prepare('SELECT path, depth FROM areas WHERE id = ?').bind(rootId).first<{ path: string; depth: number }>();
+  const root = await db.prepare('SELECT path, depth, summary FROM areas WHERE id = ?').bind(rootId).first<{ path: string; depth: number; summary: string }>();
   if (!root) throw notFound(`area not found: ${rootId}`);
-  // the country's children (divisions) do not share its path prefix, so the root is matched by depth only
-  const sql = rootId === 1
-    ? 'SELECT summary, depth FROM areas WHERE depth <= ?'
-    : "SELECT summary, depth FROM areas WHERE depth <= ? AND (path = ? OR path LIKE ? || '/%')";
-  const stmt = rootId === 1 ? db.prepare(sql).bind(root.depth + depth) : db.prepare(sql).bind(root.depth + depth, root.path, root.path);
+  // Indexed reads only (174k areas since the BBS 2022 villages): the country's subtree by depth (areas_depth; its
+  // children, the divisions, do not share its path prefix), any other subtree by a path range on the unique path index
+  // ('0' sorts right after '/'), so a request reads the rows it returns and not the whole table.
+  const stmt = rootId === 1
+    ? db.prepare('SELECT summary, depth FROM areas WHERE depth <= ?').bind(root.depth + depth)
+    : db.prepare('SELECT summary, depth FROM areas WHERE path >= ? AND path < ? AND depth <= ?')
+      .bind(`${root.path}/`, `${root.path}0`, root.depth + depth);
   const { results } = await stmt.all<{ summary: string; depth: number }>();
+  if (rootId !== 1) results.push({ summary: root.summary, depth: root.depth });
   type Node = Record<string, unknown> & { id: number; parent_id: number | null; level: string; name_en: string; children?: Node[] };
   const nodes = results.map((r) => ({ node: parse<Node>(r.summary), depth: r.depth }));
   nodes.sort((a, b) => a.depth - b.depth || LEVEL_ORDER.indexOf(a.node.level) - LEVEL_ORDER.indexOf(b.node.level)
