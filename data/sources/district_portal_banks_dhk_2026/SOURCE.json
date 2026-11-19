@@ -1,0 +1,37 @@
+{
+  "key": "DISTRICT_PORTAL_BANKS_DHK_2026",
+  "division": "dhaka",
+  "kind": "district_banks",
+  "name": "District portals — bank branch/office phone lists (Narayanganj, Tangail, Manikganj, Rajbari, Gopalganj, Faridpur)",
+  "organization": "Deputy Commissioner's offices (district portals)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://narayanganj.gov.bd/pages/static-pages/69958381f2b99fa8d158a135",
+    "https://tangail.gov.bd/pages/static-pages/6995976035ce18e1c07869bc",
+    "https://manikganj.gov.bd/pages/static-pages/6995b35d35ce18e1c0798580",
+    "https://rajbari.gov.bd/pages/static-pages/6995696335ce18e1c0779c6c",
+    "https://gopalganj.gov.bd/pages/static-pages/6995dfac35ce18e1c07b1337",
+    "https://faridpur.gov.bd/pages/static-pages/6995e32935ce18e1c07b360d",
+    "https://dhaka.gov.bd/pages/static-pages/bank-9uffnj-6a8fc2511f576f3ba28926ce",
+    "https://gazipur.gov.bd/pages/static-pages/banks-o931js-6acb4285ba7fabe195e06ab1",
+    "https://shariatpur.gov.bd/pages/static-pages/6995d1c535ce18e1c07a9e97",
+    "https://kishoreganj.gov.bd/pages/static-pages/6995aa7935ce18e1c07929ef",
+    "https://madaripur.gov.bd/pages/static-pages/6995996435ce18e1c0787c48"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "District portals narayanganj.gov.bd, tangail.gov.bd, manikganj.gov.bd, rajbari.gov.bd, gopalganj.gov.bd, faridpur.gov.bd",
+  "notes": "No licence stated; lists are undated. Only landline numbers are kept (mobile numbers dropped: Narayanganj 0, Tangail 10, Manikganj 0, Rajbari 1, Gopalganj 39, Faridpur 0); no e-mails, routing numbers or coordinates. Dhaka and Gazipur portals list bank names and websites only; Shariatpur lists the upazilas in which each bank has a branch, without contacts; Kishoreganj gives a prose list of town branches without contacts; Madaripur lists mostly names (mixed with NGOs); Narsingdi and Munshiganj have no bank page — none used.",
+  "files": {
+    "places.csv": "4aa05ac376afb2abfabea0f6b17f82015cc536cb3a999d1ccfd1aa86e6b88fb7",
+    "raw/faridpur_banks.txt": "60cb20788e0d0b5f86e1610a1020fda0a28129ec94d13ada17224fccdbe8918a",
+    "raw/gopalganj_banks.txt": "8fd90eb1e78be3ecd87a74886e85e3dbf80baaf60aef7a71a470fed123ba5863",
+    "raw/manikganj_banks.txt": "687b6598f3e33619d28444a3c2ff6fe02d1c062e70fc86dfcf5d70d59d2c5387",
+    "raw/narayanganj_banks.txt": "11450f7057b5fccd72166f1b244774312a50dea835a57906b91dfdc3ffdc0592",
+    "raw/rajbari_banks.txt": "79b902e66e503e3776ec0d864dc7d62320a54ea3b42ed268e091d5a751a92c6d",
+    "raw/tangail_banks.txt": "75bf2fabc1327bb65cbc72701422ba736f1a5365c8f0dfa2431a803b687079d5"
+  }
+}

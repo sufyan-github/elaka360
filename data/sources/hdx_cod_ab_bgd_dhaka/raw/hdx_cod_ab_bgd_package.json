@@ -1,0 +1,45 @@
+{
+ "name": "cod-ab-bgd",
+ "title": "Bangladesh - Subnational Administrative Boundaries",
+ "license_id": "cc-by-igo",
+ "license_title": "Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO)",
+ "license_url": "http://creativecommons.org/licenses/by/3.0/igo/legalcode",
+ "dataset_source": "Bangladesh Bureau of Statistics (BBS)",
+ "dataset_date": "[2023-05-21T00:00:00 TO 2025-06-01T23:59:59]",
+ "last_modified": "2026-01-26T15:14:12.782628",
+ "metadata_modified": "2026-08-14T06:36:57.726015",
+ "caveats": "Boundary alignments are based on the latest updates from the Bangladesh Bureau of Statistics (BBS) as of March 2025. Any discrepancies with other datasets (e.g., OpenStreetMap, other UN datasets) are due to different data sources or update cycles.\nADM3 (Upazilas + Metropolitan Thanas) includes 600 features. However, the official count of upazilas is 495, with the remaining features representing thanas within city corporations. For COD purposes, only 495 upazilas and 12 city corporations are included to align with national census data.\nADM4 (Ward level) is not officially confirmed or maintained consistently at the national level. It is provided as a non-COD dataset and may not align perfectly with the official administrative structure. Users should verify with local sources before applying ADM4 for official analysis.",
+ "notes": "Bangladesh administrative level 0-3 boundaries (COD-AB) dataset version 03.  \n  \nThis dataset is structured into 3 levels:  \n- Admin 1: 8 Division  \n- Admin 2: 64 District  \n- Admin 3: 507 Upazila  \n  \n  \nNote: The normal administrative level 3 feature type(s) are Upazila (495 features) and City Corporation (12 units).  \n  \n  \nDates associated with this dataset:  \n- 01 June 2025: dataset reviewed for accuracy and completeness  \n- 21 May 2023: valid for use by the humanitarian community  \n- 01 June 2025: last edit to the dataset before publishing  \n- 01 January 2010: boundaries created by the source  \n  \nContributed by [OCHA Regional Office for Asia and the Pacific (ROAP)](https://data.humdata.org/organization/ocha-roap).  \nQuality assured, configured, and published by [OCHA Field Information Services (FIS)](https://data.humdata.org/organization/ocha-fiss) and [HDX](https://data.humdata.org/organization/hdx).  \n  \nPart of the dataset: [Global Subnational Administrative Boundaries](https://data.humdata.org/dataset/cod-ab-global)",
+ "methodology_other": "Dataset: government surveys  \n  \nP-codes: National p-coding system adapted to OCHA standards",
+ "organization": "OCHA Field Information Services Section (FISS)",
+ "resources": [
+  {
+   "name": "bgd_admin_boundaries.gdb.zip",
+   "format": "Geodatabase",
+   "size": 15805204,
+   "url": "https://data.humdata.org/dataset/401d3fae-4262-48c9-891f-461fd776d49b/resource/277b50e7-a354-48f9-81a6-a8614121b9ec/download/bgd_admin_boundaries.gdb.zip",
+   "last_modified": "2026-01-26T15:14:11.073776"
+  },
+  {
+   "name": "bgd_admin_boundaries.shp.zip",
+   "format": "SHP",
+   "size": 33054947,
+   "url": "https://data.humdata.org/dataset/401d3fae-4262-48c9-891f-461fd776d49b/resource/05d85fe2-40c0-4b57-b1b5-be9c36a592fb/download/bgd_admin_boundaries.shp.zip",
+   "last_modified": "2026-01-26T15:14:11.667847"
+  },
+  {
+   "name": "bgd_admin_boundaries.geojson.zip",
+   "format": "GeoJSON",
+   "size": 37759475,
+   "url": "https://data.humdata.org/dataset/401d3fae-4262-48c9-891f-461fd776d49b/resource/cec2abe3-d8b7-4025-9362-9f7e780f2a07/download/bgd_admin_boundaries.geojson.zip",
+   "last_modified": "2026-01-26T15:14:12.378717"
+  },
+  {
+   "name": "bgd_admin_boundaries.xlsx",
+   "format": "XLSX",
+   "size": 633262,
+   "url": "https://data.humdata.org/dataset/401d3fae-4262-48c9-891f-461fd776d49b/resource/5f7e534d-9b06-442e-a706-083789bff2c9/download/bgd_admin_boundaries.xlsx",
+   "last_modified": "2026-01-26T15:14:12.782628"
+  }
+ ]
+}

@@ -1,0 +1,43 @@
+{
+  "key": "SYLDIV_DISTRICT_PORTALS_2026",
+  "name": "District administration portals — Moulvibazar, Habiganj, Sunamganj",
+  "organization": "Deputy Commissioner's offices, Government of Bangladesh (a2i National Portal)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "division": "sylhet",
+  "kind": "district_portals",
+  "urls": [
+    "https://moulvibazar.gov.bd/",
+    "https://moulvibazar.gov.bd/pages/static-pages/696cb3a0c4774958d7ba20aa",
+    "https://moulvibazar.gov.bd/pages/static-pages/696cad16c4774958d7b9c3d4",
+    "https://moulvibazar.gov.bd/pages/static-pages/696cbb4cc4774958d7baa83e",
+    "https://habiganj.gov.bd/",
+    "https://habiganj.gov.bd/pages/static-pages/696cb9b5c4774958d7ba93c8",
+    "https://habiganj.gov.bd/pages/static-pages/696cb96bc4774958d7ba733c",
+    "https://habiganj.gov.bd/pages/static-pages/696cbb87c4774958d7babcf3",
+    "https://sunamganj.gov.bd/",
+    "https://sunamganj.gov.bd/pages/static-pages/696cb967c4774958d7ba7188",
+    "https://sunamganj.gov.bd/pages/static-pages/696cb967c4774958d7ba7186",
+    "https://bangladesh.gov.bd/views/union-list"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "জেলা প্রশাসন, সিলেট বিভাগ — জাতীয় তথ্য বাতায়ন (<district>.gov.bd)",
+  "files": {
+    "areas.csv": "bccb40004066439b59bb4d09e6e2c5a4c43303976f55f3514426f20af4a0b8c0",
+    "facts.csv": "ad1f4f1752fb166f8656ec25064ac37ac3575e0de2d0f776d77f1b1cd869f733",
+    "raw/habiganj_glance.txt": "668c50910cda572f760122f2b5e7040fc538634a6525b746bd520ce8e996f7fd",
+    "raw/habiganj_unions.txt": "83b99e47dee674c4370064f2fe0a231eb8218757738bd2a58e3e64eee9ae77c7",
+    "raw/habiganj_upazilas.txt": "bee08db2d82f16b30b72ae6f16f3e45ec6de451264a6df81d5de30dbedceb3ee",
+    "raw/moulvibazar_glance.txt": "8c6d965b5bb13d9d6ddb4646bdede7d3c28fc6481464cbbd575d74f3fb87f431",
+    "raw/moulvibazar_unions.txt": "2962bec718f88e1497fe421fc3fcc7a74191cd50f4f6620a51bf517f95d2fa6d",
+    "raw/moulvibazar_upazilas.txt": "134bc0701e38ca7d8ad56c44fde27e2d2eff13e91465cef56030e99b56b9d572",
+    "raw/pages.csv": "02f439d050eedc9caaccd58e4827cd5687ae13a5ddbdfa73726b2d793182fd24",
+    "raw/sunamganj_glance.txt": "42f2b605b2c8b3b67472e61fc374e8a783a9172f28162072a459b803ca4f14d5",
+    "raw/sunamganj_unions.txt": "b93862003ee51ce521fc2175f634213cef304e18c510aa83bfc1480a2cbf79ea",
+    "raw/sunamganj_upazilas.txt": "b93862003ee51ce521fc2175f634213cef304e18c510aa83bfc1480a2cbf79ea"
+  },
+  "notes": "Collected by the generic division mode of the a2i portal collectors (pages found through the portals' menus, names and figures parsed from the pages). No licence stated; only facts (names, counts, figures) are extracted. English district/upazila names are the project's keys, not printed."
+}

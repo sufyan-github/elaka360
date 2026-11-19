@@ -1,0 +1,25 @@
+{
+  "key": "DGHS_BD_GEOCODES_KHULNA",
+  "name": "Bangladesh GeoCodes CodeSystem (BBS geo-codes) in the DGHS Bangladesh Core FHIR IG, Khulna Division extract",
+  "organization": "Directorate General of Health Services (DGHS), Ministry of Health and Family Welfare",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html",
+    "https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.json",
+    "https://fhir.dghs.gov.bd/core/ImplementationGuide-bd.fhir.core.json"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": "2026-10-15",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution": "Directorate General of Health Services (DGHS), Bangladesh — Bangladesh Core FHIR IG; codes: BBS geo-code system",
+  "files": {
+    "areas.csv": "773f1be91356dc7619e399524eefde19a26e10dbb80ebe9e49c9c97e1213953a",
+    "crosswalk.csv": "2a861388b15fba6b4af15e92f020808ecc1bf41f367d1079ba8124a49c395802",
+    "raw/bd-geocodes_khulna.json": "72a0380bcef157ff7f95b5cc57c8b60850014b95e955e4d60979b99494d526b8"
+  },
+  "notes": "CodeSystem https://fhir.dghs.gov.bd/core/CodeSystem/bd-geocodes version 0.5.0, status draft, date 2026-10-15T00:09:54+00:00, 1591 codes nationally. Divisions, districts, upazilas/city thanas, city corporations and paurashavas only: no union-level codes (only 'Unions Of X Upazila' placeholders). The IG does not say which BBS release the codes come from. Skipped entries: 400100 Bagerhat N/A (district placeholder (no city corporation)); 401800 Chuadanga N/A (district placeholder (no city corporation)); 404100 Jashore N/A (district placeholder (no city corporation)); 404400 Jhenaidah N/A (district placeholder (no city corporation)); 404700 Khulna N/A (district placeholder (no city corporation)); 4047332133 Khulna City Corp. (part of the city corporation inside thana Daulatpur); 4047334533 Khulna City Corp. (part of the city corporation inside thana Khalishpur); 4047334833 Khulna City Corp. (part of the city corporation inside thana Khan Jahan Ali); 4047335133 Khulna City Corp. (part of the city corporation inside thana Khulna Sadar); 4047338533 Khulna City Corp. (part of the city corporation inside thana Sonadanga); 405000 Kushtia N/A (district placeholder (no city corporation)); 405500 Magura N/A (district placeholder (no city corporation)); 405700 Meherpur N/A (district placeholder (no city corporation)); 406500 Narail N/A (district placeholder (no city corporation)); 408700 Satkhira N/A (district placeholder (no city corporation)); plus 61 'Unions Of ... Upazila' placeholders.",
+  "division": "khulna",
+  "kind": "dghs_geocodes"
+}

@@ -1,0 +1,1281 @@
+sheet,sl,designation,post,official_number,current_number,new_number,email
+RRMP,Unit/Office Name: Rangpur Metropoliton Police.,,,,,,
+RRMP,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail
+RRMP,,,,,,,
+RRMP,1,DIG,Police Commissioner,0521-57028,01769-695401,01320-073000,pcrpmp@police.gov.bd
+RRMP,2,,Reserved (05),,,"01320-073001
+01320-073005",
+RRMP,3,Addl. DIG,Addl. Police Commissioner,0521-57089,01769-69402,01320-073006,addpcrpmp@police.gov.bd
+RRMP,4,,Reserved (13),,,"01320-073007
+01320-073019",
+RRMP,5,DC,Headquarters & Finance,0521-57030,01769-695403,01320-073020,dchqrpmp@police.gov.bd
+RRMP,6,DC,Estate & Development,,01769-695399,01320-073021,
+RRMP,7,,Reserved For DC (20),,,"01320-073022
+01320-073041",
+RRMP,8,,Staff Officer To Commissioner,0521-57038,01769-695411,01320-073042,rpmp.ac.so@police.gov.bd
+RRMP,9,,"Reserved For 
+Commissioner office (15)",,,"01320-073043
+01320-073057",
+RRMP,10,ADC,Headquarters,0521-57034,01769-695405,01320-073058,rpmp.adchq@police.gov.bd
+RRMP,11,ADC,Crime & Operation,0521-57035,01769-695406,01320-073059,rpmp.adcrops@police.gov.bd
+RRMP,12,,Reserved For ADC (40),,,"01320-073060
+01320-073099",
+RRMP,13,AC,Headquarters,0521-57041,01769-695413,01320-073100,rpmp.ac.hq@police.gov.bd
+RRMP,14,AC,Force,0521-57040,01769-695412,01320-073101,rpmp.ac.force@police.gov.bd
+RRMP,15,,Reserved For AC (56),,,"01320-073102
+01320-073157",
+RRMP,16,,Reserved For Headquarters (102),,,"01320-073158
+01320-073259",
+RRMP,17,DC,City SB,0521-57036,01769-695408,01320-073260,
+RRMP,18,ADC,City SB,,0769-695398,01320-073261,rpmp.adccsb@police.gov.bd
+RRMP,19,,Reserved For ADC (05),,,"01320-073262
+01320-073266",
+RRMP,20,AC,City SB,0521-57042,0769-695414,01320-073267,rpmp.ac.csb@police.gov.bd
+RRMP,21,,Reserved For AC (10),,,"01320-073268
+01320-073277",
+RRMP,22,Inspector,CIO City SB,0521-57051,01769-695423,01320-073278,
+RRMP,23,,Reserved For CIO (50),,,"01320-073279
+01320-073328",
+RRMP,24,,Reserved City SB Office  (101),,,"01320-073329
+01320-073429",
+RRMP,25,DC,Crime,0521-57031,01769-695404,01320-073430,rpmp.dccr@police.gov.bd
+RRMP,26,ADC,Crime,0521-57033,01769-695407,01320-073431,rpmp.adcccr@police.gov.bd
+RRMP,27,,Reserved For ADC Crime (05),,,"01320-073432
+01320-073436",
+RRMP,28,AC,Crime,,,01320-073437,
+RRMP,29,AC,Patrol,0521-57050,01769-695422,01320-073438,rpmp.ac.patrol@police.gov.bd
+RRMP,30,,Reserved For AC Crime (10),,,"01320-073439
+01320-073448",
+RRMP,31,,Reserved For DC Crime Office (20),,,"01320-073449
+01320-073468",
+RRMP,32,AC,Sadar Zone,0521-57046,01769-695418,01320-073469,rpmp.ac.zone1@police.gov.bd
+RRMP,33,,Reserved For Zonal AC (05),,,"01320-073470
+01320-073474",
+RRMP,34,Inspector,OC Kotwali Thana,0521-57052,01769-695425,01320-073475,
+RRMP,35,Inspector,Investigation  Kotwali Thana,,01769-695426,01320-073476,
+RRMP,36,Inspector,Operations  Kotwali Thana,,01769-695386,01320-073477,
+RRMP,37,Inspector,Reserved -1,,,01320-073478,
+RRMP,38,Inspector,Reserved -2,,,01320-073479,
+RRMP,39,Inspector,Reserved -3,,,01320-073480,
+RRMP,40,Inspector,PI -1,,,01320-073481,
+RRMP,41,Inspector,PI -2,,,01320-073482,
+RRMP,42,,Duty Officer,0521-57053,01769-695378,01320-073483,
+RRMP,43,,Reserved For  Kotwali PS (20),,,"01320-073484
+01320-073503",
+RRMP,44,Inspector,OC Tajhat Thana,0521-57054,01769-695427,01320-073504,
+RRMP,45,Inspector,Investigation Tajhat Thana,,01769-695428,01320-073505,
+RRMP,46,Inspector,OperationsTajhat Thana,,01769-695387,01320-073506,
+RRMP,47,Inspector,Reserved -1,,,01320-073507,
+RRMP,48,Inspector,Reserved -2,,,01320-073508,
+RRMP,49,Inspector,Reserved -3,,,01320-073509,
+RRMP,50,Inspector,PI -1,,,01320-073510,
+RRMP,51,Inspector,PI -2,,,01320-073511,
+RRMP,52,,Duty Officer,0521-57055,01769-695379,01320-073512,
+RRMP,53,,Reserved For Tajhat PS (20),,,"01320-073513
+01320-073532",
+RRMP,54,AC,Mahiganj Zone,0521-57047,01769-695420,01320-073533,rpmp.ac.zone2@police.gov.bd
+RRMP,55,,Reserved For Zonal AC (05),,,"01320-073534
+01320-073538",
+RRMP,56,Inspector,OC Mahiganj Thana,52157056,01769-695429,01320-073539,
+RRMP,57,Inspector,Investigation Mahiganj Thana,,01769-695430,01320-073540,
+RRMP,58,Inspector,Operations Mahiganj Thana,,01769-695388,01320-073541,
+RRMP,59,Inspector,Reserved -1,,,01320-073542,
+RRMP,60,Inspector,Reserved -2,,,01320-073543,
+RRMP,61,Inspector,Reserved -3,,,01320-073544,
+RRMP,62,Inspector,PI -1,,,01320-073545,
+RRMP,63,Inspector,PI -2,,,01320-073546,
+RRMP,64,,Duty Officer,0521-57057,01769-695380,01320-073547,
+RRMP,65,,Reserved For Mahiganj PS (20),,,"01320-073548
+01320-073567",
+RRMP,66,Inspector,OC Haragach Thana,0521-57058,01769-695431,01320-073568,
+RRMP,67,Inspector,Investigation Haragach Thana,,01769-695432,01320-073569,
+RRMP,68,Inspector,Operations Haragach Thana,,01769-695389,01320-073570,
+RRMP,69,Inspector,Reserved -1,,,01320-073571,
+RRMP,70,Inspector,Reserved -2,,,01320-073572,
+RRMP,71,Inspector,Reserved -3,,,01320-073573,
+RRMP,72,Inspector,PI -1,,,01320-073574,
+RRMP,73,Inspector,PI -2,,,01320-073575,
+RRMP,74,,Duty Officer,0521-57059,01769-695381,01320-073576,
+RRMP,75,,Reserved For Haragach PS (20),,,"01320-073577
+01320-073596",
+RRMP,76,AC,Poshuram Zone,0521-57048,01769-695419,01320-073597,rpmp.ac.zone3@police.gov.bd
+RRMP,77,,Reserved For Zonal AC (05),,,"01320-073598
+01320-073602",
+RRMP,78,Inspector,OC Poshuram Thana,0521-57060,01769-695433,01320-073603,
+RRMP,79,Inspector,Investigation Poshuram Thana,,01769-695434,01320-073604,
+RRMP,80,Inspector,Operations Poshuram Thana,,01769-695390,01320-073605,
+RRMP,81,Inspector,Reserved -1,,,01320-073606,
+RRMP,82,Inspector,Reserved -2,,,01320-073607,
+RRMP,83,Inspector,Reserved -3,,,01320-073608,
+RRMP,84,Inspector,PI -1,,,01320-073609,
+RRMP,85,Inspector,PI -2,,,01320-073610,
+RRMP,86,,Duty Officer,0521-57061,01769-695382,01320-073611,
+RRMP,87,,Reserved For Poshuram PS (20),,,"01320-073612
+01320-073631",
+RRMP,88,Inspector,OC Hazirhat Thana,0521-57062,01769-695435,01320-073632,
+RRMP,89,Inspector,Investigation Hazirhat Thana,,01769-695436,01320-073633,
+RRMP,90,Inspector,Operations Hazirhat Thana,,01769-695391,01320-073634,
+RRMP,91,Inspector,Reserved -1,,,01320-073635,
+RRMP,92,Inspector,Reserved -2,,,01320-073636,
+RRMP,93,Inspector,Reserved -3,,,01320-073637,
+RRMP,94,Inspector,PI -1,,,01320-073638,
+RRMP,95,Inspector,PI -2,,,01320-073639,
+RRMP,96,,Duty Officer,0521-57063,01769-695383,01320-073640,
+RRMP,97,,Reserved For Hazirhat PS (19),,,"01320-073641
+01320-073659",
+RRMP,98,DC,DB,,01769-695409,01320-073660,
+RRMP,99,ADC,DB,0521-57037,01769-695397,01320-073661,rpmpadcdb@police.gov.bd
+RRMP,100,,Reserved For ADC DB (10),,,"01320-073662
+01320-073671",
+RRMP,101,AC,DB,0521-57043,01769-695415,01320-073672,rpmp.ac.db@police.gov.bd
+RRMP,102,,Reserved For AC DB (16),,,"01320-073673
+01320-073688",
+RRMP,103,Inspector,DB  -1,,01769-695372,01320-073689,
+RRMP,104,Inspector,DB  -2,,01769-695373,01320-073690,
+RRMP,105,Inspector,DB  -3,,,01320-073691,
+RRMP,106,,Reserved For DB Office (50),,,"01320-073692
+01320-073741",
+RRMP,107,AC,Procecution,,01769-695421,01320-073742,rpmp.ac.proc@police.gov.bd
+RRMP,108,,Reserved For AC  Procecution (05),,,"01320-073743
+01320-073747",
+RRMP,109,Inspector,Court -1,,,01320-073748,
+RRMP,110,Inspector,Court -2,,,01320-073749,
+RRMP,111,Inspector,Court -3,,,01320-073750,
+RRMP,112,Inspector,Court -4,,,01320-073751,
+RRMP,113,Inspector,Court -5,,,01320-073752,
+RRMP,114,,Reserved For Procecution Office (17),,,"01320-073753
+01320-073769",
+RRMP,115,DC,Traffic,,01769-695410,01320-073770,
+RRMP,116,ADC,Traffic,0521-57038,01769-695396,01320-073771,rpmp.adctraffic@police.gov.bd
+RRMP,117,,Reserved For ADC Traffic (10),,,"01320-073772
+01320-073781",
+RRMP,118,,"Reserved For 
+Traffic Office (50)",,,"01320-073782
+01320-073831",
+RRMP,119,AC,Traffic South,0521-57045,01769-695417,01320-073832,rpmpac.traffic2@police.gov.bd
+RRMP,120,,Reserved For AC Traffic South (05),,,"01320-073833
+01320-073837",
+RRMP,121,Inspector,TI- 1,,,01320-073838,
+RRMP,122,Inspector,TI- 2,,,01320-073839,
+RRMP,123,Inspector,TI- 3,,,01320-073840,
+RRMP,124,Inspector,TI- 4,,,01320-073841,
+RRMP,125,Inspector,TI- 5,,,01320-073842,
+RRMP,126,Inspector,TI- 6,,,01320-073843,
+RRMP,127,Inspector,TI- 7,,,01320-073844,
+RRMP,128,Inspector,TI- 8,,,01320-073845,
+RRMP,129,Inspector,TI- 9,,,01320-073846,
+RRMP,130,Inspector,TI- 10,,,01320-073847,
+RRMP,131,,Reserved For TI (50),,,"01320-073848
+01320-073897",
+RRMP,132,,Reserved For SGT/TSI  (100),,,"01320-073898
+01320-073997",
+RRMP,133,,Reserved For Traffic South (100),,,"01320-073998
+01320-074097",
+RRMP,134,AC,Traffic North,0521-57044,01769-695416,01320-074098,rpmp.ac.traffic1@police.gov.bd
+RRMP,135,,Reserved For AC North  (05),,,"01320-074099
+01320-074103",
+RRMP,136,Inspector,TI- 1,,,01320-074104,
+RRMP,137,Inspector,TI- 2,,,01320-074105,
+RRMP,138,Inspector,TI- 3,,,01320-074106,
+RRMP,139,Inspector,TI- 4,,,01320-074107,
+RRMP,140,Inspector,TI- 5,,,01320-074108,
+RRMP,141,Inspector,TI- 6,,,01320-074109,
+RRMP,142,Inspector,TI- 7,,,01320-074110,
+RRMP,143,Inspector,TI- 8,,,01320-074111,
+RRMP,144,Inspector,TI- 9,,,01320-074112,
+RRMP,145,Inspector,TI- 10,,,01320-074113,
+RRMP,146,,Reserved For TI (50),,,"01320-074114
+01320-074163",
+RRMP,147,,Reserved For SGT/TSI  (100),,,"01320-074164
+01320-074263",
+RRMP,148,,Reserved For Traffic North (100),,,"01320-074264
+01320-074363",
+RRMP,149,,Reserved For Rangpur Metro (1634),,,"01320-074364
+01320-075997",
+RRMP,150,Control Room,,0521-57066,01769-695400,01320-075998,
+RRMP,151,Hotline,,,,01320-075999,
+Rangpur Range,Unit/Office Name: DIG Rangpur Range,,,,,,
+Rangpur Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail
+Rangpur Range,,,,,,,
+Rangpur Range,1,DIG,1,"68101
+68100*",01713-374640,01320-131000,digrangpur@ police.gov.bd
+Rangpur Range,2,DIG,Reserved For DIG (1),,,01320-131001,
+Rangpur Range,3,Addl. DIG,Admini and finance,"67998
+67090*",01713374641,01320-131002,
+Rangpur Range,4,Addl. DIG,Crime & Operations,"63116
+55550*",01713374642,01320-131003,
+Rangpur Range,5,,Reserved For Addl. DIG (8),,,"01320-131004
+01320-131011",
+Rangpur Range,6,SP,Estate & Welfare,61106,01769692031,01320-131012,
+Rangpur Range,7,SP,Discipline& prosecution,,01769692032,01320-131013,
+Rangpur Range,8,SP,Operations & Traffic,,,01320-131014,
+Rangpur Range,9,SP,Media & Crime Analysis,,,01320-131015,
+Rangpur Range,10,,Reserved For SP (11),,,"01320-131016
+01320-131026",
+Rangpur Range,11,,Staff Officers  to DIG,66545,01713374643,01320-131027,
+Rangpur Range,12,Addl.SP,Admini and finance,53599,01769692033,01320-131028,
+Rangpur Range,13,,Reserved For Addl. SP (19),,,"01320-131029
+01320-131047",
+Rangpur Range,14,ASP,Crime & Operations,55551,01769692034,01320-131048,
+Rangpur Range,15,,Reserved For ASP (18),,,"01320-131049
+01320-131066",
+Rangpur Range,16,Inspector,Crime,55566,01713374644,01320-131067,
+Rangpur Range,17,Inspector,Force,,01769-692035,01320-131068,
+Rangpur Range,18,,Reserved For Inspector (31),,,"01320-131069
+01320-131099",
+Rangpur Range,19,,"Reserved For DIG Rangpur 
+Range Office (198)",,,"01320-131100
+01320-131297",
+Rangpur Range,20,Contorl Room,,,,01320-131298,
+Rangpur Range,21,Hot line,,,,01320-131299,
+Rangpur Range,,,,,,,
+Rangpur Range,Unit/Office Name:  Rangpur District,,,,,,
+Rangpur Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail
+Rangpur Range,1,SP,1,"63599*
+62131",01713-373868,01320-131300,sprangpur@police.gov.bd
+Rangpur Range,2,SP,Reserved For SP (1),,,01320-131301,
+Rangpur Range,3,Addl. SP,Admin,62122,01713-373869,01320-131302,
+Rangpur Range,4,Addl. SP,Crime,,,01320-131303,
+Rangpur Range,5,Addl. SP,DSB,55012,01769-690499,01320-131304,
+Rangpur Range,6,Addl. SP,Headquarters,,,01320-131305,
+Rangpur Range,7,,Reserved For Addl. SP  (06),,,"01320-131306
+01320-131311",
+Rangpur Range,8,ASP,DSB,,,01320-131312,
+Rangpur Range,9,ASP,SAF,,,01320-131313,
+Rangpur Range,10,,Reserved For ASP (08),,,"01320-131314
+01320-131321",
+Rangpur Range,11,,Reserved For SP Office (24),,,"01320-131322
+01320-131345",
+Rangpur Range,12,Addl. SP,A-Circle,62862,01713-373871,01320-131346,asp.a.rang@gmail.com
+Rangpur Range,13,,Reserved For A-Circle Circle  (4),,,"01320-131347
+01320-131350",
+Rangpur Range,14,Addl. SP,B-Circle,63926,01713-373872,01320-131351,
+Rangpur Range,15,,Reserved For B-Circle (4),,,"01320-131352
+01320-131355",
+Rangpur Range,16,ASP,C-Circle,,01769-692980,01320-131356,
+Rangpur Range,17,,Reserved For C-Circle  (4),,,"01320-131357
+01320-131360",
+Rangpur Range,18,ASP,D-Circle,,01769-692981,01320-131361,
+Rangpur Range,19,,Reserved For D-Circle (4),,,"01320-131362
+01320-131365",
+Rangpur Range,20,Inspector,DIO-1,62411,01713-373873,01320-131366,
+Rangpur Range,21,Inspector,DIO-2,,,01320-131367,
+Rangpur Range,22,Inspector,DIO-3,,,01320-131368,
+Rangpur Range,23,Inspector,DIO-4,,,01320-131369,
+Rangpur Range,24,Inspector,DIO-5,,,01320-131370,
+Rangpur Range,25,,Reserved For DIO (10),,,"01320-131371
+01320-131380",
+Rangpur Range,26,Inspector,OC Kotwali thana,63595,01713-373874,01320-131381,OCran.kot@police.gov.bd opsran.kot@police.gov.bd
+Rangpur Range,27,Inspector,Invest.  Kotwali thana,,,01320-131382,
+Rangpur Range,28,Inspector,Operation Kotwali Thana,,,01320-131383,
+Rangpur Range,29,Inspector,Reserved-1,,,01320-131384,
+Rangpur Range,30,Inspector,Reserved-2,,,01320-131385,
+Rangpur Range,31,,Duty officer,,,01320-131386,
+Rangpur Range,32,,Reserved For Kotwali thana  (20),,,"01320-131387
+01320-131406",
+Rangpur Range,33,Inspector,OC Gangachara Thana,,01769-694233,01320-131407,
+Rangpur Range,34,Inspector,Invest. Gangachara Thana,,,01320-131408,
+Rangpur Range,35,Inspector,Operation Gangachara Thana,,,01320-131409,
+Rangpur Range,36,Inspector,Reserved-1,,,01320-131410,
+Rangpur Range,37,Inspector,Reserved-2,,,01320-131411,
+Rangpur Range,38,,Duty officer,,,01320-131412,
+Rangpur Range,39,,Reserved For Gangachara Thana (20),,,"01320-131413
+01320-131432",
+Rangpur Range,40,Inspector,OC Badarganj Thana,05222-56312,01713-373876,01320-131433,OCran.bad@police.gov.bd opsran.bad@police.gov.bd
+Rangpur Range,41,Inspector,Invest. Badarganj Thana,,,01320-131434,
+Rangpur Range,42,Inspector,Operation Badarganj Thana,,,01320-131435,
+Rangpur Range,43,Inspector,Reserved-1,,,01320-131436,
+Rangpur Range,44,Inspector,Reserved-2,,,01320-131437,
+Rangpur Range,45,,Duty officer,,,01320-131438,
+Rangpur Range,46,,Reserved For Badarganj Thana (20),,,"01320-131439
+01320-131458",
+Rangpur Range,47,Inspector,OC Taraganj Thana,05228-56022,01713-373877,01320-131459,OCran.tar@police.gov.bd opsran.tar@police.gov.bd
+Rangpur Range,48,Inspector,Invest.Taraganj Thana,,01769-692985,01320-131460,
+Rangpur Range,49,Inspector,Operation Taraganj Thana,,,01320-131461,
+Rangpur Range,50,Inspector,Reserved-1,,,01320-131462,
+Rangpur Range,51,Inspector,Reserved-2,,,01320-131463,
+Rangpur Range,52,,Duty officer,,,01320-131464,
+Rangpur Range,53,,Reserved For Taraganj Thana (20),,,"01320-131465
+01320-131484",
+Rangpur Range,54,Inspector,OC Mithapukura Thana,05225-56110,01713-373878,01320-131485,OCran.mit@police.gov.bd opsran.mit@police.gov.bd
+Rangpur Range,55,Inspector,Invest. Mithapukura Thana,,01769-692986,01320-131486,
+Rangpur Range,56,Inspector,Operation Mithapukura Thana,,,01320-131487,
+Rangpur Range,57,Inspector,Reserved-1,,,01320-131488,
+Rangpur Range,58,Inspector,Reserved-2,,,01320-131489,
+Rangpur Range,59,,Duty officer,,,01320-131490,
+Rangpur Range,60,,Reserved For Mithapukura Thana (20),,,"01320-131491
+01320-131510",
+Rangpur Range,61,Inspector,OC Pirganj Thana,05227-56014,01713-373881,01320-131511,OCran.prg@police.gov.bd opsran.prg@police.gov.bd
+Rangpur Range,62,Inspector,Invest. Pirganj Thana,,01769-692987,01320-131512,
+Rangpur Range,63,Inspector,Operation Pirganj Thana,,,01320-131513,
+Rangpur Range,64,Inspector,Reserved-1,,,01320-131514,
+Rangpur Range,65,Inspector,Reserved-2,,,01320-131515,
+Rangpur Range,66,,Duty officer,,,01320-131516,
+Rangpur Range,67,,Reserved For Pirganj Thana  (20),,,"01320-131517
+01320-131536",
+Rangpur Range,68,Inspector,OC Pirgachha thana,05226-56011,01713-373879,01320-131537,OCran.pir@police.gov.bd opsran.pir@police.gov.bd
+Rangpur Range,69,Inspector,Invest. Pirgachha thana,,01769-692988,01320-131538,
+Rangpur Range,70,Inspector,Operation Pirgachha Thana,,,01320-131539,
+Rangpur Range,71,Inspector,Reserved-1,,,01320-131540,
+Rangpur Range,72,Inspector,Reserved-2,,,01320-131541,
+Rangpur Range,73,,Duty officer,,,01320-131542,
+Rangpur Range,74,,Reserved For Pirgachha thana  (20),,,"01320-131543
+01320-131562",
+Rangpur Range,75,Inspector,OC Kaunya Thana,05224-56003,01713-373880,01320-131563,OCran.kow@police.gov.bd opsran.kow@police.gov.bd
+Rangpur Range,76,Inspector,Invest. Kaunya Thana,,,01320-131564,
+Rangpur Range,77,Inspector,Operation Kaunya Thana,,,01320-131565,
+Rangpur Range,78,Inspector,Reserved-1,,,01320-131566,
+Rangpur Range,79,Inspector,Reserved-2,,,01320-131567,
+Rangpur Range,80,,Duty officer,,,01320-131568,
+Rangpur Range,81,,Reserved For Kaunya Thana (20),,,"01320-131569
+01320-131588",
+Rangpur Range,82,Inspector,DB-1,,,01320-131589,
+Rangpur Range,83,Inspector,DB-2,,,01320-131590,
+Rangpur Range,84,Inspector,DB-3,,,01320-131591,
+Rangpur Range,85,Inspector,DB-4,,,01320-131592,
+Rangpur Range,86,Inspector,DB-5,,,01320-131593,
+Rangpur Range,87,,Reserved For DB  (10),,,"01320-131594
+01320-131603",
+Rangpur Range,88,Inspector,Court-1,62499,01713-373882,01320-131604,
+Rangpur Range,89,Inspector,Court-2,,,01320-131605,
+Rangpur Range,90,Inspector,Court-3,,,01320-131606,
+Rangpur Range,91,Inspector,Court-4,,,01320-131607,
+Rangpur Range,92,Inspector,Court-5,,,01320-131608,
+Rangpur Range,93,,Reserved For Court (10),,,"01320-131609
+01320-131618",
+Rangpur Range,94,Inspector,TI-1,,01713-373883,01320-131619,
+Rangpur Range,95,Inspector,TI-2,,,01320-131620,
+Rangpur Range,96,Inspector,TI-3,,,01320-131621,
+Rangpur Range,97,Inspector,TI-4,,,01320-131622,
+Rangpur Range,98,Inspector,TI-5,,,01320-131623,
+Rangpur Range,99,,Reserved For TI (10),,,"01320-131624
+01320-131633",
+Rangpur Range,100,Inspector,RI,67978,01769-692994,01320-131634,
+Rangpur Range,101,,Reserved For Police Line (15),,,"01320-131635
+01320-131649",
+Rangpur Range,102,,Reserved For Rangpur District (648),,,"01320-131650
+01320-132297",
+Rangpur Range,103,Control Room,,,,01320-132298,
+Rangpur Range,104,Hot line,,,,01320-132299,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,Unit/Office Name:  Gaibandha District,,,,,,
+Rangpur Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail
+Rangpur Range,1,SP,1,"52225
+51302",01713373886,01320-132300,spgaibanda@police.gov.bd
+Rangpur Range,2,SP,Reserved For SP (1),,,01320-132301,
+Rangpur Range,3,Addl. SP,Admin,51809,01713373887,01320-132302,
+Rangpur Range,4,Addl. SP,Crime,,,01320-132303,
+Rangpur Range,5,Addl. SP,DSB,,,01320-132304,
+Rangpur Range,6,Addl. SP,Headquarters,,,01320-132305,
+Rangpur Range,7,,Reserved For Addl. SP  (06),,,"01320-132306
+01320-132311",
+Rangpur Range,8,,Reserved For ASP (10),,,"01320-132312
+01320-132321",
+Rangpur Range,9,,Reserved For SP Office (24),,,"01320-132322
+01320-132345",
+Rangpur Range,10,Addl. SP,A-Circle,52371,01713373889,01320-132346,
+Rangpur Range,11,,Reserved For A-Circle Circle  (4),,,"01320-132347
+01320-132350",
+Rangpur Range,12,Addl. SP,B-Circle,52372,01713373890,01320-132351,
+Rangpur Range,13,,Reserved For B-Circle (4),,,"01320-132352
+01320-132355",
+Rangpur Range,14,ASP,C-Circle,,01769692155,01320-132356,
+Rangpur Range,15,,Reserved For C-Circle  (4),,,"01320-132357
+01320-132360",
+Rangpur Range,16,Inspector,DIO-1,51806,01713373891,01320-132361,
+Rangpur Range,17,Inspector,DIO-2,,,01320-132362,
+Rangpur Range,18,Inspector,DIO-3,,,01320-132363,
+Rangpur Range,19,Inspector,DIO-4,,,01320-132364,
+Rangpur Range,20,Inspector,DIO-5,,,01320-132365,
+Rangpur Range,21,,Reserved For DIO (10),,,"01320-132366
+01320-132375",
+Rangpur Range,22,Inspector,OC Gaibandha thana,52314,01713373892,01320-132376,OCgai.gai@police.gov.bd
+Rangpur Range,23,Inspector,Invest.Gaibandha thana,,01769692123,01320-132377,
+Rangpur Range,24,Inspector,Operation Gaibandha Thana,,,01320-132378,
+Rangpur Range,25,Inspector,Reserved-1,,,01320-132379,
+Rangpur Range,26,Inspector,Reserved-2,,,01320-132380,
+Rangpur Range,27,,Duty officer,,01769692130,01320-132381,
+Rangpur Range,28,,Reserved For Gaibandha thana  (20),,,"01320-132382
+01320-132401",
+Rangpur Range,29,Inspector,OC Sadullapur Thana,05425- 56003,01713373893,01320-132402,OCgai.sha@police.gov.bd
+Rangpur Range,30,Inspector,Invest. Sadullapur Thana,,01769692124,01320-132403,
+Rangpur Range,31,Inspector,Operation Sadullapur Thana,,,01320-132404,
+Rangpur Range,32,Inspector,Reserved-1,,,01320-132405,
+Rangpur Range,33,Inspector,Reserved-2,,,01320-132406,
+Rangpur Range,34,,Duty officer,,,01320-132407,
+Rangpur Range,35,,Reserved For Sadullapur Thana (20),,,"01320-132408
+01320-132427",
+Rangpur Range,36,Inspector,OC Sundarganj Thana,05427-64015,01713373894,01320-132428,OCgai.sun@police.gov.bd
+Rangpur Range,37,Inspector,Invest. Sundarganj Thana,,,01320-132429,
+Rangpur Range,38,Inspector,Operation  Sundarganj Thana,,01769692125,01320-132430,
+Rangpur Range,39,Inspector,Reserved-1,,,01320-132431,
+Rangpur Range,40,Inspector,Reserved-2,,,01320-132432,
+Rangpur Range,41,,Duty officer,,01769692132,01320-132433,
+Rangpur Range,42,,Reserved For Sundarganj Thana (20),,,"01320-132434
+01320-132453",
+Rangpur Range,43,Inspector,OC Palashbari  Thana,05424-56017,01713373895,01320-132454,OCgai.pal@police.gov.bd
+Rangpur Range,44,Inspector,Invest. Palashbari  Thana,,01769692126,01320-132455,
+Rangpur Range,45,Inspector,Operation  Palashbari  Thana,,,01320-132456,
+Rangpur Range,46,Inspector,Reserved-1,,,01320-132457,
+Rangpur Range,47,Inspector,Reserved-2,,,01320-132458,
+Rangpur Range,48,,Duty officer,,01769692133,01320-132459,
+Rangpur Range,49,,Reserved For Palashbari Thana (20),,,"01320-132460
+01320-132479",
+Rangpur Range,50,Inspector,OC Gobindaganj Thana,05423-75023,01713373896,01320-132480,OCgai.gob@police.gov.bd
+Rangpur Range,51,Inspector,Invest. Gobindaganj Thana,,,01320-132481,
+Rangpur Range,52,Inspector,Operation  Gobindaganj  Thana,,,01320-132482,
+Rangpur Range,53,Inspector,Reserved-1,,,01320-132483,
+Rangpur Range,54,Inspector,Reserved-2,,,01320-132484,
+Rangpur Range,55,,Duty officer,,,01320-132485,
+Rangpur Range,56,,Reserved For Gobindaganj Thana (20),,,"01320-132486
+01320-132505",
+Rangpur Range,57,Inspector,OC Saghata thana,89004,01713373897,01320-132506,OCgai.sag@police.gov.bd
+Rangpur Range,58,Inspector,Invest. Saghata thana,,,01320-132507,
+Rangpur Range,59,Inspector,Operation  Saghata  Thana,,,01320-132508,
+Rangpur Range,60,Inspector,Reserved-1,,,01320-132509,
+Rangpur Range,61,Inspector,Reserved-2,,,01320-132510,
+Rangpur Range,62,,Duty officer,,,01320-132511,
+Rangpur Range,63,,Reserved For Saghata thana (20),,,"01320-132512
+01320-132531",
+Rangpur Range,64,Inspector,OC Phulachari Thana,,,01320-132532,
+Rangpur Range,65,Inspector,Invest. Phulachari Thana,,,01320-132533,
+Rangpur Range,66,Inspector,Operation Phulachari Thana,,,01320-132534,
+Rangpur Range,67,Inspector,Reserved-1,,,01320-132535,
+Rangpur Range,68,Inspector,Reserved-2,,,01320-132536,
+Rangpur Range,69,,Duty officer,,,01320-132537,
+Rangpur Range,70,,Reserved For Phulachari Thana (20),,,"01320-132538
+01320-132557",
+Rangpur Range,71,Inspector,DB-1,,,01320-132558,
+Rangpur Range,72,Inspector,DB-2,,,01320-132559,
+Rangpur Range,73,Inspector,DB-3,,,01320-132560,
+Rangpur Range,74,Inspector,DB-4,,,01320-132561,
+Rangpur Range,75,Inspector,DB-5,,,01320-132562,
+Rangpur Range,76,,Reserved For DB (10),,,"01320-132563
+01320-132572",
+Rangpur Range,77,Inspector,Court-1,,,01320-132573,
+Rangpur Range,78,Inspector,Court-2,,,01320-132574,
+Rangpur Range,79,Inspector,Court-3,,,01320-132575,
+Rangpur Range,80,Inspector,Court-4,,,01320-132576,
+Rangpur Range,81,Inspector,Court-5,,,01320-132577,
+Rangpur Range,82,,Reserved For Court (10),,,"01320-132578
+01320-132587",
+Rangpur Range,83,Inspector,TI-1,,,01320-132588,
+Rangpur Range,84,Inspector,TI-2,,,01320-132589,
+Rangpur Range,85,Inspector,TI-3,,,01320-132590,
+Rangpur Range,86,Inspector,TI-4,,,01320-132591,
+Rangpur Range,87,Inspector,TI-5,,,01320-132592,
+Rangpur Range,88,,Reserved For TI (10),,,"01320-132593
+01320-132602",
+Rangpur Range,89,Inspector,RI,,,01320-132603,
+Rangpur Range,90,,Reserved For Police Line (15),,,"01320-132604
+01320-132618",
+Rangpur Range,91,,Reserved For Gaibandha District (679),,,"01320-132619
+01320-133297",
+Rangpur Range,92,Control Room,,,,01320-133298,
+Rangpur Range,93,Hot line,,,,01320-133299,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,Unit/Office Name:  Kurigram District,,,,,,
+Rangpur Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail
+Rangpur Range,1,SP,1,"0581-61433
+0581-62206*",01713-373920,01320-133300,spkurigram@police.gov.bd
+Rangpur Range,2,SP,Reserved For SP (1),,,01320-133301,
+Rangpur Range,3,Addl. SP,Admin,,,01320-133302,
+Rangpur Range,4,Addl. SP,Crime,,,01320-133303,
+Rangpur Range,5,Addl. SP,DSB,,,01320-133304,
+Rangpur Range,6,Addl. SP,Headquarters,0581-61428,01713-373922,01320-133305,
+Rangpur Range,7,,Reserved For Addl. SP  (06),,,"01320-133306
+01320-133311",
+Rangpur Range,8,,Reserved For ASP (10),,,"01320-133312
+01320-133321",
+Rangpur Range,9,,Reserved For SP Office (24),,,"01320-133322
+01320-133345",
+Rangpur Range,10,Addl. SP,Kurigram Circle,0581-61331,01713-373923,01320-133346,
+Rangpur Range,11,,Reserved For Kurigram Circle  (4),,,"01320-133347
+01320-133350",
+Rangpur Range,12,Addl. SP,Ulipur Circle,055829-56095,01713-373924,01320-133351,
+Rangpur Range,13,,Reserved For Ulipur Circle  (4),,,"01320-133352
+01320-133355",
+Rangpur Range,14,ASP,Roumari Circle,,01769-693603,01320-133356,
+Rangpur Range,15,,Reserved For Roumari Circle  (4),,,"01320-133357
+01320-133360",
+Rangpur Range,16,ASP,Bhurungabari Circle,,01769-693604,01320-133361,
+Rangpur Range,17,,Reserved For Bhurungabari Circle  (4),,,"01320-133362
+01320-133365",
+Rangpur Range,18,ASP,Nageshwari Circle,,01769-693606,01320-133366,
+Rangpur Range,19,,Reserved For  Nageshwari Circle (4),,,"01320-133367
+01320-133370",
+Rangpur Range,20,Inspector,DIO-1,0581-61638,01713-373925,01320-133371,dsbkurigram@police.gov.bd
+Rangpur Range,21,Inspector,DIO-2,,,01320-133372,
+Rangpur Range,22,Inspector,DIO-3,,,01320-133373,
+Rangpur Range,23,Inspector,DIO-4,,,01320-133374,
+Rangpur Range,24,Inspector,DIO-5,,,01320-133375,
+Rangpur Range,25,,Reserved For DIO (10),,,"01320-133376
+01320-133385",
+Rangpur Range,26,Inspector,OC Kurigram thana,0581-61344,01713-373926,01320-133386,
+Rangpur Range,27,Inspector,Invest.Kurigram thana,,,01320-133387,
+Rangpur Range,28,Inspector,Operation Kurigram Thana,,,01320-133388,
+Rangpur Range,29,Inspector,Reserved-1,,,01320-133389,
+Rangpur Range,30,Inspector,Reserved-2,,,01320-133390,
+Rangpur Range,31,,Duty officer,,,01320-133391,
+Rangpur Range,32,,Reserved For Kurigram thana  (20),,,"01320-133392
+01320-133411",
+Rangpur Range,33,Inspector,OC Rajarhat Thana,05827-56004,01713-373927,01320-133412,
+Rangpur Range,34,Inspector,Invest. Rajarhat Thana,,,01320-133413,
+Rangpur Range,35,Inspector,Operation Rajarhat Thana,,,01320-133414,
+Rangpur Range,36,Inspector,Reserved-1,,,01320-133415,
+Rangpur Range,37,Inspector,Reserved-2,,,01320-133416,
+Rangpur Range,38,,Duty officer,,,01320-133417,
+Rangpur Range,39,,Reserved For Rajarhat Thana (20),,,"01320-133418
+01320-133437",
+Rangpur Range,40,Inspector,OC Phulbari Thana,05825-56011,01713-373928,01320-133438,
+Rangpur Range,41,Inspector,Invest. Phulbari Thana,,,01320-133439,
+Rangpur Range,42,Inspector,Operation Rajarhat Thana,,,01320-133440,
+Rangpur Range,43,Inspector,Reserved-1,,,01320-133441,
+Rangpur Range,44,Inspector,Reserved-2,,,01320-133442,
+Rangpur Range,45,,Duty officer,,,01320-133443,
+Rangpur Range,46,,Reserved For Phulbari Thana (20),,,"01320-133444
+01320-133463",
+Rangpur Range,47,Inspector,OC Nageshwari  Thana,05826-56209,01713-373929,01320-133464,
+Rangpur Range,48,Inspector,Invest.Nageshwari Thana,,,01320-133465,
+Rangpur Range,49,Inspector,Operation Nageshwari Thana,,,01320-133466,
+Rangpur Range,50,Inspector,Reserved-1,,,01320-133467,
+Rangpur Range,51,Inspector,Reserved-2,,,01320-133468,
+Rangpur Range,52,,Duty officer,,,01320-133469,
+Rangpur Range,53,,Reserved For Nageshwari  Thana (20),,,"01320-133470
+01320-133489",
+Rangpur Range,54,Inspector,OC Bhurungabari Thana,05822-56023,01713-373930,01320-133490,
+Rangpur Range,55,Inspector,Invest. Bhurungabari Thana,,,01320-133491,
+Rangpur Range,56,Inspector,Operation Bhurungabari Thana,,,01320-133492,
+Rangpur Range,57,Inspector,Reserved-1,,,01320-133493,
+Rangpur Range,58,Inspector,Reserved-2,,,01320-133494,
+Rangpur Range,59,,Duty officer,,,01320-133495,
+Rangpur Range,60,,Reserved For Bhurungabari Thana (20),,,"01320-133496
+01320-133515",
+Rangpur Range,61,Inspector,OC Ulipur Thana,05829-56003,01713-373931,01320-133516,
+Rangpur Range,62,Inspector,Invest. Ulipur Thana,,,01320-133517,
+Rangpur Range,63,Inspector,Operation Ulipur Thana,,,01320-133518,
+Rangpur Range,64,Inspector,Reserved-1,,,01320-133519,
+Rangpur Range,65,Inspector,Reserved-2,,,01320-133520,
+Rangpur Range,66,,Duty officer,,,01320-133521,
+Rangpur Range,67,,Reserved For Ulipur Thana  (20),,,"01320-133522
+01320-133541",
+Rangpur Range,68,Inspector,OC Chilmari thana,05824-50668,01713-373932,01320-133542,
+Rangpur Range,69,Inspector,Invest. Chilmari thana,,,01320-133543,
+Rangpur Range,70,Inspector,Operation Chilmari Thana,,,01320-133544,
+Rangpur Range,71,Inspector,Reserved-1,,,01320-133545,
+Rangpur Range,72,Inspector,Reserved-2,,,01320-133546,
+Rangpur Range,73,,Duty officer,,,01320-133547,
+Rangpur Range,74,,Reserved For Chilmari thana (20),,,"01320-133548
+01320-133567",
+Rangpur Range,75,Inspector,OC RoumariThana,05828-50626,01713-373933,01320-133568,
+Rangpur Range,76,Inspector,Invest. Roumari Thana,,,01320-133569,
+Rangpur Range,77,Inspector,Operation Roumari Thana,,,01320-133570,
+Rangpur Range,78,Inspector,Reserved-1,,,01320-133571,
+Rangpur Range,79,Inspector,Reserved-2,,,01320-133572,
+Rangpur Range,80,,Duty officer,,,01320-133573,
+Rangpur Range,81,,Reserved For Roumari Thana (20),,,"01320-133574
+01320-133593",
+Rangpur Range,82,Inspector,OC Rajibpur Thana,05823-56006,01713-373934,01320-133594,
+Rangpur Range,83,Inspector,Invest.  Rajibpur Thana,,,01320-133595,
+Rangpur Range,84,Inspector,Operation Rajibpur Thana,,,01320-133596,
+Rangpur Range,85,Inspector,Reserved-1,,,01320-133597,
+Rangpur Range,86,Inspector,Reserved-2,,,01320-133598,
+Rangpur Range,87,,Duty officer,,,01320-133599,
+Rangpur Range,88,,Reserved For  Rajibpur Thana  (20),,,"01320-133600
+01320-133619",
+Rangpur Range,89,Inspector,OC Dushmara Thana,,01713-373935,01320-133620,
+Rangpur Range,90,Inspector,Invest. Dushmara Thana,,,01320-133621,
+Rangpur Range,91,Inspector,Operation Dushmarai Thana,,,01320-133622,
+Rangpur Range,92,Inspector,Reserved-1,,,01320-133623,
+Rangpur Range,93,Inspector,Reserved-2,,,01320-133624,
+Rangpur Range,94,,Duty officer,,,01320-133625,
+Rangpur Range,95,,Reserved For Dushmara Thana (20),,,"01320-133626
+01320-133645",
+Rangpur Range,96,Inspector,OC Kacakata Thana,,01713-373936,01320-133646,
+Rangpur Range,97,Inspector,Invest. Kacakata Thana,,,01320-133647,
+Rangpur Range,98,Inspector,Operation Kacakata Thana,,,01320-133648,
+Rangpur Range,99,Inspector,Reserved-1,,,01320-133649,
+Rangpur Range,100,Inspector,Reserved-2,,,01320-133650,
+Rangpur Range,101,,Duty officer,,,01320-133651,
+Rangpur Range,102,,Reserved For Kacakata Thana  (20),,,"01320-133652
+01320-133671",
+Rangpur Range,103,Inspector,DB-1,,,01320-133672,
+Rangpur Range,104,Inspector,DB-2,,,01320-133673,
+Rangpur Range,105,Inspector,DB-3,,,01320-133674,
+Rangpur Range,106,Inspector,DB-4,,,01320-133675,
+Rangpur Range,107,Inspector,DB-5,,,01320-133676,
+Rangpur Range,108,,Reserved For DB  (10),,,"01320-133677
+01320-133686",
+Rangpur Range,109,Inspector,Court-1,0581-61386,01713-373938,01320-133687,
+Rangpur Range,110,Inspector,Court-2,,,01320-133688,
+Rangpur Range,111,Inspector,Court-3,,,01320-133689,
+Rangpur Range,112,Inspector,Court-4,,,01320-133690,
+Rangpur Range,113,Inspector,Court-5,,,01320-133691,
+Rangpur Range,114,,Reserved For Court (10),,,"01320-133692
+01320-133701",
+Rangpur Range,115,Inspector,TI-1,,01713-373940,01320-133702,
+Rangpur Range,116,Inspector,TI-2,,,01320-133703,
+Rangpur Range,117,Inspector,TI-3,,,01320-133704,
+Rangpur Range,118,Inspector,TI-4,,,01320-133705,
+Rangpur Range,119,Inspector,TI-5,,,01320-133706,
+Rangpur Range,120,,Reserved For TI (10),,,"01320-133707
+01320-133716",
+Rangpur Range,121,Inspector,RI,,01713-373939,01320-133717,
+Rangpur Range,122,,Reserved For Police Line (15),,,"01320-133718
+01320-133732",
+Rangpur Range,123,,Reserved For Kurigram District (565),,,"01320-133733
+01320-134297",
+Rangpur Range,124,Control Room,,,,01320-134298,
+Rangpur Range,125,Hot line,,,,01320-134299,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,Unit/Office Name:  Lalmonirhat District,,,,,,
+Rangpur Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail
+Rangpur Range,1,SP,1,"0591-61403
+0591-61383*
+0591-61100",01713-373941,01320-134300,splalmonirthat @police.gov.bd.
+Rangpur Range,2,SP,Reserved For SP (1),,,01320-134301,
+Rangpur Range,3,Addl. SP,Admin,0591-61349,01713-373942,01320-134302,
+Rangpur Range,4,Addl. SP,Crime,,,01320-134303,
+Rangpur Range,5,Addl. SP,DSB,,,01320-134304,
+Rangpur Range,6,Addl. SP,Headquarters,,,01320-134305,
+Rangpur Range,7,,Reserved For Addl. SP  (06),,,"01320-134306
+01320-134311",
+Rangpur Range,8,,Reserved For ASP (10),,,"01320-134312
+01320-134321",
+Rangpur Range,9,,Reserved For SP Office (24),,,"01320-134322
+01320-134345",
+Rangpur Range,10,Addl. SP,A Circle,0591-61219,01713-373944,01320-134346,
+Rangpur Range,11,,Reserved For A Circle  (4),,,"01320-134347
+01320-134350",
+Rangpur Range,12,ASP,B Circle,05923-56100,01769-691049,01320-134351,
+Rangpur Range,13,,Reserved For B Circle (4),,,"01320-134352
+01320-134355",
+Rangpur Range,14,Inspector,DIO-1,0591-61795,01713-373945,01320-134356,
+Rangpur Range,15,Inspector,DIO-2,,,01320-134357,
+Rangpur Range,16,Inspector,DIO-3,,,01320-134358,
+Rangpur Range,17,Inspector,DIO-4,,,01320-134359,
+Rangpur Range,18,Inspector,DIO-5,,,01320-134360,
+Rangpur Range,19,,Reserved For DIO (10),,,"01320-134361
+01320-134370",
+Rangpur Range,20,Inspector,OC Lalmonirhat thana,0591-61203,01713-373946,01320-134371,OClal.lal @ police.gov.bd.
+Rangpur Range,21,Inspector,Invest. Lalmonirhat thana,,,01320-134372,
+Rangpur Range,22,Inspector,Operation Lalmonirhat Thana,,,01320-134373,
+Rangpur Range,23,Inspector,Reserved-1,,,01320-134374,
+Rangpur Range,24,Inspector,Reserved-2,,,01320-134375,
+Rangpur Range,25,,Duty officer,,,01320-134376,
+Rangpur Range,26,,Reserved For Lalmonirhat thana  (20),,,"01320-134377
+01320-134396",
+Rangpur Range,27,Inspector,OC Aditmari Thana,05922-56003,01713-373947,01320-134397,OClal.adi @ police.gov.bd.
+Rangpur Range,28,Inspector,Invest. Aditmari Than,,,01320-134398,
+Rangpur Range,29,Inspector,Operation Aditmari Thana,,,01320-134399,
+Rangpur Range,30,Inspector,Reserved-1,,,01320-134400,
+Rangpur Range,31,Inspector,Reserved-2,,,01320-134401,
+Rangpur Range,32,,Duty officer,,,01320-134402,
+Rangpur Range,33,,Reserved For Aditmari Than (20),,,"01320-134403
+01320-134422",
+Rangpur Range,27,Inspector,OC Kaligonj Thana,05922-56003,01713-373947,01320-134423,OClal.adi @ police.gov.bd.
+Rangpur Range,28,Inspector,Invest. Kaligonj Than,,,01320-134424,
+Rangpur Range,29,Inspector,Operation Kaligonj Thana,,,01320-134425,
+Rangpur Range,30,Inspector,Reserved-1,,,01320-134426,
+Rangpur Range,31,Inspector,Reserved-2,,,01320-134427,
+Rangpur Range,32,,Duty officer,,,01320-134428,
+Rangpur Range,33,,Reserved For Kaligonj Than (20),,,"01320-134429
+01320-134448",
+Rangpur Range,34,Inspector,OC Hatibandha Thana,05923-56016,01713-373949,01320-134449,OClal.hat @ police.gov.bd.
+Rangpur Range,35,Inspector,Invest. Hatibandha Thana,,,01320-134450,
+Rangpur Range,36,Inspector,Operation Hatibandha Thana,,,01320-134451,
+Rangpur Range,37,Inspector,Reserved-1,,,01320-134452,
+Rangpur Range,38,Inspector,Reserved-2,,,01320-134453,
+Rangpur Range,39,,Duty officer,,,01320-134454,
+Rangpur Range,40,,Reserved For Hatibandha Thana (20),,,"01320-134455
+01320-134474",
+Rangpur Range,41,Inspector,OC Patgram Thana,05925-56015,01713-373950,01320-134475,OClal.pat @ police.gov.bd.
+Rangpur Range,42,Inspector,Invest.Patgram Thana,,,01320-134476,
+Rangpur Range,43,Inspector,Operation Patgram Thana,,,01320-134477,
+Rangpur Range,44,Inspector,Reserved-1,,,01320-134478,
+Rangpur Range,45,Inspector,Reserved-2,,,01320-134479,
+Rangpur Range,46,,Duty officer,,,01320-134480,
+Rangpur Range,47,,Reserved For Patgram Thana (20),,,"01320-134481
+01320-134500",
+Rangpur Range,48,Inspector,DB-1,,01713-373951,01320-134501,
+Rangpur Range,49,Inspector,DB-2,,,01320-134502,
+Rangpur Range,50,Inspector,DB-3,,,01320-134503,
+Rangpur Range,51,Inspector,DB-4,,,01320-134504,
+Rangpur Range,52,Inspector,DB-5,,,01320-134505,
+Rangpur Range,53,,Reserved For DB  (10),,,"01320-134506
+01320-134515",
+Rangpur Range,54,Inspector,Court-1,0591-61237,01713-373952,01320-134516,
+Rangpur Range,55,Inspector,Court-2,,,01320-134517,
+Rangpur Range,56,Inspector,Court-3,,,01320-134518,
+Rangpur Range,57,Inspector,Court-4,,,01320-134519,
+Rangpur Range,58,Inspector,Court-5,,,01320-134520,
+Rangpur Range,59,,Reserved For Court (10),,,"01320-134521
+01320-134530",
+Rangpur Range,60,Inspector,TI-1,,01713-373954,01320-134531,
+Rangpur Range,61,Inspector,TI-2,,,01320-134532,
+Rangpur Range,62,Inspector,TI-3,,,01320-134533,
+Rangpur Range,63,Inspector,TI-4,,,01320-134534,
+Rangpur Range,64,Inspector,TI-5,,,01320-134535,
+Rangpur Range,65,,Reserved For TI (10),,,"01320-134536
+01320-134545",
+Rangpur Range,66,Inspector,RI,0591-61209,01713-373953,01320-134546,
+Rangpur Range,67,,Police Lines -01,,,01320-134547,
+Rangpur Range,68,,Police Lines -02,,,01320-134548,
+Rangpur Range,69,,Police Lines -03,,,01320-134549,
+Rangpur Range,70,,Police Lines -04,,,01320-134550,
+Rangpur Range,71,,Police Lines -05,,,01320-134551,
+Rangpur Range,72,,Reserved For Police Line (10),,,"01320-134552
+01320-134561",
+Rangpur Range,73,,"Reserved For 
+Lalmonirhat District (736)",,,"01320-134562
+01320-135297",
+Rangpur Range,74,Control Room,,,,01320-135298,
+Rangpur Range,75,Hot line,,,,01320-135299,
+Rangpur Range,Unit/Office Name: Nilphamari District,,,,,,
+Rangpur Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail
+Rangpur Range,1,SP,1,"61412
+61647*",01713-373903,01320-135300,spnilphamari@police.gov.com
+Rangpur Range,2,SP,Reserved For SP,,,01320-135301,
+Rangpur Range,3,Addl. SP,Admin,61273,01713-373904,01320-135302,
+Rangpur Range,4,Addl. SP,Crime,,,01320-135303,
+Rangpur Range,5,Addl. SP,DSB,,,01320-135304,
+Rangpur Range,6,Addl. SP,Headquarters,61210,01713-373905,01320-135305,
+Rangpur Range,7,,Reserved For Addl. SP  (06),,,"01320-135306
+01320-135311",
+Rangpur Range,8,,Reserved For ASP (10),,,"01320-135312
+01320-135321",
+Rangpur Range,9,,Reserved For SP Office (24),,,"01320-135322
+01320-135345",
+Rangpur Range,10,Addl. SP,Nilphamari Circle,61214,01713-373906,01320-135346,
+Rangpur Range,11,,Reserved For Nilphamari Circle (4),,,"01320-135347
+01320-135350",
+Rangpur Range,12,Addl. SP,Syedpur Circle,05526/72027,01713-373907,01320-135351,
+Rangpur Range,13,,Reserved For Syedpur Circle (4),,,"01320-135352
+01320-135355",
+Rangpur Range,14,ASP,Domar Circle,,01769-692899,01320-135356,
+Rangpur Range,15,,Reserved For Domar  Circle (4),,,"01320-135357
+01320-135360",
+Rangpur Range,16,Inspector,DIO-1,61353,01713-373908,01320-135361,
+Rangpur Range,17,Inspector,DIO-2,,,01320-135362,
+Rangpur Range,18,Inspector,DIO-3,,,01320-135363,
+Rangpur Range,19,Inspector,DIO-4,,,01320-135364,
+Rangpur Range,20,Inspector,DIO-5,,,01320-135365,
+Rangpur Range,21,,Reserved For DIO (10),,,"01320-135366
+01320-135375",
+Rangpur Range,22,Inspector,OC Nilphamari thana,61202/61206,01713-373909,01320-135376,
+Rangpur Range,23,Inspector,Invest. Nilphamari thana,,01769-694606,01320-135377,
+Rangpur Range,24,Inspector,Operation Nilphamari Thana,,,01320-135378,
+Rangpur Range,25,Inspector,Reserved-1,,,01320-135379,
+Rangpur Range,26,Inspector,Reserved-2,,,01320-135380,
+Rangpur Range,27,,Duty officer,,01769-695342,01320-135381,
+Rangpur Range,28,,Reserved For Nilphamari thana  (20),,,"01320-135382
+01320-135401",
+Rangpur Range,29,Inspector,OC Syedpur Thana,05526/72025,01713-373910,01320-135402,
+Rangpur Range,30,Inspector,Invest. Syedpur Thana,,01769-694608,01320-135403,
+Rangpur Range,31,Inspector,Operation Syedpur Thana,,,01320-135404,
+Rangpur Range,32,Inspector,Reserved-1,,,01320-135405,
+Rangpur Range,33,Inspector,Reserved-2,,,01320-135406,
+Rangpur Range,34,,Duty officer,,,01320-135407,
+Rangpur Range,35,,Reserved For Syedpur Thana (20),,,"01320-135408
+01320-135427",
+Rangpur Range,36,Inspector,OC JalaDhaka Thana,05524/64008,01713-373911,01320-135428,
+Rangpur Range,37,Inspector,Invest. JalaDhaka Thana,,01769-694610,01320-135429,
+Rangpur Range,38,Inspector,Operation JalaDhaka Thana,,,01320-135430,
+Rangpur Range,39,Inspector,Reserved-1,,,01320-135431,
+Rangpur Range,40,Inspector,Reserved-2,,,01320-135432,
+Rangpur Range,41,,Duty officer,,01769-695343,01320-135433,
+Rangpur Range,42,,Reserved For JalaDhaka Thana  (20),,,"01320-135434
+01320-135453",
+Rangpur Range,43,Inspector,OC Kishoreganj Thana,05525/56010,01713-373912,01320-135454,
+Rangpur Range,44,Inspector,Invest. Kishoreganj Thana,,01769-694611,01320-135455,
+Rangpur Range,45,Inspector,Operation Kishoreganj Thana,,,01320-135456,
+Rangpur Range,46,Inspector,Reserved-1,,,01320-135457,
+Rangpur Range,47,Inspector,Reserved-2,,,01320-135458,
+Rangpur Range,48,,Duty officer,,01769-695345,01320-135459,
+Rangpur Range,49,,Reserved For Kishoreganj Thana (20),,,"01320-135460
+01320-135479",
+Rangpur Range,50,Inspector,OC Domar Thana,05523/75111,01713-373913,01320-135480,
+Rangpur Range,51,Inspector,Invest. Domar Thana,,01769-694612,01320-135481,
+Rangpur Range,52,Inspector,Operation Domar Thana,,,01320-135482,
+Rangpur Range,53,Inspector,Reserved-1,,,01320-135483,
+Rangpur Range,54,Inspector,Reserved-2,,,01320-135484,
+Rangpur Range,55,,Duty officer,,01769-695346,01320-135485,
+Rangpur Range,56,,Reserved For Domar Thana (20),,,"01320-135486
+01320-135505",
+Rangpur Range,57,Inspector,OC Dimla Thana,05522/56255,01713-373914,01320-135506,
+Rangpur Range,58,Inspector,Invest. Dimla Thana,,01769-694613,01320-135507,
+Rangpur Range,59,Inspector,Operation Dimla Thana,,,01320-135508,
+Rangpur Range,60,Inspector,Reserved-1,,,01320-135509,
+Rangpur Range,61,Inspector,Reserved-2,,,01320-135510,
+Rangpur Range,62,,Duty officer,,01769-695347,01320-135511,
+Rangpur Range,63,,Reserved For Dimla Thana (20),,,"01320-135512
+01320-135531",
+Rangpur Range,64,Inspector,DB-1,,01713-373916,01320-135532,
+Rangpur Range,65,Inspector,DB-2,,,01320-135533,"01320-135512
+01320-135531"
+Rangpur Range,66,Inspector,DB-3,,,01320-135534,
+Rangpur Range,67,Inspector,DB-4,,,01320-135535,
+Rangpur Range,68,Inspector,DB-5,,,01320-135536,
+Rangpur Range,69,,Reserved For DB  (10),,,"01320-135537
+01320-135546",
+Rangpur Range,70,Inspector,Court-1,62101,01713-373917,01320-135547,
+Rangpur Range,71,Inspector,Court-2,,,01320-135548,
+Rangpur Range,72,Inspector,Court-3,,,01320-135549,
+Rangpur Range,73,Inspector,Court-4,,,01320-135550,
+Rangpur Range,74,Inspector,Court-5,,,01320-135551,
+Rangpur Range,75,,Reserved For Court (10),,,"01320-135552
+01320-135561",
+Rangpur Range,76,Inspector,TI-1,,,01320-135562,
+Rangpur Range,77,Inspector,TI-2,,,01320-135563,
+Rangpur Range,78,Inspector,TI-3,,,01320-135564,
+Rangpur Range,79,Inspector,TI-4,,,01320-135565,
+Rangpur Range,80,Inspector,TI-5,,,01320-135566,
+Rangpur Range,81,,Reserved For TI (10),,,"01320-135567
+01320-135576",
+Rangpur Range,82,Inspector,RI,,,01320-135577,
+Rangpur Range,83,,Reserved For Police Line (15),,,"01320-135578
+01320-135592",
+Rangpur Range,84,,"Reserved For 
+Nilphamari District (705)",,,"01320-135593
+01320-136297",
+Rangpur Range,85,Control Room,,,,01320-136298,
+Rangpur Range,86,Hot line,,,,01320-136299,
+Rangpur Range,Unit/Office Name: Dinajpur District,,,,,,
+Rangpur Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail
+Rangpur Range,,,,,,,
+Rangpur Range,1,SP,1,"0531-65003
+0531-65145
+0531-65437",01713373955,01320-136300,spdinajpur@police.gov.bd
+Rangpur Range,2,SP,Reserved For SP (1),,,01320-136301,
+Rangpur Range,3,Addl. SP,Admin,0531-63113,01713373956,01320-136302,
+Rangpur Range,4,Addl. SP,Crime,0531-64282,01713373957,01320-136303,
+Rangpur Range,5,Addl. SP,DSB,0531-66741,01769690841,01320-136304,
+Rangpur Range,6,Addl. SP,Headquarters,0531-65099,01713373958,01320-136305,dinajpursadarcircle@gmail.com
+Rangpur Range,7,,Reserved For Addl. SP  (06),,,"01320-136306
+01320-136311",
+Rangpur Range,8,,Reserved For ASP (10),,,"01320-136312
+01320-136321",
+Rangpur Range,9,,Reserved For SP Office (24),,,"01320-136322
+01320-136345",
+Rangpur Range,10,Addl. SP,Sadar Cricle,0531-63046,01713373959,01320-136346,
+Rangpur Range,11,,Reserved For Sadar Cricle (4),,,"01320-136347
+01320-136350",
+Rangpur Range,12,Addl. SP,Birganj Circle,05323-72223,01713373960,01320-136351,
+Rangpur Range,13,,Reserved For Birganj Circle (4),,,"01320-136352
+01320-136355",
+Rangpur Range,14,Addl. SP,Phulbari Circle,05327-56321,01713373961,01320-136356,
+Rangpur Range,15,,Reserved For Phulbari Circle (4),,,"01320-136357
+01320-136360",
+Rangpur Range,16,ASP,Kaharol Circle,,01769693263,01320-136361,kcdinajpur@police.gov.bd
+Rangpur Range,17,,Reserved For Kaharol Circle (4),,,"01320-136362
+01320-136365",
+Rangpur Range,18,ASP,Birampur Circle,,01769693264,01320-136366,birampurcircleasp@gmail.com
+Rangpur Range,19,,Reserved For Birampur Circle (4),,,"01320-136367
+01320-136370",
+Rangpur Range,20,ASP,Hakimpur Circle,,01769693265,01320-136371,cir.din.hakimpur@police.gov.bd
+Rangpur Range,21,,Reserved For Hakimpur Circle (4),,,"01320-136372
+01320-136375",
+Rangpur Range,22,Inspector,DIO-1,0531-65011,01713373962,01320-136376,dsbdinajpur@gmail.com
+Rangpur Range,23,Inspector,DIO-2,,,01320-136377,
+Rangpur Range,24,Inspector,DIO-3,,,01320-136378,
+Rangpur Range,25,Inspector,DIO-4,,,01320-136379,
+Rangpur Range,26,Inspector,DIO-5,,,01320-136380,
+Rangpur Range,27,,Reserved For DIO (10),,,"01320-136381
+01320-136390",
+Rangpur Range,28,Inspector,OC Kotwali Thana,0531-63132,01713373963,01320-136391,OCkotwalidinajpur@gmail.com
+Rangpur Range,29,Inspector,Invest.Kotwali Thana,,01755579201,01320-136392,
+Rangpur Range,30,Inspector,Operation Kotwali Thana,,,01320-136393,
+Rangpur Range,31,Inspector,Reserved-1,,,01320-136394,
+Rangpur Range,32,Inspector,Reserved-2,,,01320-136395,
+Rangpur Range,33,,Duty officer,,,01320-136396,
+Rangpur Range,34,,Reserved For Kotwali Thana (20),,,"01320-136397
+01320-136416",
+Rangpur Range,35,Inspector,OC Chirirbandar Thana,05326-56106,01713373964,01320-136417,chirirbandarpsdinajpur@gmail.com
+Rangpur Range,36,Inspector,Invest. Chirirbandar Thana,,01755579202,01320-136418,
+Rangpur Range,37,Inspector,Operation Chirirbandar Thana,,,01320-136419,
+Rangpur Range,38,Inspector,Reserved-1,,,01320-136420,
+Rangpur Range,39,Inspector,Reserved-2,,,01320-136421,
+Rangpur Range,40,,Duty officer,,,01320-136422,
+Rangpur Range,41,,Reserved For Chirirbandar Thana (20),,,"01320-136423
+01320-136442",
+Rangpur Range,42,Inspector,OC Birala Thana,05324-56003,01713373965,01320-136443,birolpsdinajpur@gmail.com
+Rangpur Range,43,Inspector,Invest. Birala Thana,,01755579203,01320-136444,
+Rangpur Range,44,Inspector,Operation Birala Thana,,,01320-136445,
+Rangpur Range,45,Inspector,Reserved-1,,,01320-136446,
+Rangpur Range,46,Inspector,Reserved-2,,,01320-136447,
+Rangpur Range,47,,Duty officer,,,01320-136448,
+Rangpur Range,48,,Reserved For Birala Thana (20),,,"01320-136449
+01320-136468",
+Rangpur Range,49,Inspector,OC Parbatipur model Thana,05334-74227,01713373966,01320-136469,parbotipurmodelpsdinajpur@gmail.com
+Rangpur Range,50,Inspector,Invest. Parbatipur model Thana,,01755579204,01320-136470,
+Rangpur Range,51,Inspector,Operation Parbatipur Thana,,,01320-136471,
+Rangpur Range,52,Inspector,Reserved-1,,,01320-136472,
+Rangpur Range,53,Inspector,Reserved-2,,,01320-136473,
+Rangpur Range,54,,Duty officer,,,01320-136474,
+Rangpur Range,55,,"Reserved For 
+Parbatipur model Thana (20)",,,"01320-136475
+01320-136494",
+Rangpur Range,56,Inspector,OC Birganj Thana,05323-72222,01713373967,01320-136495,birganjpsdinajpur@gmail.com
+Rangpur Range,57,Inspector,Invest. Birganj Thana,,01755579205,01320-136496,
+Rangpur Range,58,Inspector,Operation Birganj Thana,,,01320-136497,
+Rangpur Range,59,Inspector,Reserved-1,,,01320-136498,
+Rangpur Range,60,Inspector,Reserved-2,,,01320-136499,
+Rangpur Range,61,,Duty officer,,,01320-136500,
+Rangpur Range,62,,Reserved For Birganj Thana (20),,,"01320-136501
+01320-136520",
+Rangpur Range,63,Inspector,OC BOChaganj Thana,05325-73012,01713373968,01320-136521,bOChagonjpsdinajpur@gmail.com
+Rangpur Range,64,Inspector,Invest. BOChaganj Thana,,01755579206,01320-136522,
+Rangpur Range,65,Inspector,Operation  BOChaganj Thana,,,01320-136523,
+Rangpur Range,66,Inspector,Reserved-1,,,01320-136524,
+Rangpur Range,67,Inspector,Reserved-2,,,01320-136525,
+Rangpur Range,68,,Duty officer,,,01320-136526,
+Rangpur Range,69,,Reserved For BOChaganj Thana (20),,,"01320-136527
+01320-136546",
+Rangpur Range,70,Inspector,OC Kaharol Thana,05335-56005,01713373969,01320-136547,kaharolpsdinajpur@gmail.com
+Rangpur Range,71,Inspector,Invest. Kaharol Thana,,01755579207,01320-136548,
+Rangpur Range,72,Inspector,Operation Kaharol Thana,,,01320-136549,
+Rangpur Range,73,Inspector,Reserved-1,,,01320-136550,
+Rangpur Range,74,Inspector,Reserved-2,,,01320-136551,
+Rangpur Range,75,,Duty officer,,,01320-136552,
+Rangpur Range,76,,Reserved For Kaharol Thana (20),,,"01320-136553
+01320-136572",
+Rangpur Range,77,Inspector,OC Khansama Thana,05332-56004,01713373970,01320-136573,khansamapsdinajpur@gmail.com
+Rangpur Range,78,Inspector,Invest. Khansama Thana,,01755579208,01320-136574,
+Rangpur Range,79,Inspector,Operation Khansama Thana,,,01320-136575,
+Rangpur Range,80,Inspector,Reserved-1,,,01320-136576,
+Rangpur Range,81,Inspector,Reserved-2,,,01320-136577,
+Rangpur Range,82,,Duty officer,,,01320-136578,
+Rangpur Range,83,,Reserved For Khansama Thana (20),,,"01320-136579
+01320-136598",
+Rangpur Range,84,Inspector,OC Phulbari Thana,05327-56201,01713373971,01320-136599,phulbaripsdinajpur@gmail.com
+Rangpur Range,85,Inspector,Invest. Phulbari Thana,,01755579209,01320-136600,
+Rangpur Range,86,Inspector,Operation Phulbari Thana,,,01320-136601,
+Rangpur Range,87,Inspector,Reserved-1,,,01320-136602,
+Rangpur Range,88,Inspector,Reserved-2,,,01320-136603,
+Rangpur Range,89,,Duty officer,,,01320-136604,
+Rangpur Range,90,,Reserved For Phulbari Thana (20),,,"01320-136605
+01320-136624",
+Rangpur Range,91,Inspector,OC Birampur Thana,05322-56414,01713373972,01320-136625,birampurpsdinajpur@gmail.com
+Rangpur Range,92,Inspector,Invest. Birampur  Thana,,01755579210,01320-136626,
+Rangpur Range,93,Inspector,Operation Birampur Thana,,,01320-136627,
+Rangpur Range,94,Inspector,Reserved-1,,,01320-136628,
+Rangpur Range,95,Inspector,Reserved-2,,,01320-136629,
+Rangpur Range,96,,Duty officer,,,01320-136630,
+Rangpur Range,97,,Reserved For Birampur Thana (20),,,"01320-136631
+01320-136650",
+Rangpur Range,98,Inspector,OC Nawabganj Thana,05333-56003,01713373973,01320-136651,nawabgonjpsdinajpur@gmail.com
+Rangpur Range,99,Inspector,Invest. Nawabganj Thana,,01755579211,01320-136652,
+Rangpur Range,100,Inspector,Operation Nawabganj Thana,,,01320-136653,
+Rangpur Range,101,Inspector,Reserved-1,,,01320-136654,
+Rangpur Range,102,Inspector,Reserved-2,,,01320-136655,
+Rangpur Range,103,,Duty officer,,,01320-136656,
+Rangpur Range,104,,Reserved For Nawabganj Thana  (20),,,"01320-136657
+01320-136676",
+Rangpur Range,105,Inspector,OC Ghoraghat Thana,05328-56010,01713373974,01320-136677,ghoraghatpsdinajpur@gmail.com
+Rangpur Range,106,Inspector,Invest. Ghoraghat Thana,,01755579212,01320-136678,
+Rangpur Range,107,Inspector,Operation Ghoraghat Thana,,,01320-136679,
+Rangpur Range,108,Inspector,Reserved-1,,,01320-136680,
+Rangpur Range,109,Inspector,Reserved-2,,,01320-136681,
+Rangpur Range,110,,Duty officer,,,01320-136682,
+Rangpur Range,111,,Reserved For Ghoraghat Thana  (20),,,"01320-136683
+01320-136702",
+Rangpur Range,112,Inspector,OC Hakimpur Thana,05329-75009,01713373975,01320-136703,hakimpurpsdinajpur@gmail.com
+Rangpur Range,113,Inspector,Invest. Hakimpur Thana,,01755579213,01320-136704,
+Rangpur Range,114,Inspector,Operation Hakimpur Thana,,,01320-136705,
+Rangpur Range,115,Inspector,Reserved-1,,,01320-136706,
+Rangpur Range,116,Inspector,Reserved-2,,,01320-136707,
+Rangpur Range,117,,Duty officer,,,01320-136708,
+Rangpur Range,118,,Reserved For Hakimpur Thana (20),,,"01320-136709
+01320-136728",
+Rangpur Range,119,Inspector,DB-1,,,01320-136729,
+Rangpur Range,120,Inspector,DB-2,,,01320-136730,
+Rangpur Range,121,Inspector,DB-3,,,01320-136731,
+Rangpur Range,122,Inspector,DB-4,,,01320-136732,
+Rangpur Range,123,Inspector,DB-5,,,01320-136733,
+Rangpur Range,124,,Reserved For DB  (10),,,"01320-136734
+01320-136743",
+Rangpur Range,125,Inspector,Court-1,0531-66151,01713373977,01320-136744,sadarcourtdinajpur@gmail.com
+Rangpur Range,126,Inspector,Court-2,,,01320-136745,
+Rangpur Range,127,Inspector,Court-3,,,01320-136746,
+Rangpur Range,128,Inspector,Court-4,,,01320-136747,
+Rangpur Range,129,Inspector,Court-5,,,01320-136748,
+Rangpur Range,130,,Reserved For Court (10),,,"01320-136749
+01320-136758",
+Rangpur Range,131,Inspector,TI-1,0531-51861,01713373979,01320-136759,
+Rangpur Range,132,Inspector,TI-2,,01769693270,01320-136760,
+Rangpur Range,133,Inspector,TI-3,,,01320-136761,
+Rangpur Range,134,Inspector,TI-4,,,01320-136762,
+Rangpur Range,135,Inspector,TI-5,,,01320-136763,
+Rangpur Range,136,,Reserved For TI (10),,,"01320-136764
+01320-136773",
+Rangpur Range,137,Inspector,RI,0531-63101,01713373978,01320-136774,
+Rangpur Range,138,,Reserved For Police Line (15),,,"01320-136775
+01320-136789",
+Rangpur Range,139,,Reserved For Dinajpur District (508),,,"01320-136790
+01320-137297",
+Rangpur Range,140,Control Room,,,,01320-137298,
+Rangpur Range,141,Hot line,,,,01320-137299,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,Unit/Office Name: Thakurgaon District,,,,,,
+Rangpur Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail
+Rangpur Range,1,SP,1,0561-61960,01713-373980,01320-137300,spthakurgaon@police.gov.bd
+Rangpur Range,2,SP,Reserved For SP,,,01320-137301,
+Rangpur Range,3,Addl. SP,Admin,0561-52682,01713-373981,01320-137302,
+Rangpur Range,4,Addl. SP,Crime,,,01320-137303,
+Rangpur Range,5,Addl. SP,DSB,,,01320-137304,
+Rangpur Range,6,Addl. SP,Headquarters,0521-61966,01713-373982,01320-137305,
+Rangpur Range,7,,Reserved For Addl. SP  (06),,,"01320-137306
+01320-137311",
+Rangpur Range,8,,Reserved For ASP (10),,,"01320-137312
+01320-137321",
+Rangpur Range,9,,Reserved For SP Office (24),,,"01320-137322
+01320-137345",
+Rangpur Range,10,Addl. SP,Sadar Cricle,0561-53440,01713-373983,01320-137346,
+Rangpur Range,11,,Reserved For Sadar Cricle (4),,,"01320-137347
+01320-137350",
+Rangpur Range,12,ASP,Pirganj Circle,,01769-691233,01320-137351,
+Rangpur Range,13,,Reserved For Pirganj Circle (4),,,"01320-137352
+01320-137355",
+Rangpur Range,14,ASP,RaniShankail Circle,,01769-691230,01320-137356,
+Rangpur Range,15,,Reserved For RaniShankail Circle (4),,,"01320-137357
+01320-137360",
+Rangpur Range,16,Inspector,DIO-1,0521-61974,01713-373984,01320-137361,
+Rangpur Range,17,Inspector,DIO-2,,,01320-137362,
+Rangpur Range,18,Inspector,DIO-3,,,01320-137363,
+Rangpur Range,19,Inspector,DIO-4,,,01320-137364,
+Rangpur Range,20,Inspector,DIO-5,,,01320-137365,
+Rangpur Range,21,,Reserved For DIO (10),,,"01320-137366
+01320-137375",
+Rangpur Range,22,Inspector,OC Thakurgaon Thana,0521-52025,01713-373985,01320-137376,
+Rangpur Range,23,Inspector,Invest. Thakurgaon Thana,,01769-691241,01320-137377,
+Rangpur Range,24,Inspector,Operation Thakurgaon Thana,,,01320-137378,
+Rangpur Range,25,Inspector,Reserved-1,,,01320-137379,
+Rangpur Range,26,Inspector,Reserved-2,,,01320-137380,
+Rangpur Range,27,,Duty officer,,01769-691251,01320-137381,
+Rangpur Range,28,,Reserved For Thakurgaon Thana  (20),,,"01320-137382
+01320-137401",
+Rangpur Range,29,Inspector,OC Baliadangi Thana,0561-56003,01713-373986,01320-137402,
+Rangpur Range,30,Inspector,Invest. Baliadangi Thana,,01769-691242,01320-137403,
+Rangpur Range,31,Inspector,Operation Baliadangi Thana,,,01320-137404,
+Rangpur Range,32,Inspector,Reserved-1,,,01320-137405,
+Rangpur Range,33,Inspector,Reserved-2,,,01320-137406,
+Rangpur Range,34,,Duty officer,,,01320-137407,
+Rangpur Range,35,,Reserved For Baliadangi Thana  (20),,,"01320-137408
+01320-137427",
+Rangpur Range,36,Inspector,OC RaniShankail Thana,0561-56005,01713-373987,01320-137428,
+Rangpur Range,37,Inspector,Invest. RaniShankail Thana,,,01320-137429,
+Rangpur Range,38,Inspector,Operation RaniShankail Thana,,,01320-137430,
+Rangpur Range,39,Inspector,Reserved-1,,,01320-137431,
+Rangpur Range,40,Inspector,Reserved-2,,,01320-137432,
+Rangpur Range,41,,Duty officer,,,01320-137433,
+Rangpur Range,42,,Reserved For RaniShankail Thana (20),,,"01320-137434
+01320-137453",
+Rangpur Range,43,Inspector,OC Pirganj Thana,0561-56227,01713-373988,01320-137454,
+Rangpur Range,44,Inspector,Invest. Pirganj Thana Thana,,01769-691244,01320-137455,
+Rangpur Range,45,Inspector,Operation Pirganj Thana,,,01320-137456,
+Rangpur Range,46,Inspector,Reserved-1,,,01320-137457,
+Rangpur Range,47,Inspector,Reserved-2,,,01320-137458,
+Rangpur Range,48,,Duty officer,,,01320-137459,
+Rangpur Range,49,,Reserved For Pirganj Thana (20),,,"01320-137460
+01320-137479",
+Rangpur Range,50,Inspector,OC Haripur Thana,0561-56007,01713-373989,01320-137480,
+Rangpur Range,51,Inspector,Invest. Haripur Thana,,01769-691245,01320-137481,
+Rangpur Range,52,Inspector,Operation  Haripur Thana,,,01320-137482,
+Rangpur Range,53,Inspector,Reserved-1,,,01320-137483,
+Rangpur Range,54,Inspector,Reserved-2,,,01320-137484,
+Rangpur Range,55,,Duty officer,,,01320-137485,
+Rangpur Range,56,,Reserved For Haripur Thana (20),,,"01320-137486
+01320-137505",
+Rangpur Range,57,Inspector,OC Ruhiya Thana,,01769-691240,01320-137506,
+Rangpur Range,58,Inspector,Invest. OC Ruhiya Thana,,01769-691246,01320-137507,
+Rangpur Range,59,Inspector,Operation Ruhiya Thana,,,01320-137508,
+Rangpur Range,60,Inspector,Reserved-1,,,01320-137509,
+Rangpur Range,61,Inspector,Reserved-2,,,01320-137510,
+Rangpur Range,62,,Duty officer,,,01320-137511,
+Rangpur Range,63,,Reserved For OC Ruhiya Thana (20),,,"01320-137512
+01320-137531",
+Rangpur Range,64,Inspector,DB-1,0561-61243,01713-373990,01320-137532,
+Rangpur Range,65,Inspector,DB-2,,,01320-137533,
+Rangpur Range,66,Inspector,DB-3,,,01320-137534,
+Rangpur Range,67,Inspector,DB-4,,,01320-137535,
+Rangpur Range,68,Inspector,DB-5,,,01320-137536,
+Rangpur Range,69,,Reserved For DB  (10),,,"01320-137537
+01320-137546",
+Rangpur Range,70,Inspector,Court-1,,,01320-137547,
+Rangpur Range,71,Inspector,Court-2,,,01320-137548,
+Rangpur Range,72,Inspector,Court-3,,,01320-137549,
+Rangpur Range,73,Inspector,Court-4,,,01320-137550,
+Rangpur Range,74,Inspector,Court-5,,,01320-137551,
+Rangpur Range,75,,Reserved For Court (10),,,"01320-137552
+01320-137561",
+Rangpur Range,76,Inspector,TI-1,,,01320-137562,
+Rangpur Range,77,Inspector,TI-2,,,01320-137563,
+Rangpur Range,78,Inspector,TI-3,,,01320-137564,
+Rangpur Range,79,Inspector,TI-4,,,01320-137565,
+Rangpur Range,80,Inspector,TI-5,,,01320-137566,
+Rangpur Range,81,,Reserved For TI (10),,,"01320-137567
+01320-137576",
+Rangpur Range,82,Inspector,RI,0561-52088,01713-373992,01320-137577,
+Rangpur Range,83,,Reserved For Police Line (15),,,"01320-137578
+01320-137592",
+Rangpur Range,84,,"Reserved For 
+Thakurgaon District (705)",,,"01320-137593
+01320-138297",
+Rangpur Range,85,Control Room,,,,01320-138298,
+Rangpur Range,86,Hot line,,,,01320-138299,
+Rangpur Range,Unit/Office Name: Panchagarh District,,,,,,
+Rangpur Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail
+Rangpur Range,1,SP,1,"0568-61370
+61899",01713373994,01320-138300,sppangarh@police.gov.bd
+Rangpur Range,2,SP,Reserved For SP (1),,,01320-138301,
+Rangpur Range,3,Addl. SP,Admin,61898,01713373995,01320-138302,adsppgr@gmail.com
+Rangpur Range,4,Addl. SP,Crime,,,01320-138303,
+Rangpur Range,5,Addl. SP,DSB,,,01320-138304,
+Rangpur Range,6,Addl. SP,Headquarters,61597,01713373996,01320-138305,
+Rangpur Range,7,,Reserved For Addl. SP  (06),,,"01320-138306
+01320-138311",
+Rangpur Range,8,,Reserved For ASP (10),,,"01320-138312
+01320-138321",
+Rangpur Range,9,,Reserved For SP Office (24),,,"01320-138322
+01320-138345",
+Rangpur Range,10,Addl. SP,Sadar Cricle,61520,01713373997,01320-138346,
+Rangpur Range,11,,Reserved For Sadar Cricle (4),,,"01320-138347
+01320-138350",
+Rangpur Range,12,ASP,DebiganjCircle,,01769694180,01320-138351,
+Rangpur Range,13,,Reserved For DebiganjCircle (4),,,"01320-138352
+01320-138355",
+Rangpur Range,14,Inspector,DIO-1,,,01320-138356,
+Rangpur Range,15,Inspector,DIO-2,,,01320-138357,
+Rangpur Range,16,Inspector,DIO-3,,,01320-138358,
+Rangpur Range,17,Inspector,DIO-4,,,01320-138359,
+Rangpur Range,18,Inspector,DIO-5,,,01320-138360,
+Rangpur Range,19,,Reserved For DIO (10),,,"01320-138361
+01320-138370",
+Rangpur Range,20,Inspector,OC  Panchagarh Thana,61555,01713373999,01320-138371,OCpanghagarh@gmail.com
+Rangpur Range,21,Inspector,Invest. Panchagarh Thana,,,01320-138372,
+Rangpur Range,22,Inspector,Operation Ruhiya Thana,,,01320-138373,
+Rangpur Range,23,Inspector,Reserved-1,,,01320-138374,
+Rangpur Range,24,Inspector,Reserved-2,,,01320-138375,
+Rangpur Range,25,,Duty officer,,,01320-138376,
+Rangpur Range,26,,Reserved For Panchagarh Thana  (20),,,"01320-138377
+01320-138396",
+Rangpur Range,27,Inspector,OC Boda Thana,05653-56113,01713374000,01320-138397,OCbodha@gmail.com
+Rangpur Range,28,Inspector,Invest. Boda Thana,,,01320-138398,
+Rangpur Range,29,Inspector,Operation Boda Thana,,,01320-138399,
+Rangpur Range,30,Inspector,Reserved-1,,,01320-138400,
+Rangpur Range,31,Inspector,Reserved-2,,,01320-138401,
+Rangpur Range,32,,Duty officer,,,01320-138402,
+Rangpur Range,33,,Reserved For Boda Thana (20),,,"01320-138403
+01320-138422",
+Rangpur Range,34,Inspector,OC Atwari Thana,05652-56003,01713374001,01320-138423,OCatwari@gmail.com
+Rangpur Range,35,Inspector,Invest. Atwari Thana,,,01320-138424,
+Rangpur Range,36,Inspector,OperationAtwari Thana,,,01320-138425,
+Rangpur Range,37,Inspector,Reserved-1,,,01320-138426,
+Rangpur Range,38,Inspector,Reserved-2,,,01320-138427,
+Rangpur Range,39,,Duty officer,,,01320-138428,
+Rangpur Range,40,,Reserved For Atwari Thana (20),,,"01320-138429
+01320-138448",
+Rangpur Range,41,Inspector,OC Tetulia Thana,05655-75010,01713374002,01320-138449,OCtetulia@gmail.com
+Rangpur Range,42,Inspector,Invest. Tetulia Thana,,,01320-138450,
+Rangpur Range,43,Inspector,Operation Tetulia Thana,,,01320-138451,
+Rangpur Range,44,Inspector,Reserved-1,,,01320-138452,
+Rangpur Range,45,Inspector,Reserved-2,,,01320-138453,
+Rangpur Range,46,,Duty officer,,,01320-138454,
+Rangpur Range,47,,Reserved For Tetulia Thana (20),,,"01320-138455
+01320-138474",
+Rangpur Range,48,Inspector,OC Debiganj Thana,05654-56006,01713374003,01320-138475,OCdebiganj@gmail.com
+Rangpur Range,49,Inspector,Invest. Debiganj Thana,,,01320-138476,
+Rangpur Range,50,Inspector,Operation  Debiganj Thana,,,01320-138477,
+Rangpur Range,51,Inspector,Reserved-1,,,01320-138478,
+Rangpur Range,52,Inspector,Reserved-2,,,01320-138479,
+Rangpur Range,53,,Duty officer,,,01320-138480,
+Rangpur Range,54,,Reserved For Debiganj Thana (20),,,"01320-138481
+01320-138500",
+Rangpur Range,55,Inspector,DB-1,61902,01713374004,01320-138501,
+Rangpur Range,56,Inspector,DB-2,,,01320-138502,
+Rangpur Range,57,Inspector,DB-3,,,01320-138503,
+Rangpur Range,58,Inspector,DB-4,,,01320-138504,
+Rangpur Range,59,Inspector,DB-5,,,01320-138505,
+Rangpur Range,60,,Reserved For DB  (10),,,"01320-138506
+01320-138515",
+Rangpur Range,61,Inspector,Court-1,61587,01713374005,01320-138516,
+Rangpur Range,62,Inspector,Court-2,,,01320-138517,
+Rangpur Range,63,Inspector,Court-3,,,01320-138518,
+Rangpur Range,64,Inspector,Court-4,,,01320-138519,
+Rangpur Range,65,Inspector,Court-5,,,01320-138520,
+Rangpur Range,66,,Reserved For Court (10),,,"01320-138521
+01320-138530",
+Rangpur Range,67,Inspector,TI-1,61900,,01320-138531,
+Rangpur Range,68,Inspector,TI-2,,,01320-138532,
+Rangpur Range,69,Inspector,TI-3,,,01320-138533,
+Rangpur Range,70,Inspector,TI-4,,,01320-138534,
+Rangpur Range,71,Inspector,TI-5,,,01320-138535,
+Rangpur Range,72,,Reserved For TI (10),,,"01320-138536
+01320-138545",
+Rangpur Range,73,Inspector,RI,61530,01713374006,01320-138546,
+Rangpur Range,74,,Reserved For Police Line (15),,,"01320-138547
+01320-138561",
+Rangpur Range,75,,"Reserved For
+ Panchagarh District (736)",,,"01320-138562
+01320-139297",
+Rangpur Range,76,Control Room,,,,01320-139298,
+Rangpur Range,77,Hot line,,,,01320-139299,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,,,,,,,
+Rangpur Range,Unit/Office Name: Rangpur RRF,,,,,,
+Rangpur Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail
+Rangpur Range,1,SP,Commandant,.0521-55523,01769-058240,01320-139300,com.rrfrang@police.gov.bd
+Rangpur Range,2,SP,Reserved For SP,,,01320-139301,
+Rangpur Range,3,Addl. SP,HR  & SS,.0521-55524,01769-058241,01320-139302,addlsp.hrss.rrfrang@police.gov.bd
+Rangpur Range,4,Addl. SP,Operation & Intelligence,,01769-058242,01320-139303,addlsp.oi.rrfrang@police.gov.bd
+Rangpur Range,5,,Reserved For Addl. SP (8),,,"01320-139304
+01320-139311",
+Rangpur Range,6,ASP,Admin & Support services,,01769-058243,01320-139312,asp.ass.rrfrang@police.gov.bd
+Rangpur Range,7,ASP,Discipline  & Training,,01769-058244,01320-139313,
+Rangpur Range,8,ASP,Field & Operation,,01769-058245,01320-139314,
+Rangpur Range,9,ASP,Planning & Co-ordeination,,01769-058246,01320-139315,
+Rangpur Range,10,,Reserved For ASP (6),,,"01320-139316
+01320-139321",
+Rangpur Range,11,Inspector,RI,,01769-058247,01320-139322,
+Rangpur Range,12,Inspector (UB),1,,01769-058248,01320-139323,
+Rangpur Range,13,Inspector (UB),2,,01769-058249,01320-139324,
+Rangpur Range,14,,Reserved For Inspector (27),,,"01320-139325
+01320-139351",
+Rangpur Range,15,,Reserved For Rangpur RRF (446),,,"01320-139352
+01320-139797",
+Rangpur Range,16,Control Room,,,,01320-139798,
+Rangpur Range,17,Hot line,,,,01320-139799,

@@ -1,0 +1,3110 @@
+[
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 180,
+   "name_en": "University of Dhaka",
+   "name_bn": null,
+   "slug": "university-of-dhaka",
+   "website": "www.du.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 180,
+   "name_en": "University of Dhaka",
+   "name_bn": null,
+   "slug": "university-of-dhaka",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "1921",
+   "present_campus": null,
+   "permanent_campus": "Dhaka University, Ramna, Dhaka-1000",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.du.ac.bd",
+   "email": "vcoffice@du.ac.bd, registrar@du.ac.bd",
+   "telephone_mobile": "+88-09666911463",
+   "fax": "+880-2-9667222",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 183,
+   "name_en": "Bangladesh University of Engineering & Technology",
+   "name_bn": null,
+   "slug": "bangladesh-university-of-engineering-technology",
+   "website": "www.buet.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 183,
+   "name_en": "Bangladesh University of Engineering & Technology",
+   "name_bn": null,
+   "slug": "bangladesh-university-of-engineering-technology",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "1962",
+   "present_campus": null,
+   "permanent_campus": "Bangladesh University of Engineering & Technology,Dhaka-1000, Bangladesh",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.buet.ac.bd",
+   "email": "regtr@regtr.buet.ac.bd, regoffice@regtr.buet.ac.bd",
+   "telephone_mobile": "55666000-02, 01550072999, 02223365616",
+   "fax": "(880 2) 44612902",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 185,
+   "name_en": "Jahangirnagar University",
+   "name_bn": null,
+   "slug": "jahangirnagar-university",
+   "website": "www.juniv.edu",
+   "marker": null
+  },
+  "detail": {
+   "id": 185,
+   "name_en": "Jahangirnagar University",
+   "name_bn": null,
+   "slug": "jahangirnagar-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "1970",
+   "present_campus": null,
+   "permanent_campus": "Jahangirnagar University, Savar, Dhaka-1342, Bangladesh",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.juniv.edu",
+   "email": "registrar@juniv.edu",
+   "telephone_mobile": "02224491040, 01720-38870",
+   "fax": "02224491052",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 189,
+   "name_en": "National University",
+   "name_bn": null,
+   "slug": "national-university",
+   "website": "www.nu.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 189,
+   "name_en": "National University",
+   "name_bn": null,
+   "slug": "national-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "1992",
+   "present_campus": null,
+   "permanent_campus": "National University, Board Bazar, Gazipur-1704",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.nu.edu.bd",
+   "email": "registrar@nu.ac.bd",
+   "telephone_mobile": "01734790892",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Gazipur",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 190,
+   "name_en": "Bangladesh Open University",
+   "name_bn": null,
+   "slug": "bangladesh-open-university",
+   "website": "www.bou.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 190,
+   "name_en": "Bangladesh Open University",
+   "name_bn": null,
+   "slug": "bangladesh-open-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "1992",
+   "present_campus": null,
+   "permanent_campus": "Bangladesh Open University, Gazipur-1705",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.bou.ac.bd",
+   "email": "registrar@bou.ac.bd",
+   "telephone_mobile": "996691112, 09666730730 Ex.105",
+   "fax": "88-02-9291130",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Gazipur",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 191,
+   "name_en": "Bangladesh Medical University",
+   "name_bn": null,
+   "slug": "bangladesh-medical-university",
+   "website": "www.bsmmu.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 191,
+   "name_en": "Bangladesh Medical University",
+   "name_bn": null,
+   "slug": "bangladesh-medical-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "1998",
+   "present_campus": null,
+   "permanent_campus": "Bangladesh Medical University, Shahbag, Dhaka-1000, Bangladesh.",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.bsmmu.ac.bd",
+   "email": "registrar@bsmmu.edu.bd",
+   "telephone_mobile": "9661065, 9661064",
+   "fax": "88-02-55165609",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 192,
+   "name_en": "Gazipur Agricultural University",
+   "name_bn": null,
+   "slug": "gazipur-agricultural-university",
+   "website": "https://gau.edu.bd/",
+   "marker": null
+  },
+  "detail": {
+   "id": 192,
+   "name_en": "Gazipur Agricultural University",
+   "name_bn": null,
+   "slug": "gazipur-agricultural-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "1998",
+   "present_campus": null,
+   "permanent_campus": "Salna, Gazipur",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "https://gau.edu.bd/",
+   "email": "registrar@gau.edu.bd",
+   "telephone_mobile": "Phone: +8802996695323 PABX: +88029205310-14 Extn.-2058 IP Phone: 09612962058",
+   "fax": "029205333, 9205316",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Gazipur",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 194,
+   "name_en": "Mawlana Bhashani Science & Technology University",
+   "name_bn": null,
+   "slug": "mawlana-bhashani-science-technology-university",
+   "website": "www.mbstu.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 194,
+   "name_en": "Mawlana Bhashani Science & Technology University",
+   "name_bn": null,
+   "slug": "mawlana-bhashani-science-technology-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2001",
+   "present_campus": null,
+   "permanent_campus": "Mawlana Bhashani Science & Technology University, Santosh, Tangail-1902",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.mbstu.ac.bd",
+   "email": "registrar@mbstu.ac.bd",
+   "telephone_mobile": "880921-51899",
+   "fax": "+88092155400",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Tangail",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 196,
+   "name_en": "Sher-e-Bangla Agricultural University",
+   "name_bn": null,
+   "slug": "sher-e-bangla-agricultural-university",
+   "website": "www.sau.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 196,
+   "name_en": "Sher-e-Bangla Agricultural University",
+   "name_bn": null,
+   "slug": "sher-e-bangla-agricultural-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2001",
+   "present_campus": null,
+   "permanent_campus": "Sher-e-Bangla Agricultural University, Sher-e-Bangla Nagar, Dhaka-1207",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.sau.edu.bd",
+   "email": "registrar@sau.edu.bd, registrar.sau01@gmail.com",
+   "telephone_mobile": "9131162/106, 44814006, 01819-201020",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 200,
+   "name_en": "Dhaka University of Engineering & Technology (DUET)",
+   "name_bn": null,
+   "slug": "dhaka-university-of-engineering-technology-duet",
+   "website": "www.duet.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 200,
+   "name_en": "Dhaka University of Engineering & Technology (DUET)",
+   "name_bn": null,
+   "slug": "dhaka-university-of-engineering-technology-duet",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2003",
+   "present_campus": null,
+   "permanent_campus": "Dhaka University of Engineering & Technology (DUET), Gazipur-1700, Bangladesh.",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.duet.ac.bd",
+   "email": "reg_duet@duet.ac.bd",
+   "telephone_mobile": "Tel: +88-02-49274003 PABX : +88-02-49274034-53 Extn: 1101 IP (Local) : 2124-003 & IP (Direct) : 0961",
+   "fax": "+88-02-49274001-02",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Gazipur",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 202,
+   "name_en": "Jagannath University",
+   "name_bn": null,
+   "slug": "jagannath-university",
+   "website": "www.jnu.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 202,
+   "name_en": "Jagannath University",
+   "name_bn": null,
+   "slug": "jagannath-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2005",
+   "present_campus": null,
+   "permanent_campus": "Jagannath University, Dhaka-1100, Bangladesh",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.jnu.ac.bd",
+   "email": "info@jnu.ac.bd",
+   "telephone_mobile": "+88-02-9534255, 7110415",
+   "fax": "+88-02-9534255",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 210,
+   "name_en": "Bangladesh University of Professionals",
+   "name_bn": null,
+   "slug": "bangladesh-university-of-professionals",
+   "website": "www.bup.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 210,
+   "name_en": "Bangladesh University of Professionals",
+   "name_bn": null,
+   "slug": "bangladesh-university-of-professionals",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2009",
+   "present_campus": null,
+   "permanent_campus": "Bangladesh University of Professionals, Mirpur Cantonment, Mirpur-12, Dhaka-1216, Bangladesh",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.bup.edu.bd",
+   "email": "registrar@bup.edu.bd",
+   "telephone_mobile": "+8809666790799",
+   "fax": "+88-02-223373197",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 211,
+   "name_en": "Gopalganj Science & Technology University",
+   "name_bn": null,
+   "slug": "gopalganj-science-technology-university",
+   "website": "www.bsmrstu.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 211,
+   "name_en": "Gopalganj Science & Technology University",
+   "name_bn": null,
+   "slug": "gopalganj-science-technology-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2010",
+   "present_campus": null,
+   "permanent_campus": "Gopalganj Science & Technology University, Gopalganj Town Road, Gopalganj-8100, Bangladesh",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.bsmrstu.edu.bd",
+   "email": "registrar@bsmrstu.edu.bd, mhossain_adib@yahoo.com",
+   "telephone_mobile": "02-6682257, 01711-469237",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Gopalganj",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 212,
+   "name_en": "Bangladesh University of Textiles",
+   "name_bn": null,
+   "slug": "bangladesh-university-of-textiles",
+   "website": "www.butex.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 212,
+   "name_en": "Bangladesh University of Textiles",
+   "name_bn": null,
+   "slug": "bangladesh-university-of-textiles",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2010",
+   "present_campus": null,
+   "permanent_campus": "Bangladesh University of Textiles , 92 Shaheed Tajuddin Ahmed Sarani, Tejgaon, Dhaka-1208, Bangladesh",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.butex.edu.bd",
+   "email": "vc@butex.edu.bd; registrar@butex.edu.bd",
+   "telephone_mobile": "+88 02 58151788, 01715-066387",
+   "fax": "+88 02 48112698",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 216,
+   "name_en": "Islamic Arabic University",
+   "name_bn": null,
+   "slug": "islamic-arabic-university",
+   "website": "www.iau.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 216,
+   "name_en": "Islamic Arabic University",
+   "name_bn": null,
+   "slug": "islamic-arabic-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2013",
+   "present_campus": null,
+   "permanent_campus": "Islamic Arabic University, 124/22, Block-A, Road no-3, West Dhanmondi, Basila, Mohammadpur, Dhaka-1207",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.iau.edu.bd",
+   "email": "iauregistrar@gmail.com",
+   "telephone_mobile": "01705-408000-5, 02-55000237-6",
+   "fax": "02-55000278",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 220,
+   "name_en": "University of Frontier Technology, Bangladesh",
+   "name_bn": null,
+   "slug": "university-of-frontier-technology-bangladesh",
+   "website": "www.uftb.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 220,
+   "name_en": "University of Frontier Technology, Bangladesh",
+   "name_bn": null,
+   "slug": "university-of-frontier-technology-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2016",
+   "present_campus": null,
+   "permanent_campus": "University of Frontier Technology, Kaliakair, Gazipur-1750, Bangladesh.",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.uftb.ac.bd",
+   "email": "registrar@uftb.ac.bd, info@uftb.ac.bd",
+   "telephone_mobile": "09666775534, 01894953700",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Gazipur",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 227,
+   "name_en": "Kishoreganj University",
+   "name_bn": null,
+   "slug": "kishoreganj-university",
+   "website": "bsmru.ac.bd.",
+   "marker": null
+  },
+  "detail": {
+   "id": 227,
+   "name_en": "Kishoreganj University",
+   "name_bn": null,
+   "slug": "kishoreganj-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2021",
+   "present_campus": null,
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "bsmru.ac.bd.",
+   "email": "info@bsmru.ac.bd, dilipbarua67@yahoo.com",
+   "telephone_mobile": "+88 01734331313, 01740071456, 01716033198",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Kishoreganj",
+  "_basis": "name"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 236,
+   "name_en": "Dhaka Central University",
+   "name_bn": null,
+   "slug": "dhaka-central-university",
+   "website": "https://dcu.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 236,
+   "name_en": "Dhaka Central University",
+   "name_bn": null,
+   "slug": "dhaka-central-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2026",
+   "present_campus": null,
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "https://dcu.ac.bd",
+   "email": "registrar@dcu.ac.bd",
+   "telephone_mobile": null,
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "name"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 360,
+   "name_en": "Narayanganj Science and Technology University",
+   "name_bn": null,
+   "slug": "narayanganj-science-and-technology-university",
+   "website": null,
+   "marker": null
+  },
+  "detail": {
+   "id": 360,
+   "name_en": "Narayanganj Science and Technology University",
+   "name_bn": null,
+   "slug": "narayanganj-science-and-technology-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": null,
+   "present_campus": null,
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": null,
+   "email": null,
+   "telephone_mobile": null,
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Narayanganj",
+  "_basis": "name"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 359,
+   "name_en": "Shariatpur Agricultural University",
+   "name_bn": "শরিয়তপুর কৃষি বিশ্ববিদ্যালয়",
+   "slug": "shariatpur-agricultural-university",
+   "website": null,
+   "marker": null
+  },
+  "detail": {
+   "id": 359,
+   "name_en": "Shariatpur Agricultural University",
+   "name_bn": "শরিয়তপুর কৃষি বিশ্ববিদ্যালয়",
+   "slug": "shariatpur-agricultural-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": null,
+   "present_campus": null,
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": null,
+   "email": null,
+   "telephone_mobile": null,
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Shariatpur",
+  "_basis": "name"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 239,
+   "name_en": "North South University",
+   "name_bn": null,
+   "slug": "north-south-university",
+   "website": "www.northsouth.edu",
+   "marker": null
+  },
+  "detail": {
+   "id": 239,
+   "name_en": "North South University",
+   "name_bn": null,
+   "slug": "north-south-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "1992",
+   "present_campus": "Plot#15, Block-B, Bashundhara, Baridhara, Dhaka-1229",
+   "permanent_campus": "Plot#15, Block-B, Bashundhara, Baridhara, Dhaka-1229",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.northsouth.edu",
+   "email": "registrar@northsouth.edu",
+   "telephone_mobile": "880255668200,",
+   "fax": "880255668202",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 241,
+   "name_en": "Independent University, Bangladesh",
+   "name_bn": null,
+   "slug": "independent-university-bangladesh",
+   "website": "www.iub.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 241,
+   "name_en": "Independent University, Bangladesh",
+   "name_bn": null,
+   "slug": "independent-university-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "1993",
+   "present_campus": "Plot -16, Aftabuddin Ahmed Road, Block-b, Bashundra R/A, Dhaka-1229.",
+   "permanent_campus": "Plot -16, Aftabuddin Ahmed Road, Block-b, Bashundra R/A, Dhaka-1229.",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.iub.edu.bd",
+   "email": "info@iub.edu.bd",
+   "telephone_mobile": "+88-02-8401645-53, 8402065-76",
+   "fax": "+88-02-8401991",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 242,
+   "name_en": "Central Women's University",
+   "name_bn": null,
+   "slug": "central-womens-university",
+   "website": "www.cwu.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 242,
+   "name_en": "Central Women's University",
+   "name_bn": null,
+   "slug": "central-womens-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "1993",
+   "present_campus": "6, Hatkhola Road, Dhaka.",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.cwu.edu.bd",
+   "email": "info@cwu.edu.bd",
+   "telephone_mobile": "223387499, 223359938, 01915727560",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 243,
+   "name_en": "International University of Business Agriculture & Technology",
+   "name_bn": null,
+   "slug": "international-university-of-business-agriculture-technology",
+   "website": "www.iubat.edu",
+   "marker": null
+  },
+  "detail": {
+   "id": 243,
+   "name_en": "International University of Business Agriculture & Technology",
+   "name_bn": null,
+   "slug": "international-university-of-business-agriculture-technology",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "1993",
+   "present_campus": "4,Embankment Drive Road, Sector-10, Uttara Model Town, Dhaka-1230, Bangladesh",
+   "permanent_campus": "4,Embankment Drive Road, Sector-10, Uttara Model Town, Dhaka-1230, Bangladesh",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.iubat.edu",
+   "email": "info@iubat.edu",
+   "telephone_mobile": "(880 2) 896 3523-27, (880 2) 8923469-70, (880 2) 8918412, 0174014933, 55091801-5",
+   "fax": "(880 2) 8922625",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 245,
+   "name_en": "Ahsanullah University of Science and Technology",
+   "name_bn": null,
+   "slug": "ahsanullah-university-of-science-and-technology",
+   "website": "www.aust.edu",
+   "marker": null
+  },
+  "detail": {
+   "id": 245,
+   "name_en": "Ahsanullah University of Science and Technology",
+   "name_bn": null,
+   "slug": "ahsanullah-university-of-science-and-technology",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "1995",
+   "present_campus": "Plot No. 141-142, Love Road, Tejgaon I/A, Dhaka-1208.",
+   "permanent_campus": "Plot No. 141-142, Love Road, Tejgaon I/A, Dhaka-1208.",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.aust.edu",
+   "email": "vc@aust.edu regr@aust.edu",
+   "telephone_mobile": "88-02-9120248, 9130613,9115461",
+   "fax": "88-02-9130508, 9860564",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 246,
+   "name_en": "American International University-Bangladesh",
+   "name_bn": null,
+   "slug": "american-international-university-bangladesh",
+   "website": "www.aiub.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 246,
+   "name_en": "American International University-Bangladesh",
+   "name_bn": null,
+   "slug": "american-international-university-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "1995",
+   "present_campus": "N/A Plot No: 408/1 (Old: KA-66/1), Kuril Kuratoli Road, Khilkhet, Dhaka 1229, Bangladesh",
+   "permanent_campus": "Plot No: 408/1 (Old: KA-66/1), Kuril Kuratoli Road, Khilkhet, Dhaka 1229, Bangladesh",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.aiub.ac.bd",
+   "email": "info@aiub.edu",
+   "telephone_mobile": "880-2-8811749, 8815386-7",
+   "fax": "880-2-8813233,",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 247,
+   "name_en": "East West University",
+   "name_bn": null,
+   "slug": "east-west-university",
+   "website": "www.ewubd.edu",
+   "marker": null
+  },
+  "detail": {
+   "id": 247,
+   "name_en": "East West University",
+   "name_bn": null,
+   "slug": "east-west-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "1996",
+   "present_campus": null,
+   "permanent_campus": "Plot A/2 Jahurul Islam Avenue Jahurul Islam City, Aftabnagar, Dhaka-1212",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.ewubd.edu",
+   "email": "admissions@ewubd.edu",
+   "telephone_mobile": "09666775577",
+   "fax": "8812336",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 248,
+   "name_en": "University of Asia Pacific",
+   "name_bn": null,
+   "slug": "university-of-asia-pacific",
+   "website": "www.uap-bd.edu",
+   "marker": null
+  },
+  "detail": {
+   "id": 248,
+   "name_en": "University of Asia Pacific",
+   "name_bn": null,
+   "slug": "university-of-asia-pacific",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "1996",
+   "present_campus": "74/A, Green Road, Dhaka-1205",
+   "permanent_campus": "74/A, Green Road, Dhaka-1205",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.uap-bd.edu",
+   "email": "uapadmin@uap-bd.edu; registrar@uap-bd.edu",
+   "telephone_mobile": "58157091-94",
+   "fax": "9664950, 58157097",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 249,
+   "name_en": "Gono Bishwabidyalay",
+   "name_bn": null,
+   "slug": "gono-bishwabidyalay",
+   "website": "www.gonouniversity.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 249,
+   "name_en": "Gono Bishwabidyalay",
+   "name_bn": null,
+   "slug": "gono-bishwabidyalay",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "1996",
+   "present_campus": "Nolam, Post- Mirzanagar, Savar, Dhaka-1344",
+   "permanent_campus": "Nolam, Post- Mirzanagar, Savar, Dhaka-1344",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.gonouniversity.edu.bd",
+   "email": "gbidyalay@yahoo.com",
+   "telephone_mobile": "88-02-7792226-27",
+   "fax": "88-02-7792226",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 250,
+   "name_en": "The People's University of Bangladesh",
+   "name_bn": null,
+   "slug": "the-peoples-university-of-bangladesh",
+   "website": "www.pub.ac.bd",
+   "marker": "*"
+  },
+  "detail": {
+   "id": 250,
+   "name_en": "The People's University of Bangladesh",
+   "name_bn": null,
+   "slug": "the-peoples-university-of-bangladesh",
+   "marker": "*",
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "1996",
+   "present_campus": "3/2, Asad Avenue, Mohammadpur, Dhaka-1207",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.pub.ac.bd",
+   "email": "thepeoplesuniversity@yahoo.com",
+   "telephone_mobile": "9117454, 9127807",
+   "fax": "9128009",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 251,
+   "name_en": "Asian University of Bangladesh",
+   "name_bn": null,
+   "slug": "asian-university-of-bangladesh",
+   "website": "www.aub.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 251,
+   "name_en": "Asian University of Bangladesh",
+   "name_bn": null,
+   "slug": "asian-university-of-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "1996",
+   "present_campus": "House-25, Road-5, Sector 7, Uttara Model Town, Dhaka",
+   "permanent_campus": "Bangabandhu Road, Tongabari, Ashulia, Dhaka -1341",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.aub.ac.bd",
+   "email": "info@aub.ac.bd",
+   "telephone_mobile": "48950729, 58950709 (Ext. 101, 102), Mobile: 01678 664433, 01678 664413, 01678 664419,",
+   "fax": "880-28916521",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 252,
+   "name_en": "Dhaka International University",
+   "name_bn": null,
+   "slug": "dhaka-international-university",
+   "website": "www.diu.ac",
+   "marker": null
+  },
+  "detail": {
+   "id": 252,
+   "name_en": "Dhaka International University",
+   "name_bn": null,
+   "slug": "dhaka-international-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "1995",
+   "present_campus": "Satarkul, Badda, Dhaka-1212. Bangladesh.",
+   "permanent_campus": "Satarkul, Badda, Dhaka-1212. Bangladesh.",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.diu.ac",
+   "email": "admission@diu.net.bd, inf@diu-bd.net; info@diu.net.bd",
+   "telephone_mobile": "+88 01611348344, +88 01939851061",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 253,
+   "name_en": "Manarat International University",
+   "name_bn": null,
+   "slug": "manarat-international-university",
+   "website": "www.manarat.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 253,
+   "name_en": "Manarat International University",
+   "name_bn": null,
+   "slug": "manarat-international-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2001",
+   "present_campus": "Plot#CEN 16, Road#106, Gulshan, Dhaka-1212",
+   "permanent_campus": "Ashulia Model Town, Khagan, Ashulia,Dhaka",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.manarat.ac.bd",
+   "email": "admission@manarat.ac.bd; admin@manarat.ac.bd",
+   "telephone_mobile": "+880255060025, 9862251, 01780364414-15,",
+   "fax": "88-02-9862224",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 254,
+   "name_en": "BRAC University",
+   "name_bn": null,
+   "slug": "brac-university",
+   "website": "www.bracu.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 254,
+   "name_en": "BRAC University",
+   "name_bn": null,
+   "slug": "brac-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2001",
+   "present_campus": "BRAC University, Progoti Soroni, KH 224, Merul Badda, Dhaka-1212",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.bracu.ac.bd",
+   "email": "registrar@bracu.ac.bd",
+   "telephone_mobile": "+880-2-882-4051-4 , +88028810383,",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 255,
+   "name_en": "Bangladesh University",
+   "name_bn": null,
+   "slug": "bangladesh-university",
+   "website": "www.bu.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 255,
+   "name_en": "Bangladesh University",
+   "name_bn": null,
+   "slug": "bangladesh-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2001",
+   "present_campus": "5/B, Beribadh, Main Road, Adabor, Mohammadpur, Dhaka-1207",
+   "permanent_campus": "5/B, Beribadh, Main Road, Adabor, Mohammadpur, Dhaka-1207",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.bu.edu.bd",
+   "email": "info@bu.edu.bd, admission@bu.edu.bd",
+   "telephone_mobile": "+88 0175555 9301, +88 0175555 9320, +88 0175555 9328",
+   "fax": "880-2-41023182",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 259,
+   "name_en": "University of Development Alternative",
+   "name_bn": null,
+   "slug": "university-of-development-alternative",
+   "website": "www.uoda.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 259,
+   "name_en": "University of Development Alternative",
+   "name_bn": null,
+   "slug": "university-of-development-alternative",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2001",
+   "present_campus": "80, Satmasjid Road, Dhanmondi, Dhaka-1209",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.uoda.edu.bd",
+   "email": "registrar@uoda.org",
+   "telephone_mobile": "9145740, 9145741, 9138227",
+   "fax": "91247317, 8157339",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 261,
+   "name_en": "Southeast University",
+   "name_bn": null,
+   "slug": "southeast-university",
+   "website": "www.seu.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 261,
+   "name_en": "Southeast University",
+   "name_bn": null,
+   "slug": "southeast-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2002",
+   "present_campus": "252, Tejgaon Industrial Area Dhaka-1208",
+   "permanent_campus": "252, Tejgaon Industrial Area Dhaka-1208",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.seu.edu.bd",
+   "email": "info@seu.edu.bd",
+   "telephone_mobile": "+8802226603610-17",
+   "fax": "+8802226603602",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 262,
+   "name_en": "Daffodil International University",
+   "name_bn": null,
+   "slug": "daffodil-international-university",
+   "website": "www.daffodilvarsity.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 262,
+   "name_en": "Daffodil International University",
+   "name_bn": null,
+   "slug": "daffodil-international-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2002",
+   "present_campus": "Datta Para ,Chou Baria , Ashulia Model Town , Dhaka",
+   "permanent_campus": "Datta Para ,Chou Baria , Ashulia Model Town, Savar, Dhaka",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.daffodilvarsity.edu.bd",
+   "email": "registrar@daffodilvarsity.edu.bd",
+   "telephone_mobile": "+8802224441833 +8802224441834",
+   "fax": "+8802224441835",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 263,
+   "name_en": "Stamford University Bangladesh",
+   "name_bn": null,
+   "slug": "stamford-university-bangladesh",
+   "website": "www.stamforduniversity.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 263,
+   "name_en": "Stamford University Bangladesh",
+   "name_bn": null,
+   "slug": "stamford-university-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2002",
+   "present_campus": "51, Siddeswari Road, Dhaka-1217",
+   "permanent_campus": "Green Model Town, Sadhinata Sarani, Plot No. 05, Block-H, Thana-Mugda, Dhaka",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.stamforduniversity.edu.bd",
+   "email": "registrar@stamforduniversity.edu.bd",
+   "telephone_mobile": "01819196206",
+   "fax": "+880-2-9143531",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 264,
+   "name_en": "State University of Bangladesh (SUB)",
+   "name_bn": null,
+   "slug": "state-university-of-bangladesh-sub",
+   "website": "https://www.sub.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 264,
+   "name_en": "State University of Bangladesh (SUB)",
+   "name_bn": null,
+   "slug": "state-university-of-bangladesh-sub",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2002",
+   "present_campus": "Kendua, Kanchan, Rupganj, Narayanganj-1461",
+   "permanent_campus": "Kendua, Kanchan, Rupganj, Narayanganj-1461",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "https://www.sub.ac.bd",
+   "email": "info@subd.net",
+   "telephone_mobile": "8151782-5, 9140960, 9128329",
+   "fax": "8123296",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Narayanganj",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 265,
+   "name_en": "City University",
+   "name_bn": null,
+   "slug": "city-university",
+   "website": "www.cityuniversity.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 265,
+   "name_en": "City University",
+   "name_bn": null,
+   "slug": "city-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2002",
+   "present_campus": null,
+   "permanent_campus": "Khagan, Birulia, Savar, Dhaka",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.cityuniversity.ac.bd",
+   "email": "registrar@cityuniversity.ac.bd, mirakhter61@gmail.com",
+   "telephone_mobile": "01854640476, 01862213214",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 266,
+   "name_en": "Prime University",
+   "name_bn": null,
+   "slug": "prime-university",
+   "website": "www.primeuniversity.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 266,
+   "name_en": "Prime University",
+   "name_bn": null,
+   "slug": "prime-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2002",
+   "present_campus": "114/116, Mazar Road, Mirpur-1, Dhaka-1216",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.primeuniversity.edu.bd",
+   "email": "info@primeuniversity.edu.bd ; registrar@primeuniversity.edu.bd",
+   "telephone_mobile": "+880-2-9004957, +880-2-8031810,",
+   "fax": "+880-2-8055647",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 267,
+   "name_en": "Northern University Bangladesh",
+   "name_bn": null,
+   "slug": "northern-university-bangladesh",
+   "website": "www.nub.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 267,
+   "name_en": "Northern University Bangladesh",
+   "name_bn": null,
+   "slug": "northern-university-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2002",
+   "present_campus": null,
+   "permanent_campus": "112/2, Kawla Jame Mosjid Road, Ashkona, Dakskin Khan, Dhaka",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.nub.ac.bd",
+   "email": "info@nub.ac.bd, registrar@nub.ac.bd",
+   "telephone_mobile": "9820859,9821493-5",
+   "fax": "02-9820720",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 269,
+   "name_en": "Green University of Bangladesh",
+   "name_bn": null,
+   "slug": "green-university-of-bangladesh",
+   "website": "www.green.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 269,
+   "name_en": "Green University of Bangladesh",
+   "name_bn": null,
+   "slug": "green-university-of-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2003",
+   "present_campus": "220/D West Kafrul, Begum Rokeya Sarani, Dhaka-1207.Bangladesh",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.green.edu.bd",
+   "email": "info.registrar@green.edu.bd.",
+   "telephone_mobile": "9014725, 8031031",
+   "fax": "8031032",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 271,
+   "name_en": "World University of Bangladesh",
+   "name_bn": null,
+   "slug": "world-university-of-bangladesh",
+   "website": "www.wub.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 271,
+   "name_en": "World University of Bangladesh",
+   "name_bn": null,
+   "slug": "world-university-of-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2003",
+   "present_campus": "Plot-5-8, Avenue-6, Lake Drive Road, Sector-17/H, Uttara, Dhaka-1230",
+   "permanent_campus": "Plot-5-8, Avenue-6, Lake Drive Road, Sector-17/H, Uttara, Dhaka-1230",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.wub.edu.bd",
+   "email": "info@wub.edu.bd",
+   "telephone_mobile": "+880-2-9611410-13; +880-2-9667435-6,",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 272,
+   "name_en": "Shanto-Mariam University of Creative Technology",
+   "name_bn": null,
+   "slug": "shanto-mariam-university-of-creative-technology",
+   "website": "www.smuct.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 272,
+   "name_en": "Shanto-Mariam University of Creative Technology",
+   "name_bn": null,
+   "slug": "shanto-mariam-university-of-creative-technology",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2003",
+   "present_campus": "House-01, Road-4, Sector-13, Uttara, Dhaka-1230",
+   "permanent_campus": "Plot-6, Road-6, Sector-17/H1, Uttara, Dhaka-1230",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.smuct.ac.bd",
+   "email": "smuctbd@yahoo.com",
+   "telephone_mobile": "880-2-8918932/8952610/7912713",
+   "fax": "(88-02)-8915308,",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 273,
+   "name_en": "The Millennium University",
+   "name_bn": null,
+   "slug": "the-millennium-university",
+   "website": "www.themillenniumuniversity.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 273,
+   "name_en": "The Millennium University",
+   "name_bn": null,
+   "slug": "the-millennium-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2003",
+   "present_campus": "Momenbagh, Rajarbagh, Dhaka-1217.",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.themillenniumuniversity.edu.bd",
+   "email": "info@themillenniumuniversity.edu.bd",
+   "telephone_mobile": "+8802-48320836",
+   "fax": "+8802-48315089",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 274,
+   "name_en": "Eastern University",
+   "name_bn": null,
+   "slug": "eastern-university",
+   "website": "www.easternuni.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 274,
+   "name_en": "Eastern University",
+   "name_bn": null,
+   "slug": "eastern-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2003",
+   "present_campus": "Road-6, Block-B, Ashulia Model Town, Birulia, Dhaka",
+   "permanent_campus": "Road-6, Block-B, Ashulia Model Town, Birulia, Dhaka",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.easternuni.edu.bd",
+   "email": "registrar@easternuni.edu.bd",
+   "telephone_mobile": "88-02-9676031-5",
+   "fax": "+(880-2)-9675981",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 276,
+   "name_en": "Uttara University",
+   "name_bn": null,
+   "slug": "uttara-university",
+   "website": "www.uttarauniversity.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 276,
+   "name_en": "Uttara University",
+   "name_bn": null,
+   "slug": "uttara-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2003",
+   "present_campus": "Holding 77, Beribadh Road, Turag, Dhaka 1230",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.uttarauniversity.edu.bd",
+   "email": "info@uttarauniversity.edu.bd",
+   "telephone_mobile": "58951116, 58955794, 58952280, 9009844, 9009895, 8932325, 8932325, 8932541, 58955310, 7913551,",
+   "fax": "58952047",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 277,
+   "name_en": "United International University",
+   "name_bn": null,
+   "slug": "united-international-university",
+   "website": "www.uiu.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 277,
+   "name_en": "United International University",
+   "name_bn": null,
+   "slug": "united-international-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2003",
+   "present_campus": "United City, Madani Avenue, Satarkul, Badda, Dhaka 1212",
+   "permanent_campus": "United City, Madani Avenue, Satarkul, Badda, Dhaka 1212",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.uiu.ac.bd",
+   "email": "info@uiu.ac.bd",
+   "telephone_mobile": "9125913-6, 9118213, 9144151",
+   "fax": "9118170, 8156911",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 278,
+   "name_en": "University of South Asia",
+   "name_bn": null,
+   "slug": "university-of-south-asia",
+   "website": "www.southasiauni.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 278,
+   "name_en": "University of South Asia",
+   "name_bn": null,
+   "slug": "university-of-south-asia",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2003",
+   "present_campus": "Amin Bazar, Savar, Dhaka",
+   "permanent_campus": "Amin Bazar, Savar, Dhaka-1348",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.southasiauni.ac.bd",
+   "email": "mail@southasiauni.ac.bd",
+   "telephone_mobile": "02 550340091-2, 01966459818, 01763030636, 01686265125",
+   "fax": "8313308",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 279,
+   "name_en": "Victoria University of Bangladesh",
+   "name_bn": null,
+   "slug": "victoria-university-of-bangladesh",
+   "website": "www.vub.edu.bd",
+   "marker": "*"
+  },
+  "detail": {
+   "id": 279,
+   "name_en": "Victoria University of Bangladesh",
+   "name_bn": null,
+   "slug": "victoria-university-of-bangladesh",
+   "marker": "*",
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2003",
+   "present_campus": "Barek Mansion, 58/11/A Panthapath, Dhaka-1205",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.vub.edu.bd",
+   "email": "info@vub.edu.bd",
+   "telephone_mobile": "58615476, 58611783, 9634348, 01781 09 80 98,",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 280,
+   "name_en": "Bangladesh University of Business & Technology (BUBT)",
+   "name_bn": null,
+   "slug": "bangladesh-university-of-business-technology-bubt",
+   "website": "www.bubt.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 280,
+   "name_en": "Bangladesh University of Business & Technology (BUBT)",
+   "name_bn": null,
+   "slug": "bangladesh-university-of-business-technology-bubt",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2003",
+   "present_campus": "Bangladesh University of Business & Technology (BUBT), Rupnagar, Mirpur-2, Dhaka-1216",
+   "permanent_campus": "Plot No-77-78, Main Road, Rupnagar, Mirpur-2, Dhaka-1216, Bangladesh",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.bubt.edu.bd",
+   "email": "info@bubt.edu.bd",
+   "telephone_mobile": "02-48036351-3",
+   "fax": "88-02-48036355",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 281,
+   "name_en": "Presidency University",
+   "name_bn": null,
+   "slug": "presidency-university",
+   "website": "www.presidency.edu.bd, www.pu.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 281,
+   "name_en": "Presidency University",
+   "name_bn": null,
+   "slug": "presidency-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2003",
+   "present_campus": "Plot # 11/A, Road # 92, Gulshan-2, Dhaka-1212",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.presidency.edu.bd, www.pu.edu.bd",
+   "email": "info@pu.edu.bd, registrar@pu.edu.bd, admission@pu.edu.bd, controller@pu.edu.bd",
+   "telephone_mobile": "(02)-55052194-9, 8801766554433",
+   "fax": "880-2-8859142,",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 282,
+   "name_en": "University of Information Technology & Sciences",
+   "name_bn": null,
+   "slug": "university-of-information-technology-sciences",
+   "website": "www.uits.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 282,
+   "name_en": "University of Information Technology & Sciences",
+   "name_bn": null,
+   "slug": "university-of-information-technology-sciences",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2003",
+   "present_campus": "Holding No-190, Road -5, Block- J, Baridhara, Moddho Noyanagar, Vatara, Dhaka",
+   "permanent_campus": "Holding No-190, Road -5, Block- J, Baridhara, Moddho Noyanagar, Vatara, Dhaka",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.uits.edu.bd",
+   "email": null,
+   "telephone_mobile": "+8809678008487",
+   "fax": "8899753",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 283,
+   "name_en": "Primeasia University",
+   "name_bn": null,
+   "slug": "primeasia-university",
+   "website": "www.primeasia.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 283,
+   "name_en": "Primeasia University",
+   "name_bn": null,
+   "slug": "primeasia-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2003",
+   "present_campus": "Star Tower, 12 Kemal Ataturk Avenue, Banani , C/A, Dhaka-1213",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.primeasia.edu.bd",
+   "email": "info@primeasia.edu.bd, registrar@primeasia.edu.bd",
+   "telephone_mobile": "9822133, 9821498-501, Mob: 01817-035693",
+   "fax": "880-2-9820868,",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 284,
+   "name_en": "Royal University of Dhaka",
+   "name_bn": null,
+   "slug": "royal-university-of-dhaka",
+   "website": "www.royal.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 284,
+   "name_en": "Royal University of Dhaka",
+   "name_bn": null,
+   "slug": "royal-university-of-dhaka",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2003",
+   "present_campus": "Plot-404, Channel 24 Road, Tejgaon Industrial Area, Dhaka-1208.",
+   "permanent_campus": "Plot-404, Channel 24 Road, Tejgaon Industrial Area, Dhaka-1208.",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.royal.edu.bd",
+   "email": "info@royal.edu.bd, registrar@royal.edu.bd",
+   "telephone_mobile": "+880-2-223314607, 223314603, 01332544312, 01332544316, 01332544317, 01332544319",
+   "fax": "+880-2-9223314603",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 285,
+   "name_en": "University of Liberal Arts Bangladesh",
+   "name_bn": null,
+   "slug": "university-of-liberal-arts-bangladesh",
+   "website": "www.ulab.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 285,
+   "name_en": "University of Liberal Arts Bangladesh",
+   "name_bn": null,
+   "slug": "university-of-liberal-arts-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2003",
+   "present_campus": "688, Beribadh Road, Mohammadpur, Dhaka-1207",
+   "permanent_campus": "688, Beribadh Road, Mohammadpur, Dhaka-1207",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.ulab.edu.bd",
+   "email": null,
+   "telephone_mobile": "88-02-9661255, 9661301",
+   "fax": "88-02-9660610",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 286,
+   "name_en": "Atish Dipankar University of Science & Technology",
+   "name_bn": null,
+   "slug": "atish-dipankar-university-of-science-technology",
+   "website": "www.adust.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 286,
+   "name_en": "Atish Dipankar University of Science & Technology",
+   "name_bn": null,
+   "slug": "atish-dipankar-university-of-science-technology",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2004",
+   "present_campus": "Plot# 209, Sector# 15, khantek, Uttara, Dhaka-1230",
+   "permanent_campus": "Plot# 209, Sector# 15, khantek, Uttara, Dhaka-1230",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.adust.edu.bd",
+   "email": "info@adust.edu.bd",
+   "telephone_mobile": "0178766575, 01787666576",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 287,
+   "name_en": "Bangladesh Islami University",
+   "name_bn": null,
+   "slug": "bangladesh-islami-university",
+   "website": "www.biu.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 287,
+   "name_en": "Bangladesh Islami University",
+   "name_bn": null,
+   "slug": "bangladesh-islami-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2005",
+   "present_campus": null,
+   "permanent_campus": "Plot# 51, Block# B, Avenue# 03, Green Model Town, Manda, Mugda, Dhaka-1214",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.biu.ac.bd",
+   "email": "registrar@biu.ac.bd",
+   "telephone_mobile": "01915492003, 01915492005,01915492007 & 01915492008, 09666711456",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 288,
+   "name_en": "ASA University Bangladesh",
+   "name_bn": null,
+   "slug": "asa-university-bangladesh",
+   "website": "www.asaub.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 288,
+   "name_en": "ASA University Bangladesh",
+   "name_bn": null,
+   "slug": "asa-university-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2006",
+   "present_campus": "ASA Tower,23/3, Bir Uttam A.N.M Nuruzzaman Sarak , Shaymoli, Mohammadpur, Dhaka-1207",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.asaub.edu.bd",
+   "email": "info@asaub.edu.bd",
+   "telephone_mobile": "8130238, 8122555, 8130283",
+   "fax": "880-2-8114831",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 290,
+   "name_en": "European University of Bangladesh",
+   "name_bn": null,
+   "slug": "european-university-of-bangladesh",
+   "website": null,
+   "marker": "***"
+  },
+  "detail": {
+   "id": 290,
+   "name_en": "European University of Bangladesh",
+   "name_bn": null,
+   "slug": "european-university-of-bangladesh",
+   "marker": "***",
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2012",
+   "present_campus": "2/4, Gabtali, Mirpur, Dhaka-1216",
+   "permanent_campus": "2/4, Gabtali, Mirpur, Dhaka-1216",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": null,
+   "email": null,
+   "telephone_mobile": null,
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 292,
+   "name_en": "Hamdard University Bangladesh",
+   "name_bn": null,
+   "slug": "hamdard-university-bangladesh",
+   "website": "www.hamdarduniversity.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 292,
+   "name_en": "Hamdard University Bangladesh",
+   "name_bn": null,
+   "slug": "hamdard-university-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2012",
+   "present_campus": null,
+   "permanent_campus": "Hamdard Nagar, Gazaria, Munshiganj-1510 .",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.hamdarduniversity.edu.bd",
+   "email": "hamdarduniversitybd@yahoo.com",
+   "telephone_mobile": "880-2-9665965-6, 8625194, 8627003",
+   "fax": "880-8616958",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Munshiganj",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 293,
+   "name_en": "BGMEA University of Fashion & Technology(BUFT)",
+   "name_bn": null,
+   "slug": "bgmea-university-of-fashion-technologybuft",
+   "website": "www.buft.edu.bd",
+   "marker": "(2)"
+  },
+  "detail": {
+   "id": 293,
+   "name_en": "BGMEA University of Fashion & Technology(BUFT)",
+   "name_bn": null,
+   "slug": "bgmea-university-of-fashion-technologybuft",
+   "marker": "(2)",
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2012",
+   "present_campus": null,
+   "permanent_campus": "Nishatnagar, Turag, Dhaka-1230",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.buft.edu.bd",
+   "email": "info@buft.edu.bd",
+   "telephone_mobile": "880-2-8919986",
+   "fax": "880-2-8919987",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 296,
+   "name_en": "Ishakha International University, Bangladesh",
+   "name_bn": null,
+   "slug": "ishakha-international-university-bangladesh",
+   "website": "www.ishakha.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 296,
+   "name_en": "Ishakha International University, Bangladesh",
+   "name_bn": null,
+   "slug": "ishakha-international-university-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2012",
+   "present_campus": "461, Nilganj Road, Sholakia, Kishoreganj",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.ishakha.edu.bd",
+   "email": "ishakhauniversity@gmail.com",
+   "telephone_mobile": "01776 181318, 01977 181318",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Kishoreganj",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 301,
+   "name_en": "Sonargaon University",
+   "name_bn": null,
+   "slug": "sonargaon-university",
+   "website": "www.su.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 301,
+   "name_en": "Sonargaon University",
+   "name_bn": null,
+   "slug": "sonargaon-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2012",
+   "present_campus": "147/I, Green Road, Panthopath, Dhaka.",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.su.edu.bd",
+   "email": "info@su.edu.bd",
+   "telephone_mobile": "01780330044, 01780220099, 01775000888, 9123564, 9123570, 9852134",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 305,
+   "name_en": "Bangladesh University of Health Sciences",
+   "name_bn": null,
+   "slug": "bangladesh-university-of-health-sciences",
+   "website": "www.buhs.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 305,
+   "name_en": "Bangladesh University of Health Sciences",
+   "name_bn": null,
+   "slug": "bangladesh-university-of-health-sciences",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2012",
+   "present_campus": "125/1, Darus Slalam (Technical Crossing), Mirpur-1, Dhaka-1216, Bangladesh",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.buhs.ac.bd",
+   "email": "info@buhs.ac.bd,",
+   "telephone_mobile": "+880-2-9010654; 9010952, 01791042087, 01552146362",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 307,
+   "name_en": "Notre Dame University Bangladesh",
+   "name_bn": null,
+   "slug": "notre-dame-university-bangladesh",
+   "website": "www.ndub.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 307,
+   "name_en": "Notre Dame University Bangladesh",
+   "name_bn": null,
+   "slug": "notre-dame-university-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2013",
+   "present_campus": "2/A, New Arambagh, Motijheel, PO Box 7, Dhaka-1000, Bangladesh",
+   "permanent_campus": "2/A, New Arambagh, Motijheel, PO Box 7, Dhaka-1000, Bangladesh",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.ndub.edu.bd",
+   "email": "info@ndub.edu.bd",
+   "telephone_mobile": "+880-02-41070719,+880-02-41070720",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 308,
+   "name_en": "Times University, Bangladesh",
+   "name_bn": null,
+   "slug": "times-university-bangladesh",
+   "website": "http://www.timesuniversitybd.com",
+   "marker": null
+  },
+  "detail": {
+   "id": 308,
+   "name_en": "Times University, Bangladesh",
+   "name_bn": null,
+   "slug": "times-university-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2013",
+   "present_campus": "651-652, West Khabashpur, Faridpur-7800",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "http://www.timesuniversitybd.com",
+   "email": "tubbangladesh@gmail.com",
+   "telephone_mobile": "+8801771766591-4",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Faridpur",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 310,
+   "name_en": "Fareast International University",
+   "name_bn": null,
+   "slug": "fareast-international-university",
+   "website": "www.fiu.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 310,
+   "name_en": "Fareast International University",
+   "name_bn": null,
+   "slug": "fareast-international-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2013",
+   "present_campus": "R.S.R Tower, House#50 , Road#11, Block-C Banani, Dhaka-1213, Bangladesh",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.fiu.edu.bd",
+   "email": "info@fiu.edu.bd",
+   "telephone_mobile": "+88029891453, +88029891576, +88029885165, +8801986810610, +8801986810710",
+   "fax": "+88029891845",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 315,
+   "name_en": "German University Bangladesh",
+   "name_bn": null,
+   "slug": "german-university-bangladesh",
+   "website": "www.gub.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 315,
+   "name_en": "German University Bangladesh",
+   "name_bn": null,
+   "slug": "german-university-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2013",
+   "present_campus": "38, T&T Road, Telepara, P.O: Chandana , Chowrasta, Joydevpur, Gazipur Sadar, Gazipur-1702, Bangladesh",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.gub.edu.bd",
+   "email": "info@gub.edu.bd; saiful.edu410@gmail.com, gubregistrar@gmail.com",
+   "telephone_mobile": "+8802-224495059, 01743936787, 01718279905",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Gazipur",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 321,
+   "name_en": "University of Scholars",
+   "name_bn": null,
+   "slug": "university-of-scholars",
+   "website": "www.ius.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 321,
+   "name_en": "University of Scholars",
+   "name_bn": null,
+   "slug": "university-of-scholars",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2015",
+   "present_campus": "Bulu Ocean Tower, 40 Kemal Ataturk Avenue, Banani, Dhaka-1213",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.ius.edu.bd",
+   "email": "info@ius.edu.bd",
+   "telephone_mobile": "+8801885836715",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 322,
+   "name_en": "Canadian University of Bangladesh",
+   "name_bn": null,
+   "slug": "canadian-university-of-bangladesh",
+   "website": "www.cub.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 322,
+   "name_en": "Canadian University of Bangladesh",
+   "name_bn": null,
+   "slug": "canadian-university-of-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2015",
+   "present_campus": "Rangs RL Square, Plot -Kha, 201/1, 203, 205/1, 205/3 Progoti Soroni, Moddhyo Badda, Dhaka",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.cub.edu.bd",
+   "email": "info@cub.edu.bd, registrar@cub.edu.bd",
+   "telephone_mobile": "02-55055281, 01707070280",
+   "fax": "02-9821351",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 323,
+   "name_en": "N.P.I University of Bangladesh",
+   "name_bn": null,
+   "slug": "npi-university-of-bangladesh",
+   "website": "www.npiub.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 323,
+   "name_en": "N.P.I University of Bangladesh",
+   "name_bn": null,
+   "slug": "npi-university-of-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2015",
+   "present_campus": "Basta, Singair, Manikganj, Dhaka",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.npiub.edu.bd",
+   "email": "info@npiub.edu.bd",
+   "telephone_mobile": "01969992015",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Manikganj",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 327,
+   "name_en": "Central  University of Science and Technology",
+   "name_bn": null,
+   "slug": "central-university-of-science-and-technology",
+   "website": "www.cust.edu.bd",
+   "marker": "**"
+  },
+  "detail": {
+   "id": 327,
+   "name_en": "Central  University of Science and Technology",
+   "name_bn": null,
+   "slug": "central-university-of-science-and-technology",
+   "marker": "**",
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2016",
+   "present_campus": "Plot- 1/9, Road-2, Block-D, Section-15, Mirpur, Dhaka-1216",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.cust.edu.bd",
+   "email": "info@cust.edu.bd",
+   "telephone_mobile": "01781331600",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 328,
+   "name_en": "Tagore University of Creative Arts, Uttara, Dhaka, Bangladesh",
+   "name_bn": null,
+   "slug": "tagore-university-of-creative-arts-uttara-dhaka-bangladesh",
+   "website": "www.tuca.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 328,
+   "name_en": "Tagore University of Creative Arts, Uttara, Dhaka, Bangladesh",
+   "name_bn": null,
+   "slug": "tagore-university-of-creative-arts-uttara-dhaka-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2016",
+   "present_campus": "97 Shah Makhdum Avenue, Sector 12 Uttara, Dhaka-71230",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.tuca.edu.bd",
+   "email": "hr@tuca.edu.bd",
+   "telephone_mobile": "880255086905, +880255086906, +8801323728881",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 331,
+   "name_en": "Anwer  Khan  Modern  University",
+   "name_bn": null,
+   "slug": "anwer-khan-modern-university",
+   "website": "www.akmu.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 331,
+   "name_en": "Anwer  Khan  Modern  University",
+   "name_bn": null,
+   "slug": "anwer-khan-modern-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2016",
+   "present_campus": "House No: 6, Gareeb e Nawaz Road, Sector-11, Uttara,Dhaka-1230",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.akmu.edu.bd",
+   "email": "registrar@akmu.edu.bd; info@akmu.ac.bd/ info@akmu.edu.bd",
+   "telephone_mobile": "+8802-48957283/48957276; 01975214261",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 332,
+   "name_en": "ZNRF University of Management Sciences",
+   "name_bn": null,
+   "slug": "znrf-university-of-management-sciences",
+   "website": "www.zums.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 332,
+   "name_en": "ZNRF University of Management Sciences",
+   "name_bn": null,
+   "slug": "znrf-university-of-management-sciences",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2018",
+   "present_campus": "200, Gulshan Avenue, Gulshan-2, Dhaka-1212",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.zums.edu.bd",
+   "email": "registrar@zums.edu.bd",
+   "telephone_mobile": "01877700205-06",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 338,
+   "name_en": "International Standard University",
+   "name_bn": null,
+   "slug": "international-standard-university",
+   "website": "www.isu.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 338,
+   "name_en": "International Standard University",
+   "name_bn": null,
+   "slug": "international-standard-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2018",
+   "present_campus": "69 Mohakhalio C/A, Dhaka-1212",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.isu.ac.bd",
+   "email": "registrar@isu.ac.bd, mfk@isu.ac.bd",
+   "telephone_mobile": "+8809613737373, Ext: 120",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 343,
+   "name_en": "Dr. Momtaz Begum University of Science and Technology (MUST)",
+   "name_bn": null,
+   "slug": "dr-momtaz-begum-university-of-science-and-technology-must",
+   "website": "www.must.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 343,
+   "name_en": "Dr. Momtaz Begum University of Science and Technology (MUST)",
+   "name_bn": null,
+   "slug": "dr-momtaz-begum-university-of-science-and-technology-must",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2021",
+   "present_campus": "Banshgari, Bhairab,Kishoreganj",
+   "permanent_campus": "Banshgari, Bhairab,Kishoreganj",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.must.ac.bd",
+   "email": "info@must.ac.bd",
+   "telephone_mobile": "+88-01719607409, +88-01725147434",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Kishoreganj",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 347,
+   "name_en": "International Islami University of Science and Technology Bangladesh (IIUSTB)",
+   "name_bn": null,
+   "slug": "international-islami-university-of-science-and-technology-bangladesh-iiustb",
+   "website": "www.iiustb.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 347,
+   "name_en": "International Islami University of Science and Technology Bangladesh (IIUSTB)",
+   "name_bn": null,
+   "slug": "international-islami-university-of-science-and-technology-bangladesh-iiustb",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2023",
+   "present_campus": "Baipail, Ashulia, Dhaka-1349",
+   "permanent_campus": ".Baipail, Ashulia, Dhaka-1349",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.iiustb.ac.bd",
+   "email": "info@iiustb.ac.bd",
+   "telephone_mobile": "01329-728375",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 350,
+   "name_en": "Grameen University",
+   "name_bn": null,
+   "slug": "grameen-university",
+   "website": null,
+   "marker": null
+  },
+  "detail": {
+   "id": 350,
+   "name_en": "Grameen University",
+   "name_bn": null,
+   "slug": "grameen-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": null,
+   "present_campus": "House no-06, Main Raod, Diabari South, Turag, Dhaka-1230",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": null,
+   "email": null,
+   "telephone_mobile": null,
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 352,
+   "name_en": "The University of Comilla",
+   "name_bn": null,
+   "slug": "the-university-of-comilla",
+   "website": null,
+   "marker": "***"
+  },
+  "detail": {
+   "id": 352,
+   "name_en": "The University of Comilla",
+   "name_bn": null,
+   "slug": "the-university-of-comilla",
+   "marker": "***",
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": null,
+   "present_campus": "***9/b, Polwel Carnation, Sector-8, Uttara, Dhaka-1230.",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": null,
+   "email": null,
+   "telephone_mobile": null,
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Dhaka",
+  "_basis": "address"
+ },
+ {
+  "category": "international-universities",
+  "list": {
+   "id": 355,
+   "name_en": "Islamic University of Technology (IUT), Gazipur",
+   "name_bn": null,
+   "slug": "islamic-university-of-technology-iut-gazipur",
+   "website": "www.iutoic-dhaka.edu",
+   "marker": null
+  },
+  "detail": {
+   "id": 355,
+   "name_en": "Islamic University of Technology (IUT), Gazipur",
+   "name_bn": null,
+   "slug": "islamic-university-of-technology-iut-gazipur",
+   "marker": null,
+   "category": {
+    "name_en": "International Universities",
+    "name_bn": "আন্তর্জাতিক বিশ্ববিদ্যালয়",
+    "slug": "international-universities"
+   },
+   "year_of_establishment": "1978",
+   "present_campus": null,
+   "permanent_campus": "Islamic University of Technology (IUT), a subsidiary organ of OIC, Board Bazar, Gazipur-1704, Bangladesh",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.iutoic-dhaka.edu",
+   "email": "vc@iut-dhaka.edu; registrar@iut-dhaka.edu; establish@iut-dhaka.edu;",
+   "telephone_mobile": "+880 2 996691250, +880 2 996691252, +880 2 9291254-59",
+   "fax": "+880 2 996691260",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Gazipur",
+  "_basis": "address"
+ }
+]

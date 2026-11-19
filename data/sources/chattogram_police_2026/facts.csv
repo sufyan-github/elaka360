@@ -1,0 +1,3 @@
+entity_level,entity_name_en,district_en,upazila_en,code,fact,value,unit,basis,year,source_key,source_url,notes
+district,Chattogram,Chattogram,,,police_stations,16,thanas,reported,2026,CHATTOGRAM_POLICE_2026,https://chittagong.gov.bd/pages/static-pages/6990c75635ce18e1c07176a0,"DC portal 'এক নজরে চট্টগ্রাম', থানা উপজেলা পর্যায়ে: মীরসরাই, সীতাকুন্ড, সন্দ্বীপ, রাউজান, রাঙ্গুনিয়া, ফটিকছড়ি, ভুজপুর, হাটহাজারী, পটিয়া, আনোয়ারা, চন্দনাইশ, বোয়ালখালী, বাঁশখালী, লোহাগাড়া, সাতকানিয়া, জোরারগঞ্জ (Chattogram District Police). The 16 metropolitan thanas (মহানগর) are CMP's."
+district,Chattogram,Chattogram,,,police_stations,16,thanas,listed,2026,CHATTOGRAM_POLICE_2026,https://chattogramdistrict.police.gov.bd/,Thana pages in the 'জেলা পুলিশ' menu of chattogramdistrict.police.gov.bd

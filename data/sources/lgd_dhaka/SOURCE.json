@@ -1,0 +1,27 @@
+{
+  "key": "LGD_2026_DHAKA",
+  "name": "Local Government Division portal (lgd.gov.bd) — Dhaka Division extract",
+  "organization": "Local Government Division, Ministry of LGRD&C",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://lgd.gov.bd/",
+    "https://lgd.gov.bd/pages/static-pages/6941401ec4774958d7b54a3f",
+    "https://lgd.gov.bd/pages/static-pages/69414021c4774958d7b54bea"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Local Government Division (lgd.gov.bd), Bangladesh National Portal",
+  "files": {
+    "areas.csv": "8de0f57f0f0c661e844e0e8e4fde27cc4176c79c676d7e055ebc3be3dea52d81",
+    "facts.csv": "35edcefe417a5db84e5f31f7a09eaa10d57f691201ccf484a50e11fdfb87d60e",
+    "raw/menu_page_status.txt": "767858f847067e15015ae4d90550b1199ceea9509dec17e4a645474dd3f6e93f",
+    "raw/union_parishad_page.txt": "cced2964ef8390c71440d6d1ee4e776efd65073e3cbfc03b476a2294e8e0ecbb",
+    "raw/upazila_list_dhaka_division.txt": "d05ff3b88162101cec3f19cf0fe8b5f81f67faed13af13363e6ac82a3b686549"
+  },
+  "notes": "Not a formal LGD list/gazette, so trust 4. Only the upazila-parishad list (page updated 2023-05-31 19:36) has Dhaka Division content; the portal has no pourashava or union list and no downloadable directory; menu pages for city corporations, pourashavas, zila parishads and upazila parishads: see raw/menu_page_status.txt. The national union-parishad total is kept in the Rajshahi LGD_2026 folder only.",
+  "division": "dhaka",
+  "kind": "lgd"
+}

@@ -1,0 +1,5 @@
+entity_level,entity_name_en,district_en,upazila_en,code,fact,value,unit,basis,year,source_key,source_url,notes
+district,Mymensingh,Mymensingh,,,police_stations,14,thanas,reported,,MYMENSINGH_POLICE_2026,https://www.police.gov.bd/en/mymensingh_range,"police.gov.bd Mymensingh Range page (undated): 14 police stations: Kotwali, Muktagacha, Fulbaria, Pagla,Trishal, Gouripur, Ishorgonj, Nandail, Fulpur, Haluaghat, Dhubaora, Goforgaon, Valuka and Tarakanda. Kotwali and Pagla have no upazila thana portal and are not rows here."
+district,Mymensingh,Mymensingh,,,police_circles,4,circles,reported,,MYMENSINGH_POLICE_2026,https://www.police.gov.bd/en/mymensingh_range,police.gov.bd Mymensingh Range page (undated)
+district,Mymensingh,Mymensingh,,,police_outposts,2,outposts,reported,,MYMENSINGH_POLICE_2026,https://www.police.gov.bd/en/mymensingh_range,police.gov.bd Mymensingh Range page (undated)
+district,Mymensingh,Mymensingh,,,police_investigation_centres,4,centres,reported,,MYMENSINGH_POLICE_2026,https://www.police.gov.bd/en/mymensingh_range,police.gov.bd Mymensingh Range page (undated)

@@ -1,0 +1,27 @@
+{
+  "key": "FUEL_STATIONS_KHL_2026",
+  "division": "khulna",
+  "kind": "fuel_stations",
+  "name": "Filling stations and LPG dealers of the state-owned oil companies — Khulna Division",
+  "organization": "Padma Oil PLC (Bangladesh Petroleum Corporation); DC/UNO portals checked",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://pocl.gov.bd/",
+    "https://pocl.gov.bd/pages/static-pages/6922dece933eb65569e1d7db",
+    "https://pocl.gov.bd/pages/static-pages/6922df3c933eb65569e20c1d",
+    "https://mpl.gov.bd/pages/static-pages/6922de45933eb65569e19700 (checked: scanned)",
+    "https://jamunaoil.gov.bd/pages/static-pages/6922e104933eb65569e299fa (checked: Drive download disallowed by robots.txt)",
+    "https://rpgcl.org.bd/ (checked: counts only)"
+  ],
+  "accessed": "2026-11-19",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Padma Oil PLC (a company of Bangladesh Petroleum Corporation)",
+  "notes": "Padma Oil 'AGENT/CUSTOMER LIST' PDFs (dealer = filling station; LPG dealer), one heading per district; A/C name and address as printed (English, upper case), split at the printed column; district heading normalised to the seed (heading kept in extra_json); upazila only where exactly one upazila name of that district occurs in the address (noted). Addresses naming a proprietor ('PROP. …') are left empty. No phones or coordinates are published. LPG dealers have no fitting category: top-level 'business' with proposed subcategory 'business.lpg_dealer'. The PDFs are not committed (rebuilt by fetch.py; needs poppler's pdftotext). Meghna Petroleum's list is a scan, Jamuna Oil's list is on Google Drive (robots.txt disallows /uc), RPGCL publishes counts only. Licence: none stated on the source; treat as government/state-company public information, cite the source.",
+  "files": {
+    "facts.csv": "b8e9f730904903e827cd710177482ff226c7d79bb75c1fe64ee04c6c8701c812",
+    "places.csv": "2db953087558054dd80ed4be7b61965ce157e6a48da5f7f89af6dcdf3fd20de5"
+  }
+}

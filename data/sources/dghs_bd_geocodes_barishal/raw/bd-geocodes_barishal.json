@@ -1,0 +1,507 @@
+{
+ "url": "https://fhir.dghs.gov.bd/core/CodeSystem/bd-geocodes",
+ "version": "0.5.0",
+ "name": "BDGeoCodesCS",
+ "title": "Bangladesh GeoCodes CodeSystem",
+ "status": "draft",
+ "date": "2026-10-15T00:09:54+00:00",
+ "publisher": "Directorate General of Health Services (DGHS), Bangladesh",
+ "description": "Bangladesh GeoCodes",
+ "count": 1591,
+ "ig_license": "CC0-1.0",
+ "ig_version": "0.5.0",
+ "concepts_barishal_division": [
+  {
+   "code": "10",
+   "display": "Barishal"
+  },
+  {
+   "code": "1004",
+   "display": "Barguna"
+  },
+  {
+   "code": "1006",
+   "display": "Barishal"
+  },
+  {
+   "code": "1009",
+   "display": "Bhola"
+  },
+  {
+   "code": "1042",
+   "display": "Jhalokathi"
+  },
+  {
+   "code": "1078",
+   "display": "Patuakhali"
+  },
+  {
+   "code": "1079",
+   "display": "Pirojpur"
+  },
+  {
+   "code": "100400",
+   "display": "Barguna N/A"
+  },
+  {
+   "code": "100650",
+   "display": "Barishal City Corporation"
+  },
+  {
+   "code": "100600",
+   "display": "Barishal N/A"
+  },
+  {
+   "code": "100900",
+   "display": "Bhola N/A"
+  },
+  {
+   "code": "104200",
+   "display": "Jhalokati N/A"
+  },
+  {
+   "code": "107800",
+   "display": "Patuakhali N/A"
+  },
+  {
+   "code": "107900",
+   "display": "Pirojpur N/A"
+  },
+  {
+   "code": "10040009",
+   "display": "Amtali"
+  },
+  {
+   "code": "10040019",
+   "display": "Bamna"
+  },
+  {
+   "code": "10040028",
+   "display": "Barguna Sadar"
+  },
+  {
+   "code": "10040047",
+   "display": "Betagi"
+  },
+  {
+   "code": "10040085",
+   "display": "Patharghata"
+  },
+  {
+   "code": "10040090",
+   "display": "Taltali"
+  },
+  {
+   "code": "10060002",
+   "display": "Agailjhara"
+  },
+  {
+   "code": "10060003",
+   "display": "Babuganj"
+  },
+  {
+   "code": "10060007",
+   "display": "Bakerganj"
+  },
+  {
+   "code": "10060010",
+   "display": "Banaripara"
+  },
+  {
+   "code": "10060032",
+   "display": "Gaurnadi"
+  },
+  {
+   "code": "10060036",
+   "display": "Hizla"
+  },
+  {
+   "code": "10065051",
+   "display": "Barishal Sadar"
+  },
+  {
+   "code": "10060062",
+   "display": "Mehendiganj"
+  },
+  {
+   "code": "10060069",
+   "display": "Muladi"
+  },
+  {
+   "code": "10060094",
+   "display": "Wazirpur"
+  },
+  {
+   "code": "10090018",
+   "display": "Bhola Sadar"
+  },
+  {
+   "code": "10090021",
+   "display": "Borhanuddin"
+  },
+  {
+   "code": "10090025",
+   "display": "Charfession"
+  },
+  {
+   "code": "10090029",
+   "display": "Daulatkhan"
+  },
+  {
+   "code": "10090054",
+   "display": "Lalmohan"
+  },
+  {
+   "code": "10090065",
+   "display": "Manpura"
+  },
+  {
+   "code": "10090091",
+   "display": "Tazumuddin"
+  },
+  {
+   "code": "10420040",
+   "display": "Jhalokathi Sadar"
+  },
+  {
+   "code": "10420043",
+   "display": "Kanthalia"
+  },
+  {
+   "code": "10420073",
+   "display": "Nalchity"
+  },
+  {
+   "code": "10420084",
+   "display": "Rajapur"
+  },
+  {
+   "code": "10780038",
+   "display": "Bauphal"
+  },
+  {
+   "code": "10780052",
+   "display": "Dashmina"
+  },
+  {
+   "code": "10780055",
+   "display": "Dumki"
+  },
+  {
+   "code": "10780057",
+   "display": "Galachipa"
+  },
+  {
+   "code": "10780066",
+   "display": "Kalapara"
+  },
+  {
+   "code": "10780076",
+   "display": "Mirzaganj"
+  },
+  {
+   "code": "10780095",
+   "display": "Patuakhali Sadar"
+  },
+  {
+   "code": "10780097",
+   "display": "Rangabali"
+  },
+  {
+   "code": "10790014",
+   "display": "Bhandaria"
+  },
+  {
+   "code": "10790047",
+   "display": "Kawkhali"
+  },
+  {
+   "code": "10790058",
+   "display": "Mathbaria"
+  },
+  {
+   "code": "10790076",
+   "display": "Nazirpur"
+  },
+  {
+   "code": "10790080",
+   "display": "Pirojpur Sadar"
+  },
+  {
+   "code": "10790087",
+   "display": "Nesarabad"
+  },
+  {
+   "code": "10790090",
+   "display": "Indurkani"
+  },
+  {
+   "code": "1004000920",
+   "display": "Amtali Paurasava"
+  },
+  {
+   "code": "1004002840",
+   "display": "Barguna Paurasava"
+  },
+  {
+   "code": "1004004760",
+   "display": "Betagi Paurasava"
+  },
+  {
+   "code": "1004008580",
+   "display": "Patharghata Paurasava"
+  },
+  {
+   "code": "1006000716",
+   "display": "Bakerganj Paurasava"
+  },
+  {
+   "code": "1006001033",
+   "display": "Banari Para Paurasava"
+  },
+  {
+   "code": "1006003267",
+   "display": "Gaurnadi Paurasava"
+  },
+  {
+   "code": "1006505150",
+   "display": "Barisal City Corp."
+  },
+  {
+   "code": "1006006283",
+   "display": "Mhendiganj Paurasava"
+  },
+  {
+   "code": "1006006987",
+   "display": "Muladi Paurashava"
+  },
+  {
+   "code": "1009001816",
+   "display": "Bhola Paurasava"
+  },
+  {
+   "code": "1009002133",
+   "display": "Burhanuddin Paurasava"
+  },
+  {
+   "code": "1009002550",
+   "display": "Char Fasson Paurasava"
+  },
+  {
+   "code": "1009002967",
+   "display": "Daulatkhan Paurasava"
+  },
+  {
+   "code": "1009005483",
+   "display": "Lalmohan Paurasava"
+  },
+  {
+   "code": "1042004033",
+   "display": "Jhalokati Paurasava"
+  },
+  {
+   "code": "1042007366",
+   "display": "Nalchity Paurasava"
+  },
+  {
+   "code": "1078003816",
+   "display": "Bauphal Paurashava"
+  },
+  {
+   "code": "1078005725",
+   "display": "Galachipa Paurasava"
+  },
+  {
+   "code": "1078006650",
+   "display": "Kalapara Paurasava"
+  },
+  {
+   "code": "1078006660",
+   "display": "Kuakata Paurasava"
+  },
+  {
+   "code": "1078009575",
+   "display": "Patuakhali Paurashava"
+  },
+  {
+   "code": "1079005825",
+   "display": "Mathbaria Paurasava"
+  },
+  {
+   "code": "1079008050",
+   "display": "Pirojpur Paurasava"
+  },
+  {
+   "code": "1079008775",
+   "display": "Swarupkati Paurasava"
+  },
+  {
+   "code": "1004000999",
+   "display": "Unions Of Amtali Upazila"
+  },
+  {
+   "code": "1004001999",
+   "display": "Unions Of Bamna Upazila"
+  },
+  {
+   "code": "1004002899",
+   "display": "Unions Of Barguna Sadar Upazila"
+  },
+  {
+   "code": "1004004799",
+   "display": "Unions Of Betagi Upazila"
+  },
+  {
+   "code": "1004008599",
+   "display": "Unions Of Patharghata Upazila"
+  },
+  {
+   "code": "1004009099",
+   "display": "Unions Of Taltali Upazila"
+  },
+  {
+   "code": "1006000299",
+   "display": "Unions Of Agailjhara Upazila"
+  },
+  {
+   "code": "1006000399",
+   "display": "Unions Of Babuganj Upazila"
+  },
+  {
+   "code": "1006000799",
+   "display": "Unions Of Bakerganj Upazila"
+  },
+  {
+   "code": "1006001099",
+   "display": "Unions Of Banari Para Upazila"
+  },
+  {
+   "code": "1006003299",
+   "display": "Unions Of Gaurnadi Upazila"
+  },
+  {
+   "code": "1006003699",
+   "display": "Unions Of Hizla Upazila"
+  },
+  {
+   "code": "1006505199",
+   "display": "Unions Of Barisal Sadar (kotwali) Upazila"
+  },
+  {
+   "code": "1006006299",
+   "display": "Unions Of Mhendiganj Upazila"
+  },
+  {
+   "code": "1006006999",
+   "display": "Unions Of Muladi Upazila"
+  },
+  {
+   "code": "1006009499",
+   "display": "Unions Of Wazirpur Upazila"
+  },
+  {
+   "code": "1009001899",
+   "display": "Unions Of Bhola Sadar Upazila"
+  },
+  {
+   "code": "1009002199",
+   "display": "Unions Of Burhanuddin Upazila"
+  },
+  {
+   "code": "1009002599",
+   "display": "Unions Of Char Fasson Upazila"
+  },
+  {
+   "code": "1009002999",
+   "display": "Unions Of Daulat Khan Upazila"
+  },
+  {
+   "code": "1009005499",
+   "display": "Unions Of Lalmohan Upazila"
+  },
+  {
+   "code": "1009006599",
+   "display": "Unions Of Manpura Upazila"
+  },
+  {
+   "code": "1009009199",
+   "display": "Unions Of Tazumuddin Upazila"
+  },
+  {
+   "code": "1042004099",
+   "display": "Unions Of Jhalokati Sadar Upazila"
+  },
+  {
+   "code": "1042004399",
+   "display": "Unions Of Kanthalia Upazila"
+  },
+  {
+   "code": "1042007399",
+   "display": "Unions Of Nalchity Upazila"
+  },
+  {
+   "code": "1042008499",
+   "display": "Unions Of Rajapur Upazila"
+  },
+  {
+   "code": "1078003899",
+   "display": "Unions Of Bauphal Upazila"
+  },
+  {
+   "code": "1078005299",
+   "display": "Unions Of Dashmina Upazila"
+  },
+  {
+   "code": "1078005599",
+   "display": "Unions Of Dumki Upazila"
+  },
+  {
+   "code": "1078005799",
+   "display": "Unions Of Galachipa Upazila"
+  },
+  {
+   "code": "1078006699",
+   "display": "Unions Of Kalapara Upazila"
+  },
+  {
+   "code": "1078007699",
+   "display": "Unions Of Mirzaganj Upazila"
+  },
+  {
+   "code": "1078009599",
+   "display": "Unions Of Patuakhali Sadar Upazila"
+  },
+  {
+   "code": "1078009799",
+   "display": "Unions Of Rangabali Upazila"
+  },
+  {
+   "code": "1079001499",
+   "display": "Unions Of Bhandaria Upazila"
+  },
+  {
+   "code": "1079004799",
+   "display": "Unions Of Kawkhali Upazila"
+  },
+  {
+   "code": "1079005899",
+   "display": "Unions Of Mathbaria Upazila"
+  },
+  {
+   "code": "1079007699",
+   "display": "Unions Of Nazirpur Upazila"
+  },
+  {
+   "code": "1079008099",
+   "display": "Unions Of Pirojpur Sadar Upazila"
+  },
+  {
+   "code": "1079008799",
+   "display": "Unions Of Nesarabad (swarupkati) Upazila"
+  },
+  {
+   "code": "1079009099",
+   "display": "Unions Of Indurkani Upazila"
+  }
+ ]
+}

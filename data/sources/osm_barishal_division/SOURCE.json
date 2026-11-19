@@ -1,0 +1,26 @@
+{
+  "key": "OSM_BAR_2026",
+  "name": "OpenStreetMap contributors — Barishal Division extract (points of interest)",
+  "organization": "OpenStreetMap Foundation",
+  "source_type": "community_dataset",
+  "trust_level": 1,
+  "urls": [
+    "https://download.geofabrik.de/asia/bangladesh.html",
+    "https://download.geofabrik.de/asia/bangladesh-latest.osm.pbf",
+    "https://www.openstreetmap.org/copyright"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "osm_data_timestamp": "2026-11-17T21:24:30Z",
+  "license": "ODbL-1.0",
+  "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "attribution": "© OpenStreetMap contributors",
+  "division": "barishal",
+  "kind": "osm",
+  "files": {
+    "places.csv": "a7bcc99aaebe22c6e47f787c594b840dd91ce32eaf90362a4c3c06e337ec2a93",
+    "stats.json": "6c51a86a2b0a5c1587ad44e01ba1d3decde35be6e6f439f5d6cd21ece05cbefc"
+  },
+  "notes": "Geofabrik Bangladesh extract (https://download.geofabrik.de/asia/bangladesh-261117.osm.pbf), OSM data as of 2026-11-17T21:24:30Z, parsed locally with pyosmium by osm_rajshahi_division/fetch.py --division barishal. Named POI-like nodes, ways and multipolygon relations (ways/relations by area centroid); unnamed kept only for ATM, fuel, toilets, drinking water with a public access tag, police, fire, ambulance, shelters. District/upazila by point-in-polygon against hdx_cod_ab_bgd_barishal/boundaries.geojson (seed names via its crosswalk.csv). Community data: every row is unverified. Contacts are those published on the feature. ODbL is share-alike: a published database derived from these rows must be offered under ODbL with attribution. The .pbf is not committed (fetch.py downloads it again).",
+  "extract": "https://download.geofabrik.de/asia/bangladesh-261117.osm.pbf"
+}

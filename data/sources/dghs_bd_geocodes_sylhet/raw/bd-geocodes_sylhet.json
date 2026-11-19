@@ -1,0 +1,479 @@
+{
+ "url": "https://fhir.dghs.gov.bd/core/CodeSystem/bd-geocodes",
+ "version": "0.5.0",
+ "name": "BDGeoCodesCS",
+ "title": "Bangladesh GeoCodes CodeSystem",
+ "status": "draft",
+ "date": "2026-10-15T00:09:54+00:00",
+ "publisher": "Directorate General of Health Services (DGHS), Bangladesh",
+ "description": "Bangladesh GeoCodes",
+ "count": 1591,
+ "ig_license": "CC0-1.0",
+ "ig_version": "0.5.0",
+ "concepts_sylhet_division": [
+  {
+   "code": "60",
+   "display": "Sylhet"
+  },
+  {
+   "code": "6036",
+   "display": "Habiganj"
+  },
+  {
+   "code": "6058",
+   "display": "Maulvibazar"
+  },
+  {
+   "code": "6090",
+   "display": "Sunamganj"
+  },
+  {
+   "code": "6091",
+   "display": "Sylhet"
+  },
+  {
+   "code": "603600",
+   "display": "Habiganj N/A"
+  },
+  {
+   "code": "605800",
+   "display": "Moulvibazar N/A"
+  },
+  {
+   "code": "609000",
+   "display": "Sunamganj N/A"
+  },
+  {
+   "code": "609150",
+   "display": "Sylhet City Corporation"
+  },
+  {
+   "code": "609100",
+   "display": "Sylhet N/A"
+  },
+  {
+   "code": "60360002",
+   "display": "Ajmiriganj"
+  },
+  {
+   "code": "60360005",
+   "display": "Bahubal"
+  },
+  {
+   "code": "60360011",
+   "display": "Baniachong"
+  },
+  {
+   "code": "60360026",
+   "display": "Chunarughat"
+  },
+  {
+   "code": "60360044",
+   "display": "Habiganj Sadar"
+  },
+  {
+   "code": "60360068",
+   "display": "Lakhai"
+  },
+  {
+   "code": "60360071",
+   "display": "Madhabpur"
+  },
+  {
+   "code": "60360077",
+   "display": "Nabiganj"
+  },
+  {
+   "code": "60580014",
+   "display": "Barlekha"
+  },
+  {
+   "code": "60580035",
+   "display": "Juri"
+  },
+  {
+   "code": "60580056",
+   "display": "Kamalganj"
+  },
+  {
+   "code": "60580065",
+   "display": "Kulaura"
+  },
+  {
+   "code": "60580074",
+   "display": "Maulvibazar Sadar"
+  },
+  {
+   "code": "60580080",
+   "display": "Rajnagar"
+  },
+  {
+   "code": "60580083",
+   "display": "Sreemangal"
+  },
+  {
+   "code": "60900018",
+   "display": "Bishwambarpur"
+  },
+  {
+   "code": "60900023",
+   "display": "Chhatak"
+  },
+  {
+   "code": "60900087",
+   "display": "Shantiganj"
+  },
+  {
+   "code": "60900029",
+   "display": "Derai"
+  },
+  {
+   "code": "60900032",
+   "display": "Dharampasha"
+  },
+  {
+   "code": "60900033",
+   "display": "Dowarabazar"
+  },
+  {
+   "code": "60900047",
+   "display": "Jagannathpur"
+  },
+  {
+   "code": "60900050",
+   "display": "Jamalganj"
+  },
+  {
+   "code": "60900086",
+   "display": "Sulla"
+  },
+  {
+   "code": "60900089",
+   "display": "Sunamganj Sadar"
+  },
+  {
+   "code": "60900092",
+   "display": "Tahirpur"
+  },
+  {
+   "code": "60910008",
+   "display": "Balaganj"
+  },
+  {
+   "code": "60910017",
+   "display": "Beanibazar"
+  },
+  {
+   "code": "60910020",
+   "display": "Bishwanath"
+  },
+  {
+   "code": "60910027",
+   "display": "Companiganj"
+  },
+  {
+   "code": "60910031",
+   "display": "Dakshin Surma"
+  },
+  {
+   "code": "60910035",
+   "display": "Fenchuganj"
+  },
+  {
+   "code": "60910038",
+   "display": "Golapganj"
+  },
+  {
+   "code": "60910041",
+   "display": "Gowainghat"
+  },
+  {
+   "code": "60910053",
+   "display": "Jaintiapur"
+  },
+  {
+   "code": "60910059",
+   "display": "Kanaighat"
+  },
+  {
+   "code": "60915062",
+   "display": "Sylhet Sadar"
+  },
+  {
+   "code": "60910094",
+   "display": "Zakiganj"
+  },
+  {
+   "code": "60360087",
+   "display": "Shayestaganj"
+  },
+  {
+   "code": "60915068",
+   "display": "Shahparan"
+  },
+  {
+   "code": "60900063",
+   "display": "Madhyanagar"
+  },
+  {
+   "code": "60915005",
+   "display": "Airport"
+  },
+  {
+   "code": "60915048",
+   "display": "Jalalabad"
+  },
+  {
+   "code": "60915055",
+   "display": "Kotwali"
+  },
+  {
+   "code": "60915057",
+   "display": "Moglabazar"
+  },
+  {
+   "code": "60910060",
+   "display": "Osmaninagar"
+  },
+  {
+   "code": "6036000212",
+   "display": "Ajmiriganj Paurashava"
+  },
+  {
+   "code": "6036002616",
+   "display": "Chunarughat Paurashava"
+  },
+  {
+   "code": "6036004420",
+   "display": "Habiganj Paurashava"
+  },
+  {
+   "code": "6036008780",
+   "display": "Shayestagang Paurashava"
+  },
+  {
+   "code": "6036007140",
+   "display": "Madhabpur Paurashava"
+  },
+  {
+   "code": "6036007760",
+   "display": "Nabiganj Paurashava"
+  },
+  {
+   "code": "6058001413",
+   "display": "Barlekha Paurashava"
+  },
+  {
+   "code": "6058005615",
+   "display": "Kamalganj Paurashava"
+  },
+  {
+   "code": "6058006525",
+   "display": "Kulaura Paurashava"
+  },
+  {
+   "code": "6058007450",
+   "display": "Maulvibazar Paurashava"
+  },
+  {
+   "code": "6058008375",
+   "display": "Sreemangal Paurashava"
+  },
+  {
+   "code": "6090002320",
+   "display": "Chhatak Paurashava"
+  },
+  {
+   "code": "6090002940",
+   "display": "Derai Paurashava"
+  },
+  {
+   "code": "6090004750",
+   "display": "Jagannathpur Paurashava"
+  },
+  {
+   "code": "6090008960",
+   "display": "Sunamganj Paurashava"
+  },
+  {
+   "code": "6091001716",
+   "display": "Beani Bazar Paurashava"
+  },
+  {
+   "code": "6091003825",
+   "display": "Golapganj Paurashava"
+  },
+  {
+   "code": "6091005937",
+   "display": "Kanaighat Paurashava"
+  },
+  {
+   "code": "6091506250",
+   "display": "Sylhet City Corp."
+  },
+  {
+   "code": "6091009475",
+   "display": "Zakiganj Paurashava"
+  },
+  {
+   "code": "6036000299",
+   "display": "Unions Of Ajmiriganj Upazila"
+  },
+  {
+   "code": "6036000599",
+   "display": "Unions Of Bahubal Upazila"
+  },
+  {
+   "code": "6036001199",
+   "display": "Unions Of Baniachong Upazila"
+  },
+  {
+   "code": "6036002699",
+   "display": "Unions Of Chunarughat Upazila"
+  },
+  {
+   "code": "6036004499",
+   "display": "Unions Of Habiganj Sadar Upazila"
+  },
+  {
+   "code": "6036006899",
+   "display": "Unions Of Lakhai Upazila"
+  },
+  {
+   "code": "6036007199",
+   "display": "Unions Of Madhabpur Upazila"
+  },
+  {
+   "code": "6036007799",
+   "display": "Unions Of Nabiganj Upazila"
+  },
+  {
+   "code": "6058001499",
+   "display": "Unions Of Barlekha Upazila"
+  },
+  {
+   "code": "6058003599",
+   "display": "Unions Of Juri Upazila"
+  },
+  {
+   "code": "6058005699",
+   "display": "Unions Of Kamalganj Upazila"
+  },
+  {
+   "code": "6058006599",
+   "display": "Unions Of Kulaura Upazila"
+  },
+  {
+   "code": "6058007499",
+   "display": "Unions Of Maulvibazar Sadar Upazila"
+  },
+  {
+   "code": "6058008099",
+   "display": "Unions Of Rajnagar Upazila"
+  },
+  {
+   "code": "6058008399",
+   "display": "Unions Of Sreemangal Upazila"
+  },
+  {
+   "code": "6090001899",
+   "display": "Unions Of Bishwambarpur Upazila"
+  },
+  {
+   "code": "6090002399",
+   "display": "Unions Of Chhatak Upazila"
+  },
+  {
+   "code": "6090008799",
+   "display": "Unions Of Dakshin Sunamganj Upazila"
+  },
+  {
+   "code": "6090002999",
+   "display": "Unions Of Derai Upazila"
+  },
+  {
+   "code": "6090003299",
+   "display": "Unions Of Dharampasha Upazila"
+  },
+  {
+   "code": "6090003399",
+   "display": "Unions Of Dowarabazar Upazila"
+  },
+  {
+   "code": "6090004799",
+   "display": "Unions Of Jagannathpur Upazila"
+  },
+  {
+   "code": "6090005099",
+   "display": "Unions Of Jamalganj Upazila"
+  },
+  {
+   "code": "6090008699",
+   "display": "Unions Of Sulla Upazila"
+  },
+  {
+   "code": "6090008999",
+   "display": "Unions Of Sunamganj Sadar Upazila"
+  },
+  {
+   "code": "6090009299",
+   "display": "Unions Of Tahirpur Upazila"
+  },
+  {
+   "code": "6091000899",
+   "display": "Unions Of Balaganj Upazila"
+  },
+  {
+   "code": "6091001799",
+   "display": "Unions Of Beani Bazar Upazila"
+  },
+  {
+   "code": "6091002099",
+   "display": "Unions Of Bishwanath Upazila"
+  },
+  {
+   "code": "6091002799",
+   "display": "Unions Of Companiganj Upazila"
+  },
+  {
+   "code": "6091503199",
+   "display": "Unions Of Dakshin Surma Upazila"
+  },
+  {
+   "code": "6091003599",
+   "display": "Unions Of Fenchuganj Upazila"
+  },
+  {
+   "code": "6091003899",
+   "display": "Unions Of Golapganj Upazila"
+  },
+  {
+   "code": "6091004199",
+   "display": "Unions Of Gowainghat Upazila"
+  },
+  {
+   "code": "6091005399",
+   "display": "Unions Of Jaintiapur Upazila"
+  },
+  {
+   "code": "6091005999",
+   "display": "Unions Of Kanaighat Upazila"
+  },
+  {
+   "code": "6091506299",
+   "display": "Unions Of Sylhet Sadar Upazila"
+  },
+  {
+   "code": "6091009499",
+   "display": "Unions Of Zakiganj Upazila"
+  },
+  {
+   "code": "6091006099",
+   "display": "Unions Of Osmani Nagar Upazila"
+  },
+  {
+   "code": "6036008705",
+   "display": "Unions of Shayestaganj"
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+﻿conflict_id,topic,claim_a,claim_b,sources,assessment,status
+PAB-001,District union total,73 (2011 BBS),74 (2022 BBS),BBS 2011 statistical yearbook vs BBS 2022 Community Report,One-unit increase reported; identify exact added/changed union through row-level comparison,Open
+PAB-002,Current secondary count,73,74,Amargram district/upazila page vs BBS 2022,Secondary page gives 73 and distribution; BBS 2022 aggregate gives 74,Open
+PAB-003,Bera distribution,9,8 (1983 BBS historical),Amargram current secondary distribution vs Pabna District Statistics 1983 table,Historical baseline differs; not a current count source,Open
+PAB-004,Faridpur distribution,6,8 (1983 BBS historical),Amargram current secondary distribution vs Pabna District Statistics 1983 table,Historical baseline differs; likely administrative changes; verify,Open
+PAB-005,Santhia distribution,10,11 (1983 BBS historical),Amargram current secondary distribution vs Pabna District Statistics 1983 table,Historical baseline differs; verify,Open
+PAB-006,BBS 2022 union count vs 2011,74,73,BBS Community Report 2022,"2022 report also reports 1,262 mauzas vs 1,187 in 2011; not direct proof of union boundary change",Open

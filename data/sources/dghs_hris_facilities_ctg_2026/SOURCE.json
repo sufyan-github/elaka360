@@ -1,0 +1,24 @@
+{
+  "key": "DGHS_HRIS_FACILITIES_CTG_2026",
+  "name": "DGHS / MoHFW HRIS Facility Registry — organisation list, Chattogram Division",
+  "organization": "Directorate General of Health Services (DGHS), Ministry of Health and Family Welfare",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=2",
+    "https://hris.mohfw.gov.bd/public/facility-registry"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Source: DGHS Facility Registry (hris.mohfw.gov.bd), Ministry of Health and Family Welfare, Bangladesh",
+  "division": "chattogram",
+  "kind": "dghs_hris",
+  "files": {
+    "places.csv": "a890560a8e7a605ee254a7865a0975e8f2d83fd6c5d4165db192d76931898e88",
+    "facts.csv": "8df08cd01383ac70e76d92f8e54c1832bd4ca2016b47196112080d568e44e46e",
+    "raw/hris_organization_list_chattogram_division.csv": "4e8667a001c04af15d39383a9227a027b7b0c99a63bbf409aa0e94d4c69fe830"
+  },
+  "notes": "Public report of the MoHFW HRIS Facility Registry. Excel export (ret=excel) of all active entries filtered to Chattogram Division (division_id 2), same collector and rules as DGHS_HRIS_FACILITIES_RAJ_2026. Registry is live and self-reported by facilities; coordinates are as entered by facilities (QA flags in notes). Contacts kept only for non-private facilities; private/NGO contacts and addresses and facility-head names not collected. No licence stated on the site."
+}

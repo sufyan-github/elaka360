@@ -1,0 +1,18 @@
+Sylhet/Sylhet Sadar: raw text of 'এক নজরে সিলেট সদর উপজেলা' (https://sylhetsadar.sylhet.gov.bd/pages/static-pages/696cafe1c4774958d7b9f8dc) not saved: the page also names people
+Sylhet/Companiganj: no union list menu item
+Sylhet/Gowainghat: no union list menu item
+Sylhet/Jaintiapur: union page 'উপজেলাধীন ইউনিয়নসমূহ' (https://jaintiapur.sylhet.gov.bd/pages/static-pages/696cb9b6c4774958d7ba9412) also names people (chairmen, secretaries or UDC entrepreneurs); not used, raw text not saved
+Sylhet/Zakiganj: union page 'ইউনিয়ন পরিষদসমুহ' (https://zakiganj.sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0673) also names people (chairmen, secretaries or UDC entrepreneurs); not used, raw text not saved
+Moulvibazar/Moulvibazar Sadar: union page 'ইউনিয়ন সমূহ' (https://moulvibazarsadar.moulvibazar.gov.bd/pages/static-pages/696cb381c4774958d7ba134a) also names people (chairmen, secretaries or UDC entrepreneurs); not used, raw text not saved
+Moulvibazar/Barlekha: union page 'বড়লেখা উপজেলার ইউনিয়ন সমূহ' (https://barlekha.moulvibazar.gov.bd/pages/static-pages/696cb391c4774958d7ba19be) also names people (chairmen, secretaries or UDC entrepreneurs); not used, raw text not saved
+Moulvibazar/Sreemangal: union page 'ইউনিয়নসমূহ' (https://sreemangal.moulvibazar.gov.bd/pages/static-pages/696cb396c4774958d7ba1c2a) also names people (chairmen, secretaries or UDC entrepreneurs); not used, raw text not saved
+Habiganj/Ajmiriganj: union page 'ইউনিয়ন পরিষদ সমূহ' (https://ajmiriganj.habiganj.gov.bd/pages/static-pages/696cafb5c4774958d7b9e504) also names people (chairmen, secretaries or UDC entrepreneurs); not used, raw text not saved
+Habiganj/Baniachong: unnumbered last line 'বানিয়াচং' (the upazila's name, after a numbered list) not taken as a union
+Habiganj/Lakhai: union page 'ইউনিয়নসমূহ' (https://lakhai.habiganj.gov.bd/pages/static-pages/696caf9fc4774958d7b9daca) also names people (chairmen, secretaries or UDC entrepreneurs); not used, raw text not saved
+Habiganj/Shayestaganj: pourashava page without a name: https://shayestaganj.habiganj.gov.bd/pages/static-pages/696cbb90c4774958d7babf20
+Sunamganj/Sunamganj Sadar: pourashava page without a name: https://sadar.sunamganj.gov.bd/pages/static-pages/696cb968c4774958d7ba7197
+Sunamganj/South Sunamganj: union page 'ইউনিয়ন পরিষদ সমূহ' (https://shantiganj.sunamganj.gov.bd/pages/static-pages/696cb969c4774958d7ba720e) also names people (chairmen, secretaries or UDC entrepreneurs); not used, raw text not saved
+Sunamganj/Chhatak: menu item 'ইউনিয়ন সমূহ' leads to 'ইউনিয়ন পরিষদ চেয়ারম্যান', not a union list (not used)
+Sunamganj/Jagannathpur: no union list menu item
+Sunamganj/Dowarabazar: no union list menu item
+Sunamganj/Dharmapasha: no union list menu item

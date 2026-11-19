@@ -1,0 +1,26 @@
+{
+  "key": "DPE_IPEMIS_PRIMARY_KHL_2026",
+  "name": "DPE IPEMIS primary school directory — Khulna Division",
+  "organization": "Directorate of Primary Education (DPE), Ministry of Primary and Mass Education",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://ipemis.dpe.gov.bd/search-school",
+    "https://ipemis.dpe.gov.bd/load-lite-school-list",
+    "https://api.ipemis.dpe.gov.bd/api/school-stat-public",
+    "https://dpe.gov.bd/"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Source: Directorate of Primary Education, IPEMIS (ipemis.dpe.gov.bd)",
+  "division": "khulna",
+  "kind": "dpe_ipemis",
+  "notes": "Public 'প্রাথমিক বিদ্যালয় ডিরেক্টরি' (school search) of the Integrated Primary Education Management Information System, linked from dpe.gov.bd. Listing endpoint used by the public page (DataTables JSON), queried per district of Khulna Division (divisionId=2); same collector and rules as DPE_IPEMIS_PRIMARY_RAJ_2026. Covers government primary, newly nationalised and experimental schools only (no kindergartens, NGO or ebtedayee madrasas). No coordinates; head teachers' names and mobiles on the detail pages are deliberately NOT collected. Live data (changes daily). No robots.txt on ipemis.dpe.gov.bd / api.ipemis.dpe.gov.bd (404). Licence not stated.",
+  "files": {
+    "places.csv": "edb1b4fc64f2b26e3755d58cba1ce31c284c7501f7b4ffeebf3ae1fb40f4033d",
+    "facts.csv": "5b93d5cc7f86fe763cd3f50ffaf84a4c82969ed786b48e5260bc4fd0ae8b2408",
+    "raw/ipemis_school_list_khulna_division.json": "7d8f0dc6b9e46493c32a815c76c4d9f8e0a67cbc4b44312ce60cacc324867e3a"
+  }
+}

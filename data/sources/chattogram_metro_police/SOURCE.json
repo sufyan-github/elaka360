@@ -1,0 +1,32 @@
+{
+  "key": "CHATTOGRAM_METRO_POLICE",
+  "division": "chattogram",
+  "kind": "metro_police",
+  "city": 50003,
+  "name": "Chattogram Metropolitan Police (police.chittagongdiv.gov.bd and cmp.gov.bd)",
+  "organization": "Chattogram Metropolitan Police, Bangladesh Police",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://police.chittagongdiv.gov.bd/pages/static-pages/at-a-glance-6ae2db41fd9ba07169122831",
+    "https://cmp.gov.bd/index.php?cPath=301",
+    "https://cmp.gov.bd/index.php?cPath=280",
+    "https://cmp.gov.bd/index.php?cPath=287",
+    "https://cmp.gov.bd/index.php?cPath=288",
+    "https://cmp.gov.bd/index.php?cPath=289",
+    "https://cmp.gov.bd/index.php?cPath=290"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Chattogram Metropolitan Police (police.chittagongdiv.gov.bd, cmp.gov.bd)",
+  "notes": "Thana list from the CMP national-portal site (police.chittagongdiv.gov.bd, title \"চট্রগ্রাম মেট্রোপলিটন পুলিশ\"; এক নজরে updated 2026-10-31 14:35); history figures and crime divisions from CMP's own site cmp.gov.bd (undated pages). CMP covers \"most of\" Chattogram City Corporation, but no source places individual thanas in it, so no thana carries a city corporation. Phone numbers are in CHATTOGRAM_METRO_POLICE_THANAS_2026. No Cumilla metropolitan police force was found (Cumilla city is policed by Cumilla District Police).",
+  "files": {
+    "areas.csv": "3efdc00dc1147c91eed86fc321869ef5bd4b234abe2c52223d6ed5ce61e6381e",
+    "facts.csv": "4dc33660fe8916b8267a99b3e83021797f186ab2bae7bf239f48daf829d2539b",
+    "raw/cmp_crime_divisions.txt": "51f3a8cb5658c93ff8e2e9b31fce5fb6ca83e8f1349383b1517b826f37f0d914",
+    "raw/cmp_history.txt": "9c01086b5e77f9909f3eb14de8a52c50dc9b7630c5b72ec317c4e130b2115250",
+    "raw/cmp_portal_glance.txt": "c0bdb035e76428d8effcd8f87d0b58e190590c8b95a82a42f1333584cf1e1a3d"
+  }
+}

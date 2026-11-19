@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Elaka360">
+  <!-- Source for icon-192/512 and apple-touch-icon: the Header.tsx pin (viewBox 0 0 32 40) at 78% height on white.
+       icon-maskable-512.png is the same pin in white at 56% height on #075b3b (inside the maskable safe zone). -->
+  <rect width="512" height="512" fill="#ffffff"/>
+  <g transform="translate(96.256 56.32) scale(9.984)">
+    <path d="M16 0C7.2 0 0 7 0 15.7 0 27.5 16 40 16 40s16-12.5 16-24.3C32 7 24.8 0 16 0z" fill="#075b3b"/>
+    <path d="M16 6l9 14H7z" fill="#16865b"/>
+    <circle cx="16" cy="15" r="5" fill="#fff"/>
+  </g>
+</svg>

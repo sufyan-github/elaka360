@@ -1,0 +1,22 @@
+{
+  "key": "UGC_UNIVERSITIES_MYM_2026",
+  "division": "mymensingh",
+  "kind": "ugc",
+  "name": "UGC university register — universities in Mymensingh Division",
+  "organization": "University Grants Commission of Bangladesh (UGC)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://www.ugc.gov.bd/universities"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Source: University Grants Commission of Bangladesh (ugc.gov.bd)",
+  "notes": "All universities on ugc.gov.bd (public, private, international, CBHE) were read from the page data embedded in each university page (/university/<slug>); kept where the UGC campus address names a Mymensingh-Division district (when an address also names another division's district, the district named last decides; a trailing 'Mymensingh' after another Mymensingh-Division district is read as the division), or, when UGC gives no address at all, where the university's name does (none for Mymensingh). Officials' names (VC, registrar etc.) are dropped. Phones: only landline/hotline numbers kept (mobile numbers dropped as possibly personal; bare 5-digit extensions after a full number are dropped by the existing rule); e-mails: only the university's own domain or institutional-looking addresses. Upazila only where the address names one (seed English spellings). No coordinates. Licence not stated.",
+  "files": {
+    "places.csv": "f5023f18aa203490d22032d574687772d0ce853522c140a0a2f811ac35fdbb6d",
+    "raw/ugc_universities_mymensingh_division.json": "d115403fac93864b0e8a02a20c8471f329853e4af7536b8041d401ff865c71d5"
+  }
+}

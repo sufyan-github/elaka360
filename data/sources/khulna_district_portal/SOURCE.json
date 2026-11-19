@@ -1,0 +1,32 @@
+{
+  "key": "KHULNA_DC_PORTAL_2026",
+  "name": "Khulna District Administration portal — upazila/union list, pourashavas, district at-a-glance",
+  "organization": "Office of the Deputy Commissioner, Khulna (Government of Bangladesh, a2i National Portal)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "division": "khulna",
+  "kind": "district_portal_main",
+  "urls": [
+    "https://khulna.gov.bd/",
+    "https://khulna.gov.bd/pages/static-pages/6980f69da31054345f1cf7b3",
+    "https://khulna.gov.bd/pages/static-pages/upazila-parisad-list-c3cd3b-69810876a31054345f1d80fe",
+    "https://khulna.gov.bd/pages/static-pages/6981413b35ce18e1c0700662",
+    "https://khulna.gov.bd/pages/static-pages/69812dec35ce18e1c06f9933",
+    "https://bangladesh.gov.bd/views/union-list"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "খুলনা জেলা প্রশাসন, জাতীয় তথ্য বাতায়ন (khulna.gov.bd)",
+  "files": {
+    "areas.csv": "836582ccf642d75f8c4faa596485ee20454ae62b0b639d4376f37d4b2b11cdb4",
+    "facts.csv": "a2b344ad3fdf434da231457217c191f8e9d60d23a4ffced45f6826d8c4913bab",
+    "raw/khulna_glance.txt": "11dce3e958874156c944d3e5d0c70b7cc67e32365660f7b65f00732ef9c60bc1",
+    "raw/khulna_pourashavas.txt": "35f9557ec8fd8958fceee967a58321358df71685f5b9a812b068243207db087e",
+    "raw/khulna_unions.txt": "b3bdaaebf1a9a60cef3b12b235c4c3dfb92fdbd2c259e6ff6cfca28c6fe6af96",
+    "raw/khulna_upazilas.txt": "bbbb717a3bddfbe3c99020f1b5ce5d78341372308494bdc874ee9c9c83db7cb2",
+    "raw/pages.csv": "ca7042cdc17de76041397c71ed647ee1818861870c671962fe74a8b83c625c1a"
+  },
+  "notes": "Collected by the generic division mode of the a2i portal collectors (pages found through the portals' menus, names and figures parsed from the pages). No licence stated; only facts (names, counts, figures) are extracted. English district/upazila names are the project's keys, not printed."
+}

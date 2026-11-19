@@ -1,0 +1,45 @@
+{
+ "union_statistics": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/f376ca7e7ee5405f8311de650415b9d8.pdf",
+ "community_xlsx": {
+  "Khulna": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/63c65a7594254c5fb5dbede282f0e67b.xlsx",
+  "Bagerhat": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/9d14b0b0151e46b5b1c5c8e8cd3fce77.xlsx",
+  "Satkhira": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/4c8712e0f2d145dbabdbfbe95f28088e.xlsx",
+  "Jhenaidah": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/3f288c3f560f49e5afac32bc0bf5b3df.xlsx",
+  "Chuadanga": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/08bcfffe4e294e1d87066183002df3b2.xlsx",
+  "Magura": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/fde4acaa8d0149c68cb30511f461962f.xlsx",
+  "Kushtia": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/3/bd633dab-40c1-4371-87ea-c43c657040d0.xlsx",
+  "Meherpur": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/ff9cd564464a4df69854146475141764.xlsx",
+  "Jashore": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/fdc7f79d9d064cf6896ad921503496b0.xlsx",
+  "Narail": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/fd9eddc198e34c10a62fddd1cb9d6be8.xlsx"
+ },
+ "district_page": {
+  "Khulna": "https://bbs.gov.bd/pages/files/6a09669d1f32bf22d5f1fb51",
+  "Bagerhat": "https://bbs.gov.bd/pages/files/6a09676b163c98157b029e06",
+  "Satkhira": "https://bbs.gov.bd/pages/files/6a097a98f284771b36b111ce",
+  "Jhenaidah": "https://bbs.gov.bd/pages/files/6a097c2c5d40ccedfd8df281",
+  "Chuadanga": "https://bbs.gov.bd/pages/files/6a097cf687a6fde6b39f3169",
+  "Magura": "https://bbs.gov.bd/pages/files/6a097d4ec8bc218c41d16a73",
+  "Kushtia": "https://bbs.gov.bd/pages/files/6a097da99da92ab7e499655a",
+  "Meherpur": "https://bbs.gov.bd/pages/files/6a097e02298ade29f2264757",
+  "Jashore": "https://bbs.gov.bd/pages/files/6a097e485d40ccedfd8df436",
+  "Narail": "https://bbs.gov.bd/pages/files/6a097e927aa29b4dab974286"
+ },
+ "district_pdf": {
+  "Khulna": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/73dc1df3-c4f0-4a61-bbb2-036d0906f853.pdf",
+  "Bagerhat": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/4045a5ce-6445-4cb5-8c70-4c9e4f5f4084.pdf",
+  "Satkhira": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/202e424c-a7a3-4179-be6c-c861eeb505f2.pdf",
+  "Jhenaidah": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/16b05c3c-890f-478a-8518-20a76b3207c1.pdf",
+  "Chuadanga": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/77024b1b-e58c-468a-a93b-37f00f04ef1d.pdf",
+  "Magura": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/53f42ddf-d536-4efc-afd6-862ea73ab49a.pdf",
+  "Kushtia": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/28026f48-b758-47f9-92d0-00e4d72d9cf6.pdf",
+  "Meherpur": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/7a179522-05b9-41e1-884b-d392d8d807c6.pdf",
+  "Jashore": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/928edbab-1a57-4b17-a51e-368d2271c06c.pdf",
+  "Narail": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/38354ecb-c10b-43e0-b371-657c00463deb.pdf"
+ },
+ "community_page": {
+  "Jhenaidah": "https://bbs.gov.bd/pages/files/6a0579bff284771b36b074c5"
+ },
+ "community_pdf": {
+  "Jhenaidah": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/a879b3e3-207e-4123-a799-4ee1c5100e9c.pdf"
+ }
+}

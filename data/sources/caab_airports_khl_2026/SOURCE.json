@@ -1,0 +1,25 @@
+{
+  "key": "CAAB_AIRPORTS_KHL_2026",
+  "division": "khulna",
+  "kind": "caab",
+  "name": "Civil Aviation Authority of Bangladesh — airports in Khulna Division",
+  "organization": "Civil Aviation Authority of Bangladesh (CAAB)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://www.caab.gov.bd/",
+    "https://new.caab.gov.bd/airportsf.html",
+    "https://new.caab.gov.bd/contactof.html",
+    "https://new.caab.gov.bd/airports/jessore.html"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Civil Aviation Authority of Bangladesh (caab.gov.bd)",
+  "notes": "No licence stated. Airline-office and individual staff numbers on the airport pages are not collected; only the Airport Manager office phone/cell/e-mail. caab.gov.bd omits the Sectigo OV R36 intermediate (handled by the AIA helper).",
+  "files": {
+    "places.csv": "bcfe38e2d9f21cabf157fbd4dcc8b7bda98b07fa078769ea2e7dd0e7c9f01ced",
+    "raw/jessore.txt": "1732beac1e22a019ab09db032e6f9d264e47032681cea4ca89436e2ef28f7f6d"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "key": "BDPOST_POSTCODES_RANG_2026",
+  "division": "rangpur",
+  "kind": "bdpost",
+  "name": "Bangladesh Post postcode booklet — Rangpur Division post offices (scan on post.rajshahi.gov.bd)",
+  "organization": "বাংলাদেশ ডাক বিভাগ (Bangladesh Post Office) — DPMG Rajshahi Division portal",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-post-rajshahi/2024/12/e548300c14de4897aa9516b65816e29f.pdf"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "বাংলাদেশ ডাক বিভাগ (Bangladesh Post Office) — DPMG Rajshahi Division portal",
+  "notes": "Same undated scanned booklet as the Rajshahi run (page last updated 2018-09-21; no text layer). The booklet's 'রাজশাহী রিজিয়ন ৫০০০-৬৯৯৯' includes the Rangpur districts: booklet p. 19 (Panchagarh, Thakurgaon), p. 20 (Dinajpur, Nilphamari, Rangpur, Lalmonirhat, Kurigram) and p. 21 (Gaibandha) transcribed by hand from the page images (raw/*.png, PDF pages 11-12 rotated). fetch.py verifies the PDF hash and re-emits the transcription. Branch post offices are not in the booklet. Licence: none stated on the source; treat as government public information, cite the source.",
+  "files": {
+    "facts.csv": "bcc4b33923ebe709219c886067d25e4edc9ab359626cb3ac1f6eca2c6eabc82b",
+    "places.csv": "3af2e9abc8e322fbde084ec5893dcbf46d9c4c3d101af991d05b62135ff0a890",
+    "raw/postcode_booklet_pp18-19.png": "267deb9f97a7123b4c7e0fcaf2b01b9b35ee929feb904747b61db3077a821f00",
+    "raw/postcode_booklet_pp20-21.png": "019fe6b8874e330d3d474fc71baf06a05037cdddffd812a1d9c2d64c18171fc8"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "key": "DISTRICT_PORTALS_TRANSPORT_MYM_2026",
+  "division": "mymensingh",
+  "kind": "district_transport",
+  "name": "District and upazila portals (Mymensingh Division) — bus terminals, stands and railway stations named on transport pages",
+  "organization": "Deputy Commissioner / Upazila Nirbahi offices (national portal framework)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://jamalpur.gov.bd/pages/static-pages/6970926ca31054345f15e8e6",
+    "https://fulbaria.mymensingh.gov.bd/pages/static-pages/69709db9a31054345f1606f4",
+    "https://muktagacha.mymensingh.gov.bd/pages/static-pages/69709db9a31054345f160730",
+    "https://iswarganj.mymensingh.gov.bd/pages/static-pages/6970764da31054345f1517e1",
+    "https://phulpur.mymensingh.gov.bd/pages/static-pages/69707667a31054345f152420",
+    "https://tarakanda.mymensingh.gov.bd/pages/static-pages/6970764da31054345f151798",
+    "https://dewangonj.jamalpur.gov.bd/pages/static-pages/6970764fa31054345f151844",
+    "https://bokshiganj.jamalpur.gov.bd/pages/static-pages/6973bc83c4774958d7bbf3a3",
+    "https://nalitabari.sherpur.gov.bd/pages/static-pages/6970816ba31054345f1545a7",
+    "https://mcc.gov.bd/pages/static-pages/6922dc66933eb65569e1024c"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "District and upazila portals (*.gov.bd, Bangladesh National Portal)",
+  "notes": "No licence stated. No portal publishes a terminal, station or ghat register; rows are names explicitly given on the 'যোগাযোগ ব্যবস্থা' / 'যোগাযোগ' pages of the Jamalpur DC portal and of the upazila portals that name one, and on the Mymensingh City Corporation's 'বাস টার্মিনাল' page (the Mymensingh DC page gives a 2019 train timetable and bus routes by departure place; the Sherpur and Netrokona DC pages name none). Dhaka-side terminals (Mohakhali, Kamalapur), stations outside the division (Kaoraid, on the Bhaluka page), bus company counters, departure places not called a stand or terminal, and route descriptions without a named stop are not rows. raw/ keeps, per page that gave a row, only the lines carrying the matched phrases (mobiles/e-mails redacted; descriptive text is not copied into the CSVs).",
+  "files": {
+    "places.csv": "7621876a0f3598ee172ba9cdf61ad087277fba9a944f3cedbd64c10ba7967702",
+    "facts.csv": "4d868384e7433900b1dbeac55b65346d3ba9d3fc18b949444e88f0f55285ec5e",
+    "raw/bokshiganj_transport.txt": "898e4e9c2f9846e7f50b97df9b1b6ed122d9c668c0a70177e95adc4fe2f2171a",
+    "raw/dewangonj_transport.txt": "dde6e28a30ff97a836c55fab2732ffcfc8096a774679218abcfd62b0a856fbbf",
+    "raw/fulbaria_transport.txt": "02e6e5c2b04223c227f198d763d8bb1a71632c31087b05628e01264c1fda4a55",
+    "raw/iswarganj_transport.txt": "9d8b42217ce5e9aaa17177dc5f828071c43e169967e1b6b2d3ce5384f75cbde1",
+    "raw/jamalpur_transport.txt": "d6e8ec9d40fe271a8c8430dcfff31808899fe267a079f12f035c9f84f324f54a",
+    "raw/mcc_bus_transport.txt": "bbe549d62e6c024d8c31dbac3aa42ddd1dcb40d200e7f5aee1bcf9b8205d55f5",
+    "raw/nalitabari_transport.txt": "57d1e9d5757f1ce20662d9e73e7eac4c20079edef0d5412597a392a752eb8266",
+    "raw/phulpur_transport.txt": "d2dca64e7fa7f49486fd299b001b3ae4495c0eba92d9b7374088596bc10d3eb3",
+    "raw/tarakanda_transport.txt": "4753659009ba57eac523f9645389ee6e71313e47c0c615e21dd8eed9f3deef36"
+  }
+}

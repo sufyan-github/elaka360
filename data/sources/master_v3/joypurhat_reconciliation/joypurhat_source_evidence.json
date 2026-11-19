@@ -1,0 +1,38 @@
+[
+  {
+    "source_id": "SRC-JOY-DIST-2024",
+    "title": "উপজেলা ও ইউনিয়ন — জয়পুরহাট জেলা",
+    "owner": "Joypurhat District Administration",
+    "url": "https://joypurhat.gov.bd/pages/static-pages/697f804135ce18e1c06b7c38",
+    "vintage": "Updated 2024-07-09 10:10 AM",
+    "claim": "Lists 5 upazilas and 32 unions with Bangla names; upazila grouping: Joypurhat Sadar 9, Panchbibi 8, Kalai 5, Akkelpur 5, Khetlal 5.",
+    "limitations": "Official district portal list is 2024 vintage; reconfirm current legal status before production."
+  },
+  {
+    "source_id": "SRC-JOY-BBS-2011",
+    "title": "Community Report: Joypurhat Zila — Upazila and Union/Ward with Geo-code 2011",
+    "owner": "Bangladesh Bureau of Statistics",
+    "url": "https://file-rajshahi.portal.gov.bd/files/bbs.khetlal.joypurhat.gov.bd/sps_data/24adcc6d_cba8_4cf8_bb60_7d8bbd329e87/5007c6fe484d55292a450f7382df43ab.pdf",
+    "vintage": "2011 administrative geocode snapshot",
+    "claim": "Lists union names and historical union geocode components for all five Joypurhat upazilas; aggregate count 32.",
+    "limitations": "Historical 2011 code snapshot; codes should not be assumed current without a newer BBS geocode register."
+  },
+  {
+    "source_id": "SRC-JOY-ATLAS-2026",
+    "title": "Joypurhat District: Upazilas, Unions, Population — Upazila Atlas",
+    "owner": "The Daily Sangbad / Upazila Atlas",
+    "url": "https://thedailysangbad.com/districts/joypurhat",
+    "vintage": "Crawled 2026",
+    "claim": "Lists 34 unions; Joypurhat Sadar 9, Panchbibi 8, Kalai 6, Akkelpur 5, Khetlal 6.",
+    "limitations": "Secondary derived dataset; conflicts with official district portal and BBS 2011 (32); not used to overwrite official list."
+  },
+  {
+    "source_id": "SRC-JOY-PORTAL-MIRROR",
+    "title": "উপজেলা ও ইউনিয়ন",
+    "owner": "Joypurhat District Administration (alternate domain)",
+    "url": "https://www.joypurhat.gov.bd/bn/site/page/SuKw-%E0%A6%89%E0%A6%AA%E0%A6%9C%E0%A7%87%E0%A6%B2%E0%A6%BE-%E0%A6%93-%E0%A6%87%E0%A6%89%E0%A6%A8%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%A8",
+    "vintage": "Crawled 2026; same content as district page",
+    "claim": "Mirrors district union list and 32-union administrative heading.",
+    "limitations": "May be duplicate publication of same source, not independent confirmation."
+  }
+]

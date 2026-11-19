@@ -1,4 +1,7 @@
-/** Domain types mirrored from db/migrations/0001_init.sql. */
+/** Domain types mirrored from db/migrations/0001–0005 (read shapes returned by the API). */
+
+/** Evidence tiers — see docs/data/DATA_TRUST_POLICY.md. */
+export type EvidenceLevel = 'official' | 'secondary' | 'community' | 'unverified';
 
 export type AdminLevel =
   | 'country' | 'division' | 'district' | 'upazila' | 'city_corporation'
@@ -15,7 +18,10 @@ export interface AdminAreaSummary extends Named {
   parent_id: number | null;
   slug: string;
   path: string;
+  /** Legacy flag: true only for official (Tier 1) evidence. Use evidence_level for display. */
   verified: boolean;
+  evidence_level: EvidenceLevel;
+  production_eligible: boolean;
 }
 
 export interface AdminArea extends AdminAreaSummary {
@@ -29,9 +35,11 @@ export interface AdminArea extends AdminAreaSummary {
   population_basis: string | null;
   wards_count: number | null;
   established: string | null;
-  production_eligible: boolean;
   notes: string | null;
   source: DataSourceRef | null;
+  evidence_source: DataSourceRef | null;
+  verification_notes: string | null;
+  last_reviewed_at: string | null;
 }
 
 export interface DataSourceRef {
@@ -48,7 +56,46 @@ export interface AreaDetail {
   breadcrumb: AdminAreaSummary[];
   children: AdminAreaSummary[];
   descendant_counts: LevelCounts;
+  /** Descendants that exist but are not public yet (awaiting verification), per level. */
+  pending_counts: LevelCounts;
   place_counts: Record<string, number>;
+  /**
+   * Areas related outside the parent–child tree: for a city ward, the metropolitan thana(s) it lies in
+   * (relation 'thana'); for a thana, its wards ('thana_ward'). BBS Census 2022.
+   */
+  links: (AdminAreaSummary & { relation: 'thana' | 'thana_ward' })[];
+  /**
+   * Places are filed by division, district, upazila, union and city corporation only. For any other level (ward,
+   * pourashava, thana, mouza, village) place_counts and place lists describe this nearest ancestor; null otherwise.
+   */
+  place_scope: AdminAreaSummary | null;
+}
+
+export interface AreaStats {
+  area_id: number;
+  descendant_counts: LevelCounts;
+  pending_counts: LevelCounts;
+  place_counts: Record<string, number>;
+  population_2022: number | null;
+  population_basis: string | null;
+  area_km2: number | null;
+  area_basis: string | null;
+  /** How the numbers were counted. */
+  inclusion_rule: string;
+}
+
+export interface AreaTreeNode extends AdminAreaSummary {
+  children?: AreaTreeNode[];
+}
+
+export interface LocateResult {
+  lat: number;
+  lon: number;
+  /** Most specific public area whose boundary contains the point (districts have boundaries today). */
+  area: AdminAreaSummary | null;
+  breadcrumb: AdminAreaSummary[];
+  /** Which levels have boundary data; finer levels cannot be resolved yet. */
+  resolved_levels: AdminLevel[];
 }
 
 export interface Category extends Named {
@@ -75,6 +122,8 @@ export interface PlaceSummary {
   lat: number | null;
   lon: number | null;
   verification_status: VerificationStatus;
+  evidence_level: EvidenceLevel;
+  production_eligible: boolean;
   distance_m?: number;
 }
 
@@ -92,8 +141,13 @@ export interface Place extends PlaceSummary {
   description_bn: string | null;
   description_en: string | null;
   source: DataSourceRef | null;
+  /** Where the details came from, when that differs from the confirming `source`. */
+  details_source: DataSourceRef | null;
   source_notes: string | null;
   last_verified_at: string | null;
+  opening_hours: Record<string, unknown> | null;
+  rating_avg: number | null;
+  rating_count: number;
   breadcrumb: AdminAreaSummary[];
 }
 
@@ -101,6 +155,7 @@ export interface EmergencyNumber extends Named {
   number: string;
   category: string;
   verified: boolean;
+  evidence_level: EvidenceLevel;
   notes: string | null;
 }
 
@@ -111,11 +166,210 @@ export interface NationalStats {
   union: number;
   city_corporation: number;
   pourashava: number;
+  /** Metropolitan police thanas, mouzas and villages / mahallas (BBS Census 2022). */
+  thana: number;
+  mouza: number;
+  village: number;
   places: number;
   verified_places: number;
+  /** The subset with official or secondary evidence (production-eligible), per level. */
+  sourced: { division: number; district: number; upazila: number; union: number; city_corporation: number; pourashava: number; places: number };
+  /** How the numbers were counted (public = production-eligible records only, unless configured otherwise). */
+  inclusion_rule: string;
+}
+
+/** Essential services counted per area on the coverage page (sub-category groups; see COVERAGE_PLACES_SQL). */
+export type CoverageService = 'union_parishad' | 'pharmacy' | 'hospital' | 'community_clinic' | 'police' | 'fire' | 'post_office'
+  | 'market' | 'bank' | 'transport' | 'school';
+
+export interface CoverageRow {
+  area: AdminAreaSummary & { population_2022: number | null };
+  places: number;
+  official: number;
+  secondary: number;
+  /** Community and unverified records. */
+  community: number;
+  with_point: number;
+  with_contact: number;
+  with_name_bn: number;
+  unions: number;
+  /** Unions with at least one public place filed under them. */
+  unions_with_places: number;
+  mouzas: number;
+  villages: number;
+  services: Record<CoverageService, number>;
+  /** Essential services with no record in this area (a gap in the data, not proof that none exists). */
+  missing: CoverageService[];
+}
+
+export interface CoverageReport {
+  area: CoverageRow;
+  /** Child areas: divisions, districts, upazilas + city corporations, or unions. */
+  rows: CoverageRow[];
+  /** Places the sources could not file at the child level (e.g. no union given). */
+  unfiled: number;
+  services: CoverageService[];
+  inclusion_rule: string;
 }
 
 export interface Paginated<T> {
   items: T[];
   next_cursor: string | null;
+}
+
+/* ---------- accounts ---------- */
+
+export type UserRole =
+  | 'user' | 'contributor' | 'moderator' | 'data_admin' | 'national_admin' | 'super_admin'
+  | 'verifier' | 'content_manager' | 'analyst' | 'readonly_staff';
+
+export interface Me {
+  id: number;
+  name: string;
+  phone: string | null;
+  email: string | null;
+  role: UserRole;
+  points: number;
+  level: number;
+  home_area_id: number | null;
+  scope_area_id: number | null;
+  profile_public: boolean;
+  created_at: string;
+  deletion_requested_at: string | null;
+  permissions: string[];
+  /** Authenticator (TOTP) set up for this account. */
+  mfa_enabled: boolean;
+  /** This session passed two-factor authentication. */
+  mfa_verified: boolean;
+  /** Staff features need a 2FA-verified session on this server. */
+  mfa_required: boolean;
+}
+
+export interface AuthTokens {
+  access_token: string;
+  /** null when a concurrent refresh was answered within the rotation grace window: keep the current cookie. */
+  refresh_token: string | null;
+  expires_in: number;
+  user: Me;
+}
+
+/* ---------- reviews, saved, contributions ---------- */
+
+export interface Review {
+  id: number;
+  place_slug: string;
+  rating: number;
+  body: string | null;
+  author_name: string;
+  is_own: boolean;
+  created_at: string;
+  updated_at: string;
+}
+
+export interface SavedItem {
+  id: number;
+  collection_id: number | null;
+  created_at: string;
+  place: PlaceSummary | null;
+  area: AdminAreaSummary | null;
+}
+
+export interface Collection {
+  id: number;
+  name: string;
+  description: string | null;
+  item_count: number;
+  created_at: string;
+}
+
+export type ContributionType = 'new_place' | 'new_business' | 'new_tourist_spot' | 'area_info' | 'photo' | 'correction' | 'report';
+export type ContributionStatus = 'draft' | 'new' | 'in_review' | 'needs_changes' | 'approved' | 'rejected';
+
+export interface ContributionEvidence {
+  url: string;
+  note?: string;
+}
+
+export interface Contribution {
+  id: number;
+  type: ContributionType;
+  status: ContributionStatus;
+  target_place_slug: string | null;
+  target_area_id: number | null;
+  payload: Record<string, unknown>;
+  evidence: ContributionEvidence[];
+  lat: number | null;
+  lon: number | null;
+  confirmed_accurate: boolean;
+  reviewer_note: string | null;
+  created_at: string;
+  updated_at: string;
+  reviewed_at: string | null;
+  events?: ContributionEvent[];
+}
+
+export interface ContributionEvent {
+  from_status: ContributionStatus | null;
+  to_status: ContributionStatus;
+  note: string | null;
+  actor_name: string | null;
+  at: string;
+}
+
+/* ---------- admin ---------- */
+
+export interface DataSource {
+  id: number;
+  key: string;
+  name: string;
+  url: string | null;
+  license: string | null;
+  trust_level: number;
+  source_type: string;
+  organization: string | null;
+  access_date: string | null;
+  publication_date: string | null;
+  evidence_notes: string | null;
+  active: boolean;
+  usage_count?: number;
+}
+
+export interface AdminStats {
+  areas_total: number;
+  areas_public: number;
+  areas_by_evidence: Record<EvidenceLevel, number>;
+  places_total: number;
+  places_public: number;
+  places_by_evidence: Record<EvidenceLevel, number>;
+  contributions_pending: number;
+  review_reports_open: number;
+  duplicate_candidates_open: number;
+  quality_issues_open: number;
+  users_active_30d: number;
+  recent_activity: AuditEntry[];
+}
+
+export interface AuditEntry {
+  id: number;
+  actor_id: number | null;
+  actor_name: string | null;
+  action: string;
+  entity: string;
+  entity_id: string;
+  before: unknown;
+  after: unknown;
+  reason: string | null;
+  request_id: string | null;
+  at: string;
+}
+
+/** RFC 9457 problem details, returned for every API error. */
+export interface Problem {
+  type: string;
+  title: string;
+  status: number;
+  detail?: string;
+  instance?: string;
+  request_id?: string;
+  errors?: Record<string, string>;
 }

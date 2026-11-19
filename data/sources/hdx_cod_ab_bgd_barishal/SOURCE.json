@@ -1,0 +1,28 @@
+{
+  "key": "HDX_COD_AB_BGD_BARISHAL",
+  "name": "Bangladesh - Subnational Administrative Boundaries (COD-AB v03), Barishal Division extract",
+  "organization": "OCHA (ROAP / FIS) on HDX; source: Bangladesh Bureau of Statistics (BBS)",
+  "source_type": "humanitarian_dataset",
+  "trust_level": 3,
+  "urls": [
+    "https://data.humdata.org/dataset/cod-ab-bgd",
+    "https://data.humdata.org/dataset/401d3fae-4262-48c9-891f-461fd776d49b/resource/cec2abe3-d8b7-4025-9362-9f7e780f2a07/download/bgd_admin_boundaries.geojson.zip",
+    "https://data.humdata.org/api/3/action/package_show?id=cod-ab-bgd"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": "2026-01-26",
+  "license": "CC-BY-IGO-3.0",
+  "license_url": "http://creativecommons.org/licenses/by/3.0/igo/legalcode",
+  "attribution": "Bangladesh Bureau of Statistics (BBS); OCHA ROAP; published by OCHA FIS / HDX (CC BY-IGO)",
+  "files": {
+    "areas.csv": "87457e2be895502a5f06802f3fc3d2215d2305c332ef130b12baa0a2618aac58",
+    "boundaries.geojson": "ef48e4b5e2a95a61f91b187eb498c367272f6f850efa5e88b05fa0092091d7ca",
+    "facts.csv": "1956d8802212f379c447b46d9fbba5eac1e52b8e7e050a609a6d0a8ab8155edb",
+    "crosswalk.csv": "6be18ca2eb5525fd25ccfba3fe8c6563269aeaa07f8cc041f9c5aa7325b8520a",
+    "raw/bgd_adminpoints_barishal.geojson": "77536fcbd34f3b06115928fc7af6785fbe2bf1a92a61281199f4df591bed95bd",
+    "raw/hdx_cod_ab_bgd_package.json": "7c5aee071ef0b0f6b20c863e9af8a9025312a3a71e0d109b49c9f5a01512fd0d"
+  },
+  "notes": "COD-AB v03: ADM1-ADM3 polygons, valid_on 2023-05-21, reviewed 2025-06-01, HDX resource last modified 2026-01-26T15:14:12.782628. HDX dataset_date [2023-05-21T00:00:00 TO 2025-06-01T23:59:59]; 'boundaries created by the source 01 January 2010'. No ADM4 (union) polygons in v03; union/paurashava/ward codes come from the bgd_adminpoints layer (valid_on 2020-11-13, older P-code scheme BD+div+dist+upz+union, 2 digits each). Polygons simplified (Douglas-Peucker 0.0002 deg, 5 decimals) ring by ring, so shared borders can have slivers of a few metres.",
+  "division": "barishal",
+  "kind": "hdx_cod_ab"
+}

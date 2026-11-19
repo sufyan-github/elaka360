@@ -1,0 +1,30 @@
+{
+  "key": "MYMENSINGH_DC_PORTAL_2026",
+  "name": "Mymensingh District Administration portal — upazila/union list, pourashavas, district at-a-glance",
+  "organization": "Office of the Deputy Commissioner, Mymensingh (Government of Bangladesh, a2i National Portal)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "division": "mymensingh",
+  "kind": "district_portal_main",
+  "urls": [
+    "https://mymensingh.gov.bd/",
+    "https://mymensingh.gov.bd/pages/static-pages/6973bc81c4774958d7bbf28c",
+    "https://mymensingh.gov.bd/pages/static-pages/6973bef4c4774958d7bc1029",
+    "https://bangladesh.gov.bd/views/union-list"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "ময়মনসিংহ জেলা প্রশাসন, জাতীয় তথ্য বাতায়ন (mymensingh.gov.bd)",
+  "files": {
+    "areas.csv": "44bd688dd0e96b6365f5dd32ec304f108de11e7f0154d33e381ad5cb81e0e1b2",
+    "facts.csv": "22b58423112785c014b2eff7dfa69c645d0084f9b0016e37480614f805940ff3",
+    "raw/mymensingh_glance.txt": "cc4ef30b342a9ee1378c17a7ac260a87ac69a5dec242c8325e5a427a855ce34c",
+    "raw/mymensingh_unions.txt": "d9167f1afd64b136345deb53d982249cb066852bb1865a27a956782d68f320c7",
+    "raw/mymensingh_upazilas.txt": "d9167f1afd64b136345deb53d982249cb066852bb1865a27a956782d68f320c7",
+    "raw/pages.csv": "66a46e39d49fe9697485eaf18475bad8abc4f53588989e1f395a0310592f5fe2",
+    "raw/warnings.txt": "238fc8c8e53b247fb23d7fc135193e172ac7f8b3bd2ae7ad90d2b2089a220dc3"
+  },
+  "notes": "Collected by the generic division mode of the a2i portal collectors (pages found through the portals' menus, names and figures parsed from the pages). No licence stated; only facts (names, counts, figures) are extracted. English district/upazila names are the project's keys, not printed."
+}

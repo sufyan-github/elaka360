@@ -1,0 +1,25 @@
+{
+  "key": "GEOBOUNDARIES_BGD_ADM4_CHATTOGRAM",
+  "name": "geoBoundaries gbOpen Bangladesh ADM4 (unions, paurashavas, city wards), Chattogram Division extract",
+  "organization": "geoBoundaries (William & Mary geoLab); original data: Bangladesh Bureau of Statistics (BBS), OCHA ROAP",
+  "source_type": "humanitarian_dataset",
+  "trust_level": 3,
+  "urls": [
+    "https://www.geoboundaries.org/api/current/gbOpen/BGD/ADM4/",
+    "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BGD/ADM4/geoBoundaries-BGD-ADM4.geojson",
+    "https://data.humdata.org/dataset/administrative-boundaries-of-bangladesh-as-of-2015"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": "CC-BY-IGO-3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/igo/legalcode",
+  "attribution": "geoBoundaries (Runfola et al. 2020, PLOS ONE); data: Bangladesh Bureau of Statistics (BBS), OCHA ROAP",
+  "files": {
+    "areas.csv": "96cbda9f14b4daa67d93e554bd49da6a40402a7d6670bddb13434b94d98baa22",
+    "boundaries.geojson": "ea602b12c473708bf841ef979ea74f1eedf2634bf6bf533c621c9316b77cc3e2",
+    "facts.csv": "f006e45bd6ad47aaabc15866b007a1214c26e4465db309ad75f37c135988ec68"
+  },
+  "notes": "geoBoundaries BGD-ADM4-29066614, year represented 2020, source update Thu Jan 19 07:31:04 2023, build Dec 12, 2023, licence as stated by geoBoundaries: Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO) (licence source data.humdata.org/dataset/administrative-boundaries-of-bangladesh-as-of-2015). P-codes (HDX_PCODE_2020) attached from HDX COD-AB bgd_adminpoints by point-in-polygon; 1063 polygons kept, 0 label points/polygons not assigned. Polygons simplified (Douglas-Peucker 0.0002 deg, 5 decimals) ring by ring.",
+  "division": "chattogram",
+  "kind": "geoboundaries_adm4"
+}

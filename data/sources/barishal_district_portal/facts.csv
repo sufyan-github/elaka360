@@ -1,0 +1,20 @@
+entity_level,entity_name_en,district_en,upazila_en,code,fact,value,unit,basis,year,source_key,source_url,notes
+district,Barishal,Barishal,,,area_km2,2784.52,km2,as stated,,BARISHAL_DC_PORTAL_2026,https://barishal.gov.bd/pages/static-pages/697887ac35ce18e1c06624aa,"label 'আয়তন' value '২,৭৮৪.৫২ বর্গ কি.মি.'; page updated 2026-05-21"
+district,Barishal,Barishal,,,village_count,1116,count,as stated,,BARISHAL_DC_PORTAL_2026,https://barishal.gov.bd/pages/static-pages/697887ac35ce18e1c06624aa,"label 'গ্রাম' value '১,১১৬'; page updated 2026-05-21"
+district,Barishal,Barishal,,,mouza_count,1001,count,as stated,,BARISHAL_DC_PORTAL_2026,https://barishal.gov.bd/pages/static-pages/697887ac35ce18e1c06624aa,label 'মৌজা' value '১০০১'; page updated 2026-05-21
+district,Barishal,Barishal,,,population,2570446,persons,as stated,,BARISHAL_DC_PORTAL_2026,https://barishal.gov.bd/pages/static-pages/697887ac35ce18e1c06624aa,"label 'মোট জনসংখ্যা' value '২৫,৭০,৪৪৬'; page updated 2026-05-21"
+district,Barishal,Barishal,,,upazila_count,10,count,as stated,,BARISHAL_DC_PORTAL_2026,https://barishal.gov.bd/pages/static-pages/697887ac35ce18e1c06624aa,label 'উপজেলা' value 'উপজেলা - ১০'; inline in a longer cell; page updated 2026-05-21
+district,Barishal,Barishal,,,pourashava_count,6,count,as stated,,BARISHAL_DC_PORTAL_2026,https://barishal.gov.bd/pages/static-pages/697887ac35ce18e1c06624aa,label 'পৌরসভা' value 'পৌরসভা - ৬'; inline in a longer cell; page updated 2026-05-21
+district,Barishal,Barishal,,,upazila_count_listed,10,count,count of upazilas listed,,BARISHAL_DC_PORTAL_2026,https://barishal.gov.bd/pages/static-pages/69789b7535ce18e1c066e591,page updated 2026-09-30
+upazila,Barisal Sadar,Barishal,Barisal Sadar,,union_count,10,count,count of unions listed,,BARISHAL_DC_PORTAL_2026,https://barishal.gov.bd/pages/static-pages/6978a32135ce18e1c0672269,page updated 2026-11-16
+upazila,Gournadi,Barishal,Gournadi,,union_count,7,count,count of unions listed,,BARISHAL_DC_PORTAL_2026,https://barishal.gov.bd/pages/static-pages/6978a32135ce18e1c0672269,page updated 2026-11-16
+upazila,Muladi,Barishal,Muladi,,union_count,7,count,count of unions listed,,BARISHAL_DC_PORTAL_2026,https://barishal.gov.bd/pages/static-pages/6978a32135ce18e1c0672269,page updated 2026-11-16
+upazila,Mehendiganj,Barishal,Mehendiganj,,union_count,16,count,count of unions listed,,BARISHAL_DC_PORTAL_2026,https://barishal.gov.bd/pages/static-pages/6978a32135ce18e1c0672269,page updated 2026-11-16
+upazila,Babuganj,Barishal,Babuganj,,union_count,6,count,count of unions listed,,BARISHAL_DC_PORTAL_2026,https://barishal.gov.bd/pages/static-pages/6978a32135ce18e1c0672269,page updated 2026-11-16
+upazila,Hizla,Barishal,Hizla,,union_count,6,count,count of unions listed,,BARISHAL_DC_PORTAL_2026,https://barishal.gov.bd/pages/static-pages/6978a32135ce18e1c0672269,page updated 2026-11-16
+upazila,Wazirpur,Barishal,Wazirpur,,union_count,9,count,count of unions listed,,BARISHAL_DC_PORTAL_2026,https://barishal.gov.bd/pages/static-pages/6978a32135ce18e1c0672269,page updated 2026-11-16
+upazila,Bakerganj,Barishal,Bakerganj,,union_count,14,count,count of unions listed,,BARISHAL_DC_PORTAL_2026,https://barishal.gov.bd/pages/static-pages/6978a32135ce18e1c0672269,page updated 2026-11-16
+upazila,Agailjhara,Barishal,Agailjhara,,union_count,5,count,count of unions listed,,BARISHAL_DC_PORTAL_2026,https://barishal.gov.bd/pages/static-pages/6978a32135ce18e1c0672269,page updated 2026-11-16
+upazila,Banaripara,Barishal,Banaripara,,union_count,8,count,count of unions listed,,BARISHAL_DC_PORTAL_2026,https://barishal.gov.bd/pages/static-pages/6978a32135ce18e1c0672269,page updated 2026-11-16
+district,Barishal,Barishal,,,union_count_listed,88,count,count of unions listed,,BARISHAL_DC_PORTAL_2026,https://barishal.gov.bd/pages/static-pages/6978a32135ce18e1c0672269,page updated 2026-11-16
+district,Barishal,Barishal,,,union_count,88,count,as stated,,BARISHAL_DC_PORTAL_2026,https://barishal.gov.bd/pages/static-pages/6978a32135ce18e1c0672269,printed '৮৮ টি ইউনিয়ন'; page updated 2026-11-16

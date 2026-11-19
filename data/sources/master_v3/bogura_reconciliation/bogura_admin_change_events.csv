@@ -1,0 +1,4 @@
+﻿date,event_type,scope,details,status,verification_note,source_id
+2026-05-07,NICAR approval,Mokamtala Upazila,Formed by dividing Shibganj,approved_by_NICAR,gazette reference required for legal boundary details,SRC-BOG-MOKAMTALA-2026
+2026-06-11/14,Gazette reported,Four new union parishads,"Mirbari (Shibganj), Simanta, Diganta, Swarnagram (Mokamtala)",gazetted_as_reported,Original Gazette PDF not retrieved in this run; exact effective date and boundaries need transcription,SRC-BOG-GAZETTE-2026-06
+2026-07-19/20,District-level resolution reported,Three proposed renames,Mirbari→Betgari; Simanta→Jagannathpur; Diganta→Rahbal,proposed_pending_ministry_and_gazette,Do not treat proposed names as final until official Gazette is found,SRC-BOG-RENAMING-2026-07

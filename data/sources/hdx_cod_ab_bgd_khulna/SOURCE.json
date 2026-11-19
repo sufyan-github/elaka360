@@ -1,0 +1,28 @@
+{
+  "key": "HDX_COD_AB_BGD_KHULNA",
+  "name": "Bangladesh - Subnational Administrative Boundaries (COD-AB v03), Khulna Division extract",
+  "organization": "OCHA (ROAP / FIS) on HDX; source: Bangladesh Bureau of Statistics (BBS)",
+  "source_type": "humanitarian_dataset",
+  "trust_level": 3,
+  "urls": [
+    "https://data.humdata.org/dataset/cod-ab-bgd",
+    "https://data.humdata.org/dataset/401d3fae-4262-48c9-891f-461fd776d49b/resource/cec2abe3-d8b7-4025-9362-9f7e780f2a07/download/bgd_admin_boundaries.geojson.zip",
+    "https://data.humdata.org/api/3/action/package_show?id=cod-ab-bgd"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": "2026-01-26",
+  "license": "CC-BY-IGO-3.0",
+  "license_url": "http://creativecommons.org/licenses/by/3.0/igo/legalcode",
+  "attribution": "Bangladesh Bureau of Statistics (BBS); OCHA ROAP; published by OCHA FIS / HDX (CC BY-IGO)",
+  "files": {
+    "areas.csv": "869e89790d6d81bdf41a21df740054c380ac16a5fbc86399baabb7928de1782c",
+    "boundaries.geojson": "9caf71f8f148c99fd351b3771ab02502fdcad7033334fc59d4858eca9a8d55ff",
+    "facts.csv": "af5d1f5dc1547c41b7cb4485fb06a7a2d442cfdddb704eb683b6dc8b643c50eb",
+    "crosswalk.csv": "18f4999e1a37a128bc72889e59c0812ab5f2e88ca60b49fbbd57be4908a9295e",
+    "raw/bgd_adminpoints_khulna.geojson": "550c3a9f61e6380a4a3f06bcc2757d74aa7dd749933a23ba289965fbb8156955",
+    "raw/hdx_cod_ab_bgd_package.json": "7c5aee071ef0b0f6b20c863e9af8a9025312a3a71e0d109b49c9f5a01512fd0d"
+  },
+  "notes": "COD-AB v03: ADM1-ADM3 polygons, valid_on 2023-05-21, reviewed 2025-06-01, HDX resource last modified 2026-01-26T15:14:12.782628. HDX dataset_date [2023-05-21T00:00:00 TO 2025-06-01T23:59:59]; 'boundaries created by the source 01 January 2010'. No ADM4 (union) polygons in v03; union/paurashava/ward codes come from the bgd_adminpoints layer (valid_on 2020-11-13, older P-code scheme BD+div+dist+upz+union, 2 digits each). Polygons simplified (Douglas-Peucker 0.0002 deg, 5 decimals) ring by ring, so shared borders can have slivers of a few metres.",
+  "division": "khulna",
+  "kind": "hdx_cod_ab"
+}

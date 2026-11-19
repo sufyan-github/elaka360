@@ -1,0 +1,2 @@
+entity_level,entity_name_en,district_en,upazila_en,code,fact,value,unit,basis,year,source_key,source_url,notes
+district,Sylhet,Sylhet,,,railway_stations,6,stations,reported,,DISTRICT_PORTALS_TRANSPORT_SYL_2026,https://sylhet.gov.bd/pages/static-pages/696cb362c4774958d7ba0691,Sylhet DC portal 'এক নজরে সিলেট জেলা': 'রেল স্টেশন ০৬ টি' (stations not named)

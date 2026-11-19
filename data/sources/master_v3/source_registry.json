@@ -1,0 +1,524 @@
+[
+  {
+    "source_id": "SRC-DIV-2026-RAJ",
+    "title": "Rajshahi Divisional Commissioner detailed district/upazila list",
+    "url": "https://rajshahidiv.gov.bd/",
+    "owner": "Rajshahi Divisional Commissioner",
+    "vintage": "Updated 2026-03-31 (per source page)",
+    "use": "Selected current district/upazila union-count baseline; division total 563",
+    "limitations": "Aggregate counts, not individual union names; conflicts with some local portals and other snapshots."
+  },
+  {
+    "source_id": "SRC-BBS-2011",
+    "title": "BBS Statistical Pocket Book Bangladesh 2016, Table 3.01",
+    "url": "https://bbs.portal.gov.bd/",
+    "owner": "Bangladesh Bureau of Statistics",
+    "vintage": "2011 administrative-unit data; publication March 2017",
+    "use": "Historical district union counts and district codes",
+    "limitations": "Historical snapshot; not a current administrative register. Sirajganj 82 vs selected 2026 baseline 83."
+  },
+  {
+    "source_id": "SRC-BCC-UNIONS",
+    "title": "BCC Connected Bangladesh – Unions directory",
+    "url": "https://connectedbangladesh.bcc.gov.bd/unions",
+    "owner": "Bangladesh Computer Council / ICT Division",
+    "vintage": "Indexed excerpt available in prior research",
+    "use": "Partial corroboration for Rajshahi district candidates",
+    "limitations": "Page returned 502 when opened; indexed excerpt is not exhaustive. Serial numbers are page sequence, not BBS geo-codes."
+  },
+  {
+    "source_id": "SRC-BDNEWS-RAJ-2026",
+    "title": "bdnews24 report on Rajshahi district union count",
+    "url": "https://bdnews24.com/",
+    "owner": "bdnews24",
+    "vintage": "2026-09-03",
+    "use": "Secondary evidence reporting 72 unions in Rajshahi district",
+    "limitations": "News report, not authoritative union register."
+  },
+  {
+    "source_id": "SRC-BOG-DIST-109-2024",
+    "title": "বগুড়া জেলার ১০৯ টি ইউনিয়নের তালিকা",
+    "owner": "Bogura District Administration",
+    "url": "https://bogura.gov.bd/pages/static-pages/697fbb3f35ce18e1c06cd351",
+    "vintage": "Updated 2024-08-20",
+    "claim": "Official portal page title states 109; indexed page exposes upazila and Bangla/English union-name columns.",
+    "limitations": "Full page could not be retrieved in this run; complete row extraction/count audit pending."
+  },
+  {
+    "source_id": "SRC-BOG-DIST-108",
+    "title": "বগুড়া জেলার ১০৮ টি ইউনিয়নের তালিকা",
+    "owner": "Bogura District Administration",
+    "url": "https://www.bogra.gov.bd/bn/site/page/rrJ8",
+    "vintage": "Not confirmed",
+    "claim": "A separate official district portal page title states 108.",
+    "limitations": "Conflicts with the other official portal page; complete row extraction/count audit pending."
+  },
+  {
+    "source_id": "SRC-BOG-UP-2025",
+    "title": "ইউপি চেয়ারম্যানগণের নাম ও মোবাইল নাম্বার",
+    "owner": "Bogura District Administration",
+    "url": "https://bogura.gov.bd/pages/static-pages/697f800f35ce18e1c06b660b",
+    "vintage": "Updated 2025-11-19",
+    "claim": "Operational UP directory associates upazila and union names.",
+    "limitations": "Personal contact details excluded; completeness and name spelling need review."
+  },
+  {
+    "source_id": "SRC-LGD-BOG-UPAZILA",
+    "title": "উপজেলা পরিষদের তালিকা",
+    "owner": "Local Government Division",
+    "url": "https://lgd.gov.bd/pages/static-pages/6941401ec4774958d7b54a3f",
+    "vintage": "Crawled 2026",
+    "claim": "Lists 12 Bogura upazilas.",
+    "limitations": "Upazila list only, not union register."
+  },
+  {
+    "source_id": "SRC-BBS-BOG-2011",
+    "title": "BBS Statistical Pocket Book 2016, Table 3.01",
+    "owner": "Bangladesh Bureau of Statistics",
+    "url": "https://bbs.portal.gov.bd/",
+    "vintage": "2011 data; published March 2017",
+    "claim": "Historical baseline: Bogra code 50-10; 12 upazila/thana; 108 unions.",
+    "limitations": "Historical snapshot, not current union register."
+  },
+  {
+    "source_id": "SRC-BOG-GAZETTE-2026-06",
+    "title": "Government Gazette: formation/reorganisation of new unions in Bogura",
+    "owner": "Bangladesh Government Press / Ministry of Local Government",
+    "url": "https://dpp.gov.bd/bgpress/index.php/document/get_extraordinary/62631",
+    "vintage": "Gazette issued 11/14 June 2026 (reported); original document retrieval pending",
+    "claim": "Government Gazette notification established four new unions in Shibganj and newly formed Mokamtala area: Mirbari, Simanta, Diganta and Swarnagram; five Shibganj and eight Mokamtala unions were reorganised.",
+    "limitations": "Search-indexed reports summarize the gazette; original gazette PDF was not retrievable in this run. Use official Gazette as final legal source once downloaded."
+  },
+  {
+    "source_id": "SRC-BOG-RENAMING-2026-07",
+    "title": "Bogura administration announces proposed replacement names for three unions",
+    "owner": "Bogura District Administration (reported by bdnews24/TBS)",
+    "url": "https://bdnews24.com/bangladesh/edfe04cc92e7",
+    "vintage": "2026-07-20; updated 2026-09-08",
+    "claim": "Proposed replacements: Mirbari→Betgari, Simanta→Jagannathpur, Diganta→Rahbal; proposal to be sent to ministry and gazetted after approval.",
+    "limitations": "Proposal/administrative resolution is not evidence of final ministerial approval or gazette publication. Do not overwrite legal names."
+  },
+  {
+    "source_id": "SRC-BOG-MOKAMTALA-2026",
+    "title": "NICAR approval of Mokamtala Upazila",
+    "owner": "Bangladesh Sangbad Sangstha (BSS)",
+    "url": "https://www.bssnews.net/news-flash/385117",
+    "vintage": "2026-05-07",
+    "claim": "NICAR approved formation of Mokamtala Upazila by dividing Shibganj Upazila.",
+    "limitations": "News report of NICAR decision; final administrative gazette remains authoritative."
+  },
+  {
+    "source_id": "SRC-BOG-UNIONLIST-109",
+    "title": "Bogura district 109-union list",
+    "owner": "Bogura District Administration",
+    "url": "https://bogra.gov.bd/pages/static-pages/697fbb3f35ce18e1c06cd351",
+    "vintage": "Updated 2024-08-20",
+    "claim": "Search-indexed page explicitly titled 109 unions and shows bilingual rows; indexed excerpt includes Bogura Sadar: Fapore, Shabgram, Nishindara, Erulia, Rajapur, Shakharia, Sekherkola, Gokul, Noongola, Lahiripara, Namuja; Gabtali begins Kagail, Sonarai, Rameshwarpur, Naruamala.",
+    "limitations": "Full page fetch timed out; only indexed excerpt is available. Excerpt has serial anomalies (8 repeated) and is not a complete 109-row extraction."
+  },
+  {
+    "source_id": "SRC-BOG-UNIONLIST-108-PAGE",
+    "title": "Bogura district 108-union list page",
+    "owner": "Bogura District Administration",
+    "url": "https://www.bogra.gov.bd/en/site/page/rrJ8",
+    "vintage": "Crawled 2025 (approx.)",
+    "claim": "The indexed English page URL slug says 108 but page content title/snippet says List of 109 Unions of Bogra District.",
+    "limitations": "Conflicting page slug/title/content labels; cannot be used as a verified 108 count."
+  },
+  {
+    "source_id": "SRC-JOY-DIST-2024",
+    "title": "উপজেলা ও ইউনিয়ন — জয়পুরহাট জেলা",
+    "owner": "Joypurhat District Administration",
+    "url": "https://joypurhat.gov.bd/pages/static-pages/697f804135ce18e1c06b7c38",
+    "vintage": "Updated 2024-07-09 10:10 AM",
+    "claim": "Lists 5 upazilas and 32 unions with Bangla names; upazila grouping: Joypurhat Sadar 9, Panchbibi 8, Kalai 5, Akkelpur 5, Khetlal 5.",
+    "limitations": "Official district portal list is 2024 vintage; reconfirm current legal status before production."
+  },
+  {
+    "source_id": "SRC-JOY-BBS-2011",
+    "title": "Community Report: Joypurhat Zila — Upazila and Union/Ward with Geo-code 2011",
+    "owner": "Bangladesh Bureau of Statistics",
+    "url": "https://file-rajshahi.portal.gov.bd/files/bbs.khetlal.joypurhat.gov.bd/sps_data/24adcc6d_cba8_4cf8_bb60_7d8bbd329e87/5007c6fe484d55292a450f7382df43ab.pdf",
+    "vintage": "2011 administrative geocode snapshot",
+    "claim": "Lists union names and historical union geocode components for all five Joypurhat upazilas; aggregate count 32.",
+    "limitations": "Historical 2011 code snapshot; codes should not be assumed current without a newer BBS geocode register."
+  },
+  {
+    "source_id": "SRC-JOY-ATLAS-2026",
+    "title": "Joypurhat District: Upazilas, Unions, Population — Upazila Atlas",
+    "owner": "The Daily Sangbad / Upazila Atlas",
+    "url": "https://thedailysangbad.com/districts/joypurhat",
+    "vintage": "Crawled 2026",
+    "claim": "Lists 34 unions; Joypurhat Sadar 9, Panchbibi 8, Kalai 6, Akkelpur 5, Khetlal 6.",
+    "limitations": "Secondary derived dataset; conflicts with official district portal and BBS 2011 (32); not used to overwrite official list."
+  },
+  {
+    "source_id": "SRC-JOY-PORTAL-MIRROR",
+    "title": "উপজেলা ও ইউনিয়ন",
+    "owner": "Joypurhat District Administration (alternate domain)",
+    "url": "https://www.joypurhat.gov.bd/bn/site/page/SuKw-%E0%A6%89%E0%A6%AA%E0%A6%9C%E0%A7%87%E0%A6%B2%E0%A6%BE-%E0%A6%93-%E0%A6%87%E0%A6%89%E0%A6%A8%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%A8",
+    "vintage": "Crawled 2026; same content as district page",
+    "claim": "Mirrors district union list and 32-union administrative heading.",
+    "limitations": "May be duplicate publication of same source, not independent confirmation."
+  },
+  {
+    "source_id": "SRC-NAO-DIST-2018",
+    "title": "নওগাঁ জেলাধীন ইউনিয়ন পরিষদের নামের তালিকা",
+    "owner": "Naogaon District Administration",
+    "url": "https://naogaon.gov.bd/pages/static-pages/697f893c35ce18e1c06b8f47",
+    "vintage": "Updated 2018-08-19",
+    "claim": "Official district portal lists union names grouped by all 11 upazilas; indexed excerpt provides Bangla names through Manda.",
+    "limitations": "Old 2018 vintage; page returned 502 when opened. Full content is only partially visible in search index."
+  },
+  {
+    "source_id": "SRC-NAO-ATLAS-2024",
+    "title": "List of Union Parishads in Naogaon District",
+    "owner": "Naogaon.site",
+    "url": "https://naogaon.site/list-of-union-parishads-in-naogaon-district-2",
+    "vintage": "Published 2024-06-11",
+    "claim": "Complete English list of 99 union parishads grouped across 11 upazilas, with upazila-wise counts.",
+    "limitations": "Secondary local information site, not government authority; used as full transcription scaffold and must be checked against official portal rows."
+  },
+  {
+    "source_id": "SRC-BBS-NAO-2011",
+    "title": "Population & Housing Census 2011, National Report Volume-02: Union Statistics",
+    "owner": "Bangladesh Bureau of Statistics",
+    "url": "https://file-dhaka.portal.gov.bd/uploads/fdd40cb4-abcc-4242-8f92-049814cfb1ae/62f/ddf/380/62fddf380c36b606372449.pdf",
+    "vintage": "2011 census/geocode snapshot",
+    "claim": "Naogaon district code 64 and historical upazila/union codes and names; indexed excerpt includes Niamatpur and other Naogaon unions.",
+    "limitations": "Historical 2011 dataset; not necessarily current legal boundary/code registry."
+  },
+  {
+    "source_id": "SRC-NAO-UPAZILA-2025",
+    "title": "নওগাঁ জেলার উপজেলা পরিষদসমূহ",
+    "owner": "Naogaon District Administration",
+    "url": "https://www.naogaon.gov.bd/bn/site/page/kw38-%E0%A6%89%E0%A6%AA%E0%A6%9C%E0%A7%87%E0%A6%B2%E0%A6%BE-%E0%A6%AA%E0%A6%B0%E0%A6%BF%E0%A6%B7%E0%A6%A6",
+    "vintage": "Published/crawled 2025",
+    "claim": "Official district portal lists 11 upazilas.",
+    "limitations": "Confirms upazila count, not union-level names/counts."
+  },
+  {
+    "source_id": "SRC-NAO-ATLAS-COUNTS",
+    "title": "Naogaon District: upazilas, unions, population — Upazila Atlas",
+    "owner": "The Daily Sangbad",
+    "url": "https://thedailysangbad.com/districts/naogaon",
+    "vintage": "Crawled 2026",
+    "claim": "Lists 11 upazilas and counts totaling 99 unions; counts: Sadar 13, Manda 14, Mohadevpur 10, Niamatpur 8, Patnitala 11, Badalgachhi 9, Atrai 8, Dhamoirhat 8, Raninagar 8, Sapahar 6, Porsha 6.",
+    "limitations": "Secondary data; conflicts with 2018 district official list and 2024 list for some upazila counts; total still 99."
+  },
+  {
+    "source_id": "SRC-NAT-DIST-UP-2025",
+    "title": "উপজেলা ও ইউনিয়ন — নাটোর জেলা",
+    "owner": "Natore District Administration",
+    "url": "https://www.natore.gov.bd/bn/site/page/M6RA-%E0%A6%89%E0%A6%AA%E0%A6%9C%E0%A7%87%E0%A6%B2%E0%A6%BE-%E0%A6%93-%E0%A6%87%E0%A6%89%E0%A6%A8%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%A8",
+    "vintage": "Updated 2025-07-28",
+    "claim": "Lists 7 current upazilas and union names; visible sections include Natore Sadar, Singra, Baraigram, Lalpur, Bagatipara, Naldanga; district total is 52.",
+    "limitations": "Page fetch timed out; search-index excerpt was partial. Current upazila grouping reconciled using the visible page and official district aggregate."
+  },
+  {
+    "source_id": "SRC-NAT-GLANCE-2026",
+    "title": "এক নজরে নাটোর",
+    "owner": "Natore District Administration",
+    "url": "https://natore.gov.bd/pages/static-pages/697fbb1d35ce18e1c06cc346",
+    "vintage": "Crawled 2026",
+    "claim": "Official district portal says 52 unions with distribution: Natore Sadar 7, Singra 12, Gurudaspur 6, Baraigram 7, Lalpur 10, Bagatipara 5, Naldanga 5.",
+    "limitations": "Aggregate counts only; does not provide full individual names."
+  },
+  {
+    "source_id": "SRC-NAT-BBS-2011",
+    "title": "District Statistics 2011 — Natore District, Upazila and Union/Ward with Geo-code",
+    "owner": "Bangladesh Bureau of Statistics",
+    "url": "https://file-rajshahi.portal.gov.bd/files/www.natore.gov.bd/files/b18a29f2_3bea_4cb4_90ca_b005fa637413/22c4c121e9780357ed2671fe503280ee.pdf",
+    "vintage": "Published December 2013; administrative data 2011",
+    "claim": "Provides union names and 2011 geo-code components; 52 unions across six then-existing upazilas.",
+    "limitations": "Historical codes and historical grouping; current Naldanga upazila split must be crosswalked. Not a current code registry."
+  },
+  {
+    "source_id": "SRC-NAT-BBS-STAT-2026",
+    "title": "এক নজরে — জেলা পরিসংখ্যান অফিস, নাটোর",
+    "owner": "Bangladesh Bureau of Statistics, District Statistics Office Natore",
+    "url": "https://bbs.natore.gov.bd/pages/static-pages/697fdcd135ce18e1c06d8192",
+    "vintage": "Crawled 2026",
+    "claim": "Reports seven upazilas and 52 unions.",
+    "limitations": "Aggregate confirmation; no individual names in indexed excerpt."
+  },
+  {
+    "source_id": "SRC-NAT-ATLAS-2026",
+    "title": "Natore District: upazilas, unions, population — Upazila Atlas",
+    "owner": "The Daily Sangbad",
+    "url": "https://thedailysangbad.com/districts/natore",
+    "vintage": "Crawled 2026",
+    "claim": "Reports 52 total but differing distribution: Singra 13, Lalpur 11, Gurudaspur 7, Bagatipara 6; Natore Sadar 7, Baraigram 7, Naldanga 5.",
+    "limitations": "Secondary dataset; counts conflict with official district administration aggregate distribution."
+  },
+  {
+    "source_id": "SRC-CNB-DIST-2026",
+    "title": "এক নজরে চাঁপাইনবাবগঞ্জ / ইউনিয়নের তালিকা",
+    "url": "https://chapainawabganj.gov.bd/pages/static-pages/697fb33635ce18e1c06b4c52",
+    "owner": "Chapainawabganj District Administration",
+    "vintage": "Indexed 2026-04-28",
+    "use": "Five upazilas and 45-union aggregate",
+    "limitations": "Union list page indexed but full row contents not retrievable."
+  },
+  {
+    "source_id": "SRC-CNB-BBS-PHC2022",
+    "title": "Population and Housing Census 2022 Community Report: Chapainawabganj",
+    "url": "https://nsds.bbs.gov.bd/storage/files/1/Publications/PHC_2021%20Community%20Report/RAJSHAHI%20DIVISION/Community%20Report%20chapainawabganj.pdf",
+    "owner": "Bangladesh Bureau of Statistics",
+    "vintage": "2022 census; indexed 2026",
+    "use": "Visible union name and geocode components",
+    "limitations": "Direct PDF open timed out; indexed excerpt only; not certified current IDs."
+  },
+  {
+    "source_id": "SRC-CNB-DGHS",
+    "title": "DGHS Facility Registry – Chapainawabganj union health facilities",
+    "url": "https://hrm.dghs.gov.bd/public/facility-registry/reports/organization-list",
+    "owner": "DGHS, Ministry of Health and Family Welfare",
+    "vintage": "Crawled 2026-11",
+    "use": "Corroborates subset of union names and upazila associations",
+    "limitations": "Facility coverage incomplete; indirect evidence, not administrative master list."
+  },
+  {
+    "source_id": "SRC-CNB-ELECTION",
+    "title": "এক নজরে – জেলা নির্বাচন অফিস, চাঁপাইনবাবগঞ্জ",
+    "url": "https://ec.chapainawabganj.gov.bd/pages/static-pages/697fa61c35ce18e1c06c670d",
+    "owner": "District Election Office, Chapainawabganj",
+    "vintage": "Indexed 2026",
+    "use": "45 union and 4 municipality aggregate",
+    "limitations": "Full union schedule attachment not extracted."
+  },
+  {
+    "source_id": "SRC-CNB-LSP",
+    "title": "Upazila wise No. of Union and Allocation of Livestock Service Provider Position",
+    "url": "https://file-rajshahi.portal.gov.bd/files/dls.joypurhat.gov.bd/notices/67309cc1_f5d5_4da2_b17a_6280079c1c74/928cd97e661ff6985a8ed9d9fe643d3a.pdf",
+    "owner": "Department of Livestock Services",
+    "vintage": "Indexed PDF 2019",
+    "use": "Upazila-wise distribution 14/15/8/4/4; total 45",
+    "limitations": "Service allocation table, not legal union register."
+  },
+  {
+    "source_id": "SRC-CNB-ATLAS",
+    "title": "Chapai Nawabganj District – Upazila and union counts",
+    "url": "https://thedailysangbad.com/districts/chapai-nawabganj",
+    "owner": "The Daily Sangbad",
+    "vintage": "Crawled 2026-11",
+    "use": "Secondary comparison; reports 46 unions and Gomastapur 9",
+    "limitations": "Conflicts with official 45 aggregate; not authoritative."
+  },
+  {
+    "source_id": "SRC-PABNA-BBS-PHC2022",
+    "title": "Population and Housing Census 2022, Community Report: Pabna",
+    "url": "https://nsds.bbs.gov.bd/storage/files/1/Publications/PHC_2021%20Community%20Report/RAJSHAHI%20DIVISION/Community%20Report%20Pabna.pdf",
+    "owner": "Bangladesh Bureau of Statistics",
+    "vintage": "2022 census; indexed 2026",
+    "use": "Reports 9 upazilas, 74 unions, 9 paurashavas; comparison column shows 2011 union count 73",
+    "limitations": "Aggregate counts only in retrieved excerpt; complete union schedule not extracted."
+  },
+  {
+    "source_id": "SRC-PABNA-LGD-2026",
+    "title": "উপজেলা পরিষদের তালিকা",
+    "url": "https://lgd.gov.bd/pages/static-pages/6941401ec4774958d7b54a3f",
+    "owner": "Local Government Division",
+    "vintage": "Current page crawled 2026-11",
+    "use": "Authoritative list of nine Pabna upazilas: Sujanagar, Ishwardi, Bhangura, Pabna Sadar, Bera, Atghoria, Chatmohar, Santhia, Faridpur",
+    "limitations": "Does not provide union names or counts."
+  },
+  {
+    "source_id": "SRC-PABNA-DIST-2023",
+    "title": "এক নজরে পাবনা",
+    "url": "https://pabna.gov.bd/pages/static-pages/697fbb1e35ce18e1c06cc3cd",
+    "owner": "Pabna District Administration",
+    "vintage": "Updated 2023-07-27",
+    "use": "District official overview and electoral/upazila context",
+    "limitations": "Page fetch returned 502; no union list extracted."
+  },
+  {
+    "source_id": "SRC-PABNA-AMARGRAM",
+    "title": "পাবনা জেলা — উপজেলার তালিকা ও তথ্য",
+    "url": "https://amargram.org/districts/pabna",
+    "owner": "Amargram Smart Platform",
+    "vintage": "Crawled 2026-11",
+    "use": "Secondary current claim of 73 unions and upazila distribution 5/9/5/11/6/7/10/10/10",
+    "limitations": "Not government authority; count conflicts with BBS 2022 aggregate."
+  },
+  {
+    "source_id": "SRC-PABNA-BBS2011",
+    "title": "Population & Housing Census 2011 / Statistical Yearbook 2021 table 2.02",
+    "url": "https://bbs.gov.bd/pages/static-pages/6922dc4e933eb65569e0f9dc",
+    "owner": "Bangladesh Bureau of Statistics",
+    "vintage": "2011 census",
+    "use": "Historical district total 73 unions, 9 upazilas, 9 municipalities",
+    "limitations": "Historical snapshot only; not current administrative count."
+  },
+  {
+    "source_id": "SRC-PABNA-BBS1983",
+    "title": "Pabna District Statistics 1983 — Area, Number of Unions and Mouzas by Upazila",
+    "url": "https://file-rajshahi.portal.gov.bd/media/831c1432-2615-404b-a94a-5be4e64a7f69/uploaded-files/pabna-pourashava-1988-1.pdf",
+    "owner": "Bangladesh Bureau of Statistics (reproduced in government portal)",
+    "vintage": "1983 historical table",
+    "use": "Historical per-upazila counts: Atghoria 5, Bera 8, Chatmohar 11, Faridpur 8, Ishwardi 8, Pabna 10, Santhia 11, Sujanagar 10; total 71",
+    "limitations": "Historical, excludes later administrative changes; cannot be treated as current."
+  },
+  {
+    "source_id": "SRC-PABNA-EC-2025",
+    "title": "Pabna district draft voter list / constituency reference page",
+    "url": "https://www.pabna.gov.bd/bn/site/page/পাবনা-জেলার-খসড়া-ভোটার-তালিকা",
+    "owner": "Pabna District Administration / Election Office",
+    "vintage": "Updated 2025-07-24",
+    "use": "Contains upazila-wise voter-list attachments for all nine upazilas",
+    "limitations": "Attachments are voter lists, not a complete union administrative register."
+  },
+  {
+    "source_id": "SRC-PABNA-LGED",
+    "title": "List of Upazila",
+    "url": "https://oldweb.lged.gov.bd/uploadeddocument/List_of_Upazila.pdf",
+    "owner": "Local Government Engineering Department",
+    "vintage": "Indexed 2025",
+    "use": "Cross-checks nine Pabna upazilas and English spellings",
+    "limitations": "Upazila-only list; no union register."
+  },
+  {
+    "source_id": "SRC-SIR-DIST-2026",
+    "title": "এক নজরে সিরাজগঞ্জ জেলা",
+    "url": "https://sirajganj.gov.bd/pages/static-pages/697fba9c35ce18e1c06c4b1a",
+    "owner": "Sirajganj District Administration",
+    "vintage": "Current portal indexed 2026",
+    "use": "District administrative overview; current union count target 83 and nine upazilas",
+    "limitations": "Full upazila-wise union name list not retrieved in this run."
+  },
+  {
+    "source_id": "SRC-SIR-BBS2011",
+    "title": "Statistical Pocket Book Bangladesh 2016, Table 3.01",
+    "url": "https://bbs.gov.bd/site/page/6a40a397-2c5e-4e3f-8e8d-1c7c9f0b7f4b/Statistical-Pocketbook",
+    "owner": "Bangladesh Bureau of Statistics",
+    "vintage": "2011 administrative statistics, published 2016",
+    "use": "Historical district total 82 unions; historical district/upazila reference",
+    "limitations": "Historical count; not current master."
+  },
+  {
+    "source_id": "SRC-SIR-EC",
+    "title": "District Election Office, Sirajganj — constituency and local government information",
+    "url": "https://ec.sirajganj.gov.bd/",
+    "owner": "Bangladesh Election Commission",
+    "vintage": "Current portal indexed 2026",
+    "use": "Potential authoritative source for union/ward electoral mapping",
+    "limitations": "No full union schedule extracted."
+  },
+  {
+    "source_id": "SRC-SIR-LGD",
+    "title": "Local Government Division — Upazila Parishad list",
+    "url": "https://lgd.gov.bd/pages/static-pages/6941401ec4774958d7b54a3f",
+    "owner": "Local Government Division",
+    "vintage": "Current page crawled 2026-11",
+    "use": "Confirms nine Sirajganj upazilas: Belkuchi, Chauhali, Kamarkhanda, Kazipur, Raiganj, Shahjadpur, Sirajganj Sadar, Tarash, Ullapara",
+    "limitations": "Does not provide union names/counts."
+  },
+  {
+    "source_id": "SRC-SIR-BBSREPORT",
+    "title": "Sirajganj District Statistics / Community Report",
+    "url": "https://nsds.bbs.gov.bd/",
+    "owner": "Bangladesh Bureau of Statistics",
+    "vintage": "2011/2022 census publications",
+    "use": "Historical geocode and count verification target",
+    "limitations": "Full row-level report not extracted in this release."
+  },
+  {
+    "source_id": "SRC-RAJ-DIST-2026",
+    "title": "রাজশাহী জেলা — উপজেলা ও ইউনিয়ন পরিষদ",
+    "url": "https://rajshahi.gov.bd/pages/static-pages/697fba6f35ce18e1c06c4b1e",
+    "owner": "Rajshahi District Administration / Divisional Commissioner",
+    "vintage": "2026-03-31 detailed portal update",
+    "use": "Selected current division-level baseline: 9 upazilas and 71 unions; Bagha 6, Bagmara 16, Charghat 6, Durgapur 7, Godagari 9, Mohanpur 6, Paba 8, Puthia 6, Tanore 7",
+    "limitations": "Need current individual union names and legal notices to reconcile local portal count claims."
+  },
+  {
+    "source_id": "SRC-RAJ-BBS2011",
+    "title": "BBS Statistical Pocket Book 2016, Table 3.01",
+    "url": "https://bbs.gov.bd/site/page/6a40a397-2c5e-4e3f-8e8d-1c7c9f0b7f4b/Statistical-Pocketbook",
+    "owner": "Bangladesh Bureau of Statistics",
+    "vintage": "2011 data published 2016",
+    "use": "Historical total 71 unions and district/upazila counts; historical geocode crosswalk context",
+    "limitations": "2011 snapshot, not current administrative master."
+  },
+  {
+    "source_id": "SRC-RAJ-BAGHA",
+    "title": "বাঘা উপজেলা — ইউনিয়ন পরিষদ",
+    "url": "https://bagha.rajshahi.gov.bd/",
+    "owner": "Bagha Upazila Administration",
+    "vintage": "Indexed 2026",
+    "use": "Local portal/search snippets report seven unions",
+    "limitations": "Conflicts with detailed Divisional Commissioner page count of six; no gazette retrieved."
+  },
+  {
+    "source_id": "SRC-RAJ-BCC",
+    "title": "Connected Bangladesh — Rajshahi Union Parishad list",
+    "url": "https://connected.gov.bd/union-list",
+    "owner": "Bangladesh Computer Council / Connected Bangladesh",
+    "vintage": "Indexed 2026",
+    "use": "Partial indexed union names for Bagha Chakrajapur and Bagmara unions",
+    "limitations": "Only 13 rows surfaced in partial indexed excerpt; page fetch returned 502; incomplete and not a total-count authority."
+  },
+  {
+    "source_id": "SRC-RAJ-LOCALNEWS",
+    "title": "Rajshahi district union count reports",
+    "url": "https://www.google.com/search?q=Rajshahi+district+72+unions+Bagha+7",
+    "owner": "Local news and portal reports",
+    "vintage": "2026 search-indexed",
+    "use": "Tracks claims of 72 district unions and 7 Bagha unions",
+    "limitations": "Search aggregation/secondary reports only; not a primary source."
+  },
+  {
+    "source_id": "SRC-BOG-DIST-2024",
+    "title": "বগুড়া জেলার ইউনিয়ন পরিষদের তালিকা",
+    "url": "https://bogura.gov.bd/",
+    "owner": "Bogura District Administration",
+    "vintage": "Official portal page variants updated 2024",
+    "use": "One official page claims 108 unions, another 109; 12-upazila baseline",
+    "limitations": "Contradictory official page title/count; not resolved at row level."
+  },
+  {
+    "source_id": "SRC-BOG-BBS2011",
+    "title": "BBS Statistical Pocket Book 2016 / District Statistics Bogura",
+    "url": "https://bbs.gov.bd/",
+    "owner": "Bangladesh Bureau of Statistics",
+    "vintage": "2011 administrative snapshot",
+    "use": "Historical 108 union count and district code context",
+    "limitations": "Historical snapshot predates 2026 reported restructuring."
+  },
+  {
+    "source_id": "SRC-BOG-NICAR",
+    "title": "Mokamtala Upazila formation approved by NICAR",
+    "url": "https://www.google.com/search?q=Mokamtala+Upazila+NICAR+May+2026+Bogura",
+    "owner": "NICAR / Government of Bangladesh (reported)",
+    "vintage": "May 2026 reports",
+    "use": "Tracks reported approval of Mokamtala as a new upazila",
+    "limitations": "Original NICAR decision minutes/order and effective gazette not attached."
+  },
+  {
+    "source_id": "SRC-BOG-GAZETTE",
+    "title": "Four new union formations in Bogura district (reported gazette)",
+    "url": "https://www.google.com/search?q=Bogura+Mirbari+Simanta+Diganta+Swarnagram+gazette+June+2026",
+    "owner": "Government of Bangladesh (reported)",
+    "vintage": "June 2026 reports",
+    "use": "Candidate names Mirbari, Simanta, Diganta, Swarnagram and reported upazila assignments",
+    "limitations": "Original Gazette PDF not retrieved; candidate list cannot be treated as legal evidence."
+  },
+  {
+    "source_id": "SRC-BOG-RENAME",
+    "title": "Proposed renaming of new Bogura unions",
+    "url": "https://www.google.com/search?q=Mirbari+Betgari+Simanta+Jagannathpur+Diganta+Rahbal+Bogura+July+2026",
+    "owner": "Local reporting on government proposal",
+    "vintage": "July 2026 reports",
+    "use": "Proposed aliases Betgari, Jagannathpur, Rahbal",
+    "limitations": "Proposal reported; ministry approval/final gazette not verified."
+  },
+  {
+    "source_id": "SRC-BOG-LGD",
+    "title": "Local Government Division upazila list",
+    "url": "https://lgd.gov.bd/pages/static-pages/6941401ec4774958d7b54a3f",
+    "owner": "Local Government Division",
+    "vintage": "Current list indexed 2026",
+    "use": "Baseline 12 upazilas before Mokamtala change is resolved",
+    "limitations": "Does not itself provide union-wise transition schedule."
+  }
+]

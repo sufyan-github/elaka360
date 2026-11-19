@@ -1,0 +1,26 @@
+{
+  "key": "FSCD_STATIONS_RANG_2026",
+  "division": "rangpur",
+  "kind": "fscd",
+  "name": "Fire Service & Civil Defence — Rangpur Division station & office numbers",
+  "organization": "Fire Service and Civil Defence Directorate (FSCD), Bangladesh",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-fireservice/2026/7/7281f870-7b02-4bd0-b833-ce61b47b21b2.pdf",
+    "https://fireservice.gov.bd/pages/static-pages/6922e013933eb65569e25586",
+    "https://fireservice.gov.bd/pages/static-pages/6922e0b9933eb65569e28555"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": "2026-08-11",
+  "license": null,
+  "license_url": null,
+  "attribution": "Fire Service and Civil Defence Directorate, Bangladesh (fireservice.gov.bd)",
+  "notes": "No licence stated on fireservice.gov.bd. publication_date = creation date in the PDF metadata. Station names were transcribed from the rendered PDF because its text layer has broken Bangla glyph mapping; phone numbers come from the text layer. No addresses or coordinates are published.",
+  "files": {
+    "places.csv": "7fd9be765034260c504b344880502bdfeeb31ca26495f2c085dc9919ceed58f2",
+    "facts.csv": "3109070780ef5b97f852557d7d23267f3308358cdf09a35c63ad409b94b3f6cc",
+    "raw/fscd_rangpur_division_numbers.pdf": "751176b8a882f2fe466a9c38ca5ee1db353071e1aad5740180b8706937eded2e"
+  }
+}

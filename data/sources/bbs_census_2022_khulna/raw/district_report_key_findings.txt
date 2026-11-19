@@ -1,0 +1,815 @@
+=== Khulna | https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/73dc1df3-c4f0-4a61-bbb2-036d0906f853.pdf
+## PDF page 25
+    01    Administrative Units
+         City Corporation                                       1                             1                         1                         1
+         Upazila                                                9                             9                         9                         9
+         Metro Thana                                            5                             5                         5                         5
+         Paurashava                                            2                              2                         1                         -
+         City Ward                                            26                             31                        31                        31
+         Paura Ward                                           18                             18                         9
+         Union                                                69                             70                        70                       65
+         Mauza1                                              771                            716                       759                      747
+         Village                                            1131                           1122                      1119                     1072
+         Mahalla2                                            184                            200                       181                      177
+    02    Area (In Sq. km)
+         Khulna                                          4394.45                        4394.45                   4394.46                  4394.46
+                                                                    Enumerated
+    03    Population
+         Khulna                                          2613385                       2318527                    2378971                  2010643
+         Male                                            1312166                       1175686                    1244226                  1054633
+         Female                                          1301032                       1142841                    1134745                   956010
+         Hijra3                                               187                              -                          -                           -
+                                                                           Rural
+         Total                                           1546339                       1540939                    1094763                  1003388
+         Male                                             773564                        772831                     562769                   511631
+         Female                                           772703                        768108                     531994                   491757
+         Hijra                                                 72                              -                          -                           -
+                                                                          Urban4
+         Total                                           1067046                        777588                    1284208                  1007255
+         Male                                             538602                        402855                     681457                   543002
+         Female                                           528329                        374733                     602751                   464253
+         Hijra                                                115                              -                          -                           -
+    04    Urban Population4(%)
+          Khulna                                            40.83                         33.54                      53.98                    50.10
+    05    Slum Population
+         Total                                             66406                               -                    38873                             -
+         Male                                              32918                               -                    20071                             -
+         Female                                            33458                               -                    18802                             -
+         Hijra                                                 30                              -                          -                           -
+                                           
+* Dash (Ͳ) denotes Not Available.
+ϭ Only populated Mauzas were shown in 2011, but in 1991 and 2001, depopulated and Paurashava (Municipality) Area (PSA) Mauzas were also included in
+    the census. In 2022 populated and depopulated Mauzas were included in the census.
+Ϯ  Mahalla is the part of Mauza in the urban areas, which is similar to the village in the rural areas. 
+ϯ
+   Hijra population is enumerated separately in the Population and Housing Census 2022.
+ϰ City Corporation, Cantonment, Paurashava, Growth Centre, and Upazila Headquarters (not declared as Paurashava) are considered as Urban Area in
+     2022. Only City Corporation and Paurashava were considered as Urban Area in 2011. The Statistical Metropolitan Area (SMA), Paurashava, and Growth
+                                                                         
+     Centre were considered as Urban Area in 1991Ͳ2001 censuses.
+                                                                          Population and Housing Census 2022, District Report: Khulna          xiii
+## PDF page 26
+                                                                              Population and                 Bangladesh                 Bangladesh
+                                              Population and
+    Sl             Key Indicators                                                Housing                  Population Census          Population Census
+                                            Housing Census 2022
+                                                                               Census 2011                      2001                       1991
+    06     Floating Population5
+          Khulna                                                 309                            1658                        2601                     18733
+          Rural                                                   12                             333                        2493                      7831
+          Urban                                                  297                            1325                         108                     10902
+    07     Ethnic Population
+          Total                                                 3260                            2054                        359
+          Male                                                  1709                            1022                        183                          -
+          Female                                                1551                            1032                        176                          -
+    08     Population by Upazila
+          Khulna City Corporation                            719557                          663342                      770498                    663340
+          Batiaghata                                         233041                          171691                      140574                    128184
+          Dacope                                             159369                          152316                      157489                    143131
+          Dighalia                                           167025                          115585                      120782                    107840
+          Dumuria                                            343899                          305675                      279862                    256503
+          Koyra                                              220102                          193931                      192534                    165473
+          Paikgachha                                         286209                          247983                      248112                    225085
+          Phultala                                           148510                           83881                       76981                      67930
+          Rupsa                                              206748                          179519                      167604                    150185
+          Terokhada                                          128925                          116709                      110628                    102972
+    09     Population by Religion
+          Muslim                                            2055902                         1776749                     1821119                   1477802
+          Hindu                                              542417                          525727                      540693                    517684
+          Christian                                           14038                           15239                       15818                      13516
+          Buddhist                                               367                              97                         289                       365
+          Others                                                 661                             715                        1052                      1276
+    10     Average Annual Growth Rate
+          Khulna                                                1.06                           - 0.25                      1.70                      1.28
+    11     Population Density (Per Square Kilometer)
+          Khulna                                              594.70                             528                        541                      458
+    12     Sex Ratio
+=== Bagerhat | https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/4045a5ce-6445-4cb5-8c70-4c9e4f5f4084.pdf
+## PDF page 25
+    01    Administrative Units
+         Upazila                                              9                             9                            9                             9
+         Paurashava                                           3                             3                            3                             2
+          Paura Ward                                         27                            27                           27                             6
+          Union                                              77                            75                           75                        75
+          Mauza1                                            722                           703                          720                       687
+          Village                                          1076                          1048                         1031                     1026
+          Mahalla2                                           58                            56                           56                        30
+    02    Area (In Sq. km)
+          Bagerhat                                      3959.11                      3959.11                       3959.11                  3959.11
+                                                                    Enumerated
+    03    Population
+          Bagerhat                                     1613076                       1476090                      1549031                  1431332
+          Male                                          802314                        740138                       804143                    732710
+          Female                                        810691                        735952                       744888                    698622
+         Hijra3                                              71                              -                            -                            -
+                                                                           Rural
+          Total                                        1227890                       1280759                      1342477                  1241917
+          Male                                          611466                        640761                       694694                    629933
+          Female                                        616379                        639998                       647783                    611984
+          Hijra                                              45                              -                            -                            -
+                                                                          Urban4
+          Total                                         385186                        195331                       206554                    189415
+          Male                                          190848                         99337                       109449                    102777
+          Female                                        194312                         95954                         97105                    86638
+          Hijra                                              26                              -                            -                            -
+    04    Urban Population4 (%)
+          Bagerhat                                        23.88                         13.23                        13.33                    13.23
+    05    Slum Population
+          Total                                            9763                              -                        5461                             -
+          Male                                             4724                              -                        2849                             -
+          Female                                           5038                              -                        2612                             -
+          Hijra                                               1                              -                            -                            -
+                                           
+* Dash (Ͳ) denotes Not Available.
+ϭ
+  Only populated Mauzas were shown in 2011, but in 1991 and 2001, depopulated and Paurashava (Municipality) Area (PSA) Mauzas were also included in
+    the census. In 2022 populated and depopulated Mauzas were included in the census.
+Ϯ
+   Mahalla is the part of Mauza in the urban areas, which is similar to the village in the rural areas. 
+ϯ
+   Hijra population is enumerated separately in the Population and Housing Census 2022.
+ϰ
+     City Corporation, Cantonment, Paurashava, Growth Centre, and Upazila Headquarters (not declared as Paurashava) are considered as Urban Area in
+     2022. Only City Corporation and Paurashava were considered as Urban Area in 2011. The Statistical Metropolitan Area (SMA), Paurashava, and Growth
+     Centre were considered as Urban Area in 1991Ͳ2001 censuses.
+                                                                       Population and Housing Census 2022, District Report: Bagerhat            xiii
+## PDF page 26
+                                                                            Population and                                               Bangladesh
+                                            Population and                                            Bangladesh Population
+    Sl             Key Indicators                                              Housing                                                Population Census
+                                          Housing Census 2022                                             Census 2001
+                                                                             Census 2011                                                    1991
+    06     Floating Population5
+           Bagerhat                                                                          4420                           2150                     10572
+                                                               187
+           Rural                                                                             2229                           1677                       6390
+                                                                97
+           Urban                                                                             2191                            473                       4182
+                                                                90
+    07     Ethnic Population
+           Total                                              1046                           3327                            163                       9913
+           Male                                                568                           1677                              81                          -
+           Female                                              478                           1650                              82                          -
+    08     Population by Upazila
+           Bagerhat Sadar                                  288673                          266389                        257273                     235848
+           Chitalmari                                      153033                          138810                        139862                     127524
+           Fakirhat                                        159019                          137789                        134418                     123956
+           Kachua                                          107423                           97011                        100093                      93249
+           Mollahat                                        144615                          130878                        126218                     116729
+           Mongla                                          158470                          136588                        149830                     137947
+           Morelganj                                       304865                          294576                        349551                     321153
+           Rampal                                          176058                          154965                        178503                     167070
+           Sharankhola                                     120920                          119084                         114083                    107856
+    09     Population by Religion
+           Muslim                                         1342836                        1198593                        1237862                    1108673
+           Hindu                                           264229                          270874                        304427                     315720
+           Christian                                          5890                           6115                           6261                       6023
+           Buddhist                                             81                              43                             54                       234
+          Others                                                40                            465                            427                        682
+    10     Average Annual Growth Rate
+          Bagerhat                                            0.79                           -0.47                           0.79                      1.75
+    11     Population Density (Per Square Kilometer)
+          Bagerhat                                             407                            373                            391                        362
+    12     Sex Ratio
+## PDF page 39 (narrative): total area of the district is 3959.11 square kilometer
+=== Satkhira | https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/202e424c-a7a3-4179-be6c-c861eeb505f2.pdf
+## PDF page 25
+    01    Administrative Units
+         Upazila                                                   7                           7                          7                             7
+         Paurashava                                                2                           2                          2                             2
+         Paura Ward                                              18                           18                        18                              6
+         Union                                                   78                           78                        78                         78
+         Mauza1                                                  953                         916                       953                        953
+         Village                                             1488                           1440                      1435                       1421
+         Mahalla2                                                134                          42                        40                         34
+    02    Area (In Sq. km)
+         Satkhira                                         3817.29                       3817.29                    3858.33                    3858.33
+                                                                       Enumerated
+    03    Population
+         Satkhira                                         2196582                       1985959                   1864704                    1597178
+         Male                                             1093554                        982777                    955198                     812214
+         Female                                           1102936                       1003182                    909506                     784964
+         Hijra3                                                  92                             -                         -                             -
+                                                                             Rural
+         Total                                            1764531                       1788343                   1693090                    1465194
+         Male                                              877945                        883030                    864791                     743166
+         Female                                            886543                        905313                    828299                     722028
+         Hijra                                                   43                             -                         -                             -
+                                                                            Urban4
+         Total                                             432051                        197616                    171614                     131984
+         Male                                              215609                         99747                      90407                      69048
+         Female                                            216393                         97869                      81207                      62936
+         Hijra                                                   49                             -                         -                             -
+    04    Urban Population4 (%)
+          Satkhira                                           19.67                         9.95                      9.20                       8.26
+    05    Slum Population
+         Total                                               6035                               -                     1349                              -
+         Male                                                2923                               -                      658                              -
+                                            
+* Dash (-) denotes Not Available.
+ϭ
+  Only populated Mauzas were shown in 2011, but in 1991 and 2001, depopulated and Paurashava(Municipality) Area (PSA) Mauzas were also included in
+    the census. In 2022 populated and depopulated Mauzas were included in the census.
+Ϯ
+   Mahalla is the part of Mauza in the urban areas, which is similar to the village in the rural areas. 
+ϯ
+   Hijra population is enumerated separately in the Population and Housing Census 2022.
+ϰ
+    City Corporation, Cantonment, Paurashava, Growth Centre, and Upazila Headquarters (not declared as Paurashava) are considered as Urban Area in 2022.
+     Only City Corporation and Paurashava were considered as Urban Area in 2011. The Statistical Metropolitan Area (SMA), Paurashava, and Growth Centre
+     were considered as Urban Area in 1991-2001 censuses.
+                                                                          Population and Housing Census 2022, District Report: Satkhira          xiii
+## PDF page 26
+                                                  Population and               Population and                 Bangladesh                 Bangladesh
+    SL             Key Indicators                    Housing                      Housing                      Population                 Population
+                                                   Census 2022                  Census 2011                   Census 2001                Census 1991
+          Female                                                3109                                -                        691                            -
+          Hijra                                                     3                               -                           -                           -
+    06     Floating Population5
+          Satkhira                                                 97                            393                        1524                        6405
+          Rural                                                    47                            210                        1352                        5301
+          Urban                                                    50                            183                         172                        1104
+    07     Ethnic Population
+          Total                                                 3865                            2615                         82                        4222
+          Male                                                  1983                            1278                         37                            -
+          Female                                                1882                            1337                         45                            -
+    08     Population by Upazila
+          Ashashuni                                           281758                         268754                      249244                      220957
+          Debhata                                             133014                         125358                      118944                        99068
+          Kalaroa                                             261270                         237992                      221596                      190721
+          Kaliganj                                            305495                         274889                      256384                      225596
+          Satkhira Sadar                                      522964                         460892                      410355                      344444
+          Shyamnagar                                          365970                         318254                      313781                      265004
+          Tala                                                326111                         299820                      294400                      251388
+    09     Population by Religion
+          Muslim                                             1851516                        1625782                     1495219                     1247051
+          Hindu                                               337145                         351551                      360723                      342520
+          Christian                                             6156                            6178                        6359                        4591
+          Buddhist                                                 99                              18                        229                         208
+          Others                                                1666                            2430                        2174                        2808
+    10     Average Annual Growth Rate
+          Satkhira                                               0.90                            0.62                      1.56                        1.66
+    11     Population Density (Per Square Kilometer)
+          Satkhira                                             575.43                            520                        483                        414
+    12     Sex Ratio
+## PDF page 39 (narrative): total area of the district is 3817.29 square kilometer
+=== Jhenaidah | https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/16b05c3c-890f-478a-8518-20a76b3207c1.pdf
+## PDF page 25
+    01    Administrative Units
+         Upazila                                                6                             6                          6                         6
+         Paurashava                                             6                             6                          5                         5
+         Paura Ward                                            54                            54                         45                        15
+         Union                                                 67                            67                         67                        67
+         Mauza1                                               946                           886                        945                       945
+         Village                                             1212                          1144                       1150                      1139
+         Mahalla2                                             291                           136                        137                       100
+    02    Area (In Sq. km)
+         Jhenaidah                                        1964.77                       1964.77                    1949.62                   1949.62
+                                                                    Enumerated
+    03    Population
+         Jhenaidah                                       2005849                       1771304                    1579490                   1361280
+         Male                                             995812                        886402                     815576                    700625
+         Female                                          1009922                        884902                     736914                    660655
+         Hijra3                                              115                             -                          -                         -
+                                                                           Rural
+         Total                                           1582736                       1491112                    1349098                   1187444
+         Male                                             784332                         744845                    694649                    609992
+         Female                                           798335                         746267                    654449                    577452
+         Hijra                                                 69                              -                          -                             -
+                                                                           Urban4
+         Total                                            423113                         280192                    230392                    173836
+         Male                                             211480                         141557                    120927                      90633
+         Female                                           211587                         138635                    109465                      83203
+         Hijra                                                 46                              -                          -                             -
+    04    Urban Population4 (%)4
+          Jhenaidah                                         21.09                          15.82                     14.59                     12.77
+    05    Slum Population
+         Total                                               2084                              -                      1683                              -
+         Male                                                1038                              -                       799                              -
+         Female                                              1046                              -                       884                              -
+         Hijra                                                  0                              -                          -                             -
+                                           
+* Dash (-) denotes Not Available.
+ϭ
+  Only populated Mauzas were shown in 2011, but in 1991 and 2001, depopulated and Paurashava (Municipality) Area (PSA) Mauzas were also included in
+    the census. In 2022 populated and depopulated Mauzas were included in the census. 
+Ϯ
+   Mahalla is the part of Mauza in the urban areas, which is similar to the village in the rural areas. 
+ϯ
+   Hijra population is enumerated separately in the Population and Housing Census 2022. 
+ϰ
+  City Corporation, Cantonment, Paurashava, Growth Centre, and Upazila Headquarters (not declared as Paurashava) are considered as Urban Area in 2022.
+     Only City Corporation and Paurashava were considered as Urban Area in 2011. The Statistical Metropolitan Area (SMA), Paurashava, and Growth Centre
+     were considered as Urban Area in 1991-2001 censuses.
+                                                                                                                                                            
+                                                                       Population and Housing Census 2022, District Report: Jhenaidah            xiii
+## PDF page 26
+                                                                               Population and
+                                              Population and                                              Bangladesh Population Bangladesh Population
+    Sl             Key Indicators                                                 Housing
+                                            Housing Census 2022                                               Census 2001           Census 1991
+                                                                                Census 2011
+    06     Floating Population5
+          Jhenaidah                                                95                             696                          302                       3367
+          Rural                                                    26                             159                          123                       2074
+          Urban                                                    69                             537                          179                       1253
+    07     Ethnic Population
+          Total                                                  5624                            3108                       1263                        2415
+          Male                                                   2737                            1528                         643                           -
+          Female                                                 2887                            1580                         620                           -
+    08     Population by Upazila
+          Harinakundu                                         218844                          197723                      172491                      162078
+          Jhenaidah Sadar                                     543872                          455932                      394152                      333192
+          Kaliganj                                            308474                          282366                      252443                      219126
+          Kotchandpur                                         156540                          141121                      132347                      107193
+          Maheshpur                                           371269                          332514                      296248                      246350
+          Shailkupa                                           406735                          361648                      331809                      293341
+    09     Population by Religion
+          Muslim                                             1836273                         1601086                     1415379                     1198925
+          Hindu                                               168444                          167880                       162808                     159308
+          Christian                                               905                             975                          835                        624
+          Buddhist                                                143                              28                          161                       1454
+          Others                                                   84                            1335                          307                        969
+    10     Average Annual Growth Rate
+          Jhenaidah                                              1.10                             1.13                       1.50                      2.06
+    11     Population Density (Per Square Kilometer)
+          Jhenaidah                                              1021                             902                         810                       698
+    12     Sex Ratio
+## PDF page 39 (narrative): total area of the district is 1,964.77 square kilometer
+=== Chuadanga | https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/77024b1b-e58c-468a-a93b-37f00f04ef1d.pdf
+## PDF page 25
+    01    Administrative Units
+         Upazila                                                 4                             4                          4                             4
+         Paurashava                                              4                             4                          4                             3
+         Paura Ward                                             36                            36                        36                              9
+         Union                                                  41                            32                        31                         29
+         Mauza1                                                383                           345                       364                        356
+         Village                                               584                           521                       514                        511
+         Mahalla2                                              163                           113                       113                         68
+    02    Area (In Sq. km)
+         Chuadanga                                        1174.10                       1174.10                    1177.40                    1157.42
+                                                                      Enumerated
+    03    Population
+         Chuadanga                                        1234054                       1129015                   1007130                     807164
+         Male                                              607636                        564819                    518188                     415974
+         Female                                            626355                        564196                    488942                     391190
+         Hijra3                                                 63                              -                         -                             -
+                                                                             Rural
+         Total                                             933263                        822858                    731646                     597552
+         Male                                              460241                        411966                    376372                     307776
+         Female                                            473007                        410892                    355274                     289776
+         Hijra                                                  15                              -                         -                             -
+                                                                            Urban4
+         Total                                             300791                        306157                    275484                     209612
+         Male                                              147395                        152853                    141816                     108198
+         Female                                            153348                        153304                    133668                     101414
+         Hijra                                                  48                              -                         -                             -
+    04    Urban Population 4(%)
+          Chuadanga                                          24.37                        27.12                     27.26                      25.97
+    05    Slum Population
+         Total                                               4589                               -                      846                              -
+         Male                                                2242                               -                      408                              -
+                                            
+* Dash (-) denotes Not Available.
+ϭ
+  Only populated Mauzas were shown in 2011, but in 1991 and 2001, depopulated and Paurashava/(Municipality) Area (PSA) Mauzas were also included in
+    the census. In 2022 populated and depopulated Mauzas were included in the census.
+Ϯ
+   Mahalla is the part of Mauza in the urban areas, which is similar to the village in the rural areas. 
+ϯ
+   Hijra population is enumerated separately in the Population and Housing Census 2022.
+ϰ
+    City Corporation, Cantonment, Paurashava, Growth Centre, and Upazila Headquarters (not declared as Paurashava) are considered as Urban Area in 2022.
+     Only City Corporation and Paurashava were considered as Urban Area in 2011. The Statistical Metropolitan Area (SMA), Paurashava, and Growth Centre
+     were considered as Urban Area in 1991-2001 censuses.
+                                                                      Population and Housing Census 2022, District Report: Chuadanga             xiii
+## PDF page 26
+                                                                              Population and                 Bangladesh                  Bangladesh
+                                               Population and
+    SL             Key Indicators                                             Housing Census              Population Census           Population Census
+                                             Housing Census 2022                                                2001                        1991
+                                                                                   2011
+          Female                                                2347                                -                        438                            -
+          Hijra                                                                                     -                           -                           -
+    06     Floating Population5
+          Chuadanga                                                78                            211                            2                       1565
+          Rural                                                    18                              23                           2                        483
+          Urban                                                    60                            188                            0                       1082
+    07     Ethnic Population
+          Total                                                   707                           1268                         58                        1943
+          Male                                                    355                            436                         27                            -
+          Female                                                  352                            832                         31                            -
+    08     Population by Upazila
+          Alamdanga                                           368160                         349522                      308917                      245524
+          Chuadanga Sadar                                     350504                         313935                      278726                      223247
+          Damurhuda                                           317552                         289577                      255279                      213291
+          Jibannagar                                          197775                         179581                      164208                      125102
+    09     Population by Religion
+          Muslim                                             1204617                        1100330                      979612                      780741
+          Hindu                                                27804                           26514                      25500                        23878
+          Christian                                             1605                            1593                        1701                        1752
+          Buddhist                                                 18                              22                         51                         191
+          Others                                                   10                            556                         266                         602
+    10     Average Annual Growth Rate
+          Chuadanga                                              0.79                            1.13                      2.24                        2.12
+    11     Population Density (Per Square Kilometer)
+          Chuadanga                                             1051                             962                        855                        697
+    12     Sex Ratio
+=== Magura | https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/53f42ddf-d536-4efc-afd6-862ea73ab49a.pdf
+## PDF page 25
+    01    Administrative Units
+          Upazila                                                4                             4                          4                             4
+          Paurashava                                             1                             1                          1                             1
+          Paura Ward                                             9                             9                          9                             3
+          Union                                                 36                            36                        36                         36
+          Mauza1                                               527                           513                       537                        537
+          Village                                              716                           711                       700                        712
+          Mahalla2                                              63                            61                        61                         41
+    02    Area (In Sq. km)
+          Magura                                          1039.10                       1039.10                    1048.61                    1048.61
+                                                                     Enumerated
+    03
+          Population
+          Magura                                          1033115                        918419                    824311                     724027
+          Male                                             509013                        454739                    420907                     369830
+          Female                                           524062                        463680                    403404                     354197
+          Hijra3                                                40                              -                         -                             -
+                                                                            Rural
+          Total                                            837891                        798005                    718988                     671858
+          Male                                             411990                        394595                    366036                     342300
+          Female                                           425880                        403410                    352952                     329558
+          Hijra                                                 21                              -                         -                             -
+                                                                           Urban4
+          Total                                            195224                        120414                    105323                       52169
+          Male                                              97023                         60144                      54871                      27530
+          Female                                            98182                         60270                      50452                      24639
+          Hijra                                                 19                              -                         -                             -
+    04    Urban Population4 (%)
+          Magura                                             18.90                         13.11                     12.78                       7.21
+    05    Slum Population
+          Total                                                778                              -                    22211                              -
+          Male                                                 385                              -                    10834                              -
+          Female                                               393                              -                    11377                              -
+          Hijra                                                  0                              -                         -                             -
+                                            
+* Dash (-) denotes Not Available.
+ϭ
+  Only populated Mauzas were shown in 2011, but in 1991 and 2001, depopulated and Paurashava/(Municipality) Area (PSA) Mauzas were also included in
+    the census. In 2022 populated and depopulated Mauzas were included in the census.
+Ϯ
+   Mahalla is the part of Mauza in the urban areas, which is similar to the village in the rural areas. 
+ϯ
+   Hijra population is enumerated separately in the Population and Housing Census 2022.
+ϰ
+    City Corporation, Cantonment, Paurashava, Growth Centre, and Upazila Headquarters (not declared as Paurashava) are considered as Urban Area in 2022.
+     Only City Corporation and Paurashava were considered as Urban Area in 2011. The Statistical Metropolitan Area (SMA), Paurashava, and Growth Centre
+     were considered as Urban Area in 1991-2001 censuses.
+                                                                          Population and Housing Census 2022, District Report: Magura            xiii
+## PDF page 26
+                                                                               Population and                 Bangladesh                  Bangladesh
+                                               Population and
+    Sl             Key Indicators                                                 Housing                  Population Census           Population Census
+                                             Housing Census 2022
+                                                                                Census 2011                      2001                        1991
+    06    Floating Population5
+          Magura                                                    15                            276                          22                        2471
+          Rural                                                      2                             57                          22                        1452
+          Urban                                                     13                            219                           0                        1019
+    07    Ethnic Population
+          Total                                                  8548                            8099                         207                         256
+          Male                                                   4254                            4043                         102                            -
+          Female                                                 4294                            4056                         105                            -
+    08    Population by Upazila
+          Magura Sadar                                        426396                          380107                      331494                      286925
+          Mohammadpur                                         242808                          207905                      188753                      160340
+          Shalikha                                            179666                          163658                      147663                      132291
+          Sreepur                                             184245                          166749                      156401                      144471
+    09    Population by Religion
+          Muslim                                              870482                          753199                      664937                      563954
+          Hindu                                               162138                          164578                      158685                      158465
+          Christian                                               279                             393                         342                         534
+          Buddhist                                                  26                               6                         21                         314
+          Others                                                  190                             243                         326                         760
+    10    Average Annual Growth Rate
+          Magura                                                  1.05                           1.07                        1.31                        1.72
+    11    Population Density (Per Square Kilometer)
+          Magura                                                  994                             884                        786                        690
+    12    Sex Ratio
+=== Kushtia | https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/28026f48-b758-47f9-92d0-00e4d72d9cf6.pdf
+## PDF page 25
+    01    Administrative Units
+         Upazila                                                   6                           6                          6                             6
+         Paurashava                                                5                           5                          4                             3
+         Paura Ward                                              57                           48                        39                         12
+         Union                                                   66                           66                        61                         60
+         Mauza1                                                  699                         689                       711                        711
+         Village                                                 984                         973                       978                        978
+         Mahalla2                                                153                         101                        77                         37
+    02    Area (In Sq. km)
+         Kushtia                                          1608.78                       1608.80                    1621.15                    1621.15
+                                                                       Enumerated
+    03    Population
+         Kushtia                                          2149692                       1946838                  1740155                   1502126
+         Male                                             1055875                        973518                   893744                    775919
+         Female                                           1093724                        973320                   846411                    726207
+         Hijra3                                                  93                             -                         -                             -
+                                                                             Rural
+         Total                                            1692681                       1711312                  1525880                   1337695
+         Male                                              829176                        854534                   783279                    690484
+         Female                                            863448                        856778                   742601                    647211
+         Hijra                                                   57                             -                         -                             -
+                                                                            Urban4
+         Total                                             457011                        235526                   214275                    164431
+         Male                                              226699                        118984                   110465                      85435
+         Female                                            230276                        116542                   103810                      78996
+         Hijra                                                   36                             -                         -                             -
+    04    Urban Population4 (%)
+          Kushtia                                            21.26                        12.10                      12.31                     10.95
+    05    Slum Population
+         Total                                               8060                               -                     3654                              -
+         Male                                                3914                               -                     1811                              -
+         Female                                              4145                               -                     1843                              -
+         Hijra                                                     1                            -                         -                             -
+                                            
+* Dash (-) denotes Not Available.
+ϭ
+  Only populated Mauzas were shown in 2011, but in 1991 and 2001, depopulated and Paurashava (Municipality) Area (PSA) Mauzas were also included in
+    the census. In 2022 populated and depopulated Mauzas were included in the census.
+Ϯ
+   Mahalla is the part of Mauza in the urban areas, which is similar to the village in the rural areas. 
+ϯ
+   Hijra population is enumerated separately in the Population and Housing Census 2022.
+ϰ
+    City Corporation, Cantonment, Paurashava, Growth Centre, and Upazila Headquarters (not declared as Paurashava) are considered as Urban Area in 2022.
+     Only City Corporation and Paurashava were considered as Urban Area in 2011. The Statistical Metropolitan Area (SMA), Paurashava, and Growth Centre
+     were considered as Urban Area in 1991-2001 censuses.
+                                                                           Population and Housing Census 2022, District Report: Kushtia          xiii
+## PDF page 26
+                                                  Population and               Population and                 Bangladesh                  Bangladesh
+    Sl              Key Indicators                   Housing                      Housing                      Population                  Population
+                                                   Census 2022                  Census 2011                   Census 2001                 Census 1991
+    06     Floating Population5
+          Kushtia                                                  253                            389                          54                        2972
+          Rural                                                     78                            246                          50                         952
+          Urban                                                    175                            143                           4                        2020
+    07     Ethnic Population
+          Total                                                  2117                            1666                        497                        1642
+          Male                                                   1068                             819                        270                            -
+          Female                                                 1049                             847                        227                            -
+    08     Population by Upazila
+          Bheramara                                           225058                          200084                      175677                      144221
+          Daulatpur                                           482981                          456372                      443655                      360706
+          Khoksa                                              143832                          129555                      114188                       93371
+          Kumarkhali                                          373752                          328457                      297728                      269008
+          Kushtia Sadar                                       560963                          502255                      423818                      368774
+          Mirpur                                              363106                          330115                      285089                      266046
+    09     Population by Religion
+          Muslim                                             2090622                         1888744                    1682154                      1437896
+          Hindu                                                 58771                          56792                       57241                       63382
+          Christian                                                246                            225                         313                         340
+          Buddhist                                                  39                             71                          67                         200
+          Others                                                    14                           1006                         380                         308
+    10     Average Annual Growth Rate
+          Kushtia                                                 0.88                           1.11                       1.48                       1.97
+    11     Population Density (Per Square Kilometer)
+          Kushtia                                                1336                            1210                       1073                          927
+    12     Sex Ratio
+=== Meherpur | https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/7a179522-05b9-41e1-884b-d392d8d807c6.pdf
+## PDF page 25
+    01    Administrative Units
+         Upazila                                                 3                            3                          3                             2
+         Paurashava                                              2                            2                          1                             1
+         Paura Ward                                             18                           18                          9                             9
+         Union                                                 20                            18                         18                        18
+         Mauza1                                               202                           183                       190                        190
+         Village                                              272                           274                       278                        253
+         Mahalla2                                               98                          100                         72                        39
+    02    Area (In Sq. km)
+         Meherpur                                          741.62                        716.08                    716.08                     716.08
+                                                                     Enumerated
+    03    Population
+         Meherpur                                          705356                       655392                     591436                    491917
+         Male                                              340093                       324634                     303166                    251521
+         Female                                            365237                       330758                     288270                    240396
+         Hijra3                                                 26                             -                         -                             -
+                                                                            Rural
+         Total                                             546471                       571999                     523282                    446079
+         Male                                              262943                       282916                     268015                    227747
+         Female                                            283516                       289083                     255267                    218332
+         Hijra                                                  12                             -                         -                             -
+                                                                           Urban4
+         Total                                             158885                         83393                     68154                      45838
+         Male                                               77150                         41718                     35151                      23774
+         Female                                             81721                         41675                     33003                      22064
+         Hijra                                                  14                             -                         -                             -
+    04    Urban Population4 (%)
+          Meherpur                                          22.53                         12.72                     11.52                       9.32
+    05    Slum Population
+         Total                                                573                              -                      262                              -
+         Male                                                 267                              -                      122                              -
+         Female                                               306                              -                      140                              -
+         Hijra                                                   -                             -                         -                             -
+                                           
+* Dash (-) denotes Not Available.
+ϭ Only populated Mauzas were shown in 2011, but in 1991 and 2001, depopulated and Paurashava (Municipality) Area (PSA) Mauzas were also included in
+    the census. In 2022 populated and depopulated Mauzas were included in the census.
+Ϯ  Mahalla is the part of Mauza in the urban areas, which is similar to the village in the rural areas. 
+ϯ
+   Hijra population is enumerated separately in the Population and Housing Census 2022.
+ϰ City Corporation, Cantonment, Paurashava, Growth Centre, and Upazila Headquarters (not declared as Paurashava) are considered as Urban Area in 2022.
+     Only City Corporation and Paurashava were considered as Urban Area in 2011. The Statistical Metropolitan Area (SMA), Paurashava, and Growth Centre
+     were considered as Urban Area in 1991-2001 censuses.
+                                                                       Population and Housing Census 2022, District Report: Meherpur            xiii
+## PDF page 26
+                                                                               Population and                 Bangladesh                  Bangladesh
+                                               Population and
+    Sl             Key Indicators                                                 Housing                  Population Census           Population Census
+                                             Housing Census 2022
+                                                                                Census 2011                      2001                        1991
+    06     Floating Population5
+          Meherpur                                                   0                            172                           2                         506
+          Rural                                                      0                             96                           0                         202
+          Urban                                                      0                             76                           2                         304
+    07     Ethnic Population
+          Total                                                   161                              18                          50                         430
+          Male                                                      42                               9                         26                            -
+          Female                                                  119                                9                         24                            -
+    08     Population by Upazila
+          Gangni                                              322701                          299607                      269085                      229138
+          Meherpur Sadar                                      276903                          256642                      232465                      187324
+          Mujibnagar                                            105752                         99143                       89886                       75455
+    09     Population by Religion
+          Muslim                                              690349                          640751                      576962                      479654
+          Hindu                                                  8497                            7870                       6779                         6299
+          Christian                                              6478                            6627                       7389                         5802
+          Buddhist                                                  16                             14                          21                          38
+          Others                                                    16                            130                         285                         124
+    10     Average Annual Growth Rate
+          Meherpur                                                0.65                           1.03                        1.86                        2.05
+    11     Population Density (Per Square Kilometer)
+          Meherpur                                                951                             915                         826                         687
+    12     Sex Ratio
+## PDF page 39 (narrative): total area of the district is 741.62 square kilometer
+=== Jashore | https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/928edbab-1a57-4b17-a51e-368d2271c06c.pdf
+## PDF page 25
+    01    Administrative Units
+         Upazila                                                  8                             8                         8                             8
+         Paurashava                                               8                             8                         4                             1
+         Paura Ward                                              72                            72                        36                             3
+         Union                                                   94                            91                        91                        91
+         Mauza1                                                1286                          1263                     1329                       1329
+         Village                                               1454                          1419                     1434                       1471
+         Mahalla2                                               436                           171                      122                         69
+    02    Area (In Sq. km)
+         Jashore                                           2606.94                       2606.94                   2570.42                    2578.20
+                                                                      Enumerated
+    03    Population
+         Jashore                                           3076144                       2764547                  2471554                    2106996
+         Male                                              1524349                       1386293                  1277650                    1089911
+         Female                                            1551667                       1378254                  1193904                    1017085
+         Hijra3                                                 128                              -                         -                            -
+                                                                            Rural
+         Total                                             2356733                       2250995                  2070703                    1824516
+         Male                                              1160944                       1121567                  1062849                     938247
+         Female                                            1195712                       1129428                  1007854                     886269
+         Hijra                                                   77                              -                         -                            -
+                                                                            Urban4
+         Total                                              719411                        513552                    400851                    282480
+         Male                                               363405                        264726                    214801                    151664
+         Female                                             355955                        248826                    186050                    130816
+         Hijra                                                   51                              -                         -                            -
+    04    Urban Population4 (%)
+          Jashore                                             23.39                         18.58                     16.22                     13.41
+    05    Slum Population
+         Total                                               25141                               -                    7305                              -
+         Male                                                12420                               -                    3606                              -
+         Female                                              12717                               -                    3699                              -
+         Hijra                                                    4                              -                         -                            -
+                                            
+* Dash (-) denotes Not Available.
+ϭ
+  Only populated Mauzas were shown in 2011, but in 1991 and 2001, depopulated and Paurashava (Municipality) Area (PSA) Mauzas were also included in
+    the census. In 2022 populated and depopulated Mauzas were included in the census.
+Ϯ
+   Mahalla is the part of Mauza in the urban areas, which is similar to the village in the rural areas. 
+ϯ
+   Hijra population is enumerated separately in the Population and Housing Census 2022.
+ϰ
+    City Corporation, Cantonment, Paurashava, Growth Centre, and Upazila Headquarters (not declared as Paurashava) are considered as Urban Area in 2022.
+     Only City Corporation and Paurashava were considered as Urban Area in 2011. The Statistical Metropolitan Area (SMA), Paurashava, and Growth Centre
+     were considered as Urban Area in 1991-2001 censuses.
+                                                                          Population and Housing Census 2022, District Report: Jashore           xiii
+## PDF page 26
+                                                                                Population and                Bangladesh                  Bangladesh
+                                                Population and
+    Sl              Key Indicators                                                 Housing                 Population Census           Population Census
+                                              Housing Census 2022
+                                                                                 Census 2011                     2001                        1991
+    06     Floating Population5
+          Jashore                                                  264                             843                        296                        6103
+          Rural                                                      86                            356                        222                        3053
+          Urban                                                    178                             487                         74                        3050
+    07     Ethnic Population
+          Total                                                   5386                          17432                        216                        3996
+          Male                                                    2725                           8779                        117                            -
+          Female                                                  2661                           8653                         99                            -
+    08     Population by Upazila
+          Abhaynagar                                           290143                          262434                     232162                      204654
+          Bagharpara                                           238106                          216897                     195189                      168938
+          Chaugachha                                           249280                          231370                     211065                      181829
+          Jashore Sadar                                        844374                          742898                     643659                      530582
+          Jhikargachha                                         331137                          298908                     271014                      235882
+          Keshabpur                                            280932                          253291                     226367                      200229
+          Manirampur                                           454541                          417421                     382465                      326093
+          Sharsha                                              387631                          341328                     309633                      258789
+    09     Population by Religion
+          Muslim                                              2756729                        2446162                     2170973                     1822747
+          Hindu                                                313592                          310184                     293841                      278315
+          Christian                                               5344                           5556                        5111                        4099
+          Buddhist                                                 177                            112                          79                         263
+          Others                                                   302                           2533                        1550                        1572
+    10     Average Annual Growth Rate
+          Jashore                                                  0.95                           1.11                      1.61                       2.11
+    11     Population Density (Per Square Kilometer)
+          Jashore                                                 1180                           1060                        962                        817
+    12     Sex Ratio
+=== Narail | https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/38354ecb-c10b-43e0-b371-657c00463deb.pdf
+## PDF page 25
+    01    Administrative Units
+          Upazila                                                3                             3                          3                             3
+          Paurashava                                             3                             3                          2                             2
+          Paura Ward                                            27                            27                        18                              6
+          Union                                                 39                            38                        37                         37
+          Mauza1                                               436                           406                       445                        445
+          Village                                              638                           635                       651                        636
+          Mahalla2                                              67                            67                        43                         38
+    02    Area (In Sq. km)
+          Narail                                            967.99                        967.99                    990.23                     990.23
+                                                                     Enumerated
+    03
+          Population
+          Narail                                           788671                        721668                    698447                     655720
+          Male                                             383592                        353527                    353201                     331869
+          Female                                           405053                        368141                    345246                     323851
+          Hijra3                                                26                              -                         -                             -
+                                                                            Rural
+          Total                                            614029                        609316                    612638                     588951
+          Male                                             297528                        297621                    309202                     297542
+          Female                                           316483                        311695                    303436                     291409
+          Hijra                                                 18                              -                         -                             -
+                                                                            Urban4
+          Total                                            174642                        112352                      85809                      66769
+          Male                                              86064                         55906                      43999                      34327
+          Female                                            88570                         56446                      41810                      32442
+          Hijra                                                  8                              -                         -                             -
+    04    Urban Population (%)4
+          Narail                                             22.14                         15.57                     12.29                      10.18
+    05    Slum Population
+          Total                                              1297                               -                      128                              -
+          Male                                                 656                              -                       64                              -
+          Female                                               641                              -                       64                              -
+          Hijra                                                  0                              -                         -                             -
+                                            
+* Dash (-) denotes Not Available.
+ϭ
+  Only populated Mauzas were shown in 2011, but in 1991 and 2001, depopulated and Paurashava/Municipality Area (PSA) Mauzas were also included in
+    the census. In 2022 populated and depopulated Mauzas were included in the census.
+Ϯ
+   Mahalla is the part of Mauza in the urban areas, which is similar to the village in the rural areas. 
+ϯ
+   Hijra population is enumerated separately in the Population and Housing Census 2022.
+ϰ
+    City Corporation, Cantonment, Paurashava, Growth Centre, and Upazila Headquarters (not declared as Paurashava) are considered as Urban Area in 2022.
+     Only City Corporation and Paurashava were considered as Urban Area in 2011. The Statistical Metropolitan Area (SMA), Paurashava, and Growth Centre
+     were considered as Urban Area in 1991-2001 censuses.
+                                                                            Population and Housing Census 2022, District Report: Narail          xiii
+## PDF page 26
+                                                                               Population and                 Bangladesh                  Bangladesh
+                                               Population and
+    Sl              Key Indicators                                                Housing                  Population Census           Population Census
+                                             Housing Census 2022
+                                                                                Census 2011                      2001                        1991
+    06     Floating Population5
+           Narail                                                   25                            178                         102                         939
+           Rural                                                    15                            116                          45                         717
+           Urban                                                    10                             62                          57                         222
+    07     Ethnic Population
+           Total                                                 8278                             943                         348                         272
+           Male                                                  4205                             465                         173                            -
+           Female                                                4073                             478                         175                            -
+    08     Population by Upazila
+           Kalia                                              243166                          220202                      208024                      196747
+           Lohagara                                           248437                          228594                      221000                      208248
+           Narail Sadar                                       297068                          272872                      269423                      250725
+    09     Population by Religion
+           Muslim                                             663961                          586588                      549702                      490915
+           Hindu                                              124465                          134594                      148339                      164286
+           Christian                                              194                             258                         186                         151
+           Buddhist                                                 40                               6                         21                          55
+           Others                                                   11                            222                         199                         313
+    10     Average Annual Growth Rate
+           Narail                                                 0.79                           0.32                        0.63                        1.08
+    11     Population Density (Per Square Kilometer)
+           Narail                                                 815                             746                        705                        662
+    12     Sex Ratio
+## PDF page 39 (narrative): total area of the district is 967.99 square kilometer

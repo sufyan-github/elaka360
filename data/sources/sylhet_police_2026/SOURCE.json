@@ -1,0 +1,26 @@
+{
+  "key": "SYLHET_POLICE_2026",
+  "division": "sylhet",
+  "kind": "district_police",
+  "name": "Sylhet District Police — SP office and thanas",
+  "organization": "Sylhet District Police (Bangladesh Police)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://police.sylhet.gov.bd/",
+    "https://police.sylhet.gov.bd/pages/officers",
+    "https://police.sylhet.gov.bd/pages/static-pages/696cafe6c4774958d7b9fb06",
+    "https://police.<upazila>.sylhet.gov.bd/"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Office of the Superintendent of Police, Sylhet (police.sylhet.gov.bd)",
+  "notes": "No licence stated. SP office from the Superintendent's officer card (office landline, police official mobile, fax in extra_json, police.gov.bd e-mail); officers' names are not copied. The SP portal's thana and contact menu entries are empty links; its 'একনজরে' gives the district's thana count. Thana rows: 0 of the 13 upazila thana portals police.<upazila>.sylhet.gov.bd answered; the others did not respond (Nov 2026: all serve the *.sylhet.gov.bd certificate, which does not cover a second-level name - TLS hostname mismatch - so they were skipped, not fetched without verification). sylhet.gov.bd sends only its leaf certificate: the Let's Encrypt intermediates are added from the CA's AIA URLs, TLS verification stays on. Sylhet city is policed by SMP (SYLHET_METRO_POLICE_THANAS_2026). Unavailable this run: portal police.sylhetsadar.sylhet.gov.bd did not respond; portal police.beanibazar.sylhet.gov.bd did not respond; portal police.bishwanath.sylhet.gov.bd did not respond; portal police.companiganj.sylhet.gov.bd did not respond; portal police.fenchuganj.sylhet.gov.bd did not respond; portal police.golapganj.sylhet.gov.bd did not respond; portal police.gowainghat.sylhet.gov.bd did not respond; portal police.jaintiapur.sylhet.gov.bd did not respond; portal police.kanaighat.sylhet.gov.bd did not respond; portal police.zakiganj.sylhet.gov.bd did not respond; portal police.balaganj.sylhet.gov.bd did not respond; portal police.dakshinsurma.sylhet.gov.bd did not respond; portal police.osmaninagar.sylhet.gov.bd did not respond",
+  "files": {
+    "places.csv": "28ff2aece886797a7dd8c5c2268aed88581903ed80abcd414fbc89b2ba8a5891",
+    "facts.csv": "490cee0ac1930836b76661d7863af3af10ee291d97d6f324f784cc1963b6a196",
+    "raw/sylhet_police_glance.txt": "32491f9ba42762b0e7750364b1de3080bb0b61604f3f6b7d7ca5247b330ad2bc"
+  }
+}

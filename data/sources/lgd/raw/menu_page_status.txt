@@ -1,0 +1,5 @@
+Accessed 2026-11-12. LGD main-menu pages under "স্থানীয় সরকার প্রতিষ্ঠান":
+সিটি কর্পোরেশন	https://lgd.gov.bd/pages/static-pages/6941401ec4774958d7b54a60	HTTP 404
+পৌরসভা	https://lgd.gov.bd/pages/static-pages/69414020c4774958d7b54b38	HTTP 404
+জেলা পরিষদ	https://lgd.gov.bd/pages/static-pages/6941401fc4774958d7b54ab9	HTTP 404
+উপজেলা পরিষদ	https://lgd.gov.bd/pages/static-pages/6941401fc4774958d7b54ac7	HTTP 404

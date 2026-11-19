@@ -1,0 +1,21 @@
+{
+  "key": "BRTC_DEPOTS_SYL_2026",
+  "division": "sylhet",
+  "kind": "brtc",
+  "name": "BRTC — bus depots in Sylhet Division",
+  "organization": "Bangladesh Road Transport Corporation (BRTC)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Bangladesh Road Transport Corporation (brtc.gov.bd)",
+  "notes": "No licence stated. BRTC lists depots with the unit head's name/mobile; only depot names and office landlines are kept. 1 depot(s) of Sylhet Division listed. No addresses or coordinates.",
+  "files": {
+    "places.csv": "24b3af1f22d5ded0586b51372890189311778e39a4453d969fab95dde561ecaa"
+  }
+}

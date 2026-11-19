@@ -1,0 +1,520 @@
+[
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 186,
+   "name_en": "Islamic University, Bangladesh",
+   "name_bn": null,
+   "slug": "islamic-university-bangladesh",
+   "website": "www.iu.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 186,
+   "name_en": "Islamic University, Bangladesh",
+   "name_bn": null,
+   "slug": "islamic-university-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "1979",
+   "present_campus": null,
+   "permanent_campus": "Islamic University, Kushtia-7003",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.iu.ac.bd",
+   "email": "registerer@iu.ac.bd",
+   "telephone_mobile": "88 071 74904, 01711003242",
+   "fax": "8807174905",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Kushtia",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 188,
+   "name_en": "Khulna University",
+   "name_bn": null,
+   "slug": "khulna-university",
+   "website": "www.ku.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 188,
+   "name_en": "Khulna University",
+   "name_bn": null,
+   "slug": "khulna-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "1987",
+   "present_campus": null,
+   "permanent_campus": "Gollamari, Horintana Thana, Khulna",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.ku.ac.bd",
+   "email": "registrar@ku.ac.bd, office@registrar.ku.ac.bd",
+   "telephone_mobile": "041-720663./5004, 02-47734140",
+   "fax": "88-02-477734138",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Khulna",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 199,
+   "name_en": "Khulna University of Engineering & Technology (KUET)",
+   "name_bn": null,
+   "slug": "khulna-university-of-engineering-technology-kuet",
+   "website": "www.kuet.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 199,
+   "name_en": "Khulna University of Engineering & Technology (KUET)",
+   "name_bn": null,
+   "slug": "khulna-university-of-engineering-technology-kuet",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2003",
+   "present_campus": null,
+   "permanent_campus": "Khulna University of Engineering & Technology (KUET), Khulna-9203, Bangladesh.",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.kuet.ac.bd",
+   "email": "registrar@kuet.ac.bd",
+   "telephone_mobile": "+8802477732971 PABX:+8802477733351~70 Ext:113, 01747608304",
+   "fax": "+8802477733303",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Khulna",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 207,
+   "name_en": "Jessore University of Science & Technology",
+   "name_bn": null,
+   "slug": "jessore-university-of-science-technology",
+   "website": "www.just.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 207,
+   "name_en": "Jessore University of Science & Technology",
+   "name_bn": null,
+   "slug": "jessore-university-of-science-technology",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2010",
+   "present_campus": null,
+   "permanent_campus": "Jessore University of Science & Technology, Jessore-7408, Bangladesh",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.just.edu.bd",
+   "email": "registrar@just.edu.bd",
+   "telephone_mobile": "0421-61097-8. 62020, 02 42142171-76",
+   "fax": "02 42142012",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Jashore",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 222,
+   "name_en": "Khulna Agricultural University",
+   "name_bn": null,
+   "slug": "khulna-agricultural-university",
+   "website": "www.kau.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 222,
+   "name_en": "Khulna Agricultural University",
+   "name_bn": null,
+   "slug": "khulna-agricultural-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2015",
+   "present_campus": null,
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.kau.edu.bd",
+   "email": "registrar@kau.ac.bd",
+   "telephone_mobile": "+880 1309 000313, 01711341261",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Khulna",
+  "_basis": "name"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 229,
+   "name_en": "Khulna Medical University, Khulna",
+   "name_bn": null,
+   "slug": "khulna-medical-university-khulna",
+   "website": "www.shmu.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 229,
+   "name_en": "Khulna Medical University, Khulna",
+   "name_bn": null,
+   "slug": "khulna-medical-university-khulna",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2021",
+   "present_campus": null,
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.shmu.ac.bd",
+   "email": "drmahbub_87@yahoo.com",
+   "telephone_mobile": "01911840095",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Khulna",
+  "_basis": "name"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 234,
+   "name_en": "Meherpur University",
+   "name_bn": null,
+   "slug": "meherpur-university",
+   "website": null,
+   "marker": null
+  },
+  "detail": {
+   "id": 234,
+   "name_en": "Meherpur University",
+   "name_bn": null,
+   "slug": "meherpur-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2023",
+   "present_campus": null,
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": null,
+   "email": "meherpuruniversity@gmail.com",
+   "telephone_mobile": null,
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Meherpur",
+  "_basis": "name"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 295,
+   "name_en": "First Capital University of  Bangladesh",
+   "name_bn": null,
+   "slug": "first-capital-university-of-bangladesh",
+   "website": "www.fcub.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 295,
+   "name_en": "First Capital University of  Bangladesh",
+   "name_bn": null,
+   "slug": "first-capital-university-of-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2012",
+   "present_campus": "Shahnaz Mansion, Poura Collegepara, Chuadanga",
+   "permanent_campus": "Ghoramara, Alamdanga, Chuadanga Sadar, Chuadanga",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.fcub.edu.bd",
+   "email": "first_capital_bd@yahoo.com; info@fcub.edu.bd",
+   "telephone_mobile": "0761-62033, 0761-64199, 0761-62722",
+   "fax": "076162199",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Chuadanga",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 299,
+   "name_en": "North Western University",
+   "name_bn": null,
+   "slug": "north-western-university",
+   "website": "www.nwu.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 299,
+   "name_en": "North Western University",
+   "name_bn": null,
+   "slug": "north-western-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2012",
+   "present_campus": "A.Mannan Tower ,236 M.A Bari Road ,Sonadanga , Khulna.",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.nwu.ac.bd",
+   "email": "info@nwu.ac.bd, registrar@nwu.ac.bd",
+   "telephone_mobile": "8802477726064-6",
+   "fax": "041-722744",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Khulna",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 324,
+   "name_en": "Northern University of Business & Technology, Khulna",
+   "name_bn": null,
+   "slug": "northern-university-of-business-technology-khulna",
+   "website": "www.nubtkhulna.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 324,
+   "name_en": "Northern University of Business & Technology, Khulna",
+   "name_bn": null,
+   "slug": "northern-university-of-business-technology-khulna",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2015",
+   "present_campus": "Akunjee Tower, 41-42 Mojid Sharani, Shibbari More, Sonadanga, Khulna-9100.",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.nubtkhulna.ac.bd",
+   "email": "admission@nubtkhulna.ac.bd",
+   "telephone_mobile": "+88-041-81344, 01755 514662-63,",
+   "fax": "81355",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Khulna",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 325,
+   "name_en": "Rabindra Maitree University, Kushtia",
+   "name_bn": null,
+   "slug": "rabindra-maitree-university-kushtia",
+   "website": null,
+   "marker": null
+  },
+  "detail": {
+   "id": 325,
+   "name_en": "Rabindra Maitree University, Kushtia",
+   "name_bn": null,
+   "slug": "rabindra-maitree-university-kushtia",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2015",
+   "present_campus": "109/95, Ram Chandra Roy Chowdhury Street, College More, Kushtia.",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": null,
+   "email": "registrar@rub.ac.bd, vc@rub.ac.bd",
+   "telephone_mobile": "02588833525, 01819198081, 02588833521, 01711090742",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Kushtia",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 334,
+   "name_en": "Khulna Khan Bahadur Ahsanullah University",
+   "name_bn": null,
+   "slug": "khulna-khan-bahadur-ahsanullah-university",
+   "website": "www.kkbau.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 334,
+   "name_en": "Khulna Khan Bahadur Ahsanullah University",
+   "name_bn": null,
+   "slug": "khulna-khan-bahadur-ahsanullah-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2018",
+   "present_campus": "198, M A Bari Road, Sonadanga, Khulna-9000 and 140, KDA, Khan Bahdaur Ahsanullah Road, Choto BoyraSonadanga Khulna-9000",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.kkbau.ac.bd",
+   "email": "registrar@kkbau.ac.bd; registrar.kkbau@gmail.com; kkbau.edu.bd@gmail.com",
+   "telephone_mobile": "01920-090099, 01741238636, 01715950701",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Khulna",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 345,
+   "name_en": "Bangladesh Army University of Science and Technology, Khulna",
+   "name_bn": null,
+   "slug": "bangladesh-army-university-of-science-and-technology-khulna",
+   "website": "www.baustkhulna.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 345,
+   "name_en": "Bangladesh Army University of Science and Technology, Khulna",
+   "name_bn": null,
+   "slug": "bangladesh-army-university-of-science-and-technology-khulna",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2023",
+   "present_campus": "Nurjahan Tower, holding 8 & 9, Atra, Gila tala, Fultala, Khulna.",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.baustkhulna.ac.bd",
+   "email": "info@baustkhulna.ac.bd, registrar.baustkhulna.edu.bd@gmail.com",
+   "telephone_mobile": "+8801769564533",
+   "fax": "+880277707576",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Khulna",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 348,
+   "name_en": "Lalon University of Science and Arts",
+   "name_bn": null,
+   "slug": "lalon-university-of-science-and-arts",
+   "website": "https://lusa.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 348,
+   "name_en": "Lalon University of Science and Arts",
+   "name_bn": null,
+   "slug": "lalon-university-of-science-and-arts",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2023",
+   "present_campus": "Zilla Parishad Bhaban ( 7th & 8th Floor), 128, NS Road, Kushtia 7000",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "https://lusa.ac.bd",
+   "email": "info@lusa.ac.bd",
+   "telephone_mobile": "Mobile: 01332501414, 01332501410",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Kushtia",
+  "_basis": "address"
+ }
+]

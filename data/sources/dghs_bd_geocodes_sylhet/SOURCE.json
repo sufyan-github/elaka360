@@ -1,0 +1,25 @@
+{
+  "key": "DGHS_BD_GEOCODES_SYLHET",
+  "name": "Bangladesh GeoCodes CodeSystem (BBS geo-codes) in the DGHS Bangladesh Core FHIR IG, Sylhet Division extract",
+  "organization": "Directorate General of Health Services (DGHS), Ministry of Health and Family Welfare",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html",
+    "https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.json",
+    "https://fhir.dghs.gov.bd/core/ImplementationGuide-bd.fhir.core.json"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": "2026-10-15",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution": "Directorate General of Health Services (DGHS), Bangladesh — Bangladesh Core FHIR IG; codes: BBS geo-code system",
+  "files": {
+    "areas.csv": "1b398554b1a1ee1f30610cca099c7edd2b3fab778f78cb19ac504c3bbd557815",
+    "crosswalk.csv": "d29ec55e04edfa25edd736143b27f036670e19109c9969c12af692aa9685539d",
+    "raw/bd-geocodes_sylhet.json": "d8330baf5bcd6f3e7c8fb0c50329ff5ee16bfbeac88cd005ab57b6b232a49724"
+  },
+  "notes": "CodeSystem https://fhir.dghs.gov.bd/core/CodeSystem/bd-geocodes version 0.5.0, status draft, date 2026-10-15T00:09:54+00:00, 1591 codes nationally. Divisions, districts, upazilas/city thanas, city corporations and paurashavas only: no union-level codes (only 'Unions Of X Upazila' placeholders). The IG does not say which BBS release the codes come from. Skipped entries: 603600 Habiganj N/A (district placeholder (no city corporation)); 6036008705 Unions of Shayestaganj (union-group placeholder, no union names in this list); 605800 Moulvibazar N/A (district placeholder (no city corporation)); 609000 Sunamganj N/A (district placeholder (no city corporation)); 609100 Sylhet N/A (district placeholder (no city corporation)); 6091506250 Sylhet City Corp. (part of the city corporation inside thana Sylhet Sadar); plus 39 'Unions Of ... Upazila' placeholders.",
+  "division": "sylhet",
+  "kind": "dghs_geocodes"
+}

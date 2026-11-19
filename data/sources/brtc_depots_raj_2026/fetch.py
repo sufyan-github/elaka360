@@ -1,0 +1,333 @@
+#!/usr/bin/env python3
+"""Fetch BRTC bus depots located in Rajshahi Division from brtc.gov.bd (BRTC_DEPOTS_RAJ_2026).
+
+Usage: python3 fetch.py [--division rajshahi|rangpur|dhaka|chattogram|khulna|barishal|sylhet|mymensingh] [--out DIR]   (default: Rajshahi into this folder; DIVISIONS.md)"""
+# --- polite HTTP helper (copy this block into each fetch.py; stdlib + requests only) -----------------
+# Many *.gov.bd servers send only their leaf certificate and omit the intermediate CA. Browsers fetch the
+# missing intermediate via the certificate's AIA URL; we do the same explicitly: download the published
+# intermediates from the CA and add them to certifi's bundle. TLS verification stays ON.
+import os, time, tempfile, urllib.parse, urllib.robotparser
+import requests
+
+UA = "Elaka360-data-pipeline (research; contact via repository)"
+INTERMEDIATES = [  # CA-published intermediates (AIA "CA Issuers" URLs) that some gov.bd hosts fail to send
+    "http://crt.sectigo.com/SectigoPublicServerAuthenticationCADVR36.crt",
+    "http://crt.sectigo.com/SectigoPublicServerAuthenticationCAOVR36.crt",
+    "http://crt.sectigo.com/SSL2BUYEMEARSADomainValidationSecureServerCA.crt",
+]
+MIN_DELAY = 1.2  # seconds between requests to the same host
+
+_last, _robots, _bundle = {}, {}, None
+S = requests.Session()
+S.headers["User-Agent"] = UA
+
+
+def _der_to_pem(der):
+    import base64
+    b = base64.encodebytes(der).decode().replace("\n", "")
+    return "-----BEGIN CERTIFICATE-----\n" + "\n".join(b[i:i + 64] for i in range(0, len(b), 64)) + "\n-----END CERTIFICATE-----\n"
+
+
+def ca_bundle():
+    global _bundle
+    if _bundle:
+        return _bundle
+    import certifi
+    pems = [open(certifi.where(), encoding="ascii").read()]
+    for u in INTERMEDIATES:
+        try:
+            r = requests.get(u, timeout=30, headers={"User-Agent": UA})
+            if r.ok:
+                pems.append(r.content.decode() if r.content.startswith(b"-----") else _der_to_pem(r.content))
+        except requests.RequestException:
+            pass
+        time.sleep(MIN_DELAY)
+    fd, path = tempfile.mkstemp(suffix=".pem")
+    with os.fdopen(fd, "w") as f:
+        f.write("\n".join(pems))
+    _bundle = path
+    return path
+
+
+def allowed(url):
+    p = urllib.parse.urlsplit(url)
+    base = f"{p.scheme}://{p.netloc}"
+    if base not in _robots:
+        rp = urllib.robotparser.RobotFileParser()
+        try:
+            r = get_raw(base + "/robots.txt")
+            rp.parse(r.text.splitlines() if (r is not None and r.status_code == 200 and "html" not in r.headers.get("content-type", "")) else [])
+        except Exception:
+            rp.parse([])
+        _robots[base] = rp
+    return _robots[base].can_fetch(UA, url)
+
+
+def get_raw(url, **kw):
+    host = urllib.parse.urlsplit(url).netloc
+    wait = MIN_DELAY - (time.time() - _last.get(host, 0))
+    if wait > 0:
+        time.sleep(wait)
+    try:
+        return S.get(url, timeout=kw.pop("timeout", 60), verify=ca_bundle(), **kw)
+    finally:
+        _last[host] = time.time()
+
+
+def get(url, retries=2, **kw):
+    """Polite GET; returns Response or None (never raises)."""
+    if not allowed(url):
+        print("robots.txt disallows", url)
+        return None
+    for i in range(retries + 1):
+        try:
+            r = get_raw(url, **kw)
+            if r.status_code < 500:
+                return r
+        except requests.RequestException as e:
+            print("fetch failed", url, e)
+        time.sleep(3 * (i + 1))
+    return None
+# --- end helper ---------------------------------------------------------------------------------------
+
+# --- common utilities (stdlib only) -------------------------------------------------------------------
+import csv, hashlib, html as _html, json, re, shutil, subprocess, sys, unicodedata
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+RAW = HERE / "raw"
+PLACE_COLS = ["source_key", "source_id", "name_bn", "name_en", "category_key", "lat", "lon", "address", "district_en",
+              "upazila_en", "phone", "website", "email", "opening_hours", "operator", "ownership", "extra_json",
+              "source_url", "notes"]
+FACT_COLS = ["entity_level", "entity_name_en", "district_en", "upazila_en", "code", "fact", "value", "unit", "basis",
+             "year", "source_key", "source_url", "notes"]
+_BN = str.maketrans("০১২৩৪৫৬৭৮৯", "0123456789")
+
+
+def nfc(s):
+    return unicodedata.normalize("NFC", s or "").strip()
+
+
+def asc(s):
+    """Bangla digits -> ASCII digits."""
+    return (s or "").translate(_BN)
+
+
+def clean(s):
+    s = re.sub(r"<[^>]+>", " ", s or "")
+    s = _html.unescape(s).replace("\xa0", " ")
+    return nfc(re.sub(r"\s+", " ", s))
+
+
+def tables(html_text):
+    """All <table>s of a page as lists of rows (lists of cleaned cell strings)."""
+    out = []
+    for t in re.findall(r"<table\b.*?</table>", html_text, flags=re.S | re.I):
+        rows = []
+        for tr in re.findall(r"<tr\b.*?</tr>", t, flags=re.S | re.I):
+            cells = [clean(c) for c in re.findall(r"<t[dh]\b[^>]*>(.*?)</t[dh]>", tr, flags=re.S | re.I)]
+            if any(cells):
+                rows.append(cells)
+        out.append(rows)
+    return out
+
+
+def content_text(html_text):
+    """Main content block of a national-portal (v2) page as text lines."""
+    s = re.sub(r"<(script|style)[^>]*>.*?</\1>", "", html_text, flags=re.S | re.I)
+    s = re.sub(r"</(tr|p|div|li|h\d)>|<br\s*/?>", "\n", s, flags=re.I)
+    s = re.sub(r"</t[dh]>", " | ", s, flags=re.I)
+    s = _html.unescape(re.sub(r"<[^>]+>", " ", s)).replace("\xa0", " ")
+    lines = [nfc(re.sub(r"[ \t]+", " ", l)) for l in s.splitlines()]
+    lines = [l for l in lines if l]
+    try:
+        a = next(i for i, l in enumerate(lines) if l.startswith("কন্টেন্ট:"))
+        b = next(i for i, l in enumerate(lines) if i > a and "এই কনটেন্টটি শেয়ার" in l)
+        return lines[a + 1:b]
+    except StopIteration:
+        return lines
+
+
+def phone_norm(s):
+    """ASCII digits, keep the source's grouping; several numbers joined with '; '."""
+    s = asc(s)
+    parts = [p.strip(" ,;/") for p in re.split(r"[,;/]|\s{2,}", s)]
+    return "; ".join(p for p in parts if re.search(r"\d{4}", p))
+
+
+def save_raw(name, content):
+    RAW.mkdir(exist_ok=True)
+    p = RAW / name
+    p.write_bytes(content if isinstance(content, bytes) else content.encode("utf-8"))
+    return p
+
+
+def pdftotext(path, first=None, last=None, layout=True):
+    """Text of a PDF via poppler's pdftotext if installed (optional dependency); None otherwise."""
+    exe = shutil.which("pdftotext")
+    if not exe:
+        return None
+    cmd = [exe] + (["-layout"] if layout else []) + (["-f", str(first)] if first else []) + (["-l", str(last)] if last else []) + [str(path), "-"]
+    try:
+        return subprocess.run(cmd, capture_output=True, text=True, timeout=300).stdout
+    except Exception:
+        return None
+
+
+def write_csv(name, cols, rows):
+    with open(HERE / name, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=cols, extrasaction="raise")
+        w.writeheader()
+        for r in rows:
+            w.writerow({c: ("" if r.get(c) is None else r.get(c)) for c in cols})
+    print(f"wrote {name}: {len(rows)} rows")
+
+
+def write_manifest(meta, files):
+    hashes = {}
+    for rel in files:
+        p = HERE / rel
+        if p.exists():
+            hashes[rel] = hashlib.sha256(p.read_bytes()).hexdigest()
+    meta = dict(meta, files=hashes)
+    (HERE / "SOURCE.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print("wrote SOURCE.json")
+
+
+def xj(d):
+    d = {k: v for k, v in d.items() if v not in (None, "", [], {})}
+    return json.dumps(d, ensure_ascii=False, separators=(",", ":")) if d else ""
+# --- end common utilities -----------------------------------------------------------------------------
+
+# --- division selection (data/sources/DIVISIONS.md) ---------------------------------------------------------
+import argparse
+DIVISION_CODES = {"rajshahi": "raj", "rangpur": "rang", "dhaka": "dhk", "chattogram": "ctg", "khulna": "khl",
+                  "barishal": "bar", "sylhet": "syl", "mymensingh": "mym"}
+
+
+def division_setup(here, base_key, configured, extra_args=()):
+    """Parse --division/--out -> (args, out_dir, source_key). Rajshahi (default) keeps this folder and key; another
+    division writes to its own folder named per DIVISIONS.md and never touches the Rajshahi files."""
+    ap = argparse.ArgumentParser(description=(__doc__ or "").strip().split("\n")[0])
+    ap.add_argument("--division", default="rajshahi", choices=list(DIVISION_CODES))
+    ap.add_argument("--out", help="output folder (default: this folder for rajshahi, the division's own folder otherwise)")
+    for name, kw in extra_args:
+        ap.add_argument(name, **kw)
+    args = ap.parse_args()
+    if args.division not in configured:
+        ap.error("division %r is not configured in this collector yet (configured: %s)" % (args.division, ", ".join(configured)))
+    here = os.path.abspath(str(here))
+    folder = os.path.basename(here)
+    if args.division == "rajshahi":
+        name, key = folder, base_key
+    else:
+        code = DIVISION_CODES[args.division]
+        name = folder.replace("_raj_", "_%s_" % code) if "_raj_" in folder else "%s_%s" % (folder, args.division)
+        key = base_key.replace("_RAJ_", "_%s_" % code.upper()) if "_RAJ_" in base_key else "%s_%s" % (base_key, args.division.upper())
+    out = os.path.abspath(args.out) if args.out else (here if args.division == "rajshahi" else os.path.join(os.path.dirname(here), name))
+    if args.division != "rajshahi" and out == here:
+        ap.error("refusing to write another division's output into the Rajshahi folder")
+    os.makedirs(out, exist_ok=True)
+    return args, out, key
+# --- end division selection ---------------------------------------------------------------------------------
+
+# --- BRTC_DEPOTS_RAJ_2026 -----------------------------------------------------------------------------
+KEY = "BRTC_DEPOTS_RAJ_2026"
+URL = "https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0"   # ডিপো/ইউনিটসমূহের কর্মকর্তাবৃন্দের তালিকা
+DIST = {nfc("বগুড়া"): "Bogura", nfc("পাবনা"): "Pabna", nfc("রাজশাহী"): "Rajshahi", nfc("সিরাজগঞ্জ"): "Sirajganj", nfc("নাটোর"): "Natore",
+        nfc("নওগাঁ"): "Naogaon", nfc("জয়পুরহাট"): "Joypurhat", nfc("চাঁপাইনবাবগঞ্জ"): "Chapainawabganj"}
+
+DIST_BY_DIV = {
+    "rajshahi": DIST,
+    "rangpur": {nfc("রংপুর"): "Rangpur", nfc("দিনাজপুর"): "Dinajpur", nfc("ঠাকুরগাঁও"): "Thakurgaon", nfc("পঞ্চগড়"): "Panchagarh",
+                nfc("নীলফামারী"): "Nilphamari", nfc("সৈয়দপুর"): "Nilphamari", nfc("লালমনিরহাট"): "Lalmonirhat",
+                nfc("কুড়িগ্রাম"): "Kurigram", nfc("গাইবান্ধা"): "Gaibandha"},
+}
+# Dhaka: depots are named after a place, often a Dhaka-city locality (the page gives no district): place -> (district, upazila,
+# id slug). The district of a locality that is not a district name is added from the place name (flagged in notes).
+DHAKA_DEPOTS = {"যাত্রাবাড়ী": ("Dhaka", "", "jatrabari"), "জোয়ারসাহারা": ("Dhaka", "", "joarsahara"), "মতিঝিল": ("Dhaka", "", "motijheel"),
+                "কল্যাণপুর": ("Dhaka", "", "kalyanpur"), "মিরপুর": ("Dhaka", "", "mirpur"), "মোহাম্মদপুর": ("Dhaka", "", "mohammadpur"),
+                "গাবতলী": ("Dhaka", "", "gabtoli"), "গাজীপুর": ("Gazipur", "", "gazipur"), "নারায়ণগঞ্জ": ("Narayanganj", "", "narayanganj"),
+                "নরসিংদী": ("Narsingdi", "", "narsingdi"), "টুঙ্গীপাড়া": ("Gopalganj", "Tungipara", "tungipara")}
+DIST_BY_DIV["dhaka"] = {nfc(k): v[0] for k, v in DHAKA_DEPOTS.items()}
+DHAKA_DISTRICT_NAMES = {nfc(x) for x in ("গাজীপুর", "নারায়ণগঞ্জ", "নরসিংদী")}
+# Chattogram: depots named after a district town, and Sonapur (Noakhali; the page gives no district: flagged in notes)
+CHATTOGRAM_DEPOTS = {"কুমিল্লা": ("Cumilla", "", "cumilla"), "চট্টগ্রাম": ("Chattogram", "", "chattogram"),
+                     "সোনাপুর": ("Noakhali", "", "sonapur"), "ব্রাহ্মণবাড়িয়া": ("Brahmanbaria", "", "brahmanbaria"),
+                     "কক্সবাজার": ("Cox's Bazar", "", "coxsbazar")}
+DIST_BY_DIV["chattogram"] = {nfc(k): v[0] for k, v in CHATTOGRAM_DEPOTS.items()}
+# Khulna: one depot (Khulna); the Jhenaidah training institute and Jashore training centre are not terminals
+KHULNA_DEPOTS = {"খুলনা": ("Khulna", "", "khulna")}
+DIST_BY_DIV["khulna"] = {nfc(k): v[0] for k, v in KHULNA_DEPOTS.items()}
+# Barishal: one depot (Barishal)
+BARISHAL_DEPOTS = {"বরিশাল": ("Barishal", "", "barishal")}
+DIST_BY_DIV["barishal"] = {nfc(k): v[0] for k, v in BARISHAL_DEPOTS.items()}
+# Sylhet: one depot (Sylhet)
+SYLHET_DEPOTS = {"সিলেট": ("Sylhet", "", "sylhet")}
+DIST_BY_DIV["sylhet"] = {nfc(k): v[0] for k, v in SYLHET_DEPOTS.items()}
+# Mymensingh: one depot (Mymensingh)
+MYMENSINGH_DEPOTS = {"ময়মনসিংহ": ("Mymensingh", "", "mymensingh")}
+DIST_BY_DIV["mymensingh"] = {nfc(k): v[0] for k, v in MYMENSINGH_DEPOTS.items()}
+DEPOTS_BY_DIV = {"dhaka": ({nfc(k): v for k, v in DHAKA_DEPOTS.items()}, DHAKA_DISTRICT_NAMES),
+                 "chattogram": ({nfc(k): v for k, v in CHATTOGRAM_DEPOTS.items()},
+                                {nfc(x) for x in ("কুমিল্লা", "চট্টগ্রাম", "ব্রাহ্মণবাড়িয়া", "কক্সবাজার")}),
+                 "khulna": ({nfc(k): v for k, v in KHULNA_DEPOTS.items()}, {nfc("খুলনা")}),
+                 "barishal": ({nfc(k): v for k, v in BARISHAL_DEPOTS.items()}, {nfc("বরিশাল")}),
+                 "sylhet": ({nfc(k): v for k, v in SYLHET_DEPOTS.items()}, {nfc("সিলেট")}),
+                 "mymensingh": ({nfc(k): v for k, v in MYMENSINGH_DEPOTS.items()}, {nfc("ময়মনসিংহ")})}
+
+
+def main():
+    global HERE, RAW, KEY, DIST
+    args, out, KEY = division_setup(HERE, KEY, list(DIST_BY_DIV))
+    HERE, RAW = Path(out), Path(out) / "raw"
+    division, head = args.division, args.division.capitalize()
+    DIST = DIST_BY_DIV[division]
+    places = []
+    r = get(URL)
+    if r is not None and r.ok:
+        for t in tables(r.text):
+            for row in t:
+                if len(row) < 3:
+                    continue
+                m = re.search(r"(\S+) (বাস ডিপো(?: ও প্রশিক্ষণ কেন্দ্র)?|প্রশিক্ষণ কেন্দ্র)$", nfc(row[1]))
+                if not m or nfc(m.group(1)) not in DIST:
+                    continue
+                name = f"{m.group(1)} {m.group(2)}"
+                is_depot = "বাস ডিপো" in name
+                if not is_depot:
+                    continue  # training centres are not terminals
+                office = phone_norm(row[2]) if len(row) > 2 else ""
+                dk = DHAKA_DEPOTS.get(nfc(m.group(1))) if division == "dhaka" else \
+                    DEPOTS_BY_DIV[division][0].get(nfc(m.group(1))) if division in DEPOTS_BY_DIV else None
+                district_names = DEPOTS_BY_DIV[division][1] if division in DEPOTS_BY_DIV else set()
+                places.append(dict(
+                    source_key=KEY, source_id=(f"brtc-{dk[2]}-depot" if dk else f"brtc-{DIST[nfc(m.group(1))].lower()}-{'depot' if is_depot else 'training'}"),
+                    name_bn=f"বিআরটিসি {name}", name_en="", category_key="transport.bus_terminal" if is_depot else "transport",
+                    district_en=DIST[nfc(m.group(1))], upazila_en=(dk[1] if dk else ""), phone=office, operator="বাংলাদেশ সড়ক পরিবহন কর্পোরেশন (বিআরটিসি)", ownership="public",
+                    extra_json=xj({"unit_type": "bus depot" if is_depot else "training centre", "office_phone_raw": row[2] if len(row) > 2 else ""}),
+                    source_url=URL,
+                    notes=("BRTC bus depot (BRTC buses start here) mapped to transport.bus_terminal. " if is_depot else "BRTC training centre, not a terminal. ")
+                          + "Name prefixed with 'বিআরটিসি' (source lists it under BRTC depots). Only the office number is kept; the unit head's "
+                          "mobile and name are not collected." + (" Office number printed as '০২-০৫১৬৬১৪৫' (02- prefix plus old Bogura code 051); the Bogura district portal "
+                          "lists BRTC as 051-66145 (বাসস্ট্যান্ড)." if "০৫১৬৬১৪৫" in row[2] else "")
+                          + (" No office number printed." if division != "rajshahi" and not office else "")
+                          + (f" Office number printed as '{row[2].strip()}' (02- prefix followed by the old district trunk code)."
+                             if division in ("chattogram", "khulna", "barishal") and re.match(r"^০২-০", row[2].strip()) else "")
+                          + (f" District{' and upazila' if dk[1] else ''} added from the depot's place name ({m.group(1)}); the source gives none."
+                             if dk and nfc(m.group(1)) not in district_names else "")))
+    write_csv("places.csv", PLACE_COLS, places)
+    write_manifest(dict(
+        key=KEY, division=division, kind="brtc",
+        name=f"BRTC — bus depots in {head} Division", organization="Bangladesh Road Transport Corporation (BRTC)",
+        source_type="government_portal", trust_level=4, urls=[URL], accessed=__import__("datetime").date.today().isoformat(),
+        publication_date=None, license=None, license_url=None, attribution="Bangladesh Road Transport Corporation (brtc.gov.bd)",
+        notes="No licence stated. BRTC lists depots with the unit head's name/mobile; only depot names and office landlines are kept. "
+              + ("No Rajshahi-district BRTC depot is listed. " if division == "rajshahi" else
+                 f"{len(places)} depot(s) of {head} Division listed. ")
+              + "No addresses or coordinates."),
+        ["places.csv"])
+
+
+if __name__ == "__main__":
+    main()

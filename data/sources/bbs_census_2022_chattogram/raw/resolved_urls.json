@@ -1,0 +1,42 @@
+{
+ "union_statistics": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/f376ca7e7ee5405f8311de650415b9d8.pdf",
+ "community_xlsx": {
+  "Chattogram": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/80e929a76aa14282826502ff159a8aa5.xlsx",
+  "Cox's Bazar": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/30dc3493153848f2b825adaeec3fe941.xlsx",
+  "Bandarban": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/7851f407961e43399592b1b6df4534f7.xlsx",
+  "Rangamati": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/0aff8184552d4476b07064b259684f67.xlsx",
+  "Noakhali": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/f2357c3b52ee4ba284f7750301b6ecef.xlsx",
+  "Feni": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/2b9c505de31e463582957bc16a96ed2f.xlsx",
+  "Cumilla": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/4c96db4232fe4ea9b2065c48c992a84d.xlsx",
+  "Chandpur": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/18332832c988417c97370153dc7c5714.xlsx",
+  "Brahmanbaria": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/a5a9606aa66a48acb6a4eb93d51fab3c.xlsx",
+  "Khagrachhari": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/c76f262b21804911867771950482c1a8.xlsx",
+  "Lakshmipur": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/7557ac06285f4bf28273e40f491200cc.xlsx"
+ },
+ "district_page": {
+  "Chattogram": "https://bbs.gov.bd/pages/files/6a0943d3af5b16b9ec401c3f",
+  "Cox's Bazar": "https://bbs.gov.bd/pages/files/6a09443eaf5b16b9ec401cb0",
+  "Bandarban": "https://bbs.gov.bd/pages/files/6a09449887a6fde6b39ef2fd",
+  "Rangamati": "https://bbs.gov.bd/pages/files/6a0944fff570c41f02eb325b",
+  "Noakhali": "https://bbs.gov.bd/pages/files/6a094570c8bc218c41d12a2f",
+  "Feni": "https://bbs.gov.bd/pages/files/6a0945b8522ce4e07c174594",
+  "Cumilla": "https://bbs.gov.bd/pages/files/6a0946179f0c5ba58e700fb6",
+  "Chandpur": "https://bbs.gov.bd/pages/files/6a0946672a941ac3be71ef31",
+  "Brahmanbaria": "https://bbs.gov.bd/pages/files/6a0947601f32bf22d5f1d45a",
+  "Khagrachhari": "https://bbs.gov.bd/pages/files/6a0947daf570c41f02eb3569",
+  "Lakshmipur": "https://bbs.gov.bd/pages/files/6a0948425d40ccedfd8db671"
+ },
+ "district_pdf": {
+  "Chattogram": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/6f835241-725c-42c7-a740-858d211699b7.pdf",
+  "Cox's Bazar": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/ea2a0b77-6b05-40a9-af76-90c9828c4992.pdf",
+  "Bandarban": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/288dd839-513c-483b-9006-a800daf482c4.pdf",
+  "Rangamati": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/fc51a471-714b-4f0a-8ff1-9e1eba8f09a7.pdf",
+  "Noakhali": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/6654617c-af31-41db-b8ca-9cb21bef0471.pdf",
+  "Feni": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/05b9c537-db60-4d35-9069-76f19b350d91.pdf",
+  "Cumilla": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/deec029c-d190-4864-a93a-c1f22c866c40.pdf",
+  "Chandpur": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/4ef30b8b-e9f6-4cc3-9c94-5940285bd4b0.pdf",
+  "Brahmanbaria": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/26454c8b-12b6-4587-bf58-a76fbc4708ba.pdf",
+  "Khagrachhari": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/727d240a-247a-45c4-9d11-5d47cdf34106.pdf",
+  "Lakshmipur": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/bce6692b-3bc4-43db-bcf3-2b6137aa9a21.pdf"
+ }
+}

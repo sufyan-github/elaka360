@@ -1,0 +1,36 @@
+{
+  "key": "BANBEIS_INST_MYM_2026",
+  "name": "BANBEIS institution lists (EIIN registry, e-survey 2024) — Mymensingh Division",
+  "organization": "Bangladesh Bureau of Educational Information and Statistics (BANBEIS), Ministry of Education",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637",
+    "https://banbeis.gov.bd/pages/files/6919975e933eb65569ddc579",
+    "https://banbeis.gov.bd/pages/files/69199763933eb65569ddc6e8",
+    "https://banbeis.gov.bd/pages/files/69568a64a31054345f1038ee",
+    "https://banbeis.gov.bd/pages/files/69199762933eb65569ddc6d1",
+    "https://banbeis.gov.bd/pages/files/6919975f933eb65569ddc5ce",
+    "https://banbeis.gov.bd/pages/files/69199761933eb65569ddc66f",
+    "https://institute-search.ieims.banbeis.gov.bd/"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Source: BANBEIS (banbeis.gov.bd), institution lists based on e-survey 2024",
+  "division": "mymensingh",
+  "kind": "banbeis",
+  "notes": "National XLSX lists (school; college & school-and-college; madrasa; government technical; independent technical; public/private university; professional) published on banbeis.gov.bd file pages (object-store links), filtered to DIVISION_NAME=Mymensingh and deduplicated by EIIN; same collector and rules as BANBEIS_INST_RAJ_2026. Fields: division, district, thana, institute type, education level, EIIN, name (English only), post office, e-mail, management, MPO status, for-whom, geographical position, area status. No coordinates, no phone numbers, no Bangla names. source_url per row is the BANBEIS Institute Search detail page for that EIIN (its /api/ is disallowed by robots.txt, not crawled). No education-board cross-check for this division. Licence not stated on the portal.",
+  "files": {
+    "places.csv": "f982b034ab2a507cbd90cf54ae010c3c522b3549cf4f4d8b15a871aa0b3745c0",
+    "facts.csv": "7e81df30ae5af8a943495c56bc3210ebdff55cf78956fce294e5b8733f9b8c4b",
+    "raw/banbeis_college_mymensingh_division.csv": "59003d7c795f054444f0a3d3221ad3360d963898ecc0ae173116ede3a9de62a3",
+    "raw/banbeis_govt_technical_mymensingh_division.csv": "25a82be1a6c102ee7ee0aca5a7f385f67bda7e68d203121670aa61bcd532ee01",
+    "raw/banbeis_madrasa_mymensingh_division.csv": "729eecaa42440ab1809039da4cd73536358a58c12297beaf340eed314e528f43",
+    "raw/banbeis_professional_mymensingh_division.csv": "bb31552508eecba9aaa04382a40dc73d4528cff2d3dd16469eb56c94b7d4769e",
+    "raw/banbeis_school_mymensingh_division.csv": "eee4a0d4e678fef681c4c49fc62294abec31242adbf90631ecd29273795f0b0e",
+    "raw/banbeis_technical_mymensingh_division.csv": "bc96629aaa18a01ed800143c3ec81fa1b3ddf469cf7571d63302238d35c1b34f",
+    "raw/banbeis_university_mymensingh_division.csv": "cecdeddb6edc1a92c8acf8f2fb3681d1651bad5cc46b7a4da3fa50ad43c83ed4"
+  }
+}

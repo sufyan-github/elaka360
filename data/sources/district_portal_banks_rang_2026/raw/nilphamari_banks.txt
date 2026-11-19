@@ -1,0 +1,70 @@
+বিভিন্ন ব্যাংকসমূহ
+ক্র.নং
+| ব্যাংকের নাম
+| মোবাইল নং
+| ওয়েব সাইট
+|
+০১
+| সোনালীব্যাংক, নীলফামারীশাখা
+| ৬১৪৮১
+| www.sonalibank.com.bd
+|
+০২
+| সোনালীব্যাংক, বাজারশাখা
+| [mobile redacted]
+| www.sonalibank.com.bd
+|
+০৩
+| জনতাব্যাংক, নীলফামারীশাখা
+| [mobile redacted]
+| www.janatabank-bd.com
+|
+০৪
+| ইসলামীব্যাংক, নীলফামারীশাখা
+| [mobile redacted]
+| www.islamibankbd.com
+|
+০৫
+| অগ্রণীব্যাংক, নীলফামারীশাখা
+| [mobile redacted]
+| www.agranibank.org
+|
+০৬
+| স্ট্যান্ডার্ডব্যাংক, নীলফামারীশাখা
+| [mobile redacted]
+| www.standardbankbd.com
+|
+০৭
+| রূপালীব্যাংক, নীলফামারীশাখা
+| [mobile redacted]
+| www.rupalibank.org |
+৮
+| পূবালীব্যাংক, নীলফামারীশাখা
+| [mobile redacted]
+| www.pubalibangla.com
+|
+০৯
+| উত্তরাব্যাংক, নীলফামারীশাখা
+| [mobile redacted]
+| www.uttarabank-bd.com
+|
+১০
+| রাকাব, নীলফামারীশাখা
+| [mobile redacted]
+| www.rakub.org.bd
+|
+১১
+| মার্কেন্টাইল ব্যাংক,নীলফামারীশাখা
+| ০৫৫১-৬২০০৭-০৮
+| www.mblbd.com
+|
+১২
+| ডাচ বাংলা ব্যাংক,নীলফামারীশাখা
+| [mobile redacted]
+| www.dutchbanglabank.com
+|
+১৩
+| কর্মসংস্থান ব্যাংক, নীলফামারী
+| [mobile redacted]
+| www.karmasangsthanbank.gov.bd
+|

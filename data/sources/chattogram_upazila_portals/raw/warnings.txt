@@ -1,0 +1,43 @@
+Cumilla/Chandina: menu item 'ইউনিয়ন ভিত্তিক গ্রাম পুলিশ' leads to 'গ্রাম পুলিশ', not a union list (not used)
+Cumilla/Chandina: no union list menu item
+Cumilla/Daudkandi: pourashava page without a name: https://daudkandi.comilla.gov.bd/pages/static-pages/69912931516a96d4de4084ec
+Cumilla/Homna: pourashava page without a name: https://homna.comilla.gov.bd/pages/static-pages/6991291b516a96d4de407a6b
+Cumilla/Laksam: pourashava page without a name: https://laksam.comilla.gov.bd/pages/static-pages/6991133635ce18e1c073b240
+Cumilla/Muradnagar: no union list menu item
+Cumilla/Nangalkot: no union list menu item
+Cumilla/Nangalkot: pourashava page without a name: https://nangalkot.comilla.gov.bd/pages/static-pages/6991133435ce18e1c073b152
+Cumilla/Comilla Sadar: no union list menu item
+Cumilla/Bangara: no union list menu item
+Brahmanbaria/Brahmanbaria Sadar: no union list menu item
+Brahmanbaria/Brahmanbaria Sadar: pourashava page without a name: https://sadar.brahmanbaria.gov.bd/pages/static-pages/6990cf2935ce18e1c0719c79
+Brahmanbaria/Kasba: no union list menu item
+Brahmanbaria/Akhaura: no union list menu item
+Rangamati/Baghaichari: no union list menu item
+Rangamati/Juraichari: no union list menu item
+Noakhali/Begumganj: no union list menu item
+Noakhali/Hatia: pourashava page without a name: https://hatia.noakhali.gov.bd/pages/static-pages/6990ef3035ce18e1c072c1bb
+Noakhali/Senbug: pourashava page without a name: https://senbug.noakhali.gov.bd/pages/static-pages/6991213c516a96d4de401091
+Chandpur/Chandpur Sadar: pourashava page without a name: https://sadar.chandpur.gov.bd/pages/static-pages/69913857516a96d4de40c8bf
+Chandpur/Matlab South: pourashava page without a name: https://matlabsouth.chandpur.gov.bd/pages/static-pages/69913861516a96d4de40cd16
+Chandpur/Matlab North: pourashava page without a name: https://matlabnorth.chandpur.gov.bd/pages/static-pages/69913893516a96d4de40e403
+Lakshmipur/Lakshmipur Sadar: menu item 'ইউনিয়নসমূহ' leads to 'ইউনিয়নসমূহের চেয়ারম্যান/দায়িত্বপ্রাপ্ত কর্মকর্তা/প্রশাসনিক কর্মকর্তাবৃন্দ', not a union list (not used)
+Lakshmipur/Lakshmipur Sadar: no union list menu item
+Lakshmipur/Ramgati: no union list menu item
+Lakshmipur/Chandraganj: no union rows parsed from https://chandraganj.lakshmipur.gov.bd/pages/static-pages/union-list-vy2f66-6a379a3fea1dba9cc6980a72
+Chattogram/Banshkhali: no union list menu item
+Chattogram/Boalkhali: pourashava page without a name: https://boalkhali.chattogram.gov.bd/pages/static-pages/69913de0516a96d4de40f922
+Chattogram/Anwara: menu item 'ইউনিয়ন সমূহ' leads to 'সকল ইউপি চেয়ারম্যান ও ইউপি সদস্যবৃন্দের তথ্য', not a union list (not used)
+Chattogram/Anwara: no union list menu item
+Chattogram/Satkania: menu item '# ইউনিয়নসমূহ' leads to 'ইউনিয়ন পরিষদের চেয়ারম্যান, সদস্য ও সচিবদের নামের তালিকা', not a union list (not used)
+Chattogram/Satkania: no union list menu item
+Chattogram/Hathazari: pourashava page without a name: https://hathazari.chattogram.gov.bd/pages/static-pages/এক-নজরে-হাটহাজারী-পৌরসভা-ed3fc0-6990e98c35ce18e1c072830d
+Chattogram/Raozan: no union list menu item
+Chattogram/Karnafuli: no union list menu item
+Chattogram/Fatikchhari Uttar: no union list menu item
+Cox's Bazar/Eidgaon: no union rows parsed from https://eidgaon.coxsbazar.gov.bd/pages/static-pages/list-of-unions-mmtdod-6a6f67367380d57bc690de54
+Khagrachhari/Khagrachhari Sadar: no union list menu item
+Khagrachhari/Dighinala: no union list menu item
+Khagrachhari/Panchari: no union list menu item
+Khagrachhari/Ramgarh: no union list menu item
+Khagrachhari/Matiranga: no union list menu item
+Bandarban/Rowangchhari: no union list menu item

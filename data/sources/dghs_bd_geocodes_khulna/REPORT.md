@@ -1,0 +1,33 @@
+# DGHS bd-geocodes (BBS geocodes) — Khulna Division
+
+- **Source:** DGHS Bangladesh Core FHIR Implementation Guide, CodeSystem `bd-geocodes` v0.5.0 (2026-10-15), 1,591 codes nationally. https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html
+- **Run:** `python3 -I data/sources/dghs_bd_geocodes/fetch.py --division khulna` (accessed 2026-11-18). Key `DGHS_BD_GEOCODES_KHULNA`, division `khulna`, kind `dghs_geocodes`.
+- **Licence:** CC0-1.0 (the guide's licence field).
+- **Code layout (inferred, as for Rajshahi):** 2 digits division (40) · 4 district · 6 city corporation (404733 Khulna) · 8 upazila or city thana · 10 paurashava.
+- **Coverage:**
+  - 10 districts, 1 city corporation, 59 upazilas.
+  - 5 city thanas in Khulna City Corporation: Daulatpur, Khalishpur, Khan Jahan Ali, Khulna Sadar, Sonadanga.
+  - 36 paurashavas.
+  - **No unions:** the "Unions Of … Upazila" placeholders (61) are skipped.
+- **Daulatpur and Khan Jahan Ali:**
+  - Both sit in the city corporation's code space (40473321, 40473348), but the list also has "Unions Of Daulatpur Upazila" / "Unions Of Khan Jahan Ali Upazila".
+  - The earlier rule would have read them as upazilas (61 upazilas). BBS 2022 has them as metro thanas of the city corporation; their unions (Arangghata, Jogipol, Atra Gilatala) are under Dighalia and Phultala upazilas. HDX v03 and the seed have 9 upazilas in Khulna district without them.
+  - So they are read as metro thanas (same handling as Dhaka North/South), with a note.
+  - The 5 "Khulna City Corp." 10-digit entries (parts of the city corporation inside its thanas) are skipped, as for Dhaka/Chattogram.
+- **fetch.py changes:**
+  - `METRO_CC_WITH_UNION_GROUPS` gains 404733. The thana note text is now per city corporation (`UNION_GROUP_NOTE`; the Dhaka text is unchanged).
+  - Hand-checked upazila table `UNIT_SEED_BY_DIV["khulna"]` (method `code_hand_checked`):
+    - Dacope 40470017 → Dakop (দাকোপ, 30213): no tier pairs them.
+    - Paikgacha 40470064 → Paikgasa (পাইকগাছা, 30206): only a low fuzzy pair.
+- **Rerun check:**
+  - Rajshahi/Rangpur/Dhaka/Chattogram reruns into a scratch folder: areas.csv and raw files identical.
+  - `crosswalk.csv` differs only in pourashava rows. The seed gained pourashavas after those folders were built; the HEAD version of fetch.py on the current seed gives identical output.
+- **Agreement with HDX v03:** all 59 8-digit upazila codes equal the HDX v03 P-codes minus `BD`. The city-corporation code is 6 digits here vs 8 in HDX (`404733` vs `BD40473300`).
+- **Crosswalk:**
+  - Districts 10/10; city corporation 1/1 (50004).
+  - Upazilas 59/59: 49 exact, 8 skeleton (e.g. Chaugacha, Monirampur, Harinakunda, Batiaghata), 2 hand-checked.
+  - Paurashavas 0/36: the seed has no Khulna Division pourashavas.
+- **Paurashavas (36):** Jashore 8, Jhenaidah 6, Kushtia 5, Chuadanga 4, Bagerhat 3, Narail 3, Khulna 2, Meherpur 2, Satkhira 2, Magura 1.
+  - Same set as BBS 2022 and the HDX 2020 points. The last two digits equal the BBS 2022 paurashava code.
+  - Spellings as printed: "…Paurasava", "Jessore Paurasava", "Jiban Nagar Paurasava", "Harinakunda Paurashava".
+- **Code vintage:** not stated by DGHS.

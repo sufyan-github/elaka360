@@ -1,0 +1,47 @@
+[
+  {
+    "source_id": "SRC-NAT-DIST-UP-2025",
+    "title": "উপজেলা ও ইউনিয়ন — নাটোর জেলা",
+    "owner": "Natore District Administration",
+    "url": "https://www.natore.gov.bd/bn/site/page/M6RA-%E0%A6%89%E0%A6%AA%E0%A6%9C%E0%A7%87%E0%A6%B2%E0%A6%BE-%E0%A6%93-%E0%A6%87%E0%A6%89%E0%A6%A8%E0%A6%BF%E0%A6%AF%E0%A6%BC%E0%A6%A8",
+    "vintage": "Updated 2025-07-28",
+    "claim": "Lists 7 current upazilas and union names; visible sections include Natore Sadar, Singra, Baraigram, Lalpur, Bagatipara, Naldanga; district total is 52.",
+    "limitations": "Page fetch timed out; search-index excerpt was partial. Current upazila grouping reconciled using the visible page and official district aggregate."
+  },
+  {
+    "source_id": "SRC-NAT-GLANCE-2026",
+    "title": "এক নজরে নাটোর",
+    "owner": "Natore District Administration",
+    "url": "https://natore.gov.bd/pages/static-pages/697fbb1d35ce18e1c06cc346",
+    "vintage": "Crawled 2026",
+    "claim": "Official district portal says 52 unions with distribution: Natore Sadar 7, Singra 12, Gurudaspur 6, Baraigram 7, Lalpur 10, Bagatipara 5, Naldanga 5.",
+    "limitations": "Aggregate counts only; does not provide full individual names."
+  },
+  {
+    "source_id": "SRC-NAT-BBS-2011",
+    "title": "District Statistics 2011 — Natore District, Upazila and Union/Ward with Geo-code",
+    "owner": "Bangladesh Bureau of Statistics",
+    "url": "https://file-rajshahi.portal.gov.bd/files/www.natore.gov.bd/files/b18a29f2_3bea_4cb4_90ca_b005fa637413/22c4c121e9780357ed2671fe503280ee.pdf",
+    "vintage": "Published December 2013; administrative data 2011",
+    "claim": "Provides union names and 2011 geo-code components; 52 unions across six then-existing upazilas.",
+    "limitations": "Historical codes and historical grouping; current Naldanga upazila split must be crosswalked. Not a current code registry."
+  },
+  {
+    "source_id": "SRC-NAT-BBS-STAT-2026",
+    "title": "এক নজরে — জেলা পরিসংখ্যান অফিস, নাটোর",
+    "owner": "Bangladesh Bureau of Statistics, District Statistics Office Natore",
+    "url": "https://bbs.natore.gov.bd/pages/static-pages/697fdcd135ce18e1c06d8192",
+    "vintage": "Crawled 2026",
+    "claim": "Reports seven upazilas and 52 unions.",
+    "limitations": "Aggregate confirmation; no individual names in indexed excerpt."
+  },
+  {
+    "source_id": "SRC-NAT-ATLAS-2026",
+    "title": "Natore District: upazilas, unions, population — Upazila Atlas",
+    "owner": "The Daily Sangbad",
+    "url": "https://thedailysangbad.com/districts/natore",
+    "vintage": "Crawled 2026",
+    "claim": "Reports 52 total but differing distribution: Singra 13, Lalpur 11, Gurudaspur 7, Bagatipara 6; Natore Sadar 7, Baraigram 7, Naldanga 5.",
+    "limitations": "Secondary dataset; counts conflict with official district administration aggregate distribution."
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "key": "PORTAL_TOURIST_SPOTS_DHK_2026",
+  "division": "dhaka",
+  "kind": "tourist_spots",
+  "name": "National portal 'দর্শনীয় স্থান' (tourist spot) lists — Dhaka Division district and upazila portals",
+  "organization": "District / Upazila administrations (national portal framework, a2i/Cabinet Division)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://dhaka.gov.bd/pages/tourist-spot",
+    "https://<upazila>.<district>.gov.bd/pages/tourist-spot"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "District / Upazila administrations (national portal framework, a2i/Cabinet Division)",
+  "notes": "Server-rendered list tables (/pages/tourist-spot, paginated with ?page=N) of 13 district + 89 upazila portals. Columns used: title, location; 'transportation' and descriptions not copied; the 'contact' column is mostly a UNO/OC contact or directions, so no phone is taken. No coordinates are published (Google Maps links kept in extra_json, not used). Categories assigned by keyword rules. Licence: none stated on the source; treat as government public information, cite the source.",
+  "files": {
+    "facts.csv": "e3ce8a69279968ae54afdd073ae4a1f991611e45f9f252398ef642e76566f558",
+    "places.csv": "d7a40bb57fc0abfb3911edcfd73ea61dfc441be40aeaa5bbdb8330c0929a759c"
+  }
+}

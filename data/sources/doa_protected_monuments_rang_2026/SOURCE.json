@@ -1,0 +1,38 @@
+{
+  "key": "DOA_PROTECTED_MONUMENTS_RANG_2026",
+  "division": "rangpur",
+  "kind": "doa_monuments",
+  "name": "Department of Archaeology — gazetted protected monuments, Rangpur Division (district PDF lists)",
+  "organization": "প্রত্নতত্ত্ব অধিদপ্তর (Department of Archaeology), Ministry of Cultural Affairs",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://archaeology.gov.bd/pages/static-pages/6922dca5933eb65569e1169f"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": "2025-07-13",
+  "license": null,
+  "license_url": null,
+  "attribution": "প্রত্নতত্ত্ব অধিদপ্তর (Department of Archaeology), Ministry of Cultural Affairs",
+  "notes": "Page 'রংপুর বিভাগের সংরক্ষিত পুরাকীর্তি' links one PDF per district (published 2024-08-31 for 7 districts, Thakurgaon 2025-07-13; 59 monuments). PDFs are Bijoy/SutonnyMJ-encoded Word exports; text converted to Unicode by fetch.py (bijoy2uni) and spot-checked against rendered pages; three conversion slips fixed (TEXT_FIXES_BY_DIV). Coordinates are the DoA's own GPS column (DMS / decimal degrees, parsed); out-of-range values are not used (kept in extra_json). QA against hdx_cod_ab_bgd_rangpur polygons. Descriptions (column 7) are not copied; only a construction-date phrase is kept. Licence: none stated on the source; treat as government public information, cite the source.",
+  "files": {
+    "facts.csv": "31f9c5cd33c1ac547ab456da3c8b8c7aa247f3471f9009ecb54a5cf5209a8fff",
+    "places.csv": "daed8fc69ec2436a1142f9ab9c872ee4ec7351d87d7fef9562aac902ea8fab6a",
+    "raw/doa_dinajpur.pdf": "4536769b8b6aa99ae071a5c6ec6916fa0a60ff4cbed18b158b09d91978646dc0",
+    "raw/doa_dinajpur.txt": "5d4095abb40f71927f744c3fa511234dd1c3b8b7b1513a430bb72baf7c19ab55",
+    "raw/doa_gaibandha.pdf": "9edbc9a1834b35cb15b447e069eafaece9053f80d6b6b13980de592feb909ad3",
+    "raw/doa_gaibandha.txt": "9c4f07c20139f7fa0d89fe42c04f663c8059f7efc74b06dabf66a9a6046f5831",
+    "raw/doa_kurigram.pdf": "fd8bf063a580a179ba0287c049299840fcafef14504ffa3bd384423cc28ca1ed",
+    "raw/doa_kurigram.txt": "87c9e1f2ca118169986d77b2912439ec6bab24afa2d15c73c354f9f90be17c24",
+    "raw/doa_lalmonirhat.pdf": "de7f215e7c3952eba49a7fe0f7144bc6e7883e58553c23e09cda3137711b84a2",
+    "raw/doa_lalmonirhat.txt": "531abcb4451078abcccfd393c8b8ae440470f6dfe1e6a9996cd271f99ec1ff1a",
+    "raw/doa_nilphamari.pdf": "cd205566f88ede19232219a555dcb9a4e46a0578618bf150cae6d187312a3772",
+    "raw/doa_nilphamari.txt": "3ab2cfebac79901d9bf9108e8bf06402192d5aff0ed4381bc4bdfc1f65170b6c",
+    "raw/doa_panchagarh.pdf": "180a15b588cac6915a934cb662e2447ac3fd8dc84986efc79046776403793511",
+    "raw/doa_panchagarh.txt": "23a457a8a18a7845022943d4bd2feb2b8922a5d4a5324b423d739d1e8a54d450",
+    "raw/doa_rangpur.pdf": "7807505f74db99c5f428a260698f12cd1a55d1415eceb444a22049c06a4167ed",
+    "raw/doa_rangpur.txt": "c27e74fc2134015df7745ea999cc7639ee8849a674fe038d842df99b937eb395",
+    "raw/doa_thakurgaon.pdf": "fb02ffaf1351a2502aef21c2fcc36398a89e98e983207b585b66fec73faf3773",
+    "raw/doa_thakurgaon.txt": "ee91db81ae0048e7c5498fdbf31c6c7711db5c45228008dcfcc4cbe779f9c27c"
+  }
+}

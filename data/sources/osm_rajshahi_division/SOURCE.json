@@ -1,0 +1,27 @@
+{
+  "key": "OSM_RAJ_2026",
+  "name": "OpenStreetMap contributors — Rajshahi Division extract (points of interest)",
+  "organization": "OpenStreetMap Foundation",
+  "source_type": "community_dataset",
+  "trust_level": 1,
+  "urls": [
+    "https://download.geofabrik.de/asia/bangladesh.html",
+    "https://download.geofabrik.de/asia/bangladesh-latest.osm.pbf",
+    "https://www.openstreetmap.org/copyright"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "osm_data_timestamp": "2026-11-17T21:24:30Z",
+  "license": "ODbL-1.0",
+  "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "attribution": "© OpenStreetMap contributors",
+  "division": "rajshahi",
+  "kind": "osm",
+  "files": {
+    "places.csv": "959a8be92c2f2936d9ab9b30c2bd344f90e1a963775e063e514f18212eb7389f",
+    "stats.json": "d1d9b34c9530501729d56d6cb21a66b896428206b6c0ea6e111686550ac1e89a",
+    "fetch.py": "ccb40c94916054c73942c6672037a5c773fe2c8cc5348fb0a65398f599c45cc7"
+  },
+  "notes": "Geofabrik Bangladesh extract (https://download.geofabrik.de/asia/bangladesh-261117.osm.pbf), OSM data as of 2026-11-17T21:24:30Z, parsed locally with pyosmium by osm_rajshahi_division/fetch.py --division rajshahi. Named POI-like nodes, ways and multipolygon relations (ways/relations by area centroid); unnamed kept only for ATM, fuel, toilets, drinking water with a public access tag, police, fire, ambulance, shelters. District/upazila by point-in-polygon against hdx_cod_ab_bgd/boundaries.geojson (seed names via its crosswalk.csv). Community data: every row is unverified. Contacts are those published on the feature. ODbL is share-alike: a published database derived from these rows must be offered under ODbL with attribution. The .pbf is not committed (fetch.py downloads it again).",
+  "extract": "https://download.geofabrik.de/asia/bangladesh-261117.osm.pbf"
+}

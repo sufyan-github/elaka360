@@ -1,0 +1,33 @@
+{
+  "key": "BARISHAL_METRO_POLICE",
+  "division": "barishal",
+  "kind": "metro_police",
+  "city": 50007,
+  "name": "Barishal Metropolitan Police (bmp.police.gov.bd) — thanas, history and jurisdiction",
+  "organization": "Barishal Metropolitan Police, Bangladesh Police",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://bmp.police.gov.bd/history",
+    "https://bmp.police.gov.bd/contact-us",
+    "https://bmp.police.gov.bd/thana/7/kotwali-model-thana",
+    "https://bmp.police.gov.bd/thana/10/bandar-thana",
+    "https://bmp.police.gov.bd/thana/9/Kaunia-thana",
+    "https://bmp.police.gov.bd/thana/8/airport-thana",
+    "https://bmp.gov.bd/",
+    "https://police.barisaldiv.gov.bd/",
+    "https://barishalcity.gov.bd/info/এক-নজরে-বরিশাল-সিটি"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Barishal Metropolitan Police (bmp.police.gov.bd)",
+  "notes": "BMP's own site bmp.police.gov.bd (bmp.gov.bd serves the same site; the national-portal site police.barisaldiv.gov.bd has no thana list). History page (undated): founded 2006, 4 thanas, 4 outposts, 1 camp, about 447.02 km2, jurisdiction BCC + 10 unions of Barishal Sadar + 2.5 unions of Babuganj. Thana pages give area and BBS 2001 population and wards. No thana is placed in Barishal City Corporation (each spans city wards and rural unions, Bandar has none). Phone numbers are in BARISHAL_METRO_POLICE_THANAS_2026. Beat-officer pages (officers' names and personal mobiles) are not used.",
+  "files": {
+    "areas.csv": "0b6850eb269c8f3b6e8721312d91a13fb61a1e420b1b7dcd5b77068563efbfe8",
+    "facts.csv": "f0b3ce19f8e52ec4cb57e9c3b0603350100e630c00e465e308ef0d028bf3d2ea",
+    "raw/bmp_history.txt": "0c88eb859ecc8d525f940fdac2ad5c0f5f5dd640caeff2ca72cfeb2b770850e3",
+    "raw/bmp_thana_pages.txt": "4f652d2015a8f7f2bc2bf0a8b5a56052bc6629e8fae447a3529967897872d4da"
+  }
+}

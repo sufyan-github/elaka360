@@ -1,0 +1,24 @@
+{
+  "key": "DGHS_HRIS_FACILITIES_BAR_2026",
+  "name": "DGHS / MoHFW HRIS Facility Registry — organisation list, Barishal Division",
+  "organization": "Directorate General of Health Services (DGHS), Ministry of Health and Family Welfare",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=6",
+    "https://hris.mohfw.gov.bd/public/facility-registry"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Source: DGHS Facility Registry (hris.mohfw.gov.bd), Ministry of Health and Family Welfare, Bangladesh",
+  "division": "barishal",
+  "kind": "dghs_hris",
+  "files": {
+    "places.csv": "163b21e28912f10b6b0b10cf296c481499b404f947a1aa8c014fbba4e242edbf",
+    "facts.csv": "53007a7ae3e35ec559891b3432762d1e73b559548f83c3722a32bef62db3d97a",
+    "raw/hris_organization_list_barishal_division.csv": "c155c5757018e3d54397f328173e9f535cbdfddb5a1c2bbc09efb72a4c6fe3b7"
+  },
+  "notes": "Public report of the MoHFW HRIS Facility Registry. Excel export (ret=excel) of all active entries filtered to Barishal Division (division_id 6), same collector and rules as DGHS_HRIS_FACILITIES_RAJ_2026. Registry is live and self-reported by facilities; coordinates are as entered by facilities (QA flags in notes). Contacts kept only for non-private facilities; private/NGO contacts and addresses and facility-head names not collected. No licence stated on the site."
+}

@@ -1,0 +1,25 @@
+entity_level,entity_name_en,district_en,upazila_en,code,fact,value,unit,basis,year,source_key,source_url,notes
+division,Chattogram,,,,area_km2,33904,km2,as stated,,CTGDIV_PORTAL_2026,https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94c,"label 'আয়তন' value '৩৩,৯০৪ বর্গ কি.মি (বাংলাদেশের বৃহত্তম বিভাগ)'; page updated 2024-12-08"
+division,Chattogram,,,,population,29145000,persons,as stated,2011,CTGDIV_PORTAL_2026,https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94c,"label 'জনসংখ্যা' value '২,৯১,৪৫,০০০ (২০১১ সালের আদমশুমারী অনুযায়ী)'; page updated 2024-12-08"
+division,Chattogram,,,,upazila_count,104,count,as stated,,CTGDIV_PORTAL_2026,https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94c,label 'উপজেলা' value '১০৪টি'; page updated 2024-12-08
+division,Chattogram,,,,thana_count,120,count,as stated,,CTGDIV_PORTAL_2026,https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94c,label 'থানা' value '১২০টি'; page updated 2024-12-08
+division,Chattogram,,,,pourashava_count,62,count,as stated,,CTGDIV_PORTAL_2026,https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94c,label 'পৌরসভা' value '৬২টি'; page updated 2024-12-08
+division,Chattogram,,,,union_count,949,count,as stated,,CTGDIV_PORTAL_2026,https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94c,label 'ইউনিয়ন পরিষদ' value '৯৪৯টি'; page updated 2024-12-08
+division,Chattogram,,,,city_corporation_count,2,count,as stated,,CTGDIV_PORTAL_2026,https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94c,label 'সিটি কর্পোরেশন' value '০২টি'; page updated 2024-12-08
+division,Chattogram,,,,mouza_count,8081,count,as stated,,CTGDIV_PORTAL_2026,https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94c,"label 'মোট মৌজার পরিমাণ' value '৮,০৮১টি'; page updated 2024-12-08"
+division,Chattogram,,,,village_count,15172,count,as stated,,CTGDIV_PORTAL_2026,https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94c,"label 'মোট গ্রাম' value '১৫,১৭২টি'; page updated 2024-12-08"
+division,Chattogram,,,,district_count,11,count,as stated,,CTGDIV_PORTAL_2026,https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94a,printed 'জেলার সংখ্যাঃ ১১টি'; page updated 2024-12-08
+division,Chattogram,,,,district_count_listed,11,count,count of districts listed,,CTGDIV_PORTAL_2026,https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94a,page updated 2024-12-08
+district,Chattogram,Chattogram,,,upazila_count,15,count,as stated,,CTGDIV_PORTAL_2026,https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94a,printed '(মোট ১৫টি)'; page updated 2024-12-08
+district,Cox's Bazar,Cox's Bazar,,,upazila_count,9,count,as stated,,CTGDIV_PORTAL_2026,https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94a,printed '(মোট ৯টি)'; page updated 2024-12-08
+district,Cumilla,Cumilla,,,upazila_count,17,count,as stated,,CTGDIV_PORTAL_2026,https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94a,printed '(মোট ১৭টি)'; page updated 2024-12-08
+district,Brahmanbaria,Brahmanbaria,,,upazila_count,9,count,as stated,,CTGDIV_PORTAL_2026,https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94a,printed '(মোট ৯টি)'; page updated 2024-12-08
+district,Feni,Feni,,,upazila_count,6,count,as stated,,CTGDIV_PORTAL_2026,https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94a,printed '(মোট ৬টি)'; page updated 2024-12-08
+district,Chandpur,Chandpur,,,upazila_count,8,count,as stated,,CTGDIV_PORTAL_2026,https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94a,printed '(মোট ৮টি)'; page updated 2024-12-08
+district,Lakshmipur,Lakshmipur,,,upazila_count,5,count,as stated,,CTGDIV_PORTAL_2026,https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94a,printed '(মোট ৫টি)'; page updated 2024-12-08
+district,Noakhali,Noakhali,,,upazila_count,9,count,as stated,,CTGDIV_PORTAL_2026,https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94a,printed '(মোট ৯টি)'; page updated 2024-12-08
+district,Khagrachhari,Khagrachhari,,,upazila_count,9,count,as stated,,CTGDIV_PORTAL_2026,https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94a,printed '(মোট ৯টি)'; page updated 2024-12-08
+district,Rangamati,Rangamati,,,upazila_count,10,count,as stated,,CTGDIV_PORTAL_2026,https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94a,printed '(মোট ১০টি)'; page updated 2024-12-08
+district,Bandarban,Bandarban,,,upazila_count,7,count,as stated,,CTGDIV_PORTAL_2026,https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94a,printed '(মোট ৭টি)'; page updated 2024-12-08
+division,Chattogram,,,,upazila_count_listed,104,count,count of upazilas listed,,CTGDIV_PORTAL_2026,https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94a,page updated 2024-12-08
+division,Chattogram,,,,upazila_count,104,count,as stated,,CTGDIV_PORTAL_2026,https://chittagongdiv.gov.bd/pages/static-pages/6991177b35ce18e1c073d94a,printed 'উপজেলার সংখ্যাঃ ১০৪টি'; page updated 2024-12-08

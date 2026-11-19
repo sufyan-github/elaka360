@@ -1,0 +1,34 @@
+{
+  "key": "DOA_PROTECTED_MONUMENTS_BAR_2026",
+  "division": "barishal",
+  "kind": "doa_monuments",
+  "name": "Department of Archaeology — gazetted protected monuments, Barishal Division (district PDF lists)",
+  "organization": "প্রত্নতত্ত্ব অধিদপ্তর (Department of Archaeology), Ministry of Cultural Affairs",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://archaeology.gov.bd/pages/static-pages/6922e128933eb65569e2a90f"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "প্রত্নতত্ত্ব অধিদপ্তর (Department of Archaeology), Ministry of Cultural Affairs",
+  "notes": "Page 'বরিশাল বিভাগের সংরক্ষিত পুরাকীর্তি' links one PDF per district for all 6 districts (28 monuments; lists published 2024-08-31, Pirojpur 2025-07-13, Bhola 2026-08-10). PDFs mix Bijoy/SutonnyMJ text (converted to Unicode by fetch.py, bijoy2uni) and Unicode text layers; Bhola-01 has a broken Unicode text layer and was read from the rendered page (ROW_FIXES_BY_DIV['barishal']); conversion slips and Patuakhali-06's split English gazette reference are fixed in TEXT_FIXES_BY_DIV['barishal'] after checking the rendered pages. Photo captions are dropped. Coordinates are as published (DMS); Barishal-06 and Pirojpur-04 print their labels irregularly and are parsed as printed; Pirojpur-06's malformed coordinates are not used (kept in extra_json). The HDX COD-AB Barishal extract (hdx_cod_ab_bgd_barishal) was not in the repository at collection time, so the point-in-polygon QA did not run. Descriptions are not copied; only a construction-date phrase. Licence not stated.",
+  "files": {
+    "facts.csv": "e103b1f9f7a34fcca7e17703df0b9863ef1f5cb513c6340cfb54ed7ffbe32eb4",
+    "places.csv": "ae46b56d5385a1a2788f7cb11b42178053ae9552d414c9955f8eab12554577a7",
+    "raw/doa_barguna.pdf": "beb809c23084cc42c7dfbc2a3a7c56f7e730035d50990041e3e717b312b47aba",
+    "raw/doa_barguna.txt": "06aa32969026e65ba688830c8ef7dc8a2af495f80e5a38f52a31a1ff026d49b8",
+    "raw/doa_barishal.pdf": "f93b6b40f7d5cfec913543b07da25a646e74248b9dc59237182fe99e0c7c3f5e",
+    "raw/doa_barishal.txt": "b3ef1ac07440e8ba688cd90214e6af86882c96cf63ce2ffcd719452d98693452",
+    "raw/doa_bhola.pdf": "329127a418f8cd15db753bb9a4772a55fe18806912860d994f10be566ff63b72",
+    "raw/doa_bhola.txt": "34e46f8b351e0bbafdf910f0607d0078e589bbccda46233a3e6b7a2679d405ed",
+    "raw/doa_jhalokathi.pdf": "c68ab7b508adbbd060629224811a4da74949a39f81d84490bd37195e54743bce",
+    "raw/doa_jhalokathi.txt": "4222f3c4cf31fb2d9caf971e3e7ff0bca5ff9a51253977972d4d03712402084f",
+    "raw/doa_patuakhali.pdf": "122702fa795d38302952e85bb41a4d74b9029ce3d1dea8008f04d2b4fac0c5a7",
+    "raw/doa_patuakhali.txt": "36b91fd6be9b75c03bb2bd6489d5587026027c1e244ae81b78f69c96f18f6fd7",
+    "raw/doa_pirojpur.pdf": "6d4adc2847b04cd4bb73649636ac8965198da7ef9b7885b76a0b5b9def2fd421",
+    "raw/doa_pirojpur.txt": "cc88ecafbda32964627c81a52a0b9eda79297e8601e76a2d01cfdf3e0462a125"
+  }
+}

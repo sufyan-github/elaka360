@@ -1,0 +1,30 @@
+{
+  "key": "KHULNA_METRO_POLICE_THANAS_2026",
+  "division": "khulna",
+  "kind": "metro_police_thanas",
+  "city": 50004,
+  "name": "Khulna Metropolitan Police — thanas and official numbers",
+  "organization": "Khulna Metropolitan Police (Bangladesh Police)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://police.khulnadiv.gov.bd/pages/static-pages/698101a8a31054345f1d5747",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-police-khulnadiv/2026/2/d780b90d-e6b7-4a5d-9a1f-ee7ef22ba578.pdf",
+    "https://police.khulnadiv.gov.bd/pages/static-pages/6981336635ce18e1c06fc635",
+    "https://police.khulnadiv.gov.bd/pages/officers",
+    "https://police.khulnadiv.gov.bd/pages/static-pages/6980f684a31054345f1ceb6e",
+    "https://khulna.gov.bd/pages/static-pages/69812047a31054345f1e0b98"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Khulna Metropolitan Police (police.khulnadiv.gov.bd) and the Khulna DC portal (khulna.gov.bd)",
+  "notes": "No licence stated. Thana list from the Khulna DC portal ('ভৌগলিক পরিচিতি', 8 metropolitan thanas); numbers from KMP's mobile-number list, a 3-page PDF in the legacy SutonnyMJ font attached to the KMP portal 'যোগাযোগ' page (thana labels transcribed to Unicode in fetch.py). Only institutional numbers are collected: OC and duty-officer police official mobiles (01320-05xxxx), the Commissioner post's official mobile and office phone, the HQ phone/e-mail from 'ডাক যোগাযোগ' and the control-room numbers. Inspectors' mobiles and officers' names are not copied. kmp.police.gov.bd (KMP's own site) answered HTTP 500. No thana is placed in Khulna City Corporation (area_en empty): KMP covers all 31 KCC wards plus 5 unions and no source gives a thana-to-city-corporation list.",
+  "files": {
+    "places.csv": "eef79328f592ada2e0ae875799ae3bf592339a6f957eac7d5aa704243dffd258",
+    "facts.csv": "3700ac55e79ec2ce846b5bfd06d2c65a9aa1e27e8ca02090b8a843c03193a228",
+    "raw/kmp_hq_and_control_room.txt": "b5721613e7e54b9668e96f314f11e67996638997ac7264fe2ac3c40725eba343",
+    "raw/kmp_thana_numbers.txt": "c0dd2ec4f03a6aaac26fd9a8013343f65764c6c227ae5649f31f107523cad9ba"
+  }
+}

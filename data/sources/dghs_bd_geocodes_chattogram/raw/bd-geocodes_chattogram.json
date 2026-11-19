@@ -1,0 +1,1287 @@
+{
+ "url": "https://fhir.dghs.gov.bd/core/CodeSystem/bd-geocodes",
+ "version": "0.5.0",
+ "name": "BDGeoCodesCS",
+ "title": "Bangladesh GeoCodes CodeSystem",
+ "status": "draft",
+ "date": "2026-10-15T00:09:54+00:00",
+ "publisher": "Directorate General of Health Services (DGHS), Bangladesh",
+ "description": "Bangladesh GeoCodes",
+ "count": 1591,
+ "ig_license": "CC0-1.0",
+ "ig_version": "0.5.0",
+ "concepts_chattogram_division": [
+  {
+   "code": "20",
+   "display": "Chattogram"
+  },
+  {
+   "code": "2003",
+   "display": "Bandarban"
+  },
+  {
+   "code": "2012",
+   "display": "Brahmanbaria"
+  },
+  {
+   "code": "2013",
+   "display": "Chandpur"
+  },
+  {
+   "code": "2015",
+   "display": "Chattogram"
+  },
+  {
+   "code": "2019",
+   "display": "Cumilla"
+  },
+  {
+   "code": "2022",
+   "display": "Cox's Bazar"
+  },
+  {
+   "code": "2030",
+   "display": "Feni"
+  },
+  {
+   "code": "2046",
+   "display": "Khagrachari"
+  },
+  {
+   "code": "2051",
+   "display": "Lakshmipur"
+  },
+  {
+   "code": "2075",
+   "display": "Noakhali"
+  },
+  {
+   "code": "2084",
+   "display": "Rangamati"
+  },
+  {
+   "code": "201516",
+   "display": "Chattogram City Corporation"
+  },
+  {
+   "code": "201500",
+   "display": "Chattogram N/A"
+  },
+  {
+   "code": "200300",
+   "display": "Bandarban N/A"
+  },
+  {
+   "code": "201950",
+   "display": "Cumilla City Corporation"
+  },
+  {
+   "code": "201900",
+   "display": "Cumilla N/A"
+  },
+  {
+   "code": "201200",
+   "display": "Brahmanbaria N/A"
+  },
+  {
+   "code": "201300",
+   "display": "Chandpur N/A"
+  },
+  {
+   "code": "202200",
+   "display": "Cox's Bazar N/A"
+  },
+  {
+   "code": "203000",
+   "display": "Feni N/A"
+  },
+  {
+   "code": "204600",
+   "display": "Khagrachhari N/A"
+  },
+  {
+   "code": "205100",
+   "display": "Lakshmipur N/A"
+  },
+  {
+   "code": "207500",
+   "display": "Noakhali N/A"
+  },
+  {
+   "code": "208400",
+   "display": "Rangamati N/A"
+  },
+  {
+   "code": "20030004",
+   "display": "Alikadam"
+  },
+  {
+   "code": "20030014",
+   "display": "Bandarban Sadar"
+  },
+  {
+   "code": "20030051",
+   "display": "Lama"
+  },
+  {
+   "code": "20030073",
+   "display": "Naikhongchari"
+  },
+  {
+   "code": "20030089",
+   "display": "Rowangchari"
+  },
+  {
+   "code": "20030091",
+   "display": "Ruma"
+  },
+  {
+   "code": "20030095",
+   "display": "Thanchi"
+  },
+  {
+   "code": "20120002",
+   "display": "Akhaura"
+  },
+  {
+   "code": "20120004",
+   "display": "Banchharampur"
+  },
+  {
+   "code": "20120007",
+   "display": "Bijoynagar"
+  },
+  {
+   "code": "20120013",
+   "display": "Brahmanbaria Sadar"
+  },
+  {
+   "code": "20120033",
+   "display": "Ashuganj"
+  },
+  {
+   "code": "20120063",
+   "display": "Kasba"
+  },
+  {
+   "code": "20120085",
+   "display": "Nabinagar"
+  },
+  {
+   "code": "20120090",
+   "display": "Nasirnagar"
+  },
+  {
+   "code": "20120094",
+   "display": "Sarail"
+  },
+  {
+   "code": "20130022",
+   "display": "Chandpur Sadar"
+  },
+  {
+   "code": "20130045",
+   "display": "Faridganj"
+  },
+  {
+   "code": "20130047",
+   "display": "Haimchar"
+  },
+  {
+   "code": "20130049",
+   "display": "Hajiganj"
+  },
+  {
+   "code": "20130058",
+   "display": "Kachua"
+  },
+  {
+   "code": "20130076",
+   "display": "Matlab Dakshin"
+  },
+  {
+   "code": "20130079",
+   "display": "Matlab Uttar"
+  },
+  {
+   "code": "20130095",
+   "display": "Shahrasti"
+  },
+  {
+   "code": "20150004",
+   "display": "Anowara"
+  },
+  {
+   "code": "20151606",
+   "display": "Bayejid Bostami"
+  },
+  {
+   "code": "20150008",
+   "display": "Banshkhali"
+  },
+  {
+   "code": "20151610",
+   "display": "Bakalia"
+  },
+  {
+   "code": "20150012",
+   "display": "Boalkhali"
+  },
+  {
+   "code": "20150018",
+   "display": "Chandanaish"
+  },
+  {
+   "code": "20151619",
+   "display": "Chandgaon"
+  },
+  {
+   "code": "20151620",
+   "display": "Chittogram Port"
+  },
+  {
+   "code": "20151628",
+   "display": "Double Mooring"
+  },
+  {
+   "code": "20150033",
+   "display": "Fatikchari"
+  },
+  {
+   "code": "20151635",
+   "display": "Halishahar"
+  },
+  {
+   "code": "20150037",
+   "display": "Hathazari"
+  },
+  {
+   "code": "20151641",
+   "display": "Kotwali"
+  },
+  {
+   "code": "20151643",
+   "display": "Khulshi"
+  },
+  {
+   "code": "20150047",
+   "display": "Lohagara"
+  },
+  {
+   "code": "20150053",
+   "display": "Mirsharai"
+  },
+  {
+   "code": "20151655",
+   "display": "Pahartali"
+  },
+  {
+   "code": "20151657",
+   "display": "Panchlaish"
+  },
+  {
+   "code": "20150061",
+   "display": "Patiya"
+  },
+  {
+   "code": "20151665",
+   "display": "Patenga"
+  },
+  {
+   "code": "20150070",
+   "display": "Rangunia"
+  },
+  {
+   "code": "20150074",
+   "display": "Raozan"
+  },
+  {
+   "code": "20150078",
+   "display": "Sandwip"
+  },
+  {
+   "code": "20150082",
+   "display": "Satkania"
+  },
+  {
+   "code": "20150086",
+   "display": "Sitakunda"
+  },
+  {
+   "code": "20190009",
+   "display": "Barura"
+  },
+  {
+   "code": "20190015",
+   "display": "Brahmanpara"
+  },
+  {
+   "code": "20190018",
+   "display": "Burichang"
+  },
+  {
+   "code": "20190027",
+   "display": "Chandina"
+  },
+  {
+   "code": "20190031",
+   "display": "Chauddagram"
+  },
+  {
+   "code": "20195033",
+   "display": "Cumilla Sadar Dakshin"
+  },
+  {
+   "code": "20190036",
+   "display": "Daudkandi"
+  },
+  {
+   "code": "20190040",
+   "display": "Debidwar"
+  },
+  {
+   "code": "20190054",
+   "display": "Homna"
+  },
+  {
+   "code": "20195067",
+   "display": "Cumilla Adarsha Sadar"
+  },
+  {
+   "code": "20190072",
+   "display": "Laksam"
+  },
+  {
+   "code": "20190074",
+   "display": "Monoharganj"
+  },
+  {
+   "code": "20190075",
+   "display": "Meghna"
+  },
+  {
+   "code": "20190081",
+   "display": "Muradnagar"
+  },
+  {
+   "code": "20190087",
+   "display": "Nangalkot"
+  },
+  {
+   "code": "20190094",
+   "display": "Titas"
+  },
+  {
+   "code": "20220016",
+   "display": "Chakaria"
+  },
+  {
+   "code": "20220024",
+   "display": "Cox's Bazar Sadar"
+  },
+  {
+   "code": "20220045",
+   "display": "Kutubdia"
+  },
+  {
+   "code": "20220049",
+   "display": "Maheshkhali"
+  },
+  {
+   "code": "20220056",
+   "display": "Pekua"
+  },
+  {
+   "code": "20220066",
+   "display": "Ramu"
+  },
+  {
+   "code": "20220090",
+   "display": "Teknaf"
+  },
+  {
+   "code": "20220094",
+   "display": "Ukhia"
+  },
+  {
+   "code": "20300014",
+   "display": "Chhagalnaiya"
+  },
+  {
+   "code": "20300025",
+   "display": "Daganbhuiyan"
+  },
+  {
+   "code": "20300029",
+   "display": "Feni Sadar"
+  },
+  {
+   "code": "20300041",
+   "display": "Fulgazi"
+  },
+  {
+   "code": "20300051",
+   "display": "Parshuram"
+  },
+  {
+   "code": "20300094",
+   "display": "Sonagazi"
+  },
+  {
+   "code": "20460043",
+   "display": "Dighinala"
+  },
+  {
+   "code": "20460049",
+   "display": "Khagrachari Sadar"
+  },
+  {
+   "code": "20460061",
+   "display": "Lakshmichari"
+  },
+  {
+   "code": "20460065",
+   "display": "Mahalchari"
+  },
+  {
+   "code": "20460067",
+   "display": "Manikchari"
+  },
+  {
+   "code": "20460070",
+   "display": "Matiranga"
+  },
+  {
+   "code": "20460077",
+   "display": "Panchhari"
+  },
+  {
+   "code": "20460080",
+   "display": "Ramgarh"
+  },
+  {
+   "code": "20510033",
+   "display": "Kamalnagar"
+  },
+  {
+   "code": "20510043",
+   "display": "Lakshmipur Sadar"
+  },
+  {
+   "code": "20510058",
+   "display": "Raipur"
+  },
+  {
+   "code": "20510065",
+   "display": "Ramganj"
+  },
+  {
+   "code": "20510073",
+   "display": "Ramgati"
+  },
+  {
+   "code": "20750007",
+   "display": "Begumganj"
+  },
+  {
+   "code": "20750010",
+   "display": "Chatkhil"
+  },
+  {
+   "code": "20750021",
+   "display": "Companiganj"
+  },
+  {
+   "code": "20750036",
+   "display": "Hatiya"
+  },
+  {
+   "code": "20750047",
+   "display": "Kabirhat"
+  },
+  {
+   "code": "20750080",
+   "display": "Senbagh"
+  },
+  {
+   "code": "20750083",
+   "display": "Sonaimuri"
+  },
+  {
+   "code": "20750085",
+   "display": "Subarnachar"
+  },
+  {
+   "code": "20750087",
+   "display": "Noakhali Sadar"
+  },
+  {
+   "code": "20840007",
+   "display": "Baghaichari"
+  },
+  {
+   "code": "20840021",
+   "display": "Barkal"
+  },
+  {
+   "code": "20840025",
+   "display": "Kowkhali"
+  },
+  {
+   "code": "20840029",
+   "display": "Belaichari"
+  },
+  {
+   "code": "20840036",
+   "display": "Kaptai"
+  },
+  {
+   "code": "20840047",
+   "display": "Juraichari"
+  },
+  {
+   "code": "20840058",
+   "display": "Langadu"
+  },
+  {
+   "code": "20840075",
+   "display": "Naniarchar"
+  },
+  {
+   "code": "20840078",
+   "display": "Rajasthali"
+  },
+  {
+   "code": "20840087",
+   "display": "Rangamati Sadar"
+  },
+  {
+   "code": "20190073",
+   "display": "Lalmi"
+  },
+  {
+   "code": "20150039",
+   "display": "Karnaphuli"
+  },
+  {
+   "code": "20151602",
+   "display": "Akbarshah"
+  },
+  {
+   "code": "20151616",
+   "display": "Chalk Bazar"
+  },
+  {
+   "code": "20151631",
+   "display": "EPZ"
+  },
+  {
+   "code": "20151677",
+   "display": "Sadarghat"
+  },
+  {
+   "code": "20220032",
+   "display": "Eidgaon"
+  },
+  {
+   "code": "20460047",
+   "display": "Guimara"
+  },
+  {
+   "code": "20220075",
+   "display": "Eidgaon"
+  },
+  {
+   "code": "2003001450",
+   "display": "Bandarban Paurashava"
+  },
+  {
+   "code": "2003005162",
+   "display": "Lama Paurashava"
+  },
+  {
+   "code": "2012000222",
+   "display": "Akhaura Paurasava"
+  },
+  {
+   "code": "2012001366",
+   "display": "Brahmanbaria Paurasava"
+  },
+  {
+   "code": "2012006376",
+   "display": "Kasba Paurasava"
+  },
+  {
+   "code": "2012008588",
+   "display": "Nabinagar Paurasava"
+  },
+  {
+   "code": "2013002214",
+   "display": "Chandpur Paurasava"
+  },
+  {
+   "code": "2013004535",
+   "display": "Faridganj Paurashava"
+  },
+  {
+   "code": "2013004942",
+   "display": "Hajiganj Paurasava"
+  },
+  {
+   "code": "2013005857",
+   "display": "Kachua Paurasava"
+  },
+  {
+   "code": "2013007671",
+   "display": "Matlab Paurasava"
+  },
+  {
+   "code": "2013007928",
+   "display": "Sengarchar Paurasava"
+  },
+  {
+   "code": "2013009585",
+   "display": "Shahrasti Paurasava"
+  },
+  {
+   "code": "2015160616",
+   "display": "Chittagong City Corp."
+  },
+  {
+   "code": "2015000805",
+   "display": "Banshkhali Paurashava"
+  },
+  {
+   "code": "2015161016",
+   "display": "Chittagong City Corp."
+  },
+  {
+   "code": "2015001210",
+   "display": "Boalkhali Paurashava"
+  },
+  {
+   "code": "2015001812",
+   "display": "Chandanaish Paurashava"
+  },
+  {
+   "code": "2015161916",
+   "display": "Chittagong City Corp."
+  },
+  {
+   "code": "2015162016",
+   "display": "Chittagong City Corp."
+  },
+  {
+   "code": "2015162816",
+   "display": "Chittagong City Corp."
+  },
+  {
+   "code": "2015003322",
+   "display": "Fatikchhari Paurasava"
+  },
+  {
+   "code": "2015163516",
+   "display": "Chittagong City Corp."
+  },
+  {
+   "code": "2015164116",
+   "display": "Chittagong City Corp."
+  },
+  {
+   "code": "2015164316",
+   "display": "Chittagong City Corp."
+  },
+  {
+   "code": "2015005308",
+   "display": "Baroiar Hat Paurashava"
+  },
+  {
+   "code": "2015005325",
+   "display": "Mirsharai Paurashava"
+  },
+  {
+   "code": "2015165516",
+   "display": "Chittagong City Corp."
+  },
+  {
+   "code": "2015165716",
+   "display": "Chittagong City Corp."
+  },
+  {
+   "code": "2015006133",
+   "display": "Patiya Paurashava"
+  },
+  {
+   "code": "2015166516",
+   "display": "Chittagong City Corp."
+  },
+  {
+   "code": "2015007041",
+   "display": "Rangunia Paurashava"
+  },
+  {
+   "code": "2015007450",
+   "display": "Raozan Paurashava"
+  },
+  {
+   "code": "2015007867",
+   "display": "Sandwip Paurashava"
+  },
+  {
+   "code": "2015008275",
+   "display": "Satkania Paurashava"
+  },
+  {
+   "code": "2015008683",
+   "display": "Sitakunda Paurashava"
+  },
+  {
+   "code": "2019000916",
+   "display": "Barura Paurasava"
+  },
+  {
+   "code": "2019000950",
+   "display": "Comilla City Corp."
+  },
+  {
+   "code": "2019002733",
+   "display": "Chandina Paurasava"
+  },
+  {
+   "code": "2019003137",
+   "display": "Chauddagram Paurashava"
+  },
+  {
+   "code": "2019003667",
+   "display": "Daudkandi Paurasava"
+  },
+  {
+   "code": "2019004070",
+   "display": "Debidwar Paurashava"
+  },
+  {
+   "code": "2019005475",
+   "display": "Homna Paurashava"
+  },
+  {
+   "code": "2019007283",
+   "display": "Laksam Paurasava"
+  },
+  {
+   "code": "2019008787",
+   "display": "Nangalkot Paurashava"
+  },
+  {
+   "code": "2022001633",
+   "display": "Chakaria Paurashava"
+  },
+  {
+   "code": "2022002466",
+   "display": "COX'S BAZAR PAURASHAVA"
+  },
+  {
+   "code": "2022004977",
+   "display": "Maheshkhali Paurashava"
+  },
+  {
+   "code": "2022009088",
+   "display": "Teknaf Paurashava"
+  },
+  {
+   "code": "2030001415",
+   "display": "Chhagalnaiya Paurashava"
+  },
+  {
+   "code": "2030002530",
+   "display": "Daganbhuiyan Paurasava"
+  },
+  {
+   "code": "2030002950",
+   "display": "Feni Paurasava"
+  },
+  {
+   "code": "2030005165",
+   "display": "Parshuram Paurashava"
+  },
+  {
+   "code": "2030009480",
+   "display": "Sonagazi Paurashava"
+  },
+  {
+   "code": "2046004950",
+   "display": "Khagrachhari Paurasava"
+  },
+  {
+   "code": "2046007062",
+   "display": "Matiranga Paurashava"
+  },
+  {
+   "code": "2046008075",
+   "display": "Ramgarh Paurashava"
+  },
+  {
+   "code": "2051004325",
+   "display": "Lakshmipur Paurasava"
+  },
+  {
+   "code": "2051005850",
+   "display": "Roypur Paurasava"
+  },
+  {
+   "code": "2051006575",
+   "display": "Ramganj Paurasava"
+  },
+  {
+   "code": "2051007387",
+   "display": "Ramgati Paurashava"
+  },
+  {
+   "code": "2075000733",
+   "display": "Chaumohani Paurasava"
+  },
+  {
+   "code": "2075001050",
+   "display": "Chatkhil Paurasava"
+  },
+  {
+   "code": "2075002116",
+   "display": "Basurhat Paurasava"
+  },
+  {
+   "code": "2075003660",
+   "display": "Hatiya Paurashava"
+  },
+  {
+   "code": "2075004766",
+   "display": "Kabirhat Paurasava"
+  },
+  {
+   "code": "2075008075",
+   "display": "Senbagh Paurashava"
+  },
+  {
+   "code": "2075008390",
+   "display": "Sonaimuri Paurasava"
+  },
+  {
+   "code": "2075008783",
+   "display": "Noakhali Paurasava"
+  },
+  {
+   "code": "2084000720",
+   "display": "Baghaichhari Paurashava"
+  },
+  {
+   "code": "2084008750",
+   "display": "Rangamati Paurashava"
+  },
+  {
+   "code": "2003000499",
+   "display": "Unions Of Alikadam Upazila"
+  },
+  {
+   "code": "2003001499",
+   "display": "Unions Of Bandarban Sadar Upazila"
+  },
+  {
+   "code": "2003005199",
+   "display": "Unions Of Lama Upazila"
+  },
+  {
+   "code": "2003007399",
+   "display": "Unions Of Naikhongchhari Upazila"
+  },
+  {
+   "code": "2003008999",
+   "display": "Unions Of Rowangchhari Upazila"
+  },
+  {
+   "code": "2003009199",
+   "display": "Unions Of Ruma Upazila"
+  },
+  {
+   "code": "2003009599",
+   "display": "Unions Of Thanchi Upazila"
+  },
+  {
+   "code": "2012000299",
+   "display": "Unions Of Akhaura Upazila"
+  },
+  {
+   "code": "2012000499",
+   "display": "Unions Of Banchharampur Upazila"
+  },
+  {
+   "code": "2012000799",
+   "display": "Unions Of Bijoynagar Upazila"
+  },
+  {
+   "code": "2012001399",
+   "display": "Unions Of Brahmanbaria Sadar Upazila"
+  },
+  {
+   "code": "2012003399",
+   "display": "Unions Of Ashuganj Upazila"
+  },
+  {
+   "code": "2012006399",
+   "display": "Unions Of Kasba Upazila"
+  },
+  {
+   "code": "2012008599",
+   "display": "Unions Of Nabinagar Upazila"
+  },
+  {
+   "code": "2012009099",
+   "display": "Unions Of Nasirnagar Upazila"
+  },
+  {
+   "code": "2012009499",
+   "display": "Unions Of Sarail Upazila"
+  },
+  {
+   "code": "2013002299",
+   "display": "Unions Of Chandpur Sadar Upazila"
+  },
+  {
+   "code": "2013004599",
+   "display": "Unions Of Faridganj Upazila"
+  },
+  {
+   "code": "2013004799",
+   "display": "Unions Of Haim Char Upazila"
+  },
+  {
+   "code": "2013004999",
+   "display": "Unions Of Hajiganj Upazila"
+  },
+  {
+   "code": "2013005899",
+   "display": "Unions Of Kachua Upazila"
+  },
+  {
+   "code": "2013007699",
+   "display": "Unions Of Matlab Dakshin Upazila"
+  },
+  {
+   "code": "2013007999",
+   "display": "Unions Of Matlab Uttar Upazila"
+  },
+  {
+   "code": "2013009599",
+   "display": "Unions Of Shahrasti Upazila"
+  },
+  {
+   "code": "2015000499",
+   "display": "Unions Of Anowara Upazila"
+  },
+  {
+   "code": "2015000899",
+   "display": "Unions Of Banshkhali Upazila"
+  },
+  {
+   "code": "2015001299",
+   "display": "Unions Of Boalkhali Upazila"
+  },
+  {
+   "code": "2015001899",
+   "display": "Unions Of Chandanaish Upazila"
+  },
+  {
+   "code": "2015003399",
+   "display": "Unions Of Fatikchhari Upazila"
+  },
+  {
+   "code": "2015003799",
+   "display": "Unions Of Hathazari Upazila"
+  },
+  {
+   "code": "2015004799",
+   "display": "Unions Of Lohagara Upazila"
+  },
+  {
+   "code": "2015005399",
+   "display": "Unions Of Mirsharai Upazila"
+  },
+  {
+   "code": "2015006199",
+   "display": "Unions Of Patiya Upazila"
+  },
+  {
+   "code": "2015007099",
+   "display": "Unions Of Rangunia Upazila"
+  },
+  {
+   "code": "2015007499",
+   "display": "Unions Of Raozan Upazila"
+  },
+  {
+   "code": "2015007899",
+   "display": "Unions Of Sandwip Upazila"
+  },
+  {
+   "code": "2015008299",
+   "display": "Unions Of Satkania Upazila"
+  },
+  {
+   "code": "2015008699",
+   "display": "Unions Of Sitakunda Upazila"
+  },
+  {
+   "code": "2019000999",
+   "display": "Unions Of Barura Upazila"
+  },
+  {
+   "code": "2019001599",
+   "display": "Unions Of Brahman Para Upazila"
+  },
+  {
+   "code": "2019001899",
+   "display": "Unions Of Burichang Upazila"
+  },
+  {
+   "code": "2019002799",
+   "display": "Unions Of Chandina Upazila"
+  },
+  {
+   "code": "2019003199",
+   "display": "Unions Of Chauddagram Upazila"
+  },
+  {
+   "code": "2019007373",
+   "display": "Unions Of Lalmi Upazila"
+  },
+  {
+   "code": "2019003699",
+   "display": "Unions Of Daudkandi Upazila"
+  },
+  {
+   "code": "2019004099",
+   "display": "Unions Of Debidwar Upazila"
+  },
+  {
+   "code": "2019005499",
+   "display": "Unions Of Homna Upazila"
+  },
+  {
+   "code": "2019506799",
+   "display": "Unions Of Comilla Adarsha Sadar Upazila"
+  },
+  {
+   "code": "2019007299",
+   "display": "Unions Of Laksam Upazila"
+  },
+  {
+   "code": "2019007499",
+   "display": "Unions Of Manoharganj Upazila"
+  },
+  {
+   "code": "2019007599",
+   "display": "Unions Of Meghna Upazila"
+  },
+  {
+   "code": "2019008199",
+   "display": "Unions Of Muradnagar Upazila"
+  },
+  {
+   "code": "2019008799",
+   "display": "Unions Of Nangalkot Upazila"
+  },
+  {
+   "code": "2019009499",
+   "display": "Unions Of Titas Upazila"
+  },
+  {
+   "code": "2022001699",
+   "display": "Unions Of Chakaria Upazila"
+  },
+  {
+   "code": "2022002499",
+   "display": "Unions of Cox's Bazar Sadar Upazila"
+  },
+  {
+   "code": "2022004599",
+   "display": "Unions Of Kutubdia Upazila"
+  },
+  {
+   "code": "2022004999",
+   "display": "Unions Of Maheshkhali Upazila"
+  },
+  {
+   "code": "2022005699",
+   "display": "Unions Of Pekua Upazila"
+  },
+  {
+   "code": "2022006699",
+   "display": "Unions Of Ramu Upazila"
+  },
+  {
+   "code": "2022009099",
+   "display": "Unions Of Teknaf Upazila"
+  },
+  {
+   "code": "2022009499",
+   "display": "Unions Of Ukhia Upazila"
+  },
+  {
+   "code": "2030001499",
+   "display": "Unions Of Chhagalnaiya Upazila"
+  },
+  {
+   "code": "2030002599",
+   "display": "Unions Of Daganbhuiyan Upazila"
+  },
+  {
+   "code": "2030002999",
+   "display": "Unions Of Feni Sadar Upazila"
+  },
+  {
+   "code": "2030004199",
+   "display": "Unions Of Fulgazi Upazila"
+  },
+  {
+   "code": "2030005199",
+   "display": "Unions Of Parshuram Upazila"
+  },
+  {
+   "code": "2030009499",
+   "display": "Unions Of Sonagazi Upazila"
+  },
+  {
+   "code": "2046004399",
+   "display": "Unions Of Dighinala Upazila"
+  },
+  {
+   "code": "2046004999",
+   "display": "Unions Of Khagrachhari Sadar Upazila"
+  },
+  {
+   "code": "2046006199",
+   "display": "Unions Of Lakshmichhari Upazila"
+  },
+  {
+   "code": "2046006599",
+   "display": "Unions Of Mahalchhari Upazila"
+  },
+  {
+   "code": "2046006799",
+   "display": "Unions Of Manikchhari Upazila"
+  },
+  {
+   "code": "2046007099",
+   "display": "Unions Of Matiranga Upazila"
+  },
+  {
+   "code": "2046007799",
+   "display": "Unions Of Panchhari Upazila"
+  },
+  {
+   "code": "2046008099",
+   "display": "Unions Of Ramgarh Upazila"
+  },
+  {
+   "code": "2051003399",
+   "display": "Unions Of Kamalnagar Upazila"
+  },
+  {
+   "code": "2051004399",
+   "display": "Unions Of Lakshmipur Sadar Upazila"
+  },
+  {
+   "code": "2051005899",
+   "display": "Unions Of Roypur Upazila"
+  },
+  {
+   "code": "2051006599",
+   "display": "Unions Of Ramganj Upazila"
+  },
+  {
+   "code": "2051007399",
+   "display": "Unions Of Ramgati Upazila"
+  },
+  {
+   "code": "2075000799",
+   "display": "Unions Of Begumganj Upazila"
+  },
+  {
+   "code": "2075001099",
+   "display": "Unions Of Chatkhil Upazila"
+  },
+  {
+   "code": "2075002199",
+   "display": "Unions Of Companiganj Upazila"
+  },
+  {
+   "code": "2075003699",
+   "display": "Unions Of Hatiya Upazila"
+  },
+  {
+   "code": "2075004799",
+   "display": "Unions Of Kabirhat Upazila"
+  },
+  {
+   "code": "2075008099",
+   "display": "Unions Of Senbagh Upazila"
+  },
+  {
+   "code": "2075008399",
+   "display": "Unions Of Sonaimuri Upazila"
+  },
+  {
+   "code": "2075008599",
+   "display": "Unions Of Subarnachar Upazila"
+  },
+  {
+   "code": "2075008799",
+   "display": "Unions Of Noakhali Sadar Upazila"
+  },
+  {
+   "code": "2084000799",
+   "display": "Unions Of Baghaichhari Upazila"
+  },
+  {
+   "code": "2084002199",
+   "display": "Unions Of Barkal Upazila Upazila"
+  },
+  {
+   "code": "2084002599",
+   "display": "Unions Of Kawkhali (betbunia) Upazila"
+  },
+  {
+   "code": "2084002999",
+   "display": "Unions Of Belai Chhari  Upazi Upazila"
+  },
+  {
+   "code": "2084003699",
+   "display": "Unions Of Kaptai  Upazila Upazila"
+  },
+  {
+   "code": "2084004799",
+   "display": "Unions Of Jurai Chhari Upazil Upazila"
+  },
+  {
+   "code": "2084005899",
+   "display": "Unions Of Langadu  Upazila Upazila"
+  },
+  {
+   "code": "2084007599",
+   "display": "Unions Of Naniarchar  Upazila Upazila"
+  },
+  {
+   "code": "2084007899",
+   "display": "Unions Of Rajasthali  Upazila Upazila"
+  },
+  {
+   "code": "2084008799",
+   "display": "Unions Of Rangamati Sadar  Up Upazila"
+  },
+  {
+   "code": "2015003999",
+   "display": "Unions of karnaphuli"
+  },
+  {
+   "code": "2019503399",
+   "display": "Unions of Cumilla Sadar Dakshin"
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+divisional union list: union before any upazila heading: 'সুনামগঞ্জ'
+divisional union list: union before any upazila heading: 'হবিগঞ্জ'
+divisional union list: union before any upazila heading: 'মৌলভীবাজার'
+divisional union list: union before any upazila heading: '০৪টি জেলায় মোট ইউনিয়ন'
+divisional union list: 'জগন্নাথপুর' (the upazila's name, without 'ইউনিয়ন', in a list of Jagannathpur's unions) not taken as a union
+divisional union list: 'দিরাই' (the upazila's name, without 'ইউনিয়ন', in a list of Derai's unions) not taken as a union
+divisional union list: 'বানিয়াচং' (the upazila's name, without 'ইউনিয়ন', in a list of Baniachong's unions) not taken as a union

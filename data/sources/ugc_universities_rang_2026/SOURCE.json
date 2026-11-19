@@ -1,0 +1,22 @@
+{
+  "key": "UGC_UNIVERSITIES_RANG_2026",
+  "division": "rangpur",
+  "kind": "ugc",
+  "name": "UGC university register — universities in Rangpur Division",
+  "organization": "University Grants Commission of Bangladesh (UGC)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://www.ugc.gov.bd/universities"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Source: University Grants Commission of Bangladesh (ugc.gov.bd)",
+  "notes": "All universities on ugc.gov.bd (public, private, international, CBHE) were read from the page data embedded in each university page (/university/<slug>); kept where the UGC campus address names a Rangpur-Division district (when an address also names another division's district, e.g. 'Rangpur Road, Gokul, Bogura', the district named last decides), or, when UGC gives no address at all, where the university's name does (flagged in notes). Officials' names (VC, registrar etc.) are dropped. Phones: only landline/hotline numbers kept (mobile numbers dropped as possibly personal); e-mails: only the university's own domain or institutional-looking addresses. No coordinates. Licence not stated.",
+  "files": {
+    "places.csv": "0e10ae37db0e8760e376ecb78bfcca64fd3e40e2c00ca061bbd71d5eb1cfcb73",
+    "raw/ugc_universities_rangpur_division.json": "9bdb0b99723347b984ee4f98d18fc338b514b9964a57da5a5c2fac5533917b9c"
+  }
+}

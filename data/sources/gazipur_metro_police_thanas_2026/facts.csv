@@ -1,0 +1,2 @@
+entity_level,entity_name_en,district_en,upazila_en,code,fact,value,unit,basis,year,source_key,source_url,notes
+metropolitan_police,Gazipur Metropolitan Police area,Gazipur,,,police_stations,8,thanas,listed,2026,GAZIPUR_METRO_POLICE_THANAS_2026,https://gmp.gov.bd/history.php,8 thanas (About GMP and the site's thana pages); all lie in Gazipur City Corporation (area_en).

@@ -1,0 +1,14 @@
+ক্র.নং | ব্যাংকের নাম, ঠিকানা ও মোবাইল নম্বর
+১ | সোনালী ব্যাংক লিঃ; তেঁতুলিয়া রোড, পঞ্চগড়; [mobile redacted]; ০৫৬৮-৬২০৩৭; http://www.sonalibank.com.bd/
+২ | জনতা ব্যাংক লিঃ; মহসীন মার্কেট, ২য় তলা, পঞ্চগড়; [mobile redacted]; ০৫৬৮-৬১২৫৬; http://www.janatabank-bd.com/
+৩ | অগ্রণী ব্যাংক লিঃ; পঞ্চগড়; [mobile redacted]; ০৫৬৮-৬১২১৫; http://www.agranibankbd.org/
+৪ | রুপালী ব্যাংক লিঃ; সিনেমা রোড, পঞ্চগড়; [mobile redacted]; ০৫৬৮-৬১২৪৭; http://www.rupalibank.org/
+৫ | রাজশাহী কৃষি উন্নয়ন ব্যাংক (রাকাব); ইসলামবাগ, পঞ্চগড়; [mobile redacted]; ০৫৬৮-৬১২৬০; http://www.rakub.org.bd/
+৬ | কর্ম্ সংস্থান ব্যাংক; পঞ্চগড়-দিনাজপুর মহাসড়ক; ধাক্কামারা গোর চক্কর; [mobile redacted]; ০৫৬৮-৬১৬৩৩; http://www.karmasangsthanbank.gov.bd/
+৭ | আনসার ভিডিপি ব্যাংক; কায়েতপাড়া, স্টেডিয়াম রোড; [mobile redacted]; ০৫৬৮-৬২৫২৭; http://www.ansarvdpbank.com.bd/
+৮ | পূবালী ব্যাংক লিঃ; এইচ কে প্লাজা, ২য় তলা; [mobile redacted]; ০৫৬৮-৬১২৪৫; http://www.pubalibangla.com/
+৯ | ডাচ বাংলা ব্যাংক; পঞ্চগড় - তেঁতুলিয়া রোড; আনোয়ার প্লাজা, ২য় তলা; [mobile redacted]; ০৫৬৮-৬২৪০১; http://www.dutchbanglabank.com/
+১০ | ব্রাক ব্যাংক; আলোছায়া সুপার মার্কেট; ২য় তলা, সিনেমা রোড; পঞ্চগড়।; [mobile redacted]; ০৫৬৮-৬১৪১৭; http://www.bracbank.com/
+১১ | ন্যাশনাল বাংক লিঃ; পঞ্চগড় - তেঁতুলিয়া রোড; [mobile redacted]; ০৫৬৮-৬১২৮৮; http://www.nblbd.com/
+১২ | ইসলামী ব্যাংক লিঃ; পঞ্চগড় - তেঁতুলিয়া রোড; মসজিদ মার্কেট, ২য় তলা; [mobile redacted]; ০৫৬৮-৬১৮৯০; http://www.islamibankbd.com/
+ | 

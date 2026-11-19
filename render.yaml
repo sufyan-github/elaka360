@@ -1,0 +1,47 @@
+# Render Blueprint for the Elaka360 API and its database (docs/DEPLOYMENT.md → "Cloudflare + Render").
+# Create it once in the Render dashboard: New → Blueprint → this repository. Deploys after that are triggered by
+# GitHub Actions (.github/workflows/deploy.yml) once CI passes, so autoDeployTrigger is off.
+services:
+  - type: web
+    name: elaka360-api
+    runtime: docker
+    dockerfilePath: ./apps/api/Dockerfile
+    dockerContext: .
+    region: singapore
+    plan: 0.5c-512mb                       # paid instance: needed for the pre-deploy migration step; free instances sleep
+    branch: main
+    autoDeployTrigger: off
+    healthCheckPath: /health
+    preDeployCommand: bash scripts/db-migrate.sh   # applies new db/migrations before the new version goes live; never drops data
+    domains:
+      - elaka360-api.abusufyan.online
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: elaka360-db
+          property: connectionString
+      - key: AUTH_JWT_SECRET
+        generateValue: true
+      - key: AUTH_TOTP_KEY
+        generateValue: true
+      - key: CORS_ORIGINS
+        value: https://elaka360.abusufyan.online,https://elaka360-admin.abusufyan.online
+      - key: PUBLIC_INCLUDE_UNVERIFIED
+        value: "true"
+      - key: TRUST_PROXY_HOPS
+        value: "1"                         # Render's load balancer
+      - key: EDGE_SHARED_SECRET            # same value as the GitHub secret EDGE_SHARED_SECRET (visitor IPs from the Workers)
+        sync: false
+      - key: SMS_PROVIDER                  # leave empty until an SMS gateway is integrated (sign-in returns 503 until then)
+        sync: false
+
+databases:
+  - name: elaka360-db
+    databaseName: elaka360
+    user: elaka360
+    plan: 0.1c-256mb
+    region: singapore
+    postgresMajorVersion: "16"
+    ipAllowList: []                        # no access from the internet; only Render services in this account

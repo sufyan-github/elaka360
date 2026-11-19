@@ -1,0 +1,23 @@
+{
+  "key": "WIKIDATA_SYL_2026",
+  "division": "sylhet",
+  "kind": "wikidata",
+  "name": "Wikidata — items with coordinates in Sylhet Division (places, not administrative units)",
+  "organization": "Wikidata contributors (Wikimedia Foundation)",
+  "source_type": "encyclopedia",
+  "trust_level": 2,
+  "urls": [
+    "https://query.wikidata.org/",
+    "https://www.wikidata.org/"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution": "Wikidata (CC0 1.0). Wikipedia article links are references only; no article text is copied.",
+  "files": {
+    "places.csv": "51e5ad06850eb8b22dc70b89a2744af78c0e3e831d66e98d09eea7d3fbedbc05",
+    "raw/wikidata_sylhet.json": "c4fc25b8eabe8534ef7beca847d6ca00553e5de975eb3983b3aa1bf76116fcb5"
+  },
+  "notes": "Division item Q459732. Candidates: P625 inside each district bounding box (wikibase:box) plus P131-chain members of the division item; kept when a point lies inside the HDX COD-AB division polygon (hdx_cod_ab_bgd_sylhet/boundaries.geojson). District/upazila by point-in-polygon, seed names via hdx_cod_ab_bgd_sylhet/crosswalk.csv. Administrative units and settlements excluded. Community-edited data: every row is unverified. P1329 phone numbers kept in extra_json.wikidata_phone only (not published by the institution itself)."
+}

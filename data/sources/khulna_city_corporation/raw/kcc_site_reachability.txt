@@ -1,0 +1,7 @@
+URL: https://khulnacity.gov.bd/, https://www.khulnacity.org/
+TITLE: KCC official site (not reachable)
+PAGE UPDATED:  ()
+ACCESSED: 2026-11-18
+
+https://khulnacity.gov.bd/ -> ConnectionError
+https://www.khulnacity.org/ -> HTTP 403

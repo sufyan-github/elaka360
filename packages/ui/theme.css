@@ -5,6 +5,7 @@
 @theme inline {
   --color-primary: var(--e360-primary);
   --color-primary-hover: var(--e360-primary-hover);
+  --color-on-primary: var(--e360-on-primary);
   --color-secondary: var(--e360-secondary);
   --color-accent: var(--e360-accent);
   --color-bg: var(--e360-bg);
@@ -15,6 +16,9 @@
   --color-muted: var(--e360-text-muted);
   --color-danger: var(--e360-danger);
   --color-danger-tint: var(--e360-danger-tint);
+  --color-on-danger: var(--e360-on-danger);
+  --color-warning: var(--e360-warning);
+  --color-warning-tint: var(--e360-warning-tint);
   --color-verified: var(--e360-verified);
   --radius-card: var(--e360-radius);
   --radius-chip: var(--e360-radius-sm);

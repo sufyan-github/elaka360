@@ -1,0 +1,23 @@
+{
+  "key": "PORTAL_TOURIST_SPOTS_KHL_2026",
+  "division": "khulna",
+  "kind": "tourist_spots",
+  "name": "National portal 'দর্শনীয় স্থান' (tourist spot) lists — Khulna Division district and upazila portals",
+  "organization": "District / Upazila administrations (national portal framework, a2i/Cabinet Division)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://khulna.gov.bd/pages/tourist-spot",
+    "https://<upazila>.<district>.gov.bd/pages/tourist-spot"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "District / Upazila administrations (national portal framework, a2i/Cabinet Division)",
+  "notes": "Server-rendered list tables (/pages/tourist-spot, paginated with ?page=N) of 10 district + 59 upazila portals. Columns used: title, location; 'transportation' and descriptions not copied; the 'contact' column is mostly a UNO/OC contact or directions, so no phone is taken. No coordinates are published (Google Maps links kept in extra_json, not used). Categories assigned by keyword rules. Licence: none stated on the source; treat as government public information, cite the source.",
+  "files": {
+    "facts.csv": "c3f0a8430dd9175833bec1a362a3e8a606551f6683a91e7858070bb55f233759",
+    "places.csv": "8d573a53cd7fc1b4658b9a7a5f6f79c8599b1d02ae70c38bcb2878f3b18a6fe4"
+  }
+}

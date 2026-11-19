@@ -1,0 +1,26 @@
+{
+  "key": "DPE_IPEMIS_PRIMARY_SYL_2026",
+  "name": "DPE IPEMIS primary school directory — Sylhet Division",
+  "organization": "Directorate of Primary Education (DPE), Ministry of Primary and Mass Education",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://ipemis.dpe.gov.bd/search-school",
+    "https://ipemis.dpe.gov.bd/load-lite-school-list",
+    "https://api.ipemis.dpe.gov.bd/api/school-stat-public",
+    "https://dpe.gov.bd/"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Source: Directorate of Primary Education, IPEMIS (ipemis.dpe.gov.bd)",
+  "division": "sylhet",
+  "kind": "dpe_ipemis",
+  "notes": "Public 'প্রাথমিক বিদ্যালয় ডিরেক্টরি' (school search) of the Integrated Primary Education Management Information System, linked from dpe.gov.bd. Listing endpoint used by the public page (DataTables JSON), queried per district of Sylhet Division (divisionId=6); same collector and rules as DPE_IPEMIS_PRIMARY_RAJ_2026. Covers government primary, newly nationalised and experimental schools only (no kindergartens, NGO or ebtedayee madrasas). No coordinates; head teachers' names and mobiles on the detail pages are deliberately NOT collected. Live data (changes daily). No robots.txt on ipemis.dpe.gov.bd / api.ipemis.dpe.gov.bd (404). Licence not stated.",
+  "files": {
+    "places.csv": "595fb0c5210cd2d2aa0c2c8c56df011a4fd05d3d69cf0f24dc7a624faaf9f299",
+    "facts.csv": "2f9b651f1c75b82311657c2b04f387be1d83351c78cf94ff1908491da86c34b6",
+    "raw/ipemis_school_list_sylhet_division.json": "a39c2928858137cda1740c016b1a13c4806b9b3911544365bd0a88c9cfcfd4fb"
+  }
+}

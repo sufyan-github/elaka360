@@ -1,0 +1,3 @@
+entity_level,entity_name_en,district_en,upazila_en,code,fact,value,unit,basis,year,source_key,source_url,notes
+district,Jamalpur,Jamalpur,,,police_stations,8,thanas,reported,,MYM_RANGE_POLICE_PORTALS_2026,https://www.police.gov.bd/en/mymensingh_range,"police.gov.bd Mymensingh Range page (undated): 08 police stations: Jamalpur, Melandoho, Sarishabari, Dewangonj, Islampur, Madargonj, Bakshigonj and bahadurabad"
+district,Netrokona,Netrokona,,,police_stations,10,thanas,reported,,MYM_RANGE_POLICE_PORTALS_2026,https://www.police.gov.bd/en/mymensingh_range,"police.gov.bd Mymensingh Range page (undated): 10 police stations: Netrokona model, Purbodhola, Durgapur, Kendua, Barhatta, Atpara, Kalmakanda, Mohongonj, Madan, Khaliajuri"

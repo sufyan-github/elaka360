@@ -1,0 +1,6 @@
+﻿conflict_id,topic,claim_a,claim_b,sources,assessment,status
+BOG-001,District union total,108,109,"Official district portal page variants (one says 109, another 108); BBS 2011 historical count 108","Keep 108 historical baseline, but do not call current total settled",Open
+BOG-002,Mokamtala Upazila formation,NICAR approval reported May 2026,Legal effective date / gazette text not retrieved,2026 news reports citing NICAR,Do not assume upazila creation automatically changes union count or parentage,Open
+BOG-003,Four new union candidates,"Mirbari, Simanta, Diganta, Swarnagram",Names and legal status pending gazette extraction,June 2026 gazette news reports,Candidate names only; no production insertion,Open
+BOG-004,Renaming proposals,Mirbari→Betgari; Simanta→Jagannathpur; Diganta→Rahbal,Proposal vs final approval/gazette unresolved,July 2026 local news reports,Store as alias/proposed name only; not canonical current name,Open
+BOG-005,Upazila distribution,"12-upazila historical roster, 108 union count",New Mokamtala structure may alter parent mapping,LGD + NICAR reports,Need gazette schedule for all union transfers and new units,Open

@@ -1,0 +1,915 @@
+#!/usr/bin/env python3
+"""Tourist spots ('দর্শনীয় স্থান') listed on the national-portal district and upazila sites of a division (default Rajshahi).
+
+Re-runnable: python3 fetch.py [--division rangpur|dhaka|chattogram|khulna|barishal|sylhet|mymensingh] [--out DIR]  (stdlib + requests). Optional: ELAKA_CACHE=<dir> caches pages."""
+# --- polite HTTP helper (copy this block into each fetch.py; stdlib + requests only) -----------------
+# Many *.gov.bd servers send only their leaf certificate and omit the intermediate CA. Browsers fetch the
+# missing intermediate via the certificate's AIA URL; we do the same explicitly: download the published
+# intermediates from the CA and add them to certifi's bundle. TLS verification stays ON.
+import os, time, tempfile, urllib.parse, urllib.robotparser
+import requests
+
+UA = "Elaka360-data-pipeline (research; contact via repository)"
+INTERMEDIATES = [  # CA-published intermediates (AIA "CA Issuers" URLs) that some gov.bd hosts fail to send
+    "http://crt.sectigo.com/SectigoPublicServerAuthenticationCADVR36.crt",
+    "http://crt.sectigo.com/SectigoPublicServerAuthenticationCAOVR36.crt",
+    "http://crt.sectigo.com/SSL2BUYEMEARSADomainValidationSecureServerCA.crt",
+]
+MIN_DELAY = 1.2  # seconds between requests to the same host
+
+_last, _robots, _bundle = {}, {}, None
+S = requests.Session()
+S.headers["User-Agent"] = UA
+
+
+def _der_to_pem(der):
+    import base64
+    b = base64.encodebytes(der).decode().replace("\n", "")
+    return "-----BEGIN CERTIFICATE-----\n" + "\n".join(b[i:i + 64] for i in range(0, len(b), 64)) + "\n-----END CERTIFICATE-----\n"
+
+
+def ca_bundle():
+    global _bundle
+    if _bundle:
+        return _bundle
+    import certifi
+    pems = [open(certifi.where(), encoding="ascii").read()]
+    for u in INTERMEDIATES:
+        try:
+            r = requests.get(u, timeout=30, headers={"User-Agent": UA})
+            if r.ok:
+                pems.append(r.content.decode() if r.content.startswith(b"-----") else _der_to_pem(r.content))
+        except requests.RequestException:
+            pass
+        time.sleep(MIN_DELAY)
+    fd, path = tempfile.mkstemp(suffix=".pem")
+    with os.fdopen(fd, "w") as f:
+        f.write("\n".join(pems))
+    _bundle = path
+    return path
+
+
+def allowed(url):
+    p = urllib.parse.urlsplit(url)
+    base = f"{p.scheme}://{p.netloc}"
+    if base not in _robots:
+        rp = urllib.robotparser.RobotFileParser()
+        try:
+            r = get_raw(base + "/robots.txt")
+            rp.parse(r.text.splitlines() if (r is not None and r.status_code == 200 and "html" not in r.headers.get("content-type", "")) else [])
+        except Exception:
+            rp.parse([])
+        _robots[base] = rp
+    return _robots[base].can_fetch(UA, url)
+
+
+def get_raw(url, **kw):
+    host = urllib.parse.urlsplit(url).netloc
+    wait = MIN_DELAY - (time.time() - _last.get(host, 0))
+    if wait > 0:
+        time.sleep(wait)
+    try:
+        return S.get(url, timeout=kw.pop("timeout", 60), verify=ca_bundle(), **kw)
+    finally:
+        _last[host] = time.time()
+
+
+def get(url, retries=2, **kw):
+    """Polite GET; returns Response or None (never raises)."""
+    if not allowed(url):
+        print("robots.txt disallows", url)
+        return None
+    for i in range(retries + 1):
+        try:
+            r = get_raw(url, **kw)
+            if r.status_code < 500:
+                return r
+        except requests.RequestException as e:
+            print("fetch failed", url, e)
+        time.sleep(3 * (i + 1))
+    return None
+# --- end helper ---------------------------------------------------------------------------------------
+
+# --- national-portal (2026 framework) parsing helpers -----------------------------------------------
+import csv, hashlib, html, json, re, sys, unicodedata
+
+CACHE = os.environ.get("ELAKA_CACHE")  # optional local cache dir (speeds up re-runs; not required)
+
+
+def fetch_text(url):
+    """GET a page politely; returns text or '' (never raises). Uses ELAKA_CACHE if set."""
+    url = urllib.parse.quote(url, safe=":/?&=%#+,;~")
+    fn = None
+    if CACHE:
+        os.makedirs(CACHE, exist_ok=True)
+        fn = os.path.join(CACHE, hashlib.md5(url.encode()).hexdigest() + ".html")
+        if os.path.exists(fn):
+            return open(fn, encoding="utf-8", errors="replace").read()
+    r = get(url)
+    if r is None or r.status_code != 200:
+        print("  !", r.status_code if r is not None else "ERR", url, file=sys.stderr)
+        return ""
+    r.encoding = r.encoding or "utf-8"
+    t = r.text
+    if fn:
+        open(fn, "w", encoding="utf-8").write(t)
+    return t
+
+
+def nfc(s):
+    return unicodedata.normalize("NFC", re.sub(r"\s+", " ", s or "")).strip()
+
+
+def strip_tags(s):
+    s = re.sub(r"<script.*?</script>|<style.*?</style>|<!--.*?-->", " ", s, flags=re.S)
+    s = re.sub(r"<br\s*/?>|</p>|</div>|</li>|</tr>|</h\d>", "\n", s)
+    return html.unescape(re.sub(r"<[^>]+>", " ", s))
+
+
+def page_title(t):
+    m = re.search(r"<title>(.*?)</title>", t, re.S)
+    return nfc(html.unescape(m.group(1))) if m else ""
+
+
+def widget(t, name="ContentViewerWidget"):
+    i = t.find('data-widget_name="%s"' % name)
+    if i < 0:
+        return ""
+    j = t.find('data-widget_name="', i + 30)
+    return t[i:j if j > 0 else len(t)]
+
+
+def links(t):
+    out = []
+    for m in re.finditer(r'<a[^>]*href="([^"]*)"[^>]*>(.*?)</a>', t, re.S):
+        out.append((html.unescape(m.group(1)).strip(), nfc(html.unescape(re.sub(r"<[^>]+>", " ", m.group(2))))))
+    return out
+
+
+def list_table(t):
+    """Rows of the framework's list tables (<tr class="table-tr"> with data-column cells)."""
+    rows = []
+    for tr in re.findall(r'<tr class="table-tr">(.*?)</tr>', t, re.S):
+        d = {}
+        for m in re.finditer(r'<td class="table-td[^"]*"(?: data-column="([^"]*)")?[^>]*>(.*?)</td>', tr, re.S):
+            k, v = m.group(1) or "link", m.group(2)
+            if k == "link":
+                l = re.search(r'href="([^"]+)"', v)
+                d[k] = html.unescape(l.group(1)) if l else ""
+            else:
+                d[k] = nfc(strip_tags(v))
+        d["_hrefs"] = [html.unescape(h) for h in re.findall(r'href="([^"]+)"', tr)
+                       if "objectstorage" not in h and not h.startswith("/pages/")]
+        rows.append(d)
+    return rows
+
+
+def html_tables(t):
+    """Plain <table>s inside page content -> list of tables (list of row cell-texts)."""
+    out = []
+    for tb in re.findall(r"<table.*?</table>", t, re.S):
+        rows = []
+        for tr in re.findall(r"<tr.*?</tr>", tb, re.S):
+            cells = [nfc(strip_tags(c)) for c in re.findall(r"<t[hd][^>]*>(.*?)</t[hd]>", tr, re.S)]
+            hrefs = re.findall(r'href="([^"]+)"', tr)
+            rows.append((cells, hrefs))
+        out.append(rows)
+    return out
+
+
+BN_DIGITS = str.maketrans("০১২৩৪৫৬৭৮৯", "0123456789")
+
+
+def ascii_digits(s):
+    return (s or "").translate(BN_DIGITS)
+
+
+def officer_cards(t):
+    """Officer cards (HybridBrowseWidget / OfficerDetailsWidget) -> list of dicts of the labelled fields."""
+    txt = strip_tags(t)
+    lines = [nfc(x) for x in txt.split("\n")]
+    lines = [x for x in lines if x]
+    labels = ["নাম", "পদবি", "অফিস", "ওয়েব পোর্টল", "ইমেইল", "ফোন (অফিস)", "ইন্টারকম", "কক্ষ নম্বর", "মোবাইল", "ফ্যাক্স",
+              "যোগদানের তারিখ", "ব্যাচ (বিসিএস)"]
+    cards, cur, key = [], None, None
+    for x in lines:
+        if x == "নাম":
+            cur = {}
+            cards.append(cur)
+            key = "নাম"
+            continue
+        if cur is None:
+            continue
+        if x in labels:
+            key = x
+            continue
+        if "ভিকার্ড" in x or x in ("•", "দেখুন"):
+            key = None
+            continue
+        if key:
+            cur[key] = (cur.get(key, "") + x) if key == "ইমেইল" else (cur.get(key, "") + " " + x).strip()
+    return cards
+
+
+def office_landline(s):
+    """Keep only office landlines (Bangladesh fixed-line numbers start 0 but not 01); mobiles are dropped."""
+    out = []
+    for p in re.split(r"[,/;]|\s{2,}", ascii_digits(s or "")):
+        d = re.sub(r"[^\d+]", "", p)
+        d = re.sub(r"^\+?880", "0", d)
+        if len(d) >= 6 and d.startswith("0") and not d.startswith("01"):
+            out.append(d)
+    return "; ".join(dict.fromkeys(out))
+
+
+def gov_email(s):
+    s = (s or "").replace(" ", "").replace("[at]", "@").lower()
+    ms = re.findall(r"[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,}", s)
+    return "; ".join(dict.fromkeys(m for m in ms if m.endswith(".gov.bd") or m.endswith("@mopa.gov.bd")))
+
+
+# Rajshahi Division names: Bangla -> standard English (HDX COD-AB spellings; brief's Rajshahi District spellings)
+DISTRICTS = {"রাজশাহী": "Rajshahi", "নাটোর": "Natore", "নওগাঁ": "Naogaon", "চাঁপাইনবাবগঞ্জ": "Chapainawabganj",
+             "বগুড়া": "Bogura", "জয়পুরহাট": "Joypurhat", "পাবনা": "Pabna", "সিরাজগঞ্জ": "Sirajganj"}
+DISTRICT_HOSTS = {"Rajshahi": "rajshahi.gov.bd", "Natore": "natore.gov.bd", "Naogaon": "naogaon.gov.bd",
+                  "Chapainawabganj": "chapainawabganj.gov.bd", "Bogura": "bogra.gov.bd", "Joypurhat": "joypurhat.gov.bd",
+                  "Pabna": "pabna.gov.bd", "Sirajganj": "sirajganj.gov.bd"}
+UPAZILAS = {  # district -> [(english, bangla names/aliases..., portal subdomain)]
+    "Rajshahi": [("Paba", ["পবা"], "paba"), ("Durgapur", ["দুর্গাপুর", "দূর্গাপুর"], "durgapur"),
+                 ("Mohanpur", ["মোহনপুর"], "mohonpur"), ("Charghat", ["চারঘাট"], "charghat"),
+                 ("Puthia", ["পুঠিয়া"], "puthia"), ("Bagha", ["বাঘা"], "bagha"),
+                 ("Godagari", ["গোদাগাড়ী", "গোদাগাড়ি"], "godagari"), ("Tanore", ["তানোর"], "tanore"),
+                 ("Bagmara", ["বাগমারা"], "bagmara")],
+    "Natore": [("Natore Sadar", ["নাটোর সদর"], "natoresadar"), ("Singra", ["সিংড়া"], "singra"),
+               ("Baraigram", ["বড়াইগ্রাম"], "baraigram"), ("Bagatipara", ["বাগাতিপাড়া"], "bagatipara"),
+               ("Lalpur", ["লালপুর"], "lalpur"), ("Gurudaspur", ["গুরুদাসপুর"], "gurudaspur"),
+               ("Naldanga", ["নলডাঙ্গা", "নলডাঙা"], "naldanga")],
+    "Naogaon": [("Mahadebpur", ["মহাদেবপুর"], "mohadevpur"), ("Badalgachhi", ["বদলগাছী", "বদলগাছি"], "badalgachi"),
+                ("Patnitala", ["পত্নীতলা", "পত্নিতলা"], "patnitala"), ("Dhamoirhat", ["ধামইরহাট"], "dhamoirhat"),
+                ("Niamatpur", ["নিয়ামতপুর"], "niamatpur"), ("Manda", ["মান্দা"], "manda"), ("Atrai", ["আত্রাই"], "atrai"),
+                ("Raninagar", ["রাণীনগর", "রানীনগর"], "raninagar"), ("Naogaon Sadar", ["নওগাঁ সদর"], "naogaonsadar"),
+                ("Porsha", ["পোরশা"], "porsha"), ("Sapahar", ["সাপাহার"], "sapahar")],
+    "Chapainawabganj": [("Chapainawabganj Sadar", ["চাঁপাইনবাবগঞ্জ সদর"], "chapainawabganjsadar"),
+                        ("Gomastapur", ["গোমস্তাপুর"], "gomostapur"), ("Nachole", ["নাচোল"], "nachol"),
+                        ("Bholahat", ["ভোলাহাট"], "bholahat"), ("Shibganj", ["শিবগঞ্জ"], "shibganj")],
+    "Bogura": [("Kahaloo", ["কাহালু"], "kahaloo"), ("Bogura Sadar", ["বগুড়া সদর"], "sadar"),
+               ("Sariakandi", ["সারিয়াকান্দি"], "shariakandi"), ("Shajahanpur", ["শাজাহানপুর", "শাহজাহানপুর"], "shajahanpur"),
+               ("Dupchanchia", ["দুপচাঁচিয়া", "দুপচাচিঁয়া"], "dupchanchia"), ("Adamdighi", ["আদমদিঘি", "আদমদীঘি"], "adamdighi"),
+               ("Nandigram", ["নন্দীগ্রাম", "নন্দিগ্রাম"], "nondigram"), ("Sonatala", ["সোনাতলা"], "sonatala"),
+               ("Dhunat", ["ধুনট"], "dhunot"), ("Gabtali", ["গাবতলী"], "gabtali"), ("Sherpur", ["শেরপুর"], "sherpur"),
+               ("Shibganj", ["শিবগঞ্জ"], "shibganj")],
+    "Joypurhat": [("Akkelpur", ["আক্কেলপুর"], "akkelpur"), ("Kalai", ["কালাই"], "kalai"), ("Khetlal", ["ক্ষেতলাল"], "khetlal"),
+                  ("Panchbibi", ["পাঁচবিবি"], "panchbibi"), ("Joypurhat Sadar", ["জয়পুরহাট সদর"], "joypurhatsadar")],
+    "Pabna": [("Sujanagar", ["সুজানগর"], "sujanagar"), ("Ishwardi", ["ঈশ্বরদী"], "ishurdi"), ("Bhangura", ["ভাঙ্গুড়া", "ভাংগুড়া"], "bhangura"),
+              ("Pabna Sadar", ["পাবনা সদর"], "pabnasadar"), ("Bera", ["বেড়া"], "bera"), ("Atgharia", ["আটঘরিয়া"], "atghoria"),
+              ("Chatmohar", ["চাটমোহর"], "chatmohar"), ("Santhia", ["সাঁথিয়া"], "santhia"), ("Faridpur", ["ফরিদপুর"], "faridpur")],
+    "Sirajganj": [("Belkuchi", ["বেলকুচি"], "belkuchi"), ("Chouhali", ["চৌহালি", "চৌহালী"], "chauhali"),
+                  ("Kamarkhanda", ["কামারখন্দ"], "kamarkhand"), ("Kazipur", ["কাজীপুর"], "kazipur"),
+                  ("Rayganj", ["রায়গঞ্জ"], "raigonj"), ("Shahjadpur", ["শাহজাদপুর"], "shahjadpur"),
+                  ("Sirajganj Sadar", ["সিরাজগঞ্জ সদর"], "sirajganjsadar"), ("Tarash", ["তাড়াশ"], "tarash"),
+                  ("Ullapara", ["উল্লাপাড়া"], "ullapara")],
+}
+CITY_THANAS = {"বোয়ালিয়া": "Boalia", "রাজপাড়া": "Rajpara", "মতিহার": "Motihar", "শাহ মখদুম": "Shah Makhdum",
+               "চন্দ্রিমা": "Chandrima", "কাশিয়াডাঙ্গা": "Kashiadanga", "কাটাখালী": "Katakhali", "এয়ারপোর্ট": "Airport",
+               "দামকুড়া": "Damkura", "বেলপুকুর": "Belpukur", "কর্ণহার": "Karnahar", "পবা": "Paba"}
+
+
+def find_upazila(text, district=None):
+    """First upazila (English) whose Bangla name occurs in text; restricted to district if given."""
+    t = nfc(text)
+    best = None
+    for dist, ups in UPAZILAS.items():
+        if district and dist != district:
+            continue
+        for en, bns, _ in ups:
+            for bn in bns:
+                i = t.find(bn)
+                if i >= 0 and (best is None or i < best[0]):
+                    best = (i, dist, en)
+    return (best[1], best[2]) if best else (None, None)
+
+
+# --- optional QA: point-in-polygon against HDX COD-AB upazila polygons in the repo (if present) -----------
+_POLYS = None
+
+
+def _load_polys():
+    global _POLYS
+    if _POLYS is not None:
+        return _POLYS
+    _POLYS = []
+    here = os.path.dirname(os.path.abspath(__file__))
+    fn = os.path.join(here, "..", "hdx_cod_ab_bgd", "boundaries.geojson")
+    if os.path.exists(fn):
+        for f in json.load(open(fn, encoding="utf-8"))["features"]:
+            p = f["properties"]
+            if p.get("level") in ("upazila", "city_corporation"):
+                g = f["geometry"]
+                polys = g["coordinates"] if g["type"] == "MultiPolygon" else [g["coordinates"]]
+                _POLYS.append((p.get("district_en"), p.get("name_en"), polys))
+    return _POLYS
+
+
+def _inside(x, y, ring):
+    c = False
+    j = len(ring) - 1
+    for i in range(len(ring)):
+        xi, yi = ring[i][0], ring[i][1]
+        xj, yj = ring[j][0], ring[j][1]
+        if (yi > y) != (yj > y) and x < (xj - xi) * (y - yi) / ((yj - yi) or 1e-12) + xi:
+            c = not c
+        j = i
+    return c
+
+
+def locate(lat, lon):
+    """(district_en, upazila_en) of the HDX polygon containing the point, or (None, None)."""
+    for d, u, polys in _load_polys():
+        for poly in polys:
+            if _inside(lon, lat, poly[0]) and not any(_inside(lon, lat, h) for h in poly[1:]):
+                return ("Chapainawabganj" if d and d.startswith("Chapai") else d), u
+    return None, None
+
+
+PLACE_COLS = ["source_key", "source_id", "name_bn", "name_en", "category_key", "lat", "lon", "address", "district_en",
+              "upazila_en", "phone", "website", "email", "opening_hours", "operator", "ownership", "extra_json",
+              "source_url", "notes"]
+FACT_COLS = ["entity_level", "entity_name_en", "district_en", "upazila_en", "code", "fact", "value", "unit", "basis",
+             "year", "source_key", "source_url", "notes"]
+
+
+def write_csv(path, cols, rows):
+    with open(path, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=cols, extrasaction="ignore")
+        w.writeheader()
+        for r in rows:
+            w.writerow({k: ("" if r.get(k) is None else r.get(k)) for k in cols})
+
+
+def sha256(path):
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        for b in iter(lambda: f.read(1 << 20), b""):
+            h.update(b)
+    return h.hexdigest()
+
+
+def jdump(d):
+    return json.dumps({k: v for k, v in d.items() if v not in (None, "", [], {})}, ensure_ascii=False, separators=(",", ":"))
+# --- end portal helpers --------------------------------------------------------------------------------
+
+
+# --- PORTAL_TOURIST_SPOTS_RAJ_2026 --------------------------------------------------------------------------
+# "দর্শনীয় স্থান" (/pages/tourist-spot) lists of the 8 district portals and all upazila portals of Rajshahi Division.
+SOURCE_KEY = "PORTAL_TOURIST_SPOTS_RAJ_2026"
+OUT = os.path.dirname(os.path.abspath(__file__))
+HEAD = "Rajshahi"  # the division's head district
+
+# --- division selection (see ../DIVISIONS.md) --------------------------------------------------------------
+# `python3 fetch.py` = `--division rajshahi`, output into this folder (unchanged behaviour). Other divisions write into
+# their own folder (default: the sibling folder named per DIVISIONS.md) and never into the Rajshahi folder.
+import argparse
+DIVISION_CHOICES = ("rajshahi", "rangpur", "dhaka", "chattogram", "khulna", "barishal", "sylhet", "mymensingh")
+DIVISION = "rajshahi"
+
+
+def parse_division_args(folders):
+    """Parse --division/--out. folders: division -> default output folder name (a sibling of this folder)."""
+    ap = argparse.ArgumentParser(description=(__doc__ or "").strip().split("\n")[0])
+    ap.add_argument("--division", default="rajshahi", choices=DIVISION_CHOICES)
+    ap.add_argument("--out", help="output folder (default: this folder for rajshahi, ../<division folder> otherwise)")
+    a = ap.parse_args()
+    if a.division not in folders:
+        raise SystemExit("this collector has no table for division %r yet (see DIVISIONS.md)" % a.division)
+    here = os.path.dirname(os.path.abspath(__file__))
+    out = os.path.abspath(a.out or os.path.join(here, "..", folders[a.division]))
+    if a.division != "rajshahi" and os.path.realpath(out) == os.path.realpath(here):
+        raise SystemExit("refusing to write %s output into the Rajshahi folder %s" % (a.division, here))
+    os.makedirs(out, exist_ok=True)
+    return a.division, out
+
+
+def write_division_manifest(out, meta):
+    """SOURCE.json for a non-default division run: meta + sha256 of every data file in the output folder."""
+    import hashlib as _h, json as _j
+    files = {}
+    for root, _, names in os.walk(out):
+        for n in sorted(names):
+            full = os.path.join(root, n)
+            rel = os.path.relpath(full, out).replace(os.sep, "/")
+            if rel in ("SOURCE.json", "fetch.py", "REPORT.md") or "__pycache__" in rel:
+                continue
+            files[rel] = _h.sha256(open(full, "rb").read()).hexdigest()
+    m = dict(meta)
+    m["files"] = dict(sorted(files.items()))
+    with open(os.path.join(out, "SOURCE.json"), "w", encoding="utf-8") as f:
+        f.write(_j.dumps(m, ensure_ascii=False, indent=2) + "\n")
+
+
+# Rangpur Division names: Bangla -> English (HDX COD-AB spellings). District hosts verified by page title (Nov 2026);
+# upazila portal subdomains verified by their home-page titles ("হোম | <upazila> উপজেলা").
+RANGPUR_DISTRICTS = {"রংপুর": "Rangpur", "পঞ্চগড়": "Panchagarh", "দিনাজপুর": "Dinajpur", "লালমনিরহাট": "Lalmonirhat",
+                     "নীলফামারী": "Nilphamari", "গাইবান্ধা": "Gaibandha", "ঠাকুরগাঁও": "Thakurgaon", "কুড়িগ্রাম": "Kurigram"}
+RANGPUR_DISTRICT_HOSTS = {"Rangpur": "rangpur.gov.bd", "Panchagarh": "panchagarh.gov.bd", "Dinajpur": "dinajpur.gov.bd",
+                          "Lalmonirhat": "lalmonirhat.gov.bd", "Nilphamari": "nilphamari.gov.bd", "Gaibandha": "gaibandha.gov.bd",
+                          "Thakurgaon": "thakurgaon.gov.bd", "Kurigram": "kurigram.gov.bd"}
+RANGPUR_UPAZILAS = {  # district -> [(english, bangla names/aliases..., portal subdomain)]
+    "Rangpur": [("Badarganj", ["বদরগঞ্জ"], "badargonj"), ("Gangachara", ["গংগাচড়া", "গঙ্গাচড়া"], "gangachara"),
+                ("Kaunia", ["কাউনিয়া"], "kaunia"), ("Rangpur Sadar", ["রংপুর সদর"], "rangpursadar"),
+                ("Mithapukur", ["মিঠাপুকুর"], "mithapukur"), ("Pirgachha", ["পীরগাছা"], "pirgacha"),
+                ("Pirganj", ["পীরগঞ্জ"], "pirgonj"), ("Taraganj", ["তারাগঞ্জ"], "taragonj")],
+    "Panchagarh": [("Atowari", ["আটোয়ারী"], "atwari"), ("Boda", ["বোদা"], "boda"), ("Debiganj", ["দেবীগঞ্জ"], "debiganj"),
+                   ("Panchagarh Sadar", ["পঞ্চগড় সদর"], "panchagarhsadar"), ("Tentulia", ["তেঁতুলিয়া", "তেতুলিয়া"], "tetulia")],
+    "Thakurgaon": [("Baliadangi", ["বালিয়াডাঙ্গী", "বালিয়াডাংগী"], "baliadangi"), ("Haripur", ["হরিপুর"], "haripur"),
+                   ("Pirganj", ["পীরগঞ্জ"], "pirganj"), ("Ranishankail", ["রাণীশংকৈল", "রানীশংকৈল"], "ranisankail"),
+                   ("Thakurgaon Sadar", ["ঠাকুরগাঁও সদর"], "thakurgaonsadar")],
+    "Nilphamari": [("Dimla", ["ডিমলা"], "dimla"), ("Domar", ["ডোমার"], "domar"), ("Jaldhaka", ["জলঢাকা"], "jaldhaka"),
+                   ("Kishoreganj", ["কিশোরগঞ্জ"], "kishorganj"), ("Nilphamari Sadar", ["নীলফামারী সদর"], "nilphamarisadar"),
+                   ("Saidpur", ["সৈয়দপুর"], "syedpur")],
+    "Lalmonirhat": [("Aditmari", ["আদিতমারী"], "aditmari"), ("Hatibandha", ["হাতীবান্ধা"], "hatibandha"),
+                    ("Kaliganj", ["কালীগঞ্জ"], "kaliganj"), ("Lalmonirhat Sadar", ["লালমনিরহাট সদর"], "sadar"),
+                    ("Patgram", ["পাটগ্রাম"], "patgram")],
+    "Gaibandha": [("Fulchhari", ["ফুলছড়ি"], "phulchari"), ("Gaibandha Sadar", ["গাইবান্ধা সদর"], "gaibandhasadar"),
+                  ("Gobindaganj", ["গোবিন্দগঞ্জ"], "gobindaganj"), ("Palashbari", ["পলাশবাড়ী", "পলাশবাড়ি"], "palashbari"),
+                  ("Sadullapur", ["সাদুল্লাপুর", "সাদুল্যাপুর"], "sadullapur"), ("Saghata", ["সাঘাটা"], "saghata"),
+                  ("Sundarganj", ["সুন্দরগঞ্জ"], "sundarganj")],
+    "Kurigram": [("Bhurungamari", ["ভূরুঙ্গামারী", "ভুরুঙ্গামারী"], "bhurungamari"), ("Rajibpur", ["রাজিবপুর", "রাজীবপুর"], "charrajibpur"),
+                 ("Chilmari", ["চিলমারী"], "chilmari"), ("Phulbari", ["ফুলবাড়ী"], "phulbari"),
+                 ("Kurigram Sadar", ["কুড়িগ্রাম সদর"], "kurigramsadar"), ("Nageshwari", ["নাগেশ্বরী"], "nageshwari"),
+                 ("Rajarhat", ["রাজারহাট"], "rajarhat"), ("Roumari", ["রৌমারী"], "rowmari"), ("Ulipur", ["উলিপুর"], "ulipur")],
+    "Dinajpur": [("Birampur", ["বিরামপুর"], "birampur"), ("Birganj", ["বীরগঞ্জ"], "birganj"), ("Birol", ["বিরল"], "birol"),
+                 ("Bochaganj", ["বোচাগঞ্জ"], "bochaganj"), ("Chirirbandar", ["চিরিরবন্দর"], "chirirbandar"),
+                 ("Fulbari", ["ফুলবাড়ী"], "fulbari"), ("Ghoraghat", ["ঘোড়াঘাট"], "ghoraghat"), ("Hakimpur", ["হাকিমপুর"], "hakimpur"),
+                 ("Kaharole", ["কাহারোল"], "kaharol"), ("Khansama", ["খানসামা"], "khansama"),
+                 ("Dinajpur Sadar", ["দিনাজপুর সদর"], "dinajpursadar"), ("Nababganj", ["নবাবগঞ্জ"], "nawabganj"),
+                 ("Parbatipur", ["পার্বতীপুর"], "parbatipur")],
+}
+# Rangpur Metropolitan Police thanas (rpmp.gov.bd), English transliterations
+RANGPUR_CITY_THANAS = {"কোতয়ালী": "Kotwali", "তাজহাট": "Tajhat", "মাহিগঞ্জ": "Mahiganj", "হারাগাছ": "Haragach",
+                       "পরশুরাম": "Parshuram", "হাজিরহাট": "Hajirhat"}
+# Dhaka Division names: Bangla -> English (HDX COD-AB v03 spellings). District hosts verified by page title (Nov 2026);
+# upazila portal subdomains verified by their home-page titles ("হোম | <upazila> উপজেলা").
+DHAKA_DISTRICTS = {"ঢাকা": "Dhaka", "নরসিংদী": "Narsingdi", "গাজীপুর": "Gazipur", "শরীয়তপুর": "Shariatpur",
+                   "নারায়ণগঞ্জ": "Narayanganj", "টাঙ্গাইল": "Tangail", "কিশোরগঞ্জ": "Kishoreganj", "মানিকগঞ্জ": "Manikganj",
+                   "মুন্সীগঞ্জ": "Munshiganj", "রাজবাড়ী": "Rajbari", "মাদারীপুর": "Madaripur", "গোপালগঞ্জ": "Gopalganj",
+                   "ফরিদপুর": "Faridpur"}
+DHAKA_DISTRICT_HOSTS = {en: "%s.gov.bd" % en.lower() for en in DHAKA_DISTRICTS.values()}
+DHAKA_UPAZILAS = {  # district -> [(english, bangla names/aliases..., portal subdomain)]
+    "Dhaka": [("Dhamrai", ["ধামরাই"], "dhamrai"), ("Dohar", ["দোহার"], "dohar"),
+              ("Keraniganj", ["কেরাণীগঞ্জ", "কেরানীগঞ্জ"], "keraniganj"), ("Nawabganj", ["নবাবগঞ্জ"], "nawabganj"),
+              ("Savar", ["সাভার"], "savar")],
+    "Narsingdi": [("Belabo", ["বেলাবো", "বেলাব"], "belabo"), ("Manohardi", ["মনোহরদী", "মনোহরদি"], "monohardi"),
+                  ("Narsingdi Sadar", ["নরসিংদী সদর"], "narsingdisadar"), ("Palash", ["পলাশ"], "palash"),
+                  ("Raipura", ["রায়পুরা"], "raipura"), ("Shibpur", ["শিবপুর"], "shibpur")],
+    "Gazipur": [("Gazipur Sadar", ["গাজীপুর সদর"], "sadar"), ("Kaliakair", ["কালিয়াকৈর"], "kaliakair"),
+                ("Kaliganj", ["কালীগঞ্জ"], "kaliganj"), ("Kapasia", ["কাপাসিয়া"], "kapasia"), ("Sreepur", ["শ্রীপুর"], "sreepur")],
+    "Shariatpur": [("Bhedarganj", ["ভেদরগঞ্জ"], "bhedarganj"), ("Damudya", ["ডামুড্যা"], "damudya"),
+                   ("Gosairhat", ["গোসাইরহাট"], "gosairhat"), ("Naria", ["নড়িয়া"], "naria"),
+                   ("Shariatpur Sadar", ["শরীয়তপুর সদর", "শরিয়তপুর সদর"], "sadar"), ("Zajira", ["জাজিরা"], "zajira")],
+    "Narayanganj": [("Araihazar", ["আড়াইহাজার"], "araihazar"), ("Bandar", ["বন্দর"], "bandar"),
+                    ("Narayanganj Sadar", ["নারায়ণগঞ্জ সদর", "নারায়নগঞ্জ সদর"], "narayanganjsadar"),
+                    ("Rupganj", ["রূপগঞ্জ"], "rupganj"), ("Sonargaon", ["সোনারগাঁও", "সোনারগাঁ"], "sonargaon")],
+    "Tangail": [("Basail", ["বাসাইল"], "basail"), ("Bhuanpur", ["ভূঞাপুর", "ভুয়াপুর", "ভূয়াপুর"], "bhuapur"),
+                ("Delduar", ["দেলদুয়ার"], "delduar"), ("Dhanbari", ["ধনবাড়ী", "ধনবাড়ি"], "dhanbari"),
+                ("Ghatail", ["ঘাটাইল"], "ghatail"), ("Gopalpur", ["গোপালপুর"], "gopalpur"), ("Kalihati", ["কালিহাতী"], "kalihati"),
+                ("Madhupur", ["মধুপুর"], "madhupur"), ("Mirzapur", ["মির্জাপুর"], "mirzapur"), ("Nagarpur", ["নাগরপুর"], "nagarpur"),
+                ("Sakhipur", ["সখিপুর", "সখীপুর"], "sakhipur"), ("Tangail Sadar", ["টাঙ্গাইল সদর"], "tangailsadar")],
+    "Kishoreganj": [("Austagram", ["অষ্টগ্রাম"], "austagram"), ("Bajitpur", ["বাজিতপুর"], "bajitpur"), ("Bhairab", ["ভৈরব"], "bhairab"),
+                    ("Hossainpur", ["হোসেনপুর"], "hossainpur"), ("Itna", ["ইটনা"], "itna"), ("Karimganj", ["করিমগঞ্জ"], "karimgonj"),
+                    ("Katiadi", ["কটিয়াদী", "কটিয়াদি"], "katiadi"), ("Kishoreganj Sadar", ["কিশোরগঞ্জ সদর"], "kishoreganjsadar"),
+                    ("Kuliarchar", ["কুলিয়ারচর"], "kuliarchar"), ("Mithamain", ["মিঠামইন"], "mithamoin"), ("Nikli", ["নিকলী", "নিকলি"], "nikli"),
+                    ("Pakundia", ["পাকুন্দিয়া"], "pakundia"), ("Tarail", ["তাড়াইল"], "tarail")],
+    "Manikganj": [("Daulatpur", ["দৌলতপুর"], "daulatpur"), ("Ghior", ["ঘিওর"], "gior"), ("Harirampur", ["হরিরামপুর"], "harirampur"),
+                  ("Manikganj Sadar", ["মানিকগঞ্জ সদর"], "sadar"), ("Saturia", ["সাটুরিয়া"], "saturia"),
+                  ("Shibalay", ["শিবালয়"], "shibaloy"), ("Singair", ["সিংগাইর", "সিঙ্গাইর"], "singair")],
+    "Munshiganj": [("Gazaria", ["গজারিয়া"], "gajaria"), ("Louhajang", ["লৌহজং"], "louhajanj"),
+                   ("Munshiganj Sadar", ["মুন্সীগঞ্জ সদর", "মুন্সিগঞ্জ সদর"], "sadar"), ("Sirajdikhan", ["সিরাজদিখান"], "sirajdikhan"),
+                   ("Sreenagar", ["শ্রীনগর"], "sreenagar"), ("Tongibari", ["টংগিবাড়ী", "টংগীবাড়ি", "টঙ্গিবাড়ী", "টংগীবাড়ী"], "tongibari")],
+    "Rajbari": [("Baliakandi", ["বালিয়াকান্দি"], "baliakandi"), ("Goalanda", ["গোয়ালন্দ"], "goalanda"),
+                ("Kalukhali", ["কালুখালী", "কালুখালি"], "kalukhali"), ("Pangsha", ["পাংশা"], "pangsa"),
+                ("Rajbari Sadar", ["রাজবাড়ী সদর"], "sadar")],
+    "Madaripur": [("Dasar", ["ডাসার"], "dasar"), ("Kalkini", ["কালকিনি"], "kalkini"), ("Madaripur Sadar", ["মাদারীপুর সদর"], "sadar"),
+                  ("Rajoir", ["রাজৈর"], "rajoir"), ("Shibchar", ["শিবচর"], "shibchar")],
+    "Gopalganj": [("Gopalganj Sadar", ["গোপালগঞ্জ সদর"], "sadar"), ("Kashiani", ["কাশিয়ানী"], "kashiani"),
+                  ("Kotalipara", ["কোটালীপাড়া"], "kotalipara"), ("Muksudpur", ["মুকসুদপুর"], "muksudpur"),
+                  ("Tungipara", ["টুঙ্গিপাড়া", "টুংগীপাড়া"], "tungipara")],
+    "Faridpur": [("Alfadanga", ["আলফাডাঙ্গা"], "alfadanga"), ("Bhanga", ["ভাঙ্গা"], "bhanga"), ("Boalmari", ["বোয়ালমারী"], "boalmari"),
+                 ("Char Bhadrasan", ["চরভদ্রাসন"], "charbhadrasan"), ("Faridpur Sadar", ["ফরিদপুর সদর"], "sadar"),
+                 ("Madhukhali", ["মধুখালী"], "madhukhali"), ("Nagarkanda", ["নগরকান্দা"], "nagarkanda"), ("Sadarpur", ["সদরপুর"], "sadarpur"),
+                 ("Saltha", ["সালথা"], "saltha")],
+}
+# Dhaka Metropolitan Police thanas (Dhaka DC portal 'এক নজরে' list + Khilkhet from dmp.gov.bd), English names as DMP spells
+# them where it lists them (normalised spacing). Longer names first so 'তেজগাঁও শিল্পাঞ্চল' wins over 'তেজগাঁও'.
+DHAKA_CITY_THANAS = {
+    "তেজগাঁও শিল্পাঞ্চল": "Tejgaon Industrial Area", "শেরেবাংলা নগর": "Sher-e-Bangla Nagar", "কামরাঙ্গীরচর": "Kamrangirchar",
+    "উত্তরা পশ্চিম": "Uttara West", "উত্তরা পূর্ব": "Uttara East", "দারুস সালাম": "Darus Salam", "শাহজাহানপুর": "Shahjahanpur",
+    "কোতোয়ালী": "Kotwali", "সূত্রাপুর": "Sutrapur", "বংশাল": "Bangshal", "চকবাজার": "Chawkbazar", "লালবাগ": "Lalbagh",
+    "ওয়ারী": "Wari", "গেন্ডারিয়া": "Gandaria", "খিলগাঁও": "Khilgaon", "রামপুরা": "Rampura", "মতিঝিল": "Motijheel",
+    "সবুজবাগ": "Sabujbagh", "মুগদা": "Mugda", "যাত্রাবাড়ী": "Jatrabari", "ডেমরা": "Demra", "শ্যামপুর": "Shyampur",
+    "কদমতলী": "Kadamtali", "পল্টন": "Paltan", "শাহবাগ": "Shahbagh", "রমনা": "Ramna", "ধানমন্ডি": "Dhanmondi",
+    "নিউমার্কেট": "New Market", "কলাবাগান": "Kalabagan", "হাজারীবাগ": "Hazaribagh", "মোহাম্মদপুর": "Mohammadpur",
+    "আদাবর": "Adabor", "তেজগাঁও": "Tejgaon", "ভাষানটেক": "Bhashantek", "কাফরুল": "Kafrul", "মিরপুর": "Mirpur",
+    "পল্লবী": "Pallabi", "শাহআলী": "Shah Ali", "রূপনগর": "Rupnagar", "বাড্ডা": "Badda", "ভাটারা": "Bhatara",
+    "বনানী": "Banani", "গুলশান": "Gulshan", "ক্যান্টনমেন্ট": "Cantonment", "তুরাগ": "Turag", "উত্তরখান": "Uttar Khan",
+    "দক্ষিণখান": "Dakshinkhan", "হাতিরঝিল": "Hatirjheel", "বিমানবন্দর": "Biman Bandar", "খিলক্ষেত": "Khilkhet"}
+
+# Chattogram Division names: Bangla -> English (HDX COD-AB v03 spellings). District hosts verified by page title (Nov 2026;
+# comilla.gov.bd / chittagong.gov.bd are the hosts the portals' own menus use, cumilla.gov.bd / chattogram.gov.bd serve the
+# same sites); upazila portal subdomains verified by their home-page titles ("হোম | <upazila> উপজেলা").
+CHATTOGRAM_DISTRICTS = {"চট্টগ্রাম": "Chattogram", "কুমিল্লা": "Cumilla", "ফেনী": "Feni", "ব্রাহ্মণবাড়িয়া": "Brahmanbaria",
+                        "রাঙ্গামাটি": "Rangamati", "নোয়াখালী": "Noakhali", "চাঁদপুর": "Chandpur", "লক্ষ্মীপুর": "Lakshmipur",
+                        "কক্সবাজার": "Cox's Bazar", "খাগড়াছড়ি": "Khagrachhari", "বান্দরবান": "Bandarban"}
+CHATTOGRAM_DISTRICT_HOSTS = {"Chattogram": "chittagong.gov.bd", "Cumilla": "comilla.gov.bd", "Feni": "feni.gov.bd",
+                             "Brahmanbaria": "brahmanbaria.gov.bd", "Rangamati": "rangamati.gov.bd", "Noakhali": "noakhali.gov.bd",
+                             "Chandpur": "chandpur.gov.bd", "Lakshmipur": "lakshmipur.gov.bd", "Cox's Bazar": "coxsbazar.gov.bd",
+                             "Khagrachhari": "khagrachhari.gov.bd", "Bandarban": "bandarban.gov.bd"}
+CHATTOGRAM_UPAZILAS = {  # district -> [(english, bangla names/aliases..., portal subdomain)]
+    "Chattogram": [("Anwara", ["আনোয়ারা"], "anwara"), ("Banshkhali", ["বাঁশখালী", "বাশখালী"], "banshkhali"),
+                   ("Boalkhali", ["বোয়ালখালী"], "boalkhali"), ("Chandanaish", ["চন্দনাইশ"], "chandanaish"),
+                   ("Fatikchhari", ["ফটিকছড়ি"], "fatikchhari"), ("Hathazari", ["হাটহাজারী"], "hathazari"),
+                   ("Karnaphuli", ["কর্ণফুলী", "কর্ণফুলি"], "karnafuli"), ("Lohagara", ["লোহাগাড়া"], "lohagara"),
+                   ("Mirsarai", ["মীরসরাই", "মিরসরাই"], "mirsharai"), ("Patiya", ["পটিয়া"], "patiya"),
+                   ("Rangunia", ["রাঙ্গুনিয়া", "রাংগুনিয়া"], "rangunia"), ("Raozan", ["রাউজান"], "raozan"),
+                   ("Sandwip", ["সন্দ্বীপ"], "sandwip"), ("Satkania", ["সাতকানিয়া"], "satkania"),
+                   ("Sitakunda", ["সীতাকুন্ড", "সীতাকুণ্ড"], "sitakunda")],
+    "Cumilla": [("Sadar Dakkhin", ["সদর দক্ষিণ", "কুমিল্লা সদর দক্ষিণ"], "sadarsouth"),
+                ("Adarsha Sadar", ["আদর্শ সদর", "কুমিল্লা আদর্শ সদর", "কুমিল্লা সদর"], "comillasadar"),
+                ("Barura", ["বরুড়া"], "barura"), ("Brahmanpara", ["ব্রাহ্মণপাড়া"], "brahmanpara"),
+                ("Burichang", ["বুড়িচং"], "burichang"), ("Chandina", ["চান্দিনা"], "chandina"),
+                ("Chauddagram", ["চৌদ্দগ্রাম"], "chauddagram"), ("Daudkandi", ["দাউদকান্দি"], "daudkandi"),
+                ("Debidwar", ["দেবিদ্বার"], "debidwar"), ("Homna", ["হোমনা"], "homna"), ("Laksam", ["লাকসাম"], "laksam"),
+                ("Lalmai", ["লালমাই"], "lalmai"), ("Manoharganj", ["মনোহরগঞ্জ"], "monohargonj"), ("Meghna", ["মেঘনা"], "meghna"),
+                ("Muradnagar", ["মুরাদনগর"], "muradnagar"), ("Nangalkot", ["নাঙ্গলকোট"], "nangalkot"), ("Titas", ["তিতাস"], "titas")],
+    "Feni": [("Chhagalnaiya", ["ছাগলনাইয়া"], "chhagalnaiya"), ("Daganbhuiyan", ["দাগনভূঞা", "দাগনভুঞা"], "daganbhuiyan"),
+             ("Feni Sadar", ["ফেনী সদর"], "sadar"), ("Fulgazi", ["ফুলগাজী"], "fulgazi"), ("Parashuram", ["পরশুরাম"], "parshuram"),
+             ("Sonagazi", ["সোনাগাজী"], "sonagazi")],
+    "Brahmanbaria": [("Akhaura", ["আখাউড়া"], "akhaura"), ("Ashuganj", ["আশুগঞ্জ"], "ashuganj"),
+                     ("Banchharampur", ["বাঞ্ছারামপুর"], "bancharampur"), ("Bijoynagar", ["বিজয়নগর"], "bijoynagar"),
+                     ("Brahmanbaria Sadar", ["ব্রাহ্মণবাড়িয়া সদর"], "sadar"), ("Kasba", ["কসবা"], "kasba"),
+                     ("Nabinagar", ["নবীনগর"], "nabinagar"), ("Nasirnagar", ["নাসিরনগর", "নাছিরনগর"], "nasirnagar"),
+                     ("Sarail", ["সরাইল"], "sarail")],
+    "Rangamati": [("Baghaichhari", ["বাঘাইছড়ি"], "baghaichari"), ("Barkal", ["বরকল"], "barkal"),
+                  ("Belaichhari", ["বিলাইছড়ি"], "belaichari"), ("Jurachhari", ["জুরাছড়ি"], "juraichari"),
+                  ("Kaptai", ["কাপ্তাই"], "kaptai"), ("Kawkhali", ["কাউখালী"], "kawkhali"), ("Langadu", ["লংগদু"], "langadu"),
+                  ("Naniarchar", ["নানিয়ারচর"], "naniarchar"), ("Rajasthali", ["রাজস্থলী"], "rajasthali"),
+                  ("Rangamati Sadar", ["রাঙ্গামাটি সদর"], "sadar")],
+    "Noakhali": [("Begumganj", ["বেগমগঞ্জ"], "begumganj"), ("Chatkhil", ["চাটখিল"], "chatkhil"),
+                 ("Companiganj", ["কোম্পানীগঞ্জ", "কোম্পানিগঞ্জ"], "companiganj"), ("Hatiya", ["হাতিয়া"], "hatia"),
+                 ("Kabirhat", ["কবিরহাট"], "kabirhat"), ("Noakhali Sadar", ["নোয়াখালী সদর"], "sadar"), ("Senbag", ["সেনবাগ"], "senbug"),
+                 ("Sonaimuri", ["সোনাইমুড়ী", "সোনাইমুড়ি"], "sonaimuri"), ("Subarnachar", ["সুবর্ণচর"], "subarnachar")],
+    "Chandpur": [("Chandpur Sadar", ["চাঁদপুর সদর"], "sadar"), ("Faridganj", ["ফরিদগঞ্জ"], "faridgonj"),
+                 ("Haimchar", ["হাইমচর"], "haimchar"), ("Hajiganj", ["হাজীগঞ্জ"], "hajiganj"), ("Kachua", ["কচুয়া"], "kachua"),
+                 ("Matlab Dakkhin", ["মতলব দক্ষিণ"], "matlabsouth"), ("Matlab Uttar", ["মতলব উত্তর"], "matlabnorth"),
+                 ("Shahrasti", ["শাহরাস্তি"], "shahrasti")],
+    "Lakshmipur": [("Kamalnagar", ["কমলনগর"], "kamalnagar"), ("Lakshmipur Sadar", ["লক্ষ্মীপুর সদর"], "sadar"),
+                   ("Raipur", ["রায়পুর"], "raipur"), ("Ramganj", ["রামগঞ্জ"], "ramganj"), ("Ramgati", ["রামগতি"], "ramgati")],
+    "Cox's Bazar": [("Chakaria", ["চকরিয়া"], "chakaria"), ("Coxs Bazar Sadar", ["কক্সবাজার সদর"], "sadar"),
+                    ("Eidgaon", ["ঈদগাঁও", "ঈদগাও"], "eidgaon"), ("Kutubdia", ["কুতুবদিয়া"], "kutubdia"),
+                    ("Maheshkhali", ["মহেশখালী", "মহেশখালি"], "moheshkhali"), ("Pekua", ["পেকুয়া"], "pekua"), ("Ramu", ["রামু"], "ramu"),
+                    ("Teknaf", ["টেকনাফ"], "teknaf"), ("Ukhia", ["উখিয়া"], "ukhiya")],
+    "Khagrachhari": [("Dighinala", ["দীঘিনালা", "দিঘীনালা"], "dighinala"), ("Guimara", ["গুইমারা"], "guimara"),
+                     ("Khagrachhari Sadar", ["খাগড়াছড়ি সদর"], "sadar"), ("Lakkhichhari", ["লক্ষ্মীছড়ি", "লক্ষীছড়ি"], "laxmichhari"),
+                     ("Mahalchhari", ["মহালছড়ি"], "mohalchari"), ("Manikchhari", ["মানিকছড়ি"], "manikchari"),
+                     ("Matiranga", ["মাটিরাঙ্গা", "মাটিরাংগা"], "matiranga"), ("Panchhari", ["পানছড়ি"], "panchari"),
+                     ("Ramgarh", ["রামগড়"], "ramgarh")],
+    "Bandarban": [("Alikadam", ["আলীকদম"], "alikadam"), ("Bandarban Sadar", ["বান্দরবান সদর"], "sadar"), ("Lama", ["লামা"], "lama"),
+                  ("Naikkhongchhari", ["নাইক্ষ্যংছড়ি"], "naikhongchhari"), ("Rowangchhari", ["রোয়াংছড়ি"], "rowangchhari"),
+                  ("Ruma", ["রুমা"], "ruma"), ("Thanchi", ["থানচি"], "thanchi")],
+}
+# Chattogram Metropolitan Police thanas (CMP 'এক নজরে' on police.chittagongdiv.gov.bd), English transliterations. 'বন্দর',
+# 'ইপিজেড' and 'কর্ণফুলী' are left out here: as words they name the port, export zones and the river far more often than the thanas.
+CHATTOGRAM_CITY_THANAS = {"কোতোয়ালী": "Kotwali", "বাকলিয়া": "Bakalia", "চকবাজার": "Chawkbazar", "পাঁচলাইশ": "Panchlaish",
+                          "খুলশী": "Khulshi", "বায়েজিদ বোস্তামী": "Bayezid Bostami", "চান্দগাঁও": "Chandgaon", "পতেঙ্গা": "Patenga",
+                          "হালিশহর": "Halishahar", "পাহাড়তলী": "Pahartali", "আকবরশাহ": "Akbarshah", "ডবলমুরিং": "Double Mooring",
+                          "সদরঘাট": "Sadarghat"}
+# Khulna Division names: Bangla -> English (HDX COD-AB v03 spellings). District hosts verified by page title (Nov 2026; jessore.gov.bd
+# is the host the Jashore DC portal's own upazila list uses, jashore.gov.bd serves the same site); upazila portal subdomains
+# verified by their home-page titles ("হোম | <upazila> উপজেলা").
+KHULNA_DISTRICTS = {"খুলনা": "Khulna", "যশোর": "Jashore", "সাতক্ষীরা": "Satkhira", "মেহেরপুর": "Meherpur", "নড়াইল": "Narail",
+                    "চুয়াডাঙ্গা": "Chuadanga", "কুষ্টিয়া": "Kushtia", "মাগুরা": "Magura", "বাগেরহাট": "Bagerhat", "ঝিনাইদহ": "Jhenaidah"}
+KHULNA_DISTRICT_HOSTS = {"Khulna": "khulna.gov.bd", "Jashore": "jessore.gov.bd", "Satkhira": "satkhira.gov.bd", "Meherpur": "meherpur.gov.bd",
+                         "Narail": "narail.gov.bd", "Chuadanga": "chuadanga.gov.bd", "Kushtia": "kushtia.gov.bd", "Magura": "magura.gov.bd",
+                         "Bagerhat": "bagerhat.gov.bd", "Jhenaidah": "jhenaidah.gov.bd"}
+KHULNA_UPAZILAS = {  # district -> [(english, bangla names/aliases..., portal subdomain)]
+    "Khulna": [("Batiaghata", ["বটিয়াঘাটা"], "botiaghata"), ("Dacope", ["দাকোপ"], "dakop"), ("Dumuria", ["ডুমুরিয়া"], "dumuria"),
+               ("Dighalia", ["দিঘলিয়া"], "digholia"), ("Koyra", ["কয়রা"], "koyra"), ("Paikgachha", ["পাইকগাছা"], "paikgasa"),
+               ("Phultala", ["ফুলতলা"], "fultola"), ("Rupsa", ["রূপসা", "রুপসা"], "rupsha"), ("Terokhada", ["তেরখাদা"], "terokhada")],
+    "Jashore": [("Abhaynagar", ["অভয়নগর"], "abhaynagar"), ("Bagharpara", ["বাঘারপাড়া"], "bagherpara"),
+                ("Chaugachha", ["চৌগাছা"], "chougachha"), ("Jhikargachha", ["ঝিকরগাছা"], "jhikargacha"),
+                ("Keshabpur", ["কেশবপুর"], "keshabpur"), ("Jashore Sadar", ["যশোর সদর"], "sadar"),
+                ("Manirampur", ["মণিরামপুর", "মনিরামপুর"], "manirampur"), ("Sharsha", ["শার্শা"], "sharsha")],
+    "Satkhira": [("Ashashuni", ["আশাশুনি"], "assasuni"), ("Debhata", ["দেবহাটা"], "debhata"), ("Kalaroa", ["কলারোয়া"], "kalaroa"),
+                 ("Kaliganj", ["কালিগঞ্জ", "কালীগঞ্জ"], "kaliganj"), ("Satkhira Sadar", ["সাতক্ষীরা সদর"], "satkhirasadar"),
+                 ("Shyamnagar", ["শ্যামনগর"], "shyamnagar"), ("Tala", ["তালা"], "tala")],
+    "Meherpur": [("Gangni", ["গাংনী"], "gangni"), ("Mujibnagar", ["মুজিবনগর"], "mujibnagar"),
+                 ("Meherpur Sadar", ["মেহেরপুর সদর"], "meherpursadar")],
+    "Narail": [("Kalia", ["কালিয়া"], "kalia"), ("Lohagara", ["লোহাগড়া"], "lohagara"), ("Narail Sadar", ["নড়াইল সদর"], "narailsadar")],
+    "Chuadanga": [("Alamdanga", ["আলমডাঙ্গা", "আলমডাঙা"], "alamdanga"), ("Chuadanga Sadar", ["চুয়াডাঙ্গা সদর"], "chuadangasadar"),
+                  ("Damurhuda", ["দামুড়হুদা", "দামূড়হুদা"], "damurhuda"), ("Jibannagar", ["জীবননগর"], "jibannagar")],
+    "Kushtia": [("Bheramara", ["ভেড়ামারা"], "bheramara"), ("Daulatpur", ["দৌলতপুর"], "daulatpur"), ("Khoksa", ["খোকসা"], "khoksa"),
+                ("Kumarkhali", ["কুমারখালী", "কুমারখালি"], "kumarkhali"), ("Kushtia Sadar", ["কুষ্টিয়া সদর"], "kushtiasadar"),
+                ("Mirpur", ["মিরপুর"], "mirpur")],
+    "Magura": [("Magura Sadar", ["মাগুরা সদর"], "magurasadar"), ("Mohammadpur", ["মহম্মদপুর", "মোহাম্মদপুর"], "mohammadpur"),
+               ("Shalikha", ["শালিখা"], "shalikha"), ("Sreepur", ["শ্রীপুর"], "sreepur")],
+    "Bagerhat": [("Bagerhat Sadar", ["বাগেরহাট সদর"], "sadar"), ("Chitalmari", ["চিতলমারী"], "chitalmari"), ("Fakirhat", ["ফকিরহাট"], "fakirhat"),
+                 ("Kachua", ["কচুয়া"], "kachua"), ("Mollahat", ["মোল্লাহাট"], "mollahat"), ("Mongla", ["মোংলা", "মংলা"], "mongla"),
+                 ("Morelganj", ["মোড়েলগঞ্জ", "মোরেলগঞ্জ"], "morrelganj"), ("Rampal", ["রামপাল"], "rampal"),
+                 ("Sharankhola", ["শরণখোলা"], "sarankhola")],
+    "Jhenaidah": [("Harinakundu", ["হরিণাকুন্ডু", "হরিণাকুণ্ডু"], "harinakundu"), ("Jhenaidah Sadar", ["ঝিনাইদহ সদর"], "sadar"),
+                  ("Kaliganj", ["কালীগঞ্জ", "কালিগঞ্জ"], "kaliganj"), ("Kotchandpur", ["কোটচাঁদপুর"], "kotchandpur"),
+                  ("Maheshpur", ["মহেশপুর"], "moheshpur"), ("Shailkupa", ["শৈলকুপা"], "shailkupa")],
+}
+# Khulna Metropolitan Police thanas (Khulna DC portal 'ভৌগলিক পরিচিতি' list of 8 'মেট্রোপলিটন থানা'), English: HDX COD-AB spellings
+# where HDX has the thana (Daulatpur, Khalishpur, Khan Jahan Ali, Khulna Sadar, Sonadanga), else a transliteration. The DC portal
+# calls Khulna Sadar 'কোতয়ালী থানা' (KMP: 'খুলনা থানা'); 'খুলনা' itself is not matched.
+KHULNA_CITY_THANAS = {"দৌলতপুর": "Daulatpur", "খালিশপুর": "Khalishpur", "খানজাহান আলী": "Khan Jahan Ali", "খানজাহানআলী": "Khan Jahan Ali",
+                      "সোনাডাঙ্গা": "Sonadanga", "কোতয়ালী": "Khulna Sadar", "আড়ংঘাটা": "Aranghata", "হরিণটানা": "Harintana",
+                      "হড়িণটানা": "Harintana", "লবণচরা": "Labanchara", "লবনচড়া": "Labanchara"}
+# Barishal Division names: Bangla -> English (district names as in the seed; upazila names in common BBS/HDX-style spelling, the
+# importer matches them by similarity). District hosts verified by page title (Nov 2026): barisal.gov.bd is the host the Barishal
+# DC portal's own upazila list uses (barishal.gov.bd serves the same site); jhalakathi.gov.bd is the Jhalokathi DC portal
+# (jhalokathi.gov.bd does not resolve). Upazila portal subdomains verified by their home-page titles ("হোম | <upazila> উপজেলা").
+BARISHAL_DISTRICTS = {"বরিশাল": "Barishal", "ঝালকাঠি": "Jhalokathi", "পটুয়াখালী": "Patuakhali", "পিরোজপুর": "Pirojpur", "ভোলা": "Bhola",
+                      "বরগুনা": "Barguna"}
+BARISHAL_DISTRICT_HOSTS = {"Barishal": "barisal.gov.bd", "Jhalokathi": "jhalakathi.gov.bd", "Patuakhali": "patuakhali.gov.bd",
+                           "Pirojpur": "pirojpur.gov.bd", "Bhola": "bhola.gov.bd", "Barguna": "barguna.gov.bd"}
+BARISHAL_UPAZILAS = {  # district -> [(english, bangla names/aliases..., portal subdomain)]
+    "Barishal": [("Barishal Sadar", ["বরিশাল সদর"], "barisalsadar"), ("Bakerganj", ["বাকেরগঞ্জ"], "bakerganj"),
+                 ("Babuganj", ["বাবুগঞ্জ"], "babuganj"), ("Wazirpur", ["উজিরপুর"], "wazirpur"),
+                 ("Banaripara", ["বানারীপাড়া", "বানারিপাড়া"], "banaripara"), ("Gaurnadi", ["গৌরনদী", "গৌরনদি"], "gournadi"),
+                 ("Agailjhara", ["আগৈলঝাড়া"], "agailjhara"), ("Mehendiganj", ["মেহেন্দিগঞ্জ"], "mehendiganj"),
+                 ("Muladi", ["মুলাদী", "মুলাদি"], "muladi"), ("Hizla", ["হিজলা"], "hizla")],
+    "Jhalokathi": [("Jhalokathi Sadar", ["ঝালকাঠি সদর"], "sadar"), ("Kathalia", ["কাঠালিয়া", "কাঁঠালিয়া"], "kathalia"),
+                   ("Nalchity", ["নলছিটি"], "nalchity"), ("Rajapur", ["রাজাপুর"], "rajapur")],
+    "Patuakhali": [("Patuakhali Sadar", ["পটুয়াখালী সদর"], "sadar"), ("Bauphal", ["বাউফল"], "bauphal"), ("Dumki", ["দুমকী", "দুমকি"], "dumki"),
+                   ("Dashmina", ["দশমিনা"], "dashmina"), ("Kalapara", ["কলাপাড়া"], "kalapara"), ("Mirzaganj", ["মির্জাগঞ্জ"], "mirzaganj"),
+                   ("Galachipa", ["গলাচিপা"], "galachipa"), ("Rangabali", ["রাঙ্গাবালী", "রাঙাবালী", "রাঙ্গাবালি"], "rangabali")],
+    "Pirojpur": [("Pirojpur Sadar", ["পিরোজপুর সদর"], "sadar"), ("Nazirpur", ["নাজিরপুর"], "nazirpur"), ("Kawkhali", ["কাউখালী", "কাউখালি"], "kawkhali"),
+                 ("Zianagar", ["জিয়ানগর", "ইন্দুরকানী"], "zianagar"), ("Bhandaria", ["ভান্ডারিয়া", "ভাণ্ডারিয়া"], "bhandaria"),
+                 ("Mathbaria", ["মঠবাড়ীয়া", "মঠবাড়িয়া"], "mathbaria"), ("Nesarabad", ["নেছারাবাদ", "স্বরূপকাঠি"], "nesarabad")],
+    "Bhola": [("Bhola Sadar", ["ভোলা সদর"], "sadar"), ("Burhanuddin", ["বোরহানউদ্দিন", "বোরহান উদ্দিন"], "borhanuddin"),
+              ("Char Fasson", ["চরফ্যাশন"], "charfesson"), ("Daulatkhan", ["দৌলতখান"], "doulatkhan"), ("Manpura", ["মনপুরা"], "monpura"),
+              ("Tazumuddin", ["তজুমদ্দিন"], "tazumuddin"), ("Lalmohan", ["লালমোহন"], "lalmohan")],
+    "Barguna": [("Barguna Sadar", ["বরগুনা সদর"], "sadar"), ("Amtali", ["আমতলী", "আমতলি"], "amtali"), ("Betagi", ["বেতাগী", "বেতাগি"], "betagi"),
+                ("Bamna", ["বামনা"], "bamna"), ("Patharghata", ["পাথরঘাটা"], "pathorghata"), ("Taltali", ["তালতলী", "তালতলি"], "taltali")],
+}
+# Barishal Metropolitan Police thanas (bmp.police.gov.bd thana pages: Kotwali Model, Bandar, Kaunia, Airport). Only the unambiguous
+# names are matched in office names: 'বন্দর' (also 'নদী বন্দর', river port) and 'এয়ারপোর্ট' are not.
+BARISHAL_CITY_THANAS = {"কোতয়ালী": "Kotwali", "কোতোয়ালী": "Kotwali", "কোতোয়ালি": "Kotwali", "কাউনিয়া": "Kaunia"}
+# Sylhet Division names: Bangla -> English (district names as in the seed; upazila names as the seed spells them, the importer
+# matches them by similarity). District hosts verified by page title (Nov 2026: 'হোম | <জেলা> জেলা'). Upazila portal subdomains
+# from the national portal's office registry (bangladesh.gov.bd/views/union-list), verified by their home-page titles. The new
+# Shantiganj upazila (শান্তিগঞ্জ, formerly দক্ষিণ সুনামগঞ্জ) is the seed's South Sunamganj; Madhyanagar is new (2022).
+SYLHET_DISTRICTS = {"সিলেট": "Sylhet", "মৌলভীবাজার": "Moulvibazar", "হবিগঞ্জ": "Habiganj", "সুনামগঞ্জ": "Sunamganj"}
+SYLHET_DISTRICT_HOSTS = {"Sylhet": "sylhet.gov.bd", "Moulvibazar": "moulvibazar.gov.bd", "Habiganj": "habiganj.gov.bd",
+                         "Sunamganj": "sunamganj.gov.bd"}
+SYLHET_UPAZILAS = {  # district -> [(english, bangla names/aliases..., portal subdomain)]
+    "Sylhet": [("Sylhet Sadar", ["সিলেট সদর"], "sylhetsadar"), ("Beanibazar", ["বিয়ানীবাজার"], "beanibazar"),
+               ("Bishwanath", ["বিশ্বনাথ"], "bishwanath"), ("Companiganj", ["কোম্পানীগঞ্জ", "কোম্পানিগঞ্জ"], "companiganj"),
+               ("Fenchuganj", ["ফেঞ্চুগঞ্জ"], "fenchuganj"), ("Golapganj", ["গোলাপগঞ্জ"], "golapganj"),
+               ("Gowainghat", ["গোয়াইনঘাট"], "gowainghat"), ("Jaintiapur", ["জৈন্তাপুর"], "jaintiapur"),
+               ("Kanaighat", ["কানাইঘাট"], "kanaighat"), ("Zakiganj", ["জকিগঞ্জ"], "zakiganj"), ("Balaganj", ["বালাগঞ্জ"], "balaganj"),
+               ("Dakshinsurma", ["দক্ষিণ সুরমা"], "dakshinsurma"), ("Osmaninagar", ["ওসমানী নগর", "ওসমানীনগর"], "osmaninagar")],
+    "Moulvibazar": [("Moulvibazar Sadar", ["মৌলভীবাজার সদর"], "moulvibazarsadar"), ("Barlekha", ["বড়লেখা"], "barlekha"),
+                    ("Juri", ["জুড়ী", "জুড়ি"], "juri"), ("Kamolganj", ["কমলগঞ্জ"], "kamolganj"), ("Kulaura", ["কুলাউড়া"], "kulaura"),
+                    ("Rajnagar", ["রাজনগর"], "rajnagar"), ("Sreemangal", ["শ্রীমঙ্গল", "শ্রীমংগল"], "sreemangal")],
+    "Habiganj": [("Habiganj Sadar", ["হবিগঞ্জ সদর"], "habiganjsadar"), ("Ajmiriganj", ["আজমিরীগঞ্জ"], "ajmiriganj"),
+                 ("Bahubal", ["বাহুবল"], "bahubal"), ("Baniachong", ["বানিয়াচং"], "baniachong"), ("Chunarughat", ["চুনারুঘাট"], "chunarughat"),
+                 ("Lakhai", ["লাখাই"], "lakhai"), ("Madhabpur", ["মাধবপুর"], "madhabpur"), ("Nabiganj", ["নবীগঞ্জ"], "nabiganj"),
+                 ("Shayestaganj", ["শায়েস্তাগঞ্জ"], "shayestaganj")],
+    "Sunamganj": [("Sunamganj Sadar", ["সুনামগঞ্জ সদর"], "sadar"), ("South Sunamganj", ["শান্তিগঞ্জ", "দক্ষিণ সুনামগঞ্জ"], "shantiganj"),
+                  ("Bishwambarpur", ["বিশ্বম্ভরপুর"], "bishwambarpur"), ("Chhatak", ["ছাতক"], "chhatak"), ("Derai", ["দিরাই"], "derai"),
+                  ("Dharmapasha", ["ধর্মপাশা"], "dharmapasha"), ("Dowarabazar", ["দোয়ারাবাজার"], "dowarabazar"),
+                  ("Jagannathpur", ["জগন্নাথপুর"], "jagannathpur"), ("Jamalganj", ["জামালগঞ্জ"], "jamalganj"), ("Shalla", ["শাল্লা"], "shalla"),
+                  ("Tahirpur", ["তাহিরপুর"], "tahirpur"), ("Madhyanagar", ["মধ্যনগর"], "madhyanagar")],
+}
+# Sylhet Metropolitan Police thanas (smp.police.gov.bd: Kotwali Model, Jalalabad, Airport, Moglabazar, Shahparan, Dakshin Surma).
+# Only Kotwali is matched in office names: জালালাবাদ and মোগলাবাজার are also union names (and Jalalabad Gas), শাহপরান names
+# shrines and institutions, দক্ষিণ সুরমা is also the upazila, and 'এয়ারপোর্ট' the airport.
+SYLHET_CITY_THANAS = {"কোতয়ালী": "Kotwali", "কোতোয়ালী": "Kotwali", "কোতোয়ালি": "Kotwali"}
+# The Sylhet DC portal (sylhet.gov.bd and its *.sylhet.gov.bd sub-sites) sends only its leaf certificate (Let's Encrypt YR1).
+# As for the Sectigo intermediates above, the CA-published intermediates (AIA 'CA Issuers' URLs: YR1, and Root YR cross-signed by
+# ISRG Root X1) are added to the bundle for Sylhet runs; TLS verification stays on. Rajshahi runs keep the original bundle.
+SYLHET_INTERMEDIATES = ["http://yr1.i.lencr.org/", "http://yr.i.lencr.org/"]
+# Mymensingh Division names: Bangla -> English (district and upazila names as the seed spells them: Nokla, Sreebordi, Bokshiganj,
+# Dewangonj, Mohongonj, Tarakanda …). District hosts verified by page title (Nov 2026: 'হোম | <জেলা> জেলা'); the 35 upazila portal
+# subdomains are the seed's and were verified by their home-page titles ('হোম | <উপজেলা> উপজেলা'). The Bangla names are NFC-normalised
+# here (ড়/য় are composition exclusions). The certificates of these hosts are Sectigo DV R36, whose intermediate is already above.
+_MYM_UPAZILAS = {  # district -> [(english, bangla names/aliases..., portal subdomain)]
+    "Mymensingh": [("Mymensingh Sadar", ["ময়মনসিংহ সদর"], "mymensinghsadar"), ("Muktagacha", ["মুক্তাগাছা"], "muktagacha"),
+                   ("Fulbaria", ["ফুলবাড়ীয়া", "ফুলবাড়িয়া", "ফুলবাড়ীয়া"], "fulbaria"), ("Trishal", ["ত্রিশাল"], "trishal"),
+                   ("Bhaluka", ["ভালুকা"], "bhaluka"), ("Gafargaon", ["গফরগাঁও"], "gafargaon"), ("Nandail", ["নান্দাইল"], "nandail"),
+                   ("Iswarganj", ["ঈশ্বরগঞ্জ"], "iswarganj"), ("Gouripur", ["গৌরীপুর"], "gouripur"), ("Phulpur", ["ফুলপুর"], "phulpur"),
+                   ("Tarakanda", ["তারাকান্দা"], "tarakanda"), ("Haluaghat", ["হালুয়াঘাট"], "haluaghat"),
+                   ("Dhobaura", ["ধোবাউড়া", "ধোবাউরা"], "dhobaura")],
+    "Jamalpur": [("Jamalpur Sadar", ["জামালপুর সদর"], "jamalpursadar"), ("Melandah", ["মেলান্দহ"], "melandah"),
+                 ("Islampur", ["ইসলামপুর"], "islampur"), ("Dewangonj", ["দেওয়ানগঞ্জ"], "dewangonj"),
+                 ("Sarishabari", ["সরিষাবাড়ী", "সরিষাবাড়ি"], "sarishabari"), ("Madarganj", ["মাদারগঞ্জ"], "madarganj"),
+                 ("Bokshiganj", ["বকশীগঞ্জ", "বকশিগঞ্জ"], "bokshiganj")],
+    "Sherpur": [("Sherpur Sadar", ["শেরপুর সদর"], "sherpursadar"), ("Nalitabari", ["নালিতাবাড়ী", "নালিতাবাড়ি"], "nalitabari"),
+                ("Sreebordi", ["শ্রীবরদী"], "sreebordi"), ("Nokla", ["নকলা"], "nokla"), ("Jhenaigati", ["ঝিনাইগাতী"], "jhenaigati")],
+    "Netrokona": [("Netrokona Sadar", ["নেত্রকোণা সদর", "নেত্রকোনা সদর"], "netrokonasadar"), ("Barhatta", ["বারহাট্টা"], "barhatta"),
+                  ("Durgapur", ["দুর্গাপুর"], "durgapur"), ("Kendua", ["কেন্দুয়া"], "kendua"), ("Atpara", ["আটপাড়া"], "atpara"),
+                  ("Madan", ["মদন"], "madan"), ("Khaliajuri", ["খালিয়াজুরী", "খালিয়াজুড়ি"], "khaliajuri"),
+                  ("Kalmakanda", ["কলমাকান্দা"], "kalmakanda"), ("Mohongonj", ["মোহনগঞ্জ"], "mohongonj"),
+                  ("Purbadhala", ["পূর্বধলা"], "purbadhala")],
+}
+MYMENSINGH_UPAZILAS = {d: [(en, list(dict.fromkeys(unicodedata.normalize("NFC", b) for b in bns)), sub) for en, bns, sub in ups]
+                       for d, ups in _MYM_UPAZILAS.items()}
+MYMENSINGH_DISTRICTS = {unicodedata.normalize("NFC", k): v for k, v in
+                        {"ময়মনসিংহ": "Mymensingh", "জামালপুর": "Jamalpur", "শেরপুর": "Sherpur", "নেত্রকোণা": "Netrokona"}.items()}
+MYMENSINGH_DISTRICT_HOSTS = {"Mymensingh": "mymensingh.gov.bd", "Jamalpur": "jamalpur.gov.bd", "Sherpur": "sherpur.gov.bd",
+                             "Netrokona": "netrokona.gov.bd"}
+# No Mymensingh Metropolitan Police: police.gov.bd lists eight metropolitan units (DMP, CMP, BMP, KMP, RMP, SMP, RPMP, GMP) and its
+# Mymensingh Range page counts Kotwali among Mymensingh District's police stations. No office name is mapped to a metro thana.
+MYMENSINGH_CITY_THANAS = {}
+
+
+DIVISION_TABLES = {
+    "rajshahi": dict(DISTRICTS=DISTRICTS, DISTRICT_HOSTS=DISTRICT_HOSTS, UPAZILAS=UPAZILAS, CITY_THANAS=CITY_THANAS,
+                     HEAD="Rajshahi", SOURCE_KEY="PORTAL_TOURIST_SPOTS_RAJ_2026", folder="portal_tourist_spots_raj_2026"),
+    "rangpur": dict(DISTRICTS=RANGPUR_DISTRICTS, DISTRICT_HOSTS=RANGPUR_DISTRICT_HOSTS, UPAZILAS=RANGPUR_UPAZILAS,
+                    CITY_THANAS=RANGPUR_CITY_THANAS, HEAD="Rangpur", SOURCE_KEY="PORTAL_TOURIST_SPOTS_RANG_2026",
+                    folder="portal_tourist_spots_rang_2026"),
+    "dhaka": dict(DISTRICTS=DHAKA_DISTRICTS, DISTRICT_HOSTS=DHAKA_DISTRICT_HOSTS, UPAZILAS=DHAKA_UPAZILAS,
+                  CITY_THANAS=DHAKA_CITY_THANAS, HEAD="Dhaka", SOURCE_KEY="PORTAL_TOURIST_SPOTS_DHK_2026",
+                  folder="portal_tourist_spots_dhk_2026"),
+    "chattogram": dict(DISTRICTS=CHATTOGRAM_DISTRICTS, DISTRICT_HOSTS=CHATTOGRAM_DISTRICT_HOSTS, UPAZILAS=CHATTOGRAM_UPAZILAS,
+                       CITY_THANAS=CHATTOGRAM_CITY_THANAS, HEAD="Chattogram", SOURCE_KEY="PORTAL_TOURIST_SPOTS_CTG_2026",
+                       folder="portal_tourist_spots_ctg_2026"),
+    "khulna": dict(DISTRICTS=KHULNA_DISTRICTS, DISTRICT_HOSTS=KHULNA_DISTRICT_HOSTS, UPAZILAS=KHULNA_UPAZILAS,
+                   CITY_THANAS=KHULNA_CITY_THANAS, HEAD="Khulna", SOURCE_KEY="PORTAL_TOURIST_SPOTS_KHL_2026",
+                   folder="portal_tourist_spots_khl_2026"),
+    "barishal": dict(DISTRICTS=BARISHAL_DISTRICTS, DISTRICT_HOSTS=BARISHAL_DISTRICT_HOSTS, UPAZILAS=BARISHAL_UPAZILAS,
+                     CITY_THANAS=BARISHAL_CITY_THANAS, HEAD="Barishal", SOURCE_KEY="PORTAL_TOURIST_SPOTS_BAR_2026",
+                     folder="portal_tourist_spots_bar_2026"),
+    "sylhet": dict(DISTRICTS=SYLHET_DISTRICTS, DISTRICT_HOSTS=SYLHET_DISTRICT_HOSTS, UPAZILAS=SYLHET_UPAZILAS,
+                   CITY_THANAS=SYLHET_CITY_THANAS, HEAD="Sylhet", SOURCE_KEY="PORTAL_TOURIST_SPOTS_SYL_2026",
+                   folder="portal_tourist_spots_syl_2026", INTERMEDIATES=SYLHET_INTERMEDIATES),
+    "mymensingh": dict(DISTRICTS=MYMENSINGH_DISTRICTS, DISTRICT_HOSTS=MYMENSINGH_DISTRICT_HOSTS, UPAZILAS=MYMENSINGH_UPAZILAS,
+                       CITY_THANAS=MYMENSINGH_CITY_THANAS, HEAD="Mymensingh", SOURCE_KEY="PORTAL_TOURIST_SPOTS_MYM_2026",
+                       folder="portal_tourist_spots_mym_2026"),
+}
+
+
+def configure():
+    global DIVISION, OUT, DISTRICTS, DISTRICT_HOSTS, UPAZILAS, CITY_THANAS, HEAD, SOURCE_KEY
+    DIVISION, OUT = parse_division_args({k: v["folder"] for k, v in DIVISION_TABLES.items()})
+    t = DIVISION_TABLES[DIVISION]
+    DISTRICTS, DISTRICT_HOSTS, UPAZILAS, CITY_THANAS = t["DISTRICTS"], t["DISTRICT_HOSTS"], t["UPAZILAS"], t["CITY_THANAS"]
+    HEAD, SOURCE_KEY = t["HEAD"], t["SOURCE_KEY"]
+    INTERMEDIATES.extend(u for u in t.get("INTERMEDIATES", []) if u not in INTERMEDIATES)  # before the first request
+
+
+def division_manifest():
+    """SOURCE.json for a non-Rajshahi run (the Rajshahi SOURCE.json is maintained by hand)."""
+    dn = DIVISION.capitalize()
+    return {"key": SOURCE_KEY, "division": DIVISION, "kind": "tourist_spots",
+            "name": "National portal 'দর্শনীয় স্থান' (tourist spot) lists — %s Division district and upazila portals" % dn,
+            "organization": "District / Upazila administrations (national portal framework, a2i/Cabinet Division)",
+            "source_type": "government_portal", "trust_level": 4,
+            "urls": ["https://%s/pages/tourist-spot" % DISTRICT_HOSTS[HEAD], "https://<upazila>.<district>.gov.bd/pages/tourist-spot"],
+            "accessed": __import__("datetime").date.today().isoformat(), "publication_date": None, "license": None, "license_url": None,
+            "attribution": "District / Upazila administrations (national portal framework, a2i/Cabinet Division)",
+            "notes": "Server-rendered list tables (/pages/tourist-spot, paginated with ?page=N) of %d district + %d upazila portals. "
+                     "Columns used: title, location; 'transportation' and descriptions not copied; the 'contact' column is mostly a "
+                     "UNO/OC contact or directions, so no phone is taken. No coordinates are published (Google Maps links kept in "
+                     "extra_json, not used). Categories assigned by keyword rules. Licence: none stated on the source; treat as "
+                     "government public information, cite the source." % (len(DISTRICT_HOSTS), sum(len(v) for v in UPAZILAS.values()))}
+
+JUNK = re.compile(r"(জেলার দর্শনীয়|জেলার ইতিহাস|দর্শনীয় স্থান(সমূহ)?$|^দর্শনীয়|^পর্যটন স্পট$|^test)", re.I)
+
+
+def category(name):
+    n = name
+    if re.search(r"বিশ্ববিদ্যালয়", n):
+        return "education.university"
+    if re.search(r"মেডিকেল কলেজ", n):
+        return "education.medical_college"
+    if re.search(r"কলেজ", n) and not re.search(r"কলেজিয়েট", n):
+        return "education.college"
+    if re.search(r"জাদুঘর|যাদুঘর|মিউজিয়াম|সংগ্রহশালা|জাদুঘর", n):
+        return "tourism.museum"
+    if re.search(r"মাজার|দরগা|দরগাহ|সমাধি", n):
+        return "religious.mazar"
+    if re.search(r"ঢিবি|ধাপ|প্রত্ন|ধ্বংসাবশেষ|মহাবিহার|বৌদ্ধ বিহার|জয় ?স্তম্ভ|পিলার|গড়$|দুর্গ|মাউন্ড|পান্টি", n):
+        return "tourism.archaeological"
+    if re.search(r"রাজবাড়ী|রাজবাড়ি|জমিদার|প্রাসাদ|কুঠি|কাচারী|কাচারি|ভবন|মহল|হাওয়াখানা|হাওয়া খানা|শহীদ মিনার|স্মৃতি|বধ্যভূমি|বাংলো|ঐতিহাসিক|প্রাচীন|গ্রন্থাগার|লাইব্রেরি|রেলওয়ে|ব্রিজ|সেতু|তোরণ", n):
+        return "tourism.historical"
+    if re.search(r"মসজিদ|মন্দির|মঠ|গির্জা|চার্চ|আশ্রম|আখড়া|বিহার|ঈদগাহ|তীর্থ", n):
+        return "tourism.religious_site"
+    if re.search(r"পার্ক|উদ্যান|চিড়িয়াখানা|ইকো|রিসোর্ট|বিনোদন|শিশু|গার্ডেন|বাগান|লেক", n):
+        return "tourism.park"
+    if re.search(r"বিমানবন্দর|একাডেমি|একাডেমী|স্টেডিয়াম", n):
+        return "tourism"
+    if re.search(r"নদী|পদ্মা|যমুনা|করতোয়া|আত্রাই নদ|বিল|হাওর|চর|ঘাট|বাঁধ|পাড়|তীর|নদীবন্দর|স্লুইস", n):
+        return "tourism.river_haor"
+    if re.search(r"দিঘী|দিঘি|দীঘি|দীঘী|পুকুর|সাগর|জলাশয়|বন$|বনভূমি|পাখি|অভয়ারণ্য|বরেন্দ্র", n):
+        return "tourism.natural"
+    return "tourism"
+
+
+def clean_name(title, district):
+    """Drop a trailing ', <upazila/district>' qualifier that some portals append to titles."""
+    t = nfc(title)
+    t = re.sub(r"^\s*[০-৯0-9]{1,2}\s*[.।)]\s*", "", t).rstrip(" :ঃ,.।-")
+    parts = [p.strip(" :ঃ") for p in re.split(r"\s*,\s*", t)]
+    if len(parts) > 1:
+        tail = parts[-1]
+        names = [bn for ups in UPAZILAS.values() for _, bns, _ in ups for bn in bns] + list(DISTRICTS)
+        if any(tail.startswith(n) or n.startswith(tail) and len(tail) > 2 for n in names) or re.search(r"(সদর|উপজেলা|জেলা)$", tail):
+            return ", ".join(parts[:-1]), tail
+    return t, None
+
+
+def scrape_list(base):
+    rows, page, total = [], 1, None
+    while True:
+        url = base + "/pages/tourist-spot" + ("" if page == 1 else "?page=%d" % page)
+        t = fetch_text(url)
+        if not t:
+            break
+        got = [r for r in list_table(t) if r.get("title")]
+        for r in got:
+            r["_list_url"] = url
+        rows += got
+        m = re.search(r'pagination-counts">[^<]*?মোট\s*([০-৯0-9]+)', t)
+        total = int(ascii_digits(m.group(1))) if m else len(rows)
+        if not got or len(rows) >= total or page > 20:
+            break
+        page += 1
+    return rows, total
+
+
+def main():
+    configure()
+    places, facts, seen = [], [], {}
+    portals = []
+    for dist, host in DISTRICT_HOSTS.items():
+        portals.append((dist, None, "https://" + host))
+        for en, _, sub in UPAZILAS[dist]:
+            portals.append((dist, en, "https://%s.%s" % (sub, host)))
+    for dist, upz, base in portals:
+        rows, total = scrape_list(base)
+        level = "district" if upz is None else "upazila"
+        print(base, len(rows), "rows", file=sys.stderr)
+        facts.append({"entity_level": level, "entity_name_en": upz or dist, "district_en": dist, "upazila_en": upz or "",
+                      "fact": "portal_tourist_spot_entries", "value": total if rows else 0, "unit": "entries",
+                      "basis": "listed on portal (count shown by the portal list, incl. non-place entries)",
+                      "year": 2026, "source_key": SOURCE_KEY, "source_url": base + "/pages/tourist-spot",
+                      "notes": "" if rows else "list empty or page unavailable at access time"})
+        for r in rows:
+            title = r.get("title", "")
+            if JUNK.search(title):
+                continue
+            name, tail = clean_name(title, dist)
+            loc = r.get("location", "")
+            loc = "" if loc.strip() in ("0", "-", "") else loc
+            if len(loc) > 120:
+                loc_note = "location text omitted (long directions)"
+                loc = ""
+            else:
+                loc_note = ""
+            maps = [h for h in r.get("_hrefs", []) if re.search(r"google\.[a-z.]+/maps|maps\.app\.goo\.gl|goo\.gl/maps", h)]
+            d2, u2 = find_upazila(" ".join([title, loc]), dist)
+            up = upz or u2
+            if dist == HEAD and not up:
+                for bn, th in CITY_THANAS.items():
+                    if bn in title + " " + loc:
+                        up = None
+                        break
+            link = r.get("link", "")
+            detail = (base + link) if link.startswith("/") else link
+            sid = re.search(r"([0-9a-f]{24})$", link)
+            notes = [loc_note] if loc_note else []
+            if upz is None and up:
+                notes.append("upazila inferred from the title/location text")
+            if maps:
+                notes.append("portal row links a Google Maps page (kept in extra_json, coordinates not taken)")
+            rec = {"source_key": SOURCE_KEY, "source_id": "%s:%s" % (urllib.parse.urlsplit(base).netloc, sid.group(1) if sid else nfc(title)),
+                   "name_bn": name, "category_key": category(name), "address": loc, "district_en": dist,
+                   "upazila_en": up or "",
+                   "extra_json": jdump({"title_as_published": title if title != name else None,
+                                        "portal": urllib.parse.urlsplit(base).netloc, "portal_level": level,
+                                        "map_links_as_published": maps or None}),
+                   "source_url": detail or (base + "/pages/tourist-spot"), "notes": "; ".join(notes)}
+            places.append(rec)
+    # flag same place listed on both the district and an upazila portal (kept: each row is one portal's listing)
+    key = lambda r: (r["district_en"], re.sub(r"[\s,।ঃ:()\-]", "", r["name_bn"]))
+    groups = {}
+    for r in places:
+        groups.setdefault(key(r), []).append(r)
+    for g in groups.values():
+        if len(g) > 1:
+            for r in g:
+                others = [o["source_id"].split(":")[0] for o in g if o is not r]
+                r["notes"] = "; ".join(x for x in [r["notes"], "also listed on " + ", ".join(sorted(set(others)))] if x)
+    write_csv(os.path.join(OUT, "places.csv"), PLACE_COLS, places)
+    write_csv(os.path.join(OUT, "facts.csv"), FACT_COLS, facts)
+    if DIVISION != "rajshahi":
+        write_division_manifest(OUT, division_manifest())
+    print(len(places), "places", file=sys.stderr)
+
+
+if __name__ == "__main__":
+    main()

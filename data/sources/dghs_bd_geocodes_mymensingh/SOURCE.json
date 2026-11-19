@@ -1,0 +1,25 @@
+{
+  "key": "DGHS_BD_GEOCODES_MYMENSINGH",
+  "name": "Bangladesh GeoCodes CodeSystem (BBS geo-codes) in the DGHS Bangladesh Core FHIR IG, Mymensingh Division extract",
+  "organization": "Directorate General of Health Services (DGHS), Ministry of Health and Family Welfare",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html",
+    "https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.json",
+    "https://fhir.dghs.gov.bd/core/ImplementationGuide-bd.fhir.core.json"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": "2026-10-15",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution": "Directorate General of Health Services (DGHS), Bangladesh — Bangladesh Core FHIR IG; codes: BBS geo-code system",
+  "files": {
+    "areas.csv": "d4a5ce880870702da05e2309e5f4048842dde92a9300b7b67082a198e565bcfa",
+    "crosswalk.csv": "b4a4c35ede1e456512e09a70705c6dacabe19d43cdc74cf87102ac44743ddcee",
+    "raw/bd-geocodes_mymensingh.json": "a4266fdc58354a951bf3bdc5b3ae47a3b9ae07668014d631daaa283ca28083fb"
+  },
+  "notes": "CodeSystem https://fhir.dghs.gov.bd/core/CodeSystem/bd-geocodes version 0.5.0, status draft, date 2026-10-15T00:09:54+00:00, 1591 codes nationally. Divisions, districts, upazilas/city thanas, city corporations and paurashavas only: no union-level codes (only 'Unions Of X Upazila' placeholders). The IG does not say which BBS release the codes come from. Skipped entries: 453900 Jamalpur N/A (district placeholder (no city corporation)); 456100 Mymensingh N/A (district placeholder (no city corporation)); 457200 Netrakona N/A (district placeholder (no city corporation)); 458900 Sherpur N/A (district placeholder (no city corporation)); 4589009099 Unions of Sreebardi Upazila (union-group placeholder, no union names in this list); plus 34 'Unions Of ... Upazila' placeholders.",
+  "division": "mymensingh",
+  "kind": "dghs_geocodes"
+}

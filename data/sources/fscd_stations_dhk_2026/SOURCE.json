@@ -1,0 +1,26 @@
+{
+  "key": "FSCD_STATIONS_DHK_2026",
+  "division": "dhaka",
+  "kind": "fscd",
+  "name": "Fire Service & Civil Defence — Dhaka Division station & office numbers",
+  "organization": "Fire Service and Civil Defence Directorate (FSCD), Bangladesh",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-fireservice/2026/7/e23b824b-9232-47ff-a967-2a4f4f20a776.pdf",
+    "https://fireservice.gov.bd/pages/static-pages/6922e013933eb65569e25586",
+    "https://fireservice.gov.bd/pages/static-pages/6922e0b9933eb65569e28555"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": "2026-08-11",
+  "license": null,
+  "license_url": null,
+  "attribution": "Fire Service and Civil Defence Directorate, Bangladesh (fireservice.gov.bd)",
+  "notes": "No licence stated on fireservice.gov.bd. publication_date = creation date in the PDF metadata. Station names were transcribed from the rendered PDF because its text layer has broken Bangla glyph mapping; phone numbers come from the text layer. No addresses or coordinates are published.",
+  "files": {
+    "places.csv": "9fa8dbb82862e4ac238157373eae0ffc40aeb24ea6619bf9fb8cbee708e5b31b",
+    "facts.csv": "d8d6dd650600e6e87f9c5fb5b733fd49b59d57dd2350bfad0abc058cb42c068b",
+    "raw/fscd_dhaka_division_numbers.pdf": "66e26a91d9e92e4eb40c3af242973478e3c07f796c9fff5a921b3c852a85d0a8"
+  }
+}

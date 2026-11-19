@@ -1,0 +1,31 @@
+{
+  "key": "RANGDIV_PORTAL_2026",
+  "name": "Rangpur Divisional Commissioner portal (rangpurdiv.gov.bd)",
+  "organization": "Office of the Divisional Commissioner, Rangpur",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "division": "rangpur",
+  "kind": "divisional_portal",
+  "urls": [
+    "https://rangpurdiv.gov.bd/",
+    "https://rangpurdiv.gov.bd/pages/static-pages/69770c4dc4774958d7c0088a",
+    "https://rangpurdiv.gov.bd/pages/static-pages/69770436c4774958d7bf3dee",
+    "https://rangpurdiv.gov.bd/pages/static-pages/6977533ec4774958d7c1ab94",
+    "https://rangpurdiv.gov.bd/pages/static-pages/69771cd8c4774958d7c06ead"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Office of the Divisional Commissioner, Rangpur (rangpurdiv.gov.bd), Bangladesh National Portal",
+  "files": {
+    "areas.csv": "f2a6975fce5d9782a24e8f6ef13427fe432bb25450aff131e6528f66cb1be900",
+    "facts.csv": "aa06e2039a077581f9eb4f22a73e1f97597eb898aa8e414bdfe84d9ae9aef50a",
+    "raw/districts.txt": "d7cfdbe366617ad43b9c0c75685af3bc087204cfe36c667a638a6c996d023faf",
+    "raw/glance.txt": "fc6456b30bee31b8ce224aed1046946cd5cc2f7ce1327d0174c365387966ef37",
+    "raw/pages.csv": "c8a78f00dcc0a17983fd27d9fd780e055511c5ee90d925e12fffe858cd26e06e",
+    "raw/unions.txt": "12f2a07d60bcc2afdf210ac286468b0cf90018f4f306b4b33673385a6bc53c1b",
+    "raw/upazilas.txt": "b0e511cd32d68aacdd80abf3ffa8d9c9a3135c9e25e20612e1acab24f090a0ef"
+  },
+  "notes": "Collected by the generic division mode of the a2i portal collectors (pages found through the portals' menus, names and figures parsed from the pages). No licence stated; only facts (names, counts, figures) are extracted. English district/upazila names are the project's keys, not printed."
+}

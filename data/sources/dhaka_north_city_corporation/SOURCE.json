@@ -1,0 +1,29 @@
+{
+  "key": "DHAKA_NORTH_CITY_CORPORATION",
+  "division": "dhaka",
+  "kind": "city_corporation",
+  "city": 50001,
+  "name": "Dhaka North City Corporation official portal (dncc.gov.bd)",
+  "organization": "Dhaka North City Corporation",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://dncc.gov.bd/",
+    "https://dncc.gov.bd/pages/static-pages/6922ded3933eb65569e1da8e",
+    "https://dncc.gov.bd/pages/static-pages/6922e044933eb65569e2644c",
+    "https://dncc.gov.bd/pages/static-pages/6922df76933eb65569e2224e"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Dhaka North City Corporation (dncc.gov.bd), Bangladesh National Portal",
+  "notes": "Key page: লোকেশন ও আয়তন (updated 2026-11-09 17:25): 10 zones, 54 wards, 196.22 km2, and the areas of each ward. DNCC publishes no population figure and no thana list. Ward officers' and ward secretaries' lists (names, mobiles) are not copied.",
+  "files": {
+    "areas.csv": "f67402371d952b46e58850daa105085a6f854e9b59c81b4999f4c2d42b32ed99",
+    "facts.csv": "144904d1516f69a29201500a31ffd0831b644679597a5ae0d227c9a0b0ce4af7",
+    "raw/contact.txt": "b9eeac966ea92c1b63efb4ad9d72f015c344499d8c7f172414136ef9d74aa406",
+    "raw/history_split.txt": "743f9384006c626e78f7429faa1e6514081c8c7d723860e3c7ade28acde7b45a",
+    "raw/location_and_area.txt": "5205758316949230082180a8289c0503fb4ced0511a85effbb643a662352bd78"
+  }
+}

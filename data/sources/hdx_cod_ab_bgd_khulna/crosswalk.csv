@@ -1,0 +1,736 @@
+our_id,our_level,our_name_en,our_path,source_code,source_name_en,match_method,confidence,notes
+20028,district,Bagerhat,khulna/bagerhat,BD4001,Bagerhat,name_exact,high,source level district
+20024,district,Chuadanga,khulna/chuadanga,BD4018,Chuadanga,name_exact,high,source level district
+20020,district,Jashore,khulna/jashore,BD4041,Jashore,name_exact,high,source level district
+20029,district,Jhenaidah,khulna/jhenaidah,BD4044,Jhenaidah,name_exact,high,source level district
+20027,district,Khulna,khulna/khulna,BD4047,Khulna,name_exact,high,source level district
+20025,district,Kushtia,khulna/kushtia,BD4050,Kushtia,name_exact,high,source level district
+20026,district,Magura,khulna/magura,BD4055,Magura,name_exact,high,source level district
+20022,district,Meherpur,khulna/meherpur,BD4057,Meherpur,name_exact,high,source level district
+20023,district,Narail,khulna/narail,BD4065,Narail,name_exact,high,source level district
+20021,district,Satkhira,khulna/satkhira,BD4087,Satkhira,name_exact,high,source level district
+30216,upazila,Bagerhat Sadar,khulna/bagerhat/bagerhat-sadar,BD40010008,Bagerhat Sadar,name_exact,high,source level upazila
+30223,upazila,Chitalmari,khulna/bagerhat/chitalmari,BD40010014,Chitalmari,name_exact,high,source level upazila
+30215,upazila,Fakirhat,khulna/bagerhat/fakirhat,BD40010034,Fakirhat,name_exact,high,source level upazila
+30221,upazila,Kachua,khulna/bagerhat/kachua,BD40010038,Kachua,name_exact,high,source level upazila
+30217,upazila,Mollahat,khulna/bagerhat/mollahat,BD40010056,Mollahat,name_exact,high,source level upazila
+30222,upazila,Mongla,khulna/bagerhat/mongla,BD40010058,Mongla,name_exact,high,source level upazila
+30220,upazila,Morrelganj,khulna/bagerhat/morrelganj,BD40010060,Morelganj,name_exact,high,source level upazila
+30219,upazila,Rampal,khulna/bagerhat/rampal,BD40010073,Rampal,name_exact,high,source level upazila
+30218,upazila,Sarankhola,khulna/bagerhat/sarankhola,BD40010077,Sharankhola,name_exact,high,source level upazila
+30193,upazila,Alamdanga,khulna/chuadanga/alamdanga,BD40180007,Alamdanga,name_exact,high,source level upazila
+30192,upazila,Chuadanga Sadar,khulna/chuadanga/chuadanga-sadar,BD40180023,Chuadanga Sadar,name_exact,high,source level upazila
+30194,upazila,Damurhuda,khulna/chuadanga/damurhuda,BD40180031,Damurhuda,name_exact,high,source level upazila
+30195,upazila,Jibannagar,khulna/chuadanga/jibannagar,BD40180055,Jibannagar,name_exact,high,source level upazila
+30172,upazila,Abhaynagar,khulna/jashore/abhaynagar,BD40410004,Abhaynagar,name_exact,high,source level upazila
+30173,upazila,Bagherpara,khulna/jashore/bagherpara,BD40410009,Bagharpara,name_skeleton,medium,source level upazila
+30174,upazila,Chougachha,khulna/jashore/chougachha,BD40410011,Chaugachha,name_skeleton,medium,source level upazila
+30175,upazila,Jhikargacha,khulna/jashore/jhikargacha,BD40410023,Jhikargachha,name_exact,high,source level upazila
+30176,upazila,Keshabpur,khulna/jashore/keshabpur,BD40410038,Keshabpur,name_exact,high,source level upazila
+30177,upazila,Jessore Sadar,khulna/jashore/jessore-sadar,BD40410047,Jashore Sadar,name_skeleton,medium,source level upazila
+30171,upazila,Manirampur,khulna/jashore/manirampur,BD40410061,Manirampur,name_exact,high,source level upazila
+30178,upazila,Sharsha,khulna/jashore/sharsha,BD40410090,Sharsha,name_exact,high,source level upazila
+30226,upazila,Harinakundu,khulna/jhenaidah/harinakundu,BD40440014,Harinakundu,name_exact,high,source level upazila
+30224,upazila,Jhenaidah Sadar,khulna/jhenaidah/jhenaidah-sadar,BD40440019,Jhenaidah Sadar,name_exact,high,source level upazila
+30227,upazila,Kaliganj,khulna/jhenaidah/kaliganj,BD40440033,Kaliganj,name_exact,high,source level upazila
+30228,upazila,Kotchandpur,khulna/jhenaidah/kotchandpur,BD40440042,Kotchandpur,name_exact,high,source level upazila
+30229,upazila,Moheshpur,khulna/jhenaidah/moheshpur,BD40440071,Maheshpur,name_skeleton,medium,source level upazila
+30225,upazila,Shailkupa,khulna/jhenaidah/shailkupa,BD40440080,Shailkupa,name_exact,high,source level upazila
+30213,upazila,Dakop,khulna/khulna/dakop,BD40470017,Dacope,code_hand_checked,high,source level upazila; hand-checked pair (Dacope = Dakop দাকোপ); the name matcher does not pair these
+30206,upazila,Paikgasa,khulna/khulna/paikgasa,BD40470064,Paikgachha,code_hand_checked,high,source level upazila; hand-checked pair (Paikgachha = Paikgasa পাইকগাছা); the name matcher does not pair these
+30212,upazila,Botiaghata,khulna/khulna/botiaghata,BD40470012,Batiaghata,name_skeleton,medium,source level upazila
+30211,upazila,Dumuria,khulna/khulna/dumuria,BD40470030,Dumuria,name_exact,high,source level upazila
+30208,upazila,Digholia,khulna/khulna/digholia,BD40470040,Dighalia,name_skeleton,medium,source level upazila
+30214,upazila,Koyra,khulna/khulna/koyra,BD40470053,Koyra,name_exact,high,source level upazila
+30207,upazila,Fultola,khulna/khulna/fultola,BD40470069,Phultala,name_skeleton,medium,source level upazila
+30209,upazila,Rupsha,khulna/khulna/rupsha,BD40470075,Rupsa,name_exact,high,source level upazila
+30210,upazila,Terokhada,khulna/khulna/terokhada,BD40470094,Terokhada,name_exact,high,source level upazila
+30201,upazila,Bheramara,khulna/kushtia/bheramara,BD40500015,Bheramara,name_exact,high,source level upazila
+30200,upazila,Daulatpur,khulna/kushtia/daulatpur,BD40500039,Daulatpur,name_exact,high,source level upazila
+30198,upazila,Khoksa,khulna/kushtia/khoksa,BD40500063,Khoksa,name_exact,high,source level upazila
+30197,upazila,Kumarkhali,khulna/kushtia/kumarkhali,BD40500071,Kumarkhali,name_exact,high,source level upazila
+30196,upazila,Kushtia Sadar,khulna/kushtia/kushtia-sadar,BD40500079,Kushtia Sadar,name_exact,high,source level upazila
+30199,upazila,Mirpur,khulna/kushtia/mirpur,BD40500094,Mirpur,name_exact,high,source level upazila
+30204,upazila,Magura Sadar,khulna/magura/magura-sadar,BD40550057,Magura Sadar,name_exact,high,source level upazila
+30205,upazila,Mohammadpur,khulna/magura/mohammadpur,BD40550066,Mohammadpur,name_exact,high,source level upazila
+30202,upazila,Shalikha,khulna/magura/shalikha,BD40550085,Shalikha,name_exact,high,source level upazila
+30203,upazila,Sreepur,khulna/magura/sreepur,BD40550095,Sreepur,name_exact,high,source level upazila
+30188,upazila,Gangni,khulna/meherpur/gangni,BD40570047,Gangni,name_exact,high,source level upazila
+30186,upazila,Mujibnagar,khulna/meherpur/mujibnagar,BD40570060,Mujibnagar,name_exact,high,source level upazila
+30187,upazila,Meherpur Sadar,khulna/meherpur/meherpur-sadar,BD40570087,Meherpur Sadar,name_exact,high,source level upazila
+30191,upazila,Kalia,khulna/narail/kalia,BD40650028,Kalia,name_exact,high,source level upazila
+30190,upazila,Lohagara,khulna/narail/lohagara,BD40650052,Lohagara,name_exact,high,source level upazila
+30189,upazila,Narail Sadar,khulna/narail/narail-sadar,BD40650076,Narail Sadar,name_exact,high,source level upazila
+30179,upazila,Assasuni,khulna/satkhira/assasuni,BD40870004,Ashashuni,name_exact,high,source level upazila
+30180,upazila,Debhata,khulna/satkhira/debhata,BD40870025,Debhata,name_exact,high,source level upazila
+30181,upazila,Kalaroa,khulna/satkhira/kalaroa,BD40870043,Kalaroa,name_exact,high,source level upazila
+30185,upazila,Kaliganj,khulna/satkhira/kaliganj,BD40870047,Kaliganj,name_exact,high,source level upazila
+30182,upazila,Satkhira Sadar,khulna/satkhira/satkhira-sadar,BD40870082,Satkhira Sadar,name_exact,high,source level upazila
+30183,upazila,Shyamnagar,khulna/satkhira/shyamnagar,BD40870086,Shyamnagar,name_exact,high,source level upazila
+30184,upazila,Tala,khulna/satkhira/tala,BD40870090,Tala,name_exact,high,source level upazila
+50004,city_corporation,Khulna City Corporation,khulna/khulna/khulna-city-corporation,BD40473300,Khulna City Corporation,name_exact,high,source level city_corporation
+,,,,BD404721,Daulatpur,no_seed_level,none,source level thana; our seed has no thana level
+,,,,BD404745,Khalishpur,no_seed_level,none,source level thana; our seed has no thana level
+,,,,BD404748,Khan Jahan Ali,no_seed_level,none,source level thana; our seed has no thana level
+,,,,BD404751,Khulna Sadar,no_seed_level,none,source level thana; our seed has no thana level
+,,,,BD404785,Sonadanga,no_seed_level,none,source level thana; our seed has no thana level
+,,,,BD40010899,Bagerhat Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Bagerhat Sadar
+,,,,BD40015899,Mongla Port Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Mongla
+,,,,BD40016099,Morrelganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Morrelganj
+,,,,BD40180799,Alamdanga Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Alamdanga
+,,,,BD40182399,Chuadanga Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Chuadanga Sadar
+,,,,BD40183199,Darshana Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Damurhuda
+,,,,BD40185599,Jiban Nagar Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Jibannagar
+,,,,BD40410499,Noapara Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Abhaynagar
+,,,,BD40410999,Bagher Para Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Bagherpara
+,,,,BD40411199,Chaugachha Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Chougachha
+,,,,BD40412399,Jhikargachha Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Jhikargacha
+,,,,BD40413899,Keshabpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Keshabpur
+,,,,BD40414799,Jessore Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Jessore Sadar
+,,,,BD40416199,Manirampur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Manirampur
+,,,,BD40419099,Benapole Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Sharsha
+,,,,BD40441499,Harinakunda Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Harinakundu
+,,,,BD40441999,Jhenaidah Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Jhenaidah Sadar
+,,,,BD40443399,Kaliganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kaliganj
+,,,,BD40444299,Kotchandpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kotchandpur
+,,,,BD40447199,Maheshpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Moheshpur
+,,,,BD40448099,Shailkupa Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Shailkupa
+,,,,BD40471799,Chalna Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Dakop
+,,,,BD40476499,Paikgachha Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Paikgasa
+,,,,BD40501599,Bheramara Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Bheramara
+,,,,BD40506399,Khoksa Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Khoksa
+,,,,BD40507199,Kumarkhali Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kumarkhali
+,,,,BD40507999,Kushtia Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kushtia Sadar
+,,,,BD40509499,Mirpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Mirpur
+,,,,BD40555799,Magura Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Magura Sadar
+,,,,BD40574799,Gangni Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Gangni
+,,,,BD40578799,Meherpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Meherpur Sadar
+,,,,BD40652899,Kalia Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kalia
+,,,,BD40655299,Lohagara Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Lohagara
+,,,,BD40657699,Narail Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Narail Sadar
+,,,,BD40874399,Kalaroa Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kalaroa
+,,,,BD40878299,Satkhira Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Satkhira Sadar
+41957,union,Baruipara,khulna/bagerhat/bagerhat-sadar/baruipara,BD40010817,Barai Para,name_skeleton,medium,source level union
+41954,union,Bamorta,khulna/bagerhat/bagerhat-sadar/bamorta,BD40010825,Bemarta,name_skeleton,medium,source level union
+41956,union,Bishnapur,khulna/bagerhat/bagerhat-sadar/bishnapur,BD40010834,Bishnupur,name_skeleton,medium,source level union
+41962,union,Dema,khulna/bagerhat/bagerhat-sadar/dema,BD40010835,Dema,name_exact,high,source level union
+41955,union,Gotapara,khulna/bagerhat/bagerhat-sadar/gotapara,BD40010851,Gota Para,name_exact,high,source level union
+41958,union,Jatharapur,khulna/bagerhat/bagerhat-sadar/jatharapur,BD40010860,Jatrapur,name_skeleton,medium,source level union
+41953,union,Karapara,khulna/bagerhat/bagerhat-sadar/karapara,BD40010869,Kara Para,name_exact,high,source level union
+41960,union,Khanpur,khulna/bagerhat/bagerhat-sadar/khanpur,BD40010877,Khanpur,name_exact,high,source level union
+41961,union,Rakhalgachi,khulna/bagerhat/bagerhat-sadar/rakhalgachi,BD40010886,Rakhalgachhi,name_exact,high,source level union
+41959,union,Shaitgomboj,khulna/bagerhat/bagerhat-sadar/shaitgomboj,BD40010894,Shat Gambuj,name_skeleton,medium,source level union
+42018,union,Charbaniri,khulna/bagerhat/chitalmari/charbaniri,BD40011415,Char Baniari,name_skeleton,medium,source level union
+42013,union,Barobaria,khulna/bagerhat/chitalmari/barobaria,BD40011419,Bara Baria,name_skeleton,medium,source level union
+42017,union,Chitalmari,khulna/bagerhat/chitalmari/chitalmari,BD40011431,Chitalmari,name_exact,high,source level union
+42015,union,Hizla,khulna/bagerhat/chitalmari/hizla,BD40011447,Hizla,name_exact,high,source level union
+42019,union,Shantoshpur,khulna/bagerhat/chitalmari/shantoshpur,BD40011463,Santoshpur,name_exact,high,source level union
+42014,union,Kalatala,khulna/bagerhat/chitalmari/kalatala,BD40011466,Kalatala,name_exact,high,source level union
+42016,union,Shibpur,khulna/bagerhat/chitalmari/shibpur,BD40011479,Shibpur,name_exact,high,source level union
+41948,union,Bahirdia-Mansa,khulna/bagerhat/fakirhat/bahirdia-mansa,BD40013410,Bahirdia Mansa,name_exact,high,source level union
+41945,union,Betaga,khulna/bagerhat/fakirhat/betaga,BD40013421,Betaga,name_exact,high,source level union
+41947,union,Fakirhat,khulna/bagerhat/fakirhat/fakirhat,BD40013431,Fakirhat,name_exact,high,source level union
+41946,union,Lakhpur,khulna/bagerhat/fakirhat/lakhpur,BD40013442,Lakhpur,name_exact,high,source level union
+41951,union,Mulghar,khulna/bagerhat/fakirhat/mulghar,BD40013452,Mulghar,name_exact,high,source level union
+41950,union,Naldha-Mouvhog,khulna/bagerhat/fakirhat/naldha-mouvhog,BD40013463,Naldha Maubhog,name_skeleton,medium,source level union
+41949,union,Piljanga,khulna/bagerhat/fakirhat/piljanga,BD40013473,Piljanga,name_exact,high,source level union
+41952,union,Suvhadia,khulna/bagerhat/fakirhat/suvhadia,BD40013484,Subhadia,name_banglish,high,source level union
+42006,union,Badhal,khulna/bagerhat/kachua/badhal,BD40013815,Badhal,name_exact,high,source level union
+42001,union,Dhopakhali,khulna/bagerhat/kachua/dhopakhali,BD40013828,Dhopakhali,name_exact,high,source level union
+42000,union,Gojalia,khulna/bagerhat/kachua/gojalia,BD40013838,Gazalia,name_skeleton,medium,source level union
+42004,union,Gopalpur,khulna/bagerhat/kachua/gopalpur,BD40013847,Gopalpur,name_exact,high,source level union
+42003,union,Kachua,khulna/bagerhat/kachua/kachua,BD40013857,Kachua,name_exact,high,source level union
+42002,union,Moghia,khulna/bagerhat/kachua/moghia,BD40013866,Maghia,name_fuzzy,low,source level union; similarity 0.80 to 'Moghia'
+42005,union,Raripara,khulna/bagerhat/kachua/raripara,BD40013876,Rari Para,name_exact,high,source level union
+41969,union,Atjuri,khulna/bagerhat/mollahat/atjuri,BD40015617,Atjuri,name_exact,high,source level union
+41964,union,Chunkhola,khulna/bagerhat/mollahat/chunkhola,BD40015628,Chunkhola,name_exact,high,source level union
+41965,union,Gangni,khulna/bagerhat/mollahat/gangni,BD40015638,Gangni,name_exact,high,source level union
+41967,union,Gaola,khulna/bagerhat/mollahat/gaola,BD40015647,Gaola,name_exact,high,source level union
+41968,union,Kodalia,khulna/bagerhat/mollahat/kodalia,BD40015676,Kodalia,name_exact,high,source level union
+41966,union,Kulia,khulna/bagerhat/mollahat/kulia,BD40015685,Kulia,name_exact,high,source level union
+41963,union,Udoypur,khulna/bagerhat/mollahat/udoypur,BD40015695,Udaypur,name_skeleton,medium,source level union
+42010,union,Chadpai,khulna/bagerhat/mongla/chadpai,BD40015823,Chandpi,name_fuzzy,low,source level union; similarity 0.83 to 'Chadpai'
+42007,union,Burrirdangga,khulna/bagerhat/mongla/burrirdangga,BD40015827,Burirdanga,name_exact,high,source level union
+42011,union,Chila,khulna/bagerhat/mongla/chila,BD40015829,Chila,name_exact,high,source level union
+42008,union,Mithakhali,khulna/bagerhat/mongla/mithakhali,BD40015859,Mithakhali,name_exact,high,source level union
+42009,union,Sonailtala,khulna/bagerhat/mongla/sonailtala,BD40015883,Suniltala,name_skeleton,medium,source level union
+42012,union,Sundarban,khulna/bagerhat/mongla/sundarban,BD40015889,Sundarban,name_exact,high,source level union
+41995,union,Baharbunia,khulna/bagerhat/morrelganj/baharbunia,BD40016010,Baharbunia,name_exact,high,source level union
+41993,union,Balaibunia,khulna/bagerhat/morrelganj/balaibunia,BD40016011,Balaibunia,name_exact,high,source level union
+41992,union,Banagram,khulna/bagerhat/morrelganj/banagram,BD40016017,Banagram,name_exact,high,source level union
+41999,union,Baraikhali,khulna/bagerhat/morrelganj/baraikhali,BD40016023,Baraikhali,name_exact,high,source level union
+41989,union,Chingrakhali,khulna/bagerhat/morrelganj/chingrakhali,BD40016029,Chingrakhali,name_exact,high,source level union
+41987,union,Daibagnyahati,khulna/bagerhat/morrelganj/daibagnyahati,BD40016035,Daibagnyahati,name_exact,high,source level union
+41994,union,Hoglabunia,khulna/bagerhat/morrelganj/hoglabunia,BD40016041,Hoglabunia,name_exact,high,source level union
+41991,union,Hoglapasha,khulna/bagerhat/morrelganj/hoglapasha,BD40016047,Hogla Pasha,name_exact,high,source level union
+41990,union,Jiudhara,khulna/bagerhat/morrelganj/jiudhara,BD40016053,Jiudhara,name_exact,high,source level union
+41997,union,Khaulia,khulna/bagerhat/morrelganj/khaulia,BD40016059,Khuolia,name_fuzzy,low,source level union; similarity 0.83 to 'Khaulia'
+41996,union,Morrelganj,khulna/bagerhat/morrelganj/morrelganj,BD40016065,Morrelganj,name_exact,high,source level union
+41998,union,Nishanbaria,khulna/bagerhat/morrelganj/nishanbaria,BD40016071,Nishanbaria,name_exact,high,source level union
+41985,union,Panchakaran,khulna/bagerhat/morrelganj/panchakaran,BD40016077,Panchakaran,name_exact,high,source level union
+41986,union,Putikhali,khulna/bagerhat/morrelganj/putikhali,BD40016083,Putikhali,name_exact,high,source level union
+41988,union,Ramchandrapur,khulna/bagerhat/morrelganj/ramchandrapur,BD40016089,Ramchandrapur,name_exact,high,source level union
+41984,union,Teligati,khulna/bagerhat/morrelganj/teligati,BD40016095,Teligati,name_exact,high,source level union
+41976,union,Baintala,khulna/bagerhat/rampal/baintala,BD40017310,Baintala,name_exact,high,source level union
+41983,union,Bastoli,khulna/bagerhat/rampal/bastoli,BD40017311,Banshtali,name_fuzzy,low,source level union; similarity 0.80 to 'Bastoli'
+41981,union,Vospatia,khulna/bagerhat/rampal/vospatia,BD40017317,Bhojpatia,name_fuzzy,low,source level union; similarity 0.88 to 'Vospatia'
+41974,union,Gouramva,khulna/bagerhat/rampal/gouramva,BD40017341,Gaurambha,name_skeleton,medium,source level union
+41979,union,Hurka,khulna/bagerhat/rampal/hurka,BD40017347,Hurka,name_exact,high,source level union
+41982,union,Mollikerbar,khulna/bagerhat/rampal/mollikerbar,BD40017353,Malliker Ber,name_skeleton,medium,source level union
+41980,union,Perikhali,khulna/bagerhat/rampal/perikhali,BD40017371,Perikhali,name_exact,high,source level union
+41978,union,Rajnagar,khulna/bagerhat/rampal/rajnagar,BD40017377,Rajnagar,name_exact,high,source level union
+41977,union,Rampal,khulna/bagerhat/rampal/rampal,BD40017383,Rampal,name_exact,high,source level union
+41975,union,Uzzalkur,khulna/bagerhat/rampal/uzzalkur,BD40017394,Ujalkur,name_banglish,high,source level union
+41970,union,Dhanshagor,khulna/bagerhat/sarankhola/dhanshagor,BD40017719,Dhansagar,name_skeleton,medium,source level union
+41971,union,Khontakata,khulna/bagerhat/sarankhola/khontakata,BD40017738,Khontakata,name_exact,high,source level union
+41972,union,Rayenda,khulna/bagerhat/sarankhola/rayenda,BD40017757,Royenda,name_skeleton,medium,source level union
+41973,union,Southkhali,khulna/bagerhat/sarankhola/southkhali,BD40017776,Dakshin Khali Union,name_exact,high,source level union; direction word read as South: 'Dakshin Khali Union' ~ 'Southkhali'
+41751,union,Belgachi,khulna/chuadanga/alamdanga/belgachi,BD40180713,Belgachhi,name_exact,high,source level union
+41747,union,Baradi,khulna/chuadanga/alamdanga/baradi,BD40180715,Baradi,name_exact,high,source level union
+41746,union,Bhangbaria,khulna/chuadanga/alamdanga/bhangbaria,BD40180723,Bhangabaria,name_skeleton,medium,source level union
+41756,union,Chitla,khulna/chuadanga/alamdanga/chitla,BD40180727,Chithla,name_banglish,high,source level union
+41752,union,Dauki,khulna/chuadanga/alamdanga/dauki,BD40180731,Dauki,name_exact,high,source level union
+41748,union,Gangni,khulna/chuadanga/alamdanga/gangni,BD40180739,Gangni,name_exact,high,source level union
+41759,union,Hardi,khulna/chuadanga/alamdanga/hardi,BD40180747,Hardi,name_exact,high,source level union
+41757,union,Kalidashpur,khulna/chuadanga/alamdanga/kalidashpur,BD40180751,Kalidashpur,name_exact,high,source level union
+41753,union,Jamjami,khulna/chuadanga/alamdanga/jamjami,BD40180755,Jamjami,name_exact,high,source level union
+41750,union,Jehala,khulna/chuadanga/alamdanga/jehala,BD40180763,Jehala,name_exact,high,source level union
+41749,union,Khadimpur,khulna/chuadanga/alamdanga/khadimpur,BD40180771,Khadimpur,name_exact,high,source level union
+41755,union,Kashkorara,khulna/chuadanga/alamdanga/kashkorara,BD40180779,Khaskara,name_skeleton,medium,source level union
+41758,union,Kumari,khulna/chuadanga/alamdanga/kumari,BD40180787,Kumari,name_exact,high,source level union
+41754,union,Nagdah,khulna/chuadanga/alamdanga/nagdah,BD40180794,Nagdaha,name_skeleton,medium,source level union
+41739,union,Alukdia,khulna/chuadanga/chuadanga-sadar/alukdia,BD40182311,Alokdia,name_skeleton,medium,source level union
+41743,union,Begumpur,khulna/chuadanga/chuadanga-sadar/begumpur,BD40182323,Begampur,name_skeleton,medium,source level union
+41744,union,Kutubpur,khulna/chuadanga/chuadanga-sadar/kutubpur,BD40182347,Kutubpur,name_exact,high,source level union
+41740,union,Mominpur,khulna/chuadanga/chuadanga-sadar/mominpur,BD40182359,Mominpur,name_exact,high,source level union
+41745,union,Padmabila,khulna/chuadanga/chuadanga-sadar/padmabila,BD40182362,Padmabila,name_exact,high,source level union
+41742,union,Shankarchandra,khulna/chuadanga/chuadanga-sadar/shankarchandra,BD40182371,Shankar Chandra,name_exact,high,source level union
+41741,union,Titudah,khulna/chuadanga/chuadanga-sadar/titudah,BD40182383,Titudaha,name_skeleton,medium,source level union
+41761,union,Damurhuda,khulna/chuadanga/damurhuda/damurhuda,BD40183111,Damurhuda,name_exact,high,source level union
+41766,union,Perkrishnopur Madna,khulna/chuadanga/damurhuda/perkrishnopur-madna,BD40183123,Perkrishnapur Madna,name_skeleton,medium,source level union
+41767,union,Juranpur,khulna/chuadanga/damurhuda/juranpur,BD40183147,Juranpur,name_exact,high,source level union
+41762,union,Karpashdanga,khulna/chuadanga/damurhuda/karpashdanga,BD40183159,Kapasadanga,name_fuzzy,medium,source level union; similarity 0.91 to 'Karpashdanga'
+41765,union,Kurulgachhi,khulna/chuadanga/damurhuda/kurulgachhi,BD40183171,Kuralgachhi,name_skeleton,medium,source level union
+41763,union,Natipota,khulna/chuadanga/damurhuda/natipota,BD40183183,Natipota,name_exact,high,source level union
+41769,union,Andulbaria,khulna/chuadanga/jibannagar/andulbaria,BD40185519,Andulbaria,name_exact,high,source level union
+41770,union,Banka,khulna/chuadanga/jibannagar/banka,BD40185538,Banka,name_exact,high,source level union
+41771,union,Shimanto,khulna/chuadanga/jibannagar/shimanto,BD40185557,Simanta,name_skeleton,medium,source level union
+41768,union,Uthali,khulna/chuadanga/jibannagar/uthali,BD40185576,Uthali,name_exact,high,source level union
+41530,union,Baghutia,khulna/jashore/abhaynagar/baghutia,BD40410410,Baghutia,name_exact,high,source level union
+41536,union,Prambag,khulna/jashore/abhaynagar/prambag,BD40410421,Prambag,name_exact,high,source level union
+41532,union,Sundoli,khulna/jashore/abhaynagar/sundoli,BD40410427,Sundoli,name_exact,high,source level union
+41537,union,Payra,khulna/jashore/abhaynagar/payra,BD40410442,Payra,name_exact,high,source level union
+41531,union,Chalishia,khulna/jashore/abhaynagar/chalishia,BD40410452,Chalishia,name_exact,high,source level union
+41533,union,Siddhipasha,khulna/jashore/abhaynagar/siddhipasha,BD40410463,Siddhipasha,name_exact,high,source level union
+41534,union,Sreedharpur,khulna/jashore/abhaynagar/sreedharpur,BD40410473,Sreedharpur,name_exact,high,source level union
+41535,union,Subharara,khulna/jashore/abhaynagar/subharara,BD40410484,Subha Para,name_fuzzy,low,source level union; similarity 0.88 to 'Subharara'
+41544,union,Basuari,khulna/jashore/bagherpara/basuari,BD40410915,Basuari,name_exact,high,source level union
+41543,union,Bandabilla,khulna/jashore/bagherpara/bandabilla,BD40410919,Bandabilla,name_exact,high,source level union
+41540,union,Darajhat,khulna/jashore/bagherpara/darajhat,BD40410928,Darajhat,name_exact,high,source level union
+41541,union,Dhalgram,khulna/jashore/bagherpara/dhalgram,BD40410938,Dhalgram,name_exact,high,source level union
+41546,union,Dohakula,khulna/jashore/bagherpara/dohakula,BD40410947,Dohakula,name_exact,high,source level union
+41539,union,Jamdia,khulna/jashore/bagherpara/jamdia,BD40410957,Jamdia,name_exact,high,source level union
+41538,union,Jaharpur,khulna/jashore/bagherpara/jaharpur,BD40410966,Jaharpur,name_exact,high,source level union
+41542,union,Narikelbaria,khulna/jashore/bagherpara/narikelbaria,BD40410976,Narikelbaria,name_exact,high,source level union
+41545,union,Roypur,khulna/jashore/bagherpara/roypur,BD40410985,Roypur,name_exact,high,source level union
+41547,union,Chougachha,khulna/jashore/chougachha/chougachha,BD40411114,Chaugachha,name_skeleton,medium,source level union
+41549,union,Dhuliani,khulna/jashore/chougachha/dhuliani,BD40411117,Dhuliani,name_exact,high,source level union
+41557,union,Hakimpur,khulna/jashore/chougachha/hakimpur,BD40411125,Hakimpur,name_exact,high,source level union
+41548,union,Jagadishpur,khulna/jashore/chougachha/jagadishpur,BD40411134,Jagadishpur,name_exact,high,source level union
+41556,union,Swarupdaha,khulna/jashore/chougachha/swarupdaha,BD40411143,Swarupdaha,name_exact,high,source level union
+41550,union,Narayanpur,khulna/jashore/chougachha/narayanpur,BD40411151,Narayanpur,name_exact,high,source level union
+41552,union,Pashapole,khulna/jashore/chougachha/pashapole,BD40411160,Pashapole,name_exact,high,source level union
+41551,union,Patibila,khulna/jashore/chougachha/patibila,BD40411169,Patibila,name_exact,high,source level union
+41553,union,Fulsara,khulna/jashore/chougachha/fulsara,BD40411177,Phulsara,name_banglish,high,source level union
+41554,union,Singhajhuli,khulna/jashore/chougachha/singhajhuli,BD40411186,Singhajhuli,name_exact,high,source level union
+41555,union,Sukpukhuria,khulna/jashore/chougachha/sukpukhuria,BD40411194,Sukpukhuria,name_exact,high,source level union
+41564,union,Bankra,khulna/jashore/jhikargacha/bankra,BD40412325,Bankra,name_exact,high,source level union
+41558,union,Gangananda,khulna/jashore/jhikargacha/gangananda,BD40412329,Ganganandapur,name_fuzzy,low,source level union; similarity 0.87 to 'Gangananda'
+41559,union,Gadkhali,khulna/jashore/jhikargacha/gadkhali,BD40412335,Gadkhali,name_exact,high,source level union
+41567,union,Hajirbagh,khulna/jashore/jhikargacha/hajirbagh,BD40412341,Hajirbagh,name_exact,high,source level union
+41560,union,Jhikargachha,khulna/jashore/jhikargacha/jhikargachha,BD40412347,Jhikargachha,name_exact,high,source level union
+41568,union,Magura,khulna/jashore/jhikargacha/magura,BD40412353,Magura,name_exact,high,source level union
+41561,union,Nabharan,khulna/jashore/jhikargacha/nabharan,BD40412359,Nabharan,name_exact,high,source level union
+41562,union,Nibaskhola,khulna/jashore/jhikargacha/nibaskhola,BD40412365,Nibaskhola,name_exact,high,source level union
+41563,union,Panisara,khulna/jashore/jhikargacha/panisara,BD40412371,Panisara,name_exact,high,source level union
+41565,union,Shankarpur,khulna/jashore/jhikargacha/shankarpur,BD40412383,Shankarpur,name_exact,high,source level union
+41566,union,Shimulia,khulna/jashore/jhikargacha/shimulia,BD40412389,Shimulia,name_exact,high,source level union
+41573,union,Bidyanandakati,khulna/jashore/keshabpur/bidyanandakati,BD40413817,Bidyanandakati,name_exact,high,source level union
+41576,union,Gaurighona,khulna/jashore/keshabpur/gaurighona,BD40413819,Gaurighona,name_exact,high,source level union
+41577,union,Keshabpur,khulna/jashore/keshabpur/keshabpur,BD40413828,Keshabpur,name_exact,high,source level union
+41571,union,Majidpur,khulna/jashore/keshabpur/majidpur,BD40413838,Majidpur,name_exact,high,source level union
+41572,union,Mongolkot,khulna/jashore/keshabpur/mongolkot,BD40413847,Mangalkot,name_skeleton,medium,source level union
+41574,union,Panjia,khulna/jashore/keshabpur/panjia,BD40413857,Panjia,name_exact,high,source level union
+41570,union,Sagardari,khulna/jashore/keshabpur/sagardari,BD40413866,Sagardari,name_exact,high,source level union
+41569,union,Sufalakati,khulna/jashore/keshabpur/sufalakati,BD40413876,Sufalakati,name_exact,high,source level union
+41575,union,Trimohini,khulna/jashore/keshabpur/trimohini,BD40413885,Trimohini,name_exact,high,source level union
+41580,union,Arabpur,khulna/jashore/jessore-sadar/arabpur,BD40414710,Arabpur,name_exact,high,source level union
+41589,union,Basundia,khulna/jashore/jessore-sadar/basundia,BD40414711,Basundia,name_exact,high,source level union
+41584,union,Chanchra,khulna/jashore/jessore-sadar/chanchra,BD40414723,Chanchra,name_exact,high,source level union
+41585,union,Churamankati,khulna/jashore/jessore-sadar/churamankati,BD40414729,Churamankati,name_exact,high,source level union
+41588,union,Fathehpur,khulna/jashore/jessore-sadar/fathehpur,BD40414741,Fathehpur,name_exact,high,source level union
+41591,union,Haibatpur,khulna/jashore/jessore-sadar/haibatpur,BD40414747,Haibatpur,name_exact,high,source level union
+41579,union,Ichhali,khulna/jashore/jessore-sadar/ichhali,BD40414753,Ichhali,name_exact,high,source level union
+41583,union,Kashimpur,khulna/jashore/jessore-sadar/kashimpur,BD40414765,Kashimpur,name_exact,high,source level union
+41582,union,Kachua,khulna/jashore/jessore-sadar/kachua,BD40414771,Kachua,name_exact,high,source level union
+41578,union,Lebutala,khulna/jashore/jessore-sadar/lebutala,BD40414777,Lebutala,name_exact,high,source level union
+41586,union,Narendrapur,khulna/jashore/jessore-sadar/narendrapur,BD40414783,Narendrapur,name_exact,high,source level union
+41587,union,Noapara,khulna/jashore/jessore-sadar/noapara,BD40414789,Noapara,name_exact,high,source level union
+41590,union,Ramnagar,khulna/jashore/jessore-sadar/ramnagar,BD40414792,Ramnagar,name_exact,high,source level union
+41581,union,Upasahar,khulna/jashore/jessore-sadar/upasahar,BD40414795,Upasahar,name_exact,high,source level union
+41521,union,Bhojgati,khulna/jashore/manirampur/bhojgati,BD40416110,Bhojgati,name_exact,high,source level union
+41525,union,Chaluahati,khulna/jashore/manirampur/chaluahati,BD40416111,Chaluahati,name_exact,high,source level union
+41523,union,Dhakuria,khulna/jashore/manirampur/dhakuria,BD40416116,Dhakuria,name_exact,high,source level union
+41522,union,Durbadanga,khulna/jashore/manirampur/durbadanga,BD40416122,Durbadanga,name_exact,high,source level union
+41515,union,Haridaskati,khulna/jashore/manirampur/haridaskati,BD40416127,Haridaskati,name_exact,high,source level union
+41514,union,Hariharnagar,khulna/jashore/manirampur/hariharnagar,BD40416133,Hariharnagar,name_exact,high,source level union
+41524,union,Jhanpa,khulna/jashore/manirampur/jhanpa,BD40416139,Jhanpa,name_exact,high,source level union
+41529,union,Kashimnagar,khulna/jashore/manirampur/kashimnagar,BD40416144,Kashimnagar,name_exact,high,source level union
+41527,union,Khanpur,khulna/jashore/manirampur/khanpur,BD40416150,Khanpur,name_exact,high,source level union
+41526,union,Khedapara,khulna/jashore/manirampur/khedapara,BD40416155,Kheda Para,name_exact,high,source level union
+41528,union,Kultia,khulna/jashore/manirampur/kultia,BD40416161,Kultia,name_exact,high,source level union
+41520,union,Manirampur,khulna/jashore/manirampur/manirampur,BD40416167,Manirampur,name_exact,high,source level union
+41519,union,Manoharpur,khulna/jashore/manirampur/manoharpur,BD40416172,Manoharpur,name_exact,high,source level union
+41518,union,Maswimnagar,khulna/jashore/manirampur/maswimnagar,BD40416178,Maswimnagar,name_exact,high,source level union
+41513,union,Nehalpur,khulna/jashore/manirampur/nehalpur,BD40416183,Nehalpur,name_exact,high,source level union
+41517,union,Rohita,khulna/jashore/manirampur/rohita,BD40416189,Rohita,name_exact,high,source level union
+41516,union,Shyamkur,khulna/jashore/manirampur/shyamkur,BD40416194,Shyamkur,name_exact,high,source level union
+41598,union,Bagachra,khulna/jashore/sharsha/bagachra,BD40419013,Bagachra,name_exact,high,source level union
+41597,union,Bahadurpur,khulna/jashore/sharsha/bahadurpur,BD40419017,Bahadurpur,name_exact,high,source level union
+41596,union,Benapole,khulna/jashore/sharsha/benapole,BD40419025,Benapole,name_exact,high,source level union
+41601,union,Dihi,khulna/jashore/sharsha/dihi,BD40419034,Dihi,name_exact,high,source level union
+41602,union,Goga,khulna/jashore/sharsha/goga,BD40419043,Goga,name_exact,high,source level union
+41603,union,Kayba,khulna/jashore/sharsha/kayba,BD40419051,Kayba,name_exact,high,source level union
+41595,union,Lakshmanpur,khulna/jashore/sharsha/lakshmanpur,BD40419060,Lakshmanpur,name_exact,high,source level union
+41600,union,Nizampur,khulna/jashore/sharsha/nizampur,BD40419069,Nizampur,name_exact,high,source level union
+41599,union,Putkhali,khulna/jashore/sharsha/putkhali,BD40419077,Putkhali,name_exact,high,source level union
+41594,union,Sharsha,khulna/jashore/sharsha/sharsha,BD40419086,Sharsha,name_exact,high,source level union
+41593,union,Ulshi,khulna/jashore/sharsha/ulshi,BD40419094,Ulashi,name_skeleton,medium,source level union
+42051,union,Bhayna,khulna/jhenaidah/harinakundu/bhayna,BD40441410,Bhayna,name_exact,high,source level union
+42058,union,Chandpur,khulna/jhenaidah/harinakundu/chandpur,BD40441421,Chandpur,name_exact,high,source level union
+42054,union,Daulatpur,khulna/jhenaidah/harinakundu/daulatpur,BD40441431,Daulatpur,name_exact,high,source level union
+42056,union,Falsi,khulna/jhenaidah/harinakundu/falsi,BD40441442,Palsi,name_fuzzy,low,source level union; similarity 0.80 to 'Falsi'
+42052,union,Joradah,khulna/jhenaidah/harinakundu/joradah,BD40441452,Joradaha,name_skeleton,medium,source level union
+42055,union,Kapashatia,khulna/jhenaidah/harinakundu/kapashatia,BD40441463,Kapashati,name_skeleton,medium,source level union
+42057,union,Raghunathpur,khulna/jhenaidah/harinakundu/raghunathpur,BD40441473,Raghunathpur,name_exact,high,source level union
+42053,union,Taherhuda,khulna/jhenaidah/harinakundu/taherhuda,BD40441484,Taherhuda,name_exact,high,source level union
+42031,union,Dogachhi,khulna/jhenaidah/jhenaidah-sadar/dogachhi,BD40441911,Dogachhi,name_exact,high,source level union
+42032,union,Furshondi,khulna/jhenaidah/jhenaidah-sadar/furshondi,BD40441913,Fursandi,name_skeleton,medium,source level union
+42025,union,Ganna,khulna/jhenaidah/jhenaidah-sadar/ganna,BD40441915,Ganna,name_exact,high,source level union
+42033,union,Ghorshal,khulna/jhenaidah/jhenaidah-sadar/ghorshal,BD40441921,Ghorshal,name_exact,high,source level union
+42023,union,Halidhani,khulna/jhenaidah/jhenaidah-sadar/halidhani,BD40441926,Halidhani,name_exact,high,source level union
+42029,union,Harishongkorpur,khulna/jhenaidah/jhenaidah-sadar/harishongkorpur,BD40441931,Harishankarpur,name_fuzzy,low,source level union; similarity 0.81 to 'Harishongkorpur'
+42034,union,Kalicharanpur,khulna/jhenaidah/jhenaidah-sadar/kalicharanpur,BD40441942,Kalicharanpur,name_exact,high,source level union
+42024,union,Kumrabaria,khulna/jhenaidah/jhenaidah-sadar/kumrabaria,BD40441947,Kumrabaria,name_exact,high,source level union
+42021,union,Modhuhati,khulna/jhenaidah/jhenaidah-sadar/modhuhati,BD40441952,Madhuhati,name_skeleton,medium,source level union
+42026,union,Maharazpur,khulna/jhenaidah/jhenaidah-sadar/maharazpur,BD40441958,Moharajpur,name_skeleton,medium,source level union
+42036,union,Naldanga,khulna/jhenaidah/jhenaidah-sadar/naldanga,BD40441963,Naldanga,name_exact,high,source level union
+42030,union,Padmakar,khulna/jhenaidah/jhenaidah-sadar/padmakar,BD40441968,Padmakar,name_exact,high,source level union
+42027,union,Paglakanai,khulna/jhenaidah/jhenaidah-sadar/paglakanai,BD40441973,Paglakanai,name_exact,high,source level union
+42028,union,Porahati,khulna/jhenaidah/jhenaidah-sadar/porahati,BD40441979,Porahati,name_exact,high,source level union
+42022,union,Saganna,khulna/jhenaidah/jhenaidah-sadar/saganna,BD40441984,Saganna,name_exact,high,source level union
+42020,union,Sadhuhati,khulna/jhenaidah/jhenaidah-sadar/sadhuhati,BD40441989,Sadhuhati,name_exact,high,source level union
+42035,union,Surat,khulna/jhenaidah/jhenaidah-sadar/surat,BD40441994,Surat,name_exact,high,source level union
+42067,union,Barabazar,khulna/jhenaidah/kaliganj/barabazar,BD40443310,Bara Bazar,name_exact,high,source level union
+42060,union,Jamal,khulna/jhenaidah/kaliganj/jamal,BD40443320,Jamal,name_exact,high,source level union
+42059,union,Sundarpurdurgapur,khulna/jhenaidah/kaliganj/sundarpurdurgapur,BD40443333,Sundarpur Durgapur,name_exact,high,source level union
+42068,union,Kashtabhanga,khulna/jhenaidah/kaliganj/kashtabhanga,BD40443340,Kashtabhanga,name_exact,high,source level union
+42061,union,Kola,khulna/jhenaidah/kaliganj/kola,BD40443347,Kola,name_exact,high,source level union
+42066,union,Maliat,khulna/jhenaidah/kaliganj/maliat,BD40443354,Maliat,name_exact,high,source level union
+42062,union,Niamatpur,khulna/jhenaidah/kaliganj/niamatpur,BD40443361,Niamatpur,name_exact,high,source level union
+42065,union,Raygram,khulna/jhenaidah/kaliganj/raygram,BD40443374,Roygram,name_skeleton,medium,source level union
+42069,union,Rakhalgachhi,khulna/jhenaidah/kaliganj/rakhalgachhi,BD40443381,Rakhalgachhi,name_exact,high,source level union
+42063,union,Simla-Rokonpur,khulna/jhenaidah/kaliganj/simla-rokonpur,BD40443388,Simla Rokonpur,name_exact,high,source level union
+42064,union,Trilochanpur,khulna/jhenaidah/kaliganj/trilochanpur,BD40443394,Trilochanpur,name_exact,high,source level union
+42073,union,Baluhar,khulna/jhenaidah/kotchandpur/baluhar,BD40444213,Baluhar,name_exact,high,source level union
+42071,union,Dora,khulna/jhenaidah/kotchandpur/dora,BD40444227,Dora,name_exact,high,source level union
+42074,union,Elangi,khulna/jhenaidah/kotchandpur/elangi,BD40444240,Elangi,name_exact,high,source level union
+42072,union,Kushna,khulna/jhenaidah/kotchandpur/kushna,BD40444267,Kushna,name_exact,high,source level union
+42070,union,Sabdalpur,khulna/jhenaidah/kotchandpur/sabdalpur,BD40444281,Sabdalpur,name_exact,high,source level union
+42086,union,Azampur,khulna/jhenaidah/moheshpur/azampur,BD40447110,Azampur,name_exact,high,source level union
+42082,union,Banshbaria,khulna/jhenaidah/moheshpur/banshbaria,BD40447111,Banshbaria,name_exact,high,source level union
+42076,union,Fatepur,khulna/jhenaidah/moheshpur/fatepur,BD40447117,Fatehpur,name_skeleton,medium,source level union
+42083,union,Jadabpur,khulna/jhenaidah/moheshpur/jadabpur,BD40447123,Jadabpur,name_exact,high,source level union
+42081,union,Kazirber,khulna/jhenaidah/moheshpur/kazirber,BD40447129,Kazirber,name_exact,high,source level union
+42085,union,Manderbaria,khulna/jhenaidah/moheshpur/manderbaria,BD40447135,Manderbari,name_skeleton,medium,source level union
+42084,union,Natima,khulna/jhenaidah/moheshpur/natima,BD40447153,Natima,name_exact,high,source level union
+42080,union,Nepa,khulna/jhenaidah/moheshpur/nepa,BD40447159,Nepa,name_exact,high,source level union
+42077,union,Panthapara,khulna/jhenaidah/moheshpur/panthapara,BD40447165,Pantha Para,name_exact,high,source level union
+42079,union,Shyamkur,khulna/jhenaidah/moheshpur/shyamkur,BD40447177,Shyamkur,name_exact,high,source level union
+42078,union,Swaruppur,khulna/jhenaidah/moheshpur/swaruppur,BD40447189,Swaruppur,name_exact,high,source level union
+42046,union,Abaipur,khulna/jhenaidah/shailkupa/abaipur,BD40448010,Abaipur,name_exact,high,source level union
+42045,union,Bogura,khulna/jhenaidah/shailkupa/bogura,BD40448012,Bagura,name_skeleton,medium,source level union
+42043,union,Dhaloharachandra,khulna/jhenaidah/shailkupa/dhaloharachandra,BD40448018,Dhalhara Chandra,name_fuzzy,medium,source level union; similarity 0.96 to 'Dhaloharachandra'
+42039,union,Dignagore,khulna/jhenaidah/shailkupa/dignagore,BD40448025,Dignagar,name_skeleton,medium,source level union
+42049,union,Dudshar,khulna/jhenaidah/shailkupa/dudshar,BD40448031,Dudhsar,name_banglish,high,source level union
+42044,union,Manoharpur,khulna/jhenaidah/shailkupa/manoharpur,BD40448037,Manoharpur,name_exact,high,source level union
+42050,union,Fulhari,khulna/jhenaidah/shailkupa/fulhari,BD40448044,Fulhari,name_exact,high,source level union
+42042,union,Hakimpur,khulna/jhenaidah/shailkupa/hakimpur,BD40448050,Hakimpur,name_exact,high,source level union
+42040,union,Kancherkol,khulna/jhenaidah/shailkupa/kancherkol,BD40448056,Kancherkol,name_exact,high,source level union
+42038,union,Mirzapur,khulna/jhenaidah/shailkupa/mirzapur,BD40448063,Mirzapur,name_exact,high,source level union
+42047,union,Nityanandapur,khulna/jhenaidah/shailkupa/nityanandapur,BD40448069,Nityanandapur,name_exact,high,source level union
+42041,union,Sarutia,khulna/jhenaidah/shailkupa/sarutia,BD40448075,Sarutia,name_exact,high,source level union
+42037,union,Tribeni,khulna/jhenaidah/shailkupa/tribeni,BD40448088,Tribeni,name_exact,high,source level union
+42048,union,Umedpur,khulna/jhenaidah/shailkupa/umedpur,BD40448094,Umedpur,name_exact,high,source level union
+41923,union,Amirpur,khulna/khulna/botiaghata/amirpur,BD40471211,Amirpur,name_exact,high,source level union
+41927,union,Baliadanga,khulna/khulna/botiaghata/baliadanga,BD40471223,Baliadanga,name_exact,high,source level union
+41922,union,Botiaghata,khulna/khulna/botiaghata/botiaghata,BD40471235,Batiaghata,name_skeleton,medium,source level union
+41926,union,Vandarkot,khulna/khulna/botiaghata/vandarkot,BD40471247,Bhanderkote,name_skeleton,medium,source level union
+41924,union,Gongarampur,khulna/khulna/botiaghata/gongarampur,BD40471259,Gangarampur,name_skeleton,medium,source level union
+41928,union,Jolma,khulna/khulna/botiaghata/jolma,BD40471271,Jalma,name_skeleton,medium,source level union
+41925,union,Surkhali,khulna/khulna/botiaghata/surkhali,BD40471283,Surkhali,name_exact,high,source level union
+41930,union,Bajua,khulna/khulna/dakop/bajua,BD40471710,Bajua,name_exact,high,source level union
+41936,union,Banishanta,khulna/khulna/dakop/banishanta,BD40471713,Banishanta,name_exact,high,source level union
+41934,union,Laudoba,khulna/khulna/dakop/laudoba,BD40471721,Laudubi,name_skeleton,medium,source level union
+41937,union,Koilashgonj,khulna/khulna/dakop/koilashgonj,BD40471752,Kailasganj,name_skeleton,medium,source level union
+41931,union,Kamarkhola,khulna/khulna/dakop/kamarkhola,BD40471763,Kamarkhola,name_exact,high,source level union
+41935,union,Pankhali,khulna/khulna/dakop/pankhali,BD40471769,Pankhali,name_exact,high,source level union
+41933,union,Sutarkhali,khulna/khulna/dakop/sutarkhali,BD40471773,Sutarkhali,name_exact,high,source level union
+41932,union,Tildanga,khulna/khulna/dakop/tildanga,BD40471784,Tildanga,name_exact,high,source level union
+,,,,BD40472110,Aranghata,unmatched,none,source level union; parent BD404721 not matched to a seed unit
+41916,union,Atlia,khulna/khulna/dumuria/atlia,BD40473011,Atlia,name_exact,high,source level union
+41910,union,Vandarpara,khulna/khulna/dumuria/vandarpara,BD40473013,Bhandar Para,name_banglish,high,source level union
+41917,union,Dhamalia,khulna/khulna/dumuria/dhamalia,BD40473020,Dhamalia,name_exact,high,source level union
+41908,union,Dumuria,khulna/khulna/dumuria/dumuria,BD40473027,Dumuria,name_exact,high,source level union
+41913,union,Ghutudia,khulna/khulna/dumuria/ghutudia,BD40473033,Gutudia,name_banglish,high,source level union
+41915,union,Khornia,khulna/khulna/dumuria/khornia,BD40473040,Kharnia,name_skeleton,medium,source level union
+41921,union,Magurkhali,khulna/khulna/dumuria/magurkhali,BD40473047,Magurkhali,name_exact,high,source level union
+41909,union,Magurghona,khulna/khulna/dumuria/magurghona,BD40473054,Maguraghona,name_skeleton,medium,source level union
+41918,union,Raghunathpur,khulna/khulna/dumuria/raghunathpur,BD40473061,Raghunathpur,name_exact,high,source level union
+41919,union,Rongpur,khulna/khulna/dumuria/rongpur,BD40473067,Rangpur,name_skeleton,medium,source level union
+41912,union,Rudaghora,khulna/khulna/dumuria/rudaghora,BD40473074,Rudaghara,name_skeleton,medium,source level union
+41911,union,Sahos,khulna/khulna/dumuria/sahos,BD40473081,Sahas,name_skeleton,medium,source level union
+41920,union,Shorafpur,khulna/khulna/dumuria/shorafpur,BD40473088,Sarappur,name_fuzzy,low,source level union; similarity 0.80 to 'Shorafpur'
+41914,union,Shovna,khulna/khulna/dumuria/shovna,BD40473094,Sobhana,name_skeleton,medium,source level union
+41893,union,Barakpur,khulna/khulna/digholia/barakpur,BD40474017,Barakpur,name_exact,high,source level union
+41896,union,Digholia,khulna/khulna/digholia/digholia,BD40474057,Dighalia,name_skeleton,medium,source level union
+41892,union,Gajirhat,khulna/khulna/digholia/gajirhat,BD40474066,Gazir Hat,name_banglish,high,source level union
+41891,union,Senhati,khulna/khulna/digholia/senhati,BD40474085,Senhati,name_exact,high,source level union
+,,,,BD40474819,Atra Gilatala,unmatched,none,source level union; parent BD404748 not matched to a seed unit
+,,,,BD40474875,Jugipole,unmatched,none,source level union; parent BD404748 not matched to a seed unit
+41943,union,Amadi,khulna/khulna/koyra/amadi,BD40475310,Amadi,name_exact,high,source level union
+41944,union,Bagali,khulna/khulna/koyra/bagali,BD40475311,Bagali,name_exact,high,source level union
+41942,union,South Bedkashi,khulna/khulna/koyra/south-bedkashi,BD40475322,Dakshin Bedkashi,name_exact,high,source level union; direction word read as South: 'Dakshin Bedkashi' ~ 'South Bedkashi'
+41938,union,Koyra,khulna/khulna/koyra/koyra,BD40475355,Koyra,name_exact,high,source level union
+41939,union,Moharajpur,khulna/khulna/koyra/moharajpur,BD40475372,Maharajpur,name_skeleton,medium,source level union
+41940,union,Moheswaripur,khulna/khulna/koyra/moheswaripur,BD40475378,Maheshwaripur,name_skeleton,medium,source level union
+41941,union,North Bedkashi,khulna/khulna/koyra/north-bedkashi,BD40475394,Uttar Bedkashi,name_exact,high,source level union; direction word read as North: 'Uttar Bedkashi' ~ 'North Bedkashi'
+41885,union,Chandkhali,khulna/khulna/paikgasa/chandkhali,BD40476416,Chandkhali,name_exact,high,source level union
+41881,union,Deluti,khulna/khulna/paikgasa/deluti,BD40476427,Deluti,name_exact,high,source level union
+41883,union,Godaipur,khulna/khulna/paikgasa/godaipur,BD40476433,Gadaipur,name_skeleton,medium,source level union
+41878,union,Goroikhali,khulna/khulna/paikgasa/goroikhali,BD40476439,Garuikhali,name_skeleton,medium,source level union
+41877,union,Horidhali,khulna/khulna/paikgasa/horidhali,BD40476444,Haridhali,name_skeleton,medium,source level union
+41879,union,Kopilmuni,khulna/khulna/paikgasa/kopilmuni,BD40476450,Kapilmuni,name_skeleton,medium,source level union
+41882,union,Loskor,khulna/khulna/paikgasa/loskor,BD40476461,Laskar,name_skeleton,medium,source level union
+41884,union,Raruli,khulna/khulna/paikgasa/raruli,BD40476483,Raruli,name_exact,high,source level union
+41886,union,Soladana,khulna/khulna/paikgasa/soladana,BD40476489,Sholadana,name_exact,high,source level union
+41888,union,Damodar,khulna/khulna/fultola/damodar,BD40476938,Damodar,name_exact,high,source level union
+41890,union,Jamira,khulna/khulna/fultola/jamira,BD40476957,Jamira,name_exact,high,source level union
+41887,union,Fultola,khulna/khulna/fultola/fultola,BD40476976,Phultala,name_skeleton,medium,source level union
+41897,union,Aichgati,khulna/khulna/rupsha/aichgati,BD40477513,Aijganti,name_fuzzy,low,source level union; similarity 0.80 to 'Aichgati'
+41901,union,Ghatvog,khulna/khulna/rupsha/ghatvog,BD40477527,Ghatbhogh,name_banglish,high,source level union
+41899,union,Noihati,khulna/khulna/rupsha/noihati,BD40477554,Naihati,name_skeleton,medium,source level union
+41898,union,Srifoltola,khulna/khulna/rupsha/srifoltola,BD40477567,Sreefaltala,name_skeleton,medium,source level union
+41907,union,Ajgora,khulna/khulna/terokhada/ajgora,BD40479413,Ajugara,name_skeleton,medium,source level union
+41904,union,Barasat,khulna/khulna/terokhada/barasat,BD40479427,Barasat,name_exact,high,source level union
+41906,union,Modhupur,khulna/khulna/terokhada/modhupur,BD40479440,Madhupur,name_skeleton,medium,source level union
+41905,union,Sochiadaho,khulna/khulna/terokhada/sochiadaho,BD40479454,Sachiadah,name_skeleton,medium,source level union
+41902,union,Terokhada,khulna/khulna/terokhada/terokhada,BD40479481,Terokhada,name_exact,high,source level union
+41840,union,Bahadurpur,khulna/kushtia/bheramara/bahadurpur,BD40501513,Bahadurpur,name_exact,high,source level union
+41836,union,Bahirchar,khulna/kushtia/bheramara/bahirchar,BD40501527,Bahir Char,name_exact,high,source level union
+41839,union,Chandgram,khulna/kushtia/bheramara/chandgram,BD40501540,Chandgram,name_exact,high,source level union
+41835,union,Dharampur,khulna/kushtia/bheramara/dharampur,BD40501554,Dharampur,name_exact,high,source level union
+41838,union,Juniadah,khulna/kushtia/bheramara/juniadah,BD40501567,Juniadaha,name_skeleton,medium,source level union
+41837,union,Mukarimpur,khulna/kushtia/bheramara/mukarimpur,BD40501581,Mokarimpur,name_skeleton,medium,source level union
+41822,union,Adabaria,khulna/kushtia/daulatpur/adabaria,BD40503911,Adabaria,name_exact,high,source level union
+41826,union,Aria,khulna/kushtia/daulatpur/aria,BD40503913,Aria,name_exact,high,source level union
+41824,union,Boalia,khulna/kushtia/daulatpur/boalia,BD40503920,Boalia,name_exact,high,source level union
+41828,union,Chilmary,khulna/kushtia/daulatpur/chilmary,BD40503927,Chilmari,name_banglish,high,source level union
+41821,union,Daulatpur,khulna/kushtia/daulatpur/daulatpur,BD40503933,Daulatpur,name_exact,high,source level union
+41823,union,Hogolbaria,khulna/kushtia/daulatpur/hogolbaria,BD40503940,Hogalbaria,name_skeleton,medium,source level union
+41827,union,Khalishakundi,khulna/kushtia/daulatpur/khalishakundi,BD40503947,Khalishakundi,name_exact,high,source level union
+41832,union,Moricha,khulna/kushtia/daulatpur/moricha,BD40503954,Maricha,name_skeleton,medium,source level union
+41829,union,Mothurapur,khulna/kushtia/daulatpur/mothurapur,BD40503961,Mathurapur,name_skeleton,medium,source level union
+41831,union,Piarpur,khulna/kushtia/daulatpur/piarpur,BD40503967,Pearpur,name_skeleton,medium,source level union
+41825,union,Philipnagor,khulna/kushtia/daulatpur/philipnagor,BD40503974,Philipnagar,name_skeleton,medium,source level union
+41830,union,Pragpur,khulna/kushtia/daulatpur/pragpur,BD40503981,Prayagpur,name_skeleton,medium,source level union
+41834,union,Ramkrishnopur,khulna/kushtia/daulatpur/ramkrishnopur,BD40503988,Ramkrishnapur,name_skeleton,medium,source level union
+41833,union,Refaitpur,khulna/kushtia/daulatpur/refaitpur,BD40503994,Refayetpur,name_skeleton,medium,source level union
+41804,union,Ambaria,khulna/kushtia/khoksa/ambaria,BD40506317,Ambaria,name_exact,high,source level union
+41805,union,Bethbaria,khulna/kushtia/khoksa/bethbaria,BD40506325,Betbaria,name_banglish,high,source level union
+41807,union,Gopgram,khulna/kushtia/khoksa/gopgram,BD40506331,Gopagram,name_skeleton,medium,source level union
+41801,union,Janipur,khulna/kushtia/khoksa/janipur,BD40506337,Janipur,name_exact,high,source level union
+41803,union,Joyntihazra,khulna/kushtia/khoksa/joyntihazra,BD40506343,Jayanti Hajra,name_skeleton,medium,source level union
+41799,union,Khoksa,khulna/kushtia/khoksa/khoksa,BD40506347,Khoksa,name_exact,high,source level union
+41800,union,Osmanpur,khulna/kushtia/khoksa/osmanpur,BD40506357,Osmanpur,name_exact,high,source level union
+41806,union,Shomospur,khulna/kushtia/khoksa/shomospur,BD40506371,Samaspur,name_skeleton,medium,source level union
+41802,union,Shimulia,khulna/kushtia/khoksa/shimulia,BD40506377,Shimulia,name_exact,high,source level union
+41794,union,Bagulat,khulna/kushtia/kumarkhali/bagulat,BD40507116,Bagulat,name_exact,high,source level union
+41796,union,Chadpur,khulna/kushtia/kumarkhali/chadpur,BD40507117,Chandpur,name_fuzzy,medium,source level union; similarity 0.92 to 'Chadpur'
+41793,union,Chapra,khulna/kushtia/kumarkhali/chapra,BD40507125,Chapra,name_exact,high,source level union
+41795,union,Jaduboyra,khulna/kushtia/kumarkhali/jaduboyra,BD40507134,Jadu Boyra,name_exact,high,source level union
+41789,union,Jagonnathpur,khulna/kushtia/kumarkhali/jagonnathpur,BD40507143,Jagannathpur,name_skeleton,medium,source level union
+41788,union,Kaya,khulna/kushtia/kumarkhali/kaya,BD40507151,Kaya,name_exact,high,source level union
+41792,union,Nandolalpur,khulna/kushtia/kumarkhali/nandolalpur,BD40507169,Nandalalpur,name_skeleton,medium,source level union
+41797,union,Panti,khulna/kushtia/kumarkhali/panti,BD40507177,Panti,name_exact,high,source level union
+41790,union,Sadki,khulna/kushtia/kumarkhali/sadki,BD40507186,Sadaki,name_skeleton,medium,source level union
+41798,union,Charsadipur,khulna/kushtia/kumarkhali/charsadipur,BD40507190,Sadipur,name_fuzzy,low,source level union; similarity 0.82 to 'Charsadipur'
+41791,union,Shelaidah,khulna/kushtia/kumarkhali/shelaidah,BD40507194,Shelaidaha,name_skeleton,medium,source level union
+41784,union,Abdulpur,khulna/kushtia/kushtia-sadar/abdulpur,BD40507916,Abdulpur,name_exact,high,source level union
+41780,union,Ailchara,khulna/kushtia/kushtia-sadar/ailchara,BD40507917,Ailchara,name_exact,high,source level union
+41778,union,Alampur,khulna/kushtia/kushtia-sadar/alampur,BD40507918,Alampur,name_exact,high,source level union
+41775,union,Barkhada,khulna/kushtia/kushtia-sadar/barkhada,BD40507925,Barakhada,name_skeleton,medium,source level union
+41787,union,Goswami Durgapur,khulna/kushtia/kushtia-sadar/goswami-durgapur,BD40507931,Gosind Durgapur,name_fuzzy,low,source level union; similarity 0.86 to 'Goswami Durgapur'
+41785,union,Harinarayanpur,khulna/kushtia/kushtia-sadar/harinarayanpur,BD40507937,Harinarayanpur,name_exact,high,source level union
+41774,union,Hatash Haripur,khulna/kushtia/kushtia-sadar/hatash-haripur,BD40507944,Hatas Haripur,name_skeleton,medium,source level union
+41779,union,Ziaraakhi,khulna/kushtia/kushtia-sadar/ziaraakhi,BD40507956,Jiarakhi,name_banglish,high,source level union
+41782,union,Jhaudia,khulna/kushtia/kushtia-sadar/jhaudia,BD40507963,Jhaudia,name_exact,high,source level union
+41776,union,Mazampur,khulna/kushtia/kushtia-sadar/mazampur,BD40507975,Mazampur,name_exact,high,source level union
+41786,union,Monohardia,khulna/kushtia/kushtia-sadar/monohardia,BD40507982,Manohardia,name_skeleton,medium,source level union
+41781,union,Patikabari,khulna/kushtia/kushtia-sadar/patikabari,BD40507988,Paitkabari,name_skeleton,medium,source level union
+41783,union,Ujangram,khulna/kushtia/kushtia-sadar/ujangram,BD40507994,Ujangram,name_exact,high,source level union
+41818,union,Ambaria,khulna/kushtia/mirpur/ambaria,BD40509413,Ambaria,name_exact,high,source level union
+41813,union,Amla,khulna/kushtia/mirpur/amla,BD40509414,Amla,name_exact,high,source level union
+41809,union,Bahalbaria,khulna/kushtia/mirpur/bahalbaria,BD40509421,Bahalbaria,name_exact,high,source level union
+41811,union,Baruipara,khulna/kushtia/mirpur/baruipara,BD40509429,Barui Para,name_exact,high,source level union
+41815,union,Chhatian,khulna/kushtia/mirpur/chhatian,BD40509436,Chhatian,name_exact,high,source level union
+41808,union,Chithalia,khulna/kushtia/mirpur/chithalia,BD40509443,Chithulia,name_skeleton,medium,source level union
+41817,union,Kursha,khulna/kushtia/mirpur/kursha,BD40509458,Kursha,name_exact,high,source level union
+41820,union,Malihad,khulna/kushtia/mirpur/malihad,BD40509465,Malihad,name_exact,high,source level union
+41812,union,Fulbaria,khulna/kushtia/mirpur/fulbaria,BD40509473,Fulbaria,name_exact,high,source level union
+41816,union,Poradaha,khulna/kushtia/mirpur/poradaha,BD40509480,Poradaha,name_exact,high,source level union
+41814,union,Sadarpur,khulna/kushtia/mirpur/sadarpur,BD40509487,Sardarpur,name_fuzzy,medium,source level union; similarity 0.94 to 'Sadarpur'
+41810,union,Talbaria,khulna/kushtia/mirpur/talbaria,BD40509494,Talbaria,name_exact,high,source level union
+41857,union,Atharokhada,khulna/magura/magura-sadar/atharokhada,BD40555721,Atharakhada,name_skeleton,medium,source level union
+41865,union,Baroilpolita,khulna/magura/magura-sadar/baroilpolita,BD40555723,Birail Palita,name_skeleton,medium,source level union
+41859,union,Bogia,khulna/magura/magura-sadar/bogia,BD40555725,Bagia,name_fuzzy,low,source level union; similarity 0.80 to 'Bogia'
+41863,union,Chawlia,khulna/magura/magura-sadar/chawlia,BD40555727,Chaulia,name_fuzzy,low,source level union; similarity 0.83 to 'Chawlia'
+41867,union,Gopalgram,khulna/magura/magura-sadar/gopalgram,BD40555733,Gopalgram,name_exact,high,source level union
+41856,union,Hazipur,khulna/magura/magura-sadar/hazipur,BD40555740,Hazipur,name_exact,high,source level union
+41860,union,Hazrapur,khulna/magura/magura-sadar/hazrapur,BD40555747,Hazrapur,name_exact,high,source level union
+41862,union,Jagdal,khulna/magura/magura-sadar/jagdal,BD40555754,Jagdal,name_exact,high,source level union
+41858,union,Kosundi,khulna/magura/magura-sadar/kosundi,BD40555761,Kasundi,name_skeleton,medium,source level union
+41866,union,Kuchiamora,khulna/magura/magura-sadar/kuchiamora,BD40555767,Kuchiamora,name_exact,high,source level union
+41861,union,Raghobdair,khulna/magura/magura-sadar/raghobdair,BD40555788,Raghab Dair,name_skeleton,medium,source level union
+41864,union,Satrijitpur,khulna/magura/magura-sadar/satrijitpur,BD40555794,Satrujitpur,name_skeleton,medium,source level union
+41872,union,Babukhali,khulna/magura/mohammadpur/babukhali,BD40556610,Babukhali,name_exact,high,source level union
+41873,union,Balidia,khulna/magura/mohammadpur/balidia,BD40556621,Balidia,name_exact,high,source level union
+41874,union,Binodpur,khulna/magura/mohammadpur/binodpur,BD40556631,Binodepur,name_skeleton,medium,source level union
+41869,union,Digha,khulna/magura/mohammadpur/digha,BD40556642,Digha,name_exact,high,source level union
+41875,union,Mohammadpur,khulna/magura/mohammadpur/mohammadpur,BD40556652,Mohammadpur,name_exact,high,source level union
+41870,union,Nohata,khulna/magura/mohammadpur/nohata,BD40556663,Nahata,name_skeleton,medium,source level union
+41871,union,Palashbaria,khulna/magura/mohammadpur/palashbaria,BD40556673,Palashbaria,name_exact,high,source level union
+41876,union,Rajapur,khulna/magura/mohammadpur/rajapur,BD40556684,Rajapur,name_exact,high,source level union
+41843,union,Arpara,khulna/magura/shalikha/arpara,BD40558511,Arpara,name_exact,high,source level union
+41846,union,Bunagati,khulna/magura/shalikha/bunagati,BD40558523,Bunagati,name_exact,high,source level union
+41841,union,Dhaneshwargati,khulna/magura/shalikha/dhaneshwargati,BD40558535,Dhaneshwargati,name_exact,high,source level union
+41847,union,Gongarampur,khulna/magura/shalikha/gongarampur,BD40558547,Gangarampur,name_skeleton,medium,source level union
+41845,union,Shalikha,khulna/magura/shalikha/shalikha,BD40558559,Shalikha,name_exact,high,source level union
+41844,union,Shatakhali,khulna/magura/shalikha/shatakhali,BD40558571,Shatakhali,name_exact,high,source level union
+41842,union,Talkhari,khulna/magura/shalikha/talkhari,BD40558583,Talkhari,name_exact,high,source level union
+41855,union,Amalshar,khulna/magura/sreepur/amalshar,BD40559510,Amalsar,name_exact,high,source level union
+41850,union,Dariapur,khulna/magura/sreepur/dariapur,BD40559521,Dariapur,name_exact,high,source level union
+41848,union,Goyespur,khulna/magura/sreepur/goyespur,BD40559531,Gayeshpur,name_skeleton,medium,source level union
+41851,union,Kadirpara,khulna/magura/sreepur/kadirpara,BD40559542,Kadir Para,name_exact,high,source level union
+41854,union,Nakol,khulna/magura/sreepur/nakol,BD40559552,Nakol,name_exact,high,source level union
+41852,union,Shobdalpur,khulna/magura/sreepur/shobdalpur,BD40559563,Sabdalpur,name_skeleton,medium,source level union
+41849,union,Sreekol,khulna/magura/sreepur/sreekol,BD40559573,Sreekol,name_exact,high,source level union
+41853,union,Sreepur,khulna/magura/sreepur/sreepur,BD40559584,Sreepur,name_exact,high,source level union
+41693,union,Bamondi,khulna/meherpur/gangni/bamondi,BD40574710,Bamandi,name_skeleton,medium,source level union
+41697,union,Dhankolla,khulna/meherpur/gangni/dhankolla,BD40574721,Dhankhola,name_banglish,high,source level union
+41699,union,Kathuli,khulna/meherpur/gangni/kathuli,BD40574742,Kathuli,name_exact,high,source level union
+41692,union,Kazipur,khulna/meherpur/gangni/kazipur,BD40574752,Kazipur,name_exact,high,source level union
+41694,union,Motmura,khulna/meherpur/gangni/motmura,BD40574763,Matmura,name_skeleton,medium,source level union
+41698,union,Raipur,khulna/meherpur/gangni/raipur,BD40574769,Roypur,name_skeleton,medium,source level union
+41696,union,Shaharbati,khulna/meherpur/gangni/shaharbati,BD40574773,Shaharbati,name_exact,high,source level union
+41695,union,Sholotaka,khulna/meherpur/gangni/sholotaka,BD40574784,Shola Taka,name_skeleton,medium,source level union
+41691,union,Tentulbaria,khulna/meherpur/gangni/tentulbaria,BD40574794,Tentulbaria,name_exact,high,source level union
+41684,union,Bagowan,khulna/meherpur/mujibnagar/bagowan,BD40576028,Bagoan,name_exact,high,source level union
+41682,union,Dariapur,khulna/meherpur/mujibnagar/dariapur,BD40576047,Dariapur,name_exact,high,source level union
+41685,union,Mohajanpur,khulna/meherpur/mujibnagar/mohajanpur,BD40576076,Mahajanpur,name_skeleton,medium,source level union
+41683,union,Monakhali,khulna/meherpur/mujibnagar/monakhali,BD40576085,Monakhali,name_exact,high,source level union
+41689,union,Amdah,khulna/meherpur/meherpur-sadar/amdah,BD40578714,Amda,name_fuzzy,medium,source level union; similarity 0.89 to 'Amdah'
+41686,union,Amjhupi,khulna/meherpur/meherpur-sadar/amjhupi,BD40578719,Amjhupi,name_exact,high,source level union
+41690,union,Buripota,khulna/meherpur/meherpur-sadar/buripota,BD40578738,Buripota,name_exact,high,source level union
+41688,union,Kutubpur,khulna/meherpur/meherpur-sadar/kutubpur,BD40578757,Kutubpur,name_exact,high,source level union
+41687,union,Pirojpur,khulna/meherpur/meherpur-sadar/pirojpur,BD40578795,Pirojpur,name_exact,high,source level union
+41727,union,Babrahasla,khulna/narail/kalia/babrahasla,BD40652813,Babra Hachla,name_fuzzy,medium,source level union; similarity 0.90 to 'Babrahasla'
+41737,union,Boronaleliasabad,khulna/narail/kalia/boronaleliasabad,BD40652814,Boranal Eliasabad,name_skeleton,medium,source level union
+41729,union,Baioshona,khulna/narail/kalia/baioshona,BD40652815,Bauisena,name_skeleton,medium,source level union
+41731,union,Hamidpur,khulna/narail/kalia/hamidpur,BD40652823,Hamidpur,name_exact,high,source level union
+41725,union,Jaynagor,khulna/narail/kalia/jaynagor,BD40652839,Joynagar,name_skeleton,medium,source level union
+41735,union,Kalabaria,khulna/narail/kalia/kalabaria,BD40652847,Kalabaria,name_exact,high,source level union
+41733,union,Khashial,khulna/narail/kalia/khashial,BD40652863,Khasial,name_exact,high,source level union
+41736,union,Mauli,khulna/narail/kalia/mauli,BD40652871,Mauli,name_exact,high,source level union
+41726,union,Pahordanga,khulna/narail/kalia/pahordanga,BD40652879,Pahardanga,name_skeleton,medium,source level union
+41732,union,Peroli,khulna/narail/kalia/peroli,BD40652887,Peruli,name_skeleton,medium,source level union
+41734,union,Purulia,khulna/narail/kalia/purulia,BD40652894,Purulia,name_exact,high,source level union
+41728,union,Salamabad,khulna/narail/kalia/salamabad,BD40652895,Salamabad,name_exact,high,source level union
+41723,union,Digholia,khulna/narail/lohagara/digholia,BD40655215,Dighalia,name_skeleton,medium,source level union
+41724,union,Itna,khulna/narail/lohagara/itna,BD40655218,Itna,name_exact,high,source level union
+41721,union,Joypur,khulna/narail/lohagara/joypur,BD40655223,Joypur,name_exact,high,source level union
+41714,union,Kashipur,khulna/narail/lohagara/kashipur,BD40655231,Kashipur,name_exact,high,source level union
+41722,union,Kotakol,khulna/narail/lohagara/kotakol,BD40655239,Kotakul,name_skeleton,medium,source level union
+41717,union,Lahuria,khulna/narail/lohagara/lahuria,BD40655247,Lahuria,name_exact,high,source level union
+41720,union,Lakshmipasha,khulna/narail/lohagara/lakshmipasha,BD40655255,Lakshmipasha,name_exact,high,source level union
+41713,union,Lohagora,khulna/narail/lohagara/lohagora,BD40655263,Lohagara,name_skeleton,medium,source level union
+41718,union,Mallikpur,khulna/narail/lohagara/mallikpur,BD40655271,Mallikpur,name_exact,high,source level union
+41715,union,Naldi,khulna/narail/lohagara/naldi,BD40655279,Naldi,name_exact,high,source level union
+41716,union,Noagram,khulna/narail/lohagara/noagram,BD40655287,Noagram,name_exact,high,source level union
+41719,union,Salnagar,khulna/narail/lohagara/salnagar,BD40655294,Shalnagar,name_exact,high,source level union
+41710,union,Auria,khulna/narail/narail-sadar/auria,BD40657611,Auria,name_exact,high,source level union
+41704,union,Bashgram,khulna/narail/narail-sadar/bashgram,BD40657613,Banshgram,name_fuzzy,medium,source level union; similarity 0.93 to 'Bashgram'
+41709,union,Bhadrabila,khulna/narail/narail-sadar/bhadrabila,BD40657620,Bhadrabila,name_exact,high,source level union
+41707,union,Bisali,khulna/narail/narail-sadar/bisali,BD40657627,Bichhali,name_fuzzy,low,source level union; similarity 0.83 to 'Bisali'
+41708,union,Chandiborpur,khulna/narail/narail-sadar/chandiborpur,BD40657633,Chandibarpur,name_skeleton,medium,source level union
+41705,union,Habokhali,khulna/narail/narail-sadar/habokhali,BD40657640,Habakhali,name_skeleton,medium,source level union
+41702,union,Kalora,khulna/narail/narail-sadar/kalora,BD40657647,Kalora,name_exact,high,source level union
+41706,union,Maijpara,khulna/narail/narail-sadar/maijpara,BD40657654,Maij Para Union,name_exact,high,source level union
+41712,union,Mulia,khulna/narail/narail-sadar/mulia,BD40657661,Mulia,name_exact,high,source level union
+41703,union,Shahabad,khulna/narail/narail-sadar/shahabad,BD40657674,Sahabad Union,name_exact,high,source level union
+41700,union,Sheikhati,khulna/narail/narail-sadar/sheikhati,BD40657681,Shaikhati,name_skeleton,medium,source level union
+41711,union,Singasholpur,khulna/narail/narail-sadar/singasholpur,BD40657688,Singasolpur,name_exact,high,source level union
+41701,union,Tularampur,khulna/narail/narail-sadar/tularampur,BD40657694,Tularampur,name_exact,high,source level union
+41604,union,Anulia,khulna/satkhira/assasuni/anulia,BD40870415,Anulia,name_exact,high,source level union
+41605,union,Assasuni,khulna/satkhira/assasuni/assasuni,BD40870417,Assasuni,name_exact,high,source level union
+41612,union,Baradal,khulna/satkhira/assasuni/baradal,BD40870425,Baradal,name_exact,high,source level union
+41611,union,Budhhata,khulna/satkhira/assasuni/budhhata,BD40870434,Budhhata,name_exact,high,source level union
+41609,union,Durgapur,khulna/satkhira/assasuni/durgapur,BD40870443,Durgapur,name_exact,high,source level union
+41606,union,Kadakati,khulna/satkhira/assasuni/kadakati,BD40870456,Kadakati,name_exact,high,source level union
+41608,union,Khajra,khulna/satkhira/assasuni/khajra,BD40870460,Khajra,name_exact,high,source level union
+41607,union,Kulla,khulna/satkhira/assasuni/kulla,BD40870469,Kulla,name_exact,high,source level union
+41610,union,Pratapnagar,khulna/satkhira/assasuni/pratapnagar,BD40870477,Pratap Nagar,name_exact,high,source level union
+41614,union,Sobhnali,khulna/satkhira/assasuni/sobhnali,BD40870486,Sobhnali,name_exact,high,source level union
+41613,union,Sreeula,khulna/satkhira/assasuni/sreeula,BD40870494,Sreeula,name_exact,high,source level union
+41616,union,Debhata,khulna/satkhira/debhata/debhata,BD40872515,Debhata,name_exact,high,source level union
+41615,union,Kulia,khulna/satkhira/debhata/kulia,BD40872531,Kulia,name_exact,high,source level union
+41617,union,Noapara,khulna/satkhira/debhata/noapara,BD40872547,Noapara,name_exact,high,source level union
+41618,union,Parulia,khulna/satkhira/debhata/parulia,BD40872563,Parulia,name_exact,high,source level union
+41619,union,Sakhipur,khulna/satkhira/debhata/sakhipur,BD40872579,Sakhipur,name_exact,high,source level union
+41629,union,Chandanpur,khulna/satkhira/kalaroa/chandanpur,BD40874313,Chandanpur,name_exact,high,source level union
+41630,union,Deara,khulna/satkhira/kalaroa/deara,BD40874315,Diara,name_fuzzy,low,source level union; similarity 0.80 to 'Deara'
+41626,union,Langaljhara,khulna/satkhira/kalaroa/langaljhara,BD40874323,Nangalthara,name_fuzzy,low,source level union; similarity 0.80 to 'Langaljhara'
+41628,union,Helatala,khulna/satkhira/kalaroa/helatala,BD40874331,Helatala,name_exact,high,source level union
+41624,union,Jallabad,khulna/satkhira/kalaroa/jallabad,BD40874339,Jallabad,name_exact,high,source level union
+41631,union,Joynagar,khulna/satkhira/kalaroa/joynagar,BD40874347,Joynagar,name_exact,high,source level union
+41625,union,Jogikhali,khulna/satkhira/kalaroa/jogikhali,BD40874355,Jogikhali,name_exact,high,source level union
+41622,union,Keragachhi,khulna/satkhira/kalaroa/keragachhi,BD40874363,Keragachhi,name_exact,high,source level union
+41621,union,Keralkata,khulna/satkhira/kalaroa/keralkata,BD40874371,Keralkata,name_exact,high,source level union
+41620,union,Kushadanga,khulna/satkhira/kalaroa/kushadanga,BD40874379,Kushadanga,name_exact,high,source level union
+41623,union,Kaila,khulna/satkhira/kalaroa/kaila,BD40874387,Kaila,name_exact,high,source level union
+41627,union,Sonabaria,khulna/satkhira/kalaroa/sonabaria,BD40874394,Sonabaria,name_exact,high,source level union
+41677,union,Bharasimla,khulna/satkhira/kaliganj/bharasimla,BD40874713,Bhara Simla,name_exact,high,source level union
+41676,union,Bishnupur,khulna/satkhira/kaliganj/bishnupur,BD40874715,Bishnupur,name_exact,high,source level union
+41671,union,Champaphul,khulna/satkhira/kaliganj/champaphul,BD40874723,Champaphul,name_exact,high,source level union
+41673,union,Dakshin Sreepur,khulna/satkhira/kaliganj/dakshin-sreepur,BD40874731,Dakshin Sreepur,name_exact,high,source level union; direction word read as South: 'Dakshin Sreepur' ~ 'Dakshin Sreepur'
+41674,union,Dhalbaria,khulna/satkhira/kaliganj/dhalbaria,BD40874739,Dhalbaria,name_exact,high,source level union
+41681,union,Krishnanagar,khulna/satkhira/kaliganj/krishnanagar,BD40874747,Krishnanagar,name_exact,high,source level union
+41670,union,Kushlia,khulna/satkhira/kaliganj/kushlia,BD40874755,Kushlia,name_exact,high,source level union
+41678,union,Mathureshpur,khulna/satkhira/kaliganj/mathureshpur,BD40874763,Mathureshpur,name_exact,high,source level union
+41680,union,Mautala,khulna/satkhira/kaliganj/mautala,BD40874771,Mautala,name_exact,high,source level union
+41675,union,Nalta,khulna/satkhira/kaliganj/nalta,BD40874779,Nalta,name_exact,high,source level union
+41679,union,Ratanpur,khulna/satkhira/kaliganj/ratanpur,BD40874787,Ratanpur,name_exact,high,source level union
+41672,union,Tarali,khulna/satkhira/kaliganj/tarali,BD40874794,Tarali,name_exact,high,source level union
+41645,union,Agardari,khulna/satkhira/satkhira-sadar/agardari,BD40878213,Agardari,name_exact,high,source level union
+41644,union,Alipur,khulna/satkhira/satkhira-sadar/alipur,BD40878216,Alipur,name_exact,high,source level union
+41638,union,Baikari,khulna/satkhira/satkhira-sadar/baikari,BD40878220,Baikari,name_exact,high,source level union
+41636,union,Balli,khulna/satkhira/satkhira-sadar/balli,BD40878227,Balli,name_exact,high,source level union
+41637,union,Banshdaha,khulna/satkhira/satkhira-sadar/banshdaha,BD40878233,Banshdaha,name_exact,high,source level union
+41634,union,Bhomra,khulna/satkhira/satkhira-sadar/bhomra,BD40878240,Bhomra,name_exact,high,source level union
+41635,union,Brahmarajpur,khulna/satkhira/satkhira-sadar/brahmarajpur,BD40878247,Brahma Rajpur,name_exact,high,source level union
+41639,union,Fingri,khulna/satkhira/satkhira-sadar/fingri,BD40878251,Fingri,name_exact,high,source level union
+41640,union,Dhulihar,khulna/satkhira/satkhira-sadar/dhulihar,BD40878254,Dhulihar,name_exact,high,source level union
+41642,union,Ghona,khulna/satkhira/satkhira-sadar/ghona,BD40878261,Ghona,name_exact,high,source level union
+41641,union,Jhaudanga,khulna/satkhira/satkhira-sadar/jhaudanga,BD40878267,Jhaudanga,name_exact,high,source level union
+41643,union,Kuskhali,khulna/satkhira/satkhira-sadar/kuskhali,BD40878274,Kuskhali,name_exact,high,source level union
+41633,union,Labsa,khulna/satkhira/satkhira-sadar/labsa,BD40878281,Labsa,name_exact,high,source level union
+41632,union,Shibpur,khulna/satkhira/satkhira-sadar/shibpur,BD40878294,Shibpur,name_exact,high,source level union
+41646,union,Atulia,khulna/satkhira/shyamnagar/atulia,BD40878611,Atulia,name_exact,high,source level union
+41653,union,Bhurulia,khulna/satkhira/shyamnagar/bhurulia,BD40878615,Bhurulia,name_exact,high,source level union
+41652,union,Burigoalini,khulna/satkhira/shyamnagar/burigoalini,BD40878623,Buri Goalini,name_exact,high,source level union
+41657,union,Gabura,khulna/satkhira/shyamnagar/gabura,BD40878631,Gabura,name_exact,high,source level union
+41647,union,Ishwaripur,khulna/satkhira/shyamnagar/ishwaripur,BD40878639,Ishwaripur,name_exact,high,source level union
+41648,union,Kaikhali,khulna/satkhira/shyamnagar/kaikhali,BD40878647,Kaikhali,name_exact,high,source level union
+41649,union,Kashimari,khulna/satkhira/shyamnagar/kashimari,BD40878655,Kashimari,name_exact,high,source level union
+41654,union,Munshiganj,khulna/satkhira/shyamnagar/munshiganj,BD40878663,Munshiganj,name_exact,high,source level union
+41650,union,Nurnagar,khulna/satkhira/shyamnagar/nurnagar,BD40878671,Nurnagar,name_exact,high,source level union
+41651,union,Padmapukur,khulna/satkhira/shyamnagar/padmapukur,BD40878679,Padma Pukur,name_exact,high,source level union
+41655,union,Ramjannagar,khulna/satkhira/shyamnagar/ramjannagar,BD40878687,Ramjan Nagar,name_exact,high,source level union
+41656,union,Shyamnagar,khulna/satkhira/shyamnagar/shyamnagar,BD40878694,Shyamnagar,name_exact,high,source level union
+41661,union,Dhandia,khulna/satkhira/tala/dhandia,BD40879011,Dhandia,name_exact,high,source level union
+41669,union,Islamkati,khulna/satkhira/tala/islamkati,BD40879015,Islamkati,name_exact,high,source level union
+41664,union,Jalalpur,khulna/satkhira/tala/jalalpur,BD40879023,Jalalpur,name_exact,high,source level union
+41667,union,Khalilnagar,khulna/satkhira/tala/khalilnagar,BD40879031,Khalilnagar,name_exact,high,source level union
+41666,union,Khalishkhali,khulna/satkhira/tala/khalishkhali,BD40879039,Khalishkhali,name_exact,high,source level union
+41665,union,Khesra,khulna/satkhira/tala/khesra,BD40879047,Khesra,name_exact,high,source level union
+41668,union,Kumira,khulna/satkhira/tala/kumira,BD40879055,Kumira,name_exact,high,source level union
+41659,union,Magura,khulna/satkhira/tala/magura,BD40879063,Magura,name_exact,high,source level union
+41660,union,Nagarghata,khulna/satkhira/tala/nagarghata,BD40879071,Nagarghata,name_exact,high,source level union
+41658,union,Sarulia,khulna/satkhira/tala/sarulia,BD40879079,Sarulia,name_exact,high,source level union
+41663,union,Tala,khulna/satkhira/tala/tala,BD40879087,Tala,name_exact,high,source level union
+41662,union,Tentulia,khulna/satkhira/tala/tentulia,BD40879094,Tentulia,name_exact,high,source level union
+,,,,BD40015897,Chandpai Range,unmatched,none,source level union; no candidates under parent
+,,,,BD40017797,Sharankhola Range,unmatched,none,source level union; no candidates under parent
+,,,,BD40183135,Howli,unmatched,none,source level union; best candidates: Hawli 0.67; Karpashdanga 0.00
+,,,,BD40414735,Diara,unmatched,none,source level union; best candidates: Dearamodel 0.53
+,,,,BD40447183,S.k.b.(sundarpur),unmatched,none,source level union; best candidates: Sbk 0.67
+,,,,BD40471742,Dacope,unmatched,none,source level union; best candidates: Dakop 0.73
+,,,,BD40471797,Khulna Range,unmatched,none,source level union; best candidates: Dakop 0.13
+,,,,BD40475397,Nalian Range,unmatched,none,source level union; no candidates without a conflicting direction word under parent
+,,,,BD40476467,Lata,unmatched,none,source level union; best candidates: Lota 0.75
+,,,,BD40477581,T. S. Bahirdia,unmatched,none,source level union; best candidates: Tsb 0.46
+,,,,BD40479467,Sagladah,unmatched,none,source level union; best candidates: Chagladoho 0.71
+,,,,BD40507950,Jagati,unmatched,none,source level union; best candidates: Bottail 0.33
+,,,,BD40555774,Maghi,unmatched,none,source level union; best candidates: Moghi 0.75
+,,,,BD40652831,Chanchari,unmatched,none,source level union; best candidates: Chacuri 0.77; Panchgram 0.53
+,,,,BD40878697,Satkhira Range,unmatched,none,source level union; no candidates under parent
+,,,,BD40472101,Ward No-01,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40472102,Ward No-02 (part),no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40472103,Ward No-03,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40472104,Ward No-04,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40472105,Ward No-05,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40472106,Ward No-06,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40474507,Ward No-07,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40474508,Ward No-08,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40474509,Ward No-09,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40474510,Ward No-10,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40474511,Ward No-11,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40474512,Ward No-12,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40474513,Ward No-13,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40474514,Ward No-14,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40474515,Ward No-15,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40474802,Ward No-02 (part),no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40475121,Ward No-21,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40475122,Ward No-22,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40475123,Ward No-23,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40475124,Ward No-24,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40475127,Ward No-27,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40475128,Ward No-28,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40475129,Ward No-29,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40475130,Ward No-30,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40475131,Ward No-31,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40478516,Ward No-16,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40478517,Ward No-17,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40478518,Ward No-18,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40478519,Ward No-19,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40478520,Ward No-20,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40478525,Ward No-25,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD40478526,Ward No-26,no_seed_level,none,source level ward; our seed has no ward level
+41592,union,Dearamodel,khulna/jashore/jessore-sadar/dearamodel,,,no_source_unit,none,no HDX unit matched under Jessore Sadar
+41730,union,Chacuri,khulna/narail/kalia/chacuri,,,no_source_unit,none,no HDX unit matched under Kalia
+41738,union,Panchgram,khulna/narail/kalia/panchgram,,,no_source_unit,none,no HDX unit matched under Kalia
+41760,union,Ailhash,khulna/chuadanga/alamdanga/ailhash,,,no_source_unit,none,no HDX unit matched under Alamdanga
+41764,union,Hawli,khulna/chuadanga/damurhuda/hawli,,,no_source_unit,none,no HDX unit matched under Damurhuda
+41772,union,Raypur,khulna/chuadanga/jibannagar/raypur,,,no_source_unit,none,no HDX unit matched under Jibannagar
+41773,union,Hasadah,khulna/chuadanga/jibannagar/hasadah,,,no_source_unit,none,no HDX unit matched under Jibannagar
+41777,union,Bottail,khulna/kushtia/kushtia-sadar/bottail,,,no_source_unit,none,no HDX unit matched under Kushtia Sadar
+41819,union,Dhubail,khulna/kushtia/mirpur/dhubail,,,no_source_unit,none,no HDX unit matched under Mirpur
+41868,union,Moghi,khulna/magura/magura-sadar/moghi,,,no_source_unit,none,no HDX unit matched under Magura Sadar
+41880,union,Lota,khulna/khulna/paikgasa/lota,,,no_source_unit,none,no HDX unit matched under Paikgasa
+41889,union,Atra Gilatola,khulna/khulna/fultola/atra-gilatola,,,no_source_unit,none,no HDX unit matched under Fultola
+41894,union,Aronghata,khulna/khulna/digholia/aronghata,,,no_source_unit,none,no HDX unit matched under Digholia
+41895,union,Jogipol,khulna/khulna/digholia/jogipol,,,no_source_unit,none,no HDX unit matched under Digholia
+41900,union,Tsb,khulna/khulna/rupsha/tsb,,,no_source_unit,none,no HDX unit matched under Rupsha
+41903,union,Chagladoho,khulna/khulna/terokhada/chagladoho,,,no_source_unit,none,no HDX unit matched under Terokhada
+41929,union,Dakop,khulna/khulna/dakop/dakop,,,no_source_unit,none,no HDX unit matched under Dakop
+42075,union,Sbk,khulna/jhenaidah/moheshpur/sbk,,,no_source_unit,none,no HDX unit matched under Moheshpur

@@ -1,0 +1,28 @@
+{
+  "key": "HDX_COD_AB_BGD_SYLHET",
+  "name": "Bangladesh - Subnational Administrative Boundaries (COD-AB v03), Sylhet Division extract",
+  "organization": "OCHA (ROAP / FIS) on HDX; source: Bangladesh Bureau of Statistics (BBS)",
+  "source_type": "humanitarian_dataset",
+  "trust_level": 3,
+  "urls": [
+    "https://data.humdata.org/dataset/cod-ab-bgd",
+    "https://data.humdata.org/dataset/401d3fae-4262-48c9-891f-461fd776d49b/resource/cec2abe3-d8b7-4025-9362-9f7e780f2a07/download/bgd_admin_boundaries.geojson.zip",
+    "https://data.humdata.org/api/3/action/package_show?id=cod-ab-bgd"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": "2026-01-26",
+  "license": "CC-BY-IGO-3.0",
+  "license_url": "http://creativecommons.org/licenses/by/3.0/igo/legalcode",
+  "attribution": "Bangladesh Bureau of Statistics (BBS); OCHA ROAP; published by OCHA FIS / HDX (CC BY-IGO)",
+  "files": {
+    "areas.csv": "6f21f132f9386f86122935ca67893b2f77d62926d87e8617887df4cfce680483",
+    "boundaries.geojson": "d7575952b2bb8d365ffac59d7d781292021517bf20336dfa53e0e1fe0af0f702",
+    "facts.csv": "728306212ae8c7dd2283452e8f53040599e3ebce820a2cad143a97ea1ff058c6",
+    "crosswalk.csv": "f0921ea4506b7b0f69f856f3b83bff2922be2899e0e2619778ca3ed7a49227e7",
+    "raw/bgd_adminpoints_sylhet.geojson": "1a4dbfa4232ed7d8d2f55308d5d908280167a111ea998bacf2e0cf84b22dd04e",
+    "raw/hdx_cod_ab_bgd_package.json": "7c5aee071ef0b0f6b20c863e9af8a9025312a3a71e0d109b49c9f5a01512fd0d"
+  },
+  "notes": "COD-AB v03: ADM1-ADM3 polygons, valid_on 2023-05-21, reviewed 2025-06-01, HDX resource last modified 2026-01-26T15:14:12.782628. HDX dataset_date [2023-05-21T00:00:00 TO 2025-06-01T23:59:59]; 'boundaries created by the source 01 January 2010'. No ADM4 (union) polygons in v03; union/paurashava/ward codes come from the bgd_adminpoints layer (valid_on 2020-11-13, older P-code scheme BD+div+dist+upz+union, 2 digits each). Polygons simplified (Douglas-Peucker 0.0002 deg, 5 decimals) ring by ring, so shared borders can have slivers of a few metres.",
+  "division": "sylhet",
+  "kind": "hdx_cod_ab"
+}

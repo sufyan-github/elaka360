@@ -1,0 +1,21 @@
+{
+  "key": "BRTC_DEPOTS_MYM_2026",
+  "division": "mymensingh",
+  "kind": "brtc",
+  "name": "BRTC — bus depots in Mymensingh Division",
+  "organization": "Bangladesh Road Transport Corporation (BRTC)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Bangladesh Road Transport Corporation (brtc.gov.bd)",
+  "notes": "No licence stated. BRTC lists depots with the unit head's name/mobile; only depot names and office landlines are kept. 1 depot(s) of Mymensingh Division listed. No addresses or coordinates.",
+  "files": {
+    "places.csv": "02e886324f65288b23d6dc289722942d9f691bf6b4643beb0d80496655b58545"
+  }
+}

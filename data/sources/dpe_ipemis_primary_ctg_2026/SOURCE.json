@@ -1,0 +1,26 @@
+{
+  "key": "DPE_IPEMIS_PRIMARY_CTG_2026",
+  "name": "DPE IPEMIS primary school directory — Chattogram Division",
+  "organization": "Directorate of Primary Education (DPE), Ministry of Primary and Mass Education",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://ipemis.dpe.gov.bd/search-school",
+    "https://ipemis.dpe.gov.bd/load-lite-school-list",
+    "https://api.ipemis.dpe.gov.bd/api/school-stat-public",
+    "https://dpe.gov.bd/"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Source: Directorate of Primary Education, IPEMIS (ipemis.dpe.gov.bd)",
+  "division": "chattogram",
+  "kind": "dpe_ipemis",
+  "notes": "Public 'প্রাথমিক বিদ্যালয় ডিরেক্টরি' (school search) of the Integrated Primary Education Management Information System, linked from dpe.gov.bd. Listing endpoint used by the public page (DataTables JSON), queried per district of Chattogram Division (divisionId=4); same collector and rules as DPE_IPEMIS_PRIMARY_RAJ_2026. Covers government primary, newly nationalised and experimental schools only (no kindergartens, NGO or ebtedayee madrasas). No coordinates; head teachers' names and mobiles on the detail pages are deliberately NOT collected. Live data (changes daily). No robots.txt on ipemis.dpe.gov.bd / api.ipemis.dpe.gov.bd (404). Licence not stated.",
+  "files": {
+    "places.csv": "086d243413a0911a5ed4369165ea93e30b8826fbcd1f8bdd28f77f4538e07b63",
+    "facts.csv": "32bb5424ae3c92ad9d26c7198c4ed3a56d70f41a82be8d84cbb9ffdfbf4a817a",
+    "raw/ipemis_school_list_chattogram_division.json": "b9ccec90d571427975e567a43048d06511125f0d18ddaf64eb2c28a0dce197f3"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "key": "BARISHAL_CITY_CORPORATION",
+  "division": "barishal",
+  "kind": "city_corporation",
+  "city": 50007,
+  "name": "Barishal City Corporation official site (barishalcity.gov.bd)",
+  "organization": "Barishal City Corporation",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://barishalcity.gov.bd/",
+    "https://barishalcity.gov.bd/info/এক-নজরে-বরিশাল-সিটি",
+    "https://barishalcity.gov.bd/info/ইতিহাস",
+    "https://barishalcity.gov.bd/info/লোকেশন-ওয়ার্ড-ভিত্তিক",
+    "https://barishalcity.gov.bd/info/যোগাযোগ",
+    "https://bmp.police.gov.bd/thana/7/kotwali-model-thana",
+    "https://bmp.police.gov.bd/thana/9/Kaunia-thana",
+    "https://bmp.police.gov.bd/thana/8/airport-thana",
+    "https://bmp.police.gov.bd/thana/10/bandar-thana"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": "2024-03-27",
+  "license": null,
+  "license_url": null,
+  "attribution": "Barishal City Corporation (barishalcity.gov.bd); Barishal Metropolitan Police (bmp.police.gov.bd)",
+  "notes": "Key page: এক নজরে বরিশাল সিটি (published 2024-03-27): 30 wards, 58 km2, population about 5 lakh (no year), 2011 census 328,278, 3 thanas (not named), 225 mahallas, town committee 1869, municipality 1876, city corporation 2002; a population table 1872-2011. The ward-wise location page is an image only, so wards are numbers 1-30 from the ward count; BMP thana pages list which wards each BMP thana covers (noted per ward). Officials' names (administrator, CEO, past chairmen and mayors) are not copied.",
+  "files": {
+    "areas.csv": "662ec5533290556cfe35e03f5f82ddeea0aeab8aaf90d3378d275a52fc14a828",
+    "facts.csv": "7d2951363b09b13ddabb60956aa2f964c17a13906888cfb4b4a5c8b0e545bf64",
+    "raw/bmp_thana_wards.txt": "936e611f2e6feac79bfd50ba824c037bde8334b46ccaa85ac8d96ae7b328c6d8",
+    "raw/contact.txt": "499e8f7d81c52cbacae362a96988f09d7075f9099e07fb43038b2e3eb77d31f2",
+    "raw/ek_nojore_bcc.txt": "9cfcda190b776dac1c2b9d92e82b9ea3384590651d5648aa4a4219d7b3995a1f",
+    "raw/ward_location_page.txt": "bd2fb6f763738d71bce115e74f2cb21385d260786271ecf16a30f72d97d1d4e2"
+  }
+}

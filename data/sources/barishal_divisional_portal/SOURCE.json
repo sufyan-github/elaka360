@@ -1,0 +1,33 @@
+{
+  "key": "BARDIV_PORTAL_2026",
+  "name": "Barishal Divisional Commissioner portal (barishaldiv.gov.bd)",
+  "organization": "Office of the Divisional Commissioner, Barishal",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "division": "barishal",
+  "kind": "divisional_portal",
+  "urls": [
+    "https://barishaldiv.gov.bd/",
+    "https://barishaldiv.gov.bd/pages/static-pages/6978a79e35ce18e1c0674c6e",
+    "https://barishaldiv.gov.bd/pages/static-pages/69789bbe35ce18e1c0670597",
+    "https://barishaldiv.gov.bd/pages/static-pages/6978769dc4774958d7c432de",
+    "https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54",
+    "https://bangladesh.gov.bd/views/union-list"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Office of the Divisional Commissioner, Barishal (barishaldiv.gov.bd), Bangladesh National Portal",
+  "files": {
+    "areas.csv": "a92548ee179f4947f624aae16015ed5be545b70be279bca86c1f09e88c0c4581",
+    "facts.csv": "777ad0ba3a09a3b0d2cb254e8536d8ebb78476cc90f9cd0500d4dbc9e04380b6",
+    "raw/districts.txt": "f9abf2718fb8de79f3b9a3a3b9e1b2c44135be920dc5f0fe56e5fd6bb5e5a153",
+    "raw/glance.txt": "4c88ef9a6aa22cc6c4f3a7b9be08141f69c4be73691ab270f541ee5d9c101d70",
+    "raw/national_portal_list.csv": "97c22e651b7a5f8f02b45074604cd70239a8c43b8fb680417b5fc66af63b097e",
+    "raw/pages.csv": "18fe7b38017ad111d66c32d867086fde50b5ab5e2abf0aa445c7aed42b82141c",
+    "raw/unions.txt": "bb7ec035a71b267a845cc7e69716c42035ed94380ac1563b397a951769927368",
+    "raw/upazilas.txt": "351773edf6716c47a76f8485895e69e6bdf1e9163b028dc52a8d18695bbe339d"
+  },
+  "notes": "Collected by the generic division mode of the a2i portal collectors (pages found through the portals' menus, names and figures parsed from the pages). No licence stated; only facts (names, counts, figures) are extracted. English district/upazila names are the project's keys, not printed."
+}

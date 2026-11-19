@@ -1,0 +1,26 @@
+{
+  "key": "MYMENSINGH_POLICE_2026",
+  "division": "mymensingh",
+  "kind": "district_police",
+  "name": "Mymensingh District Police — SP office and thanas",
+  "organization": "Mymensingh District Police (Bangladesh Police)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://police.mymensingh.gov.bd/",
+    "https://police.mymensingh.gov.bd/pages/officers",
+    "https://police.<upazila>.mymensingh.gov.bd/",
+    "https://www.police.gov.bd/en/mymensingh_range"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Office of the Superintendent of Police, Mymensingh (police.mymensingh.gov.bd); Bangladesh Police (police.gov.bd)",
+  "notes": "No licence stated. SP office from the Superintendent's officer card on the SP portal's officer list (police official mobile, police.gov.bd e-mail); officers' names are not copied, nor the other officers' cards (several give gmail addresses). Thana rows: 13 of the 13 upazila thana portals police.<upazila>.mymensingh.gov.bd (officer cards: office landline, OC's police official mobile, *.gov.bd e-mail); most portals are titled only 'থানা', so names are composed from the upazila (noted per row). Counts (14 police stations incl. Kotwali and Pagla, which have no upazila portal; 4 circles; 2 outposts; 4 investigation centres) from police.gov.bd's Mymensingh Range page (undated). The SP portal's contact entries are empty links. There is no metropolitan police in Mymensingh (police.gov.bd lists eight metropolitan units, none for Mymensingh).",
+  "files": {
+    "places.csv": "f1e9314f9a9dc0e5ac7146492c24c8e9fdacb103dec42cca2a39d70f61e0aede",
+    "facts.csv": "53408f0fe90371c327078c68200cb5234f4dbc8b1005b79e211cc48abdae11ae",
+    "raw/police_gov_bd_mymensingh_district.txt": "30457d294197004a09a1d31490ea38ed1765d4d6a7959179bacacd8244461aca"
+  }
+}

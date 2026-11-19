@@ -1,0 +1,1113 @@
+{
+ "published": [
+  {
+   "key": "CITYPOP_ADJ",
+   "name": "BBS Census 2022 (adjusted) via citypopulation.de",
+   "url": "https://citypopulation.de/en/bangladesh/"
+  },
+  {
+   "key": "FE_BOGURA",
+   "name": "The Financial Express, 15 May 2026: Bogura becomes city corporation",
+   "url": "https://today.thefinancialexpress.com.bd/last-page/bogura-becomes-city-corporation-1778866247"
+  },
+  {
+   "key": "FE_102",
+   "name": "The Financial Express, 6 Jun 2024: Fire service launches new hotline 102",
+   "url": "https://thefinancialexpress.com.bd/national/fire-service-launches-new-hotline-number-102"
+  },
+  {
+   "key": "WIKI_TEL",
+   "name": "Wikipedia: Telephone numbers in Bangladesh",
+   "url": "https://en.wikipedia.org/wiki/Telephone_numbers_in_Bangladesh"
+  },
+  {
+   "key": "WIKI_RU",
+   "name": "Wikipedia: University of Rajshahi",
+   "url": "https://en.wikipedia.org/wiki/University_of_Rajshahi"
+  },
+  {
+   "key": "WIKI_RUET",
+   "name": "Wikipedia: RUET (Mar 2026 snapshot)",
+   "url": "https://en.wikipedia.org/wiki/Rajshahi_University_of_Engineering_%26_Technology"
+  },
+  {
+   "key": "WIKI_RMC",
+   "name": "Wikipedia: Rajshahi Medical College",
+   "url": "https://en.wikipedia.org/wiki/Rajshahi_Medical_College"
+  },
+  {
+   "key": "WIKI_PUTHIA",
+   "name": "Wikipedia: Puthia Rajbari",
+   "url": "https://en.wikipedia.org/wiki/Puthia_Rajbari"
+  },
+  {
+   "key": "WIKI_VRM",
+   "name": "Wikipedia: Varendra Research Museum",
+   "url": "https://en.wikipedia.org/wiki/Varendra_Research_Museum"
+  },
+  {
+   "key": "BANBEIS_INST_RAJ_2026",
+   "name": "BANBEIS institution lists (EIIN registry, e-survey 2024) — Rajshahi Division",
+   "url": "https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637"
+  },
+  {
+   "key": "BBS_CENSUS_2022",
+   "name": "Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Rajshahi Division",
+   "url": "https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220"
+  },
+  {
+   "key": "BD_POLICE_CONTACTS_2020",
+   "name": "Bangladesh Police HQ — Contacts of Bangladesh Police (RMP and Rajshahi Range sheets)",
+   "url": "https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf"
+  },
+  {
+   "key": "BD_RAILWAY_RAJ_2026",
+   "name": "Bangladesh Railway — station phones and district-wise station counts (Rajshahi Division)",
+   "url": "https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6"
+  },
+  {
+   "key": "BDPOST_POSTCODES_RAJ_2026",
+   "name": "Bangladesh Post postcode booklet — Rajshahi Division post offices (scan on post.rajshahi.gov.bd)",
+   "url": "http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af"
+  },
+  {
+   "key": "BRTC_DEPOTS_RAJ_2026",
+   "name": "BRTC — bus depots in Rajshahi Division",
+   "url": "https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0"
+  },
+  {
+   "key": "CAAB_AIRPORTS_RAJ_2026",
+   "name": "Civil Aviation Authority of Bangladesh — airports in Rajshahi Division",
+   "url": "https://www.caab.gov.bd/"
+  },
+  {
+   "key": "DGHS_HRIS_FACILITIES_RAJ_2026",
+   "name": "DGHS / MoHFW HRIS Facility Registry — organisation list, Rajshahi Division",
+   "url": "https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=3"
+  },
+  {
+   "key": "DGME_MEDICAL_COLLEGES_RAJ_2026",
+   "name": "DGME medical and dental college lists — Rajshahi Division",
+   "url": "https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3"
+  },
+  {
+   "key": "DISTRICT_PORTAL_BANKS_RAJ_2026",
+   "name": "District portals — bank branch/office phone lists (Rajshahi, Natore, Naogaon)",
+   "url": "https://rajshahi.gov.bd/pages/static-pages/697f99c635ce18e1c06c092f"
+  },
+  {
+   "key": "DISTRICT_PORTALS_TRANSPORT_RAJ_2026",
+   "name": "District & upazila portals (Rajshahi Division) — bus terminals/stands and stations named on transport pages",
+   "url": "https://paba.rajshahi.gov.bd/pages/static-pages/697fc1d435ce18e1c06cdf9d"
+  },
+  {
+   "key": "DOA_PROTECTED_MONUMENTS_RAJ_2026",
+   "name": "Department of Archaeology — gazetted protected monuments, Rajshahi Division (district PDF lists)",
+   "url": "https://archaeology.gov.bd/pages/static-pages/6922df29933eb65569e20433"
+  },
+  {
+   "key": "DPE_IPEMIS_PRIMARY_RAJ_2026",
+   "name": "DPE IPEMIS primary school directory — Rajshahi Division",
+   "url": "https://ipemis.dpe.gov.bd/search-school"
+  },
+  {
+   "key": "FSCD_STATIONS_RAJ_2026",
+   "name": "Fire Service & Civil Defence — Rajshahi Division station & office numbers",
+   "url": "https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1"
+  },
+  {
+   "key": "PORTAL_TOURIST_SPOTS_RAJ_2026",
+   "name": "National portal 'দর্শনীয় স্থান' (tourist spot) lists — Rajshahi Division district and upazila portals",
+   "url": "https://rajshahi.gov.bd/pages/tourist-spot"
+  },
+  {
+   "key": "RAJ_RANGE_POLICE_PORTALS_2026",
+   "name": "District police portals of Rajshahi Range (Natore, Naogaon, Chapainawabganj, Bogura, Joypurhat, Pabna, Sirajganj)",
+   "url": "https://police.natore.gov.bd/pages/static-pages/697fdcd735ce18e1c06d8427"
+  },
+  {
+   "key": "RAJSHAHI_POLICE_2026",
+   "name": "Rajshahi District Police — thanas, SP office and control room numbers",
+   "url": "https://police.rajshahi.gov.bd/pages/static-pages/697f6dd335ce18e1c06b1c47"
+  },
+  {
+   "key": "RAJSHAHI_PORTAL_OFFICES_2026",
+   "name": "Government offices on the national portal sites — Divisional Commissioner, Rajshahi DC & upazila portals, DC/UNO offices of Rajshahi Division",
+   "url": "https://rajshahidiv.gov.bd/"
+  },
+  {
+   "key": "RMP_THANAS_2026",
+   "name": "Rajshahi Metropolitan Police — thanas and official numbers",
+   "url": "https://rmp.gov.bd/pages/static-pages/695e3b08c4774958d7b7214e"
+  },
+  {
+   "key": "UGC_UNIVERSITIES_RAJ_2026",
+   "name": "UGC university register — universities in Rajshahi Division",
+   "url": "https://www.ugc.gov.bd/universities"
+  },
+  {
+   "key": "BANBEIS_INST_RANG_2026",
+   "name": "BANBEIS institution lists (EIIN registry, e-survey 2024) — Rangpur Division",
+   "url": "https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637"
+  },
+  {
+   "key": "BBS_CENSUS_2022_RANGPUR",
+   "name": "Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Rangpur Division",
+   "url": "https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220"
+  },
+  {
+   "key": "BD_POLICE_CONTACTS_2020_RANGPUR",
+   "name": "Bangladesh Police HQ — Contacts of Bangladesh Police (RRMP and Rangpur Range sheets)",
+   "url": "https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf"
+  },
+  {
+   "key": "BD_RAILWAY_RANG_2026",
+   "name": "Bangladesh Railway — station phones and district-wise station counts (Rangpur Division)",
+   "url": "https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6"
+  },
+  {
+   "key": "BDPOST_POSTCODES_RANG_2026",
+   "name": "Bangladesh Post postcode booklet — Rangpur Division post offices (scan on post.rajshahi.gov.bd)",
+   "url": "http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af"
+  },
+  {
+   "key": "BRTC_DEPOTS_RANG_2026",
+   "name": "BRTC — bus depots in Rangpur Division",
+   "url": "https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0"
+  },
+  {
+   "key": "CAAB_AIRPORTS_RANG_2026",
+   "name": "Civil Aviation Authority of Bangladesh — airports in Rangpur Division",
+   "url": "https://www.caab.gov.bd/"
+  },
+  {
+   "key": "DGHS_HRIS_FACILITIES_RANG_2026",
+   "name": "DGHS / MoHFW HRIS Facility Registry — organisation list, Rangpur Division",
+   "url": "https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=4"
+  },
+  {
+   "key": "DGME_MEDICAL_COLLEGES_RANG_2026",
+   "name": "DGME medical and dental college lists — Rangpur Division",
+   "url": "https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3"
+  },
+  {
+   "key": "DISTRICT_PORTAL_BANKS_RANG_2026",
+   "name": "District portals — bank branch/office phone lists (Panchagarh, Nilphamari, Kurigram)",
+   "url": "https://panchagarh.gov.bd/pages/static-pages/69773725c4774958d7c0d34e"
+  },
+  {
+   "key": "DISTRICT_PORTALS_TRANSPORT_RANG_2026",
+   "name": "District & upazila portals (Rangpur Division) — bus terminals/stands and stations named on transport pages",
+   "url": "https://rangpur.gov.bd/pages/static-pages/6977698ec4774958d7c22b10"
+  },
+  {
+   "key": "DOA_PROTECTED_MONUMENTS_RANG_2026",
+   "name": "Department of Archaeology — gazetted protected monuments, Rangpur Division (district PDF lists)",
+   "url": "https://archaeology.gov.bd/pages/static-pages/6922dca5933eb65569e1169f"
+  },
+  {
+   "key": "DPE_IPEMIS_PRIMARY_RANG_2026",
+   "name": "DPE IPEMIS primary school directory — Rangpur Division",
+   "url": "https://ipemis.dpe.gov.bd/search-school"
+  },
+  {
+   "key": "FSCD_STATIONS_RANG_2026",
+   "name": "Fire Service & Civil Defence — Rangpur Division station & office numbers",
+   "url": "https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1"
+  },
+  {
+   "key": "PORTAL_TOURIST_SPOTS_RANG_2026",
+   "name": "National portal 'দর্শনীয় স্থান' (tourist spot) lists — Rangpur Division district and upazila portals",
+   "url": "https://rangpur.gov.bd/pages/tourist-spot"
+  },
+  {
+   "key": "RANG_RANGE_POLICE_PORTALS_2026",
+   "name": "District police portals of Rangpur Range (Panchagarh, Dinajpur, Lalmonirhat, Nilphamari, Gaibandha, Thakurgaon, Kurigram)",
+   "url": "https://police.panchagarh.gov.bd/"
+  },
+  {
+   "key": "RANGPUR_METRO_POLICE_THANAS_2026",
+   "name": "Rangpur Metropolitan Police — thanas and official numbers",
+   "url": "https://rpmp.gov.bd/index.php/home/units"
+  },
+  {
+   "key": "RANGPUR_POLICE_2026",
+   "name": "Rangpur District Police — SP office and thanas",
+   "url": "https://police.rangpur.gov.bd/"
+  },
+  {
+   "key": "RANGPUR_PORTAL_OFFICES_2026",
+   "name": "Government offices on the national portal sites — Divisional Commissioner, Rangpur DC & upazila portals, DC/UNO offices of Rangpur Division",
+   "url": "https://rangpurdiv.gov.bd/"
+  },
+  {
+   "key": "UGC_UNIVERSITIES_RANG_2026",
+   "name": "UGC university register — universities in Rangpur Division",
+   "url": "https://www.ugc.gov.bd/universities"
+  },
+  {
+   "key": "BANBEIS_INST_DHK_2026",
+   "name": "BANBEIS institution lists (EIIN registry, e-survey 2024) — Dhaka Division",
+   "url": "https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637"
+  },
+  {
+   "key": "BBS_CENSUS_2022_DHAKA",
+   "name": "Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Dhaka Division",
+   "url": "https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220"
+  },
+  {
+   "key": "BD_POLICE_CONTACTS_2020_DHAKA",
+   "name": "Bangladesh Police HQ — Contacts of Bangladesh Police (DMP, GMP and Dhaka Range sheets)",
+   "url": "https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf"
+  },
+  {
+   "key": "BD_RAILWAY_DHK_2026",
+   "name": "Bangladesh Railway — station phones and district-wise station counts (Dhaka Division)",
+   "url": "https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6"
+  },
+  {
+   "key": "BDPOST_POSTCODES_DHK_2026",
+   "name": "Bangladesh Post postcode booklet — Dhaka Division post offices (scan on post.rajshahi.gov.bd)",
+   "url": "http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af"
+  },
+  {
+   "key": "BRTC_DEPOTS_DHK_2026",
+   "name": "BRTC — bus depots in Dhaka Division",
+   "url": "https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0"
+  },
+  {
+   "key": "CAAB_AIRPORTS_DHK_2026",
+   "name": "Civil Aviation Authority of Bangladesh — airports in Dhaka Division",
+   "url": "https://www.caab.gov.bd/"
+  },
+  {
+   "key": "DGHS_HRIS_FACILITIES_DHK_2026",
+   "name": "DGHS / MoHFW HRIS Facility Registry — organisation list, Dhaka Division",
+   "url": "https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=1"
+  },
+  {
+   "key": "DGME_MEDICAL_COLLEGES_DHK_2026",
+   "name": "DGME medical and dental college lists — Dhaka Division",
+   "url": "https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3"
+  },
+  {
+   "key": "DHAKA_METRO_POLICE_THANAS_2026",
+   "name": "Dhaka Metropolitan Police — thanas and official numbers",
+   "url": "https://dmp.gov.bd/find-your-local-police/"
+  },
+  {
+   "key": "DHAKA_POLICE_2026",
+   "name": "Dhaka District Police — SP office and thanas",
+   "url": "https://police.dhaka.gov.bd/"
+  },
+  {
+   "key": "DHAKA_PORTAL_OFFICES_2026",
+   "name": "Government offices on the national portal sites — Divisional Commissioner, Dhaka DC & upazila portals, DC/UNO offices of Dhaka Division",
+   "url": "https://dhakadiv.gov.bd/"
+  },
+  {
+   "key": "DHK_RANGE_POLICE_PORTALS_2026",
+   "name": "District police portals of Dhaka Range (Narsingdi, Shariatpur, Tangail, Manikganj, Munshiganj, Rajbari, Madaripur, Gopalganj, Faridpur, Gazipur, Narayanganj, Kishoreganj)",
+   "url": "https://police.narsingdi.gov.bd/"
+  },
+  {
+   "key": "DISTRICT_PORTAL_BANKS_DHK_2026",
+   "name": "District portals — bank branch/office phone lists (Narayanganj, Tangail, Manikganj, Rajbari, Gopalganj, Faridpur)",
+   "url": "https://narayanganj.gov.bd/pages/static-pages/69958381f2b99fa8d158a135"
+  },
+  {
+   "key": "DISTRICT_PORTALS_TRANSPORT_DHK_2026",
+   "name": "District & upazila portals (Dhaka Division) — bus terminals/stands, stations and ghats named on transport pages",
+   "url": "https://dhaka.gov.bd/pages/static-pages/communication-system-jah6tq-6a841eae9ab15f91607f8f89"
+  },
+  {
+   "key": "DOA_PROTECTED_MONUMENTS_DHK_2026",
+   "name": "Department of Archaeology — gazetted protected monuments, Dhaka Division (district PDF lists)",
+   "url": "https://archaeology.gov.bd/pages/static-pages/6922dde7933eb65569e16ff2"
+  },
+  {
+   "key": "DPE_IPEMIS_PRIMARY_DHK_2026",
+   "name": "DPE IPEMIS primary school directory — Dhaka Division",
+   "url": "https://ipemis.dpe.gov.bd/search-school"
+  },
+  {
+   "key": "FSCD_STATIONS_DHK_2026",
+   "name": "Fire Service & Civil Defence — Dhaka Division station & office numbers",
+   "url": "https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1"
+  },
+  {
+   "key": "GAZIPUR_METRO_POLICE_THANAS_2026",
+   "name": "Gazipur Metropolitan Police — thanas and official numbers",
+   "url": "https://gmp.gov.bd/range-units/units_details.php?zone_id=1"
+  },
+  {
+   "key": "PORTAL_TOURIST_SPOTS_DHK_2026",
+   "name": "National portal 'দর্শনীয় স্থান' (tourist spot) lists — Dhaka Division district and upazila portals",
+   "url": "https://dhaka.gov.bd/pages/tourist-spot"
+  },
+  {
+   "key": "UGC_UNIVERSITIES_DHK_2026",
+   "name": "UGC university register — universities in Dhaka Division",
+   "url": "https://www.ugc.gov.bd/universities"
+  },
+  {
+   "key": "BANBEIS_INST_CTG_2026",
+   "name": "BANBEIS institution lists (EIIN registry, e-survey 2024) — Chattogram Division",
+   "url": "https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637"
+  },
+  {
+   "key": "BBS_CENSUS_2022_CHATTOGRAM",
+   "name": "Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Chattogram Division",
+   "url": "https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220"
+  },
+  {
+   "key": "BD_POLICE_CONTACTS_2020_CHATTOGRAM",
+   "name": "Bangladesh Police HQ — Contacts of Bangladesh Police (CMP and Chattogram Range sheets)",
+   "url": "https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf"
+  },
+  {
+   "key": "BD_RAILWAY_CTG_2026",
+   "name": "Bangladesh Railway — station phones and district-wise station counts (Chattogram Division)",
+   "url": "https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6"
+  },
+  {
+   "key": "BDPOST_POSTCODES_CTG_2026",
+   "name": "Bangladesh Post postcode booklet — Chattogram Division post offices (scan on post.rajshahi.gov.bd)",
+   "url": "http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af"
+  },
+  {
+   "key": "BRTC_DEPOTS_CTG_2026",
+   "name": "BRTC — bus depots in Chattogram Division",
+   "url": "https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0"
+  },
+  {
+   "key": "CAAB_AIRPORTS_CTG_2026",
+   "name": "Civil Aviation Authority of Bangladesh — airports in Chattogram Division",
+   "url": "https://www.caab.gov.bd/"
+  },
+  {
+   "key": "CHATTOGRAM_METRO_POLICE_THANAS_2026",
+   "name": "Chattogram Metropolitan Police — thanas and official numbers",
+   "url": "https://cmp.gov.bd/index.php?cPath=295"
+  },
+  {
+   "key": "CHATTOGRAM_POLICE_2026",
+   "name": "Chattogram District Police — SP office and thanas",
+   "url": "https://police.chittagong.gov.bd/"
+  },
+  {
+   "key": "CHATTOGRAM_PORTAL_OFFICES_2026",
+   "name": "Government offices on the national portal sites — Divisional Commissioner, Chattogram DC & upazila portals, DC/UNO offices of Chattogram Division",
+   "url": "https://chittagongdiv.gov.bd/"
+  },
+  {
+   "key": "CTG_RANGE_POLICE_PORTALS_2026",
+   "name": "District police portals of Chattogram Range (Cumilla, Feni, Brahmanbaria, Rangamati, Noakhali, Chandpur, Lakshmipur, Cox's Bazar, Khagrachhari, Bandarban)",
+   "url": "https://police.comilla.gov.bd/"
+  },
+  {
+   "key": "DGHS_HRIS_FACILITIES_CTG_2026",
+   "name": "DGHS / MoHFW HRIS Facility Registry — organisation list, Chattogram Division",
+   "url": "https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=2"
+  },
+  {
+   "key": "DGME_MEDICAL_COLLEGES_CTG_2026",
+   "name": "DGME medical and dental college lists — Chattogram Division",
+   "url": "https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3"
+  },
+  {
+   "key": "DISTRICT_PORTAL_BANKS_CTG_2026",
+   "name": "District portals — bank branch/office lists (Cumilla, Feni, Brahmanbaria, Rangamati, Noakhali, Chandpur, Chattogram, Khagrachhari, Bandarban)",
+   "url": "https://comilla.gov.bd/pages/static-pages/69912917516a96d4de40783c"
+  },
+  {
+   "key": "DISTRICT_PORTALS_TRANSPORT_CTG_2026",
+   "name": "District portals (Chattogram Division) — bus terminals/stands, stations, ghats and airport named on transport pages",
+   "url": "https://chittagong.gov.bd/pages/static-pages/যোগাযোগ-ব্যবস্থা-603b1f-6991007d35ce18e1c0732d23"
+  },
+  {
+   "key": "DOA_PROTECTED_MONUMENTS_CTG_2026",
+   "name": "Department of Archaeology — gazetted protected monuments, Chattogram Division (district PDF lists)",
+   "url": "https://archaeology.gov.bd/pages/static-pages/6922deb6933eb65569e1cce1"
+  },
+  {
+   "key": "DPE_IPEMIS_PRIMARY_CTG_2026",
+   "name": "DPE IPEMIS primary school directory — Chattogram Division",
+   "url": "https://ipemis.dpe.gov.bd/search-school"
+  },
+  {
+   "key": "FSCD_STATIONS_CTG_2026",
+   "name": "Fire Service & Civil Defence — Chattogram Division station & office numbers",
+   "url": "https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1"
+  },
+  {
+   "key": "PORTAL_TOURIST_SPOTS_CTG_2026",
+   "name": "National portal 'দর্শনীয় স্থান' (tourist spot) lists — Chattogram Division district and upazila portals",
+   "url": "https://chittagong.gov.bd/pages/tourist-spot"
+  },
+  {
+   "key": "UGC_UNIVERSITIES_CTG_2026",
+   "name": "UGC university register — universities in Chattogram Division",
+   "url": "https://www.ugc.gov.bd/universities"
+  },
+  {
+   "key": "BANBEIS_INST_KHL_2026",
+   "name": "BANBEIS institution lists (EIIN registry, e-survey 2024) — Khulna Division",
+   "url": "https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637"
+  },
+  {
+   "key": "BBS_CENSUS_2022_KHULNA",
+   "name": "Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Khulna Division",
+   "url": "https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220"
+  },
+  {
+   "key": "BD_POLICE_CONTACTS_2020_KHULNA",
+   "name": "Bangladesh Police HQ — Contacts of Bangladesh Police (KMP and Khulna Range sheets)",
+   "url": "https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf"
+  },
+  {
+   "key": "BD_RAILWAY_KHL_2026",
+   "name": "Bangladesh Railway — station phones and district-wise station counts (Khulna Division)",
+   "url": "https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6"
+  },
+  {
+   "key": "BDPOST_POSTCODES_KHL_2026",
+   "name": "Bangladesh Post postcode booklet — Khulna Division post offices (scan on post.rajshahi.gov.bd)",
+   "url": "http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af"
+  },
+  {
+   "key": "BRTC_DEPOTS_KHL_2026",
+   "name": "BRTC — bus depots in Khulna Division",
+   "url": "https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0"
+  },
+  {
+   "key": "CAAB_AIRPORTS_KHL_2026",
+   "name": "Civil Aviation Authority of Bangladesh — airports in Khulna Division",
+   "url": "https://www.caab.gov.bd/"
+  },
+  {
+   "key": "DGHS_HRIS_FACILITIES_KHL_2026",
+   "name": "DGHS / MoHFW HRIS Facility Registry — organisation list, Khulna Division",
+   "url": "https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=5"
+  },
+  {
+   "key": "DGME_MEDICAL_COLLEGES_KHL_2026",
+   "name": "DGME medical and dental college lists — Khulna Division",
+   "url": "https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3"
+  },
+  {
+   "key": "DISTRICT_PORTAL_BANKS_KHL_2026",
+   "name": "District portals — bank branch/office lists (Meherpur, Narail, Chuadanga, Kushtia, Magura, Bagerhat)",
+   "url": "https://meherpur.gov.bd/pages/static-pages/6980f68da31054345f1cefa5"
+  },
+  {
+   "key": "DISTRICT_PORTALS_TRANSPORT_KHL_2026",
+   "name": "District portals (Khulna Division) — bus terminals and airport named on transport pages",
+   "url": "https://khulna.gov.bd/pages/static-pages/69812047a31054345f1e0ba0"
+  },
+  {
+   "key": "DOA_PROTECTED_MONUMENTS_KHL_2026",
+   "name": "Department of Archaeology — gazetted protected monuments, Khulna Division (district PDF lists)",
+   "url": "https://archaeology.gov.bd/pages/static-pages/6922df45933eb65569e20fab"
+  },
+  {
+   "key": "DPE_IPEMIS_PRIMARY_KHL_2026",
+   "name": "DPE IPEMIS primary school directory — Khulna Division",
+   "url": "https://ipemis.dpe.gov.bd/search-school"
+  },
+  {
+   "key": "FSCD_STATIONS_KHL_2026",
+   "name": "Fire Service & Civil Defence — Khulna Division station & office numbers",
+   "url": "https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1"
+  },
+  {
+   "key": "KHL_RANGE_POLICE_PORTALS_2026",
+   "name": "District police portals of Khulna Range (Jashore, Satkhira, Meherpur, Narail, Chuadanga, Kushtia, Magura, Bagerhat, Jhenaidah)",
+   "url": "https://police.jessore.gov.bd/"
+  },
+  {
+   "key": "KHULNA_METRO_POLICE_THANAS_2026",
+   "name": "Khulna Metropolitan Police — thanas and official numbers",
+   "url": "https://police.khulnadiv.gov.bd/pages/static-pages/698101a8a31054345f1d5747"
+  },
+  {
+   "key": "KHULNA_POLICE_2026",
+   "name": "Khulna District Police — SP office and thanas",
+   "url": "https://police.khulna.gov.bd/"
+  },
+  {
+   "key": "KHULNA_PORTAL_OFFICES_2026",
+   "name": "Government offices on the national portal sites — Divisional Commissioner, Khulna DC & upazila portals, DC/UNO offices of Khulna Division",
+   "url": "https://khulnadiv.gov.bd/"
+  },
+  {
+   "key": "PORTAL_TOURIST_SPOTS_KHL_2026",
+   "name": "National portal 'দর্শনীয় স্থান' (tourist spot) lists — Khulna Division district and upazila portals",
+   "url": "https://khulna.gov.bd/pages/tourist-spot"
+  },
+  {
+   "key": "UGC_UNIVERSITIES_KHL_2026",
+   "name": "UGC university register — universities in Khulna Division",
+   "url": "https://www.ugc.gov.bd/universities"
+  },
+  {
+   "key": "BANBEIS_INST_BAR_2026",
+   "name": "BANBEIS institution lists (EIIN registry, e-survey 2024) — Barishal Division",
+   "url": "https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637"
+  },
+  {
+   "key": "BAR_RANGE_POLICE_PORTALS_2026",
+   "name": "District police portals of Barishal Range (Jhalokathi, Patuakhali, Pirojpur, Bhola, Barguna)",
+   "url": "https://police.jhalakathi.gov.bd/"
+  },
+  {
+   "key": "BARISHAL_METRO_POLICE_THANAS_2026",
+   "name": "Barishal Metropolitan Police — thanas and official numbers",
+   "url": "https://bmp.police.gov.bd/contact-us"
+  },
+  {
+   "key": "BARISHAL_POLICE_2026",
+   "name": "Barishal District Police — SP office, thanas and control room",
+   "url": "https://police.barisal.gov.bd/"
+  },
+  {
+   "key": "BARISHAL_PORTAL_OFFICES_2026",
+   "name": "Government offices on the national portal sites — Divisional Commissioner, Barishal DC & upazila portals, DC/UNO offices of Barishal Division",
+   "url": "https://barisaldiv.gov.bd/"
+  },
+  {
+   "key": "BBS_CENSUS_2022_BARISHAL",
+   "name": "Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Barishal Division",
+   "url": "https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220"
+  },
+  {
+   "key": "BD_POLICE_CONTACTS_2020_BARISHAL",
+   "name": "Bangladesh Police HQ — Contacts of Bangladesh Police (BMP and Barisal Range sheets)",
+   "url": "https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf"
+  },
+  {
+   "key": "BDPOST_POSTCODES_BAR_2026",
+   "name": "Bangladesh Post postcode booklet — Barishal Division post offices (scan on post.rajshahi.gov.bd)",
+   "url": "http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af"
+  },
+  {
+   "key": "BRTC_DEPOTS_BAR_2026",
+   "name": "BRTC — bus depots in Barishal Division",
+   "url": "https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0"
+  },
+  {
+   "key": "CAAB_AIRPORTS_BAR_2026",
+   "name": "Civil Aviation Authority of Bangladesh — airports in Barishal Division",
+   "url": "https://www.caab.gov.bd/"
+  },
+  {
+   "key": "DGHS_HRIS_FACILITIES_BAR_2026",
+   "name": "DGHS / MoHFW HRIS Facility Registry — organisation list, Barishal Division",
+   "url": "https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=6"
+  },
+  {
+   "key": "DGME_MEDICAL_COLLEGES_BAR_2026",
+   "name": "DGME medical and dental college lists — Barishal Division",
+   "url": "https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3"
+  },
+  {
+   "key": "DISTRICT_PORTAL_BANKS_BAR_2026",
+   "name": "District portals — bank branch/office lists (Patuakhali, Pirojpur, Bhola)",
+   "url": "https://patuakhali.gov.bd/pages/static-pages/bank-x23c5l-6a786562a3a462c02a70c42f"
+  },
+  {
+   "key": "DISTRICT_PORTALS_TRANSPORT_BAR_2026",
+   "name": "District and upazila portals (Barishal Division) — launch ghats, bus stands and airport named on transport pages",
+   "url": "https://barisal.gov.bd/pages/static-pages/6978a33735ce18e1c0672d0c"
+  },
+  {
+   "key": "DOA_PROTECTED_MONUMENTS_BAR_2026",
+   "name": "Department of Archaeology — gazetted protected monuments, Barishal Division (district PDF lists)",
+   "url": "https://archaeology.gov.bd/pages/static-pages/6922e128933eb65569e2a90f"
+  },
+  {
+   "key": "DPE_IPEMIS_PRIMARY_BAR_2026",
+   "name": "DPE IPEMIS primary school directory — Barishal Division",
+   "url": "https://ipemis.dpe.gov.bd/search-school"
+  },
+  {
+   "key": "FSCD_STATIONS_BAR_2026",
+   "name": "Fire Service & Civil Defence — Barishal Division station & office numbers",
+   "url": "https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1"
+  },
+  {
+   "key": "PORTAL_TOURIST_SPOTS_BAR_2026",
+   "name": "National portal 'দর্শনীয় স্থান' (tourist spot) lists — Barishal Division district and upazila portals",
+   "url": "https://barisal.gov.bd/pages/tourist-spot"
+  },
+  {
+   "key": "UGC_UNIVERSITIES_BAR_2026",
+   "name": "UGC university register — universities in Barishal Division",
+   "url": "https://www.ugc.gov.bd/universities"
+  },
+  {
+   "key": "BANBEIS_INST_SYL_2026",
+   "name": "BANBEIS institution lists (EIIN registry, e-survey 2024) — Sylhet Division",
+   "url": "https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637"
+  },
+  {
+   "key": "BBS_CENSUS_2022_SYLHET",
+   "name": "Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Sylhet Division",
+   "url": "https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220"
+  },
+  {
+   "key": "BD_POLICE_CONTACTS_2020_SYLHET",
+   "name": "Bangladesh Police HQ — Contacts of Bangladesh Police (SMP and Sylhet Range sheets)",
+   "url": "https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf"
+  },
+  {
+   "key": "BD_RAILWAY_SYL_2026",
+   "name": "Bangladesh Railway — station phones and district-wise station counts (Sylhet Division)",
+   "url": "https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6"
+  },
+  {
+   "key": "BDPOST_POSTCODES_SYL_2026",
+   "name": "Bangladesh Post postcode booklet — Sylhet Division post offices (scan on post.rajshahi.gov.bd)",
+   "url": "http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af"
+  },
+  {
+   "key": "BRTC_DEPOTS_SYL_2026",
+   "name": "BRTC — bus depots in Sylhet Division",
+   "url": "https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0"
+  },
+  {
+   "key": "CAAB_AIRPORTS_SYL_2026",
+   "name": "Civil Aviation Authority of Bangladesh — airports in Sylhet Division",
+   "url": "https://www.caab.gov.bd/"
+  },
+  {
+   "key": "DGHS_HRIS_FACILITIES_SYL_2026",
+   "name": "DGHS / MoHFW HRIS Facility Registry — organisation list, Sylhet Division",
+   "url": "https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=7"
+  },
+  {
+   "key": "DGME_MEDICAL_COLLEGES_SYL_2026",
+   "name": "DGME medical and dental college lists — Sylhet Division",
+   "url": "https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3"
+  },
+  {
+   "key": "DISTRICT_PORTAL_BANKS_SYL_2026",
+   "name": "District portals — bank branch/office lists (Sylhet, Habiganj, Moulvibazar)",
+   "url": "https://sylhet.gov.bd/pages/static-pages/696cb9a8c4774958d7ba8e13"
+  },
+  {
+   "key": "DISTRICT_PORTALS_TRANSPORT_SYL_2026",
+   "name": "District and upazila portals (Sylhet Division) — bus terminals, railway stations, ghats and airport named on transport pages",
+   "url": "https://sylhetsadar.sylhet.gov.bd/pages/static-pages/696cb360c4774958d7ba05b3"
+  },
+  {
+   "key": "DOA_PROTECTED_MONUMENTS_SYL_2026",
+   "name": "Department of Archaeology — gazetted protected monuments, Sylhet Division (district PDF lists)",
+   "url": "https://archaeology.gov.bd/pages/static-pages/6922e035933eb65569e26000"
+  },
+  {
+   "key": "DPE_IPEMIS_PRIMARY_SYL_2026",
+   "name": "DPE IPEMIS primary school directory — Sylhet Division",
+   "url": "https://ipemis.dpe.gov.bd/search-school"
+  },
+  {
+   "key": "FSCD_STATIONS_SYL_2026",
+   "name": "Fire Service & Civil Defence — Sylhet Division station & office numbers",
+   "url": "https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1"
+  },
+  {
+   "key": "PORTAL_TOURIST_SPOTS_SYL_2026",
+   "name": "National portal 'দর্শনীয় স্থান' (tourist spot) lists — Sylhet Division district and upazila portals",
+   "url": "https://sylhet.gov.bd/pages/tourist-spot"
+  },
+  {
+   "key": "SYL_RANGE_POLICE_PORTALS_2026",
+   "name": "District police portals of Sylhet Range (Moulvibazar, Habiganj, Sunamganj)",
+   "url": "https://police.moulvibazar.gov.bd/"
+  },
+  {
+   "key": "SYLHET_METRO_POLICE_THANAS_2026",
+   "name": "Sylhet Metropolitan Police — thanas and official numbers",
+   "url": "https://police.sylhetdiv.gov.bd/pages/static-pages/696ca219c4774958d7b931b6"
+  },
+  {
+   "key": "SYLHET_POLICE_2026",
+   "name": "Sylhet District Police — SP office and thanas",
+   "url": "https://police.sylhet.gov.bd/"
+  },
+  {
+   "key": "SYLHET_PORTAL_OFFICES_2026",
+   "name": "Government offices on the national portal sites — Divisional Commissioner, Sylhet DC & upazila portals, DC/UNO offices of Sylhet Division",
+   "url": "https://sylhetdiv.gov.bd/"
+  },
+  {
+   "key": "UGC_UNIVERSITIES_SYL_2026",
+   "name": "UGC university register — universities in Sylhet Division",
+   "url": "https://www.ugc.gov.bd/universities"
+  },
+  {
+   "key": "BANBEIS_INST_MYM_2026",
+   "name": "BANBEIS institution lists (EIIN registry, e-survey 2024) — Mymensingh Division",
+   "url": "https://banbeis.gov.bd/pages/files/69199760933eb65569ddc637"
+  },
+  {
+   "key": "BBS_CENSUS_2022_MYMENSINGH",
+   "name": "Bangladesh Bureau of Statistics — Population and Housing Census 2022: District Reports, Community Reports (Table C-01) and Union Statistics, Mymensingh Division",
+   "url": "https://bbs.gov.bd/pages/static-pages/6922e073933eb65569e27220"
+  },
+  {
+   "key": "BD_POLICE_CONTACTS_2020_MYMENSINGH",
+   "name": "Bangladesh Police HQ — Contacts of Bangladesh Police (Mymenshing Range sheet)",
+   "url": "https://www.police.gov.bd/en/contacts_of_bangladesh_police_-pdf"
+  },
+  {
+   "key": "BD_RAILWAY_MYM_2026",
+   "name": "Bangladesh Railway — station phones and district-wise station counts (Mymensingh Division)",
+   "url": "https://railway.gov.bd/pages/static-pages/691997be933eb65569ddebc6"
+  },
+  {
+   "key": "BDPOST_POSTCODES_MYM_2026",
+   "name": "Bangladesh Post postcode booklet — Mymensingh Division post offices (scan on post.rajshahi.gov.bd)",
+   "url": "http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af"
+  },
+  {
+   "key": "BRTC_DEPOTS_MYM_2026",
+   "name": "BRTC — bus depots in Mymensingh Division",
+   "url": "https://brtc.gov.bd/pages/static-pages/6922e14e933eb65569e2b6c0"
+  },
+  {
+   "key": "DGHS_HRIS_FACILITIES_MYM_2026",
+   "name": "DGHS / MoHFW HRIS Facility Registry — organisation list, Mymensingh Division",
+   "url": "https://hris.mohfw.gov.bd/public/facility-registry/reports/organization-list?submit=Run&is_active=1&division_id%5B0%5D=8"
+  },
+  {
+   "key": "DGME_MEDICAL_COLLEGES_MYM_2026",
+   "name": "DGME medical and dental college lists — Mymensingh Division",
+   "url": "https://dgme.gov.bd/pages/static-pages/6922e0a5933eb65569e27ff3"
+  },
+  {
+   "key": "DISTRICT_PORTAL_BANKS_MYM_2026",
+   "name": "District portals — bank branch lists (Sherpur, Jamalpur, Netrokona)",
+   "url": "https://sherpur.gov.bd/pages/static-pages/6970a1e2a31054345f1624bd"
+  },
+  {
+   "key": "DISTRICT_PORTALS_TRANSPORT_MYM_2026",
+   "name": "District and upazila portals (Mymensingh Division) — bus terminals, stands and railway stations named on transport pages",
+   "url": "https://jamalpur.gov.bd/pages/static-pages/6970926ca31054345f15e8e6"
+  },
+  {
+   "key": "DOA_PROTECTED_MONUMENTS_MYM_2026",
+   "name": "Department of Archaeology — gazetted protected monuments, Mymensingh Division (district PDF lists)",
+   "url": "https://archaeology.gov.bd/pages/static-pages/6922dd39933eb65569e14024"
+  },
+  {
+   "key": "DPE_IPEMIS_PRIMARY_MYM_2026",
+   "name": "DPE IPEMIS primary school directory — Mymensingh Division",
+   "url": "https://ipemis.dpe.gov.bd/search-school"
+  },
+  {
+   "key": "FSCD_STATIONS_MYM_2026",
+   "name": "Fire Service & Civil Defence — Mymensingh Division station & office numbers",
+   "url": "https://fireservice.gov.bd/pages/static-pages/6922dcc6933eb65569e11fd1"
+  },
+  {
+   "key": "MYM_RANGE_POLICE_PORTALS_2026",
+   "name": "District police portals of Mymensingh Range (Jamalpur, Sherpur, Netrokona)",
+   "url": "https://police.jamalpur.gov.bd/"
+  },
+  {
+   "key": "MYMENSINGH_POLICE_2026",
+   "name": "Mymensingh District Police — SP office and thanas",
+   "url": "https://police.mymensingh.gov.bd/"
+  },
+  {
+   "key": "MYMENSINGH_PORTAL_OFFICES_2026",
+   "name": "Government offices on the national portal sites — Divisional Commissioner, Mymensingh DC & upazila portals, DC/UNO offices of Mymensingh Division",
+   "url": "https://mymensinghdiv.gov.bd/"
+  },
+  {
+   "key": "PORTAL_TOURIST_SPOTS_MYM_2026",
+   "name": "National portal 'দর্শনীয় স্থান' (tourist spot) lists — Mymensingh Division district and upazila portals",
+   "url": "https://mymensingh.gov.bd/pages/tourist-spot"
+  },
+  {
+   "key": "UGC_UNIVERSITIES_MYM_2026",
+   "name": "UGC university register — universities in Mymensingh Division",
+   "url": "https://www.ugc.gov.bd/universities"
+  },
+  {
+   "key": "ORG_BRANCHES_RAJ_2026",
+   "name": "Organisations' own branch and outlet lists — Rajshahi Division",
+   "url": "https://www.sonalibank.com.bd/atm_location.php"
+  },
+  {
+   "key": "ORG_BRANCHES_RANG_2026",
+   "name": "Organisations' own branch and outlet lists — Rangpur Division",
+   "url": "https://www.sonalibank.com.bd/atm_location.php"
+  },
+  {
+   "key": "ORG_BRANCHES_DHK_2026",
+   "name": "Organisations' own branch and outlet lists — Dhaka Division",
+   "url": "https://www.sonalibank.com.bd/atm_location.php"
+  },
+  {
+   "key": "ORG_BRANCHES_CTG_2026",
+   "name": "Organisations' own branch and outlet lists — Chattogram Division",
+   "url": "https://www.sonalibank.com.bd/atm_location.php"
+  },
+  {
+   "key": "ORG_BRANCHES_KHL_2026",
+   "name": "Organisations' own branch and outlet lists — Khulna Division",
+   "url": "https://www.sonalibank.com.bd/atm_location.php"
+  },
+  {
+   "key": "ORG_BRANCHES_BAR_2026",
+   "name": "Organisations' own branch and outlet lists — Barishal Division",
+   "url": "https://www.sonalibank.com.bd/atm_location.php"
+  },
+  {
+   "key": "ORG_BRANCHES_SYL_2026",
+   "name": "Organisations' own branch and outlet lists — Sylhet Division",
+   "url": "https://www.sonalibank.com.bd/atm_location.php"
+  },
+  {
+   "key": "ORG_BRANCHES_MYM_2026",
+   "name": "Organisations' own branch and outlet lists — Mymensingh Division",
+   "url": "https://www.sonalibank.com.bd/atm_location.php"
+  },
+  {
+   "key": "FUEL_STATIONS_RAJ_2026",
+   "name": "Filling stations and LPG dealers of the state-owned oil companies — Rajshahi Division",
+   "url": "https://pocl.gov.bd/"
+  },
+  {
+   "key": "HAAT_BAZAAR_RAJ_2026",
+   "name": "Haat-bazaar (market) lists on the national portal — Rajshahi Division DC and upazila portals",
+   "url": "https://rajshahi.gov.bd/pages/hatbazar"
+  },
+  {
+   "key": "LOCAL_SERVICES_RAJ_2026",
+   "name": "Local public-service offices (utilities, engineering, social services, cooperatives, fisheries) — Rajshahi Division",
+   "url": "https://reb.gov.bd/pages/static-pages/6922dfe0933eb65569e24707"
+  },
+  {
+   "key": "TRANSPORT_TOURISM_RAJ_2026",
+   "name": "Transport and tourism lists of government agencies — Rajshahi Division",
+   "url": "https://biwta.gov.bd/pages/static-pages/6922dce3933eb65569e12937"
+  },
+  {
+   "key": "FUEL_STATIONS_RANG_2026",
+   "name": "Filling stations and LPG dealers of the state-owned oil companies — Rangpur Division",
+   "url": "https://pocl.gov.bd/"
+  },
+  {
+   "key": "HAAT_BAZAAR_RANG_2026",
+   "name": "Haat-bazaar (market) lists on the national portal — Rangpur Division DC and upazila portals",
+   "url": "https://rangpur.gov.bd/pages/hatbazar"
+  },
+  {
+   "key": "LOCAL_SERVICES_RANG_2026",
+   "name": "Local public-service offices (utilities, engineering, social services, cooperatives, fisheries) — Rangpur Division",
+   "url": "https://reb.gov.bd/pages/static-pages/6922dfe0933eb65569e24707"
+  },
+  {
+   "key": "TRANSPORT_TOURISM_RANG_2026",
+   "name": "Transport and tourism lists of government agencies — Rangpur Division",
+   "url": "https://biwta.gov.bd/pages/static-pages/6922dce3933eb65569e12937"
+  },
+  {
+   "key": "FUEL_STATIONS_DHK_2026",
+   "name": "Filling stations and LPG dealers of the state-owned oil companies — Dhaka Division",
+   "url": "https://pocl.gov.bd/"
+  },
+  {
+   "key": "HAAT_BAZAAR_DHK_2026",
+   "name": "Haat-bazaar (market) lists on the national portal — Dhaka Division DC and upazila portals",
+   "url": "https://dhaka.gov.bd/pages/hatbazar"
+  },
+  {
+   "key": "LOCAL_SERVICES_DHK_2026",
+   "name": "Local public-service offices (utilities, engineering, social services, cooperatives, fisheries) — Dhaka Division",
+   "url": "https://reb.gov.bd/pages/static-pages/6922dfe0933eb65569e24707"
+  },
+  {
+   "key": "TRANSPORT_TOURISM_DHK_2026",
+   "name": "Transport and tourism lists of government agencies — Dhaka Division",
+   "url": "https://biwta.gov.bd/pages/static-pages/6922dce3933eb65569e12937"
+  },
+  {
+   "key": "FUEL_STATIONS_CTG_2026",
+   "name": "Filling stations and LPG dealers of the state-owned oil companies — Chattogram Division",
+   "url": "https://pocl.gov.bd/"
+  },
+  {
+   "key": "HAAT_BAZAAR_CTG_2026",
+   "name": "Haat-bazaar (market) lists on the national portal — Chattogram Division DC and upazila portals",
+   "url": "https://chittagong.gov.bd/pages/hatbazar"
+  },
+  {
+   "key": "LOCAL_SERVICES_CTG_2026",
+   "name": "Local public-service offices (utilities, engineering, social services, cooperatives, fisheries) — Chattogram Division",
+   "url": "https://reb.gov.bd/pages/static-pages/6922dfe0933eb65569e24707"
+  },
+  {
+   "key": "TRANSPORT_TOURISM_CTG_2026",
+   "name": "Transport and tourism lists of government agencies — Chattogram Division",
+   "url": "https://biwta.gov.bd/pages/static-pages/6922dce3933eb65569e12937"
+  },
+  {
+   "key": "FUEL_STATIONS_KHL_2026",
+   "name": "Filling stations and LPG dealers of the state-owned oil companies — Khulna Division",
+   "url": "https://pocl.gov.bd/"
+  },
+  {
+   "key": "HAAT_BAZAAR_KHL_2026",
+   "name": "Haat-bazaar (market) lists on the national portal — Khulna Division DC and upazila portals",
+   "url": "https://khulna.gov.bd/pages/hatbazar"
+  },
+  {
+   "key": "LOCAL_SERVICES_KHL_2026",
+   "name": "Local public-service offices (utilities, engineering, social services, cooperatives, fisheries) — Khulna Division",
+   "url": "https://reb.gov.bd/pages/static-pages/6922dfe0933eb65569e24707"
+  },
+  {
+   "key": "SHELTERS_KHL_2026",
+   "name": "Disaster shelters (cyclone / flood shelters, killas) on the national portal — Khulna Division DC and upazila portals",
+   "url": "https://<district>.gov.bd/"
+  },
+  {
+   "key": "TRANSPORT_TOURISM_KHL_2026",
+   "name": "Transport and tourism lists of government agencies — Khulna Division",
+   "url": "https://biwta.gov.bd/pages/static-pages/6922dce3933eb65569e12937"
+  },
+  {
+   "key": "FUEL_STATIONS_BAR_2026",
+   "name": "Filling stations and LPG dealers of the state-owned oil companies — Barishal Division",
+   "url": "https://pocl.gov.bd/"
+  },
+  {
+   "key": "HAAT_BAZAAR_BAR_2026",
+   "name": "Haat-bazaar (market) lists on the national portal — Barishal Division DC and upazila portals",
+   "url": "https://barisal.gov.bd/pages/hatbazar"
+  },
+  {
+   "key": "LOCAL_SERVICES_BAR_2026",
+   "name": "Local public-service offices (utilities, engineering, social services, cooperatives, fisheries) — Barishal Division",
+   "url": "https://reb.gov.bd/pages/static-pages/6922dfe0933eb65569e24707"
+  },
+  {
+   "key": "TRANSPORT_TOURISM_BAR_2026",
+   "name": "Transport and tourism lists of government agencies — Barishal Division",
+   "url": "https://biwta.gov.bd/pages/static-pages/6922dce3933eb65569e12937"
+  },
+  {
+   "key": "FUEL_STATIONS_SYL_2026",
+   "name": "Filling stations and LPG dealers of the state-owned oil companies — Sylhet Division",
+   "url": "https://pocl.gov.bd/"
+  },
+  {
+   "key": "HAAT_BAZAAR_SYL_2026",
+   "name": "Haat-bazaar (market) lists on the national portal — Sylhet Division DC and upazila portals",
+   "url": "https://sylhet.gov.bd/pages/hatbazar"
+  },
+  {
+   "key": "LOCAL_SERVICES_SYL_2026",
+   "name": "Local public-service offices (utilities, engineering, social services, cooperatives, fisheries) — Sylhet Division",
+   "url": "https://reb.gov.bd/pages/static-pages/6922dfe0933eb65569e24707"
+  },
+  {
+   "key": "TRANSPORT_TOURISM_SYL_2026",
+   "name": "Transport and tourism lists of government agencies — Sylhet Division",
+   "url": "https://biwta.gov.bd/pages/static-pages/6922dce3933eb65569e12937"
+  },
+  {
+   "key": "FUEL_STATIONS_MYM_2026",
+   "name": "Filling stations and LPG dealers of the state-owned oil companies — Mymensingh Division",
+   "url": "https://pocl.gov.bd/"
+  },
+  {
+   "key": "HAAT_BAZAAR_MYM_2026",
+   "name": "Haat-bazaar (market) lists on the national portal — Mymensingh Division DC and upazila portals",
+   "url": "https://mymensingh.gov.bd/pages/hatbazar"
+  },
+  {
+   "key": "LOCAL_SERVICES_MYM_2026",
+   "name": "Local public-service offices (utilities, engineering, social services, cooperatives, fisheries) — Mymensingh Division",
+   "url": "https://reb.gov.bd/pages/static-pages/6922dfe0933eb65569e24707"
+  },
+  {
+   "key": "TRANSPORT_TOURISM_MYM_2026",
+   "name": "Transport and tourism lists of government agencies — Mymensingh Division",
+   "url": "https://biwta.gov.bd/pages/static-pages/6922dce3933eb65569e12937"
+  }
+ ],
+ "heldBack": [
+  {
+   "key": "NUHIL",
+   "name": "nuhil/bangladesh-geocode (GitHub, MIT)",
+   "url": "https://github.com/nuhil/bangladesh-geocode"
+  }
+ ],
+ "gaps": [
+  {
+   "area": "unions",
+   "gap": "~33–40 unions missing vs the official 4,571–4,578 (seed has 4,538 after removing 3 duplicates). All unions are community data and not published.",
+   "fix": "Import the LGD/BBS union list and reconcile by geocode."
+  },
+  {
+   "area": "verification",
+   "gap": "No record has official (Tier 1) evidence yet; published areas and places rest on secondary sources.",
+   "fix": "Verify against LGD/BBS/gazette sources in the admin verification centre."
+  },
+  {
+   "area": "master v3.0",
+   "gap": "Seed and Consolidated Master v3.0 differ in Sirajganj (82 vs 83), Bogura (Gabtali/Sonatala), Rajshahi Bagha (Chakrajapur) and Chapainawabganj (5 names each way).",
+   "fix": "See docs/data/UNRESOLVED_CONFLICTS.md; resolve with primary evidence."
+  },
+  {
+   "area": "unions",
+   "gap": "New upazilas Eidgaon, Madhyanagar, Dasar and Guimara have 0 unions; their unions still sit under the parent upazilas (Naldanga fixed Nov 2026 from the Natore district portal).",
+   "fix": "Re-parent unions per the creation gazettes."
+  },
+  {
+   "area": "unions",
+   "gap": "Shayestaganj union and Nurpur were moved to Shayestaganj Upazila; Brahmandura was added without a source id.",
+   "fix": "Confirm against LGD."
+  },
+  {
+   "area": "upazilas",
+   "gap": "No coordinates or boundaries for upazilas/unions.",
+   "fix": "Use the BBS/HDX admin boundary sets (ADM3/ADM4)."
+  },
+  {
+   "area": "codes",
+   "gap": "BBS geocodes are filled for divisions only.",
+   "fix": "Add district/upazila/union geocodes from BBS."
+  },
+  {
+   "area": "pourashavas",
+   "gap": "Only Rajshahi District's 14 pourashavas are listed, and that list is unverified.",
+   "fix": "Import the LGD pourashava list (330)."
+  },
+  {
+   "area": "wards/villages",
+   "gap": "City and pourashava wards, mouzas, villages / mahallas and city thanas come from BBS Census 2022 with English names only: no Bangla names, coordinates or boundaries for mouzas and villages, and no union wards (9 per union).",
+   "fix": "Bangla names from a second official source (not transliteration); union wards from LGD."
+  },
+  {
+   "area": "area",
+   "gap": "District areas are computed from boundary polygons (approximate).",
+   "fix": "Replace with BBS official areas."
+  },
+  {
+   "area": "population",
+   "gap": "District/division population uses the 2022 adjusted figures; Rajshahi upazilas use enumerated figures.",
+   "fix": "Choose one basis app-wide."
+  },
+  {
+   "area": "places",
+   "gap": "Only 8 pilot places; 3 are unverified and have no coordinates.",
+   "fix": "Field verification + OSM import."
+  }
+ ]
+}

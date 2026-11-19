@@ -18,26 +18,60 @@ async function check(name, path, fn, expectStatus = 200) {
 }
 
 const EXPECT_ENGINE = process.env.SEARCH_ENGINE_EXPECT; // 'typesense' in CI
+const LABELLED = (await (await fetch(API + '/health')).json()).public_include_unverified === true;
 await check('health', '/health', (b) => {
   assert.equal(b.status, 'ok');
-  if (EXPECT_ENGINE) assert.equal(b.search, EXPECT_ENGINE);
+  if (EXPECT_ENGINE) assert.equal(b.search.engine, EXPECT_ENGINE);
 });
 await check('national stats', '/v1/stats/national', (b) => {
   assert.equal(b.division, 8);
   assert.equal(b.district, 64);
+  // Visibility follows PUBLIC_INCLUDE_UNVERIFIED; `sourced` counts only production-eligible records.
+  // all 8 divisions collected (Nov 2026): every upazila and 4,584 of 4,622 unions are matched to BBS 2022
   assert.equal(b.upazila, 495);
   assert.equal(b.city_corporation, 13);
-  assert.ok(b.union >= 4541);
+  assert.equal(b.union, LABELLED ? 4622 : 4584);
+  assert.equal(b.sourced.union, 4584);
+  assert.equal(b.sourced.upazila, 495);
+  assert.ok(b.inclusion_rule);
+});
+await check('national pending counts', '/v1/areas/1/stats', (b) => {
+  assert.equal(b.pending_counts.union ?? 0, LABELLED ? 0 : 4622 - 4584);
 });
 await check('divisions', '/v1/areas?level=division', (b) => assert.equal(b.items.length, 8));
 await check('rajshahi district', '/v1/areas/by-path?path=rajshahi/rajshahi', (b) => {
   assert.equal(b.area.name_bn, 'রাজশাহী');
   assert.equal(b.area.level, 'district');
   assert.equal(b.children.filter((c) => c.level === 'upazila').length, 9);
-  assert.equal(b.descendant_counts.union, 71);
+  assert.equal(b.descendant_counts.union, 72);          // all sourced (BBS 2022 + official union list)
+  assert.equal(b.pending_counts.union ?? 0, 0);
+  assert.equal(b.area.evidence_level, 'official');
   assert.equal(b.breadcrumb.at(0).level, 'country');
   assert.ok(b.place_counts.education >= 2);
 });
+// BBS Census 2022 localities: city thanas, mouzas and villages / mahallas (pipelines/localities.py)
+await check('locality counts', '/v1/stats/national', (b) => {
+  assert.equal(b.thana, 105);
+  assert.equal(b.mouza, 60292);
+  assert.equal(b.village, 104882);
+});
+await check('thana and its wards', '/v1/areas/by-path?path=rajshahi/rajshahi/rajshahi-city-corporation/boalia-thana', (b) => {
+  assert.equal(b.area.level, 'thana');
+  assert.equal(b.area.evidence_level, 'official');
+  assert.ok(b.links.filter((l) => l.relation === 'thana_ward').length >= 5);
+  assert.equal(b.place_scope.level, 'city_corporation');           // places are filed by city corporation
+});
+await check('union lists its mouzas', '/v1/areas/by-path?path=rajshahi/rajshahi/paba/damkura', (b) => {
+  assert.ok(b.children.some((c) => c.level === 'mouza'));
+  assert.equal(b.place_scope, null);
+});
+await check('coverage report', '/v1/stats/coverage/10002', (b) => {
+  assert.equal(b.area.area.id, 10002);
+  assert.equal(b.rows.length, 8);                                   // Rajshahi Division's districts
+  assert.ok(b.area.places > 0 && b.area.villages > 0);
+  assert.ok(b.rows.every((r) => Array.isArray(r.missing)));
+});
+await check('no coverage report below upazila', '/v1/stats/coverage/40001', null, 404);
 await check('unknown area 404', '/v1/areas/by-path?path=nowhere/at-all', null, 404);
 await check('bad path 400', '/v1/areas/by-path?path=' + encodeURIComponent("a/'b"), null, 400);
 await check('categories', '/v1/categories', (b) => {
@@ -48,9 +82,16 @@ await check('place detail', '/v1/places/university-of-rajshahi', (b) => {
   assert.equal(b.name_en, 'University of Rajshahi');
   assert.equal(b.verification_status, 'verified');
   assert.ok(b.breadcrumb.length >= 3);
-  assert.equal(b.source.key, 'WIKI_RU');
+  assert.equal(b.source.key, 'UGC_UNIVERSITIES_RAJ_2026');
+  assert.equal(b.evidence_level, 'official');
 });
-await check('places in district', '/v1/places?area_id=20015&category=education', (b) => assert.ok(b.items.length >= 3));
+// a curated place still without a source (the shrine has no official list entry yet)
+await check('unverified place labelled or hidden', '/v1/places/shah-makhdum-mazar', LABELLED ? (b) => assert.equal(b.production_eligible, false) : null, LABELLED ? 200 : 404);
+await check('places in district', '/v1/places?area_id=20015&category=education', (b) => {
+  assert.ok(b.items.length >= 2);
+  assert.equal(b.items.length, Math.min(b.total, 20));     // first page of the default size
+  if (!LABELLED) assert.ok(b.items.every((p) => p.production_eligible));
+});
 await check('nearby', '/v1/places/nearby?lat=24.37&lon=88.60&radius_m=5000', (b) => {
   assert.ok(b.items.length >= 4);
   assert.ok(b.items[0].distance_m <= b.items.at(-1).distance_m);
@@ -62,7 +103,7 @@ await check('places geojson', '/v1/places/geojson?area_id=20015', (b) => {
   assert.ok(b.features[0].properties.slug);
 });
 await check('search bn', '/v1/search?q=' + encodeURIComponent('পবা'), (b) => assert.ok(b.areas.some((a) => a.name_en === 'Paba')));
-await check('search en', '/v1/search?q=puthia', (b) => {
+await check('search en', '/v1/search?q=puthia+rajbari', (b) => {
   assert.ok(b.areas.some((a) => a.level === 'upazila'));
   assert.ok(b.places.some((p) => p.slug === 'puthia-rajbari'));
 });
@@ -73,12 +114,14 @@ if (EXPECT_ENGINE === 'typesense') {
     assert.equal(b.areas[0].level, 'division');
   });
   await check('search banglish', '/v1/search?q=rajsahi+university', (b) => assert.ok(b.places.some((p) => p.slug === 'university-of-rajshahi')));
-  await check('search bn prefix', '/v1/search?q=' + encodeURIComponent('পুঠি'), (b) => assert.ok(b.places.some((p) => p.slug === 'puthia-rajbari')));
+  await check('search bn prefix', '/v1/search?q=' + encodeURIComponent('পুঠিয়া রাজবা'), (b) => assert.ok(b.places.some((p) => p.slug === 'puthia-rajbari')));
 }
 await check('emergency numbers', '/v1/emergency-numbers', (b) => {
   assert.equal(b[0].number, '999');
   assert.ok(b.some((n) => n.number === '102'));
+  assert.ok(!b.some((n) => n.evidence_level === 'unverified'));
 });
+await check('openapi', '/openapi.json', (b) => assert.ok(b.paths['/v1/areas/{id}/stats']));
 
 if (failed) {
   console.error(`\n${failed} check(s) failed`);

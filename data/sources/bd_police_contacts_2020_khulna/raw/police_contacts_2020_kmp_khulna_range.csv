@@ -1,0 +1,3090 @@
+sheet,sl,designation,post,official_number,current_number,new_number,email,new_number_first_column
+KMP,Unit/Office Name:Khulna Metropoliton Police (KMP),,,,,,,
+KMP,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail,
+KMP,1,Police Commissioner (DIG),1,812862 2830786* 761742,01713-373275,01320-058000,pckmp@police.gov.bd,
+KMP,2,Police Commissioner (R),2,,,01320-058001,,
+KMP,3,Police Commissioner (R),3,,,01320-058002,,
+KMP,4,Addl. Police Comissioner,Admin & Ops,812561 812562*,01713-373276,01320-058003,addlpckmp@police.gov.bd,
+KMP,5,Addl. Police Comissioner,Crime,,01769-694801,01320-058004,,
+KMP,6,Addl. Police Comissioner,3,,,01320-058005,,
+KMP,7,Addl. Police Comissioner,4,,,01320-058006,,
+KMP,8,Addl. Police Comissioner,5,,,01320-058007,,
+KMP,9,Addl. Police Comissioner,6,,,01320-058008,,
+KMP,10,Addl. Police Comissioner,7,,,01320-058009,,
+KMP,11,DC,Headquarters,812563 761135,01713-373277,01320-058010,dchqkmp@police.gov.bd,
+KMP,12,DC,Procecution,723089,01769-694802,01320-058011,,
+KMP,13,DC,F&B,,01730-336455,01320-058012,,
+KMP,14,DC,E&D,,01769-690919,01320-058013,,
+KMP,15,DC,Reserved for DC (10 SIM),,,01320058014-01320058023,,
+KMP,16,PC Office,Staff Officer,723755,017133-74652,01320-058024,sokmp@police.gov.bd,
+KMP,17,Reserved for PC Office,Reserved (10 SIM),,,01320058025-01320058034,,
+KMP,18,ADC,Headquarters,723035,01713-374656,01320-058035,,
+KMP,19,ADC,BOMB,,01769-694805,01320-058036,,
+KMP,20,ADC,SWAT,,01769-694806,01320-058037,,
+KMP,21,ADC,Force,760006,01769-694808,01320-058038,,
+KMP,22,ADC,Prosecution,723085,01769-694811,01320-058039,,
+KMP,23,ADC,Reserved for ADC (25 SIM),,,01320058040-01320058064,,
+KMP,24,AC,Crime,733667,017133-74653,01320-058065,,
+KMP,25,AC,SWAT,,01713-373295,01320-058066,,
+KMP,26,AC,Force,762069,017133-73279,01320-058067,,
+KMP,27,AC,RO,2850129,017133-74655,01320-058068,,
+KMP,28,AC,Procecution,723257,01730-336456,01320-058069,,
+KMP,29,AC,Supply & Transport,721935,01769-690918,01320-058070,,
+KMP,30,Superintendent of Police Hospital,KMP,723505 723755,01769-690910,01320-058071,,
+KMP,31,AC,Reserved for AC (45 SIM),,,01320058072-01320058116,,
+KMP,32,Inspector,Court Inspector- 1,,01769-694823,01320-058117,,
+KMP,33,Inspector,Court Inspector- 2,,01769-694824,01320-058118,,
+KMP,34,Inspector,Court Inspector- 3,,01769-694825,01320-058119,,
+KMP,35,Others,Reserved (200 SIM),,,01320058120-01320058319,,
+KMP,36,DC,RCD,761134,01713-373278,01320-058320,,
+KMP,37,ADC,Reserved (05 SIM),,,01320058321-01320058325,,
+KMP,38,AC,RCD,2850102,01730-336458,01320-058326,,
+KMP,39,AC,Protocol & Protection,,01769-690913,01320-058327,,
+KMP,40,AC,Reserved (10 SIM),,,01320058328-01320058337,,
+KMP,41,Inspector,SAF,761439,01730-336457,01320-058338,,
+KMP,42,Inspector,RCD,763150,01769-690928,01320-058339,,
+KMP,43,Reserved for DC RCD Office,Reserved (20 SIM),,,01320058340-01320058359,,
+KMP,44,DC,South,722008 2830374,01713-373282,01320-058360,,
+KMP,45,ADC,South,732332,01769-690917,01320-058361,,
+KMP,46,ADC,Reserved (05 SIM),,,01320058362-01320058366,,
+KMP,47,AC,Reserved (05 SIM),,,01320058367-01320058371,,
+KMP,48,AC,Khulna,724818,017133-73283,01320-058372,,
+KMP,49,AC,Reserved (04 SIM),,,01320058373-01320058376,,
+KMP,50,AC,Shonadanga Model Thana,813531,017133-74654,01320-058377,,
+KMP,51,AC,Reserved (04 SIM),,,01320058378-01320058381,,
+KMP,52,Inspector,OC Khulna Thana,723411,01713-373285,01320-058382,ockmp.khu@police.gov.bd,
+KMP,53,Inspector,Invst: Khulna Thana,,01769-694815,01320-058383,,
+KMP,54,Inspector,Ops: Khulna Thana,,,01320-058384,,
+KMP,55,Inspector,Reserved for Khulna PS,,,01320-058385,,
+KMP,56,Inspector,Reserved for Khulna PS,,,01320-058386,,
+KMP,57,Inspector,PI- Khulna PS,,01769-694841,01320-058387,,
+KMP,58,Khulna PS,Duty officer,,01769-694835,01320-058388,,
+KMP,59,Reserved for Khulna PS,Reserved (20 SIM),,,01320058389-01320058408,,
+KMP,60,Inspector,OC Shonadanga Thana,724394,01713-373286,01320-058409,ockmp.son@police.gov.bd,
+KMP,61,Inspector,Invst: Shonadanga Thana,,01769-694816,01320-058410,,
+KMP,62,Inspector,Ops: Shonadanga Thana,,,01320-058411,,
+KMP,63,Inspector,Reserved for Shonadanga PS,,,01320-058412,,
+KMP,64,Inspector,Reserved for Shonadanga PS,,,01320-058413,,
+KMP,65,Inspector,PI- Shonadanga PS,,01769-694842,01320-058414,,
+KMP,66,Shonadanga PS,Duty officer,,01769-694836,01320-058415,,
+KMP,67,Reserved for Shonadanga PS,Reserved (20 SIM),,,01320058416-01320058435,,
+KMP,68,Inspector,OC Lobonchora Thana,,01769-690921,01320-058436,,
+KMP,69,Inspector,Invst: Lobonchora Thana,,01769-694817,01320-058437,,
+KMP,70,Inspector,Ops: Lobonchora Thana,,,01320-058438,,
+KMP,71,Inspector,Reserved for Lobonchora PS,,,01320-058439,,
+KMP,72,Inspector,Reserved for Lobonchora PS,,,01320-058440,,
+KMP,73,Inspector,Reserved for Lobonchora PS,,,01320-058441,,
+KMP,74,Lobonchora PS,Duty officer,,,01320-058442,,
+KMP,75,Reserved for Lobonchora PS,Reserved (20 SIM),,,01320058443-01320058462,,
+KMP,76,Inspector,OC Horintana Thana,,01769-690922,01320-058463,,
+KMP,77,Inspector,Invst: Horintana Thana,,01769-694818,01320-058464,,
+KMP,78,Inspector,Ops: Horintana Thana,,,01320-058465,,
+KMP,79,Inspector,Reserved for Horintana PS,,,01320-058466,,
+KMP,80,Inspector,Reserved for Horintana PS,,,01320-058467,,
+KMP,81,Inspector,Reserved for Horintana PS,,,01320-058468,,
+KMP,82,Horintana PS,Duty officer,,,01320-058469,,
+KMP,83,Reserved for Horintana PS,Reserved (20 SIM),,,01320058470-01320058489,,
+KMP,84,DC,North,762759 2850184,01713-373288,01320-058490,,
+KMP,85,ADC,North,762793,01769-694807,01320-058491,,
+KMP,86,ADC,Reserved (05 SIM),,,01320058492-01320058496,,
+KMP,87,AC,Reserved (05 SIM),,,01320058497-01320058501,,
+KMP,88,AC,Khalishpur Zone,760071,017133-73289,01320-058502,,
+KMP,89,AC,Reserved (04 SIM),,,01320058503-01320058506,,
+KMP,90,AC,Dowlatpur,763273,01769-690912,01320-058507,,
+KMP,91,AC,Reserved (04 SIM),,,01320058508-01320058511,,
+KMP,92,Inspector,OC Khalishpur Thana,761536,01713-373292,01320-058512,ockmp.kpu@police.gov.bd,
+KMP,93,Inspector,Invst: Khalishpur Thana,,01769-694819,01320-058513,,
+KMP,94,Inspector,Ops: Khalishpur Thana,,,01320-058514,,
+KMP,95,Inspector,Reserved for Khalishpur PS,,,01320-058515,,
+KMP,96,Inspector,Reserved for Khalishpur PS,,,01320-058516,,
+KMP,97,Inspector,PI-Khalishpur PS,,01769-694843,01320-058517,,
+KMP,98,Khalishpur PS,Duty officer,,01769-694837,01320-058518,,
+KMP,99,Reserved for Khalishpur PS,Reserved (20 SIM),,,01320058519-01320058538,,
+KMP,100,Inspector,OC Dowlatpur Thana,774458,01713-373293,01320-058539,ockmp.dau@police.gov.bd,
+KMP,101,Inspector,Invst: Dowlatpur Thana,,01769-694820,01320-058540,,
+KMP,102,Inspector,Ops: Dowlatpur Thana,,,01320-058541,,
+KMP,103,Inspector,Reserved for Dowlatpur PS,,,01320-058542,,
+KMP,104,Inspector,Reserved for Dowlatpur PS,,,01320-058543,,
+KMP,105,Inspector,PI-Dowlatpur PS,,01769-694844,01320-058544,,
+KMP,106,Dowlatpur PS,Duty officer,,01769-694839,01320-058545,,
+KMP,107,Reserved for Dowlatpur PS,Reserved (20 SIM),,,01320058546-01320058565,,
+KMP,108,Inspector,OC Arangghata Thana,775140,01769-690923,01320-058566,,
+KMP,109,Inspector,Invst: Arangghata Thana,,01769-694821,01320-058567,,
+KMP,110,Inspector,Ops: Arangghata Thana,,,01320-058568,,
+KMP,111,Inspector,Reserved for Arangghata PS,,,01320-058569,,
+KMP,112,Inspector,Reserved for Arangghata PS,,,01320-058570,,
+KMP,113,Inspector,Reserved for Arangghata PS,,,01320-058571,,
+KMP,114,Arangghata PS,Duty officer,,,01320-058572,,
+KMP,115,Reserved for Arangghata PS,Reserved (20 SIM),,,01320058573-01320058592,,
+KMP,116,Inspector,OC Khanjahan Ali Thana,785457,01713-373294,01320-058593,ockmp.kha@police.gov.bd,
+KMP,117,Inspector,Inves: Khanjahan Ali Thana,,01769-694822,01320-058594,,
+KMP,118,Inspector,Ops: Khanjahan Ali Thana,,,01320-058595,,
+KMP,119,Inspector,Reserved for Khanjahan Ali PS,,,01320-058596,,
+KMP,120,Inspector,Reserved for Khanjahan Ali PS,,,01320-058597,,
+KMP,121,Inspector,Reserved for Khanjahan Ali PS,,,01320-058598,,
+KMP,122,Khanjahan Ali PS,Duty officer,,01769-694840,01320-058599,,
+KMP,123,Reserved for Khanjahan Ali PS,Reserved (20 SIM),,,01320058600-01320058619,,
+KMP,124,DC,CSB,813655,01713-373290,01320-058620,,
+KMP,125,ADC,CSB,2831124,01730-336454,01320-058621,,
+KMP,126,ADC,Media & Com. Poliching,813593,01769-694812,01320-058622,,
+KMP,127,ADC,Reserved (05 SIM),,,01320058623-01320058627,,
+KMP,128,AC,CSB,720567,017133-73280,01320-058628,,
+KMP,129,AC,Victim Support,810421,01769-690920,01320-058629,,
+KMP,130,AC,Reserved (10 SIM),,,01320058630-01320058639,,
+KMP,131,Inspector,CIO,,01769-690926,01320-058640,,
+KMP,132,Reserved for DC CSB Office,Reserved (19 SIM),,,01320058641-01320058659,,
+KMP,133,DC,Traffic,730583,01769-694803,01320-058660,,
+KMP,134,ADC,Traffic South,720646,01769-694809,01320-058661,,
+KMP,135,ADC,Traffice North,,01769-694810,01320-058662,,
+KMP,136,ADC,Reserved (10 SIM),,,01320058663-01320058672,,
+KMP,137,AC,Reserved (10 SIM),,,01320058673-01320058682,,
+KMP,138,AC,Traffic South,731431,017133-73291,01320-058683,,
+KMP,139,AC,Reserved (04 SIM),,,01320058684-01320058687,,
+KMP,140,AC,Traffic North,,01769-694813,01320-058688,,
+KMP,141,AC,Reserved (04 SIM),,,01320058689-01320058692,,
+KMP,142,Inspector,TI-1,,01713-373287,01320-058693,,
+KMP,143,Inspector,TI-2,,01769-694826,01320-058694,,
+KMP,144,Inspector,TI-3,,01769-694827,01320-058695,,
+KMP,145,Inspector,TI-4,,01769-694828,01320-058696,,
+KMP,146,Inspector,TI-5,,01769-694829,01320-058697,,
+KMP,147,Inspector,TI-6,,01769-694830,01320-058698,,
+KMP,148,Inspector,TI-7,,01769-694831,01320-058699,,
+KMP,149,Inspector,TI-8,,01769-694832,01320-058700,,
+KMP,150,Inspector,TI-9,,01769-694833,01320-058701,,
+KMP,151,Inspector,TI-10,,01769-694834,01320-058702,,
+KMP,152,Inspector,Reserved (100 SIM),,,01320058703-01320058802,,
+KMP,153,Sergeant,Reserved (200 SIM),,,01320058803-01320059002,,
+KMP,154,Reserved for DC Traffic Office,Reserved (97 SIM),,,01320059003-01320059099,,
+KMP,155,DC,DB,763360,01769-694804,01320-059100,,
+KMP,156,ADC,DB,762602,01713-373281,01320-059101,,
+KMP,157,ADC,Reserved (05 SIM),,,01320059102-01320059106,,
+KMP,158,AC,DB South,,01769-690914,01320-059107,,
+KMP,159,AC,DB North,,01769-694814,01320-059108,,
+KMP,160,AC,Reserved (10 SIM),,,01320059109-01320059118,,
+KMP,161,Inspector,OC DB,,01769-690927,01320-059119,,
+KMP,162,Reserved for DC DB Office,Reserved (20 SIM),,,01320059120-01320059139,,
+KMP,163,Reserved for KMP,Reserved (1858 SIM),,,01320059140-01320060997,,
+KMP,164,KMP Control Room,,,,01320-060998,,
+KMP,165,KMP Hotline,,,,01320-060999,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+KMP,,,,,,,,
+Khulna Range,"Unit/Office Name: Khulna Range Office, Khulna.",,,,,,,
+Khulna Range,SL/No,Designation,Post,Official Number,Current Number,New  Number,E-mail,New Number
+Khulna Range,,,,,,,,
+Khulna Range,1,DIG,,"041-761823
+041-762886",01713-374091,01320-139800,digkhulna@ police.gov.bd,01320-148800
+Khulna Range,2,DIG,Reserved,,,01320-139801,,01320-148801
+Khulna Range,3,Addl. DIG,(Admin & Finance),"041-762820
+041-762716",01713-374092,01320-139802,,01320-148802
+Khulna Range,4,Addl. DIG,Operations & Crime,"041-762395
+041-761515",01769-058164,01320-139803,,01320-148803
+Khulna Range,5,,Reserved For Addl. DIG  (08),,,"01320-139804
+01320-139811",,01320165804-01320165811
+Khulna Range,6,Poice Super,(Discepline & Procecution),041-762774,01769-694850,01320-139812,,01320-148812
+Khulna Range,7,Poice Super,(State & Welfare),,,01320-139813,,01320-148813
+Khulna Range,8,Poice Super,(Operations & Traffic),,,01320-139814,,01320-148814
+Khulna Range,9,Poice Super,(Media & Crime Analysis),,,01320-139815,,01320-148815
+Khulna Range,10,,Reserved For Police Super  (11),,,"01320-139816
+01320-139826",,01320165816-01320165826
+Khulna Range,11,,Staff Officer To DIG,041-761471,01713-374093,01320-139827,,01320-148847
+Khulna Range,12,Addl. Sp,(Admin & Finance),041-762724,01769-058165,01320-139828,,01320-148827
+Khulna Range,13,Addl. Sp,(Admin & Finance),041-762137,,01320-139829,,01320-148828
+Khulna Range,14,Addl. Sp,(Operations & Crime),,,01320-139830,,01320-148829
+Khulna Range,15,Addl. Sp,Reserved For Addl. SP (17),,,"01320-139831
+01320-139847",,01320165830-01320165846
+Khulna Range,16,ASP,(Admin & Finance),,,01320-139848,,01320-148848
+Khulna Range,17,ASP,(Operations & Crime),,,01320-139849,,01320-148849
+Khulna Range,18,ASP,(Discepline & Procecution),,,01320-139850,,01320-148850
+Khulna Range,19,ASP,(State & Welfare),,,01320-139851,,01320-148851
+Khulna Range,20,ASP,Reserved For ASP (15),,,"01320-139852
+01320-139866",,01320165852-01320165866
+Khulna Range,21,Inspector,(Force),041-672728,,01320-139867,,01320-148867
+Khulna Range,22,Inspector,(MT),,,01320-139868,,01320-148868
+Khulna Range,23,Inspector,Reserved Inspector (31),,,"01320-139869
+01320-139899",,01320165869-01320165899
+Khulna Range,24,,Reserved For Range Office (198),,,"01320-139900
+01320-140097",,
+Khulna Range,25,Conterol Room,,041-760339,,01320-140098,,01320-148900
+Khulna Range,26,Hotline,,,,01320-140099,,01320165901-01320166099
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,Unit/Office Name: District Police Khulna.,,,,,,,
+Khulna Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail,New Number
+Khulna Range,,,,,,,,
+Khulna Range,1,Police Super,,762939,01713-374095,01320-140100,spkhulna@police.gov.bd,01320-149100
+Khulna Range,2,Police Super,Reserved,,,01320-140101,,01320-149101
+Khulna Range,3,Addl. Sp,South,762954,01713-374096,01320-140102,,01320-149102
+Khulna Range,4,Addl. Sp,North,762950,01713-374097,01320-140103,,01320-149103
+Khulna Range,5,Addl. Sp,DSB,762956,01769-690827,01320-140104,,01320-149104
+Khulna Range,6,Addl. Sp,Headquarters,762959,01713-374098,01320-140105,,01320-149105
+Khulna Range,7,,Reserved For Addl. SP (06),,,"01320-140106
+01320-140111",,"01320-149106
+01320-149125"
+Khulna Range,10,ASP,Reserved For ASP (10),,,"01320-140112
+01320-140121",,"01320-092321
+01320-092330"
+Khulna Range,11,,Reserved For SP Office (24),,,"01320-140122
+01320-140145",,"01320-092331
+01320-092350"
+Khulna Range,8,Addl. Sp,A- Circle,723008,01713-374099,01320-140146,,01320-149126
+Khulna Range,9,,Reserved For A- Circle (04),,,"01320-140147
+01320-140150",,
+Khulna Range,10,Addl. Sp,B - Circle,723225,01713-374100,01320-140151,,01320-149127
+Khulna Range,11,,Reserved For B- Circle (04),,,"01320-140152
+01320-140155",,
+Khulna Range,12,Addl. Sp,C - Circle,56032,01713-374101,01320-140156,,01320-149128
+Khulna Range,13,,Reserved For C- Circle (04),,,"01320-140157
+01320-140160",,
+Khulna Range,14,ASP,D - Circle,,01769-693659,01320-140161,,01320-149129
+Khulna Range,15,,Reserved For D- Circle (04),,,"01320-140162
+01320-140165",,
+Khulna Range,16,Inspector,DIO-1,762960,01713-374102,01320-140166,,01320-149130
+Khulna Range,17,Inspector,DIO-2,,,01320-140167,,01320-149131
+Khulna Range,18,Inspector,DIO-3,,,01320-140168,,01320-149132
+Khulna Range,19,Inspector,DIO-4,,,01320-140169,,01320-149133
+Khulna Range,20,Inspector,DIO-5,,,01320-140170,,01320-149134
+Khulna Range,21,,Reserved For DIO (10),,,"01320-140171
+01320-140180",,
+Khulna Range,22,Inspector,OC Rupsha,800104,01713-374109,01320-140181,rupshathana@gmail.com,01320-149135
+Khulna Range,23,Inspector,Investigation  Rupsha,,,01320-140182,,01320-149136
+Khulna Range,24,Inspector,Reserved -1,,,01320-140183,,01320-149137
+Khulna Range,25,Inspector,Reserved -2,,,01320-140184,,01320-149138
+Khulna Range,26,Inspector,Reserved -3,,,01320-140185,,01320-149139
+Khulna Range,27,,Duty Officer,,,01320-140186,,01320-149140
+Khulna Range,28,,Reserved For Rupsha PS (20),,,"01320-140187
+01320-140206",,
+Khulna Range,29,Inspector,OC Terokhada,"04029
+56003",1713-374108,01320-140207,terokhadathana@yahoo.com,01320-149141
+Khulna Range,30,Inspector,Investigation  Terokhada,,,01320-140208,,01320-149142
+Khulna Range,31,Inspector,Reserved -1,,,01320-140209,,01320-149143
+Khulna Range,32,Inspector,Reserved -2,,,01320-140210,,01320-149144
+Khulna Range,33,Inspector,Reserved -3,,,01320-140211,,01320-149145
+Khulna Range,34,,Duty Officer,,,01320-140212,,01320-149146
+Khulna Range,35,,Reserved For Terokhada PS (20),,,"01320-140213
+01320-140232",,
+Khulna Range,36,Inspector,OC Digholia,890014,01713-374104,01320-140233,digholiathana@gmail.com,01320-149147
+Khulna Range,37,Inspector,Investigation  Digholia,,,01320-140234,,01320-149148
+Khulna Range,38,Inspector,Reserved -1,,,01320-140235,,01320-149149
+Khulna Range,39,Inspector,Reserved -2,,,01320-140236,,01320-149150
+Khulna Range,40,Inspector,Reserved -3,,,01320-140237,,01320-149151
+Khulna Range,41,,Duty Officer,,,01320-140238,,01320-149152
+Khulna Range,42,,Reserved For Digholia PS (20),,,"01320-140239
+01320-140258",,
+Khulna Range,43,Inspector,OC Fultala,701146,01713-3741403,01320-140259,fooltolathana@yahoo.com,01320-149153
+Khulna Range,44,Inspector,Investigation  Fultala,,,01320-140260,,01320-149154
+Khulna Range,45,Inspector,Reserved -1,,,01320-140261,,01320-149155
+Khulna Range,46,Inspector,Reserved -2,,,01320-140262,,01320-149156
+Khulna Range,47,Inspector,Reserved -3,,,01320-140263,,01320-149157
+Khulna Range,48,,Duty Officer,,,01320-140264,,01320-149158
+Khulna Range,49,,Reserved For Fultala PS (20),,,"01320-140265
+01320-140284",,
+Khulna Range,50,Inspector,OC Dumuria,"04025
+56002",01713-374107,01320-140285,dumuria.thana@gmail.com,01320-149159
+Khulna Range,51,Inspector,Investigation  Dumuria,,,01320-140286,,01320-149160
+Khulna Range,52,Inspector,Operation Dumuria,,,01320-140287,,01320-149161
+Khulna Range,53,Inspector,Reserved -1,,,01320-140288,,01320-149162
+Khulna Range,54,Inspector,Reserved -2,,,01320-140289,,01320-149163
+Khulna Range,55,,Duty Officer,,,01320-140290,,01320-149164
+Khulna Range,56,,Reserved For Dumuria PS (20),,,"01320-140291
+01320-140310",,
+Khulna Range,57,Inspector,OC Paikgasa,"04027
+56055",01713-374105,01320-140311,paikgachathana@gmail.com,01320-149165
+Khulna Range,58,Inspector,Investigation  Paikgasa,,,01320-140312,,01320-149166
+Khulna Range,59,Inspector,Operation Paikgasa,,,01320-140313,,01320-149167
+Khulna Range,60,Inspector,Reserved -1,,,01320-140314,,01320-149168
+Khulna Range,61,Inspector,Reserved -2,,,01320-140315,,01320-149169
+Khulna Range,62,,Duty Officer,,,01320-140316,,01320-149170
+Khulna Range,63,,Reserved For Paikgasa PS (20),,,"01320-140317
+01320-140336",,
+Khulna Range,64,Inspector,OC Dakop,"04023
+56003",01713-374110,01320-140337,dakopthana@gmail.com,01320-149171
+Khulna Range,65,Inspector,Investigation  Dakop,,,01320-140338,,01320-149172
+Khulna Range,66,Inspector,Reserved -1,,,01320-140339,,01320-149173
+Khulna Range,67,Inspector,Reserved -2,,,01320-140340,,01320-149174
+Khulna Range,68,Inspector,Reserved -3,,,01320-140341,,01320-149175
+Khulna Range,69,,Duty Officer,,,01320-140342,,01320-149176
+Khulna Range,70,,Reserved For Dakop PS (20),,,"01320-140343
+01320-140362",,
+Khulna Range,71,Inspector,OC Botiaghata,"04022
+56002",01713-374106,01320-140363,batiaghatathana@gmail.com,01320-149177
+Khulna Range,72,Inspector,Investigation  Botiaghata,,,01320-140364,,01320-149178
+Khulna Range,73,Inspector,Reserved -1,,,01320-140365,,01320-149179
+Khulna Range,74,Inspector,Reserved -2,,,01320-140366,,01320-149180
+Khulna Range,75,Inspector,Reserved -3,,,01320-140367,,01320-149181
+Khulna Range,76,,Duty Officer,,,01320-140368,,01320-149182
+Khulna Range,77,,Reserved For Botiaghata PS (20),,,"01320-140369
+01320-140388",,
+Khulna Range,78,Inspector,OC Koyra,"04026
+56003",01713-374111,01320-140389,koyrathana@gmail.com,01320-149183
+Khulna Range,79,Inspector,Investigation  Koyra,,,01320-140390,,01320-149184
+Khulna Range,80,Inspector,Reserved -1,,,01320-140391,,01320-149185
+Khulna Range,81,Inspector,Reserved -2,,,01320-140392,,01320-149186
+Khulna Range,82,Inspector,Reserved -3,,,01320-140393,,01320-149187
+Khulna Range,83,,Duty Officer,,,01320-140394,,01320-149188
+Khulna Range,84,,Reserved For Koyra PS (20),,,"01320-140395
+01320-140414",,
+Khulna Range,85,Inspector,DB -1,723595,,01320-140415,,01320-149189
+Khulna Range,86,Inspector,DB -2,,,01320-140416,,01320-149190
+Khulna Range,87,Inspector,DB -3,,,01320-140417,,01320-149191
+Khulna Range,88,Inspector,DB -4,,,01320-140418,,01320-149192
+Khulna Range,89,Inspector,DB -5,,,01320-140419,,01320-149193
+Khulna Range,90,,Reserved For DB (10),,,"01320-140420
+01320-140430",,
+Khulna Range,91,Inspector,Court -1,720330,,01320-140431,,01320-149194
+Khulna Range,92,Inspector,Court -2,,,01320-140432,,01320-149195
+Khulna Range,93,Inspector,Court -3,,,01320-140433,,01320-149196
+Khulna Range,94,Inspector,Court -4,,,01320-140434,,01320-149197
+Khulna Range,95,,Court -5,,,01320-140435,,01320-149198
+Khulna Range,96,,Reserved For  Court (10),,,"01320-140435
+01320-140444",,
+Khulna Range,97,Inspector,TI -1,723716,,01320-140445,,01320-149199
+Khulna Range,98,Inspector,TI-2,,,01320-140446,,01320-149200
+Khulna Range,99,Inspector,TI-3,,,01320-140447,,01320-149201
+Khulna Range,100,Inspector,TI-4,,,01320-140448,,01320-149202
+Khulna Range,101,Inspector,TI-5,,,01320-140449,,01320-149203
+Khulna Range,102,,Reserved For  TI (10),,,"01320-140450
+01320-140459",,
+Khulna Range,103,Inspector,RI,723210,,01320-140460,,01320-149204
+Khulna Range,104,,Reserved For Police Lines (15),,,"01320-140461
+01320-140475",,"01320-149210
+01320-167598"
+Khulna Range,105,,Reserved For District Police (622),,,"01320-140476
+01320-141097",,
+Khulna Range,106,Control Room,,762937,,01320-141098,,
+Khulna Range,107,Hotline,,,,01320-141099,,01320-167599
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,Unit/Office Name: District Police Bagerhat .,,,,,,,
+Khulna Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail,New Number
+Khulna Range,,,,,,,,
+Khulna Range,1,Police Super,,"62274 
+62266*",01713-374116,01320-141100,spbagerhat@police.gov.bd,01320-167600
+Khulna Range,2,Police Super,Reserved,,,01320-141101,,01320-167601
+Khulna Range,3,Addl. SP,(Admin & Crime),62722,01713-374117,01320-141102,,01320-167602
+Khulna Range,4,Addl. SP,Headquarters,62433,01713-374118,01320-141103,,01320-167603
+Khulna Range,5,,Reserved For Addl. SP (06),,,"01320-141104
+01320-141109",,"01320-167606
+01320-167621"
+Khulna Range,6,ASP,Reserved For ASP (10),,,"01320-141110
+01320-141119",,"01320-092321
+01320-092330"
+Khulna Range,7,,Reserved For SP Office (24),,,"01320-141120
+01320-141143",,"01320-092331
+01320-092350"
+Khulna Range,8,Addl. SP,(Sadar Circle),62735,01713-374119,01320-141144,scirclebagerhat@gmail.com,01320-167604
+Khulna Range,9,,Reserved For Sadar Circle (04),,,"01320-141145
+01320-141148",,
+Khulna Range,10,Addl. SP,(Morelgonj Circle),04656-56244,01713-374120,01320-141149,mcirclebagerhat@gmail.com,01320-167605
+Khulna Range,11,,Reserved For Morelgonj Circle (04),,,"01320-141150
+01320-141153",,
+Khulna Range,12,ASP,(Fokirhat Circle),,017169-693596,01320-141154,fcirclebagerhat@gmail.com,01320-167622
+Khulna Range,13,,Reserved For Fokirhat Circle (04),,,"01320-141155
+01320-141158",,
+Khulna Range,14,ASP,(Mongla Circle),,01769-693597,01320-141159,moncirclebagerhat@gmail.com,01320-167623
+Khulna Range,15,,Reserved For Mongla Circle (04),,,"01320-141160
+01320-141163",,
+Khulna Range,16,Inspector,DIO -1,62750,01713-374121,01320-141164,dio1dsbbagerhat@gmail.com,01320-167652
+Khulna Range,17,Inspector,DIO -2,,,01320-141165,,01320-167653
+Khulna Range,18,Inspector,DIO -3,,,01320-141166,,01320-167654
+Khulna Range,19,Inspector,DIO -4,,,01320-141167,,01320-167655
+Khulna Range,20,Inspector,DIO -5,,,01320-141168,,01320-167656
+Khulna Range,21,,Reserved For DIO (10),,,"01320-141169
+01320-141178",,
+Khulna Range,22,Inspector,OC Bagerhat Thana,62707,01713-374122,01320-141179,bagerhatmodelps@gmail.com,01320-167657
+Khulna Range,23,Inspector,Investigation Bagerhat Thana,,,01320-141180,,01320-167658
+Khulna Range,24,Inspector,Operation & CPL bagerhat,,,01320-141181,,01320-167659
+Khulna Range,25,Inspector,Reserved -1,,,01320-141182,,01320-167661
+Khulna Range,26,Inspector,Reserved -2,,,01320-141183,,
+Khulna Range,27,,Duty Officer,,,01320-141184,,01320-167662
+Khulna Range,28,,Reserved For Bagerhat PS (20),,,"01320-141185
+01320-141204",,
+Khulna Range,29,Inspector,OC Fokirhat Thana,04653-56234,01713-374123,01320-141205,fakirhatps@gmail.com,01320-167663
+Khulna Range,30,Inspector,Investigation Fokirhat Thana,,,01320-141206,,01320-167664
+Khulna Range,31,Inspector,Operation & CPL Fokirhat,,,01320-141207,,01320-167665
+Khulna Range,32,Inspector,Reserved -1,,,01320-141208,,01320-167667
+Khulna Range,33,Inspector,Reserved -2,,,01320-141209,,
+Khulna Range,34,,Duty Officer,,,01320-141210,,01320-167668
+Khulna Range,35,,Reserved For Fokirhat PS (20),,,"01320-141111
+01320-141230",,
+Khulna Range,36,Inspector,OC Mollahat thana,04655-56010,01713-374124,01320-141231,mollahatps@gmail.com,01320-167669
+Khulna Range,37,Inspector,Investigation Mollahat Thana,,,01320-141232,,01320-167670
+Khulna Range,38,Inspector,Operation & CPL Mollahat,,,01320-141233,,01320-167671
+Khulna Range,39,Inspector,Reserved -1,,,01320-141234,,01320-167672
+Khulna Range,40,Inspector,Reserved -2,,,01320-141235,,01320-167673
+Khulna Range,41,,Duty Officer,,,01320-141236,,01320-167674
+Khulna Range,42,,Reserved For Mollahat PS (20),,,"01320-141237
+01320-141256",,
+Khulna Range,43,Inspector,OC Chitolmari Thana,04652-56003,01713-374125,01320-141257,chitolmarips@yahoo.com,01320-167675
+Khulna Range,44,Inspector,Investigation Chitolmari Thana,,,01320-141258,,01320-167676
+Khulna Range,45,Inspector,Operation & CPL Chitolmari,,,01320-141259,,01320-167677
+Khulna Range,46,Inspector,Reserved -1,,,01320-141260,,01320-167678
+Khulna Range,47,Inspector,Reserved -2,,,01320-141261,,01320-167679
+Khulna Range,48,,Duty Officer,,,01320-141262,,01320-167680
+Khulna Range,49,,Reserved For Chitolmari PS (20),,,"01320-141263
+01320-141282",,
+Khulna Range,50,Inspector,OC Kochua Thana,04654-56014,01713-374126,01320-141283,kachuaps@gmail.com,01320-167681
+Khulna Range,51,Inspector,Invstigation Kochua Thana,,,01320-141284,,01320-167682
+Khulna Range,52,Inspector,Operation & CPL Kochua,,,01320-141285,,01320-167683
+Khulna Range,53,Inspector,Reserved -1,,,01320-141286,,01320-167684
+Khulna Range,54,Inspector,Reserved -2,,,01320-141287,,01320-167685
+Khulna Range,55,,Duty Officer,,,01320-141288,,01320-167686
+Khulna Range,56,,Reserved For Kochua PS (20),,,"01320-141289
+01320-141308",,
+Khulna Range,57,Inspector,OC Morelgong Thana,04656-56225,01713-374127,01320-141309,moreljongps@gmail.com,01320-167687
+Khulna Range,58,Inspector,Investigation Morelgong Thana,,,01320-141310,,01320-167688
+Khulna Range,59,Inspector,Opereation & CPL  Morelgong,,,01320-141311,,01320-167689
+Khulna Range,60,Inspector,Morelgong Circle Office,,,01320-141312,,01320-167690
+Khulna Range,61,Inspector,Reserved -1,,,01320-141313,,01320-167691
+Khulna Range,62,,Duty Officer,,,01320-141314,,01320-167692
+Khulna Range,63,,Reserved For Morelgong PS (20),,,"01320-141315
+01320-141334",,
+Khulna Range,64,Inspector,OC Shoronkhola Thana,04659-56007,01713-374128,01320-141335,sharonkholaps@gmail.com,01320-167693
+Khulna Range,65,Inspector,Investigation Shoronkhola Thana,,,01320-141336,,01320-167694
+Khulna Range,66,Inspector,Operation & CPL Shoronkhola,,,01320-141337,,01320-167695
+Khulna Range,67,Inspector,Reserved -1,,,01320-141338,,01320-167696
+Khulna Range,68,Inspector,Reserved -2,,,01320-141339,,01320-167697
+Khulna Range,69,,Duty Officer,,,01320-141340,,01320-167698
+Khulna Range,70,,Reserved For Shoronkhola PS (20),,,"01320-141341
+01320-141360",,
+Khulna Range,71,Inspector,OC Mongla Thana,04658-73222,01713-374129,01320-141361,monglaps@gmail.com,01320-167699
+Khulna Range,72,Inspector,Investigation Mongla Thana,,,01320-141362,,01320-167700
+Khulna Range,73,Inspector,Operation & CPL Mongla,,,01320-141363,,01320-167701
+Khulna Range,74,Inspector,Reserved -1,,,01320-141364,,01320-167703
+Khulna Range,75,Inspector,Reserved -2,,,01320-141365,,
+Khulna Range,76,,Duty Officer,,,01320-141366,,01320-167704
+Khulna Range,77,,Reserved For Mongla PS (20),,,"01320-141367
+01320-141386",,
+Khulna Range,78,Inspector,OC Rampal Thana,04657-56004,01713-374130,01320-141387,rampalps@gmail.com,01320-167705
+Khulna Range,79,Inspector,Investigation Rampal Thana,,,01320-141388,,01320-167706
+Khulna Range,80,Inspector,Operation & CPL Rampal,,,01320-141389,,01320-167707
+Khulna Range,81,Inspector,Reserved -1,,,01320-141390,,01320-167708
+Khulna Range,82,Inspector,Reserved -2,,,01320-141391,,01320-167709
+Khulna Range,83,,Duty Officer,,,01320-141392,,01320-167710
+Khulna Range,84,,Reserved For Rampal PS (20),,,"01320-141393
+01320-141412",,
+Khulna Range,85,Inspector,DB-1,62811,01713-374131,01320-141413,,01320-167727
+Khulna Range,86,Inspector,DB-2,,,01320-141414,,01320-167728
+Khulna Range,87,Inspector,DB-3,,,01320-141415,,01320-167729
+Khulna Range,88,Inspector,DB-4,,,01320-141416,,01320-167730
+Khulna Range,89,Inspector,DB-5,,,01320-141417,,01320-167731
+Khulna Range,90,,Reserved For DB (10),,,"01320-141418
+01320-141427",,
+Khulna Range,91,Inspector,Court -1,62745,01713-374132,01320-141428,,01320-167722
+Khulna Range,92,Inspector,Court -2,,,01320-141429,,01320-167723
+Khulna Range,93,Inspector,Court -3,,,01320-141430,,01320-167724
+Khulna Range,94,Inspector,Court -4,,,01320-141431,,01320-167725
+Khulna Range,95,Inspector,Court -5,,,01320-141432,,01320-167726
+Khulna Range,96,,Reserved For DB (10),,,"01320-141433
+01320-141442",,
+Khulna Range,97,Inspector,TI -1,64351,01713-374134,01320-141443,,01320-167717
+Khulna Range,98,Inspector,TI -2,,,01320-141444,,01320-167718
+Khulna Range,99,Inspector,TI -3,,,01320-141445,,01320-167719
+Khulna Range,100,Inspector,TI -4,,,01320-141446,,01320-167720
+Khulna Range,101,Inspector,TI -5,,,01320-141447,,01320-167721
+Khulna Range,102,,Reserved For TI (10),,,"01320-141448
+01320-141457",,
+Khulna Range,103,Inspector,RI,,,01320-141458,,
+Khulna Range,104,,Reserved For Police Lines (15),,,"01320-141459
+01320-141473",,"01320-167741
+01320-167750"
+Khulna Range,105,,Reserved For District Police (624 ),,,"01320-141474
+01320-142097",,"01320-167755
+01320-168099"
+Khulna Range,106,Control Room,,,,01320-142098,,
+Khulna Range,107,Hotline,,,,01320-142099,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,Unit/Office Name: District Police Satkhira.,,,,,,,
+Khulna Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail,New Number
+Khulna Range,,,,,,,,
+Khulna Range,1,Police Super,,"0471-63033
+ 63838*
+62284",01713-374135,01320-142100,spsatkhira@.police. gov.bd,01320-168600
+Khulna Range,2,Police Super,Reserved,,,01320-142101,,01320-168601
+Khulna Range,3,Addl. SP,Admin,62268,01713-374136,01320-142102,,01320-168602
+Khulna Range,4,Addl. SP,Headquarters,62271,01713-374137,01320-142103,,01320-168603
+Khulna Range,5,,Reserved For Addl. SP (06),,,"01320-142104
+01320-142109",,
+Khulna Range,6,ASP,DSB,,,01320-142110,,
+Khulna Range,7,ASP,Traffic,,,01320-142111,,
+Khulna Range,8,,Reserved For ASP (08),,,"01320-142112
+01320-142119",,"01320-092321
+01320-092330"
+Khulna Range,9,,Reserved For SP Office (24),,,"01320-142120
+01320-142143",,"01320-092331
+01320-092350"
+Khulna Range,10,Addl. SP,(Sadar Circle),64224,01713-374138,01320-142144,,01320-168604
+Khulna Range,11,,Reserved For Sadar Circle (04),,,"01320-142145
+01320-142148",,
+Khulna Range,12,Addl. SP,(Kaligonj Cirle),04725-56002,01713-374139,01320-142149,,01320-168605
+Khulna Range,13,,Reserved For Kaligonj Circle (04),,,"01320-142150
+01320-142153",,
+Khulna Range,14,ASP,Tala Circle,,01769-693315,01320-142154,,01320-168622
+Khulna Range,15,,Reserved For Tala Circle (04),,,"01320-142155
+01320-142158",,
+Khulna Range,16,ASP,Debhata Circle,,01769-693316,01320-142159,,01320-168623
+Khulna Range,17,,Reserved For Debhata Circle (04),,,"01320-142160
+01320-142163",,
+Khulna Range,18,Inspector,DIO-1,,01713-374140,01320-142164,,01320-168652
+Khulna Range,19,Inspector,DIO-2,,,01320-142165,,01320-168653
+Khulna Range,20,Inspector,DIO-3,,,01320-142166,,01320-168654
+Khulna Range,21,Inspector,DIO-4,,,01320-142167,,01320-168655
+Khulna Range,22,Inspector,DIO-5,,,01320-142168,,01320-168656
+Khulna Range,23,,Reserved For DIO (10),,,"01320-142169
+01320-142178",,
+Khulna Range,24,Inspector,OC Sathkhira Thana,62252,01713-374141,01320-142179,,01320-168657
+Khulna Range,25,Inspector,Investigation Sathkhira Thana,,,01320-142180,,01320-168658
+Khulna Range,26,Inspector,Reserved -1,,,01320-142181,,01320-168659
+Khulna Range,27,Inspector,Reserved -2,,,01320-142182,,01320-168660
+Khulna Range,28,Inspector,Reserved -3,,,01320-142183,,01320-168661
+Khulna Range,29,,Duty Officer,,,01320-142184,,01320-168662
+Khulna Range,30,,Reserved For Sathkhira PS (20),,,"01320-142185
+01320-142204",,
+Khulna Range,31,Inspector,OC Kolarowa Thana,04724-75444,01713-374142,01320-142205,,01320-168663
+Khulna Range,32,Inspector,Investigation Kolarowa Thana,,,01320-142206,,01320-168664
+Khulna Range,33,Inspector,Reserved -1,,,01320-142207,,01320-168665
+Khulna Range,34,Inspector,Reserved -2,,,01320-142208,,01320-168666
+Khulna Range,35,Inspector,Reserved -3,,,01320-142209,,01320-168667
+Khulna Range,36,,Duty Officer,,,01320-142210,,01320-168668
+Khulna Range,37,,Reserved For Kolarowa PS (20),,,"01320-142211
+01320-142230",,
+Khulna Range,38,Inspector,OC Tala Thana,04727-56103,01713-374143,01320-142231,,01320-168669
+Khulna Range,39,Inspector,InvestigationTala Thana,,,01320-142232,,01320-168670
+Khulna Range,40,Inspector,Reserved -1,,,01320-142233,,01320-168671
+Khulna Range,41,Inspector,Reserved -2,,,01320-142234,,01320-168672
+Khulna Range,42,Inspector,Reserved -3,,,01320-142235,,01320-168673
+Khulna Range,43,,Duty Officer,,,01320-142236,,01320-168674
+Khulna Range,44,,Reserved For Tala PS (20),,,"01320-142237
+01320-142256",,
+Khulna Range,45,Inspector,OC Kaligonj Thana,04725-56002,01713-374144,01320-142257,,01320-168675
+Khulna Range,46,Inspector,Investigation Kaligonj Thana,,,01320-142258,,01320-168676
+Khulna Range,47,Inspector,Reserved -1,,,01320-142259,,01320-168677
+Khulna Range,48,Inspector,Reserved -2,,,01320-142260,,01320-168678
+Khulna Range,49,Inspector,Reserved -3,,,01320-142261,,01320-168679
+Khulna Range,50,,Duty Officer,,,01320-142262,,01320-168680
+Khulna Range,51,,Reserved For Kaligonj PS (20),,,"01320-142263
+01320-142282",,
+Khulna Range,52,Inspector,OC Shamnogor Thana,04726-44066,01713-374145,01320-142283,,01320-168681
+Khulna Range,53,Inspector,Investigation Shamnogor Thana,,,01320-142284,,01320-168682
+Khulna Range,54,Inspector,Reserved -1,,,01320-142285,,01320-168683
+Khulna Range,55,Inspector,Reserved -2,,,01320-142286,,01320-168684
+Khulna Range,56,Inspector,Reserved -3,,,01320-142287,,01320-168685
+Khulna Range,57,,Duty Officer,,,01320-142288,,01320-168686
+Khulna Range,58,,Reserved For Shamnogor PS (20),,,"01320-142289
+01320-142308",,
+Khulna Range,59,Inspector,OC Debhata Thana,04732-73003,01713-374146,01320-142309,,01320-168687
+Khulna Range,60,Inspector,Investigation Debhata Thana,,,01320-142310,,01320-168688
+Khulna Range,61,Inspector,Reserved -1,,,01320-142311,,01320-168689
+Khulna Range,62,Inspector,Reserved -2,,,01320-142312,,01320-168690
+Khulna Range,63,Inspector,Reserved -3,,,01320-142313,,01320-168691
+Khulna Range,64,,Duty Officer,,,01320-142314,,01320-168692
+Khulna Range,65,,Reserved For Debhata PS (20),,,"01320-142215
+01320-142334",,
+Khulna Range,66,Inspector,OC Ashasuni Thana,04722-56011,01713-374147,01320-142335,,01320-168693
+Khulna Range,67,Inspector,Investigation Ashasuni Thana,,,01320-142336,,01320-168694
+Khulna Range,68,Inspector,Reserved -1,,,01320-142337,,01320-168695
+Khulna Range,69,Inspector,Reserved -2,,,01320-142338,,01320-168696
+Khulna Range,70,Inspector,Reserved -3,,,01320-142339,,01320-168697
+Khulna Range,71,,Duty Officer,,,01320-142340,,01320-168698
+Khulna Range,72,,Reserved For Ashasuni PS (20),,,"01320-142341
+01320-142360",,
+Khulna Range,73,Inspector,OC Patkelghata Thana,,01713-374148,01320-142361,,01320-168699
+Khulna Range,74,Inspector,Investigation Patkelghata Thana,,,01320-142362,,01320-168700
+Khulna Range,75,Inspector,Reserved -1,,,01320-142363,,01320-168701
+Khulna Range,76,Inspector,Reserved -2,,,01320-142364,,01320-168702
+Khulna Range,77,Inspector,Reserved -3,,,01320-142365,,01320-168703
+Khulna Range,78,,Duty Officer,,,01320-142366,,01320-168704
+Khulna Range,79,,Reserved For Patkelghata PS (20),,,"01320-142367
+01320-142386",,
+Khulna Range,80,Inspector,DB-1,,01713-374149,01320-142387,,01320-168721
+Khulna Range,81,Inspector,DB-2,,,01320-142388,,01320-168722
+Khulna Range,82,Inspector,DB-3,,,01320-142389,,01320-168723
+Khulna Range,83,Inspector,DB-4,,,01320-142390,,01320-168724
+Khulna Range,84,Inspector,DB-5,,,01320-142391,,01320-168725
+Khulna Range,85,,Reserved For DB (10),,,"01320-142392
+01320-142401",,
+Khulna Range,86,Inspector,Court -1,62122,01713-374150,01320-142402,,01320-168716
+Khulna Range,87,Inspector,Court -2,,,01320-142403,,01320-168717
+Khulna Range,88,Inspector,Court -3,,,01320-142404,,01320-168718
+Khulna Range,89,Inspector,Court -4,,,01320-142405,,01320-168719
+Khulna Range,90,Inspector,Court -5,,,01320-142406,,01320-168720
+Khulna Range,91,,Reserved For Court (10),,,"01320-142407
+01320-142416",,
+Khulna Range,92,Inspector,TI -1,,01713-374152,01320-142417,,01320-168711
+Khulna Range,93,Inspector,TI -2,,,01320-142418,,01320-168712
+Khulna Range,94,Inspector,TI -3,,,01320-142419,,01320-168713
+Khulna Range,95,Inspector,TI -4,,,01320-142420,,01320-168714
+Khulna Range,96,Inspector,TI -5,,,01320-142421,,01320-168715
+Khulna Range,97,,Reserved For TI (10),,,"01320-142422
+01320-142431",,
+Khulna Range,98,Inspector,RI,62269,01713-374151,01320-142432,,01320-168705
+Khulna Range,99,,Reserved For Police Lines (15),,,"01320-142433
+01320-142447",,
+Khulna Range,100,,Reserved  For District Police (650),,,"01320-142448
+01320-143097",,"01320-168735
+01320-168751"
+Khulna Range,101,Control Room,,,,01320-143098,,
+Khulna Range,102,Hotline,,,,01320-143099,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,Unit/Office Name: District Police Jessore.,,,,,,,
+Khulna Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail,New Number
+Khulna Range,,,,,,,,
+Khulna Range,1,Police Super,,"68622
+68600*
+68611",01713-374152,01320-143100,,01320-170100
+Khulna Range,2,Police Super,Reserved,,,01320-143101,,01320-170101
+Khulna Range,3,Addl. SP,(Admin & Crime),64187,01713-374154,01320-143102,,01320-170102
+Khulna Range,4,Addl. SP,(DSB),,01713-374155,01320-143103,,01320-170104
+Khulna Range,5,Addl. SP,Headquarters,66139,01713-374156,01320-143104,,01320-170103
+Khulna Range,6,,Reserved For Addl. SP (06),,,"01320-143105
+01320-143110",,
+Khulna Range,7,ASP,Reserved For ASP (10),,,"01320-143111
+01320-143120",,"01320-092321
+01320-092330"
+Khulna Range,8,,Reserved For SP Office (24),,,"01320-143121
+01320-143144",,"01320-092331
+01320-092350"
+Khulna Range,9,Addl. SP,Ka- Circle,66284,01713-374157,01320-143145,,01320-170105
+Khulna Range,10,,Reserved For Ka -Circle (04),,,"01320-143146
+01320-143149",,
+Khulna Range,11,Addl. SP,Kha - Circle,66076,01713-374158,01320-143150,,01320-170106
+Khulna Range,12,,Reserved For Kha -Circle (04),,,"01320-143151
+01320-143154",,
+Khulna Range,13,ASP,Monirampur Circle,,,01320-143155,,01320-170122
+Khulna Range,14,,Reserved For Monirampur Circle (04),,,"01320-143156
+01320-143159",,
+Khulna Range,15,ASP,Navaron Circle,,,01320-143160,,01320-170123
+Khulna Range,16,,Reserved For Nvaron Circle (04),,,"01320-143161
+01320-143164",,
+Khulna Range,17,Inspector,DIO-1,63695,01713-374160,01320-143165,,01320-170152
+Khulna Range,18,Inspector,DIO-2,,,01320-143166,,01320-170153
+Khulna Range,19,Inspector,DIO-3,,,01320-143167,,01320-170154
+Khulna Range,20,Inspector,DIO-4,,,01320-143168,,01320-170155
+Khulna Range,21,,DIO-5,,,01320-143169,,01320-170156
+Khulna Range,22,,Reserved For DIO (10),,,"01320-143170
+01320-143179",,
+Khulna Range,23,Inspector,OC Kotwali Model Thana,,01713-374161,01320-143180,,01320-170157
+Khulna Range,24,Inspector,Investigation Kotwali Thana,,,01320-143181,,01320-170158
+Khulna Range,25,Inspector,Operation Kotwali Thana,,,01320-143182,,01320-170159
+Khulna Range,26,Inspector,Inteligence & CPL,,,01320-143183,,01320-170160
+Khulna Range,27,Inspector,Reserved -1,,,01320-143184,,01320-170161
+Khulna Range,28,,Duty Officer,,,01320-143185,,01320-170162
+Khulna Range,29,,Reserved For Kotwali PS (20),,,"01320-143186
+01320-143205",,
+Khulna Range,30,Inspector,OC Jhikorgasa Thana,04225-71303,01713-374162,01320-143206,,01320-170163
+Khulna Range,31,Inspector,Investigation Jhikorgasa Thana,,,01320-143207,,01320-170164
+Khulna Range,32,Inspector,Operation Jhikorgasa Thana,,,01320-143208,,01320-170165
+Khulna Range,33,Inspector,Inteligence & CPL Jhikorgasa,,,01320-143209,,01320-170166
+Khulna Range,34,Inspector,Reserved -1,,,01320-143210,,01320-170167
+Khulna Range,35,,Duty Officer,,,01320-143211,,01320-170168
+Khulna Range,36,,Reserved For Jhikorgasa PS (20),,,"01320-143213
+01320-143231",,
+Khulna Range,37,Inspector,OC Monirampur Thana,04227/78224,01713-374165,01320-143232,,01320-170169
+Khulna Range,38,Inspector,Investigation Monirampur Thana,,,01320-143233,,01320-170170
+Khulna Range,39,Inspector,Operation Monirampur Thana,,,01320-143234,,01320-170171
+Khulna Range,40,Inspector,Inteligence & CPL Monirampur,,,01320-143235,,01320-170172
+Khulna Range,41,Inspector,Reserved -1,,,01320-143236,,
+Khulna Range,42,,Duty Officer,,,01320-143237,,01320-170174
+Khulna Range,43,,Reserved For Monirampur PS (20),,,"01320-143238
+01320-143257",,
+Khulna Range,44,Inspector,OC Bagharpara Thana,04223-56004,01713-374168,01320-143258,,01320-170175
+Khulna Range,45,Inspector,Investigation Bagharpara Thana,,,01320-143259,,01320-170176
+Khulna Range,46,Inspector,Operation Bagharpara Thana,,,01320-143260,,01320-170177
+Khulna Range,47,Inspector,Inteligence & CPL Bagharpara,,,01320-143261,,01320-170178
+Khulna Range,48,Inspector,Reserved -1,,,01320-143262,,01320-170179
+Khulna Range,49,,Duty Officer,,,01320-143263,,01320-170180
+Khulna Range,50,,Reserved For Bagharpara PS (20),,,"01320-143264
+01320-143283",,
+Khulna Range,51,Inspector,OC Chowgacha Thana,04224-56202,01713-374164,01320-143284,,01320-170181
+Khulna Range,52,Inspector,Investigation Chowgacha Thana,,,01320-143285,,01320-170182
+Khulna Range,53,Inspector,Operation Chowgacha Thana,,,01320-143286,,01320-170183
+Khulna Range,54,Inspector,Inteligence & CPL Chowgacha,,,01320-143287,,01320-170184
+Khulna Range,55,Inspector,Reserved -1,,,01320-143288,,01320-170185
+Khulna Range,56,,Duty Officer,,,01320-143289,,01320-170186
+Khulna Range,57,,Reserved For Chowgacha PS (20),,,"01320-143290
+01320-143309",,
+Khulna Range,58,Inspector,OC Sharsha Thana,04228-75300,01713-374163,01320-143310,,01320-170187
+Khulna Range,59,Inspector,Investigation Sharsha Thana,,,01320-143311,,01320-170188
+Khulna Range,60,Inspector,Operation Sharsha  Thana,,,01320-143312,,01320-170189
+Khulna Range,61,Inspector,Inteligence & CPL Sharsha,,,01320-143313,,01320-170190
+Khulna Range,62,Inspector,Reserved -1,,,01320-143314,,01320-170191
+Khulna Range,63,,Duty Officer,,,01320-143315,,01320-170192
+Khulna Range,64,,Reserved For Sharsha PS (20),,,"01320-143316
+01320-143335",,
+Khulna Range,65,Inspector,OC Keshobpur Thana,04226-56333,01713-374166,01320-143336,,01320-170193
+Khulna Range,66,Inspector,Investigation Keshobpur Thana,,,01320-143337,,01320-170194
+Khulna Range,67,Inspector,Operation Keshobpur Thana,,,01320-143338,,01320-170195
+Khulna Range,68,Inspector,Inteligence & CPL Keshobpur,,,01320-143339,,01320-170196
+Khulna Range,69,Inspector,Reserved,,,01320-143340,,01320-170197
+Khulna Range,70,,Duty Officer,,,01320-143341,,01320-170198
+Khulna Range,71,,Reserved For Keshobpur  PS (20),,,"01320-143342
+01320-143361",,
+Khulna Range,72,Inspector,OC Ovoynogor,04222-71274,01713-374167,01320-143362,,01320-170199
+Khulna Range,73,Inspector,Investigation Ovoynogor  Thana,,,01320-143363,,01320-170200
+Khulna Range,74,Inspector,Operation Ovoynogor  Thana,,,01320-143364,,01320-170201
+Khulna Range,75,Inspector,Inteligence & CPL Ovoynogor,,,01320-143365,,01320-170202
+Khulna Range,76,Inspector,Reserved -1,,,01320-143366,,01320-170203
+Khulna Range,77,,Duty Officer,,,01320-143367,,01320-170204
+Khulna Range,78,,Reserved For Ovoynogor  PS (20),,,"01320-143368
+01320-143387",,
+Khulna Range,79,Inspector,OC Benapol Port Thana,04228-75400,01713-374169,01320-143388,,01320-170205
+Khulna Range,80,Inspector,Investigation Benapol Thana,,,01320-143389,,01320-170206
+Khulna Range,81,Inspector,Operation Benapol  Thana,,,01320-143390,,01320-170207
+Khulna Range,82,Inspector,Inteligence & CPL Benapol,,,01320-143391,,01320-170208
+Khulna Range,83,Inspector,Reserved -1,,,01320-143392,,01320-170209
+Khulna Range,84,,Duty Officer,,,01320-143393,,01320-170210
+Khulna Range,85,,Reserved For Benapol  PS (20),,,"01320-143394
+01320-143413",,
+Khulna Range,86,Inspector,DB-1,62620,01713-374171,01320-143414,,01320-170227
+Khulna Range,87,Inspector,DB-2,,,01320-143415,,01320-170228
+Khulna Range,88,Inspector,DB-3,,,01320-143416,,01320-170229
+Khulna Range,89,Inspector,DB-4,,,01320-143417,,01320-170230
+Khulna Range,90,Inspector,DB-5,,,01320-143418,,01320-170231
+Khulna Range,91,,Reserved For DB (10),,,"01320-143419
+01320-143428",,
+Khulna Range,92,Inspector,Court-1,66186,,01320-143429,,01320-170222
+Khulna Range,93,Inspector,Court-2,,,01320-143430,,01320-170223
+Khulna Range,94,Inspector,Court-3,,,01320-143431,,01320-170224
+Khulna Range,95,Inspector,Court-4,,,01320-143432,,01320-170225
+Khulna Range,96,Inspector,Court-5,,,01320-143433,,01320-170226
+Khulna Range,97,,Reserved For Court (10),,,"01320-143434
+01320-143443",,
+Khulna Range,98,Inspector,TI -1,61242,01713-374174,01320-143444,,01320-170217
+Khulna Range,99,Inspector,TI- 2,,,01320-143445,,01320-170218
+Khulna Range,100,Inspector,TI- 3,,,01320-143446,,01320-170219
+Khulna Range,101,Inspector,TI- 4,,,01320-143447,,01320-170220
+Khulna Range,102,Inspector,TI- 5,,,01320-143448,,01320-170221
+Khulna Range,103,,Reserved For TI (10),,,"01320-143449
+01320-143458",,
+Khulna Range,104,Inspector,RI,66104,01713-374174,01320-143459,,01320-170211
+Khulna Range,105,,Reserved For Police Lines (15),,,"01320-143460
+01320-143474",,
+Khulna Range,106,,Reserved For District Police (623),,,"01320-143475
+01320-144097",,"01320-170245
+01320-170251"
+Khulna Range,107,Control Room,,,,01320-144098,,
+Khulna Range,108,Hotline,,,,01320-144099,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,Unit/Office Name: District Police Jhenaidah.,,,,,,,
+Khulna Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail,New Number
+Khulna Range,,,,,,,,
+Khulna Range,1,Police Super,,"0451-62513
+0451-62999",01713-374186,01320-144100,spjhenaidah@police.gov.bd,01320-171600
+Khulna Range,2,Police Super,Reserved,,,01320-144101,,01320-171601
+Khulna Range,3,Addl. Sp,(Admin & Crime),0451-62428,01713-374187,01320-144102,,01320-171602
+Khulna Range,4,Addl. Sp,Headquarters,0451-62223,01713-374188,01320-144103,,01320-171603
+Khulna Range,5,,Reserved For Addl. SP (06),,,"01320-144104
+01320-144109",,
+Khulna Range,6,ASP,Reserved For ASP (10),,,"01320-144110
+01320-144119",,"01320-092321
+01320-092330"
+Khulna Range,7,,Reserved For SP Office (24),,,"01320-144120
+01320-144143",,"01320-092331
+01320-092350"
+Khulna Range,8,Addl. Sp,Sadar Circle,0451-62271,01713-374189,01320-144144,addlspjhenaidahcircle2025@gmail.com,01320-171604
+Khulna Range,9,,Reserved For Sadar Circle (04),,,"01320-144145
+01320-144148",,
+Khulna Range,10,Addl. Sp,Kotchadpur Circle,04524-65046,01713-374190,01320-144149,cir.jhe.kotchandpur@police.gov.bd,01320-171605
+Khulna Range,11,,Reserved For Kotchadpur Circle (04),,,"01320-144150
+01320-144153",,
+Khulna Range,12,ASP,Shoilkupa Circle,0451-62272,01769-693806,01320-144154,cir.jhe.shailkupa@police.gov.bd,01320-171622
+Khulna Range,13,,Reserved For Shoilkupa Circle (04),,,"01320-144155
+01320-144158",,
+Khulna Range,14,Insprctor,DIO -1,0451-61431,01713-374191,01320-144159,,01320-171652
+Khulna Range,15,Insprctor,DIO -2,,,01320-144160,,01320-171653
+Khulna Range,16,Insprctor,DIO -3,,,01320-144161,,01320-171654
+Khulna Range,17,Insprctor,DIO -4,,,01320-144162,,01320-171655
+Khulna Range,18,Insprctor,DIO -5,,,01320-144163,,01320-171656
+Khulna Range,19,,Reserved For DIO (10),,,"01320-144164
+01320-144173",,
+Khulna Range,20,Insprctor,OC Jhenaidah Sadar Thana,0451-62222,01713-374192,01320-144174,,01320-171657
+Khulna Range,21,Insprctor,Investigation Sadar Thana,,01769-693808,01320-144175,,01320-171658
+Khulna Range,22,Insprctor,Operation Sadar Thana,,,01320-144176,,01320-171659
+Khulna Range,23,Insprctor,Reserves -1,,,01320-144177,,01320-171660
+Khulna Range,24,Insprctor,Reserves -2,,,01320-144178,,01320-171661
+Khulna Range,25,,Duty Officer,,,01320-144179,,01320-171662
+Khulna Range,26,,Reserved For Sadar PS (20),,,"01320-144180
+01320-144199",,
+Khulna Range,27,Insprctor,OC Shoilkupa Thana,04526-56002,01713-374194,01320-144200,shailkupathana@gmail.com,01320-171663
+Khulna Range,28,Insprctor,Investigation Shoilkupa Thana,,01769-693809,01320-144201,,01320-171664
+Khulna Range,29,Insprctor,Reserves -1,,,01320-144202,,01320-171665
+Khulna Range,30,Insprctor,Reserves -2,,,01320-144203,,01320-171666
+Khulna Range,31,Insprctor,Reserves -3,,,01320-144204,,01320-171667
+Khulna Range,32,,Duty Officer,,,01320-144205,,01320-171668
+Khulna Range,33,,Reserved For Shoilkupa PS (20),,,"01320-144206
+01320-144225",,
+Khulna Range,34,Insprctor,OC Harinakundu Thana,04522-74026,01713-374195,01320-144226,harinakunduthana@gmail.com,01320-171669
+Khulna Range,35,Insprctor,Investigation Sadar Thana,,01769-693810,01320-144227,,01320-171670
+Khulna Range,36,Insprctor,Reserves -1,,,01320-144228,,01320-171671
+Khulna Range,37,Insprctor,Reserves -2,,,01320-144229,,01320-171672
+Khulna Range,38,Insprctor,Reserves -3,,,01320-144230,,01320-171673
+Khulna Range,39,,Duty Officer,,,01320-144231,,01320-171674
+Khulna Range,40,,Reserved For Harinakundu PS (20),,,"01320-144232
+01320-144251",,
+Khulna Range,41,Insprctor,OC  Kaligonj Thana,04523-56336,01713-374193,01320-144252,ocjhe.kal@police.gov.bd,01320-171675
+Khulna Range,42,Insprctor,Investigation Kaligonj Thana,,01769-693811,01320-144253,opsjhe.kal@police.gov.bd,01320-171676
+Khulna Range,43,Insprctor,Reserves -1,,,01320-144254,,01320-171677
+Khulna Range,44,Insprctor,Reserves -2,,,01320-144255,,01320-171678
+Khulna Range,45,Insprctor,Reserves -3,,,01320-144256,,01320-171679
+Khulna Range,46,,Duty Officer,,,01320-144257,,01320-171680
+Khulna Range,47,,Reserved For Kaligonj PS (20),,,"01320-144258
+01320-144277",,
+Khulna Range,48,Insprctor,OC Kotchadpur Thana,04524-65007,01713-374196,01320-144278,ocjhe.koa@police.gov.bd,01320-171681
+Khulna Range,49,Insprctor,Investigation Kotchadpur Thana,,01769-693812,01320-144279,,01320-171682
+Khulna Range,50,Insprctor,Reserves -1,,,01320-144280,,01320-171683
+Khulna Range,51,Insprctor,Reserves -2,,,01320-144281,,01320-171684
+Khulna Range,52,Insprctor,Reserves -3,,,01320-144282,,01320-171685
+Khulna Range,53,,Duty Officer,,,01320-144283,,01320-171686
+Khulna Range,54,,Reserved For Kotchadpur PS (20),,,"01320-144284
+01320-144303",,
+Khulna Range,55,Insprctor,OC Mohespur Thana,04525-56222,01713-374197,01320-144304,ocjhe.mah@police.gov.bd,01320-171687
+Khulna Range,56,Insprctor,Investigation Mohespur Thana,,01769-693813,01320-144305,opsjhe.mah@police.gov.bd,01320-171688
+Khulna Range,57,Insprctor,Reserves -1,,,01320-144306,,01320-171689
+Khulna Range,58,Insprctor,Reserves -2,,,01320-144307,,01320-171690
+Khulna Range,59,Insprctor,Reserves -3,,,01320-144308,,01320-171691
+Khulna Range,60,,Duty Officer,,,01320-144309,,01320-171692
+Khulna Range,61,,Reserved For Mohespur PS (20),,,"01320-144310
+01320-144329",,
+Khulna Range,62,Insprctor,DB -1,0451-61430,01713-374198,01320-144330,,01320-171709
+Khulna Range,63,Insprctor,DB -2,,,01320-144331,,01320-171710
+Khulna Range,64,Insprctor,DB -3,,,01320-144332,,01320-171711
+Khulna Range,65,Insprctor,DB -4,,,01320-144333,,01320-171712
+Khulna Range,66,Insprctor,DB -5,,,01320-144334,,01320-171713
+Khulna Range,67,,Reserved For DB (10),,,"01320-144335
+01320-144344",,
+Khulna Range,68,Insprctor,Court -1,0451-62267,01713-374199,01320-144345,,01320-171704
+Khulna Range,69,Insprctor,Court -2,,,01320-144346,,01320-171705
+Khulna Range,70,Insprctor,Court -3,,,01320-144347,,01320-171706
+Khulna Range,71,Insprctor,Court -4,,,01320-144348,,01320-171707
+Khulna Range,72,Insprctor,Court -5,,,01320-144349,,01320-171708
+Khulna Range,73,,Reserved For Court (10),,,"01320-144350
+01320-144359",,
+Khulna Range,74,Insprctor,TI -1,0451-62446,01713-374201,01320-144360,,01320-171699
+Khulna Range,75,Insprctor,TI -2,,,01320-144361,,01320-171700
+Khulna Range,76,Insprctor,TI -3,,,01320-144362,,01320-171701
+Khulna Range,77,Insprctor,TI -4,,,01320-144363,,01320-171702
+Khulna Range,78,Insprctor,TI -5,,,01320-144364,,01320-171703
+Khulna Range,79,,Reserved For TI (10),,,"01320-144365
+01320-144374",,
+Khulna Range,80,Insprctor,RI,0451-62242,01713-374200,01320-144375,,01320-171693
+Khulna Range,81,,Reserved  For Police Lines  (15),,,"01320-144376
+01320-144390",,"01320-171723
+01320-171751"
+Khulna Range,82,,Reserved  For District Police (707),,,"01320-144391
+01320-145097",,"01320171756-
+01320172099"
+Khulna Range,83,Control Room,,,,01320-145098,,"01320172100-
+01320172599"
+Khulna Range,84,Hotline,,,,01320-145099,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,Unit/Office Name: District Police Magura.,,,,,,,
+Khulna Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail,New Number
+Khulna Range,,,,,,,,
+Khulna Range,1,Police Super,,"62300
+62530",01713-374175,01320-145100,spmagura@police.gov.bd,01320-172600
+Khulna Range,2,Police Super,Reserved,,,01320-145101,,01320-172601
+Khulna Range,3,Addl. SP,(Admin & Crime),62268,01713-374176,01320-145102,,01320-172602
+Khulna Range,4,Addl. SP,DSB,,,01320-145103,,
+Khulna Range,5,Addl. SP,Headquarters,62210,01713-374177,01320-145104,,01320-172603
+Khulna Range,6,,Reserved For Addl. SP (06),,,"01320-145105
+01320-145110",,
+Khulna Range,7,ASP,Reserved For ASP (10),,,"01320-145111
+01320-145120",,"01320-092321
+01320-092330"
+Khulna Range,8,,Reserved For SP Office (24),,,"01320-145121
+01320-145144",,"01320-092331
+01320-092350"
+Khulna Range,9,Addl. SP,Sadar Circle,51053,01769-694183,01320-145145,,01320-172604
+Khulna Range,10,,Reserved For Sadar Circle (04),,,"01320-145146
+01320-145149",,
+Khulna Range,11,ASP,Shalikha Circle,51199,01769-694184,01320-145150,,01320-172622
+Khulna Range,12,,Reserved For Shalikha Circle (04),,,"01320-145151
+01320-145154",,
+Khulna Range,13,Inspector,DIO-01,62220,01713-374178,01320-145155,,01320-172652
+Khulna Range,14,Inspector,DIO-02,,,01320-145156,,01320-172653
+Khulna Range,15,Inspector,DIO-03,,,01320-145157,,01320-172654
+Khulna Range,16,Inspector,DIO-04,,,01320-145158,,01320-172655
+Khulna Range,17,Inspector,DIO-05,,,01320-145159,,01320-172656
+Khulna Range,18,,Reserved For DIO (10),,,"01320-145160
+01320-145169",,
+Khulna Range,19,Inspector,OC Magura Thana,62234,01713-374179,01320-145170,ocmag.mag@police.gov.bd,01320-172657
+Khulna Range,20,Inspector,Investigation Magura Thana,,,01320-145171,,01320-172658
+Khulna Range,21,Inspector,Operation & CPL,,,01320-145172,,01320-172659
+Khulna Range,22,Inspector,Reserved -1,,,01320-145173,,01320-172660
+Khulna Range,23,Inspector,Reserved -2,,,01320-145174,,01320-172661
+Khulna Range,24,,Duty Officer,,,01320-145175,,01320-172662
+Khulna Range,25,,Reserved For Magura PS (20),,,"01320-145176
+01320-145195",,
+Khulna Range,26,Inspector,OC Shiripur Thana,04854-56104,01713-374181,01320-145196,ocmag.sre@police.gov.bd,01320-172663
+Khulna Range,27,Inspector,Investigation Shiripur Thana,,,01320-145197,,01320-172664
+Khulna Range,28,Inspector,Operation & CPL Shiripur,,,01320-145198,,01320-172665
+Khulna Range,29,Inspector,Reserved -1,,,01320-145199,,01320-172666
+Khulna Range,30,Inspector,Reserved -2,,,01320-145200,,01320-172667
+Khulna Range,31,,Duty Officer,,,01320-145201,,01320-172668
+Khulna Range,32,,Reserved For Shirpur PS (20),,,"01320-145202
+01320-145221",,
+Khulna Range,33,Inspector,OC Mohammodpur Thana,04852-75014,01713-374182,01320-145222,ocmag.moh@police.gov.bd,01320-172669
+Khulna Range,34,Inspector,Investigation Mohammodpur Thana,,,01320-145223,,01320-172670
+Khulna Range,35,Inspector,Operation & CPL Mohammodpur,,,01320-145224,,01320-172671
+Khulna Range,36,Inspector,Reserved -1,,,01320-145225,,01320-172672
+Khulna Range,37,Inspector,Reserved -2,,,01320-145226,,01320-172673
+Khulna Range,38,,Duty Officer,,,01320-145227,,01320-172674
+Khulna Range,39,,Reserved For Mohammodpur PS (20),,,"01320-145228
+01320-145247",,
+Khulna Range,40,Inspector,OC Shalikha Thana,04853-56024,01713-374180,01320-145248,ocmag.sha@police.gov.bd,01320-172675
+Khulna Range,41,Inspector,Investigation Shalikha Thana,,,01320-145249,,01320-172676
+Khulna Range,42,Inspector,Operation & CPL Shalikha,,,01320-145250,,01320-172677
+Khulna Range,43,Inspector,Reserved -1,,,01320-145251,,01320-172678
+Khulna Range,44,Inspector,Reserved -2,,,01320-145252,,01320-172679
+Khulna Range,45,,Duty Officer,,,01320-145253,,01320-172680
+Khulna Range,46,,Reserved For Shalikha PS (20),,,"01320-145254
+01320-145273",,
+Khulna Range,47,Inspector,DB -1,,,01320-145274,,
+Khulna Range,48,Inspector,DB -2,,,01320-145275,,
+Khulna Range,49,Inspector,DB -3,,,01320-145276,,
+Khulna Range,50,Inspector,DB -4,,,01320-145277,,
+Khulna Range,51,Inspector,DB -5,,,01320-145278,,
+Khulna Range,52,,Reserved For DB (10),,,"01320-145279
+01320-145288",,
+Khulna Range,53,Inspector,Court -1,62224,01713-374184,01320-145289,,01320-172692
+Khulna Range,54,Inspector,Court -2,,,01320-145290,,01320-172693
+Khulna Range,55,Inspector,Court -3,,,01320-145291,,01320-172694
+Khulna Range,56,Inspector,Court -4,,,01320-145292,,01320-172695
+Khulna Range,57,Inspector,Court -5,,,01320-145293,,01320-172696
+Khulna Range,58,,Reserved For Court (10),,,"01320-145294
+01320-145303",,
+Khulna Range,59,Inspector,TI -1,51157,017169-694185,01320-145304,,01320-172687
+Khulna Range,60,Inspector,TI -2,,,01320-145305,,01320-172688
+Khulna Range,61,Inspector,TI -3,,,01320-145306,,01320-172689
+Khulna Range,62,Inspector,TI -4,,,01320-145307,,01320-172690
+Khulna Range,63,Inspector,TI -5,,,01320-145308,,01320-172691
+Khulna Range,64,,Reserved For TI (10),,,"01320-145309
+01320-145318",,
+Khulna Range,65,Inspector,RI,62276,01713-374185,01320-145319,,01320-172681
+Khulna Range,66,Inspector,Reserved For Police Lines (15),,,"01320-145320
+01320-145334",,"01320-172706
+01320-172751"
+Khulna Range,67,,Reserved For District Police (763),,,"01320-145335
+01320-146097",,01320-172752
+Khulna Range,68,Control Room,,,,01320-146098,,"01320-172753
+01320-173099"
+Khulna Range,69,Hotline,,,,01320-146099,,"01320-173100
+01320-173599"
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,Unit/Office Name: District Police Narail.,,,,,,,
+Khulna Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail,New Number
+Khulna Range,,,,,,,,
+Khulna Range,1,Police Super,,0481-62412,01713-374202,01320-146100,spnarail@police.gov.com,01320-173600
+Khulna Range,2,Police Super,Reserved,,,01320-146101,,01320-173601
+Khulna Range,3,Addl. Sp,(Admin & Crime),0481-62245,01713-374203,01320-146102,,01320-173602
+Khulna Range,4,Addl. Sp,Headquarters,0481-62203,01769-693494,01320-146103,,01320-173603
+Khulna Range,5,,Reserved For Addl. SP (06),,,"01320-146104
+01320-146109",,
+Khulna Range,7,ASP,Reserved For ASP (10),,,"01320-146110
+01320-146119",,"01320-092321
+01320-092330"
+Khulna Range,8,,Reserved For SP Office (24),,,"01320-146120
+01320-146143",,"01320-092331
+01320-092350"
+Khulna Range,6,Addl. Sp,Sadar Circle,,01713-374204,01320-146144,,01320-173604
+Khulna Range,7,,Reserved For Sadar Circle (04),,,"01320-146145
+01320-146148",,
+Khulna Range,8,ASP,Kaliya Circle,,01769-693495,01320-146149,,01320-173622
+Khulna Range,9,,Reserved For kaliya Circle (04),,,"01320-146150
+01320-146153",,
+Khulna Range,10,Inspector,DIO- 01,0481-62089,01713-374205,01320-146154,,01320-173652
+Khulna Range,11,Inspector,DIO- 02,,,01320-146155,,01320-173653
+Khulna Range,12,Inspector,DIO- 03,,,01320-146156,,01320-173654
+Khulna Range,13,Inspector,DIO- 04,,,01320-146157,,01320-173655
+Khulna Range,14,Inspector,DIO- 05,,,01320-146158,,01320-173656
+Khulna Range,15,,Reserved For DIO (10),,,"01320-146159
+01320-146168",,
+Khulna Range,16,Inspector,OC Norail Sadar Thana,0481-62212,01713-374206,01320-146169,,01320-173657
+Khulna Range,17,Inspector,Investigation Sadar Thana,,,01320-146170,,01320-173658
+Khulna Range,18,Inspector,Operation Sadar Thana,,,01320-146171,,01320-173659
+Khulna Range,19,Inspector,Reserved -1,,,01320-146172,,
+Khulna Range,20,Inspector,Reserved -2,,,01320-146173,,01320-173661
+Khulna Range,21,,Duty Officer,,,01320-146174,,01320-173662
+Khulna Range,22,,Reserved For Sadar PS (20),,,"01320-146175
+01320-146194",,
+Khulna Range,23,Inspector,OC Kaliya Thana,04822-56009,01713-374207,01320-146195,,01320-173663
+Khulna Range,24,Inspector,Investigation Kaliya Thana,,,01320-146196,,01320-173664
+Khulna Range,25,Inspector,Kaliya Circle,,,01320-146197,,01320-173665
+Khulna Range,26,Inspector,Reserved -1,,,01320-146198,,01320-173666
+Khulna Range,27,Inspector,Reserved -2,,,01320-146199,,01320-173667
+Khulna Range,28,,Duty Officer,,,01320-146200,,01320-173668
+Khulna Range,29,,Reserved For Kaliya PS (20),,,"01320-146201
+01320-146220",,
+Khulna Range,30,Inspector,OC Lohagora Thana,04823-56108,01713-374208,01320-146221,,01320-173669
+Khulna Range,31,Inspector,Investigation Lohagora Thana,,,01320-146222,,01320-173670
+Khulna Range,32,Inspector,Reserved -1,,,01320-146223,,01320-173671
+Khulna Range,33,Inspector,Reserved -2,,,01320-146224,,01320-173672
+Khulna Range,34,Inspector,Reserved -3,,,01320-146225,,01320-173673
+Khulna Range,35,,Duty Officer,,,01320-146226,,01320-173674
+Khulna Range,36,,Reserved For Lohagora PS (20),,,"01320-146227
+01320-146246",,
+Khulna Range,37,Inspector,OC Noragati Thana,,01713-374209,01320-146247,,01320-173675
+Khulna Range,38,Inspector,Investigation Noragati Thana,,,01320-146248,,01320-173676
+Khulna Range,39,Inspector,Reserved -1,,,01320-146249,,01320-173677
+Khulna Range,40,Inspector,Reserved -2,,,01320-146250,,01320-173678
+Khulna Range,41,Inspector,Reserved -3,,,01320-146251,,01320-173679
+Khulna Range,42,,Duty Officer,,,01320-146252,,01320-173680
+Khulna Range,43,,Reserved For Noragati PS (20),,,"01320-146253
+01320-146272",,
+Khulna Range,44,Inspector,DB -1,,01713-374210,01320-146273,,01320-173697
+Khulna Range,45,Inspector,DB -2,,,01320-146274,,01320-173698
+Khulna Range,46,Inspector,DB -3,,,01320-146275,,01320-173699
+Khulna Range,47,Inspector,DB -4,,,01320-146276,,01320-173700
+Khulna Range,48,Inspector,DB -5,,,01320-146277,,01320-173701
+Khulna Range,49,,Reserved For DB (10),,,"01320-146278
+01320-146287",,
+Khulna Range,50,Inspector,Court -1,0481-62273,01713-374211,01320-146288,,01320-173692
+Khulna Range,51,Inspector,Court -2,,,01320-146289,,01320-173693
+Khulna Range,52,Inspector,Court -3,,,01320-146290,,01320-173694
+Khulna Range,53,Inspector,Court -4,,,01320-146291,,01320-173695
+Khulna Range,54,Inspector,Court -5,,,01320-146292,,01320-173696
+Khulna Range,55,,Reserved For Court (10),,,"01320-146293
+01320-146302",,
+Khulna Range,56,Inspector,TI -1,,01769-693496,01320-146303,,01320-173687
+Khulna Range,57,Inspector,TI -2,,,01320-146304,,01320-173688
+Khulna Range,58,Inspector,TI -3,,,01320-146305,,01320-173689
+Khulna Range,59,Inspector,TI -4,,,01320-146306,,01320-173690
+Khulna Range,60,Inspector,TI -5,,,01320-146307,,01320-173691
+Khulna Range,61,,Reserved For TI (10),,,"01320-146308
+01320-146317",,
+Khulna Range,62,Inspector,RI,0481-62258,01713-374185,01320-146318,,01320-172681
+Khulna Range,63,Inspector,Reserved For Police Lines (15),,,"01320-146319
+01320-146333",,"01320-172706
+01320-172751"
+Khulna Range,64,,Reserved For District Police (764),,,"01320-146334
+01320-147097",,01320-172752
+Khulna Range,65,Control Room,,,,01320-147098,,"01320-172753
+01320-173099"
+Khulna Range,66,Hotline,,,,01320-147099,,"01320-173100
+01320-173599"
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,Unit/Office Name: District Police Kushtia.,,,,,,,
+Khulna Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail,New Number
+Khulna Range,,,,,,,,
+Khulna Range,1,Police Super,,"62400
+62402",01713-374214,01320-147100,spkustia@police.gov.bd,01320-174600
+Khulna Range,2,Police Super,Reserved,,,01320-147101,,01320-174601
+Khulna Range,3,Addl. SP,Admin & Crime,62405,01713-374215,01320-147102,,01320-174602
+Khulna Range,4,Addl. SP,DSB,73699,01769-058239,01320-147103,,01320-174606
+Khulna Range,5,Addl. SP,Headquarters,62407,01713-374216,01320-147104,,01320-174603
+Khulna Range,6,,Reserved For Addl. SP (06),,,"01320-147105
+01320-147110",,
+Khulna Range,7,ASP,Reserved For ASP (10),,,"01320-147111
+01320-147120",,"01320-092321
+01320-092330"
+Khulna Range,8,,Reserved For SP Office (24),,,"01320-147121
+01320-147144",,"01320-092331
+01320-092350"
+Khulna Range,9,Addl. SP,Sadar Circle,62403,01713-374217,01320-147145,,01320-174604
+Khulna Range,10,,Reserved For Sadar Circle (04),,,"01320-147146
+01320-147149",,
+Khulna Range,11,Addl. SP,Veramara Circle,07022-71369,01713-374218,01320-147150,,01320-174605
+Khulna Range,12,,Reserved For Veramara Circle (04),,,"01320-147151
+01320-147154",,
+Khulna Range,13,ASP,Mirpur Circle,,01713-374219,01320-147155,,01320-174622
+Khulna Range,14,,Reserved For Mirpur Circle (04),,,"01320-147156
+01320-147159",,
+Khulna Range,15,Inspector,DIO -01,62413,01713-374219,01320-147160,,01320-174652
+Khulna Range,16,Inspector,DIO -02,,,01320-147161,,01320-174653
+Khulna Range,17,Inspector,DIO -03,,,01320-147162,,01320-174654
+Khulna Range,18,Inspector,DIO -04,,,01320-147163,,01320-174655
+Khulna Range,19,Inspector,DIO -05,,,01320-147164,,01320-174656
+Khulna Range,20,,Reserved For DIO (10),,,"01320-147165
+01320-147174",,
+Khulna Range,21,Inspector,OC Kushtia Model  Thana,62418,01713-374220,01320-147175,ockus.kus@police.gov.bd opskus.kus@police.gov.bd,01320-174657
+Khulna Range,22,Inspector,Investigation Kushtia Model Thana,,,01320-147176,,01320-174658
+Khulna Range,23,Inspector,Operation Kushtia Model  Thana,,,01320-147177,,01320-174659
+Khulna Range,24,Inspector,Reserved -1,,,01320-147178,,01320-174660
+Khulna Range,25,Inspector,Reserved -2,,,01320-147179,,01320-174661
+Khulna Range,26,,Duty Officer,,,01320-147180,,01320-174662
+Khulna Range,27,,Reserved For Kushtia Model PS (20),,,"01320-147181
+01320-147200",,
+Khulna Range,28,Inspector,OC  Khoksha Thana,07024-56329,01713-374221,01320-147201,ockus.kho@police.gov.bd opskus.kho@police.gov.bd,01320-174663
+Khulna Range,29,Inspector,Investigation KhokshaThana,,,01320-147202,,01320-174664
+Khulna Range,30,Inspector,Operation Khoksha Thana,,,01320-147203,,01320-174665
+Khulna Range,31,Inspector,Reserved -1,,,01320-147204,,01320-174666
+Khulna Range,32,Inspector,Reserved -2,,,01320-147205,,01320-174667
+Khulna Range,33,,Duty Officer,,,01320-147206,,01320-174668
+Khulna Range,34,,Reserved For Khoksha PS (20),,,"01320-147207
+01320-147226",,
+Khulna Range,35,Inspector,OC Kumarkhali Thana,07025-76420,01713-374222,01320-147227,ockus.kum@police.gov.bd opskus.kum@police.gov.bd,01320-174669
+Khulna Range,36,Inspector,Investigation Kumarkhali Thana,,,01320-147228,,01320-174670
+Khulna Range,37,Inspector,Operation Kumarkhali  Thana,,,01320-147229,,01320-174671
+Khulna Range,38,Inspector,Reserved -1,,,01320-147230,,01320-174672
+Khulna Range,39,Inspector,Reserved -2,,,01320-147231,,01320-174673
+Khulna Range,40,Inspector,Duty Officer,,,01320-147232,,01320-174674
+Khulna Range,41,,Reserved For Kumarkhali PS (20),,,"01320-147233
+01320-147252",,
+Khulna Range,42,Inspector,OC Veramara Thana,07022- 71333,01713-374223,01320-147253,ockus.bhe@police.gov.bd opskus.bhe@police.gov.bd,01320-174675
+Khulna Range,43,Inspector,Investigation Veramara  Thana,,,01320-147254,,01320-174676
+Khulna Range,44,Inspector,Operation Veramara Thana,,,01320-147255,,01320-174677
+Khulna Range,45,Inspector,Reserved -1,,,01320-147256,,01320-174678
+Khulna Range,46,Inspector,Reserved -2,,,01320-147257,,01320-174679
+Khulna Range,47,,Duty Officer,,,01320-147258,,01320-174680
+Khulna Range,48,,Reserved For Veramara PS (20),,,"01320-147259
+01320-147278",,
+Khulna Range,49,Inspector,OC Mirpur Thana,07026- 56210,01713-374225,01320-147279,ockus.mir@police.gov.bd opskus.mir@police.gov.bd,01320-174681
+Khulna Range,50,Inspector,Investigation Mirpur Thana,,,01320-147280,,01320-174682
+Khulna Range,51,Inspector,Operation Mirpur Thana,,,01320-147281,,01320-174683
+Khulna Range,52,Inspector,Reserved -1,,,01320-147282,,01320-174684
+Khulna Range,53,Inspector,Reserved -2,,,01320-147283,,01320-174685
+Khulna Range,54,Inspector,Duty Officer,,,01320-147284,,01320-174686
+Khulna Range,55,,Reserved For Mirpur PS (20),,,"01320-147285
+01320-147304",,
+Khulna Range,56,Inspector,OC Daulatpur Thana,07023- 75218,01713-374224,01320-147305,ockus.dow@police.gov.bd opskus.dow@police.gov.bd,01320-174687
+Khulna Range,57,Inspector,Investigation Daulatpur Thana,,,01320-147306,,01320-174688
+Khulna Range,58,Inspector,Operation Daulatpur Thana,,,01320-147307,,01320-174689
+Khulna Range,59,Inspector,Reserved -1,,,01320-147308,,01320-174690
+Khulna Range,60,Inspector,Reserved -2,,,01320-147309,,01320-174691
+Khulna Range,61,,Duty Officer,,,01320-147310,,01320-174692
+Khulna Range,62,,Reserved For Daulatpur PS (20),,,"01320-147311
+01320-147330",,
+Khulna Range,63,Inspector,OC EB Thana,"62201  
+62250  
+62005",01713-374226,01320-147331,ockus.isl@police.gov.bd opskus.isl@police.gov.bd,01320-174693
+Khulna Range,64,Inspector,Investigation EB Thana,,,01320-147332,,01320-174694
+Khulna Range,65,Inspector,Operation EB Thana,,,01320-147333,,01320-174695
+Khulna Range,66,Inspector,Reserved -1,,,01320-147334,,01320-174696
+Khulna Range,67,Inspector,Reserved -2,,,01320-147335,,01320-174697
+Khulna Range,68,,Duty Officer,,,01320-147336,,01320-174698
+Khulna Range,69,,Reserved For EB PS (20),,,"01320-147337
+01320-147356",,
+Khulna Range,70,Inspector,DB -1,61934,01713-374227,01320-147357,,01320-174715
+Khulna Range,71,Inspector,DB -2,,,01320-147358,,01320-174716
+Khulna Range,72,Inspector,DB -3,,,01320-147359,,01320-174717
+Khulna Range,73,Inspector,DB -4,,,01320-147360,,01320-174718
+Khulna Range,74,Inspector,DB -5,,,01320-147361,,01320-174719
+Khulna Range,75,,Reserved For DB (10),,,"01320-147362
+01320-147371",,
+Khulna Range,76,Inspector,Court-1,,01713-374228,01320-147372,,01320-174710
+Khulna Range,77,Inspector,Court-2,,,01320-147373,,01320-174711
+Khulna Range,78,Inspector,Court-3,,,01320-147374,,01320-174712
+Khulna Range,79,Inspector,Court-4,,,01320-147375,,
+Khulna Range,80,Inspector,Court-5,,,01320-147376,,01320-174713
+Khulna Range,81,,Reserved For Court (10),,,"01320-147377
+01320-147386",,
+Khulna Range,82,Inspector,TI -1,,01713-374230,01320-147387,,01320-174705
+Khulna Range,83,Inspector,TI -2,,,01320-147388,,01320-174706
+Khulna Range,84,Inspector,TI -3,,,01320-147389,,01320-174707
+Khulna Range,85,Inspector,TI -4,,,01320-147390,,01320-174708
+Khulna Range,86,Inspector,TI -5,,,01320-147391,,01320-174709
+Khulna Range,87,,Reserved For TI  (10),,,"01320-147392
+01320-147401",,
+Khulna Range,88,Inspector,RI,62415,01773-374229,01320-147402,,01320-174699
+Khulna Range,89,Inspector,Reserved For Police Lines (15),,,"01320-147403
+01320-147417",,"01320-172706
+01320-172751"
+Khulna Range,90,,Reserved For District Police (680),,,"01320-147418
+01320-148097",,01320-172752
+Khulna Range,91,Control Room,,,,01320-148098,,"01320-172753
+01320-173099"
+Khulna Range,92,Hotline,,,,01320-148099,,"01320-173100
+01320-173599"
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,Unit/Office Name: District Police Chuadanga.,,,,,,,
+Khulna Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail,New Number
+Khulna Range,,,,,,,,
+Khulna Range,1,Police Super,,63164,01713-374231,01320-148100,spchuadanga@police.gov.bd,01320-176100
+Khulna Range,2,Police Super,Reserved,,,01320-148101,,01320-176101
+Khulna Range,3,Addl. SP,Admin,62251,01713-374232,01320-148102,addispchuadanga@gmail.com,01320-176102
+Khulna Range,4,Addl. SP,Headquarters,,,01320-148103,,01320-176103
+Khulna Range,5,,Reserved For Addl. SP (06),,,"01320-148104
+01320-148109",,
+Khulna Range,7,ASP,Reserved For ASP (10),,,"01320-148110
+01320-148119",,"01320-092321
+01320-092330"
+Khulna Range,8,,Reserved For SP Office (24),,,"01320-148120
+01320-148143",,"01320-092331
+01320-092350"
+Khulna Range,6,Addl. SP,Sadar Circle,62226,01713-374233,01320-148144,,01320-176104
+Khulna Range,7,,Reserved For Sadar Circle (04),,,"01320-148145
+01320-148148",,
+Khulna Range,8,ASP,Damurhuda Circle,64166,01713-374234,01320-148149,damuhudacircle@gmail.com,01320-176122
+Khulna Range,9,,Reserved For Damurhuda Circle (04),,,"01320-148150
+01320-148153",,
+Khulna Range,10,Inspector,DIO-01,64188,01713-374235,01320-148154,spdsbchuadanga@gmail.com,01320-176152
+Khulna Range,11,Inspector,DIO-02,,,01320-148155,,01320-176153
+Khulna Range,12,Inspector,DIO-03,,,01320-148156,,01320-176154
+Khulna Range,13,Inspector,DIO-04,,,01320-148157,,01320-176155
+Khulna Range,14,Inspector,DIO-05,,,01320-148158,,01320-176156
+Khulna Range,15,,Reserved For DIO (10),,,"01320-148159
+01320-148168",,
+Khulna Range,16,Inspector,OC Chuadanga Thana,62225,01713-374236,01320-148169,occhu.chu@police.gov.bd,01320-176157
+Khulna Range,17,Inspector,Investigation OC Chuadanga Thana,,,01320-148170,,01320-176158
+Khulna Range,18,Inspector,Operation Chuadanga Thana,,,01320-148171,,01320-176159
+Khulna Range,19,Inspector,Reserved -1,,01769-695809,01320-148172,,01320-176160
+Khulna Range,20,Inspector,Reserved -2,,,01320-148173,,01320-176161
+Khulna Range,21,,Duty Officer,,,01320-148174,,01320-176162
+Khulna Range,22,,Reserved For Chuadanga PS (20),,,"01320-148175
+01320-148194",,
+Khulna Range,23,Inspector,OC AlamDanga Thana,56242,01713-374237,01320-148195,occhu.ala@police.gov.bd,01320-176163
+Khulna Range,24,Inspector,Investigation OC AlamDanga Thana,,,01320-148196,,01320-176164
+Khulna Range,25,Inspector,Operation AlamDanga Thana,,,01320-148197,,01320-176165
+Khulna Range,26,Inspector,Reserved -1,,,01320-148198,,01320-176166
+Khulna Range,27,Inspector,Reserved -2,,,01320-148199,,01320-176167
+Khulna Range,28,,Duty Officer,,,01320-148200,,01320-176168
+Khulna Range,29,,Reserved For Alamdanga PS (20),,,"01320-148201
+01320-148220",,
+Khulna Range,30,Inspector,OC Jibannagar Thana,75017,01713-374238,01320-148221,occhu.jib@police.gov.bd,01320-176169
+Khulna Range,31,Inspector,Investigation OC Jibannagar Thana,,,01320-148222,,01320-176170
+Khulna Range,32,Inspector,Operation Jibannagar Thana,,,01320-148223,,01320-176171
+Khulna Range,33,Inspector,Reserved -1,,,01320-148224,,01320-176172
+Khulna Range,34,Inspector,Reserved -2,,,01320-148225,,01320-176173
+Khulna Range,35,,Duty Officer,,,01320-148226,,01320-176174
+Khulna Range,36,,Reserved For Jibannagar PS (20),,,"01320-148227
+01320-148246",,
+Khulna Range,37,Inspector,OC Damurhuda Model Thana,56005,01713-374239,01320-148247,occhu.dam@police.gov.bd,01320-176175
+Khulna Range,38,Inspector,Investigation OC Damurhuda,,,01320-148248,,01320-176176
+Khulna Range,39,Inspector,Operation Damurhuda Model,,,01320-148249,,01320-176177
+Khulna Range,40,Inspector,Reserved -1,,01769-695810,01320-148250,,01320-176178
+Khulna Range,41,Inspector,Reserved -2,,,01320-148251,,01320-176179
+Khulna Range,42,,Duty Officer,,,01320-148252,,01320-176180
+Khulna Range,43,,Reserved For Damurhuda PS (20),,,"01320-148253
+01320-148272",,
+Khulna Range,44,Inspector,OC Darsana Thana,,01769-695812,01320-148273,,01320-176181
+Khulna Range,45,Inspector,Investigation OC Darsana Tana,,,01320-148274,,01320-176182
+Khulna Range,46,Inspector,Operation  Darsana Thana,,,01320-148275,,01320-176183
+Khulna Range,47,Inspector,Reserved -1,,,01320-148276,,01320-176184
+Khulna Range,48,Inspector,Reserved -2,,,01320-148277,,01320-176185
+Khulna Range,49,,Duty Officer,,,01320-148278,,01320-176186
+Khulna Range,50,,Reserved For Darsana PS (20),,,"01320-148279
+01320-148298",,
+Khulna Range,51,Inspector,DB -1,62215,01713-374240,01320-148299,,01320-176203
+Khulna Range,52,Inspector,DB -2,,,01320-148300,,01320-176204
+Khulna Range,53,Inspector,DB -3,,,01320-148301,,01320-176205
+Khulna Range,54,Inspector,DB -4,,,01320-148302,,01320-176206
+Khulna Range,55,Inspector,DB -5,,,01320-148303,,01320-176207
+Khulna Range,56,,Reserved For DB (10),,,"01320-148304
+01320-148313",,
+Khulna Range,57,Inspector,Court -1,62232,01713-374241,01320-148314,,01320-176198
+Khulna Range,58,Inspector,Court -2,,,01320-148315,,01320-176199
+Khulna Range,59,Inspector,Court -3,,,01320-148316,,01320-176200
+Khulna Range,60,Inspector,Court -4,,,01320-148317,,01320-176201
+Khulna Range,61,Inspector,Court -5,,,01320-148318,,01320-176202
+Khulna Range,62,,Reserved For Court (10),,,"01320-148319
+01320-148328",,
+Khulna Range,63,Inspector,TI -1,,01713-374243,01320-148329,,01320-176193
+Khulna Range,64,Inspector,TI -2,,,01320-148330,,01320-176194
+Khulna Range,65,Inspector,TI -3,,,01320-148331,,01320-176195
+Khulna Range,66,Inspector,TI -4,,,01320-148332,,01320-176196
+Khulna Range,67,Inspector,TI -5,,,01320-148333,,01320-176197
+Khulna Range,68,,Reserved For TI (10),,,"01320-148334
+01320-148343",,
+Khulna Range,69,Inspector,RI,62246,01713-374242,01320-148344,,01320-176187
+Khulna Range,70,,Reserved For Police Lines (15),,,"01320-148345
+01320-148359",,
+Khulna Range,71,,Reserved For District Police (738),,,"01320-148360
+01320-149097",,
+Khulna Range,72,Control Room,,62228,,01320-149098,,01320-176252
+Khulna Range,73,Hotline,,,,01320-149099,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,Unit/Office Name: District Police Meherpur.,,,,,,,
+Khulna Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail,New Number
+Khulna Range,,,,,,,,
+Khulna Range,1,Police Super,,"62303
+63110*",01713-374244,01320-149100,spmeherpur@ police.gov.bd,01320-177100
+Khulna Range,2,Police Super,Reserved,,,01320-149101,,01320-177101
+Khulna Range,3,Addl. SP,Admin,62224,01713-374245,01320-149102,,01320-177102
+Khulna Range,4,Addl. SP,Headquarters,,01769-694674,01320-149103,aspcircle62225@gmail.com,01320-177103
+Khulna Range,5,,Reserved For Addl. SP (06),,,"01320-149104
+01320-149109",,
+Khulna Range,7,ASP,Reserved For ASP (10),,,"01320-149110
+01320-149119",,"01320-092321
+01320-092330"
+Khulna Range,8,,Reserved For SP Office (24),,,"01320-149120
+01320-149143",,"01320-092331
+01320-092350"
+Khulna Range,6,Addl. SP,Sadar Circle,62225,01713-374246,01320-149144,,01320-177104
+Khulna Range,7,,Reserved Sadar Circle (04),,,"01320-149145
+01320-149148",,
+Khulna Range,8,Inspector,DIO-01,62944,01713-374248,01320-149149,dsbmeherpur@gmail.com,01320-177152
+Khulna Range,9,Inspector,DIO-02,,,01320-149150,,01320-177153
+Khulna Range,10,Inspector,DIO-03,,,01320-149151,,01320-177154
+Khulna Range,11,Inspector,DIO-04,,,01320-149152,,01320-177155
+Khulna Range,12,Inspector,DIO-05,,,01320-149153,,01320-177156
+Khulna Range,13,,Reserved For DIO (10),,,"01320-149154
+01320-149163",,
+Khulna Range,14,Inspector,OC Meherpur Thana,62203,01713-374249,01320-149164,,01320-177157
+Khulna Range,15,Inspector,Investigation Meherpur Tana,,01769-694684,01320-149165,,01320-177158
+Khulna Range,16,Inspector,Admin Meherpur Thana,,,01320-149166,,01320-177159
+Khulna Range,17,Inspector,Reserved -1,,,01320-149167,,01320-177160
+Khulna Range,18,Inspector,Reserved -2,,,01320-149168,,01320-177161
+Khulna Range,19,,Duty Officer,,,01320-149169,,01320-177162
+Khulna Range,20,,Reserved For Meherpur PS (20),,,"01320-149170
+01320-149189",,
+Khulna Range,21,Inspector,OC Gagni Thana,07922-75011,01713-374250,01320-149190,ocgangni@gmail.com,01320-177163
+Khulna Range,22,Inspector,Investigation Gagni Tana,,01769-694687,01320-149191,,01320-177164
+Khulna Range,23,Inspector,Admin Gagni Thana,,01769-694688,01320-149192,,01320-177165
+Khulna Range,24,Inspector,Reserved -1,,,01320-149193,,01320-177166
+Khulna Range,25,Inspector,Reserved -2,,,01320-149194,,01320-177167
+Khulna Range,26,,Duty Officer,,,01320-149195,,01320-177168
+Khulna Range,27,,Reserved For Gagni PS (20),,,"01320-149196
+01320-149215",,
+Khulna Range,28,Inspector,OC Mujibnagor Thana,07923-74070,01713-374251,01320-149216,ocmujibnagar@gmail.com,01320-177169
+Khulna Range,29,Inspector,Investigation Mujibnagor Tana,,,01320-149217,,01320-177170
+Khulna Range,30,Inspector,Admin Mujibnagor Thana,,,01320-149218,,01320-177171
+Khulna Range,31,Inspector,Reserved -1,,,01320-149219,,01320-177172
+Khulna Range,32,Inspector,Reserved -2,,,01320-149220,,01320-177173
+Khulna Range,33,,Duty Officer,,,01320-149221,,01320-177174
+Khulna Range,34,,Reserved For Mujibnagor PS (20),,,"01320-149222
+01320-149241",,
+Khulna Range,35,Inspector,DB -1,,01713-374252,01320-149242,,01320-177181
+Khulna Range,36,Inspector,DB -2,,,01320-149243,,01320-177182
+Khulna Range,37,Inspector,DB -3,,,01320-149244,,01320-177183
+Khulna Range,38,Inspector,DB -4,,,01320-149245,,01320-177184
+Khulna Range,39,Inspector,DB -5,,,01320-149246,,01320-177185
+Khulna Range,40,,Reserved For DB (10),,,"01320-149247
+01320-149256",,
+Khulna Range,41,Inspector,Court  -1,62236,01713-374253,01320-149257,,01320-177191
+Khulna Range,42,Inspector,Court  -2,,,01320-149258,,01320-177192
+Khulna Range,43,Inspector,Court  -3,,,01320-149259,,01320-177193
+Khulna Range,44,Inspector,Court  -4,,,01320-149260,,01320-177194
+Khulna Range,45,Inspector,Court  -5,,,01320-149261,,01320-177195
+Khulna Range,46,,Reserved For Court (10),,,"01320-149262
+01320-149271",,
+Khulna Range,47,Inspector,TI -1,,01713-374255,01320-149272,,01320-177186
+Khulna Range,48,Inspector,Ti -02,,,01320-149273,,01320-177187
+Khulna Range,49,Inspector,Ti -03,,,01320-149274,,01320-177188
+Khulna Range,50,Inspector,Ti -04,,,01320-149275,,01320-177189
+Khulna Range,51,Inspector,Ti -05,,,01320-149276,,01320-177190
+Khulna Range,52,,Reserved For TI (10),,,"01320-149277
+01320-149286",,
+Khulna Range,53,Inspector,RI,,01713-374254,01320-149287,,01320-177175
+Khulna Range,54,,Reserved For Police Lines (15),,,"01320-149288
+01320-149302",,
+Khulna Range,55,,Reserved For District Police (795),,,"01320-149303
+01320-150097",,
+Khulna Range,56,Control Room,,,,01320-150098,,01320-176252
+Khulna Range,57,Hotline,,,,01320-150099,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,"Unit/Office Name: RRF, Khulna.",,,,,,,
+Khulna Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail,New Number
+Khulna Range,,,,,,,,
+Khulna Range,1,Police Super,,774251,01713-374094,01320-150100,comrrfkhulna@police.gov.bd,01320-178100
+Khulna Range,2,Police Super,Reserved,,,01320-150101,,01320-178101
+Khulna Range,3,Addl.SP,Reserved (10),,,"01320-150102
+01320-150111",,"01320-178102
+01320-178111"
+Khulna Range,4,ASP,RRF -01,774453,01769-691275,01320-150112,,01320-178112
+Khulna Range,5,ASP,RRF -02,774125,01769-691277,01320-150113,,01320-178113
+Khulna Range,6,ASP,RRF -03,,01769-694248,01320-150114,,01320-178114
+Khulna Range,7,ASP,Reserved (07),,,"01320-150115
+01320-150121",,"01320-178115
+01320-178121"
+Khulna Range,8,Inspector,RI,,01769-691278,01320-150122,,01320-178122
+Khulna Range,9,Inspector,MT,,01769-694249,01320-150123,,01320-178123
+Khulna Range,10,Inspector,D - Store,,01769-694250,01320-150124,,01320-178124
+Khulna Range,11,Inspector,C- Store,,,01320-150125,,01320-178125
+Khulna Range,12,Inspector,Armora,,,01320-150126,,01320-178126
+Khulna Range,13,Inspector,ICT,,,01320-150127,,01320-178127
+Khulna Range,14,Inspector,Reserved (24),,,"01320-150128
+01320-150151",,"01320-178128
+01320-178151"
+Khulna Range,15,Head Assistant,Civil,774451,,01320-150152,,01320-178152
+Khulna Range,16,SI/Sergeant/Tsi,Reserved (246),,,"01320-150153
+01320-150398",,"01320-178154
+01320-178399"
+Khulna Range,17,,Reserved For RRF (198),,,"01320-150399
+01320-150597",,"017320-178400
+017320-178599"
+Khulna Range,18,Control Room,,,,01320-150598,,01320-178153
+Khulna Range,19,Hotline,,,,01320-150599,,
+Khulna Range,20,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,
+Khulna Range,,,,,,,,

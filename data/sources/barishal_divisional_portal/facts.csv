@@ -1,0 +1,42 @@
+entity_level,entity_name_en,district_en,upazila_en,code,fact,value,unit,basis,year,source_key,source_url,notes
+division,Barishal,,,,district_count_listed,6,count,count of districts listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/69789bbe35ce18e1c0670597,page updated 2023-12-10
+district,Patuakhali,Patuakhali,,,upazila_count,8,count,as stated,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978769dc4774958d7c432de,printed 'পটুয়াখালী জেলায় ৮টি উপজেলা রয়েছেঃ'; page updated 2025-04-24
+district,Bhola,Bhola,,,upazila_count,7,count,as stated,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978769dc4774958d7c432de,printed 'ভোলা জেলায় ৭টি উপজেলা রয়েছেঃ'; page updated 2025-04-24
+district,Pirojpur,Pirojpur,,,upazila_count,7,count,as stated,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978769dc4774958d7c432de,printed 'পিরোজপুর জেলা ৭টি উপজেলায় বিভক্ত; এগুলো হলোঃ'; page updated 2025-04-24
+district,Barguna,Barguna,,,upazila_count,6,count,as stated,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978769dc4774958d7c432de,printed 'বরগুনা জেলার ৬টি উপজেলা গুলি হল -'; page updated 2025-04-24
+district,Jhalokathi,Jhalokathi,,,upazila_count,4,count,as stated,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978769dc4774958d7c432de,printed 'ঝালকাঠি জেলা ৪টি উপজেলায় বিভক্ত। এগুলো হলো:'; page updated 2025-04-24
+division,Barishal,,,,upazila_count_listed,42,count,count of upazilas listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978769dc4774958d7c432de,page updated 2025-04-24
+upazila,Agailjhara,Barishal,Agailjhara,,union_count,5,count,count of unions listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,page updated 2019-07-21
+upazila,Babuganj,Barishal,Babuganj,,union_count,6,count,count of unions listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,page updated 2019-07-21
+upazila,Bakerganj,Barishal,Bakerganj,,union_count,14,count,count of unions listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,page updated 2019-07-21
+upazila,Banaripara,Barishal,Banaripara,,union_count,8,count,count of unions listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,page updated 2019-07-21
+upazila,Barisal Sadar,Barishal,Barisal Sadar,,union_count,10,count,count of unions listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,page updated 2019-07-21
+upazila,Gournadi,Barishal,Gournadi,,union_count,7,count,count of unions listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,page updated 2019-07-21
+upazila,Hizla,Barishal,Hizla,,union_count,6,count,count of unions listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,page updated 2019-07-21
+upazila,Mehendiganj,Barishal,Mehendiganj,,union_count,13,count,count of unions listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,page updated 2019-07-21
+upazila,Muladi,Barishal,Muladi,,union_count,9,count,count of unions listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,page updated 2019-07-21
+upazila,Wazirpur,Barishal,Wazirpur,,union_count,9,count,count of unions listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,page updated 2019-07-21
+upazila,Bhola Sadar,Bhola,Bhola Sadar,,union_count,13,count,count of unions listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,page updated 2019-07-21
+upazila,Borhan Sddin,Bhola,Borhan Sddin,,union_count,8,count,count of unions listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,page updated 2019-07-21
+upazila,Charfesson,Bhola,Charfesson,,union_count,19,count,count of unions listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,page updated 2019-07-21
+upazila,Doulatkhan,Bhola,Doulatkhan,,union_count,9,count,count of unions listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,page updated 2019-07-21
+upazila,Lalmohan,Bhola,Lalmohan,,union_count,9,count,count of unions listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,page updated 2019-07-21
+upazila,Monpura,Bhola,Monpura,,union_count,4,count,count of unions listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,page updated 2019-07-21
+upazila,Tazumuddin,Bhola,Tazumuddin,,union_count,5,count,count of unions listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,page updated 2019-07-21
+upazila,Bhandaria,Pirojpur,Bhandaria,,union_count,7,count,count of unions listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,page updated 2019-07-21
+upazila,Kawkhali,Pirojpur,Kawkhali,,union_count,5,count,count of unions listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,page updated 2019-07-21
+upazila,Mathbaria,Pirojpur,Mathbaria,,union_count,11,count,count of unions listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,page updated 2019-07-21
+upazila,Nazirpur,Pirojpur,Nazirpur,,union_count,9,count,count of unions listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,page updated 2019-07-21
+upazila,Nesarabad,Pirojpur,Nesarabad,,union_count,10,count,count of unions listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,page updated 2019-07-21
+upazila,Pirojpur Sadar,Pirojpur,Pirojpur Sadar,,union_count,7,count,count of unions listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,page updated 2019-07-21
+upazila,Zianagar,Pirojpur,Zianagar,,union_count,3,count,count of unions listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,page updated 2019-07-21
+district,Barishal,Barishal,,,union_count,87,count,as stated,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,printed 'ইউনিয়নের সংখ্যা ৮৭টি'; page updated 2019-07-21
+district,Pirojpur,Pirojpur,,,union_count,52,count,as stated,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,"printed 'মোট উপজেলা : ৭, মোট ইউনিয়ন : ৫২'; page updated 2019-07-21"
+upazila,Bhandaria,Pirojpur,Bhandaria,,union_count_stated,7,count,as stated,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,printed 'মোট ইউনিয়নঃ ৭টি'; page updated 2019-07-21
+upazila,Kawkhali,Pirojpur,Kawkhali,,union_count_stated,5,count,as stated,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,printed 'মোট ইউনিয়নঃ ৫টি'; page updated 2019-07-21
+upazila,Mathbaria,Pirojpur,Mathbaria,,union_count_stated,11,count,as stated,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,printed 'মোট ইউনিয়নঃ ১১টি'; page updated 2019-07-21
+upazila,Nazirpur,Pirojpur,Nazirpur,,union_count_stated,9,count,as stated,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,printed 'মোট ইউনিয়নঃ ৯টি'; page updated 2019-07-21
+upazila,Nesarabad,Pirojpur,Nesarabad,,union_count_stated,10,count,as stated,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,printed 'মোট ইউনিয়নঃ ১০টি'; page updated 2019-07-21
+upazila,Pirojpur Sadar,Pirojpur,Pirojpur Sadar,,union_count_stated,7,count,as stated,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,printed 'মোট ইউনিয়নঃ ৭টি'; page updated 2019-07-21
+upazila,Zianagar,Pirojpur,Zianagar,,union_count_stated,3,count,as stated,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,printed 'মোট ইউনিয়নঃ ৩টি'; page updated 2019-07-21
+division,Barishal,,,,union_count_listed,206,count,count of unions listed,,BARDIV_PORTAL_2026,https://barishaldiv.gov.bd/pages/static-pages/6978a2f335ce18e1c0670c54,page updated 2019-07-21; the page lists unions of 3 of the 6 districts only

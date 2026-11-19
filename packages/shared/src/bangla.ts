@@ -52,15 +52,17 @@ export function formatNumber(n: number, locale: Locale = 'bn', fractionDigits?: 
  * en: 2915009 → "2.92M"
  */
 export function formatCompact(n: number, locale: Locale = 'bn', fractionDigits = 2): string {
-  const abs = Math.abs(n);
+  // Pick the unit after rounding, so 99,99,999 reads "১.০০ কোটি", not "১০০.০০ লাখ".
+  const scaled = (unit: number, digits: number) => Number((Math.abs(n) / unit).toFixed(digits));
+  const sign = n < 0 ? '-' : '';
   if (locale === 'bn') {
-    if (abs >= 1e7) return `${toBnDigits((n / 1e7).toFixed(fractionDigits))} কোটি`;
-    if (abs >= 1e5) return `${toBnDigits((n / 1e5).toFixed(fractionDigits))} লাখ`;
+    if (scaled(1e7, fractionDigits) >= 1) return `${toBnDigits(sign + (Math.abs(n) / 1e7).toFixed(fractionDigits))} কোটি`;
+    if (scaled(1e5, fractionDigits) >= 1) return `${toBnDigits(sign + (Math.abs(n) / 1e5).toFixed(fractionDigits))} লাখ`;
     return formatNumber(n, 'bn');
   }
-  if (abs >= 1e9) return `${(n / 1e9).toFixed(fractionDigits)}B`;
-  if (abs >= 1e6) return `${(n / 1e6).toFixed(fractionDigits)}M`;
-  if (abs >= 1e3) return `${(n / 1e3).toFixed(1)}K`;
+  if (scaled(1e9, fractionDigits) >= 1) return `${sign}${(Math.abs(n) / 1e9).toFixed(fractionDigits)}B`;
+  if (scaled(1e6, fractionDigits) >= 1) return `${sign}${(Math.abs(n) / 1e6).toFixed(fractionDigits)}M`;
+  if (scaled(1e3, 1) >= 1) return `${sign}${(Math.abs(n) / 1e3).toFixed(1)}K`;
   return String(n);
 }
 

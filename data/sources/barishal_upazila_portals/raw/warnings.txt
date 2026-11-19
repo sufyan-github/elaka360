@@ -1,0 +1,16 @@
+Barishal/Banaripara: pourashava page without a name: https://banaripara.barisal.gov.bd/pages/static-pages/6978a32835ce18e1c06725ea
+Barishal/Mehendiganj: no union rows parsed from https://mehendiganj.barisal.gov.bd/pages/static-pages/6978a3ab35ce18e1c0673876
+Barishal/Muladi: pourashava page without a name: https://muladi.barisal.gov.bd/pages/static-pages/6978a32435ce18e1c067238a
+Jhalokathi/Jhalakathi Sadar: union page 'ইউনিয়ন সমূহ' (https://sadar.jhalakathi.gov.bd/pages/static-pages/6978a31f35ce18e1c0672114) also names people (chairmen, secretaries or UDC entrepreneurs); not used, raw text not saved
+Jhalokathi/Kathalia: union page 'ইউনিয়ন সমূহ' (https://kathalia.jhalakathi.gov.bd/pages/static-pages/697887ed35ce18e1c06643f6) also names people (chairmen, secretaries or UDC entrepreneurs); not used, raw text not saved
+Jhalokathi/Rajapur: no union list menu item
+Patuakhali/Dumki: no union list menu item
+Pirojpur/Nazirpur: no union list menu item
+Pirojpur/Nesarabad: union page 'ইউনিয়নসমূহ' (https://nesarabad.pirojpur.gov.bd/pages/static-pages/6978946d35ce18e1c0667278) also names people (chairmen, secretaries or UDC entrepreneurs); not used, raw text not saved
+Bhola/Bhola Sadar: no union list menu item
+Bhola/Bhola Sadar: raw text of 'এক নজরে ভোলা সদর উপজেলা' (https://sadar.bhola.gov.bd/pages/static-pages/69788e2735ce18e1c0664e22) not saved: the page also names people
+Bhola/Bhola Sadar: pourashava page without a name: https://sadar.bhola.gov.bd/pages/static-pages/69787688c4774958d7c4294b
+Bhola/Borhan Sddin: union page 'ইউনিয়নসমূহ' (https://borhanuddin.bhola.gov.bd/pages/static-pages/69788e3035ce18e1c0665283) also names people (chairmen, secretaries or UDC entrepreneurs); not used, raw text not saved
+Bhola/Charfesson: union page 'চরফ্যাশন উপজেলার ইউনিয়ন সমূহ' (https://charfesson.bhola.gov.bd/pages/static-pages/69788e3035ce18e1c06652c7) also names people (chairmen, secretaries or UDC entrepreneurs); not used, raw text not saved
+Bhola/Monpura: no union list menu item
+Bhola/Tazumuddin: no union rows parsed from https://tazumuddin.bhola.gov.bd/pages/static-pages/6978957d35ce18e1c0669b0e

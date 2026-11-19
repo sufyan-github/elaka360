@@ -1,0 +1,26 @@
+{
+  "key": "DPE_IPEMIS_PRIMARY_RANG_2026",
+  "name": "DPE IPEMIS primary school directory — Rangpur Division",
+  "organization": "Directorate of Primary Education (DPE), Ministry of Primary and Mass Education",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://ipemis.dpe.gov.bd/search-school",
+    "https://ipemis.dpe.gov.bd/load-lite-school-list",
+    "https://api.ipemis.dpe.gov.bd/api/school-stat-public",
+    "https://dpe.gov.bd/"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Source: Directorate of Primary Education, IPEMIS (ipemis.dpe.gov.bd)",
+  "division": "rangpur",
+  "kind": "dpe_ipemis",
+  "notes": "Public 'প্রাথমিক বিদ্যালয় ডিরেক্টরি' (school search) of the Integrated Primary Education Management Information System, linked from dpe.gov.bd. Listing endpoint used by the public page (DataTables JSON), queried per district of Rangpur Division (divisionId=7); same collector and rules as DPE_IPEMIS_PRIMARY_RAJ_2026. Covers government primary, newly nationalised and experimental schools only (no kindergartens, NGO or ebtedayee madrasas). No coordinates; head teachers' names and mobiles on the detail pages are deliberately NOT collected. Live data (changes daily). No robots.txt on ipemis.dpe.gov.bd / api.ipemis.dpe.gov.bd (404). Licence not stated.",
+  "files": {
+    "places.csv": "26230944284be2551970f131a2553b0930be4dce43b3f1ea5409d8083ead1576",
+    "facts.csv": "02f7b9d54b9e622b1ab8b97930036256300bbb2a710b9f414911c6bd73a78e4e",
+    "raw/ipemis_school_list_rangpur_division.json": "2d8510c9213cb59eed70358a54e7a09a8b8dcc1e6df2bdd3dfb810f406e1cc66"
+  }
+}

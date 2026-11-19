@@ -1,0 +1,14 @@
+Mymensingh/Mymensingh Sadar: raw text of 'এক নজরে ময়মনসিংহ সদর' (https://mymensinghsadar.mymensingh.gov.bd/pages/static-pages/69709dd0a31054345f1611f7) not saved: the page also names people
+Mymensingh/Fulbaria: pourashava page without a name: https://fulbaria.mymensingh.gov.bd/pages/static-pages/69709db9a31054345f1606f5
+Mymensingh/Bhaluka: no union list menu item
+Mymensingh/Iswarganj: pourashava page without a name: https://iswarganj.mymensingh.gov.bd/pages/static-pages/69708a92a31054345f158a4f
+Jamalpur/Melandah: union page 'ইউনিয়নসমূহ' (https://melandah.jamalpur.gov.bd/pages/static-pages/697098e9a31054345f15f385) also names people (chairmen, secretaries or UDC entrepreneurs); not used, raw text not saved
+Jamalpur/Dewangonj: pourashava page without a name: https://dewangonj.jamalpur.gov.bd/pages/static-pages/6973bc82c4774958d7bbf335
+Jamalpur/Bokshiganj: pourashava page without a name: https://bokshiganj.jamalpur.gov.bd/pages/static-pages/69709272a31054345f15eb64
+Sherpur/Sherpur Sadar: union page 'ইউনিয়ন সমূহ' (https://sherpursadar.sherpur.gov.bd/pages/static-pages/69709db5a31054345f16053f) also names people (chairmen, secretaries or UDC entrepreneurs); not used, raw text not saved
+Sherpur/Nokla: no union list menu item
+Netrokona/Kendua: union page 'ইউনিয়ন সমূহ' (https://kendua.netrokona.gov.bd/pages/static-pages/6970764aa31054345f15164b) also names people (chairmen, secretaries or UDC entrepreneurs); not used, raw text not saved
+Netrokona/Kendua: pourashava page without a name: https://kendua.netrokona.gov.bd/pages/static-pages/69708e5ea31054345f15a689
+Netrokona/Atpara: no union list menu item
+Netrokona/Madan: no union list menu item
+Netrokona/Purbadhala: no union list menu item

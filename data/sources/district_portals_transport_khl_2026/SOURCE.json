@@ -1,0 +1,31 @@
+{
+  "key": "DISTRICT_PORTALS_TRANSPORT_KHL_2026",
+  "division": "khulna",
+  "kind": "district_transport",
+  "name": "District portals (Khulna Division) — bus terminals and airport named on transport pages",
+  "organization": "Deputy Commissioner's offices (national portal framework)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://khulna.gov.bd/pages/static-pages/69812047a31054345f1e0ba0",
+    "https://jessore.gov.bd/pages/static-pages/6981417735ce18e1c0701fd1",
+    "https://satkhira.gov.bd/pages/static-pages/69811b2ea31054345f1df271",
+    "https://meherpur.gov.bd/pages/static-pages/6981333735ce18e1c06faf3a",
+    "https://chuadanga.gov.bd/pages/static-pages/6980fbffa31054345f1d25e7",
+    "https://kushtia.gov.bd/pages/static-pages/6980f6bba31054345f1d05c5",
+    "https://bagerhat.gov.bd/pages/static-pages/6981333935ce18e1c06fb049",
+    "https://jhenaidah.gov.bd/pages/static-pages/69812dec35ce18e1c06f997c"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "District portals (*.gov.bd, Bangladesh National Portal)",
+  "notes": "No licence stated. No portal publishes a terminal register; rows are names explicitly given on the district 'যোগাযোগ ব্যবস্থা' pages (Jashore airport; Satkhira central bus terminal). Khulna names only ticket counters' areas and train names; Meherpur, Chuadanga, Bagerhat and Jhenaidah list bus companies, timetables and counter numbers but no terminal or station by name (Chuadanga's train table says only 'From Chuadanga'); Kushtia and Jhenaidah name only Jashore airport; Narail and Magura link no transport page. raw/ keeps, per page that gave a row, only the lines carrying the matched phrases (mobiles/e-mails redacted; descriptive text is not copied into the CSVs).",
+  "files": {
+    "places.csv": "6fda4759521a0d00a777cca54f84b5af18332648111f8466de74f41c77090277",
+    "facts.csv": "e5b258ac493207d372f46a3ccf054ec6e00dfc1eaba29e3edf56f19dafe15368",
+    "raw/jashore_transport.txt": "d1614e984971b9f497d5792d66b8cd85a196bc5ae42eb33296e82a265351143a",
+    "raw/satkhira_transport.txt": "8bf5d3a3f7b342da4b2642693e0b1d11b9f9f2874a2b0578030ee47c22673e48"
+  }
+}

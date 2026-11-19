@@ -1,0 +1,2 @@
+entity_level,entity_name_en,district_en,upazila_en,code,fact,value,unit,basis,year,source_key,source_url,notes
+upazila,Shyamnagar,Satkhira,Shyamnagar,,portal_shelter_entries,50,shelters,rows kept from the portal's shelter table(s),2026,SHELTERS_KHL_2026,https://shyamnagar.satkhira.gov.bd/,

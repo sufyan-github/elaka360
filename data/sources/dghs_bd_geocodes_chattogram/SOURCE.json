@@ -1,0 +1,25 @@
+{
+  "key": "DGHS_BD_GEOCODES_CHATTOGRAM",
+  "name": "Bangladesh GeoCodes CodeSystem (BBS geo-codes) in the DGHS Bangladesh Core FHIR IG, Chattogram Division extract",
+  "organization": "Directorate General of Health Services (DGHS), Ministry of Health and Family Welfare",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html",
+    "https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.json",
+    "https://fhir.dghs.gov.bd/core/ImplementationGuide-bd.fhir.core.json"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": "2026-10-15",
+  "license": "CC0-1.0",
+  "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "attribution": "Directorate General of Health Services (DGHS), Bangladesh — Bangladesh Core FHIR IG; codes: BBS geo-code system",
+  "files": {
+    "areas.csv": "a71422edf06ecda686d0bc33231a7cff8cfd2f2c9ab21df2103ac9745e049578",
+    "crosswalk.csv": "8febffb32bd9d50995719cbe981076c5f07d18d3d40cdab97afc16ee9d3a112c",
+    "raw/bd-geocodes_chattogram.json": "2a384713b69f668b6c6356ae3b5879cabd893993ddd48a408e9d71480cbcaa3b"
+  },
+  "notes": "CodeSystem https://fhir.dghs.gov.bd/core/CodeSystem/bd-geocodes version 0.5.0, status draft, date 2026-10-15T00:09:54+00:00, 1591 codes nationally. Divisions, districts, upazilas/city thanas, city corporations and paurashavas only: no union-level codes (only 'Unions Of X Upazila' placeholders). The IG does not say which BBS release the codes come from. Skipped entries: 200300 Bandarban N/A (district placeholder (no city corporation)); 201200 Brahmanbaria N/A (district placeholder (no city corporation)); 201300 Chandpur N/A (district placeholder (no city corporation)); 201500 Chattogram N/A (district placeholder (no city corporation)); 2015003999 Unions of karnaphuli (union-group placeholder, no union names in this list); 2015160616 Chittagong City Corp. (part of the city corporation inside thana Bayejid Bostami); 2015161016 Chittagong City Corp. (part of the city corporation inside thana Bakalia); 2015161916 Chittagong City Corp. (part of the city corporation inside thana Chandgaon); 2015162016 Chittagong City Corp. (part of the city corporation inside thana Chittogram Port); 2015162816 Chittagong City Corp. (part of the city corporation inside thana Double Mooring); 2015163516 Chittagong City Corp. (part of the city corporation inside thana Halishahar); 2015164116 Chittagong City Corp. (part of the city corporation inside thana Kotwali); 2015164316 Chittagong City Corp. (part of the city corporation inside thana Khulshi); 2015165516 Chittagong City Corp. (part of the city corporation inside thana Pahartali); 2015165716 Chittagong City Corp. (part of the city corporation inside thana Panchlaish); 2015166516 Chittagong City Corp. (part of the city corporation inside thana Patenga); 201900 Cumilla N/A (district placeholder (no city corporation)); 2019000950 Comilla City Corp. (part of the city corporation inside thana Barura); 2019503399 Unions of Cumilla Sadar Dakshin (union-group placeholder, no union names in this list); 202200 Cox's Bazar N/A (district placeholder (no city corporation)); 2022002499 Unions of Cox's Bazar Sadar Upazila (union-group placeholder, no union names in this list); 203000 Feni N/A (district placeholder (no city corporation)); 204600 Khagrachhari N/A (district placeholder (no city corporation)); 205100 Lakshmipur N/A (district placeholder (no city corporation)); 207500 Noakhali N/A (district placeholder (no city corporation)); 208400 Rangamati N/A (district placeholder (no city corporation)); plus 99 'Unions Of ... Upazila' placeholders.",
+  "division": "chattogram",
+  "kind": "dghs_geocodes"
+}

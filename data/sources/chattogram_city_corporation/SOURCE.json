@@ -1,0 +1,31 @@
+{
+  "key": "CHATTOGRAM_CITY_CORPORATION",
+  "division": "chattogram",
+  "kind": "city_corporation",
+  "city": 50003,
+  "name": "Chattogram City Corporation official portal (ccc.gov.bd)",
+  "organization": "Chattogram City Corporation",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://ccc.gov.bd/",
+    "https://ccc.gov.bd/pages/static-pages/6922dfce933eb65569e24111",
+    "https://ccc.gov.bd/pages/static-pages/6922dfee933eb65569e24b79",
+    "https://ccc.gov.bd/pages/static-pages/6922dfd7933eb65569e24436",
+    "https://ccc.gov.bd/pages/static-pages/6922dbed933eb65569e0d780"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Chattogram City Corporation (ccc.gov.bd), Bangladesh National Portal",
+  "notes": "Key pages: এক নজরে চসিক (updated 2025-12-07 22:20: 41 wards, 6 zones, 60 sq miles, population about 70 lakh, holdings), ইতিহাস, ওয়ার্ডভিত্তিক মানচিত্র (names of wards 1-41). CCC publishes no thana list and no ward-to-zone list. Ward officers' and ward secretaries' lists (names, mobiles) are not copied.",
+  "files": {
+    "areas.csv": "5d2cfadd00c2660076384b7824db16c539d399f70781002329eed288e31fa576",
+    "facts.csv": "08aca8fbc9707761701307b266479474b556166a8e0ead8c91fd6d297b31ee32",
+    "raw/contact.txt": "54fbb2ba3807f159a6aab250008175b978909950e8811ce0c52d834e910bbf75",
+    "raw/ek_nojore_ccc.txt": "ccf5adee63d6bd3d04b56798ed5cbc70b6f95e53692bba9edff5dd8cf6852094",
+    "raw/history.txt": "2d8a2ff6d197b5845874dbf109db8ef7f15d7006cba2ff3a9db397ed8ff879a4",
+    "raw/ward_names.txt": "76fcbd57ad6e8b9d15098babc3311d09facbd9b517468a7401230d8ef03d18ef"
+  }
+}

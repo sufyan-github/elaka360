@@ -1,0 +1,7 @@
+﻿conflict_id,subject,official_district_page_2018,secondary_list_2024,secondary_atlas_2026,status,notes
+NAO-COUNT-001,District total,99,99,99,aggregate_agreement,All three sources indicate 99 total unions; individual upazila distribution differs in the 2026 atlas.
+NAO-COUNT-002,Naogaon Sadar count,12,12,13,upazila_distribution_conflict,2026 atlas says 13; district official 2018 and 2024 list say 12.
+NAO-COUNT-003,Badalgachhi count,8,8,9,upazila_distribution_conflict,2026 atlas says 9; older lists say 8.
+NAO-COUNT-004,Manda count,14,14,14,count_agreement,All sources count 14.
+NAO-COUNT-005,Mohadevpur count,10,10,10,count_agreement,All sources count 10.
+NAO-COUNT-006,Patnitala count,11,11,11,count_agreement,All sources count 11.

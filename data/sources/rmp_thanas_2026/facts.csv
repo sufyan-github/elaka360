@@ -1,0 +1,4 @@
+entity_level,entity_name_en,district_en,upazila_en,code,fact,value,unit,basis,year,source_key,source_url,notes
+metropolitan_police,Rajshahi Metropolitan Police area,Rajshahi,,,area_km2,472,km2,reported,,RMP_THANAS_2026,https://rmp.gov.bd/pages/static-pages/695e3b09c4774958d7b72177,RMP jurisdiction area ('বর্তমান আয়তন'); not the city-corporation area
+metropolitan_police,Rajshahi Metropolitan Police area,Rajshahi,,,population,1010020,persons,reported,,RMP_THANAS_2026,https://rmp.gov.bd/pages/static-pages/695e3b09c4774958d7b72177,RMP jurisdiction population as stated by RMP; year not given
+metropolitan_police,Rajshahi Metropolitan Police area,Rajshahi,,,police_stations,12,thanas,reported,2018,RMP_THANAS_2026,https://rmp.gov.bd/pages/static-pages/695e3b09c4774958d7b72177,12 thanas since 22 Feb 2018 per RMP

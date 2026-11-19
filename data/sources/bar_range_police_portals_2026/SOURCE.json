@@ -1,0 +1,28 @@
+{
+  "key": "BAR_RANGE_POLICE_PORTALS_2026",
+  "division": "barishal",
+  "kind": "range_police",
+  "name": "District police portals of Barishal Range (Jhalokathi, Patuakhali, Pirojpur, Bhola, Barguna)",
+  "organization": "Bangladesh Police — district police units of Barishal Range",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://police.jhalakathi.gov.bd/",
+    "https://police.patuakhali.gov.bd/",
+    "https://police.pirojpur.gov.bd/",
+    "https://police.bhola.gov.bd/",
+    "https://police.barguna.gov.bd/",
+    "https://police.<upazila>.<district>.gov.bd/",
+    "https://policedig.barisaldiv.gov.bd/"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "District and thana police portals (police.<district>.gov.bd, police.<upazila>.<district>.gov.bd)",
+  "notes": "No licence stated. SP offices from the Superintendent's officer card; thanas from each upazila's thana portal officer cards (office landline, OC's police official mobile, *.gov.bd e-mail). Personal e-mails, other mobiles and officers' names are not copied. Barishal Range (Range DIG's office, policedig.barisaldiv.gov.bd) covers the 6 districts of the division; Barishal District is in BARISHAL_POLICE_2026 and Barishal city's BMP thanas in BARISHAL_METRO_POLICE_THANAS_2026. Jhalokathi's police portals are under jhalakathi.gov.bd. Thanas that are not upazilas have no portal here.",
+  "files": {
+    "places.csv": "ec5ead35338a83f2ce3632b7ae40fce13cd57898b5fc6cbbe782a73372443360",
+    "facts.csv": "e5b258ac493207d372f46a3ccf054ec6e00dfc1eaba29e3edf56f19dafe15368"
+  }
+}

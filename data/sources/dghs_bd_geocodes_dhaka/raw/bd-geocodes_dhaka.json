@@ -1,0 +1,1407 @@
+{
+ "url": "https://fhir.dghs.gov.bd/core/CodeSystem/bd-geocodes",
+ "version": "0.5.0",
+ "name": "BDGeoCodesCS",
+ "title": "Bangladesh GeoCodes CodeSystem",
+ "status": "draft",
+ "date": "2026-10-15T00:09:54+00:00",
+ "publisher": "Directorate General of Health Services (DGHS), Bangladesh",
+ "description": "Bangladesh GeoCodes",
+ "count": 1591,
+ "ig_license": "CC0-1.0",
+ "ig_version": "0.5.0",
+ "concepts_dhaka_division": [
+  {
+   "code": "30",
+   "display": "Dhaka"
+  },
+  {
+   "code": "3026",
+   "display": "Dhaka"
+  },
+  {
+   "code": "3029",
+   "display": "Faridpur"
+  },
+  {
+   "code": "3033",
+   "display": "Gazipur"
+  },
+  {
+   "code": "3035",
+   "display": "Gopalganj"
+  },
+  {
+   "code": "3048",
+   "display": "Kishoreganj"
+  },
+  {
+   "code": "3054",
+   "display": "Madaripur"
+  },
+  {
+   "code": "3056",
+   "display": "Manikganj"
+  },
+  {
+   "code": "3059",
+   "display": "Munshiganj"
+  },
+  {
+   "code": "3067",
+   "display": "Narayanganj"
+  },
+  {
+   "code": "3068",
+   "display": "Narsingdi"
+  },
+  {
+   "code": "3082",
+   "display": "Rajbari"
+  },
+  {
+   "code": "3086",
+   "display": "Shariatpur"
+  },
+  {
+   "code": "3093",
+   "display": "Tangail"
+  },
+  {
+   "code": "302620",
+   "display": "Dhaka South City Corporation"
+  },
+  {
+   "code": "302625",
+   "display": "Dhaka North City Corperation"
+  },
+  {
+   "code": "303333",
+   "display": "Gazipur City Corporation"
+  },
+  {
+   "code": "306744",
+   "display": "Narayanganj City Corporation"
+  },
+  {
+   "code": "302600",
+   "display": "Dhaka N/A"
+  },
+  {
+   "code": "303300",
+   "display": "Gazipur N/A"
+  },
+  {
+   "code": "306700",
+   "display": "Narayanganj N/A"
+  },
+  {
+   "code": "302900",
+   "display": "Faridpur N/A"
+  },
+  {
+   "code": "303500",
+   "display": "Gopalganj N/A"
+  },
+  {
+   "code": "304800",
+   "display": "Kishoreganj N/A"
+  },
+  {
+   "code": "305400",
+   "display": "Madaripur N/A"
+  },
+  {
+   "code": "305600",
+   "display": "Manikganj N/A"
+  },
+  {
+   "code": "305900",
+   "display": "Munshiganj N/A"
+  },
+  {
+   "code": "306800",
+   "display": "Narsingdi N/A"
+  },
+  {
+   "code": "308200",
+   "display": "Rajbari N/A"
+  },
+  {
+   "code": "308600",
+   "display": "Shariatpur N/A"
+  },
+  {
+   "code": "309300",
+   "display": "Tangail N/A"
+  },
+  {
+   "code": "30262502",
+   "display": "Adabor"
+  },
+  {
+   "code": "30262504",
+   "display": "Badda"
+  },
+  {
+   "code": "30262005",
+   "display": "Bangshal"
+  },
+  {
+   "code": "30262506",
+   "display": "Biman Bandar"
+  },
+  {
+   "code": "30262507",
+   "display": "Banani"
+  },
+  {
+   "code": "30262508",
+   "display": "Cantonment"
+  },
+  {
+   "code": "30262009",
+   "display": "Chak Bazar"
+  },
+  {
+   "code": "30262510",
+   "display": "Dakshinkhan"
+  },
+  {
+   "code": "30262511",
+   "display": "Darus Salam"
+  },
+  {
+   "code": "30262012",
+   "display": "Demra"
+  },
+  {
+   "code": "30260014",
+   "display": "Dhamrai"
+  },
+  {
+   "code": "30260018",
+   "display": "Dohar"
+  },
+  {
+   "code": "30262521",
+   "display": "Bhasan Tek"
+  },
+  {
+   "code": "30262522",
+   "display": "Bhatara"
+  },
+  {
+   "code": "30262024",
+   "display": "Gendaria"
+  },
+  {
+   "code": "30262526",
+   "display": "Gulshan"
+  },
+  {
+   "code": "30262029",
+   "display": "Jatrabari"
+  },
+  {
+   "code": "30262530",
+   "display": "Kafrul"
+  },
+  {
+   "code": "30262032",
+   "display": "Kadamtali"
+  },
+  {
+   "code": "30262033",
+   "display": "Kalabagan"
+  },
+  {
+   "code": "30262034",
+   "display": "Kamrangir Char"
+  },
+  {
+   "code": "30262036",
+   "display": "Khilgaon"
+  },
+  {
+   "code": "30262537",
+   "display": "Khilkhet"
+  },
+  {
+   "code": "30260038",
+   "display": "Keraniganj"
+  },
+  {
+   "code": "30262040",
+   "display": "Kotwali"
+  },
+  {
+   "code": "30262042",
+   "display": "Lalbag"
+  },
+  {
+   "code": "30262548",
+   "display": "Mirpur"
+  },
+  {
+   "code": "30262054",
+   "display": "Motijheel"
+  },
+  {
+   "code": "30262057",
+   "display": "Mugda Para"
+  },
+  {
+   "code": "30260062",
+   "display": "Nawabganj"
+  },
+  {
+   "code": "30262063",
+   "display": "New Market"
+  },
+  {
+   "code": "30262564",
+   "display": "Pallabi"
+  },
+  {
+   "code": "30262065",
+   "display": "Paltan"
+  },
+  {
+   "code": "30262567",
+   "display": "Rampura"
+  },
+  {
+   "code": "30262068",
+   "display": "Sabujbag"
+  },
+  {
+   "code": "30262570",
+   "display": "Rupnagar"
+  },
+  {
+   "code": "30260072",
+   "display": "Savar"
+  },
+  {
+   "code": "30262073",
+   "display": "Shahjahanpur"
+  },
+  {
+   "code": "30262574",
+   "display": "Shah Ali"
+  },
+  {
+   "code": "30262075",
+   "display": "Shahbag"
+  },
+  {
+   "code": "30262076",
+   "display": "Shyampur"
+  },
+  {
+   "code": "30262580",
+   "display": "Sher-e-bangla Nagar"
+  },
+  {
+   "code": "30262088",
+   "display": "Sutrapur"
+  },
+  {
+   "code": "30262590",
+   "display": "Tejgaon"
+  },
+  {
+   "code": "30262592",
+   "display": "Tejgaon Ind. Area"
+  },
+  {
+   "code": "30262593",
+   "display": "Turag"
+  },
+  {
+   "code": "30262594",
+   "display": "Uttara  Paschim"
+  },
+  {
+   "code": "30262595",
+   "display": "Uttara  Purba"
+  },
+  {
+   "code": "30262596",
+   "display": "Uttar Khan"
+  },
+  {
+   "code": "30262098",
+   "display": "Wari"
+  },
+  {
+   "code": "30290003",
+   "display": "Alfadanga"
+  },
+  {
+   "code": "30290010",
+   "display": "Bhanga"
+  },
+  {
+   "code": "30290018",
+   "display": "Boalmari"
+  },
+  {
+   "code": "30290021",
+   "display": "Char Bhadrasan"
+  },
+  {
+   "code": "30290047",
+   "display": "Faridpur Sadar"
+  },
+  {
+   "code": "30290056",
+   "display": "Madhukhali"
+  },
+  {
+   "code": "30290062",
+   "display": "Nagarkanda"
+  },
+  {
+   "code": "30290084",
+   "display": "Sadarpur"
+  },
+  {
+   "code": "30290090",
+   "display": "Saltha"
+  },
+  {
+   "code": "30333330",
+   "display": "Gazipur Sadar"
+  },
+  {
+   "code": "30330032",
+   "display": "Kaliakair"
+  },
+  {
+   "code": "30330034",
+   "display": "Kaliganj"
+  },
+  {
+   "code": "30330036",
+   "display": "Kapasia"
+  },
+  {
+   "code": "30330086",
+   "display": "Sreepur"
+  },
+  {
+   "code": "30350032",
+   "display": "Gopalganj Sadar"
+  },
+  {
+   "code": "30350043",
+   "display": "Kashiani"
+  },
+  {
+   "code": "30350051",
+   "display": "Kotalipara"
+  },
+  {
+   "code": "30350058",
+   "display": "Muksudpur"
+  },
+  {
+   "code": "30350091",
+   "display": "Tungipara"
+  },
+  {
+   "code": "30480002",
+   "display": "Austagram"
+  },
+  {
+   "code": "30480006",
+   "display": "Bajitpur"
+  },
+  {
+   "code": "30480011",
+   "display": "Bhairab"
+  },
+  {
+   "code": "30480027",
+   "display": "Hossainpur"
+  },
+  {
+   "code": "30480033",
+   "display": "Itna"
+  },
+  {
+   "code": "30480042",
+   "display": "Karimganj"
+  },
+  {
+   "code": "30480045",
+   "display": "Katiadi"
+  },
+  {
+   "code": "30480049",
+   "display": "Kishoreganj Sadar"
+  },
+  {
+   "code": "30480054",
+   "display": "Kuliarchar"
+  },
+  {
+   "code": "30480059",
+   "display": "Mithamain"
+  },
+  {
+   "code": "30480076",
+   "display": "Nikli"
+  },
+  {
+   "code": "30480079",
+   "display": "Pakundia"
+  },
+  {
+   "code": "30480092",
+   "display": "Tarail"
+  },
+  {
+   "code": "30540040",
+   "display": "Kalkini"
+  },
+  {
+   "code": "30540054",
+   "display": "Madaripur Sadar"
+  },
+  {
+   "code": "30540080",
+   "display": "Rajoir"
+  },
+  {
+   "code": "30540087",
+   "display": "Shibchar"
+  },
+  {
+   "code": "30560010",
+   "display": "Daulatpur"
+  },
+  {
+   "code": "30560022",
+   "display": "Ghior"
+  },
+  {
+   "code": "30560028",
+   "display": "Harirampur"
+  },
+  {
+   "code": "30560046",
+   "display": "Manikganj Sadar"
+  },
+  {
+   "code": "30560070",
+   "display": "Saturia"
+  },
+  {
+   "code": "30560078",
+   "display": "Shibalaya"
+  },
+  {
+   "code": "30560082",
+   "display": "Singair"
+  },
+  {
+   "code": "30590024",
+   "display": "Gazaria"
+  },
+  {
+   "code": "30590044",
+   "display": "Lohajang"
+  },
+  {
+   "code": "30590056",
+   "display": "Munshiganj Sadar"
+  },
+  {
+   "code": "30590074",
+   "display": "Serajdikhan"
+  },
+  {
+   "code": "30590084",
+   "display": "Sreenagar"
+  },
+  {
+   "code": "30590094",
+   "display": "Tongibari"
+  },
+  {
+   "code": "30260022",
+   "display": "Gaffargaon"
+  },
+  {
+   "code": "30260023",
+   "display": "Gauripur"
+  },
+  {
+   "code": "30670002",
+   "display": "Araihazar"
+  },
+  {
+   "code": "30670004",
+   "display": "Sonargaon"
+  },
+  {
+   "code": "30674406",
+   "display": "Bandar"
+  },
+  {
+   "code": "30674458",
+   "display": "Narayanganj Sadar"
+  },
+  {
+   "code": "30670068",
+   "display": "Rupganj"
+  },
+  {
+   "code": "30680007",
+   "display": "Belabo"
+  },
+  {
+   "code": "30680052",
+   "display": "Manohardi"
+  },
+  {
+   "code": "30680060",
+   "display": "Narsingdi Sadar"
+  },
+  {
+   "code": "30680063",
+   "display": "Palash"
+  },
+  {
+   "code": "30680064",
+   "display": "Roypura"
+  },
+  {
+   "code": "30680076",
+   "display": "Shibpur"
+  },
+  {
+   "code": "30820007",
+   "display": "Baliakandi"
+  },
+  {
+   "code": "30820029",
+   "display": "Goalanda"
+  },
+  {
+   "code": "30820047",
+   "display": "Kalukhali"
+  },
+  {
+   "code": "30820073",
+   "display": "Pangsha"
+  },
+  {
+   "code": "30820076",
+   "display": "Rajbari Sadar"
+  },
+  {
+   "code": "30860014",
+   "display": "Bhedarganj"
+  },
+  {
+   "code": "30860025",
+   "display": "Damudya"
+  },
+  {
+   "code": "30860036",
+   "display": "Gosairhat"
+  },
+  {
+   "code": "30860065",
+   "display": "Naria"
+  },
+  {
+   "code": "30860069",
+   "display": "Shariatpur Sadar"
+  },
+  {
+   "code": "30860094",
+   "display": "Zanjira"
+  },
+  {
+   "code": "30260090",
+   "display": "Sreebardi"
+  },
+  {
+   "code": "30930009",
+   "display": "Basail"
+  },
+  {
+   "code": "30930019",
+   "display": "Bhuapur"
+  },
+  {
+   "code": "30930023",
+   "display": "Delduar"
+  },
+  {
+   "code": "30930025",
+   "display": "Dhanbari"
+  },
+  {
+   "code": "30930028",
+   "display": "Ghatail"
+  },
+  {
+   "code": "30930038",
+   "display": "Gopalpur"
+  },
+  {
+   "code": "30930047",
+   "display": "Kalihati"
+  },
+  {
+   "code": "30930057",
+   "display": "Madhupur"
+  },
+  {
+   "code": "30930066",
+   "display": "Mirzapur"
+  },
+  {
+   "code": "30930076",
+   "display": "Nagarpur"
+  },
+  {
+   "code": "30930085",
+   "display": "Sakhipur"
+  },
+  {
+   "code": "30930095",
+   "display": "Tangail Sadar"
+  },
+  {
+   "code": "30262550",
+   "display": "Mohammadpur"
+  },
+  {
+   "code": "30262097",
+   "display": "Dhanmondi"
+  },
+  {
+   "code": "30262527",
+   "display": "Hatirjheel"
+  },
+  {
+   "code": "30262028",
+   "display": "Hazaribag"
+  },
+  {
+   "code": "30262066",
+   "display": "Ramna"
+  },
+  {
+   "code": "30333315",
+   "display": "Basan"
+  },
+  {
+   "code": "30333318",
+   "display": "Gachha"
+  },
+  {
+   "code": "30333399",
+   "display": "Joydebpur"
+  },
+  {
+   "code": "30333340",
+   "display": "Kashimpur"
+  },
+  {
+   "code": "30333345",
+   "display": "Konabari"
+  },
+  {
+   "code": "30333350",
+   "display": "Pubail"
+  },
+  {
+   "code": "30333390",
+   "display": "Tongi Pashchim"
+  },
+  {
+   "code": "30333393",
+   "display": "Tongi Purba"
+  },
+  {
+   "code": "30540018",
+   "display": "Dasar"
+  },
+  {
+   "code": "3026001440",
+   "display": "Dhamrai Paurashava"
+  },
+  {
+   "code": "3026001860",
+   "display": "Dohar Paurashava"
+  },
+  {
+   "code": "3026007280",
+   "display": "Savar Paurashava"
+  },
+  {
+   "code": "3029001020",
+   "display": "Bhanga Paurashava"
+  },
+  {
+   "code": "3029001840",
+   "display": "Boalmari Paurashava"
+  },
+  {
+   "code": "3029004760",
+   "display": "Faridpur Paurashava"
+  },
+  {
+   "code": "3029005670",
+   "display": "Madhukhali Paurasava"
+  },
+  {
+   "code": "3029006280",
+   "display": "Nagarkanda Paurashava"
+  },
+  {
+   "code": "3033333033",
+   "display": "Gazipur City Corporation"
+  },
+  {
+   "code": "3033003244",
+   "display": "Kaliakair Paurashava"
+  },
+  {
+   "code": "3033003449",
+   "display": "Kaliganj Paurashava"
+  },
+  {
+   "code": "3033008655",
+   "display": "Sreepur Paurashava"
+  },
+  {
+   "code": "3035003225",
+   "display": "Gopalganj Paurashava"
+  },
+  {
+   "code": "3035005150",
+   "display": "Kotalipara Paurashava"
+  },
+  {
+   "code": "3035005865",
+   "display": "Muksudpur Paurashava"
+  },
+  {
+   "code": "3035009175",
+   "display": "Tungipara Paurashava"
+  },
+  {
+   "code": "3048000625",
+   "display": "Bajitpur Paurashava"
+  },
+  {
+   "code": "3048001150",
+   "display": "Bhairab Paurashava"
+  },
+  {
+   "code": "3048002762",
+   "display": "Hossainpur Paurashava"
+  },
+  {
+   "code": "3048004266",
+   "display": "Karimganj Paurashava"
+  },
+  {
+   "code": "3048004570",
+   "display": "Katiadi Paurashava"
+  },
+  {
+   "code": "3048004975",
+   "display": "Kishoreganj Paurashava"
+  },
+  {
+   "code": "3048005488",
+   "display": "Kuliar Char Paurashava"
+  },
+  {
+   "code": "3048007992",
+   "display": "Pakundia Paurashava"
+  },
+  {
+   "code": "3054004025",
+   "display": "Kalkini Paurashava"
+  },
+  {
+   "code": "3054005450",
+   "display": "Madaripur Paurashava"
+  },
+  {
+   "code": "3054008068",
+   "display": "Rajoir Paurashava"
+  },
+  {
+   "code": "3054008775",
+   "display": "Shibchar Paurashava"
+  },
+  {
+   "code": "3056004650",
+   "display": "Manikganj Paurashava"
+  },
+  {
+   "code": "3056008287",
+   "display": "Singair Paurashava"
+  },
+  {
+   "code": "3059005633",
+   "display": "Mirkadim Paurashava"
+  },
+  {
+   "code": "3059005666",
+   "display": "Munshiganj Paurashava"
+  },
+  {
+   "code": "3026002222",
+   "display": "Gaffargaon Paurashava"
+  },
+  {
+   "code": "3067000215",
+   "display": "Araihazar Paurashava"
+  },
+  {
+   "code": "3067000235",
+   "display": "Gopaldi Paurashava"
+  },
+  {
+   "code": "3067000466",
+   "display": "Sonargaon Paurashava"
+  },
+  {
+   "code": "3067445844",
+   "display": "Narayanganj City Corp."
+  },
+  {
+   "code": "3067006833",
+   "display": "Kanchan Paurashava"
+  },
+  {
+   "code": "3067006877",
+   "display": "Tarabo Paurashava"
+  },
+  {
+   "code": "3068005237",
+   "display": "Manohardi Paurashava"
+  },
+  {
+   "code": "3068006025",
+   "display": "Madhabdi Paurashava"
+  },
+  {
+   "code": "3068006050",
+   "display": "Narsingdi Paurashava"
+  },
+  {
+   "code": "3068006315",
+   "display": "Ghorashal Paurashava"
+  },
+  {
+   "code": "3068006480",
+   "display": "Roypura Paurashava"
+  },
+  {
+   "code": "3068007687",
+   "display": "Shibpur Paurashava"
+  },
+  {
+   "code": "3082002922",
+   "display": "Goalandaghat Paurashava"
+  },
+  {
+   "code": "3082007333",
+   "display": "Pangsha Paurashava"
+  },
+  {
+   "code": "3082007666",
+   "display": "Rajbari Paurashava"
+  },
+  {
+   "code": "3086001416",
+   "display": "Bhedarganj Paurashava"
+  },
+  {
+   "code": "3086002533",
+   "display": "Damudya Paurashava"
+  },
+  {
+   "code": "3086006550",
+   "display": "Naria Paurashava"
+  },
+  {
+   "code": "3086006966",
+   "display": "Shariatpur Paurashava"
+  },
+  {
+   "code": "3086009483",
+   "display": "Zanjira Paurashava"
+  },
+  {
+   "code": "3026009077",
+   "display": "Sreebardi Paurashava"
+  },
+  {
+   "code": "3093000908",
+   "display": "Basail Paurashava"
+  },
+  {
+   "code": "3093001912",
+   "display": "Bhuapur Paurashava"
+  },
+  {
+   "code": "3093002525",
+   "display": "Dhanbari Paurasava"
+  },
+  {
+   "code": "3093002837",
+   "display": "Ghatail Paurashava"
+  },
+  {
+   "code": "3093003850",
+   "display": "Gopalpur Paurashava"
+  },
+  {
+   "code": "3093004730",
+   "display": "Elenga Paurashava"
+  },
+  {
+   "code": "3093004762",
+   "display": "Kalihati Paurashava"
+  },
+  {
+   "code": "3093005775",
+   "display": "Madhupur Paurashava"
+  },
+  {
+   "code": "3093006670",
+   "display": "Mirzapur Paurashava"
+  },
+  {
+   "code": "3093008580",
+   "display": "Sakhipur Paurashava"
+  },
+  {
+   "code": "3093009587",
+   "display": "Tangail Paurashava"
+  },
+  {
+   "code": "3026250499",
+   "display": "Unions Of Badda Upazila"
+  },
+  {
+   "code": "3026251099",
+   "display": "Unions Of Dakshinkhan Upazila"
+  },
+  {
+   "code": "3026201299",
+   "display": "Unions Of Demra Upazila"
+  },
+  {
+   "code": "3026001499",
+   "display": "Unions Of Dhamrai Upazila"
+  },
+  {
+   "code": "3026001899",
+   "display": "Unions Of Dohar Upazila"
+  },
+  {
+   "code": "3026252299",
+   "display": "Unions Of Bhatara Upazila"
+  },
+  {
+   "code": "3026202999",
+   "display": "Unions Of Jatrabari Upazila"
+  },
+  {
+   "code": "3026203299",
+   "display": "Unions Of Kadamtali Upazila"
+  },
+  {
+   "code": "3026203499",
+   "display": "Unions Of Kamrangir Char Upazila"
+  },
+  {
+   "code": "3026203699",
+   "display": "Unions Of Khilgaon Upazila"
+  },
+  {
+   "code": "3026253799",
+   "display": "Unions Of Khilkhet Upazila"
+  },
+  {
+   "code": "3026003899",
+   "display": "Unions Of Keraniganj Upazila"
+  },
+  {
+   "code": "3026205799",
+   "display": "Unions Of Mugda Para Upazila"
+  },
+  {
+   "code": "3026006299",
+   "display": "Unions Of Nawabganj Upazila"
+  },
+  {
+   "code": "3026206899",
+   "display": "Unions Of Sabujbagh Upazila"
+  },
+  {
+   "code": "3026007299",
+   "display": "Unions Of Savar Upazila"
+  },
+  {
+   "code": "3026259399",
+   "display": "Unions Of Turag Upazila"
+  },
+  {
+   "code": "3026259699",
+   "display": "Unions Of Uttar Khan Upazila"
+  },
+  {
+   "code": "3029000399",
+   "display": "Unions Of Alfadanga Upazila"
+  },
+  {
+   "code": "3029001099",
+   "display": "Unions Of Bhanga Upazila"
+  },
+  {
+   "code": "3029001899",
+   "display": "Unions Of Boalmari Upazila"
+  },
+  {
+   "code": "3029002199",
+   "display": "Unions Of Char Bhadrasan Upazila"
+  },
+  {
+   "code": "3029004799",
+   "display": "Unions Of Faridpur Sadar Upazila"
+  },
+  {
+   "code": "3029005699",
+   "display": "Unions Of Madhukhali Upazila"
+  },
+  {
+   "code": "3029006299",
+   "display": "Unions Of Nagarkanda Upazila"
+  },
+  {
+   "code": "3029008499",
+   "display": "Unions Of Sadarpur Upazila"
+  },
+  {
+   "code": "3029009099",
+   "display": "Unions Of Saltha Upazila"
+  },
+  {
+   "code": "3033333099",
+   "display": "Unions Of Gazipur Sadar Upazila"
+  },
+  {
+   "code": "3033003299",
+   "display": "Unions Of Kaliakair Upazila"
+  },
+  {
+   "code": "3033003499",
+   "display": "Unions Of Kaliganj Upazila"
+  },
+  {
+   "code": "3033003699",
+   "display": "Unions Of Kapasia Upazila"
+  },
+  {
+   "code": "3033008699",
+   "display": "Unions Of Sreepur Upazila"
+  },
+  {
+   "code": "3035003299",
+   "display": "Unions Of Gopalganj Sadar Upazila"
+  },
+  {
+   "code": "3035004399",
+   "display": "Unions Of Kashiani Upazila"
+  },
+  {
+   "code": "3035005199",
+   "display": "Unions Of Kotalipara Upazila"
+  },
+  {
+   "code": "3035005899",
+   "display": "Unions Of Muksudpur Upazila"
+  },
+  {
+   "code": "3035009199",
+   "display": "Unions Of Tungipara Upazila"
+  },
+  {
+   "code": "3048000299",
+   "display": "Unions Of Austagram Upazila"
+  },
+  {
+   "code": "3048000699",
+   "display": "Unions Of Bajitpur Upazila"
+  },
+  {
+   "code": "3048001199",
+   "display": "Unions Of Bhairab Upazila"
+  },
+  {
+   "code": "3048002799",
+   "display": "Unions Of Hossainpur Upazila"
+  },
+  {
+   "code": "3048003399",
+   "display": "Unions Of Itna Upazila"
+  },
+  {
+   "code": "3048004299",
+   "display": "Unions Of Karimganj Upazila"
+  },
+  {
+   "code": "3048004599",
+   "display": "Unions Of Katiadi Upazila"
+  },
+  {
+   "code": "3048004999",
+   "display": "Unions Of Kishoreganj Sadar Upazila"
+  },
+  {
+   "code": "3048005499",
+   "display": "Unions Of Kuliar Char Upazila"
+  },
+  {
+   "code": "3048005999",
+   "display": "Unions Of Mithamain Upazila"
+  },
+  {
+   "code": "3048007699",
+   "display": "Unions Of Nikli Upazila"
+  },
+  {
+   "code": "3048007999",
+   "display": "Unions Of Pakundia Upazila"
+  },
+  {
+   "code": "3048009299",
+   "display": "Unions Of Tarail Upazila"
+  },
+  {
+   "code": "3054004099",
+   "display": "Unions Of Kalkini Upazila"
+  },
+  {
+   "code": "3054005499",
+   "display": "Unions Of Madaripur Sadar Upazila"
+  },
+  {
+   "code": "3054008099",
+   "display": "Unions Of Rajoir Upazila"
+  },
+  {
+   "code": "3054008799",
+   "display": "Unions Of Shibchar Upazila"
+  },
+  {
+   "code": "3056001099",
+   "display": "Unions Of Daulatpur Upazila"
+  },
+  {
+   "code": "3056002299",
+   "display": "Unions Of Ghior Upazila"
+  },
+  {
+   "code": "3056002899",
+   "display": "Unions Of Harirampur Upazila"
+  },
+  {
+   "code": "3056004699",
+   "display": "Unions Of Manikganj Sadar Upazila"
+  },
+  {
+   "code": "3056007099",
+   "display": "Unions Of Saturia Upazila"
+  },
+  {
+   "code": "3056007899",
+   "display": "Unions Of Shibalaya Upazila"
+  },
+  {
+   "code": "3056008299",
+   "display": "Unions Of Singair Upazila"
+  },
+  {
+   "code": "3059002499",
+   "display": "Unions Of Gazaria Upazila"
+  },
+  {
+   "code": "3059004499",
+   "display": "Unions Of Lohajang Upazila"
+  },
+  {
+   "code": "3059005699",
+   "display": "Unions Of Munshiganj Sadar Upazila"
+  },
+  {
+   "code": "3059007499",
+   "display": "Unions Of Serajdikhan Upazila"
+  },
+  {
+   "code": "3059008499",
+   "display": "Unions Of Sreenagar Upazila"
+  },
+  {
+   "code": "3059009499",
+   "display": "Unions Of Tongibari Upazila"
+  },
+  {
+   "code": "3067000299",
+   "display": "Unions Of Araihazar Upazila"
+  },
+  {
+   "code": "3067000499",
+   "display": "Unions Of Sonargaon Upazila"
+  },
+  {
+   "code": "3067440699",
+   "display": "Unions Of Bandar Upazila"
+  },
+  {
+   "code": "3067445899",
+   "display": "Unions Of Narayanganj Sadar Upazila"
+  },
+  {
+   "code": "3067006899",
+   "display": "Unions Of Rupganj Upazila"
+  },
+  {
+   "code": "3068000799",
+   "display": "Unions Of Belabo Upazila"
+  },
+  {
+   "code": "3068005299",
+   "display": "Unions Of Manohardi Upazila"
+  },
+  {
+   "code": "3068006099",
+   "display": "Unions Of Narsingdi Sadar Upazila"
+  },
+  {
+   "code": "3068006399",
+   "display": "Unions Of Palash Upazila"
+  },
+  {
+   "code": "3068006499",
+   "display": "Unions Of Roypura Upazila"
+  },
+  {
+   "code": "3068007699",
+   "display": "Unions Of Shibpur Upazila"
+  },
+  {
+   "code": "3082000799",
+   "display": "Unions Of Baliakandi Upazila"
+  },
+  {
+   "code": "3082002999",
+   "display": "Unions Of Goalanda Upazila"
+  },
+  {
+   "code": "3082004799",
+   "display": "Unions Of Kalukhali Upazila"
+  },
+  {
+   "code": "3082007399",
+   "display": "Unions Of Pangsha Upazila"
+  },
+  {
+   "code": "3082007699",
+   "display": "Unions Of Rajbari Sadar Upazila"
+  },
+  {
+   "code": "3086001499",
+   "display": "Unions Of Bhedarganj Upazila"
+  },
+  {
+   "code": "3086002599",
+   "display": "Unions Of Damudya Upazila"
+  },
+  {
+   "code": "3086003699",
+   "display": "Unions Of Gosairhat Upazila"
+  },
+  {
+   "code": "3086006599",
+   "display": "Unions Of Naria Upazila"
+  },
+  {
+   "code": "3086006999",
+   "display": "Unions Of Shariatpur Sadar Upazila"
+  },
+  {
+   "code": "3086009499",
+   "display": "Unions Of Zanjira Upazila"
+  },
+  {
+   "code": "3026009099",
+   "display": "Unions Of Sreebardi Upazila"
+  },
+  {
+   "code": "3093000999",
+   "display": "Unions Of Basail Upazila"
+  },
+  {
+   "code": "3093001999",
+   "display": "Unions Of Bhuapur Upazila"
+  },
+  {
+   "code": "3093002399",
+   "display": "Unions Of Delduar Upazila"
+  },
+  {
+   "code": "3093002599",
+   "display": "Unions Of Dhanbari Upazila"
+  },
+  {
+   "code": "3093002899",
+   "display": "Unions Of Ghatail Upazila"
+  },
+  {
+   "code": "3093003899",
+   "display": "Unions Of Gopalpur Upazila"
+  },
+  {
+   "code": "3093004799",
+   "display": "Unions Of Kalihati Upazila"
+  },
+  {
+   "code": "3093005799",
+   "display": "Unions Of Madhupur Upazila"
+  },
+  {
+   "code": "3093006699",
+   "display": "Unions Of Mirzapur Upazila"
+  },
+  {
+   "code": "3093007699",
+   "display": "Unions Of Nagarpur Upazila"
+  },
+  {
+   "code": "3093008599",
+   "display": "Unions Of Sakhipur Upazila"
+  },
+  {
+   "code": "3093009599",
+   "display": "Unions Of Tangail Sadar Upazila"
+  }
+ ]
+}

@@ -1,0 +1,24 @@
+{
+  "key": "SHELTERS_BAR_2026",
+  "division": "barishal",
+  "kind": "shelters",
+  "name": "Disaster shelters (cyclone / flood shelters, killas) on the national portal — Barishal Division DC and upazila portals",
+  "organization": "District / Upazila administrations (national portal framework); Department of Disaster Management checked",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://<district>.gov.bd/",
+    "https://<upazila>.<district>.gov.bd/ (menu 'আশ্রয়কেন্দ্রের তালিকা' / 'সাইক্লোন ও ফ্লাড সেল্টারের তালিকা' / 'দুর্যোগ ব্যবস্থাপনা পরিকল্পনা')",
+    "https://ddm.gov.bd/pages/miscellaneous-infos (বন্যা আশ্রয়কেন্দ্র; checked, not parsable)"
+  ],
+  "accessed": "2026-11-19",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "District / Upazila administrations (national portal framework, a2i/Cabinet Division)",
+  "notes": "48 portals' menus read. Shelter tables parsed by header (rowspan/colspan expanded); a row with both a cyclone- and a flood-shelter column gives one record per named shelter. Caretakers' names/mobiles dropped; no page saved to raw/. Coordinates only where a table publishes them. Lists published only as PDF/DOC/scans are counted in facts.csv, not parsed. Licence: none stated on the source; treat as government public information, cite the source.",
+  "files": {
+    "facts.csv": "e5b258ac493207d372f46a3ccf054ec6e00dfc1eaba29e3edf56f19dafe15368",
+    "places.csv": "3caf89d7e57fd29352f18ff6881a7bae15bfdbe9816b7433c575dff10ece7630"
+  }
+}

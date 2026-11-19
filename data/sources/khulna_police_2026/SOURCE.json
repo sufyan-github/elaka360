@@ -1,0 +1,24 @@
+{
+  "key": "KHULNA_POLICE_2026",
+  "division": "khulna",
+  "kind": "district_police",
+  "name": "Khulna District Police — SP office and thanas",
+  "organization": "Khulna District Police (Bangladesh Police)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://police.khulna.gov.bd/",
+    "https://police.khulna.gov.bd/pages/static-pages/69810d9ea31054345f1dd4bb",
+    "https://police.<upazila>.khulna.gov.bd/"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Office of the Superintendent of Police, Khulna (police.khulna.gov.bd) and the thana portals",
+  "notes": "No licence stated. police.khulna.gov.bd publishes no thana list, thana count or contact table (its 'এক নজরে' describes the office building; 'ডাক যোগাযোগ' gives no street address); SP office from the Superintendent's officer card, thanas from the 9 upazila thana portals' officer cards (office landline, OC's police official mobile, *.gov.bd e-mail). Personal e-mails, other mobiles and officers' names are not copied. Dacope's thana portal is police.dacope.khulna.gov.bd (police.dakop.khulna.gov.bd fails the TLS handshake). Khulna city is policed by KMP (KHULNA_METRO_POLICE_THANAS_2026).",
+  "files": {
+    "places.csv": "8dbefe32496b4b1c31ce2222904bd0091c16aa2410b07eeb5f6afd27d2007d6d",
+    "facts.csv": "e5b258ac493207d372f46a3ccf054ec6e00dfc1eaba29e3edf56f19dafe15368"
+  }
+}

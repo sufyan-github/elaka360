@@ -1,0 +1,2 @@
+entity_level,entity_name_en,district_en,upazila_en,code,fact,value,unit,basis,year,source_key,source_url,notes
+metropolitan_police,Rangpur Metropolitan Police area,Rangpur,,,police_stations,6,thanas,listed,2026,RANGPUR_METRO_POLICE_THANAS_2026,https://rpmp.gov.bd/index.php/home/units,Counted from OC rows of the RpMP units page

@@ -1,0 +1,21 @@
+{
+ "union_statistics": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/f376ca7e7ee5405f8311de650415b9d8.pdf",
+ "community_xlsx": {
+  "Sylhet": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/3abf605f9ab84a6686ad29688f206160.xlsx",
+  "Habiganj": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/5f57f437a3a343d789a71c659732ceb9.xlsx",
+  "Moulvibazar": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/15c2523d9c494f65bd1ec18fa602acf4.xlsx",
+  "Sunamganj": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/952593ea389a4e3ba299fcfa3887c6c2.xlsx"
+ },
+ "district_page": {
+  "Sylhet": "https://bbs.gov.bd/pages/files/6a0986a0fa5a21e711e542dd",
+  "Habiganj": "https://bbs.gov.bd/pages/files/6a09870caf5b16b9ec406952",
+  "Moulvibazar": "https://bbs.gov.bd/pages/files/6a09878faf5b16b9ec4069db",
+  "Sunamganj": "https://bbs.gov.bd/pages/files/6a09880e146993cdf84f6ea7"
+ },
+ "district_pdf": {
+  "Sylhet": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/95bca29b-c009-4261-97f2-e0f24cc55d87.pdf",
+  "Habiganj": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/1871b767-8ecd-4ec5-8073-d54d5ddd7b53.pdf",
+  "Moulvibazar": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/4c98bb76-8069-414a-9851-6cbbc4b9273f.pdf",
+  "Sunamganj": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/9f747c1b-3459-4567-9295-bf8a7cf28cad.pdf"
+ }
+}

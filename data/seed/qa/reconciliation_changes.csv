@@ -1,0 +1,17 @@
+﻿record,change,detail,source
+nuhil:union:1176,name_fix,Bangla name had a leading digit '১' (union number) in the source,
+nuhil:union:1278,name_fix,English name 'Mariaup' carried the 'up' (union parishad) suffix from its website slug,
+nuhil:union:1414,name_fix,English name '1nomohadevpur' carried a '1 no.' prefix from its website slug (union No. 1),
+nuhil:union:2806,name_fix,Bangla name had a trailing '২' not present in the English name or website slug,
+nuhil:union:3177,name_fix,English name 'Maijchar9' carried a trailing union number from its website slug,
+nuhil:union:2353,duplicate_dropped,"Duplicate of nuhil:union:2352 Awajpur (Charfesson): identical name, Bangla name and website",
+nuhil:union:2546,duplicate_dropped,"Duplicate of nuhil:union:2540 Talimpur (Barlekha): identical name, Bangla name and website",
+nuhil:union:3686,duplicate_dropped,Duplicate of nuhil:union:3685 Bhojoanpur (Tetulia): same name and Bangla name; website points to gazipur.gov.bd,
+nuhil:union:1285,reparented,Brahmapur: Natore Sadar -> Naldanga,NATORE_DC_2026
+nuhil:union:1286,reparented,Madhnagar: Natore Sadar -> Naldanga,NATORE_DC_2026
+nuhil:union:1287,reparented,Khajura: Natore Sadar -> Naldanga,NATORE_DC_2026
+nuhil:union:1288,reparented,Piprul: Natore Sadar -> Naldanga,NATORE_DC_2026
+nuhil:union:1289,reparented,Biprobelghoria: Natore Sadar -> Naldanga,NATORE_DC_2026
+source:WIKI_CC,url_fixed,wiki.krisyotam.com mirror -> https://en.wikipedia.org/wiki/List_of_city_corporations_in_Bangladesh (facts read from a Mar 2026 snapshot),WIKI_CC
+source:WIKI_ADMIN,url_fixed,wiki.krisyotam.com mirror -> https://en.wikipedia.org/wiki/Administrative_geography_of_Bangladesh,WIKI_ADMIN
+source:WIKI_RUET,url_fixed,wiki.krisyotam.com mirror -> https://en.wikipedia.org/wiki/Rajshahi_University_of_Engineering_%26_Technology,WIKI_RUET

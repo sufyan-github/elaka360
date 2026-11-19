@@ -1,55 +1,73 @@
-/* SQL for the Geo module. Kept as plain constants so scripts/check-sql.py can
-   prepare and execute every statement against the seeded database in CI. */
+/* SQL for the Geo module. Public reads use the public_* views (db/migrations/0005), which enforce
+   production eligibility. Kept as constants so scripts/check_sql.py executes each one in CI. */
 
-export const AREA_SUMMARY_COLS = `a.id::int, a.level::text, a.parent_id::int, a.name_bn, a.name_en, a.slug, a.path, a.verified`;
+export const AREA_SUMMARY_COLS = `a.id::int, a.level::text, a.parent_id::int, a.name_bn, a.name_en, a.slug, a.path, a.verified,
+  a.evidence_level::text, a.production_eligible`;
+
+export const SOURCE_JSON_S = `CASE WHEN s.id IS NULL THEN NULL ELSE json_build_object('key', s.key, 'name', s.name, 'url', NULLIF(s.url, '')) END`;
+export const SOURCE_JSON_ES = `CASE WHEN es.id IS NULL THEN NULL ELSE json_build_object('key', es.key, 'name', es.name, 'url', NULLIF(es.url, '')) END`;
 
 export const AREA_DETAIL_SQL = `
 SELECT ${AREA_SUMMARY_COLS}, a.bbs_code, a.website, a.lat::float8, a.lon::float8, a.area_km2::float8,
-       a.area_basis, a.population_2022, a.population_basis, a.wards_count, a.established,
-       a.production_eligible, a.notes,
-       CASE WHEN s.id IS NULL THEN NULL ELSE json_build_object('key', s.key, 'name', s.name, 'url', s.url) END AS source
-FROM admin_areas a
+       a.area_basis, a.population_2022, a.population_basis, a.wards_count, a.established, a.notes,
+       a.verification_notes, to_char(a.last_reviewed_at, 'YYYY-MM-DD') AS last_reviewed_at,
+       ${SOURCE_JSON_S} AS source, ${SOURCE_JSON_ES} AS evidence_source
+FROM public_admin_areas a
 LEFT JOIN data_sources s ON s.id = COALESCE(a.population_source_id, a.data_source_id)
+LEFT JOIN data_sources es ON es.id = a.evidence_source_id
 WHERE a.path = $1`;
 
-export const AREA_BY_ID_PATH_SQL = `SELECT path FROM admin_areas WHERE id = $1`;
+export const AREA_BY_ID_PATH_SQL = `SELECT path FROM public_admin_areas WHERE id = $1`;
 
 export const BREADCRUMB_SQL = `
 WITH RECURSIVE up AS (
-  SELECT a.*, 0 AS depth FROM admin_areas a WHERE a.id = $1
+  SELECT a.*, 0 AS depth FROM public_admin_areas a WHERE a.id = $1
   UNION ALL
-  SELECT p.*, up.depth + 1 FROM admin_areas p JOIN up ON p.id = up.parent_id
+  SELECT p.*, up.depth + 1 FROM public_admin_areas p JOIN up ON p.id = up.parent_id
 )
 SELECT ${AREA_SUMMARY_COLS} FROM up a ORDER BY a.depth DESC`;
 
 export const CHILDREN_SQL = `
-SELECT ${AREA_SUMMARY_COLS} FROM admin_areas a
+SELECT ${AREA_SUMMARY_COLS} FROM public_admin_areas a
 WHERE a.parent_id = $1 AND ($2::text IS NULL OR a.level::text = $2)
-ORDER BY a.level, a.name_en`;
+ORDER BY a.level, a.name_en, a.id`;
 
+/** Descendants per level: public ones, and ones that exist but await verification. */
 export const DESCENDANT_COUNTS_SQL = `
 WITH RECURSIVE d AS (
-  SELECT id, level FROM admin_areas WHERE parent_id = $1
+  SELECT id, level, production_eligible, status FROM admin_areas WHERE parent_id = $1
   UNION ALL
-  SELECT a.id, a.level FROM admin_areas a JOIN d ON a.parent_id = d.id
+  SELECT a.id, a.level, a.production_eligible, a.status FROM admin_areas a JOIN d ON a.parent_id = d.id
 )
-SELECT level::text, count(*)::int AS n FROM d GROUP BY level`;
+SELECT level::text,
+       count(*) FILTER (WHERE status = 'active' AND (production_eligible OR elaka_include_unverified()))::int AS n,
+       count(*) FILTER (WHERE status = 'active' AND NOT (production_eligible OR elaka_include_unverified()))::int AS pending
+FROM d GROUP BY level`;
+
+/** Areas linked outside the tree (db/migrations/0010): a ward's thana(s), or a thana's wards. $1 area id */
+export const AREA_LINKS_SQL = `
+SELECT ${AREA_SUMMARY_COLS}, 'thana' AS relation
+FROM admin_area_links l JOIN public_admin_areas a ON a.id = l.linked_area_id
+WHERE l.area_id = $1 AND l.relation = 'thana'
+UNION ALL
+SELECT ${AREA_SUMMARY_COLS}, 'thana_ward' AS relation
+FROM admin_area_links l JOIN public_admin_areas a ON a.id = l.area_id
+WHERE l.linked_area_id = $1 AND l.relation = 'thana'
+ORDER BY relation, level, name_en`;
 
 export const PLACE_COUNTS_SQL = `
 SELECT c.key, count(*)::int AS n
-FROM places p JOIN categories c ON c.id = p.category_id
-WHERE p.status = 'active'
-  AND $1::bigint IN (p.division_id, p.district_id, p.upazila_id, p.union_id, p.city_corporation_id)
+FROM public_places p JOIN categories c ON c.id = p.category_id
+WHERE (p.division_id = $1 OR p.district_id = $1 OR p.upazila_id = $1 OR p.union_id = $1 OR p.city_corporation_id = $1)
 GROUP BY c.key`;
 
 export const NATIONAL_PLACE_COUNTS_SQL = `
-SELECT c.key, count(*)::int AS n FROM places p JOIN categories c ON c.id = p.category_id
-WHERE p.status = 'active' GROUP BY c.key`;
+SELECT c.key, count(*)::int AS n FROM public_places p JOIN categories c ON c.id = p.category_id GROUP BY c.key`;
 
 export const LIST_SQL = `
-SELECT ${AREA_SUMMARY_COLS} FROM admin_areas a
+SELECT ${AREA_SUMMARY_COLS} FROM public_admin_areas a
 WHERE a.level::text = $1 AND ($2::bigint IS NULL OR a.parent_id = $2)
-ORDER BY a.name_en
+ORDER BY a.name_en COLLATE "C", a.id   -- byte order, as the edge database (SQLite) sorts
 LIMIT $3 OFFSET $4`;
 
 export const NATIONAL_STATS_SQL = `
@@ -60,6 +78,132 @@ SELECT
   count(*) FILTER (WHERE level = 'union')::int AS "union",
   count(*) FILTER (WHERE level = 'city_corporation')::int AS city_corporation,
   count(*) FILTER (WHERE level = 'pourashava')::int AS pourashava,
-  (SELECT count(*)::int FROM places WHERE status = 'active') AS places,
-  (SELECT count(*)::int FROM places WHERE status = 'active' AND verification_status = 'verified') AS verified_places
-FROM admin_areas`;
+  count(*) FILTER (WHERE level = 'thana')::int AS thana,
+  count(*) FILTER (WHERE level = 'mouza')::int AS mouza,
+  count(*) FILTER (WHERE level = 'village')::int AS village,
+  (SELECT count(*)::int FROM public_places) AS places,
+  (SELECT count(*)::int FROM public_places WHERE evidence_level = 'official') AS verified_places,
+  json_build_object(
+    'division', count(*) FILTER (WHERE level = 'division' AND production_eligible),
+    'district', count(*) FILTER (WHERE level = 'district' AND production_eligible),
+    'upazila', count(*) FILTER (WHERE level = 'upazila' AND production_eligible),
+    'union', count(*) FILTER (WHERE level = 'union' AND production_eligible),
+    'city_corporation', count(*) FILTER (WHERE level = 'city_corporation' AND production_eligible),
+    'pourashava', count(*) FILTER (WHERE level = 'pourashava' AND production_eligible),
+    'places', (SELECT count(*) FROM public_places WHERE production_eligible)) AS sourced
+FROM public_admin_areas`;
+
+/** Flat subtree to a depth (nested in the service). $1 root id, $2 max depth. */
+export const TREE_SQL = `
+WITH RECURSIVE t AS (
+  SELECT a.*, 0 AS depth FROM public_admin_areas a WHERE a.id = $1
+  UNION ALL
+  SELECT c.*, t.depth + 1 FROM public_admin_areas c JOIN t ON c.parent_id = t.id WHERE t.depth < $2
+)
+SELECT ${AREA_SUMMARY_COLS}, a.depth FROM t a ORDER BY a.depth, a.level, a.name_en
+LIMIT 6000`;
+
+/** Most specific public area whose boundary covers the point. $1 lat, $2 lon. */
+export const LOCATE_SQL = `
+SELECT ${AREA_SUMMARY_COLS} FROM public_admin_areas a
+WHERE a.boundary IS NOT NULL AND ST_Covers(a.boundary, ST_SetSRID(ST_MakePoint($2, $1), 4326)::geography)
+ORDER BY array_position(ARRAY['union','pourashava','city_corporation','upazila','district','division']::text[], a.level::text)
+LIMIT 1`;
+
+export const BOUNDARY_LEVELS_SQL = `SELECT DISTINCT level::text FROM public_admin_areas WHERE boundary IS NOT NULL`;
+
+export const BOUNDARY_SQL = `
+SELECT a.id::int, a.name_bn, a.name_en, a.level::text, ST_AsGeoJSON(a.boundary::geometry, 5)::json AS geometry
+FROM public_admin_areas a WHERE a.id = $1 AND a.boundary IS NOT NULL`;
+
+/**
+ * Boundaries of the areas below a parent, for the live map. $1 parent id, $2 levels text[], $3 simplify tolerance (degrees).
+ * place_count counts public places filed under the area (pourashavas and wards have no place column: NULL).
+ */
+export const CHILD_BOUNDARIES_SQL = `
+WITH root AS (SELECT path FROM public_admin_areas WHERE id = $1)
+SELECT a.id::int, a.level::text, a.parent_id::int, a.name_bn, a.name_en, a.path, a.evidence_level::text, a.production_eligible,
+       a.population_2022,
+       CASE a.level
+         WHEN 'union' THEN (SELECT count(*) FROM public_places p WHERE p.union_id = a.id)
+         WHEN 'upazila' THEN (SELECT count(*) FROM public_places p WHERE p.upazila_id = a.id)
+         WHEN 'city_corporation' THEN (SELECT count(*) FROM public_places p WHERE p.city_corporation_id = a.id)
+         WHEN 'district' THEN (SELECT count(*) FROM public_places p WHERE p.district_id = a.id)
+       END::int AS place_count,
+       ST_AsGeoJSON(ST_SimplifyPreserveTopology(a.boundary::geometry, $3), 5)::json AS geometry
+FROM public_admin_areas a, root
+WHERE a.boundary IS NOT NULL AND a.level::text = ANY($2::text[]) AND a.path LIKE root.path || '/%'
+ORDER BY a.path
+LIMIT 3000`;
+
+/** Columns of a coverage row (COVERAGE_PLACES_SQL / COVERAGE_NATIONAL_SQL); `services` counts the essential-service
+ *  sub-categories (keys in COVERAGE_SERVICES, geo.service.ts). */
+export const COVERAGE_AGG = `
+SELECT child_id::int, GROUPING(child_id) = 1 AS total,
+       count(*)::int AS places,
+       count(*) FILTER (WHERE evidence_level = 'official')::int AS official,
+       count(*) FILTER (WHERE evidence_level = 'secondary')::int AS secondary,
+       count(*) FILTER (WHERE evidence_level IN ('community', 'unverified'))::int AS community,
+       count(*) FILTER (WHERE lat IS NOT NULL)::int AS with_point,
+       count(*) FILTER (WHERE cardinality(phones) > 0 OR email IS NOT NULL OR website IS NOT NULL)::int AS with_contact,
+       count(*) FILTER (WHERE NOT coalesce(attributes ? '_name_bn_missing', false))::int AS with_name_bn,
+       count(DISTINCT union_id)::int AS unions_with_places,
+       json_build_object(
+         'union_parishad', count(*) FILTER (WHERE sub = 'government.union_parishad'),
+         'pharmacy', count(*) FILTER (WHERE sub = 'health.pharmacy'),
+         'hospital', count(*) FILTER (WHERE sub IN ('health.hospital', 'health.upazila_health_complex', 'health.medical_college_hospital')),
+         'community_clinic', count(*) FILTER (WHERE sub = 'health.community_clinic'),
+         'police', count(*) FILTER (WHERE sub = 'emergency.police_station'),
+         'fire', count(*) FILTER (WHERE sub = 'emergency.fire_station'),
+         'post_office', count(*) FILTER (WHERE sub = 'government.post_office'),
+         'market', count(*) FILTER (WHERE sub IN ('business.market', 'agriculture.haat')),
+         'bank', count(*) FILTER (WHERE sub IN ('finance.bank', 'finance.atm')),
+         'transport', count(*) FILTER (WHERE sub IN ('transport.bus_terminal', 'transport.bus_stop', 'transport.railway_station', 'transport.launch_ghat')),
+         'school', count(*) FILTER (WHERE sub IN ('education.primary_school', 'education.secondary_school', 'education.madrasa'))
+       ) AS services
+FROM s
+GROUP BY GROUPING SETS ((child_id), ())
+ORDER BY total DESC, child_id NULLS FIRST`;
+
+/** Child key for coverage: $2 = 'district' | 'upazila' (upazilas and city corporations: a place in a city corporation
+ *  is counted there) | 'union'. */
+export const COVERAGE_CHILD_KEY = `CASE $2::text WHEN 'division' THEN p.division_id WHEN 'district' THEN p.district_id
+       WHEN 'upazila' THEN coalesce(p.city_corporation_id, p.upazila_id) WHEN 'union' THEN p.union_id END`;
+
+/**
+ * Coverage of public places under a division, district or upazila, per child area. $1 area id, $2 child grouping
+ * (COVERAGE_CHILD_KEY). The three equality tests let the planner combine the place indexes (one area id is only ever
+ * one level). Rows with child_id NULL are places the source could not file at the child level.
+ */
+export const COVERAGE_PLACES_SQL = `
+WITH s AS (
+  SELECT p.*, sc.key AS sub, ${COVERAGE_CHILD_KEY} AS child_id
+  FROM public_places p LEFT JOIN categories sc ON sc.id = p.subcategory_id
+  WHERE p.division_id = $1 OR p.district_id = $1 OR p.upazila_id = $1
+)${COVERAGE_AGG}`;
+
+/** COVERAGE_PLACES_SQL for the whole country. $1 unused (kept for the same call shape), $2 child grouping. */
+export const COVERAGE_NATIONAL_SQL = `
+WITH s AS (
+  SELECT p.*, sc.key AS sub, ${COVERAGE_CHILD_KEY} AS child_id
+  FROM public_places p LEFT JOIN categories sc ON sc.id = p.subcategory_id
+  WHERE $1::bigint IS NOT NULL
+)${COVERAGE_AGG}`;
+
+/** Child areas for COVERAGE_PLACES_SQL with their administrative units below. $1 area id, $2 child levels text[] */
+export const COVERAGE_AREAS_SQL = `
+SELECT ${AREA_SUMMARY_COLS}, a.population_2022,
+       u.unions, u.mouzas, u.villages
+FROM public_admin_areas a
+CROSS JOIN LATERAL (
+  SELECT count(*) FILTER (WHERE d.level = 'union')::int AS unions, count(*) FILTER (WHERE d.level = 'mouza')::int AS mouzas,
+         count(*) FILTER (WHERE d.level = 'village')::int AS villages
+  FROM public_admin_areas d
+  -- descendants by path prefix, as a range the text_pattern_ops index can use ('0' sorts right after '/'); division
+  -- paths have no country prefix, so the country takes every path ([a-z0-9/-] all sort below '{')
+  WHERE d.level IN ('union', 'mouza', 'village')
+    AND d.path ~>=~ (CASE WHEN a.level = 'country' THEN '' ELSE a.path || '/' END)
+    AND d.path ~<~ (CASE WHEN a.level = 'country' THEN '{' ELSE a.path || '0' END)
+) u
+WHERE (a.parent_id = $1 AND a.level::text = ANY($2::text[])) OR a.id = $1
+ORDER BY a.id = $1 DESC, a.level, a.name_en COLLATE "C", a.id`;

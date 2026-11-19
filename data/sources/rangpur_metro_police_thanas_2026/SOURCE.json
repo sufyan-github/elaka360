@@ -1,0 +1,26 @@
+{
+  "key": "RANGPUR_METRO_POLICE_THANAS_2026",
+  "division": "rangpur",
+  "kind": "metro_police_thanas",
+  "name": "Rangpur Metropolitan Police — thanas and official numbers",
+  "organization": "Rangpur Metropolitan Police (Bangladesh Police)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://rpmp.gov.bd/index.php/home/units",
+    "https://rpmp.gov.bd/index.php/home/telephone_directory",
+    "https://rpmp.rangpurdiv.gov.bd/pages/static-pages/69771cd5c4774958d7c06d89"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Rangpur Metropolitan Police (rpmp.gov.bd)",
+  "notes": "No licence stated. Only institutional numbers (OC / outpost in-charge official mobiles, thana telephones, HQ and control-room numbers, *@police.gov.bd e-mails) are collected; no officer names. No thana addresses or coordinates are published (zone offices give street hints only).",
+  "files": {
+    "places.csv": "af0260553345912200f8e37550861760478815ac75532c0a2e89178d01470b4f",
+    "facts.csv": "c5a8f0395f934420b37dab31ee3e9edc5d516563fbcdbd4d2642db1d799f6603",
+    "raw/rpmp_directory_commissioner.txt": "0517d2a73129c5c88e4b49d783518c1acc86eb71e41126e8efb0e6ac14ef7e26",
+    "raw/rpmp_units.txt": "c1ac3937a30aa766269bf1b7c8c4fbf97e52e7d4227f5821cade612391c13fd1"
+  }
+}

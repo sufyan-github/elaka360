@@ -1,0 +1,27 @@
+{
+  "key": "LGD_2026_RANGPUR",
+  "name": "Local Government Division portal (lgd.gov.bd) — Rangpur Division extract",
+  "organization": "Local Government Division, Ministry of LGRD&C",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://lgd.gov.bd/",
+    "https://lgd.gov.bd/pages/static-pages/6941401ec4774958d7b54a3f",
+    "https://lgd.gov.bd/pages/static-pages/69414021c4774958d7b54bea"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Local Government Division (lgd.gov.bd), Bangladesh National Portal",
+  "files": {
+    "areas.csv": "5289f8af8082802f84fef8f2e3e1355fb38e1df62eafeb56704b349dd78e300c",
+    "facts.csv": "ccfe64f57fde4205cb719af2fcd8df58796124eae6570312eaac91450a05bd2c",
+    "raw/menu_page_status.txt": "767858f847067e15015ae4d90550b1199ceea9509dec17e4a645474dd3f6e93f",
+    "raw/union_parishad_page.txt": "cced2964ef8390c71440d6d1ee4e776efd65073e3cbfc03b476a2294e8e0ecbb",
+    "raw/upazila_list_rangpur_division.txt": "e9d1be9ee75e10a54714038cdf248f95c25c4200eeb8113a06c7ea26cee6e49a"
+  },
+  "notes": "Not a formal LGD list/gazette, so trust 4. Only the upazila-parishad list (page updated 2023-05-31 19:36) has Rangpur Division content; the portal has no pourashava or union list and no downloadable directory; menu pages for city corporations, pourashavas, zila parishads and upazila parishads: see raw/menu_page_status.txt. The national union-parishad total is kept in the Rajshahi LGD_2026 folder only.",
+  "division": "rangpur",
+  "kind": "lgd"
+}

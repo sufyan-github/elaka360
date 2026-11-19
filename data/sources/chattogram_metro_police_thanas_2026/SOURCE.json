@@ -1,0 +1,33 @@
+{
+  "key": "CHATTOGRAM_METRO_POLICE_THANAS_2026",
+  "division": "chattogram",
+  "kind": "metro_police_thanas",
+  "city": 50003,
+  "name": "Chattogram Metropolitan Police — thanas and official numbers",
+  "organization": "Chattogram Metropolitan Police (Bangladesh Police)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://cmp.gov.bd/index.php?cPath=295",
+    "https://cmp.gov.bd/index.php?cPath=287",
+    "https://cmp.gov.bd/index.php?cPath=288",
+    "https://cmp.gov.bd/index.php?cPath=289",
+    "https://cmp.gov.bd/index.php?cPath=290",
+    "https://cmp.gov.bd/index.php?cPath=338",
+    "https://cmp.gov.bd/index.php?cPath=297",
+    "https://police.chittagongdiv.gov.bd/pages/static-pages/at-a-glance-6ae2db41fd9ba07169122831",
+    "https://police.chittagongdiv.gov.bd/pages/static-pages/যোগাযোগ-15cb30-699124d1516a96d4de404110"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Chattogram Metropolitan Police (cmp.gov.bd, police.chittagongdiv.gov.bd)",
+  "notes": "No licence stated. Only institutional numbers are collected: OC and duty-officer police official mobiles (01320-05xxxx) from the cmp.gov.bd contact directory, the Commissioner post's official mobile, the HQ office phone and pccmp@police.gov.bd, and the control-room numbers. Inspectors' mobiles and officers' names are not copied; cmp.gov.bd's obfuscated e-mails are not decoded. Addresses are cmp.gov.bd's undated English list. No thana is placed in Chattogram City Corporation (area_en empty): CMP covers 'most of' CCC and no source gives a thana-to-city-corporation list.",
+  "files": {
+    "places.csv": "705c6d5ceaf575a46a2c56ab1bb7ea623cabf363ac2ee84e972bb334f53b27c5",
+    "facts.csv": "bb15adef7ac24ed54c355fa0b718523521b93dec7f4452712ba5aaaa268b883f",
+    "raw/cmp_hq_and_control_room.txt": "dfa0768496536d263fa952a44b328a48ef957f5f86195ac7173fb37453a6858c",
+    "raw/cmp_thana_numbers.txt": "19d772a9539b2d136cb116ca6199da81089298e9c15733eb2e13cb0bf7003e9f"
+  }
+}

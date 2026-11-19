@@ -1,0 +1,38 @@
+{
+  "key": "DISTRICT_PORTALS_TRANSPORT_CTG_2026",
+  "division": "chattogram",
+  "kind": "district_transport",
+  "name": "District portals (Chattogram Division) — bus terminals/stands, stations, ghats and airport named on transport pages",
+  "organization": "Deputy Commissioner's offices (national portal framework)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://chittagong.gov.bd/pages/static-pages/যোগাযোগ-ব্যবস্থা-603b1f-6991007d35ce18e1c0732d23",
+    "https://feni.gov.bd/pages/static-pages/6990ef0035ce18e1c072ab3f",
+    "https://brahmanbaria.gov.bd/pages/static-pages/69912184516a96d4de403199",
+    "https://rangamati.gov.bd/pages/static-pages/যোগাযোগ-ব্যবস্থা-26035b-6991008b35ce18e1c0733370",
+    "https://noakhali.gov.bd/pages/static-pages/69910abb35ce18e1c0739032",
+    "https://chandpur.gov.bd/pages/static-pages/6991384d516a96d4de40c3fd",
+    "https://lakshmipur.gov.bd/pages/static-pages/699149ce516a96d4de417ccf",
+    "https://coxsbazar.gov.bd/pages/static-pages/6991176d35ce18e1c073d33d",
+    "https://khagrachhari.gov.bd/pages/static-pages/699143a5516a96d4de412736",
+    "https://bandarban.gov.bd/pages/static-pages/69914377516a96d4de41122d"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "District portals (*.gov.bd, Bangladesh National Portal)",
+  "notes": "No licence stated. No portal publishes a bus-terminal register; rows are names explicitly given on the district 'যোগাযোগ ব্যবস্থা' pages (Chattogram, Feni, Brahmanbaria, Noakhali, Chandpur, Lakshmipur, Bandarban). Rangamati, Cox's Bazar and Khagrachhari pages name no terminal or station (routes, distances, bus companies and counter mobiles); Cumilla's portal has no such page; the divisional portal's general page is not used. raw/ keeps, per page that gave a row, only the lines carrying the matched phrases (mobiles/e-mails redacted; descriptive text is not copied into the CSVs).",
+  "files": {
+    "places.csv": "85eb8e650e4973a693114b14f95ae25328acc8b5b8465dbe05acaa755c044439",
+    "facts.csv": "e5b258ac493207d372f46a3ccf054ec6e00dfc1eaba29e3edf56f19dafe15368",
+    "raw/bandarban_transport.txt": "1b8cf995dca99dbb09be3980adac296f74e524f4251a09b16df9d77a51c763d7",
+    "raw/brahmanbaria_transport.txt": "abd8a744c94ceabaf11f7eb5e47c6e78888e0142767c64914800bfd9e39592a2",
+    "raw/chandpur_transport.txt": "094937ed84db4888374a228da7976520625e44322670c2d9e29eba72db040733",
+    "raw/chattogram_transport.txt": "d1b3286ad2151d3f8658a9eac789d390888e0a3d4906fd4ca8d3ebb8f51b23b2",
+    "raw/feni_transport.txt": "3203a6d454c1832da6cab823f911344518dafd18987a0cae9c803f1d385ed713",
+    "raw/lakshmipur_transport.txt": "dc3f7dd9add98ebeb7e1b38810595817f99ec7c9a99ad62ac1c7b45567099113",
+    "raw/noakhali_transport.txt": "5876ceb3608279dbaf8a7a470711c77ca944b84ec5a90e3512ccee16de88a639"
+  }
+}

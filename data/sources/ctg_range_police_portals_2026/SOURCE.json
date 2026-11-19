@@ -1,0 +1,33 @@
+{
+  "key": "CTG_RANGE_POLICE_PORTALS_2026",
+  "division": "chattogram",
+  "kind": "range_police",
+  "name": "District police portals of Chattogram Range (Cumilla, Feni, Brahmanbaria, Rangamati, Noakhali, Chandpur, Lakshmipur, Cox's Bazar, Khagrachhari, Bandarban)",
+  "organization": "Bangladesh Police — district police units of Chattogram Range",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://police.comilla.gov.bd/",
+    "https://police.feni.gov.bd/",
+    "https://police.brahmanbaria.gov.bd/",
+    "https://police.rangamati.gov.bd/",
+    "https://police.noakhali.gov.bd/",
+    "https://police.chandpur.gov.bd/",
+    "https://police.lakshmipur.gov.bd/",
+    "https://police.coxsbazar.gov.bd/",
+    "https://police.khagrachhari.gov.bd/",
+    "https://police.bandarban.gov.bd/",
+    "https://police.<upazila>.<district>.gov.bd/",
+    "https://dig.chittagongdiv.gov.bd/"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "District and thana police portals (police.<district>.gov.bd, police.<upazila>.<district>.gov.bd)",
+  "notes": "No licence stated. SP offices from the Superintendent's officer card; thanas from each upazila's thana portal officer cards (office landline, OC's police official mobile, *.gov.bd e-mail). Personal e-mails, other mobiles and officers' names are not copied. Chattogram Range (Range DIG's office, dig.chittagongdiv.gov.bd) covers the 11 districts of the division; Chattogram District is in CHATTOGRAM_POLICE_2026 and Chattogram city's CMP thanas in CHATTOGRAM_METRO_POLICE_THANAS_2026. Thanas that are not upazilas have no portal here. Unavailable this run: Cox's Bazar: portal police.eidgaon.coxsbazar.gov.bd did not respond",
+  "files": {
+    "places.csv": "e2cbfac2223195cf5d0972336101dc7fbcb2554af3088e3f29e78caee62a9571",
+    "facts.csv": "e5b258ac493207d372f46a3ccf054ec6e00dfc1eaba29e3edf56f19dafe15368"
+  }
+}

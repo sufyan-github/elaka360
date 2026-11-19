@@ -31,6 +31,9 @@ test('formatCompact (lakh/crore)', () => {
   assert.equal(formatCompact(45644586, 'bn', 1), '৪.৬ কোটি');
   assert.equal(formatCompact(2915009, 'en'), '2.92M');
   assert.equal(formatCompact(950), '৯৫০');
+  assert.equal(formatCompact(9999999), '১.০০ কোটি');
+  assert.equal(formatCompact(99999), '১.০০ লাখ');
+  assert.equal(formatCompact(999999, 'en'), '1.00M');
 });
 
 test('counts, area, distance, date', () => {

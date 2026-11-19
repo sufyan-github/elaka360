@@ -1,0 +1,34 @@
+# DGHS bd-geocodes (BBS geocodes) — Mymensingh Division
+
+- **Source:** DGHS Bangladesh Core FHIR Implementation Guide, CodeSystem `bd-geocodes` v0.5.0 (2026-10-15), 1,591 codes nationally. https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html
+- **Run:** `python3 -I data/sources/dghs_bd_geocodes/fetch.py --division mymensingh` (accessed 2026-11-18). Key `DGHS_BD_GEOCODES_MYMENSINGH`, division `mymensingh`, kind `dghs_geocodes`.
+- **Licence:** CC0-1.0 (the guide's licence field).
+- **Code layout (inferred, as for Rajshahi):** 2 digits division (45) · 4 district · 6 city corporation (456140 Mymensingh) · 8 upazila or city thana · 10 paurashava.
+- **Coverage:**
+  - 4 districts, 1 city corporation, 35 upazilas, 25 paurashavas, no metro thana.
+  - **No unions:** the 34 "Unions Of … Upazila" placeholders and "4589009099 Unions of Sreebardi Upazila" are skipped.
+- **Mymensingh City Corporation (456140):**
+  - The list has one unit in its code space, 45614052 "Mymensingh Sadar", with "Unions Of Mymensingh Sadar Upazila". Under the existing rule (as for Rangpur, Barishal and Sylhet Sadar) it is read as an upazila, with a note, and matched to seed Mymensingh Sadar (30466).
+  - The list also has 4561405255 "Mymensingh Paurashava" (kept as printed). BBS 2022 has no Mymensingh Paurashava; the city corporation stands in its place.
+  - No city thanas or wards. The other 34 upazila codes equal the HDX v03 P-codes minus `BD`.
+- **fetch.py changes:**
+  - `"pourasab"` is added to the paurashava pattern. 4589009077 "Sreebardi Pourasabha" was skipped as an "unrecognised 10-digit entry"; it is now a pourashava. No earlier division's list has this spelling.
+  - New table `FILED_CORRECTLY`. The existing check flags an upazila whose number and name also appear under another division as "probably misfiled".
+    - Here it flagged 45890090 Sreebardi (Sherpur), because the Dhaka list has a copy, 30260090 Sreebardi (already flagged in `dghs_bd_geocodes_dhaka`).
+    - Hand-checked: HDX v03 BD45890090 and BBS 2022 45-89-90 place Sreebardi in Sherpur. The Sherpur code is the right one, and its note now says so. The Dhaka copy keeps its note.
+- **Rerun check:**
+  - Rajshahi (no `--division`), Rangpur, Dhaka, Chattogram, Khulna, Barishal and Sylhet into a scratch folder: areas.csv and raw files identical.
+  - `crosswalk.csv` differs only in pourashava rows. The seed gained pourashavas after those folders were built; the HEAD version of fetch.py on the current seed gives identical output for all seven.
+- **Crosswalk:**
+  - Districts 4/4: "Netrakona" 4572 = Netrokona via district code. City corporation 1/1 (50012).
+  - Upazilas 35/35, all checked against the seed's Bangla names:
+    - 29 exact.
+    - 6 skeleton: Bakshiganj↔Bokshiganj, Dewanganj↔Dewangonj, Melandaha↔Melandah, Mohanganj↔Mohongonj, Nakla↔Nokla, Sreebardi↔Sreebordi.
+    - No hand-checked pairs needed (Tarakanda 45610088 exact).
+  - Paurashavas 0/25: the seed has no Mymensingh Division pourashavas.
+- **Paurashavas (25):** Jamalpur 7, Mymensingh 9, Netrokona 5, Sherpur 4.
+  - The last two digits equal the BBS 2022 paurashava code for 23 of the 24 that BBS also has. Bakshiganj is 10 here vs 11 in BBS (45-39-07-11).
+  - BBS 2022 has 27. Missing here: Haluaghat and Hazrabari. Gafargaon is listed only under Dhaka (3026002222 "Gaffargaon Paurashava", already flagged doubtful in the Dhaka folder).
+  - Extra: Mymensingh Paurashava (above).
+  - Spellings as printed: "Durgapur/Kendua/Madan/Mohanganj/Netrokona Paurasava", "Sreebardi Pourasabha".
+- **Code vintage:** not stated by DGHS. The list includes the newer upazila Tarakanda.

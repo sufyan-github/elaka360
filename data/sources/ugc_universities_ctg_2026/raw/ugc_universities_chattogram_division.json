@@ -1,0 +1,1038 @@
+[
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 184,
+   "name_en": "University of Chittagong",
+   "name_bn": null,
+   "slug": "university-of-chittagong",
+   "website": "www.cu.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 184,
+   "name_en": "University of Chittagong",
+   "name_bn": null,
+   "slug": "university-of-chittagong",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "1966",
+   "present_campus": null,
+   "permanent_campus": "University of Chittagong, Village: Fatepur, Post Office: University of Chittagong, Upazilla: Hathazari, District: Chattogram",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.cu.ac.bd",
+   "email": "vccu66@cu.ac.bd, registrarcu66@cu.ac.bd",
+   "telephone_mobile": "726311-14, 2606001-10, 2606015-27",
+   "fax": "88-031-2606014, 88-031-2606145",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Chattogram",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 197,
+   "name_en": "Chittagong University of Engineering & Technology (CUET)",
+   "name_bn": null,
+   "slug": "chittagong-university-of-engineering-technology-cuet",
+   "website": "www.cuet.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 197,
+   "name_en": "Chittagong University of Engineering & Technology (CUET)",
+   "name_bn": null,
+   "slug": "chittagong-university-of-engineering-technology-cuet",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2003",
+   "present_campus": null,
+   "permanent_campus": "Chittagong University of Engineering & Technology (CUET), Raozan, Chittagong-4349. Bangladesh.",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.cuet.ac.bd",
+   "email": "registrar@cuet.ac.bd",
+   "telephone_mobile": "031-714946, 030-2556151, 01711-884043",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Chattogram",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 201,
+   "name_en": "Noakhali Science & Technology University",
+   "name_bn": null,
+   "slug": "noakhali-science-technology-university",
+   "website": "www.nstu.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 201,
+   "name_en": "Noakhali Science & Technology University",
+   "name_bn": null,
+   "slug": "noakhali-science-technology-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2006",
+   "present_campus": null,
+   "permanent_campus": "Noakhali Science & Technology University, Sonapur, Noakhali-3814",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.nstu.edu.bd",
+   "email": "registrar@office.nstu.edu.bd",
+   "telephone_mobile": "88-0321-71486, 01720-197824",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Noakhali",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 203,
+   "name_en": "Comilla University",
+   "name_bn": null,
+   "slug": "comilla-university",
+   "website": "www.cou.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 203,
+   "name_en": "Comilla University",
+   "name_bn": null,
+   "slug": "comilla-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2006",
+   "present_campus": null,
+   "permanent_campus": "Comilla University, Kotbari, Cumilla-3506, Bangladesh",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.cou.ac.bd",
+   "email": "registrar@cou.ac.bd",
+   "telephone_mobile": "02334411145",
+   "fax": "(+88) 02334411135",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Cumilla",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 205,
+   "name_en": "Chittagong Veterinary and Animal Sciences University",
+   "name_bn": null,
+   "slug": "chittagong-veterinary-and-animal-sciences-university",
+   "website": "www.cvasu.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 205,
+   "name_en": "Chittagong Veterinary and Animal Sciences University",
+   "name_bn": null,
+   "slug": "chittagong-veterinary-and-animal-sciences-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2006",
+   "present_campus": null,
+   "permanent_campus": "Chittagong Veterinary and Animal Sciences University, Khulshi, Chittagong-4202, Bangladesh",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.cvasu.ac.bd",
+   "email": "registrar@cvasu.ac.bd, registrarcvasu@gmail.com",
+   "telephone_mobile": "+8802334466153, 01712771827,01731113838",
+   "fax": "+8802334466270",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Chattogram",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 214,
+   "name_en": "Rangamati Science and Technology University",
+   "name_bn": null,
+   "slug": "rangamati-science-and-technology-university",
+   "website": "www.rmstu.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 214,
+   "name_en": "Rangamati Science and Technology University",
+   "name_bn": null,
+   "slug": "rangamati-science-and-technology-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2011",
+   "present_campus": null,
+   "permanent_campus": "Rangamati Science and Technology University, Jhagrabil, Rangamati Sadar, Rangamati-4500",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.rmstu.edu.bd",
+   "email": "kamrulhasn@rmstu.ac.bd",
+   "telephone_mobile": "01558914066",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Rangamati",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 215,
+   "name_en": "Bangladesh Maritime University",
+   "name_bn": null,
+   "slug": "bangladesh-maritime-university",
+   "website": "https://bmu.edu.bd/",
+   "marker": null
+  },
+  "detail": {
+   "id": 215,
+   "name_en": "Bangladesh Maritime University",
+   "name_bn": null,
+   "slug": "bangladesh-maritime-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2013",
+   "present_campus": null,
+   "permanent_campus": "Bangladesh Maritime University, Hamidchar (Rangamatia and Bakolia Mouja), Bandar, Chittagong",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "https://bmu.edu.bd/",
+   "email": "registrar@bmu.edu.bd",
+   "telephone_mobile": "09666315200",
+   "fax": "+02 58051010",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Chattogram",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 217,
+   "name_en": "Chittagong Medical University",
+   "name_bn": null,
+   "slug": "chittagong-medical-university",
+   "website": "www.cmu.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 217,
+   "name_en": "Chittagong Medical University",
+   "name_bn": null,
+   "slug": "chittagong-medical-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2016",
+   "present_campus": null,
+   "permanent_campus": "Chittagong",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.cmu.edu.bd",
+   "email": "ismailbangladesh@yahoo.com, hasinanasreen28@gmail.com",
+   "telephone_mobile": "01720-964306, 017850922247",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Chattogram",
+  "_basis": "address"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 226,
+   "name_en": "Chandpur Science and Technology University",
+   "name_bn": null,
+   "slug": "chandpur-science-and-technology-university",
+   "website": "www.cstu.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 226,
+   "name_en": "Chandpur Science and Technology University",
+   "name_bn": null,
+   "slug": "chandpur-science-and-technology-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2021",
+   "present_campus": null,
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.cstu.ac.bd",
+   "email": "registrar@cstu.ac.bd, info@cstu.ac.bd",
+   "telephone_mobile": "+88000 41090771",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Chandpur",
+  "_basis": "name"
+ },
+ {
+  "category": "public-universities",
+  "list": {
+   "id": 238,
+   "name_en": "Lakshmipur Science & Technology University",
+   "name_bn": null,
+   "slug": "lakshmipur-science-technology-university",
+   "website": null,
+   "marker": null
+  },
+  "detail": {
+   "id": 238,
+   "name_en": "Lakshmipur Science & Technology University",
+   "name_bn": null,
+   "slug": "lakshmipur-science-technology-university",
+   "marker": null,
+   "category": {
+    "name_en": "Public Universities",
+    "name_bn": "পাবলিক বিশ্ববিদ্যালয়",
+    "slug": "public-universities"
+   },
+   "year_of_establishment": "2023",
+   "present_campus": null,
+   "permanent_campus": "Lakshmipur",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": null,
+   "email": null,
+   "telephone_mobile": null,
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Lakshmipur",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 240,
+   "name_en": "University of Science & Technology Chittagong",
+   "name_bn": null,
+   "slug": "university-of-science-technology-chittagong",
+   "website": "www.ustc.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 240,
+   "name_en": "University of Science & Technology Chittagong",
+   "name_bn": null,
+   "slug": "university-of-science-technology-chittagong",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "1992",
+   "present_campus": "Foy’s Lake, Khulshi, Zakir Hossain Road, Chattogram-4202",
+   "permanent_campus": "Foy’s Lake, Khulshi, Zakir Hossain Road, Chattogram-4202",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.ustc.edu.bd",
+   "email": "ustc.ctg@gmail.com, ustcbd10@gmail.com, ustcbd10@yahoo.com",
+   "telephone_mobile": "01872-738085",
+   "fax": "031-659545",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Chattogram",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 244,
+   "name_en": "International Islamic University Chittagong",
+   "name_bn": null,
+   "slug": "international-islamic-university-chittagong",
+   "website": "www.iiuc.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 244,
+   "name_en": "International Islamic University Chittagong",
+   "name_bn": null,
+   "slug": "international-islamic-university-chittagong",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "1995",
+   "present_campus": "Kumira , Sitakunda, Chittagong-4318",
+   "permanent_campus": "Kumira , Sitakunda, Chittagong-4318",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.iiuc.ac.bd",
+   "email": "info@iiuc.ac.bd",
+   "telephone_mobile": "03042-51154-9, 03042-51160",
+   "fax": "03042-51160",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Chattogram",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 257,
+   "name_en": "BGC Trust University Bangladesh",
+   "name_bn": null,
+   "slug": "bgc-trust-university-bangladesh",
+   "website": "www.bgctub.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 257,
+   "name_en": "BGC Trust University Bangladesh",
+   "name_bn": null,
+   "slug": "bgc-trust-university-bangladesh",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2001",
+   "present_campus": "BGC Bidyanagar, P.O: Kanchannagar-4381, Upz: Chandanaish , Dist: Chattogram",
+   "permanent_campus": "BGC Bidyanagar, P.O: Kanchannagar-4381, Upz: Chandanaish , Dist: Chattogram",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.bgctub.ac.bd",
+   "email": "info@bgctub.ac.bd",
+   "telephone_mobile": "88-03033-56192-3",
+   "fax": "880-31-2550224",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Chattogram",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 260,
+   "name_en": "Premier University",
+   "name_bn": null,
+   "slug": "premier-university",
+   "website": "www.puc.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 260,
+   "name_en": "Premier University",
+   "name_bn": null,
+   "slug": "premier-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2002",
+   "present_campus": "1/A, O.R. Nizam Road, Panchlaish, Chittagong",
+   "permanent_campus": "541, O.R. Nizam Road, Panchlaish, Chittagong",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.puc.ac.bd",
+   "email": "vc@puc.ac.bd, info@puc.ac.bd, registrar@puc.ac.bd,",
+   "telephone_mobile": "656917,657654,2554317,2554318, IP PABX +8809610828282, 01762220009, 01554333234",
+   "fax": "0088-031-657892",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Chattogram",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 268,
+   "name_en": "Southern University Bangladesh",
+   "name_bn": null,
+   "slug": "southern-university-bangladesh",
+   "website": "www.southern.edu.bd",
+   "marker": "(1)"
+  },
+  "detail": {
+   "id": 268,
+   "name_en": "Southern University Bangladesh",
+   "name_bn": null,
+   "slug": "southern-university-bangladesh",
+   "marker": "(1)",
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2002",
+   "present_campus": "Mailing Address: New/471, Arefin Nagar, Baizid Bostami, Chittagong",
+   "permanent_campus": "New 471, Arefin Nagar, Ayazid Bostami, Chittagong",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.southern.edu.bd",
+   "email": "registrar@southern.ac.bd",
+   "telephone_mobile": "031-2851336-9, 626744, 02-41380103, 01958117605",
+   "fax": "+88-031-2851340,",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Chattogram",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 289,
+   "name_en": "East Delta University",
+   "name_bn": null,
+   "slug": "east-delta-university",
+   "website": "www.eastdelta.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 289,
+   "name_en": "East Delta University",
+   "name_bn": null,
+   "slug": "east-delta-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2006",
+   "present_campus": "Abdullah Al Noman Road, Noman Society, East Nasirabad, Khulshi, Chittagong: 4209",
+   "permanent_campus": "Abdullah Al Noman Road, Noman Society, East Nasirabad, Khulshi, Chittagong: 4209",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.eastdelta.edu.bd",
+   "email": "enquiry@eastdelta.edu.bd",
+   "telephone_mobile": "09638144413, 01714-102062",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Chattogram",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 302,
+   "name_en": "Feni University",
+   "name_bn": null,
+   "slug": "feni-university",
+   "website": "www.feniuniversity.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 302,
+   "name_en": "Feni University",
+   "name_bn": null,
+   "slug": "feni-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2012",
+   "present_campus": "Barahipur, Plot No. 1845, Trunk Road, Feni 3900",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.feniuniversity.ac.bd",
+   "email": "registrar@feniuniversity.ac.bd; Treasurer@feniuniversity.ac.bd",
+   "telephone_mobile": "023344-74194, 01711-504110",
+   "fax": "+88 0331-62194",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Feni",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 303,
+   "name_en": "Britannia University",
+   "name_bn": null,
+   "slug": "britannia-university",
+   "website": "www.britannia.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 303,
+   "name_en": "Britannia University",
+   "name_bn": null,
+   "slug": "britannia-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2012",
+   "present_campus": "Padua Bazar, Biswaroad, Comilla",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.britannia.edu.bd",
+   "email": "info@britannia.edu.bd",
+   "telephone_mobile": "017626222202",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Cumilla",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 304,
+   "name_en": "Port City International University",
+   "name_bn": null,
+   "slug": "port-city-international-university",
+   "website": "www.portcity.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 304,
+   "name_en": "Port City International University",
+   "name_bn": null,
+   "slug": "port-city-international-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2012",
+   "present_campus": "7-14, Nikonja Housing Society, South Khulshi, Chitagonj",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.portcity.edu.bd",
+   "email": "admission@portcity.edu.bd",
+   "telephone_mobile": "880-31-2869877, 2869899. Cell: 01773-225500, 01773-225511",
+   "fax": "880-31-2869966",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Chattogram",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 306,
+   "name_en": "Chittagong Independent University",
+   "name_bn": null,
+   "slug": "chittagong-independent-university",
+   "website": "www.ciu.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 306,
+   "name_en": "Chittagong Independent University",
+   "name_bn": null,
+   "slug": "chittagong-independent-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2013",
+   "present_campus": "12 Jamal Khan Road , PS: Kotwali ,Chittagong-4000",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.ciu.edu.bd",
+   "email": "info@ciu.edu.bd; registrar@ciu.edu.bd",
+   "telephone_mobile": "031-611262,636484, 622946, 01716310017",
+   "fax": "031-610414",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Chattogram",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 313,
+   "name_en": "Cox's Bazar International University",
+   "name_bn": null,
+   "slug": "coxs-bazar-international-university",
+   "website": "www.cbiu.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 313,
+   "name_en": "Cox's Bazar International University",
+   "name_bn": null,
+   "slug": "coxs-bazar-international-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2013",
+   "present_campus": "Dynamic Cox Kingdom, Kolatoli Circle, Cox’s Bazar-4700",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.cbiu.ac.bd",
+   "email": "cbiu.bd@gmail.com, info@cbiu.ac.bd, registrar@cbiu.ac.bd",
+   "telephone_mobile": "+88 0341-52510, +88 01762686274-75",
+   "fax": "+88 0341-52511",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Cox's Bazar",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 317,
+   "name_en": "CCN University of Science & Technology",
+   "name_bn": null,
+   "slug": "ccn-university-of-science-technology",
+   "website": "www.ccnust.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 317,
+   "name_en": "CCN University of Science & Technology",
+   "name_bn": null,
+   "slug": "ccn-university-of-science-technology",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2014",
+   "present_campus": "Chowdhury Estate, CCN Road, Kotbari, P.O : Elahipur, Comilla Sadar South, Comilla",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.ccnust.ac.bd",
+   "email": "ccncomilla@yahoo.com ccnust@gmail.com",
+   "telephone_mobile": "01715-451599, 01888-042667, 01888-042666,",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Cumilla",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 320,
+   "name_en": "Bangladesh Army International University of Science & Technology(BAIUST) ,Comilla",
+   "name_bn": null,
+   "slug": "bangladesh-army-international-university-of-science-technologybaiust-comilla",
+   "website": "www.baiust.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 320,
+   "name_en": "Bangladesh Army International University of Science & Technology(BAIUST) ,Comilla",
+   "name_bn": null,
+   "slug": "bangladesh-army-international-university-of-science-technologybaiust-comilla",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2015",
+   "present_campus": "Village: Syedpur, Post: Sharatnagar, Adarsha Sadar, Cumilla",
+   "permanent_campus": "Village: Syedpur, Post: Sharatnagar, Adarsha Sadar, Cumilla",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.baiust.ac.bd",
+   "email": "info@baiust.ac.bd",
+   "telephone_mobile": "02339334212",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Cumilla",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 326,
+   "name_en": "University of Creative Technology, Chittagong",
+   "name_bn": null,
+   "slug": "university-of-creative-technology-chittagong",
+   "website": "www.uctc.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 326,
+   "name_en": "University of Creative Technology, Chittagong",
+   "name_bn": null,
+   "slug": "university-of-creative-technology-chittagong",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2015",
+   "present_campus": "1084, Shah Amanat Bridge Connecting Road, Bahaddarhat, Chandgaon, Chattogram",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.uctc.edu.bd",
+   "email": "info@uctc.edu.bd",
+   "telephone_mobile": "031-2555721-23/ 01707-507070",
+   "fax": "031-2555724",
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Chattogram",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 335,
+   "name_en": "Bandarban University",
+   "name_bn": null,
+   "slug": "bandarban-university",
+   "website": "www.bubban.ac.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 335,
+   "name_en": "Bandarban University",
+   "name_bn": null,
+   "slug": "bandarban-university",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2018",
+   "present_campus": "Rowadaw Heights, Main Road, Bandarban, Bangladesh.",
+   "permanent_campus": "K B Road, Shualok-4600, Bandarban Sadar, Bandarban",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.bubban.ac.bd",
+   "email": "info@bubban.ac.bd; registrar@bubban.ac.bd",
+   "telephone_mobile": "01318-305899, 01318305900,",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Bandarban",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 339,
+   "name_en": "University of Brahmanbaria",
+   "name_bn": null,
+   "slug": "university-of-brahmanbaria",
+   "website": "www.uob.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 339,
+   "name_en": "University of Brahmanbaria",
+   "name_bn": null,
+   "slug": "university-of-brahmanbaria",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2019",
+   "present_campus": "1020/15, Bypass Road, Datiara (Beside LGED Office) Brahmanbaria-3400",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.uob.edu.bd",
+   "email": "info@uob.edu.bd",
+   "telephone_mobile": "+880851517755 (Chairman of UoB)",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Brahmanbaria",
+  "_basis": "address"
+ },
+ {
+  "category": "private-universities",
+  "list": {
+   "id": 344,
+   "name_en": "Chattogram BGMEA University of Fashion and Technology",
+   "name_bn": null,
+   "slug": "chattogram-bgmea-university-of-fashion-and-technology",
+   "website": "www.cbuft.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 344,
+   "name_en": "Chattogram BGMEA University of Fashion and Technology",
+   "name_bn": null,
+   "slug": "chattogram-bgmea-university-of-fashion-and-technology",
+   "marker": null,
+   "category": {
+    "name_en": "Private Universities",
+    "name_bn": "বেসরকারি বিশ্ববিদ্যালয়",
+    "slug": "private-universities"
+   },
+   "year_of_establishment": "2022",
+   "present_campus": "BGMEA Building (5th Floor), 669/E, Jhautola Road, South Khulsi, Chattogram,Bangladesh",
+   "permanent_campus": null,
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.cbuft.edu.bd",
+   "email": "info@cbuft.edu.bd",
+   "telephone_mobile": "01841949179, 01894949159",
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Chattogram",
+  "_basis": "address"
+ },
+ {
+  "category": "international-universities",
+  "list": {
+   "id": 356,
+   "name_en": "Asian University for Women",
+   "name_bn": null,
+   "slug": "asian-university-for-women",
+   "website": "www.auw.edu.bd",
+   "marker": null
+  },
+  "detail": {
+   "id": 356,
+   "name_en": "Asian University for Women",
+   "name_bn": null,
+   "slug": "asian-university-for-women",
+   "marker": null,
+   "category": {
+    "name_en": "International Universities",
+    "name_bn": "আন্তর্জাতিক বিশ্ববিদ্যালয়",
+    "slug": "international-universities"
+   },
+   "year_of_establishment": "2000",
+   "present_campus": null,
+   "permanent_campus": "20/A M.M. Ali Road, Chittagong, Bangladesh",
+   "address": null,
+   "district": null,
+   "division": null,
+   "website": "www.auw.edu.bd",
+   "email": null,
+   "telephone_mobile": null,
+   "fax": null,
+   "short_description": null,
+   "special_note": null
+  },
+  "_district": "Chattogram",
+  "_basis": "address"
+ }
+]

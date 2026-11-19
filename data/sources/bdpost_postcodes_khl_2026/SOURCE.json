@@ -1,0 +1,26 @@
+{
+  "key": "BDPOST_POSTCODES_KHL_2026",
+  "division": "khulna",
+  "kind": "bdpost",
+  "name": "Bangladesh Post postcode booklet — Khulna Division post offices (scan on post.rajshahi.gov.bd)",
+  "organization": "বাংলাদেশ ডাক বিভাগ (Bangladesh Post Office) — DPMG Rajshahi Division portal",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "http://post.rajshahi.gov.bd/pages/static-pages/697f894d35ce18e1c06b96af",
+    "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-post-rajshahi/2024/12/e548300c14de4897aa9516b65816e29f.pdf"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "বাংলাদেশ ডাক বিভাগ (Bangladesh Post Office) — DPMG Rajshahi Division portal",
+  "notes": "Same undated scanned booklet as the Rajshahi, Rangpur, Dhaka and Chattogram runs (no text layer). Khulna Division's offices are in the booklet's 'খুলনা রিজিয়ন ৭০০০-৯৯৯৯': p. 23 (PDF page 13, right half: Kushtia, Meherpur, Chuadanga, Jhenaidah, Jashore), p. 24 (PDF page 14, first column: Narail, Magura; the Dhaka- and Barishal-Division districts that follow are left out), p. 26 (PDF page 15, last column: Khulna GPO 9000 and the city offices) and p. 27 (PDF page 15, right half: Khulna district, Bagerhat, Satkhira); only these were transcribed, by hand, from the page images (raw/*.png, PDF pages 13, 14 and 15 rotated). fetch.py verifies the PDF hash and re-emits the transcription. Eight office names are uncertain readings and one code is printed outside its district range (flagged). Branch post offices are not in the booklet. Licence: none stated on the source; treat as government public information, cite the source.",
+  "files": {
+    "facts.csv": "9dd4641ac9186abe6c4d979f8af2563171b258d3b2c079de7a3c6ddf3c878b33",
+    "places.csv": "0460d39f74e4a9514e6ecbbe79b319fd374a3f517f3c0701eef043e5af831bb9",
+    "raw/postcode_booklet_pp22-23.png": "6d0e08177fd525a5f83bb96651866c65e089589bd4e1c71bd565da76603b3eb6",
+    "raw/postcode_booklet_pp24-25.png": "16849b7fd7f020fbe2c4b6912286cce54cf5f67244d734c00c8a9a5b80627233",
+    "raw/postcode_booklet_pp26-27.png": "8e3c6bd047e916d43684700ec82a4702c92dedfe07f15463ee7df439aecb8e12"
+  }
+}

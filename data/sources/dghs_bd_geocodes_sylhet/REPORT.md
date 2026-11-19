@@ -1,0 +1,33 @@
+# DGHS bd-geocodes (BBS geocodes) — Sylhet Division
+
+- **Source:** DGHS Bangladesh Core FHIR Implementation Guide, CodeSystem `bd-geocodes` v0.5.0 (2026-10-15), 1,591 codes nationally. https://fhir.dghs.gov.bd/core/CodeSystem-bd-geocodes.html
+- **Run:** `python3 -I data/sources/dghs_bd_geocodes/fetch.py --division sylhet` (accessed 2026-11-18). Key `DGHS_BD_GEOCODES_SYLHET`, division `sylhet`, kind `dghs_geocodes`.
+- **Licence:** CC0-1.0 (the guide's licence field).
+- **Code layout (inferred, as for Rajshahi):** 2 digits division (60) · 4 district · 6 city corporation (609150 Sylhet) · 8 upazila or city thana · 10 paurashava.
+- **Coverage:**
+  - 4 districts, 1 city corporation, 5 metro thanas, 41 upazilas, 19 paurashavas.
+  - **No unions:** the 39 "Unions Of … Upazila" placeholders and "6036008705 Unions of Shayestaganj" are skipped.
+- **Sylhet City Corporation (609150):**
+  - **5 thanas:** Airport 05, Jalalabad 48, Kotwali 55, Moglabazar 57, Shahparan 68. BBS 2022 has 6; Dakkhin Surma thana (31) is missing here.
+  - **Sylhet Sadar:**
+    - The list has one unit, 60915062 "Sylhet Sadar", in the city corporation's code space. The list also has "Unions Of Sylhet Sadar Upazila" and the city part "Sylhet City Corp." (6091506250, skipped).
+    - Under the existing rule (as for Rangpur and Barishal Sadar) it is read as an upazila, with a note, and matched to seed Sylhet Sadar (30281).
+    - Its code differs from the HDX v03 P-code (`BD60910062`). The other 40 upazila codes equal the HDX v03 P-codes minus `BD`.
+- **fetch.py change:** hand-checked upazila table `UNIT_SEED_BY_DIV["sylhet"]`, method `code_hand_checked`:
+  - Sulla 60900086 → Shalla (শাল্লা, 30309). BBS 2022 60-90-86 is "Shalla"; the only name candidate was fuzzy at 0.75.
+  - Shantiganj 60900087 → South Sunamganj (দক্ষিণ সুনামগঞ্জ, 30301). This is the upazila's former name, Dakshin Sunamganj. BBS 2022 Shantiganj has the seed South Sunamganj's 8 unions, and HDX's 2020 point is "Dakshin Sunamganj".
+- **Rerun check:**
+  - Rajshahi (no `--division`), Rangpur, Dhaka, Chattogram, Khulna and Barishal into a scratch folder: areas.csv and raw files identical.
+  - `crosswalk.csv` differs only in pourashava rows. The seed gained pourashavas after those folders were built; the HEAD version of fetch.py on the current seed gives identical output for all six.
+- **Crosswalk:**
+  - Districts 4/4: "Maulvibazar" 6058 = Moulvibazar via district code. City corporation 1/1 (50006).
+  - Upazilas 41/41:
+    - 36 exact.
+    - 3 skeleton: Kamalganj↔Kamolganj, Maulvibazar Sadar↔Moulvibazar Sadar, Dharampasha↔Dharmapasha.
+    - 2 hand-checked.
+  - Paurashavas 0/19: the seed has no Sylhet Division pourashavas.
+- **Paurashavas (19):** Habiganj 6, Moulvibazar 5, Sunamganj 4, Sylhet 4.
+  - The last two digits equal the BBS 2022 paurashava code for all 19.
+  - BBS 2022 has 20; Bishwanath is missing here.
+  - Spellings as printed: "Shayestagang Paurashava", "Beani Bazar Paurashava", "Maulvibazar Paurashava".
+- **Code vintage:** not stated by DGHS. The list includes the newer upazilas Osmaninagar, Shayestaganj, Madhyanagar and Shantiganj.

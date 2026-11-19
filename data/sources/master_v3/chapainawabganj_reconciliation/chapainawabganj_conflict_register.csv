@@ -1,0 +1,5 @@
+﻿conflict_id,topic,claim_a,claim_b,sources,assessment,status
+CNB-001,District total,45,45,District Administration; District Election Office; divisional baseline,Aggregate aligned; not proof of individual rows,Open for row-level reconciliation
+CNB-002,Upazila distribution,Sadar 14; Shibganj 15; Gomastapur 8; Nachol 4; Bholahat 4,Sadar 14; Shibganj 15; Gomastapur 9; Nachol 4; Bholahat 4,DLS indexed PDF vs Daily Sangbad Atlas,Secondary Atlas totals 46 and adds one to Gomastapur,Open
+CNB-003,BBS geocode excerpt,BBS Community Report 2022,Direct PDF fetch timed out; indexed excerpt only,BBS NSDS,Only visible components used; no missing codes inferred,Open
+CNB-004,Urban units,4 municipalities,Separate from 45 unions,District Administration and Election Office,Do not mix municipality wards with union records,Resolved scope note

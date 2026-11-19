@@ -1,0 +1,25 @@
+{
+  "key": "GEOBOUNDARIES_BGD_ADM4_SYLHET",
+  "name": "geoBoundaries gbOpen Bangladesh ADM4 (unions, paurashavas, city wards), Sylhet Division extract",
+  "organization": "geoBoundaries (William & Mary geoLab); original data: Bangladesh Bureau of Statistics (BBS), OCHA ROAP",
+  "source_type": "humanitarian_dataset",
+  "trust_level": 3,
+  "urls": [
+    "https://www.geoboundaries.org/api/current/gbOpen/BGD/ADM4/",
+    "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/BGD/ADM4/geoBoundaries-BGD-ADM4.geojson",
+    "https://data.humdata.org/dataset/administrative-boundaries-of-bangladesh-as-of-2015"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": "CC-BY-IGO-3.0",
+  "license_url": "https://creativecommons.org/licenses/by/3.0/igo/legalcode",
+  "attribution": "geoBoundaries (Runfola et al. 2020, PLOS ONE); data: Bangladesh Bureau of Statistics (BBS), OCHA ROAP",
+  "files": {
+    "areas.csv": "1ebf029350346b32172af291eb0db8cfb087d233c65e5c12fdcc5e9ae86962c0",
+    "boundaries.geojson": "e1461412c4fc9b55c301dc1d0c6668721f2d19d933c42500a1cfb369bf51034b",
+    "facts.csv": "80fda667fdde3efe677b9611a6eb3772a8983d020c4d74a48746193f3dec457e"
+  },
+  "notes": "geoBoundaries BGD-ADM4-29066614, year represented 2020, source update Thu Jan 19 07:31:04 2023, build Dec 12, 2023, licence as stated by geoBoundaries: Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO) (licence source data.humdata.org/dataset/administrative-boundaries-of-bangladesh-as-of-2015). P-codes (HDX_PCODE_2020) attached from HDX COD-AB bgd_adminpoints by point-in-polygon; 379 polygons kept, 0 label points/polygons not assigned. Polygons simplified (Douglas-Peucker 0.0002 deg, 5 decimals) ring by ring.",
+  "division": "sylhet",
+  "kind": "geoboundaries_adm4"
+}

@@ -1,0 +1,26 @@
+{
+  "key": "OSM_CTG_2026",
+  "name": "OpenStreetMap contributors — Chattogram Division extract (points of interest)",
+  "organization": "OpenStreetMap Foundation",
+  "source_type": "community_dataset",
+  "trust_level": 1,
+  "urls": [
+    "https://download.geofabrik.de/asia/bangladesh.html",
+    "https://download.geofabrik.de/asia/bangladesh-latest.osm.pbf",
+    "https://www.openstreetmap.org/copyright"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "osm_data_timestamp": "2026-11-17T21:24:30Z",
+  "license": "ODbL-1.0",
+  "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "attribution": "© OpenStreetMap contributors",
+  "division": "chattogram",
+  "kind": "osm",
+  "files": {
+    "places.csv": "53514736efcdee8ab6d9b9d6eb807d71a3244bec5acc2cc4e019a89ef2fa722f",
+    "stats.json": "1b6cd2b196661d2610cb9289d14424f706139bf59bea81f0f69ea1d17fde3b40"
+  },
+  "notes": "Geofabrik Bangladesh extract (https://download.geofabrik.de/asia/bangladesh-261117.osm.pbf), OSM data as of 2026-11-17T21:24:30Z, parsed locally with pyosmium by osm_rajshahi_division/fetch.py --division chattogram. Named POI-like nodes, ways and multipolygon relations (ways/relations by area centroid); unnamed kept only for ATM, fuel, toilets, drinking water with a public access tag, police, fire, ambulance, shelters. District/upazila by point-in-polygon against hdx_cod_ab_bgd_chattogram/boundaries.geojson (seed names via its crosswalk.csv). Community data: every row is unverified. Contacts are those published on the feature. ODbL is share-alike: a published database derived from these rows must be offered under ODbL with attribution. The .pbf is not committed (fetch.py downloads it again).",
+  "extract": "https://download.geofabrik.de/asia/bangladesh-261117.osm.pbf"
+}

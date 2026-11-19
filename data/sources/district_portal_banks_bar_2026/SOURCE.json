@@ -1,0 +1,29 @@
+{
+  "key": "DISTRICT_PORTAL_BANKS_BAR_2026",
+  "division": "barishal",
+  "kind": "district_banks",
+  "name": "District portals — bank branch/office lists (Patuakhali, Pirojpur, Bhola)",
+  "organization": "Deputy Commissioner's offices (district portals)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://patuakhali.gov.bd/pages/static-pages/bank-x23c5l-6a786562a3a462c02a70c42f",
+    "https://pirojpur.gov.bd/pages/static-pages/697887be35ce18e1c0662db3",
+    "https://bhola.gov.bd/pages/static-pages/ব্যাংক-fe5520-6978a31d35ce18e1c067207e",
+    "https://barisal.gov.bd/pages/static-pages/6978a32235ce18e1c06722af",
+    "https://barguna.gov.bd/pages/static-pages/6978a31535ce18e1c0671c7f",
+    "https://jhalakathi.gov.bd/pages/static-pages/6978a2f535ce18e1c0670d6c"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "District portals patuakhali.gov.bd, pirojpur.gov.bd, bhola.gov.bd",
+  "notes": "No licence stated; lists are undated. Only landline numbers are kept (mobile numbers dropped: Patuakhali 19); no e-mails, routing numbers, managers' names, residence numbers or coordinates. Not used: Barishal and Barguna (their 'ব্যাংক' pages list banks with head-office web links, no branch in the district), Jhalokathi (the list is a scanned PDF without a text layer).",
+  "files": {
+    "places.csv": "8cf378b5164ff1b2a1574de6e0ba2f144307162757d7762edbc4cd031abbed57",
+    "raw/bhola_banks.txt": "089fe41fffed6f005d653b8ce55317d7e6d15c2bed21ba28bb9bfe708014f7fd",
+    "raw/patuakhali_banks.txt": "7c0de09eabc0b5477208e6e86e1303702d39400d405768e755bc7387d47c9a57",
+    "raw/pirojpur_banks.txt": "e7ad44bf8e8bb9c4d5edb328a9d1522bfe81c3352dd1e5927410814939a9cd58"
+  }
+}

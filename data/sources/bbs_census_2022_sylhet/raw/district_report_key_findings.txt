@@ -1,0 +1,359 @@
+=== Sylhet | https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/95bca29b-c009-4261-97f2-e0f24cc55d87.pdf
+## PDF page 25
+    01    Administrative Units
+         City Corporation                                        1                             1                           1                          -
+         Upazila                                                13                            12                          11                     11
+         Metro Thana                                             6                             -                            -                     --
+         Paurashava                                              5                             4                           1                       1
+         City Ward                                              27                            27                          27                          -
+         Paura Ward                                             45                            36                           9                       5
+         Union                                                 109                          101                           98                     96
+         Mauza1                                              1681                           1554                        1693                   1693
+         Village                                             3318                           3206                        3225                   3248
+         Mahalla2                                              540                          353                             -                    94
+    02    Area (In Sq. km)
+         Sylhet                                           3452.07                       3452.07                      3490.40                3490.40
+                                                                      Enumerated
+    03    Population
+         Sylhet                                           3857123                      3434188                      2555566                2153301
+         Male                                             1896490                      1726965                      1314317                1101533
+         Female                                           1960484                      1707223                      1241249                1051768
+         Hijra3                                                149                             -                            -                         -
+                                                                            Rural
+         Total                                            2844779                      2680639                      2121968                1820809
+         Male                                             1382938                      1330095                      1077261                 922843
+         Female                                           1461793                      1350544                      1044707                 797966
+         Hijra                                                  48                             -                            -                         -
+                                                                           Urban4
+         Total                                            1012344                        753549                      433598                 332492
+         Male                                              513552                        396870                      237056                 178690
+         Female                                            498691                        356679                      196542                 153802
+         Hijra                                                 101                             -                            -                         -
+    04    Urban Population4 (%)
+          Sylhet                                             26.25                        21.94                      16.97                 15.44
+    05    Slum Population
+         Total                                             103032                              -                      52595                           -
+         Male                                               52761                              -                      27357                           -
+         Female                                             50197                              -                      25238                           -
+         Hijra                                                  74                             -                            -                         -
+                                           
+* Dash (-) denotes Not Available.
+ϭ Only populated Mauzas were shown in 2011, but in 1991 and 2001, depopulated and Paurashava (Municipality) Area (PSA) Mauzas were also included in
+   the census. In 2022 populated and depopulated Mauzas were included in the census. 
+Ϯ Mahalla is the part of Mauza in the urban areas, which is similar to the village in the rural areas. 
+ϯ
+  Hijra population is enumerated separately in the Population and Housing Census 2022.
+ϰ City Corporation, Cantonment, Paurashava, Growth Centre, and Upazila Headquarters (not declared as Paurashava) are considered as Urban Area in 2022.
+    Only City Corporation and Paurashava were considered as Urban Area in 2011. The Statistical Metropolitan Area (SMA), Paurashava, and Growth Centre
+    were considered as Urban Area in 1991-2001 censuses.
+                                                                           Population and Housing Census 2022, District Report: Sylhet         xiii
+## PDF page 26
+                                                                               Population and                                            Bangladesh
+                                              Population and                                             Bangladesh Population
+   Sl               Key Indicators                                                Housing                                                 Population
+                                            Housing Census 2022                                              Census 2001
+                                                                                Census 2011                                              Census 1991
+   06      Floating Population5
+         Sylhet                                                                                 1722                           157                    6303
+                                                                  474
+         Rural                                                                                   552                           102                    3283
+                                                                   59
+         Urban                                                                                  1170                            55                    3020
+                                                                  415
+   07      Ethnic Population
+         Total                                                 16508                          12781                           898                        -
+         Male                                                    8245                           6470                          482                        -
+         Female                                                  8263                           6311                          416                        -
+   08      Population by Upazila
+         Sylhet                                              3856974                        3434188                       2555566                 2153301
+         Rural                                               2844731                        2680639                       2121968                  332492
+         Urban                                               1012243                         753549                        433598                 1820809
+         Sylhet City Corporation                              532748                         829103                        316311                  234355
+         Balaganj                                             123352                         320227                        256239                  230865
+         Beanibazar                                           260597                         253616                        210673                  181547
+         Bishwanath                                           237208                         232573                        189775                  169730
+         Companiganj                                          192344                         174029                        113784                    85169
+         Dakkhin Surma                                        262783                         253388                               -                       -
+         Fenchuganj                                           114286                         104741                         95161                    81605
+         Golapganj                                            331358                         316149                        263953                  229074
+         Gowainghat                                           355969                         287512                        207170                  169937
+         Jaintapur                                            200128                         161744                        121458                    98270
+         Kanaighat                                            317574                         263969                        216495                  178654
+         Osmaninagar                                          216406                                -                             -                       -
+         Sylhet Sadar                                         444912                         829103                        682459                  554412
+         Zakiganj                                             267309                         237137                        198399                  174038
+   09      Population by Religion
+         Muslim                                              3570400                        3180766                       2365728                 1980175
+         Hindu                                                282904                         248154                        186565                  167966
+         Christian                                               2518                           2447                          1831                    1890
+         Buddhist                                                 480                            647                           352                     587
+         Others                                                   821                           2174                          1090                    2683
+   10      Average Annual Growth Rate
+         Sylhet                                                  1.03                           2.95                         1.73                    1.93
+   11      Population Density (Per Square Kilometer)
+           Sylhet                                                1117                            995                          732                    617
+                                             
+ϱ The Homeless people who usually spent night in various places such as railway stations, bus terminals, shrines, footpaths, under stairs/foot-overbridges,
+  launch terminals/ferries, market balconies, etc. are considered as floating population in census 2022. Floating Population are counted on the census night.
+ The people who stayed on the street or at market for their livelihoods or other purposes on the census night, but have dwellings elsewhere are not
+  considered as floating population in census 2022. But in the previous all censuses including the homeless, the people who were on travel, fishing at deep
+  sea, hiving in the forest and staying in hotels (boarders) on census night were also considered as floating population.
+   xiv    Population and Housing Census 2022, District Report: Sylhet
+## PDF page 27
+                                                                             Population and                                     Bangladesh
+                                              Population and                                         Bangladesh Population
+   Sl             Key Indicators                                                Housing                                          Population
+                                            Housing Census 2022                                          Census 2001
+                                                                              Census 2011                                       Census 1991
+   12     Sex Ratio
+=== Habiganj | https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/1871b767-8ecd-4ec5-8073-d54d5ddd7b53.pdf
+## PDF page 25
+    01    Administrative Units
+         Upazila                                                  9                           8                          8                             8
+         Paurashava                                               6                           6                          4                             1
+         Paura Ward                                              54                          54                        36                              3
+         Union                                                   78                          77                        77                         77
+         Mauza1                                               1246                        1120                       1241                       1241
+         Village                                              2178                        2143                       2076                       2068
+         Mahalla2                                               203                         188                       124                         45
+    02    Area (In Sq. km)
+         Habiganj                                          2636.58                     2636.59                    2636.58                    2636.58
+                                                                      Enumerated
+    03    Population
+         Habiganj                                          2358886                    2089001                    1757665                    1526609
+         Male                                              1143901                    1025591                     893020                     773104
+         Female                                            1214846                    1063410                     864645                     753505
+         Hijra3                                                 139                           -                          -                             -
+                                                                            Rural
+         Total                                             2004395                    1844035                    1566032                    1407819
+         Male                                               971199                     903460                     793717                     710916
+         Female                                            1033106                     940575                     772315                     696903
+         Hijra                                                   90                           -                          -                             -
+                                                                           Urban4
+         Total                                              354491                     244966                     191633                     118790
+         Male                                               172702                     122131                       99303                      62188
+         Female                                             181740                     122835                       92330                      56602
+         Hijra                                                   49                           -                          -                             -
+    04    Urban Population4(%)
+          Habiganj                                            15.03                      11.73                      10.90                       7.78
+    05    Slum Population
+         Total                                                2274                            -                     16594                              -
+         Male                                                 1128                            -                      8249                              -
+         Female                                               1145                            -                      8345                              -
+         Hijra                                                    1                           -                          -                             -
+                                           
+* Dash (-) denotes Not Available.
+ϭ Only populated Mauzas were shown in 2011, but in 1991 and 2001, depopulated and Paurashava (Municipality) Area (PSA) Mauzas were also included in
+    the census. In 2022 populated and depopulated Mauzas were included in the census.
+Ϯ  Mahalla is the part of Mauza in the urban areas, which is similar to the village in the rural areas. 
+ϯ
+   Hijra population is enumerated separately in the Population and Housing Census 2022.
+ϰ City Corporation, Cantonment, Paurashava, Growth Centre, and Upazila Headquarters (not declared as Paurashava) are considered as Urban Area in 2022.
+     Only City Corporation and Paurashava were considered as Urban Area in 2011. The Statistical Metropolitan Area (SMA), Paurashava, and Growth Centre
+     were considered as Urban Area in 1991-2001 censuses.
+                                                                        Population and Housing Census 2022, District Report: Habiganj           xiii
+## PDF page 26
+                                                  Population and               Population and                Bangladesh                   Bangladesh
+    Sl              Key Indicators                   Housing                      Housing                     Population                   Population
+                                                   Census 2022                  Census 2011                  Census 2001                  Census 1991
+    06     Floating Population5
+          Habiganj                                                  139                          727                           91                        5777
+          Rural                                                      91                          649                           46                        5354
+          Urban                                                      48                           78                           45                         623
+    07     Ethnic Population
+          Total                                                  41573                        65802                        1702                        32240
+          Male                                                   20742                        33038                         871                             -
+          Female                                                 20831                        32764                         831                             -
+    08     Population by Upazila
+          Habiganj                                            2358886                      2089001                      1757665                      1526609
+          Ajmiriganj                                            126324                       114265                        99294                        86810
+          Bahubal                                               219377                       197997                      167265                       137402
+          Baniachong                                            356425                       332530                      268691                       235855
+          Chunarughat                                           342289                       302110                      267056                       233752
+          Habiganj Sadar                                        306718                       329093                      275074                       225469
+          Lakhai                                                158717                       148811                      120677                       110319
+          Madhabpur                                             384243                       319016                      272578                       250069
+          Nabiganj                                              367385                       345179                      287030                       246933
+          Shayestaganj                                           97408                              -                            -                           -
+    09     Population by Religion
+          Muslim                                              1981089                      1731168                      1431886                      1224853
+          Hindu                                                 374104                       352407                      321077                       291860
+          Christian                                               2551                         2354                         1973                         2050
+          Buddhist                                                  210                          253                         258                          629
+          Others                                                    932                        2819                         2471                         7217
+    10     Average Annual Growth Rate
+          Habiganj                                                 1.08                         1.72                        1.42                        1.80
+    11     Population Density (Per Square Kilometer)
+          Habiganj                                                  895                          792                        667                         579
+    12     Sex Ratio
+## PDF page 39 (narrative): total area of the district is 2636.58 square kilometer
+=== Moulvibazar | https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/4c98bb76-8069-414a-9851-6cbbc4b9273f.pdf
+## PDF page 25
+  01     Administrative Units
+       Upazila                                                  7                              7                          6                            6
+       Paurashava                                               5                              5                          4                            2
+       Paura Ward                                              45                             45                        36                             6
+       Union                                                   67                             67                        66                        66
+       Mauza1                                                 889                           917                        876                       876
+       Village                                               2045                          2015                       2018                      1962
+       Mahalla2                                               152                           151                        122                        41
+  02     Area (In Sq. km)
+       Moulvibazar                                        2799.38                       2799.38                    2799.39                   2799.39
+                                                                    Enumerated
+  03     Population
+       Moulvibazar                                       2123447                       1919062                    1612374                   1376566
+       Male                                              1020732                         944728                    820686                    702538
+       Female                                            1102617                         974334                    791688                    674028
+       Hijra3                                                  98                              -                          -                            -
+                                                                           Rural
+       Total                                             1826257                       1710983                    1467073                   1268304
+       Male                                               874833                         839313                    743561                    644382
+       Female                                             951345                         871670                    723512                    623922
+       Hijra                                                   79                              -                          -                            -
+                                                                          Urban4
+       Total                                              297190                         208079                    145301                    108262
+       Male                                               145899                         105415                      77125                     58156
+       Female                                             151272                         102664                      68176                     50106
+       Hijra                                                   19                              -                          -                            -
+  04     Urban Population4 (%)
+         Moulvibazar                                        14.00                          10.84                      9.01                      7.86
+  05     Slum Population
+       Total                                                 9335                              -                     76279                             -
+       Male                                                  4708                              -                    38602                              -
+       Female                                                4621                              -                    37677                              -
+       Hijra                                                    6                              -                          -                            -
+                                           
+* Dash (-) denotes Not Available.
+ϭ Only populated Mauzas were shown in 2011, but in 1991 and 2001, depopulated and Paurashava (Municipality) Area (PSA) Mauzas were also included in
+    the census. In 2022 populated and depopulated Mauzas were included in the census.
+Ϯ  Mahalla is the part of Mauza in the urban areas, which is similar to the village in the rural areas. 
+ϯ
+   Hijra population is enumerated separately in the Population and Housing Census 2022.
+ϰ City Corporation, Cantonment, Paurashava, Growth Centre, and Upazila Headquarters (not declared as Paurashava) are considered as Urban Area in 2022.
+     Only City Corporation and Paurashava were considered as Urban Area in 2011. The Statistical Metropolitan Area (SMA), Paurashava, and Growth Centre
+     were considered as Urban Area in 1991-2001 censuses.
+                                                                    Population and Housing Census 2022, District Report: Moulvibazar            xiii
+## PDF page 26
+    Sl              Key Indicators            Population and                   Population and             Bangladesh Population Bangladesh Population
+                                            Housing Census 2022                   Housing                     Census 2001           Census 1991
+                                                                                Census 2011
+    06     Floating Population5
+          Moulvibazar                                             139                             636                          916                       3830
+          Rural                                                    45                             260                          325                       2916
+          Urban                                                    94                             376                          591                        914
+    07     Ethnic Population
+          Total                                                73303                            63466                       5940                      31264
+          Male                                                 36307                            31422                       3076                            -
+          Female                                               36996                            32044                       2864                            -
+    08     Population by Upazila
+                                                              282449                          257620                       233720                     200674
+          Baralekha
+                                                              162560                          148958                              -                          -
+          Juri
+                                                              290093                          259130                       229648                     191672
+          Kamalganj
+                                                              397736                          360195                       395878                     339673
+          Kulaura
+                                                              377932                          342468                       281593                     239378
+          Moulvibazar Sadar
+                                                              250795                          232666                       193303                     174280
+          Rajnagar
+                                                              361784                          318025                       278232                     230889
+          Sreemangal
+    09     Population by Religion
+          Muslim                                             1585235                         1425786                     1170054                      971718
+          Hindu                                               519263                          471974                       426851                     389721
+          Christian                                            17760                            15350                       13716                      12651
+          Buddhist                                                214                             225                          177                        510
+          Others                                                  975                            5727                        1576                        1966
+    10     Average Annual Growth Rate
+          Moulvibazar                                            0.90                             1.76                       1.59                      1.63
+    11     Population Density (Per Square Kilometer)
+          Moulvibazar                                             759                             686                         576                       492
+    12     Sex Ratio
+=== Sunamganj | https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/9f747c1b-3459-4567-9295-bf8a7cf28cad.pdf
+## PDF page 25
+  01     Administrative Units
+        Upazila                                                    12                              11                           10                          10
+        Paurashava                                                  4                                4                           4                           1
+        Paura Ward                                                 36                              36                           36                           3
+        Union                                                      88                              87                           82                          81
+        Mauza1                                                  1657                             1599                        1688                        1682
+        Village                                                 2959                             2887                        2782                        2818
+        Mahalla2                                                  139                             139                         138                           29
+  02     Area (In Sq. km)
+        Sunamganj                                            3747.18                         3747.12                      3669.58                    3669.58
+                                                                        Enumerated
+  03     Population
+        Sunamganj                                           2695496                          2467968                     2013738                     1708563
+        Male                                                1323155                          1236106                     1036678                      875279
+        Female                                              1372139                          1231862                      977060                      833284
+        Hijra3                                                    202                                -                            -                          -
+                                                                                Rural
+        Total                                               2293364                          2211851                     1796732                     1586318
+        Male                                                1125411                          1104246                      922341                      810051
+        Female                                              1167832                          1107605                      874391                      776267
+        Hijra                                                     121                                -                            -                          -
+                                                                                       4
+                                                                               Urban
+        Total                                                 402132                          256117                      217006                      122245
+        Male                                                  197744                          131860                      114337                         65228
+        Female                                                204307                          124257                      102669                         57017
+        Hijra                                                      81                                -                            -                          -
+  04     Urban Population4 (%)
+         Sunamganj                                              14.92                           10.38                       10.78                         7.15
+  05     Slum Population
+        Total                                                   3868                                 -                      18993                            -
+        Male                                                    1891                                 -                       9783                            -
+        Female                                                  1973                                 -                       9210                            -
+        Hijra                                                       4                                -                            -                          -
+* Dash (-) denotes Not Available.
+1
+  Only populated Mauzas were shown in 2011, but in 1991 and 2001, depopulated and Paurashava/Municipality Area (PSA) Mauzas were also included in the census. In
+  2022 populated and depopulated Mauzas were included in the census.
+2
+  Mahalla is the part of Mauza in the urban areas, which is similar to the village in the rural areas.
+3
+  Hijra population is enumerated separately in the Population and Housing Census 2022.
+4
+  City Corporation, Cantonment, Paurashava, Growth Centre, and Upazila Headquarters (not declared as Paurashava) are considered as Urban Area in 2022. Only City
+   Corporation and Paurashava were considered as Urban Area in 2011. The Statistical Metropolitan Area (SMA), Paurashava, and Growth Centre were considered as
+   Urban Area in 1991-2001 censuses.
+                                                                Population and Housing Census 2022, District Report: Sunamganj                     xxi
+## PDF page 26
+    Sl              Key Indicators                Population and                      Population and              Bangladesh Population              Bangladesh
+                                                Housing Census 2022                      Housing                      Census 2001                 Population Census
+                                                                                       Census 2011                                                      1991
+    06      Floating Population5
+           Sunamganj                                                    144                              5204                            399                         8123
+           Rural                                                         42                              3008                            171                         5805
+           Urban                                                        102                              2196                            228                         2318
+    07      Ethnic Population
+           Total                                                      5308                               6911                            660                         6643
+           Male                                                       2674                               3521                            351                              -
+           Female                                                     2634                               3390                            309                              -
+    08      Population by Upazila
+           Bishwambharpur                                           190350                            156381                         126259                       106182
+           Chhatak                                                  445797                            397642                         334546                       273153
+           Derai                                                    253705                            243690                         202791                       185284
+           Dharmapasha                                              133250                            223202                         182969                       164131
+           Dowarabazar                                              260513                            228460                         179201                       157240
+           Jagannathpur                                             264198                            259490                         225271                       188139
+           Jamalganj                                                185866                            167260                         138985                       107771
+           Madhyanagar                                               96237                                    -                              -                            -
+           Shalla                                                   117630                            113743                         101298                         89941
+           Shantiganj                                               204998                            183881                                 -                            -
+           Sunamganj Sadar                                          318099                            279019                         367230                       303153
+           Tahirpur                                                 224853                            215200                         155188                       133569
+    09      Population by Religion
+           Muslim                                                 2377349                            2144535                       1715033                       1428729
+           Hindu                                                    315044                            319376                         294765                       272545
+           Christian                                                  2560                               2845                           2843                         3461
+           Buddhist                                                     201                                 71                           136                           957
+           Others                                                       342                              1141                            961                         2871
+    10      Average Annual Growth Rate
+           Sunamganj                                                   0.78                               2.02                          1.66                          1.80
+    11      Population Density (Per Square Kilometer)
+           Sunamganj                                                    719                                659                           549                           466
+    12 Sex Ratio
+## PDF page 39 (narrative): total area of the district is 3747.18 square kilometer

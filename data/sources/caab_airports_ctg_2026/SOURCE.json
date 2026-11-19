@@ -1,0 +1,29 @@
+{
+  "key": "CAAB_AIRPORTS_CTG_2026",
+  "division": "chattogram",
+  "kind": "caab",
+  "name": "Civil Aviation Authority of Bangladesh — airports in Chattogram Division",
+  "organization": "Civil Aviation Authority of Bangladesh (CAAB)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://www.caab.gov.bd/",
+    "https://new.caab.gov.bd/airportsf.html",
+    "https://new.caab.gov.bd/contactof.html",
+    "https://new.caab.gov.bd/airports/chittagong.html",
+    "https://new.caab.gov.bd/airports/coxsbazar.html",
+    "https://new.caab.gov.bd/airports/comilla.html"
+  ],
+  "accessed": "2026-11-17",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Civil Aviation Authority of Bangladesh (caab.gov.bd)",
+  "notes": "No licence stated. Airline-office and individual staff numbers on the airport pages are not collected; only the Airport Manager office phone/cell/e-mail. caab.gov.bd omits the Sectigo OV R36 intermediate (handled by the AIA helper).",
+  "files": {
+    "places.csv": "4c4adb07aec74b46d076557ce42371cb66ec173d62c5614cad52eee996211357",
+    "raw/chittagong.txt": "9b6f191b01aa2fa6016a9a4bcc905d427c3e10ab10c6bfd8cf5f5d692ee2dbbc",
+    "raw/comilla.txt": "004a9f340605f0c4c2f775731c05492aa0336e767256d462ef82ca73a7e5b246",
+    "raw/coxsbazar.txt": "f6a5adccc18ffad6d22b4c8186124840de25a3961cc27b3d468c244a1a8871d0"
+  }
+}

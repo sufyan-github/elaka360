@@ -1,0 +1,27 @@
+{
+  "key": "LGD_2026_SYLHET",
+  "name": "Local Government Division portal (lgd.gov.bd) — Sylhet Division extract",
+  "organization": "Local Government Division, Ministry of LGRD&C",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://lgd.gov.bd/",
+    "https://lgd.gov.bd/pages/static-pages/6941401ec4774958d7b54a3f",
+    "https://lgd.gov.bd/pages/static-pages/69414021c4774958d7b54bea"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Local Government Division (lgd.gov.bd), Bangladesh National Portal",
+  "files": {
+    "areas.csv": "25207fb8bcb92fc0b4e910f9a37db6a99765cfb4c8864f826f292fa49c790a57",
+    "facts.csv": "6717ad575ef43b08da5f95ce7d5578987d159c3af7199273c1b47a16bebc62aa",
+    "raw/menu_page_status.txt": "daa58cfbab90cf9ce1f9133368f4a474dbb57317780ac15dfa4fc7a5f2fca55a",
+    "raw/union_parishad_page.txt": "2667937afa2fa4d953b804b05c891bba0228fada9ea3f8562ab8cf0168485a87",
+    "raw/upazila_list_sylhet_division.txt": "21cd233dac93826a21fe7efcd942b15b0b29816adc8da540865a118954628540"
+  },
+  "notes": "Not a formal LGD list/gazette, so trust 4. Only the upazila-parishad list (page updated 2023-05-31 19:36) has Sylhet Division content; the portal has no pourashava or union list and no downloadable directory; menu pages for city corporations, pourashavas, zila parishads and upazila parishads: see raw/menu_page_status.txt. The national union-parishad total is kept in the Rajshahi LGD_2026 folder only.",
+  "division": "sylhet",
+  "kind": "lgd"
+}

@@ -1,0 +1,30 @@
+{
+  "key": "KHULNA_CITY_CORPORATION",
+  "division": "khulna",
+  "kind": "city_corporation",
+  "city": 50004,
+  "name": "Khulna City Corporation — figures stated on official portals (KCC's own site unreachable)",
+  "organization": "Khulna City Corporation",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://khulnacity.gov.bd/",
+    "https://www.khulnacity.org/",
+    "https://police.khulnadiv.gov.bd/pages/static-pages/6980f684a31054345f1ceb6e",
+    "https://khulna.gov.bd/pages/static-pages/6981018ba31054345f1d497d",
+    "https://khulnadiv.gov.bd/"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Khulna Metropolitan Police (police.khulnadiv.gov.bd); Deputy Commissioner's Office, Khulna (khulna.gov.bd)",
+  "notes": "KCC's official site could not be read: https://khulnacity.gov.bd/ -> ConnectionError; https://www.khulnacity.org/ -> HTTP 403. Only the ward count (31, KMP portal এক নজরে) and the municipality's founding year (1884, Khulna DC portal timeline) are published on reachable official pages; no area, population, zones, ward names or thana list. Census figures for KCC are in BBS_CENSUS_2022_KHULNA (population 719,557, 2022, enumerated).",
+  "files": {
+    "areas.csv": "675d2aa1a041ce4a7c2c5068d3e678537e605071f4b853ef0eba403e02cbef44",
+    "facts.csv": "f7cd672628013aa58c04c31cf881c1ff9a42ce5012578eeb95b8436017daa111",
+    "raw/dc_history_timeline.txt": "c33fea2a91cd574be62c698c273a7ac4718d0875c69c2e1d525b4f2ec7748998",
+    "raw/kcc_site_reachability.txt": "df4a37783348bb5307dafe75e322dd479b734f793902808e51027a4988e7632a",
+    "raw/kmp_glance_wards.txt": "dfad2f8c57990bbdae6673fe5c076c336dd4e4521b4c57259cb1d02fde00a1f6"
+  }
+}

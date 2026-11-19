@@ -1,0 +1,44 @@
+[
+  {
+    "source_id": "SRC-AMARGRAM-BAGMARA",
+    "publisher": "Amar Gram directory",
+    "url": "https://amargram.org/upazilas/bagmara",
+    "claim": "Lists 16 Bagmara unions with Bangla and English names.",
+    "authority": "secondary directory",
+    "cited_result": "turn694855search2"
+  },
+  {
+    "source_id": "SRC-AMARGRAM-PUTHIA",
+    "publisher": "Amar Gram directory",
+    "url": "https://amargram.org/upazilas/puthia",
+    "claim": "Lists 6 Puthia unions with Bangla and English names.",
+    "authority": "secondary directory",
+    "cited_result": "turn694855search3"
+  },
+  {
+    "source_id": "SRC-GODAGARI-UP",
+    "publisher": "Godagari Upazila Administration",
+    "url": "https://godagari.rajshahi.gov.bd/pages/static-pages/697faa7835ce18e1c06c8c25",
+    "updated": "2024-04-28",
+    "claim": "Official upazila page lists all 9 unions and links each union portal.",
+    "authority": "official upazila administration",
+    "cited_result": "turn224506search1"
+  },
+  {
+    "source_id": "SRC-BCC-CONNECTED",
+    "publisher": "Bangladesh Computer Council, ICT Division",
+    "url": "https://connectedbangladesh.bcc.gov.bd/unions",
+    "claim": "National union directory; search-indexed rows include Rajshahi division union names for Bagmara and other districts.",
+    "authority": "government ICT project directory",
+    "cited_result": "turn224506search2"
+  },
+  {
+    "source_id": "SRC-RAJ-DIV-2026",
+    "publisher": "Office of Divisional Commissioner, Rajshahi",
+    "url": "https://rajshahidiv.gov.bd/pages/static-pages/697fb33835ce18e1c06cb283",
+    "updated": "2026-03-31",
+    "claim": "Rajshahi district target: 71; upazila counts Puthia 6, Bagmara 16, Godagari 9.",
+    "authority": "official aggregate count",
+    "cited_result": "turn694855search0"
+  }
+]

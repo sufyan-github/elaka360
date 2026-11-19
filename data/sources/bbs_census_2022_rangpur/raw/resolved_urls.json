@@ -1,0 +1,33 @@
+{
+ "union_statistics": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/f376ca7e7ee5405f8311de650415b9d8.pdf",
+ "community_xlsx": {
+  "Rangpur": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/0b4cdcd23f0c4291808e8724b113ac67.xlsx",
+  "Gaibandha": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/8515389ccebf4b1ea5c91659426447ad.xlsx",
+  "Nilphamari": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/7fbb45d9940d4cfa9b4a4d9b8bfd34ab.xlsx",
+  "Kurigram": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/ec98c2ca2a5a4af28d3e2e2236880a44.xlsx",
+  "Dinajpur": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/795760b6093542289f70a1d9ccc9cbca.xlsx",
+  "Thakurgaon": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/4de9d3f0253a4529b29f64485b2aa132.xlsx",
+  "Lalmonirhat": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/fe276d9063bd494f8d635cf8aa39e825.xlsx",
+  "Panchagarh": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/e3544f24c67145aeaea80921aaef5f1c.xlsx"
+ },
+ "district_page": {
+  "Rangpur": "https://bbs.gov.bd/pages/files/6a09836d2a941ac3be723352",
+  "Gaibandha": "https://bbs.gov.bd/pages/files/6a0983bef284771b36b11a7a",
+  "Nilphamari": "https://bbs.gov.bd/pages/files/6a098438298ade29f2264e0e",
+  "Kurigram": "https://bbs.gov.bd/pages/files/6a098490f284771b36b11b1f",
+  "Dinajpur": "https://bbs.gov.bd/pages/files/6a0984e7146993cdf84f6b4b",
+  "Thakurgaon": "https://bbs.gov.bd/pages/files/6a09858b146993cdf84f6bf7",
+  "Lalmonirhat": "https://bbs.gov.bd/pages/files/6a0985de163c98157b02bc73",
+  "Panchagarh": "https://bbs.gov.bd/pages/files/6a09864504d89a37d7fa4a4a"
+ },
+ "district_pdf": {
+  "Rangpur": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/80d1ba40-44f5-4476-b4be-7e0609656893.pdf",
+  "Gaibandha": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/a0744e0b-4cf4-4d7c-b9a5-96c71320957f.pdf",
+  "Nilphamari": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/7695dd07-29c7-4a79-a03c-1474e5bf1b7b.pdf",
+  "Kurigram": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/bfd4eba4-b3c3-4e9c-a6a1-d7ea8b3aa4c2.pdf",
+  "Dinajpur": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/6ee489fd-9412-4573-b5d6-6fe2a5e2e6dd.pdf",
+  "Thakurgaon": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/0dde44d6-0b48-41ee-9424-c8438e31e766.pdf",
+  "Lalmonirhat": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/0372ef85-d2e5-4b47-afda-11fa08f88639.pdf",
+  "Panchagarh": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/d8e268f0-d29c-4879-ae81-5da5f6a13f9c.pdf"
+ }
+}

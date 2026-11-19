@@ -1,0 +1,30 @@
+{
+  "key": "BARISHAL_DC_PORTAL_2026",
+  "name": "Barishal District Administration portal — upazila/union list, pourashavas, district at-a-glance",
+  "organization": "Office of the Deputy Commissioner, Barishal (Government of Bangladesh, a2i National Portal)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "division": "barishal",
+  "kind": "district_portal_main",
+  "urls": [
+    "https://barishal.gov.bd/",
+    "https://barishal.gov.bd/pages/static-pages/697887ac35ce18e1c06624aa",
+    "https://barishal.gov.bd/pages/static-pages/69789b7535ce18e1c066e591",
+    "https://barishal.gov.bd/pages/static-pages/6978a32135ce18e1c0672269",
+    "https://bangladesh.gov.bd/views/union-list"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "বরিশাল জেলা প্রশাসন, জাতীয় তথ্য বাতায়ন (barishal.gov.bd)",
+  "files": {
+    "areas.csv": "67877a6592b1d50146d274b9235baca2d43021301cf565123bd0513d1179cda7",
+    "facts.csv": "50170e3755a66075ded385bf1af12392caed9111931d0b1e4a6142c4ae651495",
+    "raw/barishal_glance.txt": "415cdbec4836284f7a5d8464d8558ee14577dab281c1901234ac39074c2eb16b",
+    "raw/barishal_unions.txt": "3a515444b14294ba906515b9e6aa18b39da2bbfb7811a63899c737d1b455c18e",
+    "raw/barishal_upazilas.txt": "6360e1d3f31d942cdc66669cf95465753f9295463a71b723778d8e1492e58d79",
+    "raw/pages.csv": "25466615a8e0377efc8f18a36b1794e6eaefa3f71e60c753ec2f4ff132290410"
+  },
+  "notes": "Collected by the generic division mode of the a2i portal collectors (pages found through the portals' menus, names and figures parsed from the pages). No licence stated; only facts (names, counts, figures) are extracted. English district/upazila names are the project's keys, not printed."
+}

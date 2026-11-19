@@ -1,0 +1,40 @@
+                             Table-4
+           DISTRICT-WISE STATION & ROUTE KILOMETERS
+Bangladesh Railway has a total of 542 Railway stations and 3355.777 route kilometers at the
+end of the year 2023-2024, spread over 49 civil districts. The district-wise break-up of
+stations and route kilometers is appended below:
+Sl.         District        Stations Kilometers Sl.      District     Stations Kilometers
+ 1. Bagerhat                      06     38.007 26. Lalmonirhat             15 114.000
+ 2. Bogura                        20     84.850 27. Madaripur               01    15.420
+ 3. Brahmanbaria                  16     66.600 28. Moulvibazar             11 116.700
+ 4. Chandpur                      10     52.050 29. Munshiganj              03    27.260
+ 5. Chapainawabganj               08     50.000 30. Mymensingh              20 146.000
+ 6. Chattogram                    49   176.830 31. Naogaon                  05    18.100
+ 7. Chuadanga                     10     56.600 32. Narail                  02    29.500
+ 8. Coxbazar                      06     46.490 33. Narayanganj             04     8.500
+ 9. Cumilla                       18   101.230 34. Narsingdi                14    39.000
+10. Dhaka                         07     45.560 35. Natore                  11    77.070
+11. Dinajpur                      24   143.800 36. Netrokona                17    66.000
+12. Faridpur                      16   109.690 37. Nilphamari               09    65.300
+13. Feni                          13     96.560 38. Noakhali                07    47.310
+14. Gaibandha                     14     80.950 39. Pabna                   21 145.640
+15. Gazipur                       09     99.580 40. Panchagarh              03    18.320
+16. Gopalganj                     10     79.150 41. Rajbari                 15    89.900
+17. Habiganj                      14     89.100 42. Rajshahi                11    70.000
+18. Jamalpur                      21   107.000 43. Rangpur                  09    63.800
+19. Jashore                       12   102.100 44. Shariatpur               01     9.260
+20. Jhenaidaha                    05     36.000 45. Sirajganj               08    47.475
+21. Joypurhat                     07     45.500 46. Sunamganj               02    13.300
+22. Khulna                        08     51.050 47. Sylhet                  06    49.400
+23. Kishorganj                    12     63.100 48. Tangail                 08    87.525
+24. Kurigram                      08     42.500 49. Thakurgaon              06    47.180
+25. Kushtia                       10     79.520
+         Total Stations:              542
+         Total Districts:              49
+        Total Route KM:                3355.777
+
+
+
+
+                                             37
+

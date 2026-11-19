@@ -1,0 +1,27 @@
+{
+  "key": "DISTRICT_PORTAL_BANKS_SYL_2026",
+  "division": "sylhet",
+  "kind": "district_banks",
+  "name": "District portals — bank branch/office lists (Sylhet, Habiganj, Moulvibazar)",
+  "organization": "Deputy Commissioner's offices (district portals)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://sylhet.gov.bd/pages/static-pages/696cb9a8c4774958d7ba8e13",
+    "https://habiganj.gov.bd/pages/static-pages/banks-u7jcrx-6a054d1df570c41f02eaa7f2",
+    "https://moulvibazar.gov.bd/pages/static-pages/banks-apcyh3-6a09fee35d40ccedfd8e18c2",
+    "https://sunamganj.gov.bd/pages/bank-financial-org"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "District portals sylhet.gov.bd, habiganj.gov.bd, moulvibazar.gov.bd",
+  "notes": "No licence stated; lists are undated. Only landline numbers are kept (mobile numbers dropped: Sylhet 2); Habiganj's 5-digit local office numbers (no area code printed) are kept in extra_json only; no e-mails, routing numbers, managers' names, residence numbers or coordinates. Moulvibazar rows naming several branches or 'various upazila branches' are left out (বাংলাদেশ কৃষি ব্যাংক (মৌলভীবাজার ও বিভিন্ন উপজেলা শাখা); ইউনাইটেড কমার্শিয়াল ব্যাংক (কুলাউড়া / শ্রীমঙ্গল / মৌলভীবাজার শাখা)). Not used: Sunamganj (its bank list has names only; every branch/address/phone field is empty). sylhet.gov.bd sends only its leaf certificate: the Let's Encrypt intermediates are added from the CA's AIA URLs, TLS verification stays on.",
+  "files": {
+    "places.csv": "442dee9d606308e3847c30ab1003c45a845afd170d51fada6805444852f00239",
+    "raw/habiganj_banks.txt": "10fd9ac8fd2f0bcd200d3bb4c87d40a891cfb6dcb24e5c020909f762c85ef6fd",
+    "raw/moulvibazar_banks.txt": "ba4b48c810a6ea779468f3fef040a8d73417bb74415cfaa920cd6a5961ee4ffd",
+    "raw/sylhet_banks.txt": "00cd8376bf5f8ccfdcb7e3089f9692b4cc19a4c30cf9a7bb87a1cdb765a63f54"
+  }
+}

@@ -1,0 +1,48 @@
+{
+ "union_statistics": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/f376ca7e7ee5405f8311de650415b9d8.pdf",
+ "community_xlsx": {
+  "Dhaka": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/b15f7a7f63ff451e86ce7fd7cca9493d.xlsx",
+  "Narayanganj": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/ecfcd0ae1c0e4702af5d693c64d515d3.xlsx",
+  "Gazipur": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/fa819560a3a243e08b6e715f2572141f.xlsx",
+  "Manikganj": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/70930e5767e9432b9076e49c4673d10c.xlsx",
+  "Narsingdi": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/154c006ad6394203a8f07452f3da6b48.xlsx",
+  "Faridpur": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/b5f5926fea1c462eb5618fdefc2e8142.xlsx",
+  "Gopalganj": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/3ae267c260a447ebb1e7ff20b248b9f4.xlsx",
+  "Rajbari": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/2dd354800b8642bd9d2318d6a39095fc.xlsx",
+  "Shariatpur": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/27c3b4972ef746e5a20200951efca45d.xlsx",
+  "Kishoreganj": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/7366f40e63e74ced8e4b231df246e068.xlsx",
+  "Munshiganj": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/91d725ef924d4b4f9da8bbef02c3edc7.xlsx",
+  "Madaripur": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/f412eb1018b8493a99dec89cdd9e4df7.xlsx",
+  "Tangail": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2024/12/257941ad3e0449a29c02925138ffcef7.xlsx"
+ },
+ "district_page": {
+  "Dhaka": "https://bbs.gov.bd/pages/files/6a094a2c163c98157b027920",
+  "Narayanganj": "https://bbs.gov.bd/pages/files/6a095985af5b16b9ec403554",
+  "Gazipur": "https://bbs.gov.bd/pages/files/6a095acf298ade29f226171e",
+  "Manikganj": "https://bbs.gov.bd/pages/files/6a095b48af5b16b9ec40387e",
+  "Narsingdi": "https://bbs.gov.bd/pages/files/6a095e79fa5a21e711e518f6",
+  "Faridpur": "https://bbs.gov.bd/pages/files/6a095eff87a6fde6b39f13bc",
+  "Gopalganj": "https://bbs.gov.bd/pages/files/6a095f5c2a941ac3be720dac",
+  "Rajbari": "https://bbs.gov.bd/pages/files/6a095fb42a941ac3be720e27",
+  "Shariatpur": "https://bbs.gov.bd/pages/files/6a0960098bde06af570c4d63",
+  "Kishoreganj": "https://bbs.gov.bd/pages/files/6a096091f570c41f02eb5460",
+  "Munshiganj": "https://bbs.gov.bd/pages/files/6a0961255d40ccedfd8dd6d8",
+  "Madaripur": "https://bbs.gov.bd/pages/files/6a09617d2a941ac3be721047",
+  "Tangail": "https://bbs.gov.bd/pages/files/6a0961eb4cb0a0494f042ca0"
+ },
+ "district_pdf": {
+  "Dhaka": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/6c4026f9-3ea4-493a-a0e3-c6d7c91fdc67.pdf",
+  "Narayanganj": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/2f54aae6-a2d6-4cdb-861f-b58cb8d5e810.pdf",
+  "Gazipur": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/82a009d2-5259-45ea-b45d-4929d6040eda.pdf",
+  "Manikganj": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/587da0de-d611-43a3-a7fe-91ebe41f8ca8.pdf",
+  "Narsingdi": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/78a06568-b090-432d-a026-be9c2ff35403.pdf",
+  "Faridpur": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/6febd6ad-75c2-4d22-be91-c0d446dacc54.pdf",
+  "Gopalganj": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/89c3f8ef-782a-4932-954b-bb23a7fec516.pdf",
+  "Rajbari": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/37fa9e29-13ca-40b4-95dc-75b85ce5ee48.pdf",
+  "Shariatpur": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/b0e1910a-93f4-4637-9351-5a7a8b55d5d8.pdf",
+  "Kishoreganj": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/629942d3-34f4-493c-8a92-cd5fa1b91532.pdf",
+  "Munshiganj": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/f75db72f-2e2f-412b-9c43-d12fcd9a688b.pdf",
+  "Madaripur": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/5eabdb96-ef89-4f9a-be1a-ccc2cbf701a8.pdf",
+  "Tangail": "https://objectstorage.ap-dcc-gazipur-1.oraclecloud15.com/n/axvjbnqprylg/b/V2Ministry/o/office-bbs/2026/4/6ca57f37-00d6-48ad-9f8b-94c1226d0fa5.pdf"
+ }
+}

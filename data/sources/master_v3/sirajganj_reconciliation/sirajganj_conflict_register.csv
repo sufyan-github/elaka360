@@ -1,0 +1,5 @@
+﻿conflict_id,topic,claim_a,claim_b,sources,assessment,status
+SIR-001,District union total,83 (current district administration),82 (BBS 2011),Sirajganj District Administration vs BBS Statistical Pocket Book 2016 Table 3.01,One-unit net increase since 2011; exact added/reclassified union needs gazette evidence,Open
+SIR-002,Upazila distribution,Belkuchi 6; Chauhali 7; Kamarkhanda 4; Kazipur 12; Raiganj 9; Shahjadpur 13; Sadar 10; Tarash 8; Ullapara 14,Historical 2011 BBS counts differ in some upazilas,BBS District Statistics 2011 vs current district administration overview,Working distribution only; individual union names and count allocation not yet validated,Open
+SIR-003,Union name spelling,Current district administration Bengali/English list,Historical BBS transliteration,District portal vs BBS 2011,Preserve Bangla as source canonical; English aliases need transliteration policy,Open
+SIR-004,Urban units,Municipal wards separate from unions,May be mixed in secondary directories,District administration / BBS,Do not ingest municipal wards as unions,Resolved scope note

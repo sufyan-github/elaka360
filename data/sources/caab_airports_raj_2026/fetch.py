@@ -1,0 +1,553 @@
+#!/usr/bin/env python3
+"""Fetch CAAB airport data for airports in Rajshahi Division (CAAB_AIRPORTS_RAJ_2026).
+
+Usage: python3 fetch.py [--division rajshahi|rangpur|dhaka|chattogram|khulna|barishal|sylhet|mymensingh] [--out DIR]   (default: Rajshahi into this folder; DIVISIONS.md)"""
+# --- polite HTTP helper (copy this block into each fetch.py; stdlib + requests only) -----------------
+# Many *.gov.bd servers send only their leaf certificate and omit the intermediate CA. Browsers fetch the
+# missing intermediate via the certificate's AIA URL; we do the same explicitly: download the published
+# intermediates from the CA and add them to certifi's bundle. TLS verification stays ON.
+import os, time, tempfile, urllib.parse, urllib.robotparser
+import requests
+
+UA = "Elaka360-data-pipeline (research; contact via repository)"
+INTERMEDIATES = [  # CA-published intermediates (AIA "CA Issuers" URLs) that some gov.bd hosts fail to send
+    "http://crt.sectigo.com/SectigoPublicServerAuthenticationCADVR36.crt",
+    "http://crt.sectigo.com/SectigoPublicServerAuthenticationCAOVR36.crt",
+    "http://crt.sectigo.com/SSL2BUYEMEARSADomainValidationSecureServerCA.crt",
+]
+MIN_DELAY = 1.2  # seconds between requests to the same host
+
+_last, _robots, _bundle = {}, {}, None
+S = requests.Session()
+S.headers["User-Agent"] = UA
+
+
+def _der_to_pem(der):
+    import base64
+    b = base64.encodebytes(der).decode().replace("\n", "")
+    return "-----BEGIN CERTIFICATE-----\n" + "\n".join(b[i:i + 64] for i in range(0, len(b), 64)) + "\n-----END CERTIFICATE-----\n"
+
+
+def ca_bundle():
+    global _bundle
+    if _bundle:
+        return _bundle
+    import certifi
+    pems = [open(certifi.where(), encoding="ascii").read()]
+    for u in INTERMEDIATES:
+        try:
+            r = requests.get(u, timeout=30, headers={"User-Agent": UA})
+            if r.ok:
+                pems.append(r.content.decode() if r.content.startswith(b"-----") else _der_to_pem(r.content))
+        except requests.RequestException:
+            pass
+        time.sleep(MIN_DELAY)
+    fd, path = tempfile.mkstemp(suffix=".pem")
+    with os.fdopen(fd, "w") as f:
+        f.write("\n".join(pems))
+    _bundle = path
+    return path
+
+
+def allowed(url):
+    p = urllib.parse.urlsplit(url)
+    base = f"{p.scheme}://{p.netloc}"
+    if base not in _robots:
+        rp = urllib.robotparser.RobotFileParser()
+        try:
+            r = get_raw(base + "/robots.txt")
+            rp.parse(r.text.splitlines() if (r is not None and r.status_code == 200 and "html" not in r.headers.get("content-type", "")) else [])
+        except Exception:
+            rp.parse([])
+        _robots[base] = rp
+    return _robots[base].can_fetch(UA, url)
+
+
+def get_raw(url, **kw):
+    host = urllib.parse.urlsplit(url).netloc
+    wait = MIN_DELAY - (time.time() - _last.get(host, 0))
+    if wait > 0:
+        time.sleep(wait)
+    try:
+        return S.get(url, timeout=kw.pop("timeout", 60), verify=ca_bundle(), **kw)
+    finally:
+        _last[host] = time.time()
+
+
+def get(url, retries=2, **kw):
+    """Polite GET; returns Response or None (never raises)."""
+    if not allowed(url):
+        print("robots.txt disallows", url)
+        return None
+    for i in range(retries + 1):
+        try:
+            r = get_raw(url, **kw)
+            if r.status_code < 500:
+                return r
+        except requests.RequestException as e:
+            print("fetch failed", url, e)
+        time.sleep(3 * (i + 1))
+    return None
+# --- end helper ---------------------------------------------------------------------------------------
+
+# --- common utilities (stdlib only) -------------------------------------------------------------------
+import csv, hashlib, html as _html, json, re, shutil, subprocess, sys, unicodedata
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+RAW = HERE / "raw"
+PLACE_COLS = ["source_key", "source_id", "name_bn", "name_en", "category_key", "lat", "lon", "address", "district_en",
+              "upazila_en", "phone", "website", "email", "opening_hours", "operator", "ownership", "extra_json",
+              "source_url", "notes"]
+FACT_COLS = ["entity_level", "entity_name_en", "district_en", "upazila_en", "code", "fact", "value", "unit", "basis",
+             "year", "source_key", "source_url", "notes"]
+_BN = str.maketrans("০১২৩৪৫৬৭৮৯", "0123456789")
+
+
+def nfc(s):
+    return unicodedata.normalize("NFC", s or "").strip()
+
+
+def asc(s):
+    """Bangla digits -> ASCII digits."""
+    return (s or "").translate(_BN)
+
+
+def clean(s):
+    s = re.sub(r"<[^>]+>", " ", s or "")
+    s = _html.unescape(s).replace("\xa0", " ")
+    return nfc(re.sub(r"\s+", " ", s))
+
+
+def tables(html_text):
+    """All <table>s of a page as lists of rows (lists of cleaned cell strings)."""
+    out = []
+    for t in re.findall(r"<table\b.*?</table>", html_text, flags=re.S | re.I):
+        rows = []
+        for tr in re.findall(r"<tr\b.*?</tr>", t, flags=re.S | re.I):
+            cells = [clean(c) for c in re.findall(r"<t[dh]\b[^>]*>(.*?)</t[dh]>", tr, flags=re.S | re.I)]
+            if any(cells):
+                rows.append(cells)
+        out.append(rows)
+    return out
+
+
+def content_text(html_text):
+    """Main content block of a national-portal (v2) page as text lines."""
+    s = re.sub(r"<(script|style)[^>]*>.*?</\1>", "", html_text, flags=re.S | re.I)
+    s = re.sub(r"</(tr|p|div|li|h\d)>|<br\s*/?>", "\n", s, flags=re.I)
+    s = re.sub(r"</t[dh]>", " | ", s, flags=re.I)
+    s = _html.unescape(re.sub(r"<[^>]+>", " ", s)).replace("\xa0", " ")
+    lines = [nfc(re.sub(r"[ \t]+", " ", l)) for l in s.splitlines()]
+    lines = [l for l in lines if l]
+    try:
+        a = next(i for i, l in enumerate(lines) if l.startswith("কন্টেন্ট:"))
+        b = next(i for i, l in enumerate(lines) if i > a and "এই কনটেন্টটি শেয়ার" in l)
+        return lines[a + 1:b]
+    except StopIteration:
+        return lines
+
+
+def phone_norm(s):
+    """ASCII digits, keep the source's grouping; several numbers joined with '; '."""
+    s = asc(s)
+    parts = [p.strip(" ,;/") for p in re.split(r"[,;/]|\s{2,}", s)]
+    return "; ".join(p for p in parts if re.search(r"\d{4}", p))
+
+
+def save_raw(name, content):
+    RAW.mkdir(exist_ok=True)
+    p = RAW / name
+    p.write_bytes(content if isinstance(content, bytes) else content.encode("utf-8"))
+    return p
+
+
+def pdftotext(path, first=None, last=None, layout=True):
+    """Text of a PDF via poppler's pdftotext if installed (optional dependency); None otherwise."""
+    exe = shutil.which("pdftotext")
+    if not exe:
+        return None
+    cmd = [exe] + (["-layout"] if layout else []) + (["-f", str(first)] if first else []) + (["-l", str(last)] if last else []) + [str(path), "-"]
+    try:
+        return subprocess.run(cmd, capture_output=True, text=True, timeout=300).stdout
+    except Exception:
+        return None
+
+
+def write_csv(name, cols, rows):
+    with open(HERE / name, "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=cols, extrasaction="raise")
+        w.writeheader()
+        for r in rows:
+            w.writerow({c: ("" if r.get(c) is None else r.get(c)) for c in cols})
+    print(f"wrote {name}: {len(rows)} rows")
+
+
+def write_manifest(meta, files):
+    hashes = {}
+    for rel in files:
+        p = HERE / rel
+        if p.exists():
+            hashes[rel] = hashlib.sha256(p.read_bytes()).hexdigest()
+    meta = dict(meta, files=hashes)
+    (HERE / "SOURCE.json").write_text(json.dumps(meta, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print("wrote SOURCE.json")
+
+
+def xj(d):
+    d = {k: v for k, v in d.items() if v not in (None, "", [], {})}
+    return json.dumps(d, ensure_ascii=False, separators=(",", ":")) if d else ""
+# --- end common utilities -----------------------------------------------------------------------------
+
+# --- division selection (data/sources/DIVISIONS.md) ---------------------------------------------------------
+import argparse
+DIVISION_CODES = {"rajshahi": "raj", "rangpur": "rang", "dhaka": "dhk", "chattogram": "ctg", "khulna": "khl",
+                  "barishal": "bar", "sylhet": "syl", "mymensingh": "mym"}
+
+
+def division_setup(here, base_key, configured, extra_args=()):
+    """Parse --division/--out -> (args, out_dir, source_key). Rajshahi (default) keeps this folder and key; another
+    division writes to its own folder named per DIVISIONS.md and never touches the Rajshahi files."""
+    ap = argparse.ArgumentParser(description=(__doc__ or "").strip().split("\n")[0])
+    ap.add_argument("--division", default="rajshahi", choices=list(DIVISION_CODES))
+    ap.add_argument("--out", help="output folder (default: this folder for rajshahi, the division's own folder otherwise)")
+    for name, kw in extra_args:
+        ap.add_argument(name, **kw)
+    args = ap.parse_args()
+    if args.division not in configured:
+        ap.error("division %r is not configured in this collector yet (configured: %s)" % (args.division, ", ".join(configured)))
+    here = os.path.abspath(str(here))
+    folder = os.path.basename(here)
+    if args.division == "rajshahi":
+        name, key = folder, base_key
+    else:
+        code = DIVISION_CODES[args.division]
+        name = folder.replace("_raj_", "_%s_" % code) if "_raj_" in folder else "%s_%s" % (folder, args.division)
+        key = base_key.replace("_RAJ_", "_%s_" % code.upper()) if "_RAJ_" in base_key else "%s_%s" % (base_key, args.division.upper())
+    out = os.path.abspath(args.out) if args.out else (here if args.division == "rajshahi" else os.path.join(os.path.dirname(here), name))
+    if args.division != "rajshahi" and out == here:
+        ap.error("refusing to write another division's output into the Rajshahi folder")
+    os.makedirs(out, exist_ok=True)
+    return args, out, key
+# --- end division selection ---------------------------------------------------------------------------------
+
+# --- CAAB_AIRPORTS_RAJ_2026 ---------------------------------------------------------------------------
+KEY = "CAAB_AIRPORTS_RAJ_2026"
+URL_HOME = "https://www.caab.gov.bd/"
+URL_ALL = "https://new.caab.gov.bd/airportsf.html"
+URL_CONTACTS = "https://new.caab.gov.bd/contactof.html"
+AIRPORTS = [  # (page, name_bn as on caab.gov.bd menu, district, upazila)
+    ("https://new.caab.gov.bd/airports/rajshahi.html", "শাহ মখদুম বিমানবন্দর", "Rajshahi", ""),
+    ("https://new.caab.gov.bd/airports/ishwardi.html", "ঈশ্বরদী বিমানবন্দর", "Pabna", "Ishwardi"),
+]
+
+# per division: airports with a CAAB page, and airports CAAB only names in its "All airports" overview (no page)
+BY_DIV = {
+    "rajshahi": dict(pages=AIRPORTS, listed=[("Bogura Airport", "Bogura")]),
+    "rangpur": dict(pages=[("https://new.caab.gov.bd/airports/saidpur.html", "সৈয়দপুর বিমানবন্দর", "Nilphamari", "Saidpur")],
+                    listed=[("Thakurgaon Airport", "Thakurgaon")]),
+    # Dhaka: CAAB has no page for either airport; both are only named in the overview (HSIA under the international
+    # airports, searched as 'Hazrat Shahjalal International Airport, Dhaka' to skip the history paragraph)
+    "dhaka": dict(pages=[], listed=[
+        dict(name="Hazrat Shahjalal International Airport", district="Dhaka", search="Hazrat Shahjalal International Airport, Dhaka",
+             sid="caab-hazrat-shahjalal",
+             note="; the CAAB contacts page lists only PABX ranges for HSIA (not collected; earlier runs keep Airport Manager office contacts only)"),
+        dict(name="Tejgaon Airport", district="Dhaka", sid="caab-tejgaon",
+             note="; district from the overview's history text ('The airport at Tejgaon, Dhaka')")]),
+    # Chattogram: CAAB pages for Shah Amanat (Chattogram), Cox's Bazar and Cumilla; their markup differs from the
+    # Rajshahi pages (Word-exported fragments, symbols in the coordinates, 'Director' instead of 'Airport Manager'), so
+    # values the line parser cannot read are taken from the page's plain text (see plain_field / dms_any)
+    "chattogram": dict(pages=[
+        ("https://new.caab.gov.bd/airports/chittagong.html", "শাহ আমানত আন্তর্জাতিক বিমানবন্দর", "Chattogram", ""),
+        ("https://new.caab.gov.bd/airports/coxsbazar.html", "কক্সবাজার বিমানবন্দর", "Cox's Bazar", ""),
+        ("https://new.caab.gov.bd/airports/comilla.html", "কুমিল্লা বিমানবন্দর", "Cumilla", "")], listed=[]),
+    # Khulna: CAAB page for Jashore Airport (same Word-exported markup as the Chattogram pages; the Airport Manager's numbers
+    # are printed without a 'Phone:' label); Khan Jahan Ali Airport (Bagerhat) is only named in the overview, under
+    # 'UNDER CONSTRUCTION'
+    "khulna": dict(pages=[
+        ("https://new.caab.gov.bd/airports/jessore.html", "যশোর বিমানবন্দর", "Jashore", "")], listed=[
+        dict(name="Khan Jahan Ali Airport", district="Bagerhat", search="Khan Jahan Ali Airport, Bagerhat", sid="caab-khan-jahan-ali")]),
+    # Barishal: CAAB page for Barishal Airport (coordinates in degree/minute/second form as on the Chattogram/Khulna pages; the
+    # Airport Manager's cell number is followed by 'Fax :', and the block also gives the control-tower line)
+    "barishal": dict(pages=[
+        ("https://new.caab.gov.bd/airports/barisal.html", "বরিশাল বিমানবন্দর", "Barishal", "")], listed=[]),
+    # Sylhet: CAAB page for Osmani International Airport (Word-exported markup as for Chattogram; the Airport Manager's
+    # mobile is printed 'Mobile-017…' and the block ends with the PABX range); Shamshernagar Airport (STOL) is only named
+    # in the overview, under 'Needs prior approval for air operation', without a district
+    "sylhet": dict(pages=[
+        ("https://new.caab.gov.bd/airports/osmani.html", "ওসমানী আন্তর্জাতিক বিমানবন্দর", "Sylhet", "")], listed=[
+        dict(name="Shamshernagar Airport", district="Moulvibazar", search="Shamshernagar Airport", sid="caab-shamshernagar",
+             note="; CAAB names it 'Shamshernagar Airport (STOL)' without a district: district_en added from the airfield's "
+                  "location (Shamshernagar, Kamalganj upazila, Moulvibazar), not stated by CAAB")]),
+    # Mymensingh: CAAB has no airport page and its overview names no airfield in the division; the run writes an empty
+    # places.csv and keeps the overview text as evidence ('evidence': raw/airportsf.txt)
+    "mymensingh": dict(pages=[], listed=[], evidence=True),
+}
+STATUS = [("INTERNATIONAL AIRPORTS", "International"), ("Operational-", "Domestic, operational"), ("Needs prior approval for air operation", "Needs prior approval for air operation"),
+          ("Service not available", "Service not available")]
+
+
+def caab_status(txt, name):
+    """Section of the CAAB overview ('A. Operational', 'B. Needs prior approval…', 'C. Service not available') naming the airport."""
+    i = txt.find(name)
+    if i < 0:
+        return None
+    best = None
+    for label, status in STATUS:
+        j = txt.rfind(label, 0, i)
+        if j >= 0 and (best is None or j > best[0]):
+            best = (j, status)
+    return best[1] if best else None
+
+
+def dms(s, neg_letters="SW"):
+    """'242619.39N' / '0883658.56E' -> decimal degrees (CAAB 'Latitude'/'Longitude' fields)."""
+    m = re.match(r"^(\d{2,3})(\d{2})(\d{2}(?:\.\d+)?)([NSEW])$", s.strip())
+    if not m:
+        return None
+    v = int(m.group(1)) + int(m.group(2)) / 60 + float(m.group(3)) / 3600
+    return round(-v if m.group(4) in neg_letters else v, 6)
+
+
+def dms_any(s):
+    """Other divisions: '21 o 27′07"N', '23 26'10" N' or 'DDMMSS.ssN' (spaces allowed) -> decimal degrees."""
+    s = (s or "").strip()
+    v = dms(s.replace(" ", ""))
+    if v is not None:
+        return v
+    m = re.match(r"^(\d{1,3})\s*(?:o|°)?\s*(\d{1,2})\s*[′']\s*(\d{1,2}(?:\.\d+)?)\s*[\"″]?\s*([NSEW])$", s)
+    if not m:
+        return None
+    v = int(m.group(1)) + int(m.group(2)) / 60 + float(m.group(3)) / 3600
+    return round(-v if m.group(4) in "SW" else v, 6)
+
+
+def plain_field(plain, label, stops=("ICAO ID", "IATA CODE", "Latitude", "Longitude", "GPS", "TWR FREQ", "VOR", "DVOR", "NDB",
+                                     "Services")):
+    """Other divisions: value after a label in the page's plain text, up to the next known label."""
+    m = re.search(r"\b%s\.?\s+(.+?)\s+(?:%s)\b" % (re.escape(label), "|".join(re.escape(x) for x in stops if x != label)), plain)
+    return m.group(1).strip(" ,") if m else ""
+
+
+def field(lines, label):
+    for i, l in enumerate(lines):
+        if l.rstrip(" |").strip().lower() == label.lower():
+            for nxt in lines[i + 1:i + 3]:
+                v = nxt.strip(" |")
+                if v:
+                    return v
+    return ""
+
+
+def main():
+    global HERE, RAW, KEY, AIRPORTS, STATUS
+    args, out, KEY = division_setup(HERE, KEY, list(BY_DIV))
+    HERE, RAW = Path(out), Path(out) / "raw"
+    division, head = args.division, args.division.capitalize()
+    if division == "khulna":  # the overview's last section ('UNDER CONSTRUCTION Khan Jahan Ali Airport, Bagerhat')
+        STATUS = STATUS + [("UNDER CONSTRUCTION", "Under construction")]
+    AIRPORTS = BY_DIV[division]["pages"]
+    places, facts = [], []
+    menu = ""
+    r = get(URL_HOME)
+    if r is not None and r.ok:
+        menu = r.text
+    for url, name_bn, dist, upa in AIRPORTS:
+        r = get(url)
+        if r is None or not r.ok:
+            print("unavailable", url)
+            continue
+        save_raw(url.rsplit("/", 1)[1].replace(".html", ".txt"), "\n".join(clean(l) for l in re.sub(r"<(script|style)[^>]*>.*?</\1>", "", r.text, flags=re.S | re.I).splitlines() if clean(l)))
+        s = re.sub(r"<(script|style)[^>]*>.*?</\1>", "", r.text, flags=re.S | re.I)
+        s = re.sub(r"</(tr|p|div|li|h\d|td)>|<br\s*/?>", "\n", s, flags=re.I)
+        lines = [clean(l) for l in s.splitlines()]
+        lines = [l for l in lines if l]
+        title = next((l for l in lines if l.endswith("Airport,")), "").rstrip(",")
+        icao, iata = field(lines, "ICAO ID"), field(lines, "IATA CODE")
+        lat_s, lon_s = field(lines, "Latitude"), field(lines, "Longitude")
+        txt = " ".join(lines)
+        plain = clean(re.sub(r"<(script|style)[^>]*>.*?</\1>", "", r.text, flags=re.S | re.I))
+        bad = lambda v: not v or "<" in v or "style=" in v
+        if division in ("chattogram", "khulna", "barishal", "sylhet"):  # page markup differs (see BY_DIV): fall back to the plain text where a value is unreadable
+            # the page heading is the first line naming the airport (a later 'Airport,' line can be history text)
+            m = re.search(r"^(.*?Airport)\b", next((l for l in lines if "Airport" in l), ""))
+            title = m.group(1) if m else title
+            icao = icao if re.fullmatch(r"[A-Z]{4}", icao or "") else plain_field(plain, "ICAO ID")
+            iata = iata if re.fullmatch(r"[A-Z]{3}", iata or "") else plain_field(plain, "IATA CODE")
+            if bad(lat_s) or dms_any(lat_s) is None:
+                lat_s, lon_s = plain_field(plain, "Latitude"), plain_field(plain, "Longitude")
+            if not lat_s:
+                m = re.search(r"GPS\s+(.+?[NS])\s*,\s*(.+?[EW])\b", plain)
+                lat_s, lon_s = (m.group(1), m.group(2)) if m else ("", "")
+        ph = re.search(r"Phone:\s*([+\d ()]+)\(Off\)", txt)
+        if not ph and division != "rajshahi":  # e.g. Saidpur: 'Airport Manager, Saidpur, Bangladesh. Telephone: +880…'
+            ph = re.search(r"Airport Manager[^:]*?Telephone:\s*(\+?[\d ]{7,}\d)", txt)
+        cell = re.search(r"Cell:\s*([+\d ,]+?)(?:\s+e-?mail|\s+email)", txt, flags=re.I)
+        if not cell and division == "barishal":  # 'Cell: +880 1894909700 Fax : +880 2 55061662 email : …'
+            cell = re.search(r"Cell:\s*([+\d ,]+?)\s+Fax\b", txt)
+        if division == "sylhet":  # 'Phone: 880 821 714243 (Off) Mobile-01715018027 email : …' (a later 'Cell:' is an airline's)
+            cell = re.search(r"\(Off\)\s*Mobile\s*-\s*(\d{11})\b", txt)
+        em = re.search(r"e-?mail\s*:\s*([\w.]+@caab\.gov\.bd)", txt, flags=re.I)
+        phones = [p.strip() for p in ([ph.group(1)] if ph else []) + (cell.group(1).split(",") if cell else []) if p.strip()]
+        extra = {"icao_on_page": icao, "iata": iata, "latitude_raw": lat_s, "longitude_raw": lon_s,
+                 "twr_freq": field(lines, "TWR FREQ") or field(lines, "TWR FREQ."), "ndb": field(lines, "NDB"), "dvor": field(lines, "DVOR")}
+        notes = ["Coordinates converted from the DDMMSS values on the CAAB airport page (aerodrome reference as published)"]
+        lat, lon = dms(lat_s) or "", dms(lon_s) or ""
+        em_note = ""
+        if division in ("chattogram", "khulna", "barishal", "sylhet"):
+            for k, lab in (("twr_freq", "TWR FREQ"), ("ndb", "NDB"), ("dvor", "DVOR"), ("vor", "VOR")):
+                if bad(extra.get(k)):
+                    extra[k] = plain_field(plain, lab)
+            if division == "khulna":  # Jashore prints 'DVOR/DME JSR, Freq, 113 MHz / 1164 MHz' then 'VHF …' (no 'DVOR' label alone)
+                m = re.search(r"DVOR/DME\s+(.+?)\s+VHF\b", plain)
+                extra["dvor"] = m.group(1).strip() if m else ""
+                m = re.search(r"\bVHF\s+(.+?)\s+Services\b", plain)
+                extra["vhf"] = m.group(1).strip() if m else ""
+            # the Airport Manager's / Director's office block (before 'Airlines Office'): office phone, cell, e-mail only
+            m = re.search(r"Contact Brief History Services Development Schedule Airport (.*?)(?:Airlines Office|Development Brief)", plain)
+            seg = m.group(1) if m else ""
+            if division == "barishal":  # 'Contact /Hot line: … Airport Manager, Barishal. Phone: … Control Tower … VIP Lounge …'
+                m = re.search(r"(Airport Manager[^.]*\..*?)(?:Airlines Office|Development Brief)", plain)
+                seg = m.group(1) if m else ""
+                for k, rx in (("fax", r"Fax\s*:\s*(\+?\d[\d ]{5,}\d)"), ("tower_phone", r"Control Tower\s*:?\s*(\+?\d[\d ]{5,}\d)")):
+                    m = re.search(rx, seg)
+                    if m:
+                        extra[k] = m.group(1).strip()
+            if division == "sylhet":  # '… email : apmsylhet@caab.gov.bd PABX +880 821 725391 to 94'
+                m = re.search(r"PABX\s+(\+?\d[\d ]{5,}\d(?:\s+to\s+\d+)?)", seg)
+                if m:
+                    extra["pabx"] = m.group(1).strip()
+            if not phones and seg:
+                phones = [x.strip() for x in re.findall(r"(?:Phone|Telephone|Cell|Mobile)\s*:?\s*(\+?\d[\d\- ]{5,}\d)", seg)]
+            if not phones and seg and division == "khulna":  # 'Airport Manager, Jashore, Bangladesh. +880 421 64033, 01894909600, Tower: …'
+                m = re.search(r"Airport Manager[^.]*\.\s*(.*?)\s*(?:Tower\s*:|e-?mail)", seg, flags=re.I)
+                phones = [x.strip() for x in re.findall(r"\+?\d[\d ]{5,}\d", m.group(1))] if m else []
+                m = re.search(r"Tower\s*:\s*(\+?\d[\d ]{5,}\d)", seg)
+                if m:
+                    extra["tower_phone"] = m.group(1).strip()
+                if phones:
+                    notes.append("office numbers printed without a 'Phone:' label under 'Airport Manager' on the airport page")
+            if not em and seg:
+                m = re.search(r"e-?mail\s*:\s*([\w.]+\s*@\s*[\w. ]+?\.\s*bd)\b", seg, flags=re.I)
+                if m:
+                    raw_em = m.group(1)
+                    em = re.match(r"(.*)", re.sub(r"\s+", "", raw_em))
+                    if raw_em != em.group(1):
+                        em_note = "e-mail printed with spaces on the airport page ('%s')" % raw_em
+            lat, lon = dms_any(lat_s) or "", dms_any(lon_s) or ""
+            if lat and lon and not (dms(lat_s) and dms(lon_s)):
+                notes[0] = "Coordinates converted from the degree/minute/second values on the CAAB airport page (aerodrome reference as published)"
+            if em_note:
+                notes.append(em_note)
+        if division != "rajshahi":
+            if not lat and dms(lat_s.replace(" ", "")):  # e.g. '254537 . 35N' printed with spaces
+                lat = dms(lat_s.replace(" ", ""))
+                notes.append("latitude printed with spaces ('%s'); read as %s" % (lat_s, lat_s.replace(" ", "")))
+            if not (lat and lon):
+                lat = lon = ""
+        if icao == "VISD":
+            notes.append("CAAB page prints ICAO 'VISD'; Ishwardi's ICAO location indicator in ICAO Doc 7910 is VGIS — kept as printed, needs checking")
+        if (name_bn not in menu) if division == "rajshahi" else (nfc(name_bn) not in nfc(menu)):
+            notes.append("Bangla name taken from the caab.gov.bd airport menu (not found on this run)")
+        places.append(dict(
+            source_key=KEY, source_id=f"caab-{(iata or icao).lower()}", name_bn=name_bn, name_en=title,
+            category_key="transport.airport", lat=lat, lon=lon, district_en=dist, upazila_en=upa,
+            phone="; ".join(phones), email=em.group(1) if em else "", website=url, operator="বেসামরিক বিমান চলাচল কর্তৃপক্ষ, বাংলাদেশ (CAAB)",
+            ownership="public", extra_json=xj(extra), source_url=url,
+            notes="; ".join(notes) + ("; upazila_en from the airport name" if upa else "")))
+    r = get(URL_ALL)
+    if r is not None and r.ok:
+        pass
+        txt = clean(r.text)
+        if BY_DIV[division].get("evidence"):
+            save_raw("airportsf.txt", txt)
+        if division != "rajshahi":
+            for item in BY_DIV[division]["listed"]:
+                opt = item if isinstance(item, dict) else {}
+                nm, d = (opt["name"], opt["district"]) if opt else item
+                st = caab_status(txt, opt.get("search", nm))
+                if st:
+                    places.append(dict(
+                        source_key=KEY, source_id=opt.get("sid") or "caab-" + nm.split()[0].lower(), name_bn="", name_en=nm,
+                        category_key="transport.airport", district_en=d, operator="", ownership="public",
+                        extra_json=xj({"caab_status": st}), source_url=URL_ALL,
+                        notes=f"Listed by CAAB under '{st}' in its airport overview; CAAB publishes no airport page, codes, "
+                              "coordinates or contact for it" + opt.get("note", "")))
+            for p in places:
+                if p["source_url"] != URL_ALL:
+                    nm = p["name_en"].replace(" Airport", "") + " Airport"
+                    # Chattogram: the overview's history paragraph names 'Shah Amanat International Airport (SAIA)' before
+                    # the list entry 'Shah Amanat International Airport, Chattogram': try the list form first
+                    st = (caab_status(txt, nm + ",") or caab_status(txt, nm)) if division == "chattogram" else caab_status(txt, nm)
+                    if st:
+                        p["extra_json"] = xj(dict(json.loads(p["extra_json"] or "{}"), caab_status=st))
+        if division == "rajshahi" and "Bogura Airport" in txt:
+            places.append(dict(
+                source_key=KEY, source_id="caab-bogura", name_bn="", name_en="Bogura Airport", category_key="transport.airport",
+                district_en="Bogura", operator="", ownership="public",
+                extra_json=xj({"caab_status": "Needs prior approval for air operation"}), source_url=URL_ALL,
+                notes="Listed by CAAB under 'Needs prior approval for air operation' (no passenger service); CAAB publishes no airport page, "
+                      "codes, coordinates or contact for it"))
+        m = re.search(r"Service not available-\(3\)(.*?)UNDER CONSTRUCTION", txt)
+        for p in places:
+            if p["source_id"] == "caab-ird" or "Ishwardi" in p["name_en"]:
+                p["extra_json"] = xj(dict(json.loads(p["extra_json"] or "{}"), caab_status="Service not available (listed as 'Ishurdi Airport')"))
+            if "Shah Makhdum" in p["name_en"]:
+                p["extra_json"] = xj(dict(json.loads(p["extra_json"] or "{}"), caab_status="Domestic, operational"))
+    r = get(URL_CONTACTS)
+    if r is not None and r.ok:
+        txt = clean(r.text)
+        for p in places if division == "chattogram" else []:
+            if p.get("email") and txt.find(p["email"]) > 0:
+                continue
+            # the contacts page names the airport ('Director Shah Amanat International Airport, Chattogram.'); its block runs
+            # to the next 'Director'/'Airport Manager'/'Public Relations' heading
+            i = txt.find(p["name_en"])
+            if i < 0:
+                continue
+            m = re.search(r"(Director|Airport Manager|Public Relations)", txt[i + len(p["name_en"]):])
+            seg = txt[i:i + len(p["name_en"]) + (m.start() if m else 300)]
+            ex = json.loads(p["extra_json"] or "{}")
+            m = re.search(r"e-?mail\s*:\s*([\w.]+@[\w.]+\.bd)", seg, flags=re.I)
+            if m:
+                ex["email_on_contacts_page"] = m.group(1)
+                if m.group(1) != p.get("email"):
+                    p["notes"] += "; CAAB contacts page gives the e-mail %s (the airport page gives %s)" % (m.group(1), p.get("email") or "none")
+            found = [x.strip() for x in re.findall(r"(?:Phone|Telephone|Cell|Mobile)\s*:?\s*(\+?\d[\d\- ]{5,}\d)", seg)]
+            if found:
+                ex["numbers_on_contacts_page"] = found
+                own = {re.sub(r"\D", "", x)[-10:] for x in p["phone"].split("; ") if x}
+                diff = [x for x in found if re.sub(r"\D", "", x)[-10:] not in own]
+                if diff:
+                    p["notes"] += "; CAAB contacts page lists " + ", ".join(diff) + " (not on the airport page)"
+            p["extra_json"] = xj(ex)
+        for p in places:
+            if not p.get("email"):
+                continue
+            i = txt.find(p["email"])
+            j = max(txt.rfind("Airport Manager", 0, i), txt.rfind("Director", 0, i))
+            if i > 0 and j >= 0:
+                seg = txt[j:i]
+                found = [x.strip() for x in re.findall(r"\+?[\d][\d \-]{6,}\d", seg)]
+                if found:
+                    ex = json.loads(p["extra_json"] or "{}")
+                    ex["numbers_on_contacts_page"] = found
+                    p["extra_json"] = xj(ex)
+                    own = {re.sub(r"\D", "", x)[-10:] for x in p["phone"].split("; ")}
+                    diff = [x for x in found if re.sub(r"\D", "", x)[-10:] not in own]
+                    if diff:
+                        p["notes"] += "; CAAB contacts page lists " + ", ".join(diff) + " (not on the airport page)"
+    write_csv("places.csv", PLACE_COLS, places)
+    write_manifest(dict(
+        key=KEY, division=division, kind="caab",
+        name=f"Civil Aviation Authority of Bangladesh — airports in {head} Division", organization="Civil Aviation Authority of Bangladesh (CAAB)",
+        source_type="government_portal", trust_level=4, urls=[URL_HOME, URL_ALL, URL_CONTACTS] + [a[0] for a in AIRPORTS],
+        accessed=__import__("datetime").date.today().isoformat(), publication_date=None, license=None, license_url=None,
+        attribution="Civil Aviation Authority of Bangladesh (caab.gov.bd)",
+        notes="No licence stated. Airline-office and individual staff numbers on the airport pages are not collected; only the "
+              "Airport Manager office phone/cell/e-mail. caab.gov.bd omits the Sectigo OV R36 intermediate (handled by the AIA helper)."),
+        ["places.csv"] + sorted(f"raw/{p.name}" for p in RAW.glob("*.txt")))
+
+
+if __name__ == "__main__":
+    main()

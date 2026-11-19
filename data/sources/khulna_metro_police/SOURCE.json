@@ -1,0 +1,29 @@
+{
+  "key": "KHULNA_METRO_POLICE",
+  "division": "khulna",
+  "kind": "metro_police",
+  "city": 50004,
+  "name": "Khulna Metropolitan Police (police.khulnadiv.gov.bd) and the Khulna DC portal thana list",
+  "organization": "Khulna Metropolitan Police, Bangladesh Police",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://police.khulnadiv.gov.bd/pages/static-pages/6980f684a31054345f1ceb6e",
+    "https://police.khulnadiv.gov.bd/pages/officers",
+    "https://khulna.gov.bd/pages/static-pages/69812047a31054345f1e0b98",
+    "https://kmp.police.gov.bd/"
+  ],
+  "accessed": "2026-11-18",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "Khulna Metropolitan Police (police.khulnadiv.gov.bd); Deputy Commissioner's Office, Khulna (khulna.gov.bd)",
+  "notes": "Figures from the KMP national-portal site (police.khulnadiv.gov.bd, title \"পুলিশ কমিশনার\"; এক নজরে updated 2024-12-04 14:28); thana names from the Khulna DC portal 'ভৌগলিক পরিচিতি' (8 metropolitan thanas, page updated 2017-10-24 18:47). KMP's own site kmp.police.gov.bd answered HTTP 500. KMP covers all 31 KCC wards and 5 unions, but no source places individual thanas in the city corporation, so no thana carries one. Phone numbers are in KHULNA_METRO_POLICE_THANAS_2026.",
+  "files": {
+    "areas.csv": "c10bbe85760b542b9e0922fd4c94f57b619e5e649e0687a3a155260955b5bef1",
+    "facts.csv": "5aa40a890516fbfd29424d8ca39b390de3e885622d24282ae027117fa432d52b",
+    "raw/khulna_dc_metro_thanas.txt": "7e49349f68bee558a0bd22aaf4669157b243bd6a333b7e0df6c67d48d49b0b1a",
+    "raw/kmp_portal_glance.txt": "b7eaa69dd1e50ca23f68e01822343588c7ea5154578bd914e2f9ed8b4937da65",
+    "raw/kmp_zones.txt": "290064b3424aaa8f00e5d5b93ab051ce622db1e2d972ae835ab7a09b8a437214"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "key": "HAAT_BAZAAR_CTG_2026",
+  "division": "chattogram",
+  "kind": "haat_bazaar",
+  "name": "Haat-bazaar (market) lists on the national portal — Chattogram Division DC and upazila portals",
+  "organization": "District / Upazila administrations (national portal framework, a2i/Cabinet Division)",
+  "source_type": "government_portal",
+  "trust_level": 4,
+  "urls": [
+    "https://chittagong.gov.bd/pages/hatbazar",
+    "https://<upazila>.<district>.gov.bd/pages/hatbazar",
+    "https://<portal>/pages/static-pages/<id> (menu 'হাটবাজার' / 'হাট-বাজার' / 'হাট বাজার')"
+  ],
+  "accessed": "2026-11-19",
+  "publication_date": null,
+  "license": null,
+  "license_url": null,
+  "attribution": "District / Upazila administrations (national portal framework, a2i/Cabinet Division)",
+  "notes": "115 portals read (DC + UNO). Structured lists (/pages/hatbazar, ?page=N) and static pages linked from haat-bazaar menu items; tables parsed by header (rowspan/colspan expanded). Kept: name, union, upazila, address, haat days, area, chandina-bhiti count, managing authority as published. Dropped before storage: lease (ইজারা) values, lessee names/addresses, informant names, mobile numbers, remarks; no page saved to raw/. No coordinates are published. Category: agriculture.haat when the name contains 'হাট' or market days are given, else business.market. Licence: none stated on the source; treat as government public information, cite the source.",
+  "files": {
+    "facts.csv": "1ad2266f1fff9e993f475ff034807cc42e306fcae6d434f4052918952eedf1b9",
+    "places.csv": "29232948d3dcbbbe1baeac68a22a47fc2995bdfc71b7fd30eaac6f2473c5cff6"
+  }
+}

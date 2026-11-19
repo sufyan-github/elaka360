@@ -1,0 +1,451 @@
+our_id,our_level,our_name_en,our_path,source_code,source_name_en,match_method,confidence,notes
+20038,district,Habiganj,sylhet/habiganj,BD6036,Habiganj,name_exact,high,source level district
+20037,district,Moulvibazar,sylhet/moulvibazar,BD6058,Moulvibazar,name_exact,high,source level district
+20039,district,Sunamganj,sylhet/sunamganj,BD6090,Sunamganj,name_exact,high,source level district
+20036,district,Sylhet,sylhet/sylhet,BD6091,Sylhet,name_exact,high,source level district
+30294,upazila,Ajmiriganj,sylhet/habiganj/ajmiriganj,BD60360002,Ajmiriganj,name_exact,high,source level upazila
+30293,upazila,Bahubal,sylhet/habiganj/bahubal,BD60360005,Bahubal,name_exact,high,source level upazila
+30295,upazila,Baniachong,sylhet/habiganj/baniachong,BD60360011,Baniachong,name_exact,high,source level upazila
+30297,upazila,Chunarughat,sylhet/habiganj/chunarughat,BD60360026,Chunarughat,name_exact,high,source level upazila
+30298,upazila,Habiganj Sadar,sylhet/habiganj/habiganj-sadar,BD60360044,Habiganj Sadar,name_exact,high,source level upazila
+30296,upazila,Lakhai,sylhet/habiganj/lakhai,BD60360068,Lakhai,name_exact,high,source level upazila
+30299,upazila,Madhabpur,sylhet/habiganj/madhabpur,BD60360071,Madhabpur,name_exact,high,source level upazila
+30292,upazila,Nabiganj,sylhet/habiganj/nabiganj,BD60360077,Nabiganj,name_exact,high,source level upazila
+30495,upazila,Shayestaganj,sylhet/habiganj/shayestaganj,BD60360087,Shayestaganj,name_exact,high,source level upazila
+30285,upazila,Barlekha,sylhet/moulvibazar/barlekha,BD60580014,Baralekha,name_skeleton,medium,source level upazila
+30291,upazila,Juri,sylhet/moulvibazar/juri,BD60580035,Juri,name_exact,high,source level upazila
+30286,upazila,Kamolganj,sylhet/moulvibazar/kamolganj,BD60580056,Kamalganj,name_skeleton,medium,source level upazila
+30287,upazila,Kulaura,sylhet/moulvibazar/kulaura,BD60580065,Kulaura,name_exact,high,source level upazila
+30288,upazila,Moulvibazar Sadar,sylhet/moulvibazar/moulvibazar-sadar,BD60580074,Moulvibazar Sadar,name_exact,high,source level upazila
+30289,upazila,Rajnagar,sylhet/moulvibazar/rajnagar,BD60580080,Rajnagar,name_exact,high,source level upazila
+30290,upazila,Sreemangal,sylhet/moulvibazar/sreemangal,BD60580083,Sreemangal,name_exact,high,source level upazila
+30301,upazila,South Sunamganj,sylhet/sunamganj/south-sunamganj,BD60900087,Shantiganj,code_hand_checked,high,source level upazila; hand-checked pair (Shantiganj = South Sunamganj দক্ষিণ সুনামগঞ্জ); the name matcher does not pair these
+30302,upazila,Bishwambarpur,sylhet/sunamganj/bishwambarpur,BD60900018,Bishwambharpur,name_banglish,high,source level upazila
+30303,upazila,Chhatak,sylhet/sunamganj/chhatak,BD60900023,Chhatak,name_exact,high,source level upazila
+30310,upazila,Derai,sylhet/sunamganj/derai,BD60900029,Derai,name_exact,high,source level upazila
+30307,upazila,Dharmapasha,sylhet/sunamganj/dharmapasha,BD60900032,Dharmapasha,name_exact,high,source level upazila
+30305,upazila,Dowarabazar,sylhet/sunamganj/dowarabazar,BD60900033,Dowarabazar,name_exact,high,source level upazila
+30304,upazila,Jagannathpur,sylhet/sunamganj/jagannathpur,BD60900047,Jagannathpur,name_exact,high,source level upazila
+30308,upazila,Jamalganj,sylhet/sunamganj/jamalganj,BD60900050,Jamalganj,name_exact,high,source level upazila
+30493,upazila,Madhyanagar,sylhet/sunamganj/madhyanagar,BD60900063,Madhyanagar,name_exact,high,source level upazila
+30309,upazila,Shalla,sylhet/sunamganj/shalla,BD60900086,Shalla,name_exact,high,source level upazila
+30300,upazila,Sunamganj Sadar,sylhet/sunamganj/sunamganj-sadar,BD60900089,Sunamganj Sadar,name_exact,high,source level upazila
+30306,upazila,Tahirpur,sylhet/sunamganj/tahirpur,BD60900092,Tahirpur,name_exact,high,source level upazila
+30272,upazila,Balaganj,sylhet/sylhet/balaganj,BD60910008,Balaganj,name_exact,high,source level upazila
+30273,upazila,Beanibazar,sylhet/sylhet/beanibazar,BD60910017,Beanibazar,name_exact,high,source level upazila
+30274,upazila,Bishwanath,sylhet/sylhet/bishwanath,BD60910020,Bishwanath,name_exact,high,source level upazila
+30275,upazila,Companiganj,sylhet/sylhet/companiganj,BD60910027,Companiganj,name_exact,high,source level upazila
+30283,upazila,Dakshinsurma,sylhet/sylhet/dakshinsurma,BD60910031,Dakkhin Surma,name_fuzzy,medium,source level upazila; similarity 0.95 to 'Dakshinsurma'
+30276,upazila,Fenchuganj,sylhet/sylhet/fenchuganj,BD60910035,Fenchuganj,name_exact,high,source level upazila
+30277,upazila,Golapganj,sylhet/sylhet/golapganj,BD60910038,Golapganj,name_exact,high,source level upazila
+30278,upazila,Gowainghat,sylhet/sylhet/gowainghat,BD60910041,Gowainghat,name_exact,high,source level upazila
+30279,upazila,Jaintiapur,sylhet/sylhet/jaintiapur,BD60910053,Jaintapur,name_skeleton,medium,source level upazila
+30280,upazila,Kanaighat,sylhet/sylhet/kanaighat,BD60910059,Kanaighat,name_exact,high,source level upazila
+30284,upazila,Osmaninagar,sylhet/sylhet/osmaninagar,BD60910060,Osmaninagar,name_exact,high,source level upazila
+30281,upazila,Sylhet Sadar,sylhet/sylhet/sylhet-sadar,BD60910062,Sylhet Sadar,name_exact,high,source level upazila
+30282,upazila,Zakiganj,sylhet/sylhet/zakiganj,BD60910094,Zakiganj,name_exact,high,source level upazila
+50006,city_corporation,Sylhet City Corporation,sylhet/sylhet/sylhet-city-corporation,BD60915000,Sylhet City Corporation,name_exact,high,source level city_corporation
+,,,,BD60360299,Ajmiriganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Ajmiriganj
+,,,,BD60362699,Chunarughat Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Chunarughat
+,,,,BD60364400,Shayestagang Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Habiganj Sadar
+,,,,BD60364499,Habiganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Habiganj Sadar
+,,,,BD60367199,Madhabpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Madhabpur
+,,,,BD60367799,Nabiganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Nabiganj
+,,,,BD60581499,Barlekha Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Barlekha
+,,,,BD60585699,Kamalganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kamolganj
+,,,,BD60586599,Kulaura Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kulaura
+,,,,BD60587499,Maulvibazar Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Moulvibazar Sadar
+,,,,BD60588399,Sreemangal Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Sreemangal
+,,,,BD60902399,Chhatak Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Chhatak
+,,,,BD60902999,Derai Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Derai
+,,,,BD60904799,Jagannathpur Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Jagannathpur
+,,,,BD60908999,Sunamganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Sunamganj Sadar
+,,,,BD60911799,Beani Bazar Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Beanibazar
+,,,,BD60913899,Golapganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Golapganj
+,,,,BD60915999,Kanaighat Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Kanaighat
+,,,,BD60919499,Zakiganj Paurashava,no_seed_unit,none,source level pourashava; our seed has no pourashava under Zakiganj
+42630,union,Ajmiriganj Sadar,sylhet/habiganj/ajmiriganj/ajmiriganj-sadar,BD60360213,Ajmiriganj,name_exact,high,source level union; matched on name variant 'Ajmiriganj' ~ 'Ajmiriganj'
+42631,union,Badolpur,sylhet/habiganj/ajmiriganj/badolpur,BD60360227,Badalpur,name_skeleton,medium,source level union
+42632,union,Jolsuka,sylhet/habiganj/ajmiriganj/jolsuka,BD60360254,Jalsuka,name_skeleton,medium,source level union
+42629,union,Kakailsao,sylhet/habiganj/ajmiriganj/kakailsao,BD60360267,Kakailseo,name_skeleton,medium,source level union
+42628,union,Shibpasha,sylhet/habiganj/ajmiriganj/shibpasha,BD60360281,Shibpasha,name_exact,high,source level union
+42624,union,Bahubal Sadar,sylhet/habiganj/bahubal/bahubal-sadar,BD60360511,Bahubal,name_exact,high,source level union; matched on name variant 'Bahubal' ~ 'Bahubal'
+42627,union,Bhadeshwar,sylhet/habiganj/bahubal/bhadeshwar,BD60360523,Bhadeshwar,name_exact,high,source level union
+42625,union,Lamatashi,sylhet/habiganj/bahubal/lamatashi,BD60360535,Lamatashi,name_exact,high,source level union
+42626,union,Mirpur,sylhet/habiganj/bahubal/mirpur,BD60360547,Mirpur,name_exact,high,source level union
+42622,union,Putijuri,sylhet/habiganj/bahubal/putijuri,BD60360559,Putijuri,name_exact,high,source level union
+42623,union,Satkapon,sylhet/habiganj/bahubal/satkapon,BD60360571,Satkapan,name_skeleton,medium,source level union
+42621,union,Snanghat,sylhet/habiganj/bahubal/snanghat,BD60360583,Snanghat,name_exact,high,source level union
+42639,union,Baraiuri,sylhet/habiganj/baniachong/baraiuri,BD60361131,Baraiuri,name_exact,high,source level union
+42637,union,Daulatpur,sylhet/habiganj/baniachong/daulatpur,BD60361137,Daulatpur,name_exact,high,source level union
+42640,union,Kagapasha,sylhet/habiganj/baniachong/kagapasha,BD60361144,Kagapasha,name_exact,high,source level union
+42638,union,Khagaura,sylhet/habiganj/baniachong/khagaura,BD60361150,Khagaura,name_exact,high,source level union
+42643,union,Makrampur,sylhet/habiganj/baniachong/makrampur,BD60361156,Makrampur,name_exact,high,source level union
+42645,union,Mandari,sylhet/habiganj/baniachong/mandari,BD60361163,Mandari,name_exact,high,source level union
+42646,union,Muradpur,sylhet/habiganj/baniachong/muradpur,BD60361169,Muradpur,name_exact,high,source level union
+42647,union,Pailarkandi,sylhet/habiganj/baniachong/pailarkandi,BD60361175,Pailarkandi,name_exact,high,source level union
+42641,union,Pukra,sylhet/habiganj/baniachong/pukra,BD60361182,Pukhra,name_banglish,high,source level union
+42644,union,Sujatpur,sylhet/habiganj/baniachong/sujatpur,BD60361188,Sujatpur,name_exact,high,source level union
+42642,union,Subidpur,sylhet/habiganj/baniachong/subidpur,BD60361194,Subidpur,name_exact,high,source level union
+42655,union,Ahammadabad,sylhet/habiganj/chunarughat/ahammadabad,BD60362613,Ahmadabad,name_fuzzy,medium,source level union; similarity 0.95 to 'Ahammadabad'
+42659,union,Chunarughat,sylhet/habiganj/chunarughat/chunarughat,BD60362619,Chunarughat,name_exact,high,source level union
+42656,union,Deorgach,sylhet/habiganj/chunarughat/deorgach,BD60362628,Deorgachh,name_exact,high,source level union
+42654,union,Gazipur,sylhet/habiganj/chunarughat/gazipur,BD60362638,Gazipur,name_exact,high,source level union
+42663,union,Mirashi,sylhet/habiganj/chunarughat/mirashi,BD60362647,Mirahi,name_fuzzy,low,source level union; similarity 0.83 to 'Mirashi'
+42657,union,Paikpara,sylhet/habiganj/chunarughat/paikpara,BD60362657,Paik Para,name_exact,high,source level union
+42662,union,Ranigaon,sylhet/habiganj/chunarughat/ranigaon,BD60362666,Ranigaon,name_exact,high,source level union
+42658,union,Shankhala,sylhet/habiganj/chunarughat/shankhala,BD60362676,Sankhola,name_skeleton,medium,source level union
+42661,union,Shatiajuri,sylhet/habiganj/chunarughat/shatiajuri,BD60362685,Shatiajuri,name_exact,high,source level union
+42660,union,Ubahata,sylhet/habiganj/chunarughat/ubahata,BD60362695,Ubahata,name_exact,high,source level union
+42668,union,Gopaya,sylhet/habiganj/habiganj-sadar/gopaya,BD60364422,Gopaya,name_exact,high,source level union
+42673,union,Laskerpur,sylhet/habiganj/habiganj-sadar/laskerpur,BD60364424,Laskarpur,name_skeleton,medium,source level union
+42664,union,Lukra,sylhet/habiganj/habiganj-sadar/lukra,BD60364428,Lukhra,name_banglish,high,source level union
+42672,union,Nijampur,sylhet/habiganj/habiganj-sadar/nijampur,BD60364438,Nizampur,name_banglish,high,source level union
+42667,union,Poil,sylhet/habiganj/habiganj-sadar/poil,BD60364457,Poil,name_exact,high,source level union
+42669,union,Rajiura,sylhet/habiganj/habiganj-sadar/rajiura,BD60364466,Raziura,name_banglish,high,source level union
+42665,union,Richi,sylhet/habiganj/habiganj-sadar/richi,BD60364476,Richi,name_exact,high,source level union
+42666,union,Teghoria,sylhet/habiganj/habiganj-sadar/teghoria,BD60364495,Tegharia,name_skeleton,medium,source level union
+42651,union,Bamoi,sylhet/habiganj/lakhai/bamoi,BD60366813,Bamai,name_fuzzy,low,source level union; similarity 0.80 to 'Bamoi'
+42653,union,Bulla,sylhet/habiganj/lakhai/bulla,BD60366827,Bulla,name_exact,high,source level union
+42652,union,Karab,sylhet/habiganj/lakhai/karab,BD60366840,Karab,name_exact,high,source level union
+42648,union,Lakhai,sylhet/habiganj/lakhai/lakhai,BD60366854,Lakhai,name_exact,high,source level union
+42649,union,Murakari,sylhet/habiganj/lakhai/murakari,BD60366867,Murakari,name_exact,high,source level union
+42650,union,Muriauk,sylhet/habiganj/lakhai/muriauk,BD60366881,Muriauk,name_exact,high,source level union
+42677,union,Adaoir,sylhet/habiganj/madhabpur/adaoir,BD60367116,Adair,name_skeleton,medium,source level union
+42684,union,Bagashura,sylhet/habiganj/madhabpur/bagashura,BD60367117,Bagasura,name_exact,high,source level union
+42676,union,Bahara,sylhet/habiganj/madhabpur/bahara,BD60367125,Bahara,name_exact,high,source level union
+42681,union,Bulla,sylhet/habiganj/madhabpur/bulla,BD60367134,Bulla,name_exact,high,source level union
+42683,union,Chhatiain,sylhet/habiganj/madhabpur/chhatiain,BD60367143,Chhatiain,name_exact,high,source level union
+42675,union,Choumohani,sylhet/habiganj/madhabpur/choumohani,BD60367151,Chowmohani,name_banglish,high,source level union
+42674,union,Dharmaghar,sylhet/habiganj/madhabpur/dharmaghar,BD60367160,Dharmaghar,name_exact,high,source level union
+42680,union,Jagadishpur,sylhet/habiganj/madhabpur/jagadishpur,BD60367169,Jagadishpur,name_exact,high,source level union
+42678,union,Andiura,sylhet/habiganj/madhabpur/andiura,BD60367177,Andiurauk,name_fuzzy,low,source level union; similarity 0.88 to 'Andiura'
+42682,union,Noapara,sylhet/habiganj/madhabpur/noapara,BD60367186,Noapara,name_exact,high,source level union
+42679,union,Shahjahanpur,sylhet/habiganj/madhabpur/shahjahanpur,BD60367194,Shahjahanpur,name_exact,high,source level union
+42612,union,Aushkandi,sylhet/habiganj/nabiganj/aushkandi,BD60367713,Auskandi,name_exact,high,source level union
+42616,union,Bausha,sylhet/habiganj/nabiganj/bausha,BD60367714,Bausha,name_exact,high,source level union
+42617,union,Debparra,sylhet/habiganj/nabiganj/debparra,BD60367721,Debpara,name_exact,high,source level union
+42611,union,Digholbak,sylhet/habiganj/nabiganj/digholbak,BD60367729,Dighalbak,name_skeleton,medium,source level union
+42618,union,Gaznaipur,sylhet/habiganj/nabiganj/gaznaipur,BD60367743,Gaznapur,name_skeleton,medium,source level union
+42610,union,Inatganj,sylhet/habiganj/nabiganj/inatganj,BD60367751,Inathganj,name_banglish,high,source level union
+42619,union,Kaliarbhanga,sylhet/habiganj/nabiganj/kaliarbhanga,BD60367758,Kalair Banga,name_skeleton,medium,source level union
+42614,union,Kargoan,sylhet/habiganj/nabiganj/kargoan,BD60367765,Kargaon,name_skeleton,medium,source level union
+42613,union,Kurshi,sylhet/habiganj/nabiganj/kurshi,BD60367773,Kurshi,name_exact,high,source level union
+42615,union,Nabiganj Sadar,sylhet/habiganj/nabiganj/nabiganj-sadar,BD60367780,Nabiganj,name_exact,high,source level union; matched on name variant 'Nabiganj' ~ 'Nabiganj'
+42620,union,Paniumda,sylhet/habiganj/nabiganj/paniumda,BD60367787,Paniunda,name_fuzzy,low,source level union; similarity 0.88 to 'Paniumda'
+42609,union,Barabhakoir Purba,sylhet/habiganj/nabiganj/barabhakoir-purba,BD60367790,Purba Bara Bakhair,name_skeleton,medium,source level union; direction word read as East: 'Purba Bara Bakhair' ~ 'Barabhakoir Purba'
+42608,union,Barabhakoir Paschim,sylhet/habiganj/nabiganj/barabhakoir-paschim,BD60367794,Paschim Bara Bhakhair,name_skeleton,medium,source level union; direction word read as West: 'Paschim Bara Bhakhair' ~ 'Barabhakoir Paschim'
+42547,union,Baralekha,sylhet/moulvibazar/barlekha/baralekha,BD60581413,Barlekha,name_skeleton,medium,source level union
+42541,union,Borni,sylhet/moulvibazar/barlekha/borni,BD60581415,Barni,name_skeleton,medium,source level union
+42545,union,Dakkhin Shahbajpur,sylhet/moulvibazar/barlekha/dakkhin-shahbajpur,BD60581429,Dakshin Shahabajpur,name_fuzzy,medium,source level union; similarity 0.95 to 'Shahbajpur'; direction word read as South: 'Dakshin Shahabajpur' ~ 'Dakkhin Shahbajpur'
+42549,union,Dakshinbhag Dakkhin,sylhet/moulvibazar/barlekha/dakshinbhag-dakkhin,BD60581431,Dakshin Dakshinbhagh,name_banglish,high,source level union; direction word read as South: 'Dakshin Dakshinbhagh' ~ 'Dakshinbhag Dakkhin'
+42542,union,Dasherbazar,sylhet/moulvibazar/barlekha/dasherbazar,BD60581439,Dasher Bazar,name_exact,high,source level union
+42543,union,Nizbahadurpur,sylhet/moulvibazar/barlekha/nizbahadurpur,BD60581463,Nij Bahadurpur,name_banglish,high,source level union
+42550,union,Sujanagar,sylhet/moulvibazar/barlekha/sujanagar,BD60581477,Sujanagar,name_exact,high,source level union
+42548,union,Dakshinbhag Uttar,sylhet/moulvibazar/barlekha/dakshinbhag-uttar,BD60581480,Uttar Dakshinbhag,name_exact,high,source level union; direction word read as North: 'Uttar Dakshinbhag' ~ 'Dakshinbhag Uttar'
+42544,union,Uttar Shahbajpur,sylhet/moulvibazar/barlekha/uttar-shahbajpur,BD60581485,Uttar Shahabajpur,name_fuzzy,medium,source level union; similarity 0.95 to 'Shahbajpur'; direction word read as North: 'Uttar Shahabajpur' ~ 'Uttar Shahbajpur'
+42540,union,Talimpur,sylhet/moulvibazar/barlekha/talimpur,BD60581494,Talimpur,name_exact,high,source level union
+42606,union,Fultola,sylhet/moulvibazar/juri/fultola,BD60583523,Fultala,name_skeleton,medium,source level union
+42604,union,Gualbari,sylhet/moulvibazar/juri/gualbari,BD60583529,Goalbari,name_skeleton,medium,source level union
+42602,union,Jafornagar,sylhet/moulvibazar/juri/jafornagar,BD60583547,Jaifarnagar,name_skeleton,medium,source level union
+42603,union,West Juri,sylhet/moulvibazar/juri/west-juri,BD60583555,Paschim Juri,name_exact,high,source level union; direction word read as West: 'Paschim Juri' ~ 'West Juri'
+42607,union,Eastjuri,sylhet/moulvibazar/juri/eastjuri,BD60583567,Purba Juri,name_exact,high,source level union; direction word read as East: 'Purba Juri' ~ 'Eastjuri'
+42605,union,Sagornal,sylhet/moulvibazar/juri/sagornal,BD60583583,Sagarnal,name_skeleton,medium,source level union
+42551,union,Adampur,sylhet/moulvibazar/kamolganj/adampur,BD60585617,Adampur,name_exact,high,source level union
+42559,union,Alinagar,sylhet/moulvibazar/kamolganj/alinagar,BD60585619,Alinagar,name_exact,high,source level union
+42557,union,Islampur,sylhet/moulvibazar/kamolganj/islampur,BD60585628,Islampur,name_exact,high,source level union
+42556,union,Kamalgonj,sylhet/moulvibazar/kamolganj/kamalgonj,BD60585638,Kamalganj,name_skeleton,medium,source level union
+42553,union,Madhabpur,sylhet/moulvibazar/kamolganj/madhabpur,BD60585647,Madhabpur,name_exact,high,source level union
+42558,union,Munshibazar,sylhet/moulvibazar/kamolganj/munshibazar,BD60585657,Munshi Bazar,name_exact,high,source level union
+42552,union,Patanushar,sylhet/moulvibazar/kamolganj/patanushar,BD60585666,Patanushar,name_exact,high,source level union
+42554,union,Rahimpur,sylhet/moulvibazar/kamolganj/rahimpur,BD60585676,Rahimpur,name_exact,high,source level union
+42555,union,Shamshernagar,sylhet/moulvibazar/kamolganj/shamshernagar,BD60585685,Shamshernagar,name_exact,high,source level union
+42561,union,Bhukshimail,sylhet/moulvibazar/kulaura/bhukshimail,BD60586510,Bhukshimail,name_exact,high,source level union
+42560,union,Baramchal,sylhet/moulvibazar/kulaura/baramchal,BD60586511,Baramchal,name_exact,high,source level union
+42571,union,Bhatera,sylhet/moulvibazar/kulaura/bhatera,BD60586513,Bhatera,name_exact,high,source level union
+42563,union,Brammanbazar,sylhet/moulvibazar/kulaura/brammanbazar,BD60586517,Brahman Bazar,name_skeleton,medium,source level union
+42572,union,Hazipur,sylhet/moulvibazar/kulaura/hazipur,BD60586535,Hajipur,name_banglish,high,source level union
+42562,union,Joychandi,sylhet/moulvibazar/kulaura/joychandi,BD60586541,Joychandi,name_exact,high,source level union
+42564,union,Kadipur,sylhet/moulvibazar/kulaura/kadipur,BD60586553,Kadirpur,name_fuzzy,medium,source level union; similarity 0.93 to 'Kadipur'
+42570,union,Kormodha,sylhet/moulvibazar/kulaura/kormodha,BD60586559,Karmadha,name_skeleton,medium,source level union
+42565,union,Kulaura,sylhet/moulvibazar/kulaura/kulaura,BD60586565,Kulaura,name_exact,high,source level union
+42569,union,Prithimpassa,sylhet/moulvibazar/kulaura/prithimpassa,BD60586571,Prithim Pasha,name_exact,high,source level union
+42566,union,Rauthgaon,sylhet/moulvibazar/kulaura/rauthgaon,BD60586577,Routhgaon,name_skeleton,medium,source level union
+42568,union,Sharifpur,sylhet/moulvibazar/kulaura/sharifpur,BD60586589,Sharifpur,name_exact,high,source level union
+42567,union,Tilagaon,sylhet/moulvibazar/kulaura/tilagaon,BD60586595,Tilagaon,name_exact,high,source level union
+42578,union,Akhailkura,sylhet/moulvibazar/moulvibazar-sadar/akhailkura,BD60587413,Akhailkura,name_exact,high,source level union
+42573,union,Amtail,sylhet/moulvibazar/moulvibazar-sadar/amtail,BD60587414,Amtail,name_exact,high,source level union
+42580,union,Chadnighat,sylhet/moulvibazar/moulvibazar-sadar/chadnighat,BD60587421,Chandighat,name_fuzzy,low,source level union; similarity 0.88 to 'Chadnighat'
+42579,union,Ekatuna,sylhet/moulvibazar/moulvibazar-sadar/ekatuna,BD60587429,Ekatuna,name_exact,high,source level union
+42584,union,Giasnagar,sylhet/moulvibazar/moulvibazar-sadar/giasnagar,BD60587436,Giasnagar,name_exact,high,source level union
+42576,union,Kamalpur,sylhet/moulvibazar/moulvibazar-sadar/kamalpur,BD60587443,Kamalpur,name_exact,high,source level union
+42581,union,Konokpur,sylhet/moulvibazar/moulvibazar-sadar/konokpur,BD60587451,Kanakpur,name_skeleton,medium,source level union
+42574,union,Khalilpur,sylhet/moulvibazar/moulvibazar-sadar/khalilpur,BD60587458,Khalilpur,name_exact,high,source level union
+42575,union,Monumukh,sylhet/moulvibazar/moulvibazar-sadar/monumukh,BD60587465,Manumukh,name_skeleton,medium,source level union
+42583,union,Mostafapur,sylhet/moulvibazar/moulvibazar-sadar/mostafapur,BD60587480,Mostafapur,name_exact,high,source level union
+42582,union,Nazirabad,sylhet/moulvibazar/moulvibazar-sadar/nazirabad,BD60587487,Nazirabad,name_exact,high,source level union
+42577,union,Apar Kagabala,sylhet/moulvibazar/moulvibazar-sadar/apar-kagabala,BD60587494,Upper Kagabala,name_skeleton,medium,source level union
+42585,union,Fotepur,sylhet/moulvibazar/rajnagar/fotepur,BD60588010,Fatehpur,name_skeleton,medium,source level union
+42591,union,Kamarchak,sylhet/moulvibazar/rajnagar/kamarchak,BD60588021,Kamar Chak,name_exact,high,source level union
+42592,union,Munsurnagar,sylhet/moulvibazar/rajnagar/munsurnagar,BD60588031,Mansurnagar,name_skeleton,medium,source level union
+42587,union,Munsibazar,sylhet/moulvibazar/rajnagar/munsibazar,BD60588042,Munshi Bazar,name_exact,high,source level union
+42588,union,Panchgaon,sylhet/moulvibazar/rajnagar/panchgaon,BD60588052,Panchgaon,name_exact,high,source level union
+42589,union,Rajnagar,sylhet/moulvibazar/rajnagar/rajnagar,BD60588063,Rajnagar,name_exact,high,source level union
+42590,union,Tengra,sylhet/moulvibazar/rajnagar/tengra,BD60588073,Tengra,name_exact,high,source level union
+42598,union,Ashidron,sylhet/moulvibazar/sreemangal/ashidron,BD60588315,Ashidron,name_exact,high,source level union
+42594,union,Bhunabir,sylhet/moulvibazar/sreemangal/bhunabir,BD60588319,Bhunabir,name_exact,high,source level union
+42597,union,Kalapur,sylhet/moulvibazar/sreemangal/kalapur,BD60588328,Kalapur,name_exact,high,source level union
+42600,union,Kalighat,sylhet/moulvibazar/sreemangal/kalighat,BD60588338,Kalighat,name_exact,high,source level union
+42593,union,Mirzapur,sylhet/moulvibazar/sreemangal/mirzapur,BD60588347,Mirzapur,name_exact,high,source level union
+42599,union,Rajghat,sylhet/moulvibazar/sreemangal/rajghat,BD60588357,Rajghat,name_exact,high,source level union
+42601,union,Satgaon,sylhet/moulvibazar/sreemangal/satgaon,BD60588366,Satgoan,name_skeleton,medium,source level union
+42596,union,Sindurkhan,sylhet/moulvibazar/sreemangal/sindurkhan,BD60588376,Sindurkhan,name_exact,high,source level union
+42595,union,Sreemangal,sylhet/moulvibazar/sreemangal/sreemangal,BD60588385,Sreemangal,name_exact,high,source level union
+42705,union,Badaghat South,sylhet/sunamganj/bishwambarpur/badaghat-south,BD60901817,Dakshin Badaghat,name_exact,high,source level union; direction word read as South: 'Dakshin Badaghat' ~ 'Badaghat South'
+42704,union,Dhanpur,sylhet/sunamganj/bishwambarpur/dhanpur,BD60901820,Dhonpur,name_skeleton,medium,source level union
+42706,union,Fatepur,sylhet/sunamganj/bishwambarpur/fatepur,BD60901834,Fatehpur,name_skeleton,medium,source level union
+42702,union,Palash,sylhet/sunamganj/bishwambarpur/palash,BD60901877,Palash,name_exact,high,source level union
+42703,union,Solukabad,sylhet/sunamganj/bishwambarpur/solukabad,BD60901880,Sholukabad,name_exact,high,source level union
+42719,union,Bhatgaon,sylhet/sunamganj/chhatak/bhatgaon,BD60902311,Bhatgaon,name_exact,high,source level union
+42709,union,Chhatak Sadar,sylhet/sunamganj/chhatak/chhatak-sadar,BD60902313,Chhatak,name_exact,high,source level union; matched on name variant 'Chhatak' ~ 'Chhatak'
+42715,union,Chormohalla,sylhet/sunamganj/chhatak/chormohalla,BD60902314,Charmohalla Union,name_skeleton,medium,source level union
+42718,union,Dolarbazar,sylhet/sunamganj/chhatak/dolarbazar,BD60902338,Dular Bazar,name_skeleton,medium,source level union
+42714,union,Khurma South,sylhet/sunamganj/chhatak/khurma-south,BD60902342,Dakshin Khurma,name_exact,high,source level union; direction word read as South: 'Dakshin Khurma' ~ 'Khurma South'
+42707,union,Islampur,sylhet/sunamganj/chhatak/islampur,BD60902347,Dakshin Islampur,name_exact,low,source level union; direction word read as South on one side only: 'Dakshin Islampur' ~ 'Islampur'
+42716,union,Jauwabazar,sylhet/sunamganj/chhatak/jauwabazar,BD60902352,Jawar Bazar,name_fuzzy,medium,source level union; similarity 0.90 to 'Jauwabazar'
+42710,union,Kalaruka,sylhet/sunamganj/chhatak/kalaruka,BD60902357,Kalaruka,name_exact,high,source level union
+42708,union,Noarai,sylhet/sunamganj/chhatak/noarai,BD60902376,Noarai,name_exact,high,source level union
+42712,union,Chhaila Afjalabad,sylhet/sunamganj/chhatak/chhaila-afjalabad,BD60902390,Saila Afzalabad,name_fuzzy,medium,source level union; similarity 0.92 to 'Chhaila Afjalabad'
+42717,union,Singchapair,sylhet/sunamganj/chhatak/singchapair,BD60902392,Sing Chapair,name_exact,high,source level union
+42713,union,Khurma North,sylhet/sunamganj/chhatak/khurma-north,BD60902394,Uttar Khurma,name_exact,high,source level union; direction word read as North: 'Uttar Khurma' ~ 'Khurma North'
+42700,union,Dargapasha,sylhet/sunamganj/south-sunamganj/dargapasha,BD60902711,Durgapasha,name_skeleton,medium,source level union
+42696,union,Joykalash,sylhet/sunamganj/south-sunamganj/joykalash,BD60902733,Joykalas,name_exact,high,source level union
+42698,union,Patharia,sylhet/sunamganj/south-sunamganj/patharia,BD60902761,Patharia,name_exact,high,source level union
+42694,union,Shimulbak,sylhet/sunamganj/south-sunamganj/shimulbak,BD60902778,Shimulbak,name_exact,high,source level union
+42701,union,Paschim Birgaon,sylhet/sunamganj/south-sunamganj/paschim-birgaon,BD60902789,Paschim Birgaon,name_exact,high,source level union; direction word read as West: 'Paschim Birgaon' ~ 'Paschim Birgaon'
+42695,union,Paschim Pagla,sylhet/sunamganj/south-sunamganj/paschim-pagla,BD60902790,Paschim Pagla,name_exact,high,source level union; direction word read as West: 'Paschim Pagla' ~ 'Paschim Pagla'
+42699,union,Purba Birgaon,sylhet/sunamganj/south-sunamganj/purba-birgaon,BD60902792,Purba Birgoan,name_skeleton,medium,source level union; direction word read as East: 'Purba Birgoan' ~ 'Purba Birgaon'
+42697,union,Purba Pagla,sylhet/sunamganj/south-sunamganj/purba-pagla,BD60902794,Purba Pagla,name_exact,high,source level union; direction word read as East: 'Purba Pagla' ~ 'Purba Pagla'
+42764,union,Bhatipara,sylhet/sunamganj/derai/bhatipara,BD60902917,Bhati Para,name_exact,high,source level union
+42766,union,Charnarchar,sylhet/sunamganj/derai/charnarchar,BD60902919,Charnar Char,name_exact,high,source level union
+42767,union,Derai Sarmangal,sylhet/sunamganj/derai/derai-sarmangal,BD60902928,Derai Sarmangal,name_exact,high,source level union
+42769,union,Jagddol,sylhet/sunamganj/derai/jagddol,BD60902938,Jagaddal,name_skeleton,medium,source level union
+42768,union,Karimpur,sylhet/sunamganj/derai/karimpur,BD60902947,Karimpur,name_exact,high,source level union
+42771,union,Kulanj,sylhet/sunamganj/derai/kulanj,BD60902957,Kulanj,name_exact,high,source level union
+42763,union,Rafinagar,sylhet/sunamganj/derai/rafinagar,BD60902966,Rafinagar,name_exact,high,source level union
+42765,union,Rajanagar,sylhet/sunamganj/derai/rajanagar,BD60902976,Rajanagar,name_exact,high,source level union
+42770,union,Taral,sylhet/sunamganj/derai/taral,BD60902985,Taral,name_exact,high,source level union
+42753,union,Sukhair Rajapur South,sylhet/sunamganj/dharmapasha/sukhair-rajapur-south,BD60903221,Dakshin Sukhairrajapur,name_exact,high,source level union; direction word read as South: 'Dakshin Sukhairrajapur' ~ 'Sukhair Rajapur South'
+42746,union,Chamordani,sylhet/sunamganj/dharmapasha/chamordani,BD60903223,Chamardani,name_skeleton,medium,source level union
+42745,union,Bongshikunda South,sylhet/sunamganj/dharmapasha/bongshikunda-south,BD60903235,Dakshin Bongshikunda,name_exact,high,source level union; direction word read as South: 'Dakshin Bongshikunda' ~ 'Bongshikunda South'
+42750,union,Dharmapasha Sadar,sylhet/sunamganj/dharmapasha/dharmapasha-sadar,BD60903238,Dharmapasha,name_exact,high,source level union; matched on name variant 'Dharmapasha' ~ 'Dharmapasha'
+42751,union,Joyasree,sylhet/sunamganj/dharmapasha/joyasree,BD60903247,Joysree,name_skeleton,medium,source level union
+42747,union,Madhyanagar,sylhet/sunamganj/dharmapasha/madhyanagar,BD60903257,Madhyanagar,name_exact,high,source level union
+42748,union,Paikurati,sylhet/sunamganj/dharmapasha/paikurati,BD60903266,Paikurati,name_exact,high,source level union
+42749,union,Selbarash,sylhet/sunamganj/dharmapasha/selbarash,BD60903276,Selborash,name_skeleton,medium,source level union
+42752,union,Sukhair Rajapur North,sylhet/sunamganj/dharmapasha/sukhair-rajapur-north,BD60903285,Uttar Sukhair Rajapur,name_exact,high,source level union; direction word read as North: 'Uttar Sukhair Rajapur' ~ 'Sukhair Rajapur North'
+42744,union,Bongshikunda North,sylhet/sunamganj/dharmapasha/bongshikunda-north,BD60903290,Uttar Bangshikunda,name_skeleton,medium,source level union; direction word read as North: 'Uttar Bangshikunda' ~ 'Bongshikunda North'
+42735,union,Boglabazar,sylhet/sunamganj/dowarabazar/boglabazar,BD60903321,Bougla Bazar,name_skeleton,medium,source level union
+42730,union,Dowarabazar,sylhet/sunamganj/dowarabazar/dowarabazar,BD60903327,Dakshin Dowarabazar,name_exact,low,source level union; direction word read as South on one side only: 'Dakshin Dowarabazar' ~ 'Dowarabazar'
+42733,union,Dohalia,sylhet/sunamganj/dowarabazar/dohalia,BD60903332,Duhalia,name_skeleton,medium,source level union
+42734,union,Laxmipur,sylhet/sunamganj/dowarabazar/laxmipur,BD60903361,Lakshmipur,name_banglish,high,source level union
+42731,union,Mannargaon,sylhet/sunamganj/dowarabazar/mannargaon,BD60903367,Mannargaon,name_exact,high,source level union
+42732,union,Pandargaon,sylhet/sunamganj/dowarabazar/pandargaon,BD60903378,Pandergaon,name_skeleton,medium,source level union
+42736,union,Surma,sylhet/sunamganj/dowarabazar/surma,BD60903381,Surma,name_exact,high,source level union
+42728,union,Banglabazar,sylhet/sunamganj/dowarabazar/banglabazar,BD60903386,Bangla Bazar,name_exact,high,source level union
+42729,union,Norsingpur,sylhet/sunamganj/dowarabazar/norsingpur,BD60903392,Narsing Pur,name_skeleton,medium,source level union
+42726,union,Asharkandi,sylhet/sunamganj/jagannathpur/asharkandi,BD60904717,Asharkandi,name_exact,high,source level union
+42720,union,Kolkolia,sylhet/sunamganj/jagannathpur/kolkolia,BD60904738,Kalkalia,name_skeleton,medium,source level union
+42722,union,Mirpur,sylhet/sunamganj/jagannathpur/mirpur,BD60904747,Mirpur,name_exact,high,source level union
+42727,union,Pailgaon,sylhet/sunamganj/jagannathpur/pailgaon,BD60904757,Pailgaon,name_exact,high,source level union
+42721,union,Patli,sylhet/sunamganj/jagannathpur/patli,BD60904766,Patali,name_skeleton,medium,source level union
+42724,union,Raniganj,sylhet/sunamganj/jagannathpur/raniganj,BD60904776,Raniganj,name_exact,high,source level union
+42754,union,Beheli,sylhet/sunamganj/jamalganj/beheli,BD60905013,Beheli,name_exact,high,source level union
+42756,union,Bhimkhali,sylhet/sunamganj/jamalganj/bhimkhali,BD60905027,Vimkhali,name_banglish,high,source level union
+42757,union,Fenerbak,sylhet/sunamganj/jamalganj/fenerbak,BD60905054,Fenarbak,name_skeleton,medium,source level union
+42758,union,Jamalganj Sadar,sylhet/sunamganj/jamalganj/jamalganj-sadar,BD60905067,Jamalganj,name_exact,high,source level union; matched on name variant 'Jamalganj' ~ 'Jamalganj'
+42755,union,Sachnabazar,sylhet/sunamganj/jamalganj/sachnabazar,BD60905081,Sachna Bazar,name_exact,high,source level union
+42759,union,Atgaon,sylhet/sunamganj/shalla/atgaon,BD60908623,Atgaon,name_exact,high,source level union
+42761,union,Bahara,sylhet/sunamganj/shalla/bahara,BD60908647,Bahara,name_exact,high,source level union
+42760,union,Habibpur,sylhet/sunamganj/shalla/habibpur,BD60908671,Habibpur,name_exact,high,source level union
+42687,union,Aptabnagar,sylhet/sunamganj/sunamganj-sadar/aptabnagar,BD60908910,Aftabnagar,name_fuzzy,medium,source level union; similarity 0.90 to 'Aptabnagar'
+42688,union,Gourarang,sylhet/sunamganj/sunamganj-sadar/gourarang,BD60908927,Gourararang,name_skeleton,medium,source level union
+42685,union,Jahangirnagar,sylhet/sunamganj/sunamganj-sadar/jahangirnagar,BD60908933,Jahangirnagar,name_exact,high,source level union
+42691,union,Kathair,sylhet/sunamganj/sunamganj-sadar/kathair,BD60908936,Katair,name_banglish,high,source level union
+42690,union,Laxmansree,sylhet/sunamganj/sunamganj-sadar/laxmansree,BD60908939,Lakshmansree,name_banglish,high,source level union
+42693,union,Mohonpur,sylhet/sunamganj/sunamganj-sadar/mohonpur,BD60908950,Mohanpur,name_skeleton,medium,source level union
+42689,union,Mollapara,sylhet/sunamganj/sunamganj-sadar/mollapara,BD60908955,Mollah Para,name_skeleton,medium,source level union
+42686,union,Rangarchar,sylhet/sunamganj/sunamganj-sadar/rangarchar,BD60908972,Rangar Char,name_exact,high,source level union
+42692,union,Surma,sylhet/sunamganj/sunamganj-sadar/surma,BD60908977,Surma,name_exact,high,source level union
+42743,union,Balijuri,sylhet/sunamganj/tahirpur/balijuri,BD60909210,Balijuri,name_exact,high,source level union
+42738,union,Sreepur South,sylhet/sunamganj/tahirpur/sreepur-south,BD60909233,Dakshin Sreepur,name_exact,high,source level union; direction word read as South: 'Dakshin Sreepur' ~ 'Sreepur South'
+42742,union,Tahirpur Sadar,sylhet/sunamganj/tahirpur/tahirpur-sadar,BD60909264,Tahirpur,name_exact,high,source level union; matched on name variant 'Tahirpur' ~ 'Tahirpur'
+42741,union,Badaghat,sylhet/sunamganj/tahirpur/badaghat,BD60909271,Uttar Badaghat,name_exact,low,source level union; direction word read as North on one side only: 'Uttar Badaghat' ~ 'Badaghat'
+42737,union,Sreepur North,sylhet/sunamganj/tahirpur/sreepur-north,BD60909292,Uttar Sreepur,name_exact,high,source level union; direction word read as North: 'Uttar Sreepur' ~ 'Sreepur North'
+42448,union,Balaganj,sylhet/sylhet/balaganj/balaganj,BD60910811,Balaganj,name_exact,high,source level union
+42445,union,Dewanbazar,sylhet/sylhet/balaganj/dewanbazar,BD60910833,Dewan Bazar,name_exact,high,source level union
+42446,union,West Gouripur,sylhet/sylhet/balaganj/west-gouripur,BD60910860,Paschim Gauripur,name_skeleton,medium,source level union; direction word read as West: 'Paschim Gauripur' ~ 'West Gouripur'
+42439,union,East Poilanpur,sylhet/sylhet/balaganj/east-poilanpur,BD60910867,Purba Pailanpur,name_skeleton,medium,source level union; direction word read as East: 'Purba Pailanpur' ~ 'East Poilanpur'
+42447,union,East Gouripur,sylhet/sylhet/balaganj/east-gouripur,BD60910870,Purba Gauripur,name_skeleton,medium,source level union; direction word read as East: 'Purba Gauripur' ~ 'East Gouripur'
+42451,union,Alinagar,sylhet/sylhet/beanibazar/alinagar,BD60911711,Alinagar,name_exact,high,source level union
+42457,union,Mullapur,sylhet/sylhet/beanibazar/mullapur,BD60911714,Mollahpur,name_skeleton,medium,source level union
+42452,union,Charkhai,sylhet/sylhet/beanibazar/charkhai,BD60911725,Charkhai,name_exact,high,source level union
+42453,union,Dubag,sylhet/sylhet/beanibazar/dubag,BD60911734,Dobhag,name_skeleton,medium,source level union
+42455,union,Kurarbazar,sylhet/sylhet/beanibazar/kurarbazar,BD60911743,Kurar Bazar,name_exact,high,source level union
+42459,union,Lauta,sylhet/sylhet/beanibazar/lauta,BD60911751,Lauta,name_exact,high,source level union
+42456,union,Mathiura,sylhet/sylhet/beanibazar/mathiura,BD60911760,Mathiura,name_exact,high,source level union
+42458,union,Muria,sylhet/sylhet/beanibazar/muria,BD60911777,Muria,name_exact,high,source level union
+42454,union,Sheola,sylhet/sylhet/beanibazar/sheola,BD60911786,Sheola,name_exact,high,source level union
+42450,union,Tilpara,sylhet/sylhet/beanibazar/tilpara,BD60911794,Tilpara,name_exact,high,source level union
+42463,union,Alankari,sylhet/sylhet/bishwanath/alankari,BD60912010,Alankari,name_exact,high,source level union
+42465,union,Bishwanath,sylhet/sylhet/bishwanath/bishwanath,BD60912021,Bishwanath,name_exact,high,source level union
+42467,union,Daulatpur,sylhet/sylhet/bishwanath/daulatpur,BD60912031,Daulatpur,name_exact,high,source level union
+42464,union,Dewkalash,sylhet/sylhet/bishwanath/dewkalash,BD60912042,Deokalas,name_exact,high,source level union
+42466,union,Doshghar,sylhet/sylhet/bishwanath/doshghar,BD60912052,Dasghar,name_skeleton,medium,source level union
+42461,union,Lamakazi,sylhet/sylhet/bishwanath/lamakazi,BD60912073,Lama Kazi,name_exact,high,source level union
+42460,union,Rampasha,sylhet/sylhet/bishwanath/rampasha,BD60912084,Rampasha,name_exact,high,source level union
+42469,union,Islampur Paschim,sylhet/sylhet/companiganj/islampur-paschim,BD60912711,Islampur Paschim,name_exact,high,source level union; direction word read as West: 'Islampur Paschim' ~ 'Islampur Paschim'
+42470,union,Islampur Purba,sylhet/sylhet/companiganj/islampur-purba,BD60912713,Islampur Purba,name_exact,high,source level union; direction word read as East: 'Islampur Purba' ~ 'Islampur Purba'
+42471,union,Isakalas,sylhet/sylhet/companiganj/isakalas,BD60912717,Ishakalas,name_exact,high,source level union
+42473,union,Dakkin Ronikhai,sylhet/sylhet/companiganj/dakkin-ronikhai,BD60912747,Ranikhai Dakshin,name_skeleton,medium,source level union; direction word read as South: 'Ranikhai Dakshin' ~ 'Dakkin Ronikhai'
+42468,union,Telikhal,sylhet/sylhet/companiganj/telikhal,BD60912771,Telikhal,name_exact,high,source level union
+42534,union,Daudpur,sylhet/sylhet/dakshinsurma/daudpur,BD60913130,Daudpur,name_exact,high,source level union
+42532,union,Boroikandi,sylhet/sylhet/dakshinsurma/boroikandi,BD60913136,Baraikandi,name_skeleton,medium,source level union
+42538,union,Jalalpur,sylhet/sylhet/dakshinsurma/jalalpur,BD60913137,Jalalpur,name_exact,high,source level union
+42536,union,Kuchai,sylhet/sylhet/dakshinsurma/kuchai,BD60913145,Kuchai,name_exact,high,source level union
+42530,union,Lalabazar,sylhet/sylhet/dakshinsurma/lalabazar,BD60913150,Lala Bazar,name_exact,high,source level union
+42531,union,Moglabazar,sylhet/sylhet/dakshinsurma/moglabazar,BD60913160,Mogla Bazar,name_exact,high,source level union
+42535,union,Mollargaon,sylhet/sylhet/dakshinsurma/mollargaon,BD60913165,Mollargaon,name_exact,high,source level union
+42533,union,Silam,sylhet/sylhet/dakshinsurma/silam,BD60913175,Silam,name_exact,high,source level union
+42539,union,Tetli,sylhet/sylhet/dakshinsurma/tetli,BD60913185,Tetli,name_exact,high,source level union
+42475,union,Fenchuganj,sylhet/sylhet/fenchuganj/fenchuganj,BD60913523,Fenchuganj,name_exact,high,source level union
+42474,union,Ghilachora,sylhet/sylhet/fenchuganj/ghilachora,BD60913547,Gilachhara,name_skeleton,medium,source level union
+42478,union,Maijgaon,sylhet/sylhet/fenchuganj/maijgaon,BD60913571,Maijgaon,name_exact,high,source level union
+42488,union,West Amura,sylhet/sylhet/golapganj/west-amura,BD60913813,Amura,name_exact,low,source level union; direction word read as West on one side only: 'Amura' ~ 'West Amura'
+42487,union,Bhadeshwar,sylhet/sylhet/golapganj/bhadeshwar,BD60913817,Bhadeshwar,name_exact,high,source level union
+42482,union,Budhbaribazar,sylhet/sylhet/golapganj/budhbaribazar,BD60913820,Budbari Bazar,name_banglish,high,source level union
+42484,union,Sharifganj,sylhet/sylhet/golapganj/sharifganj,BD60913836,Shorifgonj,name_skeleton,medium,source level union
+42480,union,Fulbari,sylhet/sylhet/golapganj/fulbari,BD60913843,Fulbari,name_exact,high,source level union
+42479,union,Golapganj,sylhet/sylhet/golapganj/golapganj,BD60913851,Golabganj,name_fuzzy,medium,source level union; similarity 0.89 to 'Golapganj'
+42481,union,Lakshmipasha,sylhet/sylhet/golapganj/lakshmipasha,BD60913860,Lakshmi Pasha,name_exact,high,source level union
+42486,union,Lakshanaband,sylhet/sylhet/golapganj/lakshanaband,BD60913869,Lakshanaband,name_exact,high,source level union
+42485,union,Uttar Badepasha,sylhet/sylhet/golapganj/uttar-badepasha,BD60913877,Uttar Bade Pasha,name_exact,high,source level union; direction word read as North: 'Uttar Bade Pasha' ~ 'Uttar Badepasha'
+42494,union,Alirgaon,sylhet/sylhet/gowainghat/alirgaon,BD60914110,Alirgaon,name_exact,high,source level union
+42489,union,Fothepur,sylhet/sylhet/gowainghat/fothepur,BD60914121,Fatehpur,name_skeleton,medium,source level union
+42492,union,Purba Jaflong,sylhet/sylhet/gowainghat/purba-jaflong,BD60914131,Purba Jaflong,name_exact,high,source level union; direction word read as East: 'Purba Jaflong' ~ 'Purba Jaflong'
+42491,union,Paschim Jaflong,sylhet/sylhet/gowainghat/paschim-jaflong,BD60914142,Paschim Jaflong,name_exact,high,source level union; direction word read as West: 'Paschim Jaflong' ~ 'Paschim Jaflong'
+42493,union,Lengura,sylhet/sylhet/gowainghat/lengura,BD60914152,Lengura,name_exact,high,source level union
+42495,union,Nandirgaon,sylhet/sylhet/gowainghat/nandirgaon,BD60914163,Nandirgaon,name_exact,high,source level union
+42490,union,Rustampur,sylhet/sylhet/gowainghat/rustampur,BD60914173,Rustampur,name_exact,high,source level union
+42496,union,Towakul,sylhet/sylhet/gowainghat/towakul,BD60914184,Towakul,name_exact,high,source level union
+42500,union,Charikatha,sylhet/sylhet/jaintiapur/charikatha,BD60915327,Charikata,name_banglish,high,source level union
+42503,union,Chiknagul,sylhet/sylhet/jaintiapur/chiknagul,BD60915329,Chiknagul,name_exact,high,source level union
+42501,union,Darbast,sylhet/sylhet/jaintiapur/darbast,BD60915331,Darbasta,name_skeleton,medium,source level union
+42502,union,Fatehpur,sylhet/sylhet/jaintiapur/fatehpur,BD60915345,Fatehpur,name_exact,high,source level union
+42499,union,Jaintapur,sylhet/sylhet/jaintiapur/jaintapur,BD60915352,Jaintapur,name_exact,high,source level union
+42498,union,Nijpat,sylhet/sylhet/jaintiapur/nijpat,BD60915363,Nijpat,name_exact,high,source level union
+42509,union,Barachotul,sylhet/sylhet/kanaighat/barachotul,BD60915913,Bara Chatul,name_skeleton,medium,source level union
+42511,union,Dakhin Banigram,sylhet/sylhet/kanaighat/dakhin-banigram,BD60915919,Dakshin Banigram,name_exact,high,source level union; direction word read as South: 'Dakshin Banigram' ~ 'Dakhin Banigram'
+42512,union,Jinghabari,sylhet/sylhet/kanaighat/jinghabari,BD60915938,Jhingrabari,name_fuzzy,medium,source level union; similarity 0.95 to 'Jinghabari'
+42510,union,Kanaighat,sylhet/sylhet/kanaighat/kanaighat,BD60915947,Kanaighat,name_exact,high,source level union
+42504,union,Rajagonj,sylhet/sylhet/kanaighat/rajagonj,BD60915985,Rajaganj,name_skeleton,medium,source level union
+42514,union,Hatkhula,sylhet/sylhet/sylhet-sadar/hatkhula,BD60916232,Hatkhola,name_skeleton,medium,source level union
+42513,union,Jalalabad,sylhet/sylhet/sylhet-sadar/jalalabad,BD60916234,Jalalabad,name_exact,high,source level union
+42520,union,Kandigaon,sylhet/sylhet/sylhet-sadar/kandigaon,BD60916238,Kandigaon,name_exact,high,source level union
+42515,union,Khadimnagar,sylhet/sylhet/sylhet-sadar/khadimnagar,BD60916240,Khadimnagar,name_exact,high,source level union
+42516,union,Khadimpara,sylhet/sylhet/sylhet-sadar/khadimpara,BD60916242,Khadim Para,name_exact,high,source level union
+42519,union,Mugolgaon,sylhet/sylhet/sylhet-sadar/mugolgaon,BD60916255,Mogalgaon,name_skeleton,medium,source level union
+42518,union,Tukerbazar,sylhet/sylhet/sylhet-sadar/tukerbazar,BD60916290,Tuker Bazar,name_exact,high,source level union
+42517,union,Tultikor,sylhet/sylhet/sylhet-sadar/tultikor,BD60916295,Tultikar,name_skeleton,medium,source level union
+42523,union,Barohal,sylhet/sylhet/zakiganj/barohal,BD60919415,Barahal,name_skeleton,medium,source level union
+42528,union,Barothakuri,sylhet/sylhet/zakiganj/barothakuri,BD60919419,Bara Thakuri,name_skeleton,medium,source level union
+42524,union,Birorsri,sylhet/sylhet/zakiganj/birorsri,BD60919428,Birasree,name_skeleton,medium,source level union
+42529,union,Kaskanakpur,sylhet/sylhet/zakiganj/kaskanakpur,BD60919438,Khas Kanakpur,name_banglish,high,source level union
+42525,union,Kajalshah,sylhet/sylhet/zakiganj/kajalshah,BD60919447,Kajalshar,name_fuzzy,low,source level union; similarity 0.88 to 'Kajalshah'
+42526,union,Kolachora,sylhet/sylhet/zakiganj/kolachora,BD60919457,Kholachhara,name_skeleton,medium,source level union
+42521,union,Manikpur,sylhet/sylhet/zakiganj/manikpur,BD60919466,Manikpur,name_exact,high,source level union
+42522,union,Sultanpur,sylhet/sylhet/zakiganj/sultanpur,BD60919476,Sultanpur,name_exact,high,source level union
+42527,union,Zakiganj,sylhet/sylhet/zakiganj/zakiganj,BD60919485,Zakiganj,name_exact,high,source level union
+,,,,BD60361111,Uttar Purba Baniachang,unmatched,none,source level union; best candidates: Baniachong South West 0.47; Baniachong South East 0.47
+,,,,BD60361112,Uttar Paschim Baniyachang,unmatched,none,source level union; best candidates: Baniachong South West 0.46; Baniachong South East 0.46
+,,,,BD60361118,Dakshin Purba Baniyachang,unmatched,none,source level union; best candidates: Baniachong South West 0.44; Baniachong South East 0.44
+,,,,BD60361125,Dakshin Paschim Baniyachang,unmatched,none,source level union; best candidates: Baniachong South West 0.43; Baniachong South East 0.43
+42670,union,Nurpur,sylhet/habiganj/shayestaganj/nurpur,BD60364447,Nurpur,name_exact_other_parent,medium,"source level union; source parent Habiganj Sadar, our parent Shayestaganj; check parent change"
+42671,union,Shayestaganj,sylhet/habiganj/shayestaganj/shayestaganj,BD60364485,Saistaganj,name_skeleton_other_parent,low,"source level union; source parent Habiganj Sadar, our parent Shayestaganj; check parent change"
+,,,,BD60588084,Uttarbhag,unmatched,none,source level union; best candidates: Uttorbhag 0.60
+,,,,BD60902385,Saidergaon,unmatched,none,source level union; best candidates: Gobindganj-Syedergaon 0.60; Chhaila Afjalabad 0.26
+,,,,BD60904719,Haldipur,unmatched,none,source level union; best candidates: Chilaura Holdipur 0.61; Syedpur Shaharpara 0.33
+,,,,BD60904785,Syed Pur,unmatched,none,source level union; best candidates: Syedpur Shaharpara 0.61; Chilaura Holdipur 0.45
+,,,,BD60908695,Sulla,unmatched,none,source level union; best candidates: Shalla Sadar 0.75
+,,,,BD60909243,Dakshin Badal,unmatched,none,source level union; best candidates: Bordal South 0.73
+,,,,BD60909282,Uttar Badal,unmatched,none,source level union; best candidates: Bordal North 0.73
+,,,,BD60910813,Boaljur Bazar,unmatched,none,source level union; best candidates: Boaljur 0.74
+,,,,BD60910820,Burunga,unmatched,none,source level union; best candidates: Boaljur 0.43
+42443,union,Doyamir,sylhet/sylhet/osmaninagar/doyamir,BD60910827,Dayamir,name_skeleton_other_parent,low,"source level union; source parent Balaganj, our parent Osmaninagar; check parent change"
+42442,union,Goalabazar,sylhet/sylhet/osmaninagar/goalabazar,BD60910840,Goula Bazar,name_skeleton_other_parent,low,"source level union; source parent Balaganj, our parent Osmaninagar; check parent change"
+42437,union,Umorpur,sylhet/sylhet/osmaninagar/umorpur,BD60910851,Omarpur,name_skeleton_other_parent,low,"source level union; source parent Balaganj, our parent Osmaninagar; check parent change"
+42444,union,Usmanpur,sylhet/sylhet/osmaninagar/usmanpur,BD60910855,Osmanpur,name_skeleton_other_parent,low,"source level union; source parent Balaganj, our parent Osmaninagar; check parent change"
+42438,union,West Poilanpur,sylhet/sylhet/osmaninagar/west-poilanpur,BD60910864,Paschim Pailanpur,name_skeleton_other_parent,low,"source level union; source parent Balaganj, our parent Osmaninagar; check parent change"
+42449,union,Sadipur,sylhet/sylhet/osmaninagar/sadipur,BD60910881,Sadipur,name_exact_other_parent,medium,"source level union; source parent Balaganj, our parent Osmaninagar; check parent change"
+42436,union,Tazpur,sylhet/sylhet/osmaninagar/tazpur,BD60910888,Tajpur,name_banglish_other_parent,medium,"source level union; source parent Balaganj, our parent Osmaninagar; check parent change"
+,,,,BD60911717,Beani Bazar,unmatched,none,source level union; no candidates under parent
+,,,,BD60912063,Khazanchigaon,unmatched,none,source level union; best candidates: Khajanchi 0.78
+,,,,BD60912757,Ranikhai Uttar,unmatched,none,source level union; no candidates without a conflicting direction word under parent
+,,,,BD60913815,Bagha,unmatched,none,source level union; best candidates: Golapganj 0.46; Dhakadakshin 0.29
+,,,,BD60913825,Dhaka Dakshin,unmatched,none,source level union; best candidates: Dhakadakshin 0.57; Golapganj 0.31
+,,,,BD60915966,Paschim Lakshmip Rasad,unmatched,none,source level union; no candidates without a conflicting direction word under parent
+,,,,BD60915970,Paschim Dighirpar,unmatched,none,source level union; no candidates without a conflicting direction word under parent
+,,,,BD60915972,Purba Lakshmi Prasad,unmatched,none,source level union; no candidates without a conflicting direction word under parent
+,,,,BD60915976,Purba Dighirpar,unmatched,none,source level union; no candidates without a conflicting direction word under parent
+,,,,BD60916201,Ward No-01,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916202,Ward No-02,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916203,Ward No-03,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916204,Ward No-04,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916205,Ward No-05,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916206,Ward No-06,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916207,Ward No-07,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916208,Ward No-08,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916209,Ward No-09,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916210,Ward No-10,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916211,Ward No-11,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916212,Ward No-12,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916213,Ward No-13,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916214,Ward No-14,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916215,Ward No-15,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916216,Ward No-16,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916217,Ward No-17,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916218,Ward No-18,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916219,Ward No-19,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916220,Ward No-20,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916221,Ward No-21,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916222,Ward No-22,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916223,Ward No-23,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916224,Ward No-24,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916225,Ward No-25,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916226,Ward No-26,no_seed_level,none,source level ward; our seed has no ward level
+,,,,BD60916227,Ward No-27,no_seed_level,none,source level ward; our seed has no ward level
+42440,union,Boaljur,sylhet/sylhet/balaganj/boaljur,,,no_source_unit,none,no HDX unit matched under Balaganj
+42441,union,Burungabazar,sylhet/sylhet/osmaninagar/burungabazar,,,no_source_unit,none,no HDX unit matched under Osmaninagar
+42462,union,Khajanchi,sylhet/sylhet/bishwanath/khajanchi,,,no_source_unit,none,no HDX unit matched under Bishwanath
+42472,union,Uttor Ronikhai,sylhet/sylhet/companiganj/uttor-ronikhai,,,no_source_unit,none,no HDX unit matched under Companiganj
+42476,union,Uttar Kushiara,sylhet/sylhet/fenchuganj/uttar-kushiara,,,no_source_unit,none,no HDX unit matched under Fenchuganj
+42477,union,Uttar Fenchuganj,sylhet/sylhet/fenchuganj/uttar-fenchuganj,,,no_source_unit,none,no HDX unit matched under Fenchuganj
+42483,union,Dhakadakshin,sylhet/sylhet/golapganj/dhakadakshin,,,no_source_unit,none,no HDX unit matched under Golapganj
+42497,union,Daubari,sylhet/sylhet/gowainghat/daubari,,,no_source_unit,none,no HDX unit matched under Gowainghat
+42505,union,Lakshiprashad Purbo,sylhet/sylhet/kanaighat/lakshiprashad-purbo,,,no_source_unit,none,no HDX unit matched under Kanaighat
+42506,union,Lakshiprashad Pashim,sylhet/sylhet/kanaighat/lakshiprashad-pashim,,,no_source_unit,none,no HDX unit matched under Kanaighat
+42507,union,Digirpar Purbo,sylhet/sylhet/kanaighat/digirpar-purbo,,,no_source_unit,none,no HDX unit matched under Kanaighat
+42508,union,Satbakh,sylhet/sylhet/kanaighat/satbakh,,,no_source_unit,none,no HDX unit matched under Kanaighat
+42537,union,Kamalbazar,sylhet/sylhet/dakshinsurma/kamalbazar,,,no_source_unit,none,no HDX unit matched under Dakshinsurma
+42586,union,Uttorbhag,sylhet/moulvibazar/rajnagar/uttorbhag,,,no_source_unit,none,no HDX unit matched under Rajnagar
+42633,union,Baniachong North East,sylhet/habiganj/baniachong/baniachong-north-east,,,no_source_unit,none,no HDX unit matched under Baniachong
+42634,union,Baniachong North West,sylhet/habiganj/baniachong/baniachong-north-west,,,no_source_unit,none,no HDX unit matched under Baniachong
+42635,union,Baniachong South East,sylhet/habiganj/baniachong/baniachong-south-east,,,no_source_unit,none,no HDX unit matched under Baniachong
+42636,union,Baniachong South West,sylhet/habiganj/baniachong/baniachong-south-west,,,no_source_unit,none,no HDX unit matched under Baniachong
+42711,union,Gobindganj-Syedergaon,sylhet/sunamganj/chhatak/gobindganj-syedergaon,,,no_source_unit,none,no HDX unit matched under Chhatak
+42723,union,Chilaura Holdipur,sylhet/sunamganj/jagannathpur/chilaura-holdipur,,,no_source_unit,none,no HDX unit matched under Jagannathpur
+42725,union,Syedpur Shaharpara,sylhet/sunamganj/jagannathpur/syedpur-shaharpara,,,no_source_unit,none,no HDX unit matched under Jagannathpur
+42739,union,Bordal South,sylhet/sunamganj/tahirpur/bordal-south,,,no_source_unit,none,no HDX unit matched under Tahirpur
+42740,union,Bordal North,sylhet/sunamganj/tahirpur/bordal-north,,,no_source_unit,none,no HDX unit matched under Tahirpur
+42762,union,Shalla Sadar,sylhet/sunamganj/shalla/shalla-sadar,,,no_source_unit,none,no HDX unit matched under Shalla
+44541,union,Brahmandura,sylhet/habiganj/shayestaganj/brahmandura,,,no_source_unit,none,no HDX unit matched under Shayestaganj

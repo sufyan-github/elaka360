@@ -1,0 +1,2553 @@
+sheet,sl,designation,post,official_number,current_number,new_number,email
+CMP,Unit/Office Name: Chattogram Metropoliton Police (CMP),,,,,,
+CMP,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail
+CMP,1,Police Commissioner (DIG),1,624100,01713-373235,01320-052000,pccmp@police.gov.bd
+CMP,2,Police Commissioner (R),2,,,01320-052001,
+CMP,3,Police Commissioner (R),3,,,01320-052002,
+CMP,4,Police Commissioner (R),4,,,01320-052003,
+CMP,5,Police Commissioner (R),5,,,01320-052004,
+CMP,6,Addl. Police Comissioner,Admin & Finance,621564,01713-373236,01320-052005,addlpcacmp@police.gov.bd
+CMP,7,Addl. Police Comissioner,Crime & Ops,620974,01713-373237,01320-052006,addlpccocmp@police.gov.bd
+CMP,8,Addl. Police Comissioner,Traffic,631661,01769-691160,01320-052007,addlpctcmp@police.gov.bd
+CMP,9,Addl. Police Comissioner (R),Reserved (22 SIM),,,01320052008-01320052029,
+CMP,DC HQ Office,,,,,,
+CMP,1,DC,Heaquarters,631237,01713-373238,01320-052030,dchqcmp@police.gov.bd
+CMP,2,DC,Supply & Transport,613833,01769-691161,01320-052031,
+CMP,3,DC,State & Development,,01769-691617,01320-052032,
+CMP,4,DC,Prosecution,,01769-691616,01320-052033,
+CMP,5,DC,Reserved (20 SIM),,,01320052034-01320052053,
+CMP,6,PC Office,Staff Officer,630691,01713-373243,01320-052054,socmp@police.gov.bd
+CMP,7,Reserved for PC Office,Reserved (10 SIM),,,01320052055-01320052064,
+CMP,8,ADC,Heaquarters,633577,01713-374592,01320-052065,addldpchqcmp@police.gov.bd
+CMP,9,ADC,Decipline,,01769-691168,01320-052066,
+CMP,10,ADC,Prosecution,631336,01769-058132,01320-052067,addldpcpncmp@police.gov.bd
+CMP,11,ADC,MT,612324,01769-058131,01320-052068,
+CMP,12,ADC,State & Building,,01769-691618,01320-052069,
+CMP,13,ADC,Supply,631236,01769-058130,01320-052070,
+CMP,14,ADC,Reserved (40 SIM),,,01320052071-01320052110,
+CMP,15,AC,Heaquarters,,01713-373249,01320-052111,apchqcmp@police.gov.bd
+CMP,16,AC,Force,630433,01769-058120,01320-052112,apcfcmp@police.gov.bd
+CMP,17,AC,Supply,637188,01713-373257,01320-052113,apcsycmp@police.gov.bd
+CMP,18,AC,Prosecution,635082,01713-373247,01320-052114,apcpncmp@police.gov.bd
+CMP,19,AC,RO,635116,01769-058137,01320-052115,apcrocmp@police.gov.bd
+CMP,20,AC,P&P,625008,01769-058135,01320-052116,
+CMP,21,AC,MT,623240,01769-058138,01320-052117,apcmtcmp@police.gov.bd
+CMP,22,AC,Estate & Building,622190,01769-058139,01320-052118,apcebcmp@police.gov.bd
+CMP,23,AC,ICT & Admin,,01713-373240,01320-052119,
+CMP,24,AC,Crime,,,01320-052120,
+CMP,25,AC,Reserved (79 SIM),,,01320052121-01320052199,
+CMP,26,Inspector,RI-CMP,616377,01713-373251,01320-052200,
+CMP,27,Others,Reserved (199 SIM),,,01320052201-01320052399,
+CMP,Crime Division,,,,,,
+CMP,1,DC,North,656547,01713-373253,01320-052400,dpcncmp@police.gov.bd
+CMP,2,ADC,North,658338,01713-374593,01320-052401,addldpcncmp@police.gov.bd
+CMP,3,ADC,Reserved (05 SIM),,,01320052402-01320052406,
+CMP,4,AC,Reserved (10 SIM),,,01320052407-01320052416,
+CMP,5,AC,Panchlaish,652767,01713-373255,01320-052417,
+CMP,6,AC,Reserved (02 SIM),,,01320052418-01320052419,
+CMP,7,AC,Biazid Bostami,2581191,01769694224,01320-052420,
+CMP,8,AC,Reserved (02 SIM),,,01320052421-01320052422,
+CMP,9,Reserved for DC Office,Reserved (20 SIM),,,01320052423-01320052442,
+CMP,10,Inspector,OC Chandgaon,651313,01713-373259,01320-052443,occmp.cha@police.gov.bd
+CMP,11,Inspector,Invst. Chandgoan,,01769-058144,01320-052444,
+CMP,12,Inspector,Ops. Chandgaon,,,01320-052445,
+CMP,13,Inspector,Reserved for Chandgaon PS,,,01320-052446,
+CMP,14,Inspector,Reserved for Chandgaon PS,,,01320-052447,
+CMP,15,Inspector,PI,,,01320-052448,
+CMP,16,Chandgaon PS,Duty officer,,,01320-052449,
+CMP,17,,Fari-01,,,01320-052450,
+CMP,18,,Beat-01,,,01320-052451,
+CMP,19,,Beat-02,,,01320-052452,
+CMP,20,,Beat-03,,,01320-052453,
+CMP,21,,Beat-04,,,01320-052454,
+CMP,22,,Beat-05,,,01320-052455,
+CMP,23,,Beat-06,,,01320-052456,
+CMP,24,,Beat-07,,,01320-052457,
+CMP,25,,Beat-08,,,01320-052458,
+CMP,26,,Beat-09,,,01320-052459,
+CMP,27,,Beat-10,,,01320-052460,
+CMP,28,,Beat-11,,,01320-052461,
+CMP,29,,Beat-12,,,01320-052462,
+CMP,30,Reserved for Chandgaon PS,Reserved (07 SIM),,,01320052463-01320052469,
+CMP,31,Inspector,OC Panchlaish,652797,01713-373258,01320-052470,occmp.pan@police.gov.bd
+CMP,32,Inspector,Invst. Panchlaish,,01769-058145,01320-052471,
+CMP,33,Inspector,Ops.  Panchlaish,,,01320-052472,
+CMP,34,Inspector,Reserved for  Panchlaish PS,,,01320-052473,
+CMP,35,Inspector,Reserved for  Panchlaish PS,,,01320-052474,
+CMP,36,Inspector,PI,,,01320-052475,
+CMP,37,Panchlaish PS,Duty officer,,,01320-052476,
+CMP,38,,Fari-01,,,01320-052477,
+CMP,39,,Beat-01,,,01320-052478,
+CMP,40,,Beat-02,,,01320-052479,
+CMP,41,,Beat-03,,,01320-052480,
+CMP,42,,Beat-04,,,01320-052481,
+CMP,43,,Beat-05,,,01320-052482,
+CMP,44,,Beat-06,,,01320-052483,
+CMP,45,Reserved for  Panchlaish PS,Reserved (13 SIM),,,01320-052484-01320052496,
+CMP,46,Inspector,OC Khulshi,658283,01713-373260,01320-052497,occmp.khu@police.gov.bd
+CMP,47,Inspector,Invst. Khulshi,,01769-058141,01320-052498,
+CMP,48,Inspector,Ops.  Khulshi,,,01320-052499,
+CMP,49,Inspector,Reserved for Khulshi PS,,,01320-052500,
+CMP,50,Inspector,Reserved for Khulshi PS,,,01320-052501,
+CMP,51,Inspector,PI,,,01320-052502,
+CMP,52,Khulshi PS,Duty officer,,,01320-052503,
+CMP,53,,Fari-01,,,01320-052504,
+CMP,54,,Fari-02,,,01320-052505,
+CMP,55,,Beat-01,,,01320-052506,
+CMP,56,,Beat-02,,,01320-052507,
+CMP,57,,Beat-03,,,01320-052508,
+CMP,58,,Beat-04,,,01320-052509,
+CMP,59,,Beat-05,,,01320-052510,
+CMP,60,,Beat-06,,,01320-052511,
+CMP,61,,Beat-07,,,01320-052512,
+CMP,62,,Beat-08,,,01320-052513,
+CMP,63,,Beat-09,,,01320-052514,
+CMP,64,,Beat-10,,,01320-052515,
+CMP,65,Reserved for Khulshi PS,Reserved (08 SIM),,,01320052516-01320052523,
+CMP,66,Inspector,OC Biazid Bostami,684804 683033,01713-373262,01320-052524,occmp.bai@police.gov.bd
+CMP,67,Inspector,Invst. Biazid Bostami,,01769-058143,01320-052525,
+CMP,68,Inspector,Ops. Biazid Bostami,,,01320-052526,
+CMP,69,Inspector,Reserved for Biazid Bostami PS,,,01320-052527,
+CMP,70,Inspector,Reserved for Biazid Bostami PS,,,01320-052528,
+CMP,71,Inspector,PI,,,01320-052529,
+CMP,72,Biazid Bostami PS,Duty officer,,,01320-052530,
+CMP,73,,Fari-01,,,01320-052531,
+CMP,74,,Beat-01,,,01320-052532,
+CMP,75,,Beat-02,,,01320-052533,
+CMP,76,,Beat-03,,,01320-052534,
+CMP,77,,Beat-04,,,01320-052535,
+CMP,78,,Beat-05,,,01320-052536,
+CMP,79,,Beat-06,,,01320-052537,
+CMP,80,,Beat-07,,,01320-052538,
+CMP,81,,Beat-08,,,01320-052539,
+CMP,82,Reserved for Biazid Bostami PS,Reserved (10 SIM),,,01320052540-01320052549,
+CMP,83,DC,South,655856,01769-058121,01320-052550,dpcscmp@police.gov.bd
+CMP,84,ADC,South,655857,01769-058125,01320-052551,addldpcscmp@police.gov.bd
+CMP,85,ADC,Reserved (05 SIM),,,01320052552-01320052556,
+CMP,86,AC,Reserved (10 SIM),,,01320052557-01320052566,
+CMP,87,AC,Kotowali,630326,01713-373254,01320-052567,apckotowali.mail@gmail.com
+CMP,88,AC,Reserved (02 SIM),,,01320052568-01320052569,
+CMP,89,AC,Chawkbazar,2851020,01769-694223,01320-052570,
+CMP,90,AC,Reserved (02 SIM),,,01320052571-01320052572,
+CMP,91,Reserved for DC Office,Reserved (20 SIM),,,01320052573-01320052592,
+CMP,92,Inspector,OC Kotowali,619922,01713-373256,01320-052593,occmp.kot@police.gov.bd
+CMP,93,Inspector,Invst. Kotowali,,01769-058140,01320-052594,
+CMP,94,Inspector,Ops. Kotowali,,,01320-052595,
+CMP,95,Inspector,Reserved for Kotowali PS,,,01320-052596,
+CMP,96,Inspector,Reserved for Kotowali PS,,,01320-052597,
+CMP,97,Inspector,PI,,,01320-052598,
+CMP,98,Kotowali PS,Duty officer,,,01320-052599,
+CMP,99,,Fari -01,,,01320-052600,
+CMP,100,,Fari -02,,,01320-052601,
+CMP,101,,Fari -03,,,01320-052602,
+CMP,102,,Fari -04,,,01320-052603,
+CMP,103,,Fari -05,,,01320-052604,
+CMP,104,,Beat-01,,,01320-052605,
+CMP,105,,Beat-02,,,01320-052606,
+CMP,106,,Beat-03,,,01320-052607,
+CMP,107,,Beat-04,,,01320-052608,
+CMP,108,,Beat-05,,,01320-052609,
+CMP,109,,Beat-06,,,01320-052610,
+CMP,110,,Beat-07,,,01320-052611,
+CMP,111,,Beat-08,,,01320-052612,
+CMP,112,,Beat-09,,,01320-052613,
+CMP,113,,Beat-10,,,01320-052614,
+CMP,114,,Beat-11,,,01320-052615,
+CMP,115,,Beat-12,,,01320-052616,
+CMP,116,,Beat-13,,,01320-052617,
+CMP,117,,Beat-14,,,01320-052618,
+CMP,118,,Beat-15,,,01320-052619,
+CMP,119,Inspector,OC Bakolia,,01713-373261,01320-052620,occmp.bak@police.gov.bd
+CMP,120,Inspector,Invst. Bakolia,,,01320-052621,
+CMP,121,Inspector,Ops.Bakolia,,,01320-052622,
+CMP,122,Inspector,Reserved for Bakolia PS,,,01320-052623,
+CMP,123,Inspector,Reserved for Bakolia PS,,,01320-052624,
+CMP,124,Inspector,PI,,,01320-052625,
+CMP,125,Bakolia PS,Duty officer,,,01320-052626,
+CMP,126,,Fari-01,,,01320-052627,
+CMP,127,,Fari-02,,,01320-052628,
+CMP,128,,Beat-01,,,01320-052629,
+CMP,129,,Beat-02,,,01320-052630,
+CMP,130,,Beat-03,,,01320-052631,
+CMP,131,,Beat-04,,,01320-052632,
+CMP,132,,Beat-05,,,01320-052633,
+CMP,133,,Beat-06,,,01320-052634,
+CMP,134,,Beat-07,,,01320-052635,
+CMP,135,,Beat-08,,,01320-052636,
+CMP,136,Reserved for Bakolia PS,Reserved (10 SIM),,,01320052637-01320052646,
+CMP,137,Inspector,OC Chawkbazar,2860155,01769-690064,01320-052647,occmp.cha@police.gov.bd
+CMP,138,Inspector,Invst. Chawkbazar,,01769-691105,01320-052648,
+CMP,139,Inspector,Ops. Chawkbazar,,,01320-052649,
+CMP,140,Inspector,Reserved for Chawkbazar PS,,,01320-052650,
+CMP,141,Inspector,Reserved for Chawkbazar PS,,,01320-052651,
+CMP,142,Inspector,PI,,,01320-052652,
+CMP,143,Chawkbazar PS,Duty officer,,,01320-052653,
+CMP,144,,Fari-01,,,01320-052654,
+CMP,145,,Beat-01,,,01320-052655,
+CMP,146,,Beat-02,,,01320-052656,
+CMP,147,,Beat-03,,,01320-052657,
+CMP,148,,Beat-04,,,01320-052658,
+CMP,149,,Beat-05,,,01320-052659,
+CMP,150,,Beat-06,,,01320-052660,
+CMP,151,,Beat-07,,,01320-052661,
+CMP,152,Reserved for Chawkbazar PS,Reserved (12 SIM),,,01320052662-01320052673,
+CMP,153,Inspector,OC Sadarghat,1631414,01769-690065,01320-052674,occmp.sad@police.gov.bd
+CMP,154,Inspector,Invst. Sadarghat,,01769-691108,01320-052675,
+CMP,155,Inspector,Ops. Sadarghat,,,01320-052676,
+CMP,156,Inspector,Reserved for Sadarghat PS,,,01320-052677,
+CMP,157,Inspector,Reserved for Sadarghat PS,,,01320-052678,
+CMP,158,Inspector,PI,,,01320-052679,
+CMP,159,Sadarghat PS,Duty officer,,,01320-052680,
+CMP,160,,Fari -01,,,01320-052681,
+CMP,161,,Fari -02,,,01320-052682,
+CMP,162,,Fari -03,,,01320-052683,
+CMP,163,,Beat- 01,,,01320-052684,
+CMP,164,,Beat- 02,,,01320-052685,
+CMP,165,,Beat- 03,,,01320-052686,
+CMP,166,,Beat- 04,,,01320-052687,
+CMP,167,,Beat- 05,,,01320-052688,
+CMP,168,,Beat- 06,,,01320-052689,
+CMP,169,,Beat- 07,,,01320-052690,
+CMP,170,Reserved for Sadarghat PS,Reserved (09 SIM),,,01320052691-01320052699,
+CMP,171,DC,West,714343,01769-058122,01320-052700,dpcwcmp@police.gov.bd
+CMP,172,ADC,West,,,01320-052701,
+CMP,173,ADC,Reserved (05 SIM),,,01320052702-01320052706,
+CMP,174,AC,Reserved (10 SIM),715100,01769-058126,01320052707-01320052716,addldpcwcmp@police.gov.bd
+CMP,175,AC,Pahartoli,43151118,01769-694225,01320-052717,
+CMP,176,AC,Reserved (02 SIM),,,01320052718-01320052719,
+CMP,177,AC,Doublemoring,1715783,01713-373266,01320-052720,
+CMP,178,AC,Reserved (02 SIM),,,01320052721-01320052722,
+CMP,179,Reserved for DC Office,Reserved (20 SIM),,,01320052723-01320052742,
+CMP,180,Inspector,OC Doublemoring,715782 715783,01713-373268,01320-052743,occmp.dou@police.gov.bd
+CMP,181,Inspector,Invst. Doublemoring,,01769-058146,01320-052744,
+CMP,182,Inspector,Ops. Doublemoring,,,01320-052745,
+CMP,183,Inspector,Reserved for Doublemoring PS,,,01320-052746,
+CMP,184,Inspector,Reserved for Doublemoring PS,,,01320-052747,
+CMP,185,Inspector,PI,,,01320-052748,
+CMP,186,Doublemoring PS,Duty officer,,,01320-052749,
+CMP,187,,Fari-01,,,01320-052750,
+CMP,188,,Fari-02,,,01320-052751,
+CMP,189,,Beat-01,,,01320-052752,
+CMP,190,,Beat-02,,,01320-052753,
+CMP,191,,Beat-03,,,01320-052754,
+CMP,192,,Beat-04,,,01320-052755,
+CMP,193,,Beat-05,,,01320-052756,
+CMP,194,,Beat-06,,,01320-052757,
+CMP,195,,Beat-07,,,01320-052758,
+CMP,196,,Beat-08,,,01320-052759,
+CMP,197,,Beat-09,,,01320-052760,
+CMP,198,,Beat-10,,,01320-052761,
+CMP,199,,Beat-11,,,01320-052762,
+CMP,200,,Beat-12,,,01320-052763,
+CMP,201,Reserved for Doublemoring PS,Reserved (06 SIM),,,01320052764-01320052769,
+CMP,202,Inspector,OC Halishohor,723613 715700,01713-373269,01320-052770,occmp.hal@police.gov.bd
+CMP,203,Inspector,Invst. Halishohor,,01769-058148,01320-052771,
+CMP,204,Inspector,Ops. Halishohor,,,01320-052772,
+CMP,205,Inspector,Reserved for Halishohor PS,,,01320-052773,
+CMP,206,Inspector,Reserved for Halishohor PS,,,01320-052774,
+CMP,207,Inspector,PI,,,01320-052775,
+CMP,208,Halishohor PS,Duty officer,,,01320-052776,
+CMP,209,,Fari-01,,,01320-052777,
+CMP,210,,Beat-01,,,01320-052778,
+CMP,211,,Beat-02,,,01320-052779,
+CMP,212,,Beat-03,,,01320-052780,
+CMP,213,,Beat-04,,,01320-052781,
+CMP,214,,Beat-05,,,01320-052782,
+CMP,215,,Beat-06,,,01320-052783,
+CMP,216,,Beat-07,,,01320-052784,
+CMP,217,,Beat-08,,,01320-052785,
+CMP,218,,Beat-09,,,01320-052786,
+CMP,219,,Beat-10,,,01320-052787,
+CMP,220,,Beat-11,,,01320-052788,
+CMP,221,,Beat-12,,,01320-052789,
+CMP,222,,Beat-13,,,01320-052790,
+CMP,223,,Beat-14,,,01320-052791,
+CMP,224,,Beat-15,,,01320-052792,
+CMP,225,Reserved for Halishohor PS,Reserved (04 SIM),,,01320052793-01320052796,
+CMP,226,Inspector,OC Pahartoli,43151117,01713-373273,01320-052797,occmp.pah@police.gov.bd
+CMP,227,Inspector,Invst. Pahartoli,,01769-058147,01320-052798,
+CMP,228,Inspector,Ops. Pahartoli,,,01320-052799,
+CMP,229,Inspector,Reserved for Pahartoli PS,,,01320-052800,
+CMP,230,Inspector,Reserved for Pahartoli PS,,,01320-052801,
+CMP,231,Inspector,PI,,,01320-052802,
+CMP,232,Pahartoli PS,Duty officer,,,01320-052803,
+CMP,233,,Fari-01,,,01320-052804,
+CMP,234,,Beat-01,,,01320-052805,
+CMP,235,,Beat-02,,,01320-052806,
+CMP,236,,Beat-03,,,01320-052807,
+CMP,237,,Beat-04,,,01320-052808,
+CMP,238,,Beat-05,,,01320-052809,
+CMP,239,Reserved for Pahartoli PS,Reserved (14 SIM),,,01320052810-01320052823,
+CMP,240,Inspector,OC Akbor Shah,2773855,01769-690066,01320-052824,occmp.akb@police.gov.bd
+CMP,241,Inspector,Invst. Akbor Shah,,01769-691107,01320-052825,
+CMP,242,Inspector,Ops. Akbor Shah,,,01320-052826,
+CMP,243,Inspector,Reserved for Akbor Shah PS,,,01320-052827,
+CMP,244,Inspector,Reserved for Akbor Shah PS,,,01320-052828,
+CMP,245,Inspector,PI,,,01320-052829,
+CMP,246,Akbor Shah PS,Duty officer,,,01320-052830,
+CMP,247,,Fari-01,,,01320-052831,
+CMP,248,,Beat-01,,,01320-052832,
+CMP,249,,Beat-02,,,01320-052833,
+CMP,250,,Beat-03,,,01320-052834,
+CMP,251,,Beat-04,,,01320-052835,
+CMP,252,,Beat-05,,,01320-052836,
+CMP,253,,Beat-06,,,01320-052837,
+CMP,254,Reserved for Akbor Shah PS,Reserved (12 SIM),,,01320052838-01320052849,
+CMP,255,DC,Port,714043,01713-373264,01320-052850,dpcpcmp@police.gov.bd
+CMP,256,ADC,Port,716899,01713-374594,01320-052851,addldpcpcmp@police.gov.bd
+CMP,257,ADC,Reserved (05 SIM),,,01320052852-01320052856,
+CMP,258,AC,Reserved (10 SIM),,,01320052857-01320052866,
+CMP,259,AC,Kornophuli,,01769-694226,01320-052867,
+CMP,260,AC,Reserved (02 SIM),,,01320052868-01320052869,
+CMP,261,AC,Port,721784,01713-373265,01320-052870,
+CMP,262,AC,Reserved (02 SIM),,,01320052871-01320052872,
+CMP,263,Reserved for DC Office,Reserved (20 SIM),,,01320052873-01320052892,
+CMP,264,Inspector,OC Port,728288,01713-373267,01320-052893,occmp.ban@police.gov.bd
+CMP,265,Inspector,Invst. Port,,01769-058149,01320-052894,
+CMP,266,Inspector,Ops. Port,,,01320-052895,
+CMP,267,Inspector,Reserved for Port PS,,,01320-052896,
+CMP,268,Inspector,Reserved for Port PS,,,01320-052897,
+CMP,269,Inspector,PI,,,01320-052898,
+CMP,270,Port PS,Duty officer,,,01320-052899,
+CMP,271,,Fari-01,,,01320-052900,
+CMP,272,,Fari-02,,,01320-052901,
+CMP,273,,Fari-03,,,01320-052902,
+CMP,274,,Fari-04,,,01320-052903,
+CMP,275,,Beat-01,,,01320-052904,
+CMP,276,,Beat-02,,,01320-052905,
+CMP,277,,Beat-03,,,01320-052906,
+CMP,278,,Beat-04,,,01320-052907,
+CMP,279,,Beat-05,,,01320-052908,
+CMP,280,,Beat-06,,,01320-052909,
+CMP,281,,Beat-07,,,01320-052910,
+CMP,282,,Beat-08,,,01320-052911,
+CMP,283,,Beat-09,,,01320-052912,
+CMP,284,Reserved for Port PS,Reserved (07 SIM),,,01320052913-01320052919,
+CMP,285,Inspector,OC EPZ,741100,01769-690067,01320-052920,occmp.epz@police.gov.bd
+CMP,286,Inspector,Invst. EPZ,,01769-691106,01320-052921,
+CMP,287,Inspector,Ops. EPZ,,,01320-052922,
+CMP,288,Inspector,Reserved for EPZ PS,,,01320-052923,
+CMP,289,Inspector,Reserved for EPZ PS,,,01320-052924,
+CMP,290,Inspector,PI,,,01320-052925,
+CMP,291,EPZ PS,Duty officer,,,01320-052926,
+CMP,292,,Fari-01,,,01320-052927,
+CMP,293,,Fari-02,,,01320-052928,
+CMP,294,,Beat-01,,,01320-052929,
+CMP,295,,Beat-02,,,01320-052930,
+CMP,296,,Beat-03,,,01320-052931,
+CMP,297,,Beat-04,,,01320-052932,
+CMP,298,,Beat-05,,,01320-052933,
+CMP,299,,Beat-06,,,01320-052934,
+CMP,300,,Beat-07,,,01320-052935,
+CMP,301,,Beat-08,,,01320-052936,
+CMP,302,Reserved for EPZ PS,Reserved (10 SIM),,,01320052937-01320052946,
+CMP,303,Inspector,OC Potenga,2500026,01713-373270,01320-052947,occmp.pot@police.gov.bd
+CMP,304,Inspector,Invst. Potenga,,01769-058150,01320-052948,
+CMP,305,Inspector,Ops. Potenga,,,01320-052949,
+CMP,306,Inspector,Reserved for Potenga PS,,,01320-052950,
+CMP,307,Inspector,Reserved for Potenga PS,,,01320-052951,
+CMP,308,Inspector,PI,,,01320-052952,
+CMP,309,Potenga PS,Duty officer,,,01320-052953,
+CMP,310,,Fari-01,,,01320-052954,
+CMP,311,,Fari-02,,,01320-052955,
+CMP,312,,Beat-01,,,01320-052956,
+CMP,313,,Beat-02,,,01320-052957,
+CMP,314,,Beat-03,,,01320-052958,
+CMP,315,,Beat-04,,,01320-052959,
+CMP,316,,Beat-05,,,01320-052960,
+CMP,317,,Beat-06,,,01320-052961,
+CMP,318,,Beat-07,,,01320-052962,
+CMP,319,Reserved for Potenga PS,Reserved (11 SIM),,,01320052963-01320052973,
+CMP,320,Inspector,OC Kornophuli,636763,1713373271,01320-052974,occmp.kar@police.gov.bd
+CMP,321,Inspector,Invst. Kornophuli,,01769-058151,01320-052975,
+CMP,322,Inspector,Ops. Kornophuli,,,01320-052976,
+CMP,323,Inspector,Reserved for Kornophuli PS,,,01320-052977,
+CMP,324,Inspector,Reserved for Kornophuli PS,,,01320-052978,
+CMP,325,Inspector,PI,,,01320-052979,
+CMP,326,Kornophuli PS,Duty officer,,,01320-052980,
+CMP,327,,Fari-01,,,01320-052981,
+CMP,328,,Fari-02,,,01320-052982,
+CMP,329,,Fari-03,,,01320-052983,
+CMP,330,,Beat-01,,,01320-052984,
+CMP,331,,Beat-02,,,01320-052985,
+CMP,332,,Beat-03,,,01320-052986,
+CMP,333,,Beat-04,,,01320-052987,
+CMP,334,,Beat-05,,,01320-052988,
+CMP,335,,Beat-06,,,01320-052989,
+CMP,336,,Beat-07,,,01320-052990,
+CMP,337,,Beat-08,,,01320-052991,
+CMP,338,,Beat-09,,,01320-052992,
+CMP,339,,Beat-10,,,01320-052993,
+CMP,340,Reserved for Kornophuli PS,Reserved (06 SIM),,,01320052994-01320052999,
+CMP,Traffic Division,,,,,,
+CMP,1,DC,Traffic North,620972,01769-691611,01320-053000,dctrafficncmp@police.gov.bd
+CMP,2,ADC,Traffic North,634966,01769-058128,01320-053001,addldpctncmp@police.gov.bd
+CMP,3,ADC,Reserved (05 SIM),,,01320053002-01320053006,
+CMP,4,AC,Reserved (10 SIM),,,01320053007-01320053016,
+CMP,5,AC,Traffic North,,01713-373242,01320-053017,apctncmp@police.gov.bd
+CMP,6,AC,Reserved (02 SIM),,,01320053018-01320053019,
+CMP,7,Inspector,Traffic North,,,01320-053020,
+CMP,8,Inspector,Traffic North,,,01320-053021,
+CMP,9,Inspector,Traffic North,,,01320-053022,
+CMP,10,Inspector,Traffic North,,,01320-053023,
+CMP,11,Inspector,Traffic North,,,01320-053024,
+CMP,12,Inspector,Traffic North,,,01320-053025,
+CMP,13,Inspector,Traffic North,,,01320-053026,
+CMP,14,Inspector,Traffic North,,,01320-053027,
+CMP,15,Inspector,Reserved (42 SIM),,,01320053028-01320053069,
+CMP,16,Sergeant,Reserved (100 SIM),,,01320053070-01320053169,
+CMP,17,Reserved for DC Office,Reserved (100 SIM),,,01320053170-01320053269,
+CMP,18,DC,Traffic South,,01713-373241,01320-053270,
+CMP,19,ADC,Traffic South,634980,01769-691167,01320-053271,addldpctscmp@police.gov.bd
+CMP,20,ADC,Reserved (05 SIM),,,01320053272-01320053276,
+CMP,21,AC,Reserved (10 SIM),,,01320053277-01320053286,
+CMP,22,AC,Traffic South,634965,01769-690082,01320-053287,apctscmp@police.gov.bd
+CMP,23,AC,Reserved (02 SIM),,,01320053288-01320053289,
+CMP,24,Inspector,Traffic South,,,01320-053290,
+CMP,25,Inspector,Traffic South,,,01320-053291,
+CMP,26,Inspector,Traffic South,,,01320-053292,
+CMP,27,Inspector,Traffic South,,,01320-053293,
+CMP,28,Inspector,Traffic South,,,01320-053294,
+CMP,29,Inspector,Traffic South,,,01320-053295,
+CMP,30,Inspector,Reserved (44 SIM),,,01320053296-01320053339,
+CMP,31,Sergeant,Reserved (100 SIM),,,01320053340-01320053439,
+CMP,32,Reserved for DC Office,Reserved (100 SIM),,,01320053440-01320053539,
+CMP,33,DC,Traffic Port,728008,01769-058124,01320-053540,dpctpcmp@police.gov.bd
+CMP,34,ADC,Traffic Port,2514282,01769-058129,01320-053541,addldpctpcmp@police.gov.bd
+CMP,35,ADC,Reserved (05 SIM),,,01320053542-01320053546,
+CMP,36,AC,Reserved (10 SIM),,,01320053547-01320053556,
+CMP,37,AC,Traffic Port,723999,01713-373244,01320-053557,apctpcmp@police.gov.bd
+CMP,38,AC,Reserved (02 SIM),,,01320053558-01320053559,
+CMP,39,Inspector,Traffic Port,,,01320-053560,
+CMP,40,Inspector,Traffic Port,,,01320-053561,
+CMP,41,Inspector,Traffic Port,,,01320-053562,
+CMP,42,Inspector,Traffic Port,,,01320-053563,
+CMP,43,Inspector,Traffic Port,,,01320-053564,
+CMP,44,Inspector,Traffic Port,,,01320-053565,
+CMP,45,Inspector,Traffic Port,,,01320-053566,
+CMP,46,Inspector,Reserved (43 SIM),,,01320053567-01320053609,
+CMP,47,Sergeant,Reserved (100 SIM),,,01320053610-01320053709,
+CMP,48,Reserved for DC Office,Reserved (100 SIM),,,01320053710-01320053809,
+CMP,49,DC,Traffic West,,01769-691612,01320-053810,
+CMP,50,ADC,Traffic West,2516175,01769-691165,01320-053811,addldpctwcmp@police.gov.bd
+CMP,51,ADC,Reserved (05 SIM),,,01320053812-01320053816,
+CMP,52,AC,Reserved (10 SIM),,,01320053817-01320053826,
+CMP,53,AC,Traffic West,2515700,01769-690083,01320-053827,apctwcmp@police.gov.bd
+CMP,54,AC,Reserved (02 SIM),,,01320053828-01320053829,
+CMP,55,Inspector,Traffic West,,,01320-053830,
+CMP,56,Inspector,Traffic West,,,01320-053831,
+CMP,57,Inspector,Traffic West,,,01320-053832,
+CMP,58,Inspector,Traffic West,,,01320-053833,
+CMP,59,Inspector,Traffic West,,,01320-053834,
+CMP,60,Inspector,Traffic West,,,01320-053835,
+CMP,61,Inspector,Reserved (44 SIM),,,01320053836-01320053879,
+CMP,62,Sergeant,Reserved (100 SIM),,,01320053880-01320053979,
+CMP,63,Reserved for DC Office,Reserved (100 SIM),,,01320053980-01320054079,
+CMP,DB,,,,,,
+CMP,1,DC,DB North,,01769-058123,01320-054080,dpcdbncmp@police.gov.bd
+CMP,2,ADC,DB North,,01769-691103,01320-054081,addldpcdbncmp@police.gov.bd
+CMP,3,ADC,DB North,,,01320-054082,
+CMP,4,ADC,Reserved (04 SIM),,,01320054083-01320054086,
+CMP,5,AC,DB North,,,01320-054087,
+CMP,6,AC,Reserved (09 SIM),,,01320054088-01320054096,
+CMP,7,Inspector,DB North,,,01320-054097,
+CMP,8,Inspector,DB North,,,01320-054098,
+CMP,9,Inspector,DB North,,,01320-054099,
+CMP,10,Inspector,DB North,,,01320-054100,
+CMP,11,Inspector,DB North,,,01320-054101,
+CMP,12,Inspector,DB North,,,01320-054102,
+CMP,13,Reserved for DC DB North Office,Reserved (14 SIM),,,01320054103-01320054116,
+CMP,14,DC,DB South,,01769-691615,01320-054117,
+CMP,15,ADC,DB (PR & ICT),626612,01769-691162,01320-054118,
+CMP,16,ADC,Reserved (05 SIM),,,01320054119-01320054123,
+CMP,17,AC,DB South,610550,01713-373252,01320-054124,
+CMP,18,AC,Reserved (10 SIM),,,01320054125-01320054134,
+CMP,19,Inspector,DB South,,,01320-054135,
+CMP,20,Inspector,DB South,,,01320-054136,
+CMP,21,Inspector,DB South,,,01320-054137,
+CMP,22,Inspector,DB South,,,01320-054138,
+CMP,23,Inspector,DB South,,,01320-054139,
+CMP,24,Inspector,DB South,,,01320-054140,
+CMP,25,Reserved for DC DB South Office,Reserved (19 SIM),,,01320054141-01320054159,
+CMP,26,DC,DB West,617822,01769-691613,01320-054160,
+CMP,27,ADC,DB West,624611,01769-691614,01320-054161,addldpcdbwcmp@police.gov.bd
+CMP,28,ADC,Reserved (05 SIM),,,01320054162-01320054166,
+CMP,29,AC,DB West,,01769-691172,01320-054167,
+CMP,30,AC,Reserved (10 SIM),,,01320054168-01320054177,
+CMP,31,Inspector,DB West,,,01320-054178,
+CMP,32,Inspector,DB West,,,01320-054179,
+CMP,33,Inspector,DB West,,,01320-054180,
+CMP,34,Inspector,DB West,,,01320-054181,
+CMP,35,Inspector,DB West,,,01320-054182,
+CMP,36,Inspector,DB West,,,01320-054183,
+CMP,37,Reserved for DC DB West Office,Reserved (16 SIM),,,01320054184-01320054199,
+CMP,38,DC,DB Port,617822,01769-691166,01320-054200,dpcdbpcmp@police.gov.bd
+CMP,39,ADC,DB Port,635517,01713-374595,01320-054201,addldpcdbpcmp@police.gov.bd
+CMP,40,ADC,Reserved (05 SIM),,,01320054202-01320054206,
+CMP,41,AC,DB Port,,01713-373250,01320-054207,
+CMP,42,AC,Reserved (10 SIM),,,01320054208-01320054217,
+CMP,43,Inspector,DB Port,,,01320-054218,
+CMP,44,Inspector,DB Port,,,01320-054219,
+CMP,45,Inspector,DB Port,,,01320-054220,
+CMP,46,Inspector,DB Port,,,01320-054221,
+CMP,47,Inspector,DB Port,,,01320-054222,
+CMP,48,Inspector,DB Port,,,01320-054223,
+CMP,49,Reserved for DC DB South Office,Reserved (16 SIM),,,01320054224-01320054239,
+CMP,CSB,,,,,,
+CMP,1,DC,CSB,623357,01713-373248,01320-054240,dccsbcmp@police.gov.bd
+CMP,2,ADC,CSB,,01769-058133,01320-054241,
+CMP,3,ADC,CTSB North,625244,01713-374596,01320-054242,addldpccsbnscmp@police.gov.bd
+CMP,4,ADC,Intelligence,625244,01713-373246,01320-054243,
+CMP,5,ADC,CSB Port,610028,01769-691170,01320-054244,addldpccsbpwcmp@police.gov.bd
+CMP,6,ADC,Reserved (10 SIM),,,01320054245-01320054254,
+CMP,7,AC,Intelligence,,01713-373246,01320-054255,
+CMP,8,AC,CSB,,01713-373272,01320-054256,
+CMP,9,AC,Reserved (20 SIM),,,01320054257-01320054276,
+CMP,10,Inspector,CIO-1,,01769691176,01320-054277,
+CMP,11,Inspector,CIO-2,,,01320-054278,
+CMP,12,Inspector,CIO-3,,,01320-054279,
+CMP,13,Inspector,CIO-4,,,01320-054280,
+CMP,14,Inspector,CIO-5,,,01320-054281,
+CMP,15,Inspector,CIO-6,,,01320-054282,
+CMP,16,Inspector,CIO-7,,,01320-054283,
+CMP,17,Inspector,CIO-8,,,01320-054284,
+CMP,18,Inspector,CIO-9,,,01320-054285,
+CMP,19,Inspector,CIO-10,,,01320-054286,
+CMP,20,Inspector,CIO-11,,,01320-054287,
+CMP,21,Inspector,CIO-12,,,01320-054288,
+CMP,22,Inspector,CIO-13,,,01320-054289,
+CMP,23,Inspector,CIO-14,,,01320-054290,
+CMP,24,Inspector,CIO-15,,,01320-054291,
+CMP,25,Inspector,CIO-16,,,01320-054292,
+CMP,26,Inspector,CIO-17,,,01320-054293,
+CMP,27,Inspector,CIO-18,,,01320-054294,
+CMP,28,Reserved for DC CSB Office,Reserved (83 SIM),,,01320054295-01320054377,
+CMP,POM,,,,,,
+CMP,1,DC,POM North,624357,01713-373239,01320-054378,dpcpomcmp@police.gov.bd
+CMP,2,ADC,POM North,,,01320-054379,
+CMP,3,ADC,Reserved (04 SIM),,,01320054380-01320054383,
+CMP,4,AC,POM North,,,01320-054384,
+CMP,5,AC,POM North,,,01320-054385,
+CMP,6,AC,Reserved (08 SIM),,,01320054386-01320054393,
+CMP,7,Inspector,RI-POM,616647,01769-691202,01320-054394,
+CMP,8,Reserved for DC POM North Office,Reserved (25 SIM),,,01320054395-01320054419,
+CMP,9,DC,POM Port,622450,01769-694228,01320-054420,
+CMP,10,ADC,POM,621564,01769-058134,01320-054421,addldpcpomcmp@police.gov.bd
+CMP,11,ADC,Reserved (05 SIM),,,01320054422-01320054426,
+CMP,12,AC,POM Port,2852001,01713-373245,01320-054427,
+CMP,13,AC,Reserved (10 SIM),,,01320054428-01320054437,
+CMP,14,Inspector,RI-Port,726773,01769-691206,01320-054438,
+CMP,15,Reserved for DC POM Port Office,Reserved (21 SIM),,,01320054439-01320054459,
+CMP,CT,,,,,,
+CMP,1,DC,CT,,01769-694227,01320-054460,
+CMP,2,ADC,CT Port,,01713-373272,01320-054461,
+CMP,3,ADC,Reserved (10 SIM),,,01320054462-01320054471,
+CMP,4,AC,Reserved (20 SIM),,,01320054472-01320054491,
+CMP,5,,Incharge (Bomb Disposal),,,01320-054492,
+CMP,6,Reserved for DC CT Office,Reserved (107 SIM),,,01320054493-01320054599,
+CMP,In-service Training,,,,,,
+CMP,1,DC,In-service Training,,,01320-054600,
+CMP,2,ADC,In-service Training,,01769-690081,01320-054601,addldpcistcmp@police.gov.bd
+CMP,3,ADC,Reserved (05 SIM),,,01320054602-01320054606,
+CMP,4,AC,In-service Training,623240,01769-058136,01320-054607,srapcistcmp@police.gov.bd
+CMP,5,AC,Training,,,01320-054608,
+CMP,6,AC,Reserved (09 SIM),,,01320054609-01320054617,
+CMP,7,Reserved for DC In-service Training Office,Reserved (20 SIM),,,01320054618-01320054637,
+CMP,8,Reserved for CMP,Reserved (3360 SIM),,,01320054638-01320057997,
+CMP,9,CMP Control Room,,,,01320-057998,
+CMP,10,CMP Hot-Line,,,,01320-057999,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+CMP,,,,,,,
+Chattogram Range,Unit/Office Name: DIG  Chattogram Range.,,,,,,
+Chattogram Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail
+Chattogram Range,,,,,,,
+Chattogram Range,1,DIG,1,"031650120
+031655466",017133-73623,01320-107100,digchittagong@police.gov.bd
+Chattogram Range,2,,Reserved For DIG,,,01320-107101,
+Chattogram Range,3,Addl. DIG,Admin,"031652112
+031655451",01713373624,01320-107102,addldigchittagong@police.gov.bd
+Chattogram Range,4,Addl. DIG,Operation & Crime,,,01320-107103,
+Chattogram Range,5,,Reserved For Addl. DIG (08),,,"01320-107104
+01320-107111",
+Chattogram Range,6,SP,Estate & Welfare,,,01320-107112,
+Chattogram Range,7,SP,Discipline & Prosecution,,,01320-107113,
+Chattogram Range,8,,Reserved For SP (18),,,"01320-107114
+01320-107131",
+Chattogram Range,9,,Staff  Officers  to DIG,,01713-373625,01320-107132,
+Chattogram Range,10,Addl. SP,Admin,031655455,01769-690061,01320-107133,addldigchittagong@police.gov.bd
+Chattogram Range,11,Addl. SP,Estate & Welfare,0312551900,01769-693651,01320-107134,
+Chattogram Range,12,Addl. SP,O&C,0312552680,01769-693652,01320-107135,
+Chattogram Range,13,Addl. SP,Reserved For Addl. SP (27),,,"01320-107136
+01320-107162",
+Chattogram Range,14,ASP,O&C,01769-693653,,01320-107163,
+Chattogram Range,15,ASP,Reserved For ASP (28),,,"01320-107164
+01320-107191",
+Chattogram Range,16,Inspector,Cirme,01769-690062,,01320-107192,
+Chattogram Range,17,Inspector,Control  Room,01769-691159,,01320-107193,
+Chattogram Range,18,Inspector,Force,,,01320-107194,
+Chattogram Range,19,Inspector,Reserved  For Inspector (105),,,"01320-107195
+01320-107299",
+Chattogram Range,20,,Reserved For  DIG Chattogram Range (98),,,"01320-107300
+01320-107397",
+Chattogram Range,21,Contorl Room,,,,01320-107398,
+Chattogram Range,22,Hot line,,,,01320-107399,
+Chattogram Range,Unit/Office Name:  Chattogram District.,,,,,,
+Chattogram Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail
+Chattogram Range,,,,,,,
+Chattogram Range,1,SP,1,726863,01713-373627,01320-107400,spchittagong@police.gov.bd
+Chattogram Range,2,SP,Reserved For SP,,,01320-107401,
+Chattogram Range,3,Addl. SP,Admin,726868,01713-373628,01320-107402,addlsphp.chi@police.gov.bd
+Chattogram Range,4,Addl. SP,Crime,726870,01713-373629,01320-107403,
+Chattogram Range,5,Addl. SP,DSB,726871,01713-373630,01320-107404,addlsps.chi@police.gov.bd
+Chattogram Range,6,Addl. SP,Headquarters,,01713-373631,01320-107405,
+Chattogram Range,7,,Reserved For Addl. SP  (06),726874,01713-373632,"01320-107406
+01320-107411",
+Chattogram Range,8,ASP,DSB,,,01320-107412,
+Chattogram Range,9,ASP,SAF,,,01320-107413,
+Chattogram Range,10,ASP,Industrial,,,01320-107414,
+Chattogram Range,11,,Reserved For ASP (07),,,"01320-107415
+01320-107421",
+Chattogram Range,12,,Reserved For SP Office (24),,,"01320-107422
+01320-107445",
+Chattogram Range,13,Addl. SP,Sitakunda Circle,03028-56030,01769-690578,01320-107446,asp.sit.chi@police.gov.bd
+Chattogram Range,14,,Reserved For Addl. SP Sitakunda Circle  (4),,,"01320-107447
+01320-107450",
+Chattogram Range,15,Addl. SP,Hathazari Circle,2601069,01713-373634,01320-107451,asp.hat.chi@police.gov.bd
+Chattogram Range,16,,Reserved For Addl. SP Hathazari Circle   (4),,,"01320-107452
+01320-107455",
+Chattogram Range,17,Addl. SP,Patiya  Circle,03035-56325,01713-373635,01320-107456,
+Chattogram Range,18,,Reserved For Addl. SP Patiya Circle   (4),,,"01320-107457
+01320-107460",
+Chattogram Range,19,Addl. SP,Satkania Circle,03036-56212,01713-373636,01320-107461,asp.sat.chi@police.gov.bd
+Chattogram Range,20,Addl. SP,Reserved For  Addl. SP Satkania Circle    (4),,01713-373637,"01320-107462
+01320-107465",
+Chattogram Range,21,ASP,Mirsarai Cricle,,01713-373637,01320-107466,
+Chattogram Range,22,,Reserved For ASP Mirsarai Cricle     (4),,,"01320-107467
+01320-107470",
+Chattogram Range,23,ASP,Rangunia Cricle,,01769-693214,01320-107471,
+Chattogram Range,24,,Reserved For ASP Rangunia Cricle     (4),,,"01320-107472
+01320-107475",
+Chattogram Range,25,ASP,Anwara Cricle,03029-56277,01769-693213,01320-107476,
+Chattogram Range,26,,Reserved For ASP Anwara Cricle     (4),,,"01320-107477
+01320-107480",
+Chattogram Range,27,Inspector,DIO-1,726837,01713-373638,01320-107481,
+Chattogram Range,28,Inspector,DIO-2,,,01320-107482,
+Chattogram Range,29,Inspector,DIO-3,,,01320-107483,
+Chattogram Range,30,Inspector,DIO-4,,,01320-107484,
+Chattogram Range,31,Inspector,DIO-5,,,01320-107485,
+Chattogram Range,32,,Reserved For DIO (10),,,"01320-107486
+01320-107495",
+Chattogram Range,33,Inspector,OC Sitakondo  Model  Thana,03028-56103,01713-373645,01320-107496,OCchi.shi@police.gov.bd
+Chattogram Range,34,Inspector,Invest. Sitakondo  Model  Thana,,01769-694258,01320-107497,
+Chattogram Range,35,Inspector,Operation Sitakondo Model Thana,,,01320-107498,
+Chattogram Range,36,Inspector,Reserved-1,,,01320-107499,
+Chattogram Range,37,Inspector,Reserved-2,,,01320-107500,
+Chattogram Range,38,,Duty officer,,,01320-107501,
+Chattogram Range,39,,Reserved For Sitakondo  Model  Thana (20),,,"01320-107502
+01320-107521",
+Chattogram Range,40,Inspector,OC Sondip Thana,03027-56216,01713-373652,01320-107522,OCchi.sha@police.gov.bd
+Chattogram Range,41,Inspector,Invest. Sondip  Thana,,01769-694261,01320-107523,
+Chattogram Range,42,Inspector,Operation Sondip Thana,,,01320-107524,
+Chattogram Range,43,Inspector,Reserved-1,,,01320-107525,
+Chattogram Range,44,Inspector,Reserved-2,,,01320-107526,
+Chattogram Range,45,,Duty officer,,,01320-107527,
+Chattogram Range,46,,Reserved For Sondip Thana  (20),,,"01320-107528
+01320-107547",
+Chattogram Range,47,Inspector,OC Mirsarai Thana,,01713-373644,01320-107548,OCchi.mir@police.gov.bd
+Chattogram Range,48,Inspector,Invest. Mirsarai Thana,,01769-694259,01320-107549,
+Chattogram Range,49,Inspector,Operation Mirsarai Thana,,,01320-107550,
+Chattogram Range,50,Inspector,Reserved-1,,,01320-107551,
+Chattogram Range,51,Inspector,Reserved-2,,,01320-107552,
+Chattogram Range,52,,Duty officer,,,01320-107553,
+Chattogram Range,53,,Reserved For Mirsarai Thana  (20),,01769-693234,"01320-107554
+01320-107573",
+Chattogram Range,54,Inspector,OC  Jorargonj Thana,,01769-690579,01320-107574,
+Chattogram Range,55,Inspector,Invest. Jorargonj Thana,,01769-694260,01320-107575,
+Chattogram Range,56,Inspector,Operation Jorargonj Thana,,,01320-107576,
+Chattogram Range,57,Inspector,Reserved-1,,,01320-107577,
+Chattogram Range,58,Inspector,Reserved-2,,,01320-107578,
+Chattogram Range,59,,Duty officer,,,01320-107579,
+Chattogram Range,60,,Reserved For Jorargong Thana (20),,,"01320-107580
+01320-107599",
+Chattogram Range,61,Inspector,OC Hathazari Model Thana,2601009,01713-373640,01320-107600,OCchi.hat@police.gov.bd
+Chattogram Range,62,Inspector,Invest. Hathazari Model Thana,,01769-694262,01320-107601,
+Chattogram Range,63,Inspector,Operation Hathazari Model Thana,,,01320-107602,
+Chattogram Range,64,Inspector,Reserved-1,,,01320-107603,
+Chattogram Range,65,Inspector,Reserved-2,,,01320-107604,
+Chattogram Range,66,,Duty officer,,,01320-107605,
+Chattogram Range,67,,Reserved For Hatajari Model Thana  (20),,,"01320-107606
+01320-107625",
+Chattogram Range,68,Inspector,OC Fotikchori Thana,03022-56001,01713-373641,01320-107626,OCchi.ran@police.gov.bd
+Chattogram Range,69,Inspector,Invest. Fotikchori Thana,,01769-694263,01320-107627,
+Chattogram Range,70,Inspector,Operation Fotikchori Thana,,,01320-107628,
+Chattogram Range,71,Inspector,Reserved-1,,,01320-107629,
+Chattogram Range,72,Inspector,Reserved-2,,,01320-107630,
+Chattogram Range,73,,Duty officer,,,01320-107631,
+Chattogram Range,74,,Reserved For Fotikchori Thana (20),,,"01320-107632
+01320-107651",
+Chattogram Range,75,Inspector,OC Bojpur Thana,,01713-374600,01320-107652,
+Chattogram Range,76,Inspector,Invest. Bojpur Thana,,01769-694264,01320-107653,
+Chattogram Range,77,Inspector,Operation Bojpur Thana,,,01320-107654,
+Chattogram Range,78,Inspector,Reserved-1,,,01320-107655,
+Chattogram Range,79,Inspector,Reserved-2,,,01320-107656,
+Chattogram Range,80,,Duty officer,,,01320-107657,
+Chattogram Range,81,,Reserved For Bojpur Thana (20),,,"01320-107658
+01320-107677",
+Chattogram Range,82,Inspector,OC Rangunia Thana,03025-56018,01713-373653,01320-107678,OCchi.fat@police.gov.bd
+Chattogram Range,83,Inspector,Invest. Rangunia Thana,,01769-694266,01320-107679,
+Chattogram Range,84,Inspector,Operation Rangunia Thana,,,01320-107680,
+Chattogram Range,85,Inspector,Reserved-1,,,01320-107681,
+Chattogram Range,86,Inspector,Reserved-2,,,01320-107682,
+Chattogram Range,87,,Duty officer,,,01320-107683,
+Chattogram Range,88,,Reserved For Raguniya Thana (20),,,"01320-107684
+01320-107703",
+Chattogram Range,89,Inspector,OC Raojan Thana,03026-56009,01713-373649,01320-107704,OCchi.rau@police.gov.bd
+Chattogram Range,90,Inspector,Inesvt.  Raojan Thana,,01769-694265,01320-107705,
+Chattogram Range,91,Inspector,Operation Raojan Thana,,,01320-107706,
+Chattogram Range,92,Inspector,Reserved-1,,,01320-107707,
+Chattogram Range,93,Inspector,Reserved-2,,,01320-107708,
+Chattogram Range,94,,Duty officer,,,01320-107709,
+Chattogram Range,95,,Reserved For  Raojan Thana  (20),,"01320-107710
+01320-107699","01320-107710
+01320-107729",
+Chattogram Range,96,Inspector,OC Patiya Thana,,01713-373643,01320-107730,OCchi.pat@police.gov.bd
+Chattogram Range,97,Inspector,Inesvt. Patiya Thana,03035-56213,01769-694267,01320-107731,
+Chattogram Range,98,Inspector,Operation Patiya Thana,,,01320-107732,
+Chattogram Range,99,Inspector,Reserved-1,,,01320-107733,
+Chattogram Range,100,Inspector,Reserved-2,,,01320-107734,
+Chattogram Range,101,,Duty officer,,,01320-107735,
+Chattogram Range,102,,Reserved For Patiya Thana  (20),,,"01320-107736
+01320-107755",
+Chattogram Range,103,Inspector,OC Boalkhali Thana,03032-56049,01713-373647,01320-107756,OCchi.boa@police.gov.bd
+Chattogram Range,104,Inspector,inest. Boalkhali Thana,,01769-694268,01320-107757,
+Chattogram Range,105,Inspector,Operation Boalkhali Thana,,,01320-107758,
+Chattogram Range,106,Inspector,Reserved-1,,,01320-107759,
+Chattogram Range,107,Inspector,Reserved-2,,,01320-107760,
+Chattogram Range,108,,Duty officer,,,01320-107761,
+Chattogram Range,109,,Reserved For Boalkhali Thana (20),,,"01320-107762
+01320-107781",
+Chattogram Range,110,Inspector,OC Satkaniya Thana,03036-56311,01713-373649,01320-107782,OCchi.shk@police.gov.bd
+Chattogram Range,111,Inspector,OC invest. Satkaniya Thana,,01769-694271,01320-107783,
+Chattogram Range,112,Inspector,Operation Satakaniya Thana,,,01320-107784,
+Chattogram Range,113,Inspector,Reserved-1,,,01320-107785,
+Chattogram Range,114,Inspector,Reserved-2,,,01320-107786,
+Chattogram Range,115,,Duty officer,,,01320-107787,
+Chattogram Range,116,,Reserved For Satkaniya Thana (20),,,"01320-107788
+01320-107807",
+Chattogram Range,117,Inspector,OC Lohagarh Thana,03034-56101,01713-373650,01320-107808,OCchi.loh@police.gov.bd
+Chattogram Range,118,Inspector,Invest. Lohagarha Thana,,01769-694273,01320-107809,
+Chattogram Range,119,Inspector,Operation Lohagarha Thana,,,01320-107810,
+Chattogram Range,120,Inspector,Reserved-1,,,01320-107811,
+Chattogram Range,121,Inspector,Reserved-2,,,01320-107812,
+Chattogram Range,122,,Duty officer,,,01320-107813,
+Chattogram Range,123,,Reserved For Lohagarh Thana (20),,,"01320-107814
+01320-107833",
+Chattogram Range,124,Inspector,OC Anawara Thana,03029-56002,01713-373646,01320-107834,OCchi.ano@police.gov.bd
+Chattogram Range,125,Inspector,Invest.Anawara Thana,,01769-694269,01320-107835,
+Chattogram Range,126,Inspector,Operation Anawara Thana,,,01320-107836,
+Chattogram Range,127,Inspector,Reserved-1,,,01320-107837,
+Chattogram Range,128,Inspector,Reserved-2,,,01320-107838,
+Chattogram Range,129,,Duty officer,,,01320-107839,
+Chattogram Range,130,,Reserved For Anawara Thana (20),,,"01320-107840
+01320-107859",
+Chattogram Range,131,Inspector,OC Banshkhali Thana,03037-56005,01713-373648,01320-107860,OCchi.bas@police.gov.bd
+Chattogram Range,132,Inspector,Invest. Baskhali Thana,,01769-694272,01320-107861,
+Chattogram Range,133,Inspector,Operation Bashkahli Thana,,,01320-107862,
+Chattogram Range,134,Inspector,Reserved-1,,,01320-107863,
+Chattogram Range,135,Inspector,Reserved-2,,,01320-107864,
+Chattogram Range,136,,Duty officer,,,01320-107865,
+Chattogram Range,137,,Reserved For Banshkhali Tahan (20),,,"01320-107866
+01320-107885",
+Chattogram Range,138,Inspector,OC Chandnaish Thana,3033-56002,01713-373651,01320-107886,OCchi.cha@police.gov.bd
+Chattogram Range,139,Inspector,Invest. Chandnaish Thana,,01769-694270,01320-107887,
+Chattogram Range,140,Inspector,Operation Chandnaish Thana,,,01320-107888,
+Chattogram Range,141,Inspector,Reserved-1,,,01320-107889,
+Chattogram Range,142,Inspector,Reserved-2,,,01320-107890,
+Chattogram Range,143,,Duty officer,,,01320-107891,
+Chattogram Range,144,,Reserved For Chandnaish Thana  (20),,,"01320-107892
+01320-107911",
+Chattogram Range,145,Inspector,DB-1,,,01320-107912,
+Chattogram Range,146,Inspector,DB-2,,,01320-107913,
+Chattogram Range,147,Inspector,DB-3,,,01320-107914,
+Chattogram Range,148,Inspector,DB-4,,,01320-107915,
+Chattogram Range,149,Inspector,DB-5,,,01320-107916,
+Chattogram Range,150,,Reserved For DB  (10),,,"01320-107917
+01320-107926",
+Chattogram Range,151,Inspector,Court-1,,,01320-107927,
+Chattogram Range,152,Inspector,Court-2,,,01320-107928,
+Chattogram Range,153,Inspector,Court-3,,,01320-107929,
+Chattogram Range,154,Inspector,Court-4,,,01320-107930,
+Chattogram Range,155,Inspector,Court-5,,,01320-107931,
+Chattogram Range,156,,Reserved For Court (10),,,"01320-107932
+01320-107941",
+Chattogram Range,157,Inspector,TI-1,,,01320-107942,
+Chattogram Range,158,Inspector,TI-2,,,01320-107943,
+Chattogram Range,159,Inspector,TI-3,,,01320-107944,
+Chattogram Range,160,Inspector,TI-4,,,01320-107945,
+Chattogram Range,161,Inspector,TI-5,,,01320-107946,
+Chattogram Range,162,,Reserved For TI (10),,,"01320-107947
+01320-107956",
+Chattogram Range,163,Inspector,RI,,,01320-107957,
+Chattogram Range,164,,Reserved For Police Line (15),,,"01320-107958
+01320-107972",
+Chattogram Range,165,,Reserved For District (425),,,"01320-107973
+01320-108397",
+Chattogram Range,166,Control Room,,,,01320-108398,
+Chattogram Range,167,Hot line,,,,01320-108399,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,Unit/Office Name:  Cox's Bazar District.,,,,,,
+Chattogram Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail
+Chattogram Range,,,,,,,
+Chattogram Range,1,SP,1,"0341-63270
+0341-63296",01713-373657,01320-108400,spcoxsbazar@police.gov.bd
+Chattogram Range,2,SP,Reserved For SP,,,01320-108401,
+Chattogram Range,3,Addl. SP,Admin,0341-63681,01713-373658,01320-108402,addlspcoxsbazar@gmail.com
+Chattogram Range,4,Addl. SP,Crime,0341-64063,01713-373659,01320-108403,asphqcoxsbazar@gmail.com
+Chattogram Range,5,Addl. SP,DSB,0341-64059,01769-690999,01320-108404,addspcoxsadarcircle@gmail.com
+Chattogram Range,6,Addl. SP,Headquarters,03427-56118,01713-373661,01320-108405,ukhiyacircle@gmail.com
+Chattogram Range,7,,Reserved For Addl. SP  (06),,,"01320-108406
+01320-108411",
+Chattogram Range,8,ASP,DSB,,,01320-108412,
+Chattogram Range,9,ASP,Traffic,,,01320-108413,
+Chattogram Range,10,,Reserved For ASP (08),,,"01320-108414
+01320-108421",
+Chattogram Range,11,,Reserved For SP Office (24),,,"01320-108422
+01320-108445",
+Chattogram Range,12,ASP,Chakraya Cricle,03422-56191,01713-373660,01320-108446,
+Chattogram Range,13,,Reserved For Chakraya Cricle (4),,,"01320-108447
+01320-108450",
+Chattogram Range,14,ASP,Maheshkhali Cricle,,01769-694873,01320-108451,
+Chattogram Range,15,,Reserved For Maheshkhali Cricle (4),,,"01320-108452
+01320-108455",
+Chattogram Range,16,Inspector,DIO-1,0341-64237,01713-373662,01320-108456,
+Chattogram Range,17,Inspector,DIO-2,,,01320-108457,
+Chattogram Range,18,Inspector,DIO-3,,,01320-108458,
+Chattogram Range,19,Inspector,DIO-4,,,01320-108459,
+Chattogram Range,20,Inspector,DIO-5,,,01320-108460,
+Chattogram Range,21,,Reserved For DIO (10),,,"01320-108461
+01320-108470",
+Chattogram Range,22,Inspector,OC Sadar Model Thana,0341-64023,01713-373663,01320-108471,OCcoxsbazarmodelps@gmail.com
+Chattogram Range,23,Inspector,Invest.  Sadar Model Thana,,01713-374622,01320-108472,
+Chattogram Range,24,Inspector,Operation Sadar Model Thana,,,01320-108473,
+Chattogram Range,25,Inspector,Reserved-1,,,01320-108474,
+Chattogram Range,26,Inspector,Reserved-2,,,01320-108475,
+Chattogram Range,27,,Duty officer,,,01320-108476,
+Chattogram Range,28,,Reserved For Sadar Model Thana (20),,,"01320-108477
+01320-108496",
+Chattogram Range,29,Inspector,OC Ramu Thana,03425-56016,01713-373664,01320-108497,OCramups@gmail.com
+Chattogram Range,30,Inspector,Invest. Ramu Thana,,01730-336361,01320-108498,
+Chattogram Range,31,Inspector,Operation Ramu Thana,,,01320-108499,
+Chattogram Range,32,Inspector,Reserved-1,,,01320-108500,
+Chattogram Range,33,Inspector,Reserved-2,,,01320-108501,
+Chattogram Range,34,,Duty officer,,,01320-108502,
+Chattogram Range,35,,Reserved For Ramu Thana (20),,,"01320-108503
+01320-108522",
+Chattogram Range,36,Inspector,OC Ukhia Thana,03427-56103,01713-373665,01320-108523,OCukhiaps@gmail.com
+Chattogram Range,37,Inspector,Invest. Ukhia Thana,,01713-374626,01320-108524,
+Chattogram Range,38,Inspector,Operation Ukhia Thana,,,01320-108525,
+Chattogram Range,39,Inspector,Reserved-1,,,01320-108526,
+Chattogram Range,40,Inspector,Reserved-2,,,01320-108527,
+Chattogram Range,41,,Duty officer,,,01320-108528,
+Chattogram Range,42,,Reserved For Ukhia Thana (20),,,"01320-108529
+01320-108548",
+Chattogram Range,43,Inspector,OC Teknaf Thana,,01713-373666,01320-108549,OCteknafps@gmail.com
+Chattogram Range,44,Inspector,Invest. Teknaf  Thana,,01730-336362,01320-108550,
+Chattogram Range,45,Inspector,Operation Teknaf Thana,,,01320-108551,
+Chattogram Range,46,Inspector,Reserved-1,,,01320-108552,
+Chattogram Range,47,Inspector,Reserved-2,,,01320-108553,
+Chattogram Range,48,,Duty officer,,,01320-108554,
+Chattogram Range,49,,Reserved For Teknaf Thana  (20),,,"01320-108555
+01320-108574",
+Chattogram Range,50,Inspector,OC  Chakaria Thana,03422-56029,01713-373667,01320-108575,
+Chattogram Range,51,Inspector,Invest. Chakaria Thana,,01713-374623,01320-108576,
+Chattogram Range,52,Inspector,Operation Chakaria Thana,,,01320-108577,
+Chattogram Range,53,Inspector,Reserved-1,,,01320-108578,
+Chattogram Range,54,Inspector,Reserved-2,,,01320-108579,
+Chattogram Range,55,,Duty officer,,,01320-108580,
+Chattogram Range,56,,Reserved For Chakaria Thana  (20),,,"01320-108581
+01320-108600",
+Chattogram Range,57,Inspector,OC Pekua Thana,03428-56002,01713-373670,01320-108601,
+Chattogram Range,58,Inspector,Inevst. Pekua Thana,,01713-374624,01320-108602,
+Chattogram Range,59,Inspector,Operation Pekua Thana,,,01320-108603,
+Chattogram Range,60,Inspector,Reserved-1,,,01320-108604,
+Chattogram Range,61,Inspector,Reserved-2,,,01320-108605,
+Chattogram Range,62,,Duty officer,,,01320-108606,
+Chattogram Range,63,,Reserved For Pekua Thana  (20),,,"01320-108607
+01320-108626",
+Chattogram Range,64,Inspector,OC  Maheshkhali Thana,03424-74203,01713-373669,01320-108627,
+Chattogram Range,65,Inspector,Invest.  Maheshkhali Thana,,01713-374625,01320-108628,
+Chattogram Range,66,Inspector,Operation Maheshkhali Thana,,,01320-108629,
+Chattogram Range,67,Inspector,Reserved-1,,,01320-108630,
+Chattogram Range,68,Inspector,Reserved-2,,,01320-108631,
+Chattogram Range,69,,Duty officer,,,01320-108632,
+Chattogram Range,70,,Reserved For Maheshkhali Thana  (20),,,"01320-108633
+01320-108652",
+Chattogram Range,71,Inspector,OC Kutubdia Thana,03423-56003,01713-373668,01320-108653,
+Chattogram Range,72,Inspector,Invest. Kutubdia Thana,,01769-695700,01320-108654,
+Chattogram Range,73,Inspector,Operation Kutubdia Thana,,,01320-108655,
+Chattogram Range,74,Inspector,Reserved-1,,,01320-108656,
+Chattogram Range,75,Inspector,Reserved-2,,,01320-108657,
+Chattogram Range,76,,Duty officer,,,01320-108658,
+Chattogram Range,77,,Reserved For Kutubdia Thana (20),,,"01320-108659
+01320-108678",
+Chattogram Range,78,Inspector,DB-1,,01713-373671,01320-108679,
+Chattogram Range,79,Inspector,DB-2,,,01320-108680,
+Chattogram Range,80,Inspector,DB-3,,,01320-108681,
+Chattogram Range,81,Inspector,DB-4,,,01320-108682,
+Chattogram Range,82,Inspector,DB-5,,,01320-108683,
+Chattogram Range,83,,Reserved For DB (10),,,"01320-108684
+01320-108693",
+Chattogram Range,84,Inspector,Court-1,,,01320-108694,
+Chattogram Range,85,Inspector,Court-2,,,01320-108695,
+Chattogram Range,86,Inspector,Court-3,,,01320-108696,
+Chattogram Range,87,Inspector,Court-4,,,01320-108697,
+Chattogram Range,88,Inspector,Court-5,,,01320-108698,
+Chattogram Range,89,,Reserved For Court (10),,,"01320-108699
+01320-108708",
+Chattogram Range,90,Inspector,TI-1,,,01320-108709,
+Chattogram Range,91,Inspector,TI-2,,,01320-108710,
+Chattogram Range,92,Inspector,TI-3,,,01320-108711,
+Chattogram Range,93,Inspector,TI-4,,,01320-108712,
+Chattogram Range,94,Inspector,TI-5,,,01320-108713,
+Chattogram Range,95,,Reserved For TI (10),,,"01320-108714
+01320-108723",
+Chattogram Range,96,Inspector,RI,,,01320-108724,
+Chattogram Range,97,,Reserved For Police Line (15),,,"01320-108725
+01320-108739",
+Chattogram Range,98,,Reserved For Police Line (658),,,"01320-108740
+01320-109397",
+Chattogram Range,99,Control Room,,,,01320-109398,
+Chattogram Range,100,Hot line,,,,01320-109399,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,Unit/Office Name:  Rangamati District.,,,,,,
+Chattogram Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail
+Chattogram Range,,,,,,,
+Chattogram Range,1,Sp,1,"62204 
+63136",01713-373675,01320-109400,sprangamati@police.gov.bd
+Chattogram Range,2,SP,Reserved For SP,,,01320-109401,
+Chattogram Range,3,Addl. SP,Admin,62171,01730-336137,01320-109402,addlspsabrht@police.gov.bd
+Chattogram Range,4,Addl. SP,Crime,63191,01730-336139,01320-109403,addlspcrirht@police.gov.bd
+Chattogram Range,5,Addl. SP,DSB,62028,01730-336138,01320-109404,addlspdsbrht@police.gov.bd
+Chattogram Range,6,Addl. SP,Headquarters,,01730-336140,01320-109405,
+Chattogram Range,7,,Reserved For SP Office (06),,,"01320-109406
+01320-109411",
+Chattogram Range,8,ASP,DSB,,,01320-109412,
+Chattogram Range,9,ASP,SAF,,,01320-109413,
+Chattogram Range,10,ASP,Earth satellite center,,,01320-109414,
+Chattogram Range,11,,Reserved For ASP (07),,,"01320-109415
+01320-109421",
+Chattogram Range,12,,Reserved For SP Office (24),,,"01320-109422
+01320-109445",
+Chattogram Range,13,Addl. SP,Sadar Cricle,62034,01730-336141,01320-109446,aspsadcirrht@police.gov.bd
+Chattogram Range,14,,Reserved For Addl. SP  Sadar Cricle (4),,,"01320-109447
+01320-109450",
+Chattogram Range,15,Addl. SP,Kaptay Cricle,03529-56212,01769-690198,01320-109451,aspkapcirrht@police.gov.bd
+Chattogram Range,16,,Reserved For Addl. SP Kaptay Cricle (4),,,"01320-109452
+01320-109455","01320-109447
+01320-109420"
+Chattogram Range,17,Addl. SP,Barkal  Cricle,,,01320-109456,
+Chattogram Range,18,,Reserved For Addl. SP Barkal Cricle (4),,,"01320-109457
+01320-109460",
+Chattogram Range,19,ASP,Baghaichhari Cricle,,,01320-109461,
+Chattogram Range,20,,Reserved For ASP Baghaichhari Cricle  (4),,,"01320-109462
+01320-109465",
+Chattogram Range,21,Inspector,DIO-1,62064,01730-336143,01320-109466,dio 1 rht@police.gov.bd
+Chattogram Range,22,Inspector,DIO-2,,,01320-109467,
+Chattogram Range,23,Inspector,DIO-3,,,01320-109468,
+Chattogram Range,24,Inspector,DIO-4,,,01320-109469,
+Chattogram Range,25,Inspector,DIO-5,,,01320-109470,
+Chattogram Range,26,,Reserved For DIO (10),,,"01320-109471
+01320-109480",
+Chattogram Range,27,Inspector,OC Kotwali Thana,62060,01730-336145,01320-109481,OCrht.kot@police.gov.bd
+Chattogram Range,28,Inspector,Invest. Kotwali Thana,,01769-690205,01320-109482,
+Chattogram Range,29,Inspector,Operation Kotwali Thana,,,01320-109483,
+Chattogram Range,30,Inspector,Reserved-1,,,01320-109484,
+Chattogram Range,31,Inspector,Reserved-2,,,01320-109485,
+Chattogram Range,32,,Duty officer,,,01320-109486,
+Chattogram Range,33,,Reserved For Kotoyali Thana  (20),,,"01320-109487
+01320-109506",
+Chattogram Range,34,Inspector,OC Naniarchar Thana,41003,01769-694595,01320-109507,OCrht.nan@police.gov.bd
+Chattogram Range,35,Inspector,Invest. Naniyarchor Thana,,01769-694596,01320-109508,
+Chattogram Range,36,Inspector,Operation Naniyarchor Thana,,,01320-109509,
+Chattogram Range,37,Inspector,Reserved-1,,,01320-109510,
+Chattogram Range,38,Inspector,Reserved-2,,,01320-109511,
+Chattogram Range,39,,Duty officer,,,01320-109512,
+Chattogram Range,40,,Reserved For Naniarchar Thana   (20),,,"01320-109513
+01320-109532",
+Chattogram Range,41,Inspector,OC Kawkhali Thana,31007,01769-690199,01320-109533,OCrht.kou@police.gov.bd
+Chattogram Range,42,Inspector,Invest. Kawkhali Thana,,01769-690200,01320-109534,
+Chattogram Range,43,Inspector,Operation Kawkhali Thana,,,01320-109535,
+Chattogram Range,44,Inspector,Reserved-1,,,01320-109536,
+Chattogram Range,45,Inspector,Reserved-2,,,01320-109537,
+Chattogram Range,46,,Duty officer,,,01320-109538,
+Chattogram Range,47,,Reserved For Kawkhali Thana   (20),,,"01320-109539
+01320-109558",
+Chattogram Range,48,Inspector,OC Kaptai Thana,,01769-690201,01320-109559,OCrht.kap@police.gov.bd
+Chattogram Range,49,Inspector,Invest. Kaptai Thana,,01769-690202,01320-109560,
+Chattogram Range,50,Inspector,Operation Kaptai Thana,,,01320-109561,
+Chattogram Range,51,Inspector,Reserved-1,,,01320-109562,
+Chattogram Range,52,Inspector,Reserved-2,,,01320-109563,
+Chattogram Range,53,,Duty officer,,,01320-109564,
+Chattogram Range,54,,Reserved For kaptai Thana   (20),,"01320-109565
+01320-109554","01320-109565
+01320-109584",
+Chattogram Range,55,Inspector,OC Chondroghona Thana,,01769-690203,01320-109585,OCrht.cha@police.gov.bd
+Chattogram Range,56,Inspector,Invest. Chondroghona Thana,,01769-690204,01320-109586,
+Chattogram Range,57,Inspector,Operation Chondroghona Thana,,,01320-109587,
+Chattogram Range,58,Inspector,Reserved-1,,,01320-109588,
+Chattogram Range,59,Inspector,Reserved-2,,,01320-109589,
+Chattogram Range,60,,Duty officer,,,01320-109590,
+Chattogram Range,61,,Reserved For Chondroghona Thana  (20),,,"01320-109591
+01320-109610",
+Chattogram Range,62,Inspector,OC Langadu Thana,42013,01769-694591,01320-109611,OCrht.lon@police.gov.bd
+Chattogram Range,63,Inspector,Invest. Langadu Thana,,01769-694592,01320-109612,
+Chattogram Range,64,Inspector,Operation Langadu Thana,,,01320-109613,
+Chattogram Range,65,Inspector,Reserved-1,,,01320-109614,
+Chattogram Range,66,Inspector,Reserved-2,,,01320-109615,
+Chattogram Range,67,,Duty officer,,,01320-109616,
+Chattogram Range,68,,Reserved For Langadu Thana (20),,,"01320-109617
+01320-109636",
+Chattogram Range,69,Inspector,OC Bagichhari Thana,0371-56009,01769-694593,01320-109637,OCrht.bag@police.gov.bd
+Chattogram Range,70,Inspector,Inevst. Bagichhari Thana,,01769-694594,01320-109638,
+Chattogram Range,71,Inspector,Operation Bagichhari Thana,,,01320-109639,
+Chattogram Range,72,Inspector,Reserved-1,,,01320-109640,
+Chattogram Range,73,Inspector,Reserved-2,,,01320-109641,
+Chattogram Range,74,,Duty officer,,,01320-109642,
+Chattogram Range,75,,Reserved For Bagichhari Thana (20),,,"01320-109643
+01320-109662","01320-109643
+01320-109662"
+Chattogram Range,76,Inspector,OC Rajasthali Thana,81002,,01320-109663,OCrht.rsj@police.gov.bd
+Chattogram Range,77,Inspector,Inevst. Rajasthali Thana,,,01320-109664,
+Chattogram Range,78,Inspector,Operation Rajasthali Thana,,,01320-109665,
+Chattogram Range,79,Inspector,Reserved-1,,,01320-109666,
+Chattogram Range,80,Inspector,Reserved-2,,,01320-109667,
+Chattogram Range,81,,Duty officer,,,01320-109668,
+Chattogram Range,82,,Reserved For Rajasthali Thana  (20),,,"01320-109669
+01320-109688",
+Chattogram Range,83,Inspector,OC Jurachari Thana,,,01320-109689,OCrht.jur@police.gov.bd
+Chattogram Range,84,Inspector,Inevst. Jurachari Thana,,,01320-109690,
+Chattogram Range,85,Inspector,Operation Jurachari Thana,,,01320-109691,
+Chattogram Range,86,Inspector,Reserved-1,,,01320-109692,
+Chattogram Range,87,Inspector,Reserved-2,,,01320-109693,
+Chattogram Range,88,,Duty officer,,,01320-109694,
+Chattogram Range,89,,Reserved For Jurachari Thana  (20),,,"01320-109695
+01320-109714",
+Chattogram Range,90,Inspector,OC  Sajak Thana,63015,,01320-109715,OCrht.saj@police.gov.bd
+Chattogram Range,91,Inspector,Inevst. Sajak Thana,,,01320-109716,
+Chattogram Range,92,Inspector,Operation Sajak Thana,,,01320-109717,
+Chattogram Range,93,Inspector,Reserved-1,,,01320-109718,
+Chattogram Range,94,Inspector,Reserved-2,,,01320-109719,
+Chattogram Range,95,,Duty officer,,,01320-109720,
+Chattogram Range,96,,Reserved For Sajak Thana  (20),,,"01320-109721
+01320-109740",
+Chattogram Range,97,Inspector,OC Bilaichhari Thana,91009,,01320-109741,OCrht.bil@police.gov.bd
+Chattogram Range,98,Inspector,Inevst.  Bilaichhari Thana,,,01320-109742,
+Chattogram Range,99,Inspector,Operation Bilaichhari Thana,,,01320-109743,
+Chattogram Range,100,Inspector,Reserved-1,,,01320-109744,
+Chattogram Range,101,Inspector,Reserved-2,,,01320-109745,
+Chattogram Range,102,,Duty officer,,,01320-109746,
+Chattogram Range,103,,Reserved For  Bilaichhari Thana  (20),,,"01320-109747
+01320-109766",
+Chattogram Range,104,Inspector,DB-1,,,01320-109767,
+Chattogram Range,105,Inspector,DB-2,,,01320-109768,
+Chattogram Range,106,Inspector,DB-3,,,01320-109769,
+Chattogram Range,107,Inspector,DB-4,,,01320-109770,
+Chattogram Range,108,Inspector,DB-5,,,01320-109771,
+Chattogram Range,109,,Reserved For DB (10),,,"01320-109772
+01320-109781",
+Chattogram Range,110,Inspector,Court-1,,01730-336144,01320-109782,
+Chattogram Range,111,Inspector,Court-2,,01769-694597,01320-109783,
+Chattogram Range,112,Inspector,Court-3,,,01320-109784,
+Chattogram Range,113,Inspector,Court-4,,,01320-109785,
+Chattogram Range,114,Inspector,Court-5,,,01320-109786,
+Chattogram Range,115,,Reserved For Court (10),,,"01320-109787
+01320-109796",
+Chattogram Range,116,Inspector,TI-1,,,01320-109797,
+Chattogram Range,117,Inspector,TI-2,,,01320-109798,
+Chattogram Range,118,Inspector,TI-3,,,01320-109799,
+Chattogram Range,119,Inspector,TI-4,,,01320-109800,
+Chattogram Range,120,Inspector,TI-5,,,01320-109801,
+Chattogram Range,121,,Reserved For TI (10),,,"01320-109802
+01320-109811",
+Chattogram Range,122,Inspector,RI,,,01320-109812,
+Chattogram Range,123,,Reserved For Police Line (15),,,"01320-109813
+01320-109827",
+Chattogram Range,124,,Reserved For District (70),,,"01320-109828
+01320-109897",
+Chattogram Range,125,Control Room,,,,01320-109898,
+Chattogram Range,126,Hot line,,,,01320-109899,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,Unit/Office Name:  Khagrachari District.,,,,,,
+Chattogram Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail
+Chattogram Range,,,,,,,
+Chattogram Range,1,SP,1,"61655
+61932",01713-373677,01320-109900,spkhagrachari@police.gov.bd
+Chattogram Range,2,SP,Reserved For SP,,,01320-109901,
+Chattogram Range,3,Addl.SP,Admin,,,01320-109902,
+Chattogram Range,4,Addl.SP,Crime,,,01320-109903,
+Chattogram Range,5,Addl.SP,DSB,,,01320-109904,
+Chattogram Range,6,Addl.SP,Headquarters,,,01320-109905,
+Chattogram Range,7,,Reserved For Addl.SP  (06),,,"01320-109906
+01320-109911",
+Chattogram Range,8,ASP,DSB,,,01320-109912,
+Chattogram Range,9,ASP,SAF,,,01320-109913,
+Chattogram Range,10,,Reserved For ASP (08),,,"01320-109914
+01320-109921",
+Chattogram Range,11,,Reserved For SP Office (24),,,"01320-109922
+01320-109945",
+Chattogram Range,12,Addl.SP,Khagrachari Cricle,61970,01730336150,01320-109946,cir.kha.khagrachari@police.gov.bd
+Chattogram Range,13,,Reserved For Khagrachhari Cricle (4),,01730336150,"01320-109947
+01320-109950",
+Chattogram Range,14,Addl.SP,Ramgarh Cricle,46029,01755551145,01320-109951,"asp.ram.kha@police.gov.bd
+cir.kha.ramgor@police.gov.bd"
+Chattogram Range,15,,Reserved For Ramgarh Cricle (4),,,"01320-109952
+01320-109955",
+Chattogram Range,16,ASP,Manikchhari  Cricle,,01769695786,01320-109956,cir.kha.manikchari@police.gov.bd
+Chattogram Range,17,,Reserved For Manikchhari  Cricle (4),,,"01320-109957
+01320-109960",
+Chattogram Range,18,ASP,Matiranga Cricle,,01769-695787,01320-109961,
+Chattogram Range,19,,Reserved For  Matiranga Cricle (4),,01769695787,"01320-109962
+01320-109965",cir.kha.matiranga@police.gov.bd
+Chattogram Range,20,Inspector,DIO-1,,01730336153,01320-109966,
+Chattogram Range,21,Inspector,DIO-2,,,01320-109967,
+Chattogram Range,22,Inspector,DIO-3,,,01320-109968,
+Chattogram Range,23,Inspector,DIO-4,,,01320-109969,
+Chattogram Range,24,Inspector,DIO-5,,,01320-109970,
+Chattogram Range,25,,Reserved For DIO (10),,,"01320-109971
+01320-109980",
+Chattogram Range,26,Inspector,OC Khagrachari  Thana,61944,01730-336155,01320-109981,"OCkha.kha@police.gov.bd
+opskha.kha@police.gov.bd"
+Chattogram Range,27,Inspector,Invest. Khagrachari i Thana,,01769-695788,01320-109982,
+Chattogram Range,28,Inspector,Operation Khagrachari Thana,,,01320-109983,
+Chattogram Range,29,Inspector,Reserved-1,,,01320-109984,
+Chattogram Range,30,Inspector,Reserved-2,,,01320-109985,
+Chattogram Range,31,,Duty officer,,01550050605,01320-109986,
+Chattogram Range,32,,Reserved For Khagrachari Thana  (20),,,"01320-109987
+01320-110006",
+Chattogram Range,33,Inspector,OC Dighinala Thana,81002,01755-551146,01320-110007,"OCkha.dhi@police.gov.bd
+opskha.dhi@police.gov.bd"
+Chattogram Range,34,Inspector,Invest. Dighinala Thana,,01769-695789,01320-110008,01320-109997
+Chattogram Range,35,Inspector,Operation Dighinala Thana,,,01320-110009,
+Chattogram Range,36,Inspector,Reserved-1,,,01320-110010,
+Chattogram Range,37,Inspector,Reserved-2,,,01320-110011,
+Chattogram Range,38,,Duty officer,,,01320-110012,
+Chattogram Range,39,,Reserved For Dighinala Thana  (20),,,"01320-110013
+01320-110032",
+Chattogram Range,40,Inspector,OC Mohalchari Thana,,01755-551147,01320-110033,
+Chattogram Range,41,Inspector,Invest. Mohalchari Thana,,01769-695790,01320-110034,
+Chattogram Range,42,Inspector,Operation Mohalchari Thana,,,01320-110035,
+Chattogram Range,43,Inspector,Reserved-1,,,01320-110036,
+Chattogram Range,44,Inspector,Reserved-2,,,01320-110037,
+Chattogram Range,45,,Duty officer,,,01320-110038,
+Chattogram Range,46,,Reserved For Mohalchari Thana   (20),,,"01320-110039
+01320-110058",
+Chattogram Range,47,Inspector,OC Panchhari Thana,76006,01755-551148,01320-110059,"OCkha.pan@police.gov.bd
+opskha.pan@police.gov.bd"
+Chattogram Range,48,Inspector,Invest.  Panchhari Thana,,01769-695719,01320-110060,
+Chattogram Range,49,Inspector,Operation Panchhari Thana,,,01320-110061,
+Chattogram Range,50,Inspector,Reserved-1,,,01320-110062,
+Chattogram Range,51,Inspector,Reserved-2,,,01320-110063,
+Chattogram Range,52,,Duty officer,,,01320-110064,
+Chattogram Range,53,,Reserved For panchhari Thana   (20),,,"01320-110065
+01320-110084",
+Chattogram Range,54,Inspector,OC Ramgarh Thana,46015,01755-551149,01320-110085,"OCkha.ram@police.gov.bd
+opskha.ram@police.gov.bd"
+Chattogram Range,55,Inspector,Invest. Ramgarh Thana,,01769-695792,01320-110086,
+Chattogram Range,56,Inspector,Operation Ramgarh Thana,,,01320-110087,
+Chattogram Range,57,Inspector,Reserved-1,,,01320-110088,
+Chattogram Range,58,Inspector,Reserved-2,,,01320-110089,
+Chattogram Range,59,,Duty officer,,,01320-110090,
+Chattogram Range,60,,Reserved For Ramgarh Thana  (20),,01550050609,"01320-110091
+01320-110110",
+Chattogram Range,61,Inspector,OC Matiranga Thana,96006,01755-551150,01320-110111,"OCkha.mat@police.gov.bd
+opskha.mat@police.gov.bd"
+Chattogram Range,62,Inspector,Invest. Matiranga Thana,,01769-695793,01320-110112,
+Chattogram Range,63,Inspector,Operation Matiranga Thana,,,01320-110113,
+Chattogram Range,64,Inspector,Reserved-1,,,01320-110114,
+Chattogram Range,65,Inspector,Reserved-2,,,01320-110115,
+Chattogram Range,66,,Duty officer,,,01320-110116,
+Chattogram Range,67,,Reserved For Matiranga Thana  (20),,,"01320-110117
+01320-110136",
+Chattogram Range,68,Inspector,OC Manikchari Thana,71003,01755-551151,01320-110137,"OCkha.man@police.gov.bd
+opskha.man@police.gov.bd"
+Chattogram Range,69,Inspector,Invest. Manikchari Thana,,01769-695794,01320-110138,
+Chattogram Range,70,Inspector,Operation Manickchari Thana,,,01320-110139,
+Chattogram Range,71,Inspector,Reserved-1,,,01320-110140,
+Chattogram Range,72,Inspector,Reserved-2,,,01320-110141,
+Chattogram Range,73,,Duty officer,,01550050611,01320-110142,
+Chattogram Range,74,,Reserved For Manikchari Thana  (20),,,"01320-110143
+01320-110162",
+Chattogram Range,75,Inspector,OC Lakshmichhari Thana,61958,01755-551152,01320-110163,"OCkha.lak@police.gov.bd
+opskha.lak@police.gov.bd"
+Chattogram Range,76,Inspector,Invest. Lakshmichhari Thana,,01769-695795,01320-110164,
+Chattogram Range,77,Inspector,Operation Lakshmichhari Thana,,,01320-110165,
+Chattogram Range,78,Inspector,Reserved-1,,,01320-110166,
+Chattogram Range,79,Inspector,Reserved-2,,,01320-110167,
+Chattogram Range,80,,Duty officer,,,01320-110168,
+Chattogram Range,81,,Reserved For Lakshmichhari Thana  (20),,,"01320-110169
+01320-110188",
+Chattogram Range,82,Inspector,OC Guimara Thana,,01755-551153,01320-110189,
+Chattogram Range,83,Inspector,Invest. Guimara Thana,,01769-695796,01320-110190,
+Chattogram Range,84,Inspector,Operation Guimara Thana,,,01320-110191,
+Chattogram Range,85,Inspector,Reserved-1,,,01320-110192,
+Chattogram Range,86,Inspector,Reserved-2,,,01320-110193,
+Chattogram Range,87,,Duty officer,,,01320-110194,
+Chattogram Range,88,,Reserved For Guimara Thana  (20),,,"01320-110195
+01320-110214",
+Chattogram Range,89,Inspector,DB-1,61898,01730336156,01320-110215,kha.db@police.gov.bd
+Chattogram Range,90,Inspector,DB-2,,,01320-110216,
+Chattogram Range,91,Inspector,DB-3,,,01320-110217,
+Chattogram Range,92,Inspector,DB-4,,,01320-110218,
+Chattogram Range,93,Inspector,DB-5,,,01320-110219,
+Chattogram Range,94,,Reserved For DB (10),,,"01320-110220
+01320-110229",
+Chattogram Range,95,Inspector,Court-1,,,01320-110230,
+Chattogram Range,96,Inspector,Court-2,,,01320-110231,
+Chattogram Range,97,Inspector,Court-3,,,01320-110232,
+Chattogram Range,98,Inspector,Court-4,,,01320-110233,
+Chattogram Range,99,Inspector,Court-5,,,01320-110234,
+Chattogram Range,100,,Reserved For  Court (10),,,"01320-110235
+01320-110244",
+Chattogram Range,101,Inspector,TI-1,,,01320-110245,
+Chattogram Range,102,Inspector,TI-2,,,01320-110246,
+Chattogram Range,103,Inspector,TI-3,,,01320-110247,
+Chattogram Range,104,Inspector,TI-4,,,01320-110248,
+Chattogram Range,105,Inspector,TI-5,,,01320-110249,
+Chattogram Range,106,,Reserved For TI (10),,,"01320-110250
+01320-110259",
+Chattogram Range,107,Inspector,RI,,,01320-110260,
+Chattogram Range,108,,Reserved For Police Line (15),,,"01320-110261
+01320-110275",
+Chattogram Range,109,,Reserved For District (122),,,"01320-110276
+01320-110397",
+Chattogram Range,110,Control Room,,,,01320-110398,
+Chattogram Range,111,Hot line,,,,01320-110399,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,Unit/Office Name:  Bandarban District.,,,,,,
+Chattogram Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail
+Chattogram Range,,,,,,,
+Chattogram Range,1,SP,1,"62505
+62977
+62427","01713373676
+01885978300",01320-110400,spbandarban@police.gov.bd
+Chattogram Range,2,SP,Reserved For SP,,,01320-110401,
+Chattogram Range,3,Addl. SP,Admin,"62215
+62263","01730336158
+01885978301",01320-110402,
+Chattogram Range,4,Addl. SP,Crime,,,01320-110403,
+Chattogram Range,5,Addl. SP,DSB,62218,"1730336159
+01885978302",01320-110404,dsbbandarban@police.gov.bd
+Chattogram Range,6,Addl. SP,Headquarters,62227,"1730336160
+01885978304",01320-110405,
+Chattogram Range,7,,Reserved For Addl. SP (06),,,"01320-110406
+01320-110411",
+Chattogram Range,8,ASP,DSB,,,01320-110412,
+Chattogram Range,9,ASP,SAF,,,01320-110413,
+Chattogram Range,10,,Reserved For ASP (08),,,"01320-110414
+01320-110421",
+Chattogram Range,11,,Reserved For SP Office (24),,,"01320-110422
+01320-110445",
+Chattogram Range,12,Addl. SP,Sadar Cricle,62251,"01730336161
+01885978303",01320-110446,
+Chattogram Range,13,,Reserved For Sadar Cricle (4),,,"01320-110447
+01320-110450",
+Chattogram Range,14,ASP,Lama Cricle,62268,01730336162,01320-110451,
+Chattogram Range,15,,Reserved For Lama Cricle (4),,,"01320-110452
+01320-110455",
+Chattogram Range,16,ASP,Ruma Cricle,,,01320-110456,
+Chattogram Range,17,,Reserved For Ruma Cricle (4),,,"01320-110457
+01320-110460",
+Chattogram Range,18,Inspector,DIO-1,62203,"01730336164
+01885978306",01320-110461,
+Chattogram Range,19,Inspector,DIO-2,,,01320-110462,
+Chattogram Range,20,Inspector,DIO-3,,,01320-110463,
+Chattogram Range,21,Inspector,DIO-4,,,01320-110464,
+Chattogram Range,22,Inspector,DIO-5,,,01320-110465,
+Chattogram Range,23,,Reserved For DIO (10),,,"01320-110466
+01320-110475",
+Chattogram Range,24,Inspector,OC Sadar Thana,62233,01730336166,01320-110476,OCban.ban@police.gov.bd
+Chattogram Range,25,Inspector,Invest. Sadar Thana,,,01320-110477,
+Chattogram Range,26,Inspector,Operation Sadar Thana,,,01320-110478,
+Chattogram Range,27,Inspector,Reserved-1,,,01320-110479,
+Chattogram Range,28,Inspector,Reserved-2,,,01320-110480,
+Chattogram Range,29,,Duty officer,,,01320-110481,
+Chattogram Range,30,,Reserved For  Sadar Thana (20),,,"01320-110482
+01320-110501",
+Chattogram Range,31,Inspector,OC Rowangchhari Thana,62238-3,01820425642,01320-110502,OCban.roa@police.gov.bd
+Chattogram Range,32,Inspector,Invest. Rowangchhari Thana,,,01320-110503,
+Chattogram Range,33,Inspector,Operation Rowangchhari Thana,,,01320-110504,
+Chattogram Range,34,Inspector,Reserved-1,,,01320-110505,
+Chattogram Range,35,Inspector,Reserved-2,,,01320-110506,
+Chattogram Range,36,,Duty officer,,,01320-110507,
+Chattogram Range,37,,Reserved For Rowangchhari Thana (20),,,"01320-110508
+01320-110527",
+Chattogram Range,38,Inspector,OC Ruma Thana,62278-27,,01320-110528,OCban.rum@police.gov.bd
+Chattogram Range,39,Inspector,Invest. Ruma Thana,,,01320-110529,
+Chattogram Range,40,Inspector,Operation Ruma Thana,,,01320-110530,
+Chattogram Range,41,Inspector,Reserved-1,,,01320-110531,
+Chattogram Range,42,Inspector,Reserved-2,,,01320-110532,
+Chattogram Range,43,,Duty officer,,,01320-110533,
+Chattogram Range,44,,Reserved For Ruma Thana (20),,,"01320-110534
+01320-110553",
+Chattogram Range,45,Inspector,OC Thanchi Thana,62247-6,01557256958,01320-110554,OCban.tha@police.gov.bd
+Chattogram Range,46,Inspector,Invest. Thanchi Thana,,,01320-110555,
+Chattogram Range,47,Inspector,Operation Thanchi Thana,,,01320-110556,
+Chattogram Range,48,Inspector,Reserved-1,,,01320-110557,
+Chattogram Range,49,Inspector,Reserved-2,,,01320-110558,
+Chattogram Range,50,,Duty officer,,,01320-110559,
+Chattogram Range,51,,Reserved For Thanchi Thana (20),,,"01320-110560
+01320-110579",
+Chattogram Range,52,Inspector,OC Lama Thana,62268-10,01820425644,01320-110580,OCban.lam@police.gov.bd
+Chattogram Range,53,Inspector,Invest. Lama Thana,,,01320-110581,
+Chattogram Range,54,Inspector,Operation Lama Thana,,,01320-110582,
+Chattogram Range,55,Inspector,Reserved-1,,,01320-110583,
+Chattogram Range,56,Inspector,Reserved-2,,,01320-110584,
+Chattogram Range,57,,Duty officer,,,01320-110585,
+Chattogram Range,58,,Reserved For Lama Thana (20),,,"01320-110586
+01320-110605",
+Chattogram Range,59,Inspector,OC Ali kadam Thana,62298-5,,01320-110606,OCban.ali@police.gov.bd
+Chattogram Range,60,Inspector,Invest. Ali kadam Thana,,,01320-110607,
+Chattogram Range,61,Inspector,Operation Ali Kadam Thana,,,01320-110608,
+Chattogram Range,62,Inspector,Reserved-1,,,01320-110609,
+Chattogram Range,63,Inspector,Reserved-2,,,01320-110610,
+Chattogram Range,64,,Duty officer,,,01320-110611,
+Chattogram Range,65,,Reserved ForAli kadam Thana  (20),,,"01320-110612
+01320-110631",
+Chattogram Range,66,Inspector,OC Naikhongchhari Thana,62240-5,,01320-110632,OCban.nai@police.gov.bd
+Chattogram Range,67,Inspector,Invest. Naikhongchhari Thana,,,01320-110633,
+Chattogram Range,68,Inspector,Operation Naikhongchhari Thana,,,01320-110634,
+Chattogram Range,69,Inspector,Reserved-1,,,01320-110635,
+Chattogram Range,70,Inspector,Reserved-2,,,01320-110636,
+Chattogram Range,71,,Duty officer,,,01320-110637,
+Chattogram Range,72,,Reserved For Naikhongchhari Thana  (20),,,"01320-110638
+01320-110657",
+Chattogram Range,73,Inspector,DB-1,62217,"1730336167
+01885978307",01320-110658,
+Chattogram Range,74,Inspector,DB-2,,,01320-110659,
+Chattogram Range,75,Inspector,DB-3,,,01320-110660,
+Chattogram Range,76,Inspector,DB-4,,,01320-110661,
+Chattogram Range,77,Inspector,DB-5,,,01320-110662,
+Chattogram Range,78,,Reserved For DB (10),,,"01320-110663
+01320-110672",
+Chattogram Range,79,Inspector,Court-1,,,01320-110673,
+Chattogram Range,80,Inspector,Court-2,,,01320-110674,
+Chattogram Range,81,Inspector,Court-3,,,01320-110675,
+Chattogram Range,82,Inspector,Court-4,,,01320-110676,
+Chattogram Range,83,Inspector,Court-5,,,01320-110677,
+Chattogram Range,84,,Reserved For Court (10),,,"01320-110678
+01320-110687",
+Chattogram Range,85,Inspector,TI-1,,,01320-110688,
+Chattogram Range,86,Inspector,TI-2,,,01320-110689,
+Chattogram Range,87,Inspector,TI-3,,,01320-110690,
+Chattogram Range,88,Inspector,TI-4,,,01320-110691,
+Chattogram Range,89,Inspector,TI-5,,,01320-110692,
+Chattogram Range,90,,Reserved For TI (10),,,"01320-110693
+01320-110702",
+Chattogram Range,91,Inspector,RI,,,01320-110703,
+Chattogram Range,92,,Reserved For Police Line (15),,,"01320-110704
+01320-110718",
+Chattogram Range,93,,Reserved For District (179),,,"01320-110719
+01320-110897",
+Chattogram Range,94,Control Room,,,,01320-110898,
+Chattogram Range,95,Hot line,,,,01320-110899,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,Unit/Office Name:  Noakhali District.,,,,,,
+Chattogram Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail
+Chattogram Range,,,,,,,
+Chattogram Range,1,SP,1,"61030
+61670*
+61532",017133-73742,01320-110900,spnoakhali@police.gov.bd
+Chattogram Range,2,SP,Reserved For SP,,,01320-110901,
+Chattogram Range,3,Addl. Sp,Admin,62132,01713-373743,01320-110902,
+Chattogram Range,4,Addl. Sp,Crime,,,01320-110903,
+Chattogram Range,5,Addl. Sp,DSB,,,01320-110904,
+Chattogram Range,6,Addl. Sp,Headquarters,62043,,01320-110905,
+Chattogram Range,7,,Reserved For Addl. SP (06),,,"01320-110906
+01320-110911",
+Chattogram Range,8,ASP,Reserved For ASP (10),,,"01320-110912
+01320-110921",
+Chattogram Range,9,,Reserved For SP Office (24),,,"01320-110922
+01320-110945",
+Chattogram Range,10,Addl. Sp,Sadar Cricle,62322,01713-373745,01320-110946,
+Chattogram Range,11,,Reserved For Sadar Cricle (4),,,"01320-110947
+01320-110950",
+Chattogram Range,12,Addl. Sp,Begumganj Cricle,51026,01713-373746,01320-110951,
+Chattogram Range,13,,Reserved For Begumganj Cricle (4),,,"01320-110952
+01320-110955",
+Chattogram Range,14,ASP,Chatkhli Cricle,,01769-692714,01320-110956,
+Chattogram Range,15,,Reserved For Chatkhli Cricle (4),,,"01320-110957
+01320-110960",
+Chattogram Range,16,ASP,Hatiya  Cricle,,01769-692715,01320-110961,
+Chattogram Range,17,,Reserved For Hatiya  Cricle (4),,,"01320-110962
+01320-110965",
+Chattogram Range,18,Inspector,DIO-1,61066,01713-373747,01320-110966,dsbnoakhali@police.gov.bd
+Chattogram Range,19,Inspector,DIO-2,,,01320-110967,
+Chattogram Range,20,Inspector,DIO-3,,,01320-110968,
+Chattogram Range,21,Inspector,DIO-4,,,01320-110969,
+Chattogram Range,22,Inspector,DIO-5,,,01320-110970,
+Chattogram Range,23,,Reserved For DIO (10),,,"01320-110971
+01320-110980",
+Chattogram Range,24,Inspector,OC Sodaram Model Thana,62067,01713-373748,01320-110981,OCnoa.sud@police.gov.bd
+Chattogram Range,25,Inspector,Invest. Sodaram Model Thana,,01769-690670,01320-110982,
+Chattogram Range,26,Inspector,Operation Sodaram Model Thana,,,01320-110983,
+Chattogram Range,27,Inspector,Reserved-1,,,01320-110984,
+Chattogram Range,28,Inspector,Reserved-2,,,01320-110985,
+Chattogram Range,29,,Duty officer,,,01320-110986,
+Chattogram Range,30,,Reserved For Sodaram Model Thana  (20),,,"01320-110987
+01320-111006",
+Chattogram Range,31,Inspector,OC Begumganj Model Thana,51564,01713-373749,01320-111007,OCnoa.beg@police.gov.bd
+Chattogram Range,32,Inspector,Invest. Begumganj Model Thana,,01769-690673,01320-111008,
+Chattogram Range,33,Inspector,Operation Begumganj Model Thana,,,01320-111009,
+Chattogram Range,34,Inspector,Reserved-1,,,01320-111010,
+Chattogram Range,35,Inspector,Reserved-2,,,01320-111011,
+Chattogram Range,36,,Duty officer,,,01320-111012,
+Chattogram Range,37,,Reserved For Begumganj Model Thana   (20),,,"01320-111013
+01320-111032",
+Chattogram Range,38,Inspector,OC Senbagh Thana,03225-56003,01713-373750,01320-111033,OCnoa.she@police.gov.bd
+Chattogram Range,39,Inspector,Invest.  Senbagh Thana,,01769-690674,01320-111034,
+Chattogram Range,40,Inspector,Operation Senbagh Thana,,,01320-111035,
+Chattogram Range,41,Inspector,Reserved-1,,,01320-111036,
+Chattogram Range,42,Inspector,Reserved-2,,,01320-111037,
+Chattogram Range,43,,Duty officer,,,01320-111038,
+Chattogram Range,44,,Reserved For Senbagh Thana  (20),,,"01320-111039
+01320-111058",
+Chattogram Range,45,Inspector,OC Sonaimuri Thana,,01713-373751,01320-111059,OCnoa.sho@police.gov.bd
+Chattogram Range,46,Inspector,Invest.Sonaimuri Thana,,01769-690676,01320-111060,
+Chattogram Range,47,Inspector,Operation Sonaimuri Thana,,,01320-111061,
+Chattogram Range,48,Inspector,Reserved-1,,,01320-111062,
+Chattogram Range,49,Inspector,Reserved-2,,,01320-111063,
+Chattogram Range,50,,Duty officer,,,01320-111064,
+Chattogram Range,51,,Reserved For Sonaimuri Thana  (20),,,"01320-111065
+01320-111084",
+Chattogram Range,52,Inspector,OC Companiganj Thana,03223-56544,01713-373752,01320-111085,OCnoa.com@police.gov.bd
+Chattogram Range,53,Inspector,Invest. Companiganj Thana,,01769-690672,01320-111086,
+Chattogram Range,54,Inspector,Operation Companiganj Thana,,,01320-111087,
+Chattogram Range,55,Inspector,Reserved-1,,,01320-111088,
+Chattogram Range,56,Inspector,Reserved-2,,,01320-111089,
+Chattogram Range,57,,Duty officer,,,01320-111090,
+Chattogram Range,58,,Reserved For Companiganj Thana  (20),,,"01320-111091
+01320-111110",
+Chattogram Range,59,Inspector,OC Chatkhil Thana,03222-75004,01733-73753,01320-111111,OCnoa.cha@police.gov.bd
+Chattogram Range,60,Inspector,Invest. Chatkhil Thana,,01769-690675,01320-111112,
+Chattogram Range,61,Inspector,Operation Chatkhil Thana,,,01320-111113,
+Chattogram Range,62,Inspector,Reserved-1,,,01320-111114,
+Chattogram Range,63,Inspector,Reserved-2,,,01320-111115,
+Chattogram Range,64,,Duty officer,,,01320-111116,
+Chattogram Range,65,,Reserved For Chatkhil Thana (20),,,"01320-111117
+01320-111136",
+Chattogram Range,66,Inspector,OC Hatiya Thana,03224-56108,01713-373754,01320-111137,OCnoa.hat@police.gov.bd
+Chattogram Range,67,Inspector,Invest. Hatiya Thana,,01769-690671,01320-111138,
+Chattogram Range,68,Inspector,Operation Hatiya Thana,,,01320-111139,
+Chattogram Range,69,Inspector,Reserved-1,,,01320-111140,
+Chattogram Range,70,Inspector,Reserved-2,,,01320-111141,
+Chattogram Range,71,,Duty officer,,,01320-111142,
+Chattogram Range,72,,Reserved For Hatiya Thana (20),,,"01320-111143
+01320-111162",
+Chattogram Range,73,Inspector,OC Charjobbr  Thana,03228-52015,01713-373755,01320-111163,OCnoa.cjb@police.gov.bd
+Chattogram Range,74,Inspector,invest. Charjobbr  Thana,,01769-690677,01320-111164,
+Chattogram Range,75,Inspector,Operation Charjobbr Thana,,,01320-111165,
+Chattogram Range,76,Inspector,Reserved-1,,,01320-111166,
+Chattogram Range,77,Inspector,Reserved-2,,,01320-111167,
+Chattogram Range,78,,Duty officer,,,01320-111168,
+Chattogram Range,79,,Reserved For Charjobbr  Thana  (20),,,"01320-111169
+01320-111188",
+Chattogram Range,80,Inspector,OC Kabirhat Thana,03232-53085,01769-690669,01320-111189,OCnoa.kob@police.gov.bd
+Chattogram Range,81,Inspector,Invest. Kabirhat Thana,,01769-690678,01320-111190,
+Chattogram Range,82,Inspector,Operation Kabirhat Thana,,,01320-111191,
+Chattogram Range,83,Inspector,Reserved-1,,,01320-111192,
+Chattogram Range,84,Inspector,Reserved-2,,,01320-111193,
+Chattogram Range,85,,Duty officer,,,01320-111194,
+Chattogram Range,86,,Reserved For kabirhat Thana   (20),,,"01320-111195
+01320-111214",
+Chattogram Range,87,Inspector,DB-1,,01713-373756,01320-111215,
+Chattogram Range,88,Inspector,DB-2,,,01320-111216,
+Chattogram Range,89,Inspector,DB-3,,,01320-111217,
+Chattogram Range,90,Inspector,DB-4,,,01320-111218,
+Chattogram Range,91,Inspector,DB-5,,,01320-111219,
+Chattogram Range,92,,Reserved For DB (10),,,"01320-111120
+01320-111129",
+Chattogram Range,93,Inspector,Court -1,,01713-373757,01320-111230,
+Chattogram Range,94,Inspector,Court -2,,,01320-111231,
+Chattogram Range,95,Inspector,Court -3,,,01320-111232,
+Chattogram Range,96,Inspector,Court -4,,,01320-111233,
+Chattogram Range,97,Inspector,Court -5,,,01320-111234,
+Chattogram Range,98,,Reserved For Court (10),,,"01320-111235
+01320-111244",
+Chattogram Range,99,Inspector,TI -1,,01713-373759,01320-111245,
+Chattogram Range,100,Inspector,TI -2,,,01320-111246,
+Chattogram Range,101,Inspector,TI -3,,,01320-111247,
+Chattogram Range,102,Inspector,TI -4,,,01320-111248,
+Chattogram Range,103,Inspector,TI -5,,,01320-111249,
+Chattogram Range,104,,Reserved For TI (10),,,"01320-111250
+01320-111259",
+Chattogram Range,105,Inspector,RI,,01713-373758,01320-111260,
+Chattogram Range,106,,Reserved For Police Line (15),,,"01320-111261
+01320-111275",
+Chattogram Range,107,,Reserved For District (622),,,"01320-111276
+01320-111897",
+Chattogram Range,108,Control Room,,,,01320-111898,
+Chattogram Range,109,Hot line,,,,01320-111899,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,Unit/Office Name:  Laxmipur District.,,,,,,
+Chattogram Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail
+Chattogram Range,,,,,,,
+Chattogram Range,1,SP,1,"62333
+62674",01713-373760,01320-111900,splakshmipur@police.gov.bd
+Chattogram Range,2,SP,Reserved For SP,,,01320-111901,
+Chattogram Range,3,Addl. SP,Admin,61275,01713-373761,01320-111902,
+Chattogram Range,4,Addl. SP,Crime,,,01320-111903,
+Chattogram Range,5,Addl. SP,DSB,,,01320-111904,
+Chattogram Range,6,Addl. SP,Headquarters,61278,,01320-111905,
+Chattogram Range,7,,Reserved For Addl. SP (06),,,"01320-111906
+01320-111911",
+Chattogram Range,8,ASP,Reserved For ASP (10),,,"01320-111912
+01320-111921",
+Chattogram Range,9,,Reserved For SP Office (24),,,"01320-111922
+01320-111945",
+Chattogram Range,10,Addl. SP,Sadar Cricle,61243,01713-373763,,
+Chattogram Range,11,,Reserved For Sadar Cricle (4),,,"01320-111947
+01320-111950",
+Chattogram Range,12,ASP,Ramgati Cricle,,01769-693379,01320-111951,
+Chattogram Range,13,,Reserved For Ramgati Cricle (4),,,"01320-111952
+01320-111955",
+Chattogram Range,14,ASP,Raipur Cricle,,01769-693378,01320-111956,
+Chattogram Range,15,,Reserved For Raipur Cricle (4),,,"01320-111957
+01320-111960",
+Chattogram Range,16,Inspector,DIO-1,61232,01713-373764,01320-111961,
+Chattogram Range,17,Inspector,DIO-2,,,01320-111962,
+Chattogram Range,18,Inspector,DIO-3,,,01320-111963,
+Chattogram Range,19,Inspector,DIO-4,,,01320-111964,
+Chattogram Range,20,Inspector,DIO-5,,,01320-111965,
+Chattogram Range,21,,Reserved For DIO (10),,,"01320-111966
+01320-111975",
+Chattogram Range,22,Inspector,OC  Laxmipur  Model Thana,61224,01713-373765,01320-111976,OClakshmipur@gmail.com
+Chattogram Range,23,Inspector,Invest.  Laxmipur Model Thana,,01769-693380,01320-111977,
+Chattogram Range,24,Inspector,Operation  Laxmipur Model Thana,,,01320-111978,
+Chattogram Range,25,Inspector,Reserved-1,,,01320-111979,
+Chattogram Range,26,Inspector,Reserved-2,,,01320-111980,
+Chattogram Range,27,,Duty officer,,,01320-111981,
+Chattogram Range,28,,Reserved For  Lakshmipur Model Thana  (20),,,"01320-111982
+01320-112001","01320-111982
+01320-111971"
+Chattogram Range,29,Inspector,OC Raipur Thana,0382-256015,01713-373766,01320-112002,OCraipur@gmail.com
+Chattogram Range,30,Inspector,Invest. Raipur Thana,,01769-693381,01320-112003,
+Chattogram Range,31,Inspector,Operation Raipur Thana,,,01320-112004,
+Chattogram Range,32,Inspector,Reserved-1,,,01320-112005,
+Chattogram Range,33,Inspector,Reserved-2,,,01320-112006,
+Chattogram Range,34,,Duty officer,,,01320-112007,
+Chattogram Range,35,,Reserved For Raipur Thana (20),,,"01320-112008
+01320-112027",
+Chattogram Range,36,Inspector,OC Ramganj Thana,0382-475008,01713-373767,01320-112028,OCramgonj@gmail.com
+Chattogram Range,37,Inspector,Invest. Ramganj Thana,,01769-693382,01320-112029,
+Chattogram Range,38,Inspector,Operation Ramganj Thana,,,01320-112030,
+Chattogram Range,39,Inspector,Reserved-1,,,01320-112031,
+Chattogram Range,40,Inspector,Reserved-2,,,01320-112032,
+Chattogram Range,41,,Duty officer,,,01320-112033,01320-112029
+Chattogram Range,42,,Reserved For  Ramganj Thana  (20),,,"01320-112034
+01320-112053",
+Chattogram Range,43,Inspector,OC Ramgati Thana,0382-356230,01713-373768,01320-112054,OCramgoti@gmail.com
+Chattogram Range,44,Inspector,Invest. Ramgati Thana,,01769-693383,01320-112055,
+Chattogram Range,45,Inspector,Operation Ramgati Thana,,,01320-112056,
+Chattogram Range,46,Inspector,Reserved-1,,,01320-112057,
+Chattogram Range,47,Inspector,Reserved-2,,,01320-112058,
+Chattogram Range,48,,Duty officer,,,01320-112059,
+Chattogram Range,49,,Reserved For  Ramgati Thana (20),,,"01320-112060
+01320-112079",
+Chattogram Range,50,Inspector,OC Kamalnagar Thana,,01769-690080,01320-112080,OCkamalnagar24@gmail.com
+Chattogram Range,51,Inspector,Invest. Kamalnagar Thana,,01769-693384,01320-112081,
+Chattogram Range,52,Inspector,Operation Kamalnagar Thana,,,01320-112082,
+Chattogram Range,53,Inspector,Reserved-1,,,01320-112083,
+Chattogram Range,54,Inspector,Reserved-2,,,01320-112084,
+Chattogram Range,55,,Duty officer,,,01320-112085,
+Chattogram Range,56,,Reserved For Kamalnagar Thana(20),,,"01320-112086
+01320-112105",
+Chattogram Range,57,Inspector,OC Candroganj Thana,,01788-940052,01320-112106,
+Chattogram Range,58,Inspector,Invest. Candroganj Thana,,01769-693385,01320-112107,
+Chattogram Range,59,Inspector,Operation Candroganj Thana,,,01320-112108,
+Chattogram Range,60,Inspector,Reserved-1,,,01320-112109,
+Chattogram Range,61,Inspector,Reserved-2,,,01320-112110,
+Chattogram Range,62,,Duty officer,,,01320-112111,
+Chattogram Range,63,,Reserved For Candroganj Thana (20),,,"01320-112112
+01320-112131",
+Chattogram Range,64,Inspector,DB-1,55045,01713-373769,01320-112132,
+Chattogram Range,65,Inspector,DB-2,,,01320-112133,
+Chattogram Range,66,Inspector,DB-3,,,01320-112134,
+Chattogram Range,67,Inspector,DB-4,,,01320-112135,
+Chattogram Range,68,Inspector,DB-5,,,01320-112136,
+Chattogram Range,69,,Reserved For  DB (10),,,"01320-112137
+01320-112146",
+Chattogram Range,70,Inspector,Court-1,62191,01713-373770,01320-112147,
+Chattogram Range,71,Inspector,Court-2,,,01320-112148,
+Chattogram Range,72,Inspector,Court-3,,,01320-112149,
+Chattogram Range,73,Inspector,Court-4,,,01320-112150,
+Chattogram Range,74,Inspector,Court-5,,,01320-112151,
+Chattogram Range,75,,Reserved For Court (10),,,"01320-112152
+01320-112161",
+Chattogram Range,76,Inspector,TI-1,,,01320-112162,
+Chattogram Range,77,Inspector,TI-2,,,01320-112163,
+Chattogram Range,78,Inspector,TI-3,,,01320-112164,
+Chattogram Range,79,Inspector,TI-4,,,01320-112165,
+Chattogram Range,80,Inspector,TI-5,,,01320-112166,
+Chattogram Range,81,,Reserved For TI (10),,,"01320-112167
+01320-112176",
+Chattogram Range,82,Inspector,RI,,01713-373771,01320-112177,
+Chattogram Range,83,,Reserved For Police Line (15),,,"01320-112178
+01320-112192",
+Chattogram Range,84,,Reserved For District (705),,,"01320-112193
+01320-112897",
+Chattogram Range,85,Control Room,,,,01320-112898,
+Chattogram Range,86,Hot line,,,,01320-112899,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,Unit/Office Name:  Feni District.,,,,,,
+Chattogram Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail
+Chattogram Range,,,,,,,
+Chattogram Range,1,SP,1,"74001
+61403",01713-373773,01320-112900,"spfeni@police.gov.bd
+dsbfeni@police.gov.bd"
+Chattogram Range,2,Sp,Reserved For SP,,,01320-112901,
+Chattogram Range,3,Addl. SP,Admin,74860,01713-373774,01320-112902,
+Chattogram Range,4,Addl. SP,Crime,74838,01713-373775,01320-112903,
+Chattogram Range,5,Addl. SP,DSB,,01769-693466,01320-112904,
+Chattogram Range,6,Addl. SP,Headquarters,,,01320-112905,
+Chattogram Range,7,,Reserved For Addl. SP (06),,,"01320-112906
+01320-112911",
+Chattogram Range,8,ASP,DSB,,,01320-112912,
+Chattogram Range,9,ASP,Traffic,,,01320-112913,
+Chattogram Range,10,,Reserved For ASP (08),,,"01320-112914
+01320-112921",
+Chattogram Range,11,,Reserved For SP Office (24),,,"01320-112922
+01320-112945",
+Chattogram Range,12,Addl. SP,Sadar Cricle,74856,01713-373776,01320-112946,
+Chattogram Range,13,,Reserved For Sadar Cricle (4),,,"01320-112947
+01320-112950",
+Chattogram Range,14,ASP,Chhagalnaiya Cricle,3363499,01769-693465,01320-112951,
+Chattogram Range,15,,Reserved For Chhagalnaiya Cricle (4),,,"01320-112952
+01320-112955",
+Chattogram Range,16,ASP,Sonagazi Cricle,332576007,01769-693464,01320-112956,
+Chattogram Range,17,,Reserved For Sonagazi Cricle (4),,,"01320-112957
+01320-112960",
+Chattogram Range,18,Inspector,DIO-1,74320,01713-373777,01320-112961,
+Chattogram Range,19,Inspector,DIO-2,,,01320-112962,
+Chattogram Range,20,Inspector,DIO-3,,,01320-112963,
+Chattogram Range,21,Inspector,DIO-4,,,01320-112964,
+Chattogram Range,22,Inspector,DIO-5,,,01320-112965,
+Chattogram Range,23,,Reserved For DIO (10),,,"01320-112966
+01320-112975",
+Chattogram Range,24,Inspector,OC Feni Model Thana,"74831
+74883",01713-373778,01320-112976,"OCfen.fen@police.gov.bd
+opsfen.fen@police.gov.bd"
+Chattogram Range,25,Inspector,Invest. Feni Model Thana,,01769-693467,01320-112977,
+Chattogram Range,26,Inspector,Operation Feni Thana,,,01320-112978,
+Chattogram Range,27,Inspector,Reserved-1,,,01320-112979,
+Chattogram Range,28,Inspector,Reserved-2,,,01320-112980,
+Chattogram Range,29,,Duty officer,,,01320-112981,
+Chattogram Range,30,,Reserved For Feni Model Thana  (20),,,"01320-112982
+01320-113001",
+Chattogram Range,31,Inspector,OC DaganBhuiyan Thana,,01713-373783,01320-113002,"OCfen.dag@police.gov.bd
+opsfen.dag@police.gov.bd"
+Chattogram Range,32,Inspector,Invest. DaganBhuiyan Thana,03323-79002,01769-693468,01320-113003,
+Chattogram Range,33,Inspector,Operation DaganBhuiyan Thana,,,01320-113004,
+Chattogram Range,34,Inspector,Reserved-1,,,01320-113005,
+Chattogram Range,35,Inspector,Reserved-2,,,01320-113006,
+Chattogram Range,36,,Duty officer,,,01320-113007,
+Chattogram Range,37,,Reserved For DaganBhuiyan Thana   (20),,,"01320-113008
+01320-113027",
+Chattogram Range,38,Inspector,OC Sonagazi Model Thana,332576008,01713-373779,01320-113028,OCsonagazimodelps@gmail.com
+Chattogram Range,39,Inspector,Invest. Sonagazi Model Thana,,01769-693469,01320-113029,
+Chattogram Range,40,Inspector,Operation Sonagazi Model Thana,,,01320-113030,
+Chattogram Range,41,Inspector,Reserved-1,,,01320-113031,
+Chattogram Range,42,Inspector,Reserved-2,,,01320-113032,
+Chattogram Range,43,,Duty officer,,,01320-113033,
+Chattogram Range,44,,Reserved For Sonagazi Model Thana    (20),,,"01320-113034
+01320-113053",
+Chattogram Range,45,Inspector,OC Chhagalnaiya Model Thana,03322-78012,01713-373782,01320-113054,OCchhagalnaiyaps1@gmail.com
+Chattogram Range,46,Inspector,Invest. Chhagalnaiya Model Thana,,01769-693470,01320-113055,
+Chattogram Range,47,Inspector,Operation Chhagalnaiya Model Thana,,,01320-113056,
+Chattogram Range,48,Inspector,Reserved-1,,,01320-113057,
+Chattogram Range,49,Inspector,Reserved-2,,,01320-113058,
+Chattogram Range,50,,Duty officer,,,01320-113059,
+Chattogram Range,51,,Reserved For  Chhagalnaiya Model Thana  (20),,,"01320-113060
+01320-113079",
+Chattogram Range,52,Inspector,OC Fulgazi Thana,03326-77011,01713-373780,01320-113080,"OCfen.ful@police.gov.bd
+opsfen.ful@police.gov.bd"
+Chattogram Range,53,Inspector,Invest. Fulgazi Thana,,01769-693471,01320-113081,
+Chattogram Range,54,Inspector,Operation Fulgazi Thana,,,01320-113082,
+Chattogram Range,55,Inspector,Reserved-1,,,01320-113083,
+Chattogram Range,56,Inspector,Reserved-2,,,01320-113084,
+Chattogram Range,57,,Duty officer,,,01320-113085,
+Chattogram Range,58,,Reserved For Fulgazi Thana  (20),,,"01320-113086
+01320-113105",
+Chattogram Range,59,Inspector,OC Parshuram Thana,03324-56005,01713-373781,01320-113106,"OCfen.por@police.gov.bd
+opsfen.por@police.gob.bd"
+Chattogram Range,60,Inspector,invest. Parshuram Thana,,01769-693472,01320-113107,
+Chattogram Range,61,Inspector,Operation Parshuram Thana,,,01320-113108,
+Chattogram Range,62,Inspector,Reserved-1,,,01320-113109,
+Chattogram Range,63,Inspector,Reserved-2,,,01320-113110,
+Chattogram Range,64,,Duty officer,,,01320-113111,
+Chattogram Range,65,,Reserved For Parshuram Thana (20),,,"01320-113112
+01320-113131",
+Chattogram Range,66,Inspector,DB-1,,,01320-113132,
+Chattogram Range,67,Inspector,DB-2,,,01320-113133,
+Chattogram Range,68,Inspector,DB-3,,,01320-113134,
+Chattogram Range,69,Inspector,DB-4,,,01320-113135,
+Chattogram Range,70,Inspector,DB-5,,,01320-113136,
+Chattogram Range,71,,Reserved For DB (10),,,"01320-113137
+01320-113146",
+Chattogram Range,72,Inspector,Court-1,,,01320-113147,
+Chattogram Range,73,Inspector,Court-2,,,01320-113148,
+Chattogram Range,74,Inspector,Court-3,,,01320-113149,
+Chattogram Range,75,Inspector,Court-4,,,01320-113150,
+Chattogram Range,76,Inspector,Court-5,,,01320-113151,
+Chattogram Range,77,,Reserved For Court (10),,,"01320-113152
+01320-113161",
+Chattogram Range,78,Inspector,TI-1,,,01320-113162,
+Chattogram Range,79,Inspector,TI-2,,,01320-113163,
+Chattogram Range,80,Inspector,TI-3,,,01320-113164,
+Chattogram Range,81,Inspector,TI-4,,,01320-113165,
+Chattogram Range,82,Inspector,TI-5,,,01320-113166,
+Chattogram Range,83,,Reserved For TI (10),,,"01320-113167
+01320-113176",
+Chattogram Range,84,Inspector,RI,,01713-373786,01320-113177,
+Chattogram Range,85,,Reserved For Police Line (15),,,"01320-113178
+01320-113192",
+Chattogram Range,86,,Reserved For District (705),,,"01320-113193
+01320-113897",
+Chattogram Range,87,Control Room,,,,01320-113898,
+Chattogram Range,88,Hot line,,,,01320-113899,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,Unit/Office Name:  Comilla District.,,,,,,
+Chattogram Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail
+Chattogram Range,,,,,,,
+Chattogram Range,1,SP,1,"081-76391
+081-63166",,01320-113900,spcomilla@police.gov.bd
+Chattogram Range,2,Sp,Reserved For SP,,,01320-113901,
+Chattogram Range,3,Addl. SP,Admin,081-76712,01713373679,01320-113902,addlspadcom@police.gov.bd
+Chattogram Range,4,Addl. SP,Crime,081-76837,01713373640,01320-113903,addlspcrcom@police.gov.bd
+Chattogram Range,5,Addl. SP,DSB,081-77114,01713373681,01320-113904,addlspdsbcom@police.gov.bd
+Chattogram Range,6,Addl. SP,Headquarters,081-65099,01769692311,01320-113905,aspsadcom@police.gov.bd
+Chattogram Range,7,,Reserved For Addl. SP (06),,,"01320-113906
+01320-113911",
+Chattogram Range,8,ASP,Reserved For ASP (10),,,"01320-113912
+01320-113921",
+Chattogram Range,9,,Reserved For SP Office (24),,,"01320-113922
+01320-113945",
+Chattogram Range,10,Addl. SP,Sadar Cricle,081-65028,0173373682,01320-113946,addlspsacom@police.gov.bd
+Chattogram Range,11,,Reserved For Sadar Cricle (4),,,"01320-113947
+01320-113950",
+Chattogram Range,12,Addl. SP,Muradnagar Cricle,08026-56131,01713373683,01320-113951,addlspmccom@police.gov.bd
+Chattogram Range,13,,Reserved ForMuradnagar Cricle (4),,,"01320-113952
+01320-113955",
+Chattogram Range,14,ASP,Devidwar Cricle,802453176,01769692306,01320-113956,aspdccom@police.gov.bd
+Chattogram Range,15,,Reserved For Devidwar Cricle (4),,,"01320-113957
+01320-113960",
+Chattogram Range,16,ASP,Chauddagram Cricle,802056075,01769692304,01320-113961,aspcccom@police.gov.bd
+Chattogram Range,17,,Reserved For Chauddagram Cricle (4),,,"01320-113962
+01320-113965",
+Chattogram Range,18,ASP,Homna  Cricle,802554664,01769692308,01320-113966,asphccorn@police.gov.bd
+Chattogram Range,19,,Reserved For Homna Cricle  (4),,,"01320-113967
+01320-113970",
+Chattogram Range,20,ASP,Sadar South Cricle,8174391,01769692303,01320-113971,aspsdccom@police.gov.bd
+Chattogram Range,21,,Reserved For Sadar South Cricle (4),,,"01320-113972
+01320-113975",
+Chattogram Range,22,ASP,Daudkandi Cricle,,01769692307,01320-113976,
+Chattogram Range,23,,Reserved For Daudkandi Cricle (4),,,"01320-113977
+01320-113980",
+Chattogram Range,24,Inspector,DIO-1,081-76217,01713373684,01320-113981,dsbcomilla@police.gov.bd
+Chattogram Range,25,Inspector,DIO-2,,,01320-113982,
+Chattogram Range,26,Inspector,DIO-3,,,01320-113983,
+Chattogram Range,27,Inspector,DIO-4,,,01320-113984,
+Chattogram Range,28,Inspector,DIO-5,,,01320-113985,
+Chattogram Range,29,,Reserved For DIO (10),,,"01320-113986
+01320-113995",
+Chattogram Range,30,Inspector,OC Kotwali Model Thana,081-77553,01713373685,01320-113996,OCcom.kot@police.gov.bd
+Chattogram Range,31,Inspector,Invest. Kotwali Model Thana,,01769692312,01320-113997,opscom.kot@police.gov.bd
+Chattogram Range,32,Inspector,Operation Kotwali Model Thana,,,01320-113998,
+Chattogram Range,33,Inspector,Reserved-1,,,01320-113999,
+Chattogram Range,34,Inspector,Reserved-2,,,01320-114000,
+Chattogram Range,35,,Duty officer,,,01320-114001,
+Chattogram Range,36,,Reserved For Kotwali Model Thana   (20),,,"01320-114002
+01320-114021",
+Chattogram Range,37,Inspector,OC Chauddagram Thana,,,01320-114022,
+Chattogram Range,38,Inspector,Invest. Chauddagram Thana,,,01320-114023,
+Chattogram Range,39,Inspector,Operation Chauddagram Thana,,,01320-114024,
+Chattogram Range,40,Inspector,Reserved-1,,,01320-114025,
+Chattogram Range,41,Inspector,Reserved-2,,,01320-114026,
+Chattogram Range,42,,Duty officer,,,01320-114027,
+Chattogram Range,43,,Reserved For Chauddagram Thana (20),,,"01320-114028
+01320-114047",
+Chattogram Range,44,Inspector,OC Devidwar Thana,,,01320-114048,
+Chattogram Range,45,Inspector,Invest. Devidwar Thana,,,01320-114049,
+Chattogram Range,46,Inspector,Operation Devidwar Thana,,,01320-114050,
+Chattogram Range,47,Inspector,Reserved-1,,,01320-114051,
+Chattogram Range,48,Inspector,Reserved-2,,,01320-114052,
+Chattogram Range,49,,Duty officer,,,01320-114053,
+Chattogram Range,50,,Reserved For Devidwar Thana    (20),,,"01320-114054
+01320-114073",
+Chattogram Range,51,Inspector,OC HomnaThana,,,01320-114074,
+Chattogram Range,52,Inspector,Invest. Homna Thana,,,01320-114075,
+Chattogram Range,53,Inspector,Operation Homna Thana,,,01320-114076,
+Chattogram Range,54,Inspector,Reserved-1,,,01320-114077,
+Chattogram Range,55,Inspector,Reserved-2,,,01320-114078,
+Chattogram Range,56,,Duty officer,,,01320-114079,01320-114076
+Chattogram Range,57,,Reserved For HomnaThana  (20),,,"01320-114080
+01320-114099",
+Chattogram Range,58,Inspector,OC Laksham Thana,,,01320-114100,
+Chattogram Range,59,Inspector,Invest. Laksham Thana,,,01320-114101,
+Chattogram Range,60,Inspector,Operation Laksham Thana,,,01320-114102,
+Chattogram Range,61,Inspector,Reserved-1,,,01320-114103,
+Chattogram Range,62,Inspector,Reserved-2,,,01320-114104,
+Chattogram Range,63,,Duty officer,,,01320-114105,
+Chattogram Range,64,,Reserved For Laksham Thana  (20),,,"01320-114106
+01320-114125",
+Chattogram Range,65,Inspector,OC Daudkandi Thana,,,01320-114126,
+Chattogram Range,66,Inspector,invest. Daudkandi Thana,,,01320-114127,
+Chattogram Range,67,Inspector,Operation Daudkhandi Thana,,,01320-114128,
+Chattogram Range,68,Inspector,Reserved-1,,,01320-114129,
+Chattogram Range,69,Inspector,Reserved-2,,,01320-114130,
+Chattogram Range,70,,Duty officer,,,01320-114131,
+Chattogram Range,71,,Reserved For Daudkandi Thana (20),,,"01320-114132
+01320-114151",
+Chattogram Range,72,Inspector,OC Burichang Thana,08029-56106,0171337391,01320-114152,OCcom.bur@police.gov.bd
+Chattogram Range,73,Inspector,Invest. Burichang Thana,,01769692319,01320-114153,opscom.bur@police.gov.bd
+Chattogram Range,74,Inspector,Operation Burichang Thana,,,01320-114154,
+Chattogram Range,75,Inspector,Reserved-1,,,01320-114155,
+Chattogram Range,76,Inspector,Reserved-2,,,01320-114156,
+Chattogram Range,77,,Duty officer,,,01320-114157,
+Chattogram Range,78,,Reserved For Burichang Thana (20),,,"01320-114158
+01320-114177",
+Chattogram Range,79,Inspector,OC Chandina Thana,,,01320-114178,
+Chattogram Range,80,Inspector,Invest. Chandina Thana,,,01320-114179,
+Chattogram Range,81,Inspector,Operation Chandina Thana,,,01320-114180,
+Chattogram Range,82,Inspector,Reserved-1,,,01320-114181,
+Chattogram Range,83,Inspector,Reserved-2,,,01320-114182,
+Chattogram Range,84,,Duty officer,,,01320-114183,
+Chattogram Range,85,,Reserved For Chandina Thana (20),,,"01320-114184
+01320-114203",
+Chattogram Range,86,Inspector,OC Baruda Thana,,,01320-114204,
+Chattogram Range,87,Inspector,Invest. Baruda Thana,,,01320-114205,
+Chattogram Range,88,Inspector,Operation Buruda Thana,,,01320-114206,
+Chattogram Range,89,Inspector,Reserved-1,,,01320-114207,
+Chattogram Range,90,Inspector,Reserved-2,,,01320-114208,
+Chattogram Range,91,,Duty officer,,,01320-114209,
+Chattogram Range,92,,Reserved For Baruda Thana (20),,,"01320-114210
+01320-114229",
+Chattogram Range,93,Inspector,OC Nangalkot Thana,,,01320-114230,
+Chattogram Range,94,Inspector,Invest. Nangalkot Thana,,,01320-114231,
+Chattogram Range,95,Inspector,Operation Nangalkot Thana,,,01320-114232,
+Chattogram Range,96,Inspector,Reserved-1,,,01320-114233,
+Chattogram Range,97,Inspector,Reserved-2,,,01320-114234,
+Chattogram Range,98,,Duty officer,,,01320-114235,
+Chattogram Range,99,,Reserved For Nangalkot Thana (20),,,"01320-114236
+01320-114255",
+Chattogram Range,100,Inspector,OC Muradnagar Thana,08026-56114,01713373695,01320-114256,OCcom.mur@police.gov. bd
+Chattogram Range,101,Inspector,Invest.Muradnagar Thana,,01769692330,01320-114257,opscom.mur@police.gov.bd
+Chattogram Range,102,Inspector,Operation Muradnagar Thana,,,01320-114258,
+Chattogram Range,103,Inspector,Reserved-1,,,01320-114259,
+Chattogram Range,104,Inspector,Reserved-2,,,01320-114260,
+Chattogram Range,105,,Duty officer,,,01320-114261,
+Chattogram Range,106,,Reserved For Muradnagar Thana (20),,,"01320-114262
+01320-114281",
+Chattogram Range,107,Inspector,OC Brahmanpara Thana,,,01320-114282,
+Chattogram Range,108,Inspector,Invest.Brahmanpara Thana,,,01320-114283,
+Chattogram Range,109,Inspector,Operation Brahmanpara Thana,,,01320-114284,
+Chattogram Range,110,Inspector,Reserved-1,,,01320-114285,
+Chattogram Range,111,Inspector,Reserved-2,,,01320-114286,
+Chattogram Range,112,,Duty officer,,,01320-114287,
+Chattogram Range,113,,Reserved For Brahmanpara Thana (20),,,"01320-114288
+01320-114307",
+Chattogram Range,114,Inspector,OC Meghna Thana,,,01320-114308,
+Chattogram Range,115,Inspector,Invest.Meghna Thana,,,01320-114309,
+Chattogram Range,116,Inspector,Operation Meghna Thana,,,01320-114310,
+Chattogram Range,117,Inspector,Reserved-1,,,01320-114311,
+Chattogram Range,118,Inspector,Reserved-2,,,01320-114312,
+Chattogram Range,119,,Duty officer,,,01320-114313,
+Chattogram Range,120,,Reserved For Meghna Thana (20),,,"01320-114314
+01320-114333",
+Chattogram Range,121,Inspector,OC Manoharganj Thana,,,01320-114334,
+Chattogram Range,122,Inspector,Invest. Manoharganj Thana,,,01320-114335,
+Chattogram Range,123,Inspector,Operation Manoharganj Thana,,,01320-114336,
+Chattogram Range,124,Inspector,Reserved-1,,,01320-114337,
+Chattogram Range,125,Inspector,Reserved-2,,,01320-114338,
+Chattogram Range,126,,Duty officer,,,01320-114339,
+Chattogram Range,127,,Reserved For Manoharganj Thana (20),,,"01320-114340
+01320-114359",
+Chattogram Range,128,Inspector,OC Titas Thana,08036-52020,01713-373699,01320-114360,OCcom.tit@police.gov.bd
+Chattogram Range,129,Inspector,Invest. Titas Thana,,01769692326,01320-114361,opscom.tit@police.gov.bd
+Chattogram Range,130,Inspector,Operation Titas Thana,,,01320-114362,
+Chattogram Range,131,Inspector,Reserved-1,,,01320-114363,
+Chattogram Range,132,Inspector,Reserved-2,,,01320-114364,
+Chattogram Range,133,,Duty officer,,,01320-114365,
+Chattogram Range,134,,Reserved For Titus Thana (20),,,"01320-114366
+01320-114385",
+Chattogram Range,135,Inspector,OC Sadar South Thana,08042-57066,01713373700,01320-114386,OCcom.sad@police.gov. bd
+Chattogram Range,136,Inspector,Invest. Sadar South Thana,,01769692314,01320-114387,cpscom.sad@police.gov.bd
+Chattogram Range,137,Inspector,Operation Sadar South Thana,,014769692318,01320-114388,
+Chattogram Range,138,Inspector,Reserved-1,,,01320-114389,
+Chattogram Range,139,Inspector,Reserved-2,,,01320-114390,
+Chattogram Range,140,,Duty officer,,,01320-114391,
+Chattogram Range,141,,Reserved For Sadar South Thana (20),,,"01320-114392
+01320-114411",
+Chattogram Range,142,Inspector,OC Bangra Bazar Thana,,01769692317,01320-114412,OCbbpscom@police.gov.bd
+Chattogram Range,143,Inspector,Invest. Bangra Bazar Thana,,,01320-114413,
+Chattogram Range,144,Inspector,Operation Bangra Bazar Thana,,,01320-114414,
+Chattogram Range,145,Inspector,Reserved-1,,,01320-114415,
+Chattogram Range,146,Inspector,Reserved-2,,,01320-114416,
+Chattogram Range,147,,Duty officer,,,01320-114417,
+Chattogram Range,148,,Reserved For Bangra Bazar Thana (20),,,"01320-114418
+01320-114437",
+Chattogram Range,149,Inspector,OC Lalmai Thana,,,01320-114438,
+Chattogram Range,150,Inspector,invest. Lalmai Thana,,,01320-114439,
+Chattogram Range,151,Inspector,Operation Lalmai Thana,,,01320-114440,
+Chattogram Range,152,Inspector,Reserved-1,,,01320-114441,
+Chattogram Range,153,Inspector,Reserved-2,,,01320-114442,
+Chattogram Range,154,,Duty officer,,,01320-114443,
+Chattogram Range,155,,Reserved For Lalmai Thana (20),,,"01320-114444
+01320-114463",
+Chattogram Range,156,Inspector,DB-1,081-68163,01713373701,01320-114464,
+Chattogram Range,157,Inspector,DB-2,,,01320-114465,
+Chattogram Range,158,Inspector,DB-3,,,01320-114466,
+Chattogram Range,159,Inspector,DB-4,,,01320-114467,
+Chattogram Range,160,Inspector,DB-5,,,01320-114468,
+Chattogram Range,161,,Reserved For DB (10),,,"01320-114469
+01320-114478",
+Chattogram Range,162,Inspector,Court-1,,,01320-114479,
+Chattogram Range,163,Inspector,Court-2,,,01320-114480,
+Chattogram Range,164,Inspector,Court-3,,,01320-114481,
+Chattogram Range,165,Inspector,Court-4,,,01320-114482,
+Chattogram Range,166,Inspector,Court-5,,,01320-114483,
+Chattogram Range,167,,Reserved For Court(10),,,"01320-114484
+01320-114493",
+Chattogram Range,168,Inspector,TI-1,,,01320-114494,
+Chattogram Range,169,Inspector,TI-2,,,01320-114495,
+Chattogram Range,170,Inspector,TI-3,,,01320-114496,
+Chattogram Range,171,Inspector,TI-4,,,01320-114497,
+Chattogram Range,172,Inspector,TI-5,,,01320-114498,
+Chattogram Range,173,,Reserved For TI (10),,,"01320-114499
+01320-114508",
+Chattogram Range,174,Inspector,RI,,,01320-114509,
+Chattogram Range,175,,Reserved For Police Line (15),,,"01320-114510
+01320-114524",
+Chattogram Range,176,,Reserved For District (373),,,"01320-114525
+01320-114897",
+Chattogram Range,177,Control Room,,,,01320-114898,
+Chattogram Range,178,Hot line,,,,01320-114899,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,Unit/Office Name:  Brahmanbaria District.,,,,,,
+Chattogram Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail
+Chattogram Range,,,,,,,
+Chattogram Range,1,SP,1,"0851-57680
+0851-57584",01713-373724,01320-114900,spbrahmmanbaria@police.gov.bd
+Chattogram Range,2,Sp,Reserved For SP,,,01320-114901,
+Chattogram Range,3,Addl. SP,Admin,0851-57681,01713-373725,01320-114902,
+Chattogram Range,4,Addl. SP,Crime,,,01320-114903,
+Chattogram Range,5,Addl. SP,DSB,,,01320-114904,
+Chattogram Range,6,Addl. SP,Headquarters,,,01320-114905,
+Chattogram Range,7,,Reserved For Addl. SP (06),,,"01320-114906
+01320-114911",
+Chattogram Range,8,ASP,DSB,,,01320-114912,
+Chattogram Range,9,ASP,Traffic,,,01320-114913,
+Chattogram Range,10,,Reserved For ASP (08),,,"01320-114914
+01320-114921",
+Chattogram Range,11,,Reserved For SP Office (24),,,"01320-114922
+01320-114945",
+Chattogram Range,12,Addl. SP,Sadar Circle,0851-57692,01713-373727,01320-114946,
+Chattogram Range,13,,Reserved For Sadar Circle (4),,,"01320-114947
+01320-114950",
+Chattogram Range,14,Addl. SP,Nabinagar Cricle,08525-75240,01713-373728,01320-114951,cir.bbar.nabinagar@police.gov.bd
+Chattogram Range,15,,Reserved For Nabinagar Cricle (4),,,"01320-114952
+01320-114955",
+Chattogram Range,16,ASP,Sarail Cricle,,01769-691950,01320-114956,
+Chattogram Range,17,,Reserved For Sarail Cricle (4),,,"01320-114957
+01320-114960",
+Chattogram Range,18,ASP,Kasba Cricle,,01769-691940,01320-114961,
+Chattogram Range,19,,Reserved For Kasba Cricle (4),,,"01320-114962
+01320-114965",
+Chattogram Range,20,Inspector,DIO-1,0851-61798,07173-373729,01320-114966,spdsbb.baria@gmail.com
+Chattogram Range,21,Inspector,DIO-2,,,01320-114967,
+Chattogram Range,22,Inspector,DIO-3,,,01320-114968,
+Chattogram Range,23,Inspector,DIO-4,,,01320-114969,
+Chattogram Range,24,Inspector,DIO-5,,,01320-114970,
+Chattogram Range,25,,Reserved For DIO (10),,,"01320-114971
+01320-114980",
+Chattogram Range,26,Inspector,Sadar Model Thana,0851-57641,01713-373730,01320-114981,brahmanbariamodelThana@yahoo.com
+Chattogram Range,27,Inspector,Invest. Sadar Model Thana,,01769-691931,01320-114982,
+Chattogram Range,28,Inspector,Operation Sadar Model Thana,,,01320-114983,
+Chattogram Range,29,Inspector,Reserved-1,,,01320-114984,
+Chattogram Range,30,Inspector,Reserved-2,,,01320-114985,
+Chattogram Range,31,,Duty officer,,01769-691941,01320-114986,
+Chattogram Range,32,,Reserved For Sadar Model Thana (20),,,"01320-114987
+01320-115006",
+Chattogram Range,33,Inspector,OC Ashuganj Thana,08528-74198,01713-373732,01320-115007,ashuganjps@gmail.com
+Chattogram Range,34,Inspector,Invest. Ashuganj Thana,,01769-691932,01320-115008,
+Chattogram Range,35,Inspector,Operation Ashuganj Thana,,,01320-115009,
+Chattogram Range,36,Inspector,Reserved-1,,,01320-115010,
+Chattogram Range,37,Inspector,Reserved-2,,,01320-115011,
+Chattogram Range,38,,Duty officer,,01769-691942,01320-115012,
+Chattogram Range,39,,Reserved For Ashuganj Thana  (20),,,"01320-115013
+01320-115032",
+Chattogram Range,40,Inspector,OC Sarail Thana,08527-56014,07173-373731,01320-115033,sarailThana@gmail.com
+Chattogram Range,41,Inspector,Invest. Sarail Thana,,0176-691933,01320-115034,
+Chattogram Range,42,Inspector,Operation Sarail Thana,,,01320-115035,
+Chattogram Range,43,Inspector,Reserved-1,,,01320-115036,
+Chattogram Range,44,Inspector,Reserved-2,,,01320-115037,
+Chattogram Range,45,,Duty officer,,01769-691943,01320-115038,
+Chattogram Range,46,,Reserved For Sarail Thana (20),,,"01320-115039
+01320-115058",
+Chattogram Range,47,Inspector,OC Nasirnagar Thana,08526-56003,017173-373733,01320-115059,OCnasirnagar@gmail.com
+Chattogram Range,48,Inspector,Invest. Nasirnagar Thana,,01769-691934,01320-115060,
+Chattogram Range,49,Inspector,Operation Nasirnagar Thana,,,01320-115061,
+Chattogram Range,50,Inspector,Reserved-1,,,01320-115062,
+Chattogram Range,51,Inspector,Reserved-2,,,01320-115063,
+Chattogram Range,52,,Duty officer,,01769-691944,01320-115064,
+Chattogram Range,53,,Reserved For Nasirnagar Thana (20),,,"01320-115065
+01320-115084",
+Chattogram Range,54,Inspector,OC Nabinagar Thana,08525-75222,01713-373734,01320-115085,nabinagarpolicestation61@gmail.com
+Chattogram Range,55,Inspector,Invest. Nabinagar Thana,,01769-691935,01320-115086,
+Chattogram Range,56,Inspector,Operation Nabinagar Thana,,,01320-115087,
+Chattogram Range,57,Inspector,Reserved-1,,,01320-115088,
+Chattogram Range,58,Inspector,Reserved-2,,,01320-115089,
+Chattogram Range,59,,Duty officer,,01769-691945,01320-115090,
+Chattogram Range,60,,Reserved For Nabinagar Thana (20),,,"01320-115091
+01320-115110",
+Chattogram Range,61,Inspector,OC Bancharampur model Thana,08523-56021,017173-373735,01320-115111,OCbancharampur@gmail.com
+Chattogram Range,62,Inspector,Invest. Bancharampur model Thana,,01769-691936,01320-115112,
+Chattogram Range,63,Inspector,Operation Bancharampur model Thana,,,01320-115113,
+Chattogram Range,64,Inspector,Reserved-1,,,01320-115114,
+Chattogram Range,65,Inspector,Reserved-2,,,01320-115115,
+Chattogram Range,66,,Duty officer,,01769-691946,01320-115116,
+Chattogram Range,67,,Reserved For Bancharampur model Thana (20),,,"01320-115117
+01320-115136",
+Chattogram Range,68,Inspector,OC Kasba Thana,08524-73014,01713-373736,01320-115137,kasbapolice@yahoo.com
+Chattogram Range,69,Inspector,Invest. Kasba Thana,,01769-691937,01320-115138,
+Chattogram Range,70,Inspector,Operation Kasba Thana,,,01320-115139,
+Chattogram Range,71,Inspector,Reserved-1,,,01320-115140,
+Chattogram Range,72,Inspector,Reserved-2,,,01320-115141,
+Chattogram Range,73,,Duty officer,,01769-691947,01320-115142,
+Chattogram Range,74,,Reserved For Kasba Thana (20),,,"01320-115143
+01320-115162",
+Chattogram Range,75,Inspector,OC Akhaura Thana,08522-56023,01713-373737,01320-115163,OC.akhaura@gmail.com
+Chattogram Range,76,Inspector,Invest. Akhaura Thana,,01769-691938,01320-115164,
+Chattogram Range,77,Inspector,Operation Akhaura Thana,,,01320-115165,
+Chattogram Range,78,Inspector,Reserved-1,,,01320-115166,
+Chattogram Range,79,Inspector,Reserved-2,,,01320-115167,
+Chattogram Range,80,,Duty officer,,01769-691948,01320-115168,
+Chattogram Range,81,,Reserved For Akhaura Thana (20),,,"01320-115169
+01320-115188",
+Chattogram Range,82,Inspector,OC Vijayanagar Thana,,01769-691979,01320-115189,bijoynagarThana@gmail.com
+Chattogram Range,83,Inspector,Invest. Vijayanagar Thana,,01769-691939,01320-115190,
+Chattogram Range,84,Inspector,Operation Vijaynagar Thana,,,01320-115191,
+Chattogram Range,85,Inspector,Reserved-1,,,01320-115192,
+Chattogram Range,86,Inspector,Reserved-2,,,01320-115193,
+Chattogram Range,87,,Duty officer,,01769-691949,01320-115194,
+Chattogram Range,88,,Reserved For Vijayanagar Thana  (20),,,"01320-115195
+01320-115214",
+Chattogram Range,89,Inspector,DB-1,0851-63549,07173-373738,01320-115215,
+Chattogram Range,90,Inspector,DB-2,,,01320-115216,
+Chattogram Range,91,Inspector,DB-3,,,01320-115217,
+Chattogram Range,92,Inspector,DB-4,,,01320-115218,
+Chattogram Range,93,Inspector,DB-5,,,01320-115219,
+Chattogram Range,94,,Reserved For DB (10),,,"01320-115220
+01320-115229",
+Chattogram Range,95,Inspector,Court-1,0851-63548,07173-373739,01320-115230,brahmanbariacourt@gmail.com
+Chattogram Range,96,Inspector,Court-2,,,01320-115231,
+Chattogram Range,97,Inspector,Court-3,,,01320-115232,
+Chattogram Range,98,Inspector,Court-4,,,01320-115233,
+Chattogram Range,99,Inspector,Court-5,,,01320-115234,
+Chattogram Range,100,,Reserved For Court (10),,,"01320-115235
+01320-115244",
+Chattogram Range,101,Inspector,TI-1,0851-57678,01713-373741,01320-115245,
+Chattogram Range,102,Inspector,TI-2,,,01320-115246,
+Chattogram Range,103,Inspector,TI-3,,,01320-115247,
+Chattogram Range,104,Inspector,TI-4,,,01320-115248,
+Chattogram Range,105,Inspector,TI-5,,,01320-115249,
+Chattogram Range,106,,Reserved For TI (10),,,"01320-115250
+01320-115259",
+Chattogram Range,107,Inspector,RI,0851-57642,01713-373740,01320-115260,
+Chattogram Range,108,,Reserved For Police Line (15),,,"01320-115261
+01320-115275",
+Chattogram Range,109,,Reserved For District (622),,,"01320-115276
+01320-115897",
+Chattogram Range,110,Control Room,,,,01320-115898,
+Chattogram Range,111,Hot Line,,,,01320-115899,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,,,,,,,
+Chattogram Range,Unit/Office Name:  Chandpur District.,,,,,,
+Chattogram Range,"SL/
+No",Designation,Post,Official Number,Current Number,New Number,E-mail
+Chattogram Range,,,,,,,
+Chattogram Range,1,SP,1,"0841-63443
+0841-65600",01713-373705,01320-115900,spchandpur@police.gov.bd
+Chattogram Range,2,Sp,Reserved For SP,,,01320-115901,
+Chattogram Range,3,Addl. SP,Admin,0841-63147,01713-373706,01320-115902,
+Chattogram Range,4,Addl. SP,Crime,,,01320-115903,
+Chattogram Range,5,Addl. SP,DSB,,,01320-115904,
+Chattogram Range,6,Addl. SP,Headquarters,01713-373707,,01320-115905,
+Chattogram Range,7,,Reserved For Addl. SP (06),,,"01320-115906
+01320-115911",
+Chattogram Range,8,ASP,Reserved For ASP (10),,,"01320-115912
+01320-115921",
+Chattogram Range,9,,Reserved For SP Office (24),,,"01320-115922
+01320-115945",
+Chattogram Range,10,Addl. SP,Chandpur Cricle,0841-63083,01713-373709,01320-115946,aspcircle123@gmail.com
+Chattogram Range,11,,Reserved For Chandpur Cricle (4),,,"01320-115947
+01320-115950",
+Chattogram Range,12,Addl. SP,Hajiganj Cricle,08424-75275,01713-373710,01320-115951,
+Chattogram Range,13,,Reserved For Hajiganj Cricle (4),,,"01320-115952
+01320-115955",
+Chattogram Range,14,ASP,Kachua Cricle,,01769-692858,01320-115956,
+Chattogram Range,15,,Reserved For Kachua Cricle (4),,,"01320-115957
+01320-115960",
+Chattogram Range,16,ASP,Matalaba Cricle,842656026,01769-692857,01320-115961,
+Chattogram Range,17,,Reserved For Matalaba Cricle (4),,,"01320-115962
+01320-115965",
+Chattogram Range,18,Inspector,DIO-1,0841-63185,01713-373711,01320-115966,Spdsbchandpur@gmail.com
+Chattogram Range,19,Inspector,DIO-2,,,01320-115967,01320-115966
+Chattogram Range,20,Inspector,DIO-3,,,01320-115968,
+Chattogram Range,21,Inspector,DIO-4,,,01320-115969,
+Chattogram Range,22,Inspector,DIO-5,,,01320-115970,
+Chattogram Range,23,,Reserved For DIO (10),,,"01320-115971
+01320-115980",
+Chattogram Range,24,Inspector,Sadar Model Thana,0841-63007,01713-373712,01320-115981,OC.chandpurmodelps@gmail.com.
+Chattogram Range,25,Inspector,Invest. Sadar Model Thana,,01769-692872,01320-115982,
+Chattogram Range,26,Inspector,Operation Sadar Model Thana,,,01320-115983,
+Chattogram Range,27,Inspector,Reserved-1,,,01320-115984,
+Chattogram Range,28,Inspector,Reserved-2,,,01320-115985,
+Chattogram Range,29,,Duty officer,,01975-566001,01320-115986,
+Chattogram Range,30,,Reserved For Sadar Model Thana (20),,,"01320-115987
+01320-116006",
+Chattogram Range,31,Inspector,OC Hajiganj Thana,08424-75219,01713-373713,01320-116007,OC.hajiganjps@gmail.com.
+Chattogram Range,32,Inspector,Invest. Hajiganj Thana,,01769-692875,01320-116008,
+Chattogram Range,33,Inspector,Operation Hajiganj Thana,,,01320-116009,
+Chattogram Range,34,Inspector,Reserved-1,,,01320-116010,
+Chattogram Range,35,Inspector,Reserved-2,,,01320-116011,
+Chattogram Range,36,,Duty officer,,,01320-116012,
+Chattogram Range,37,,Reserved For Hajiganj Thana (20),,,"01320-116013
+01320-116032",
+Chattogram Range,38,Inspector,OC North Motlob Thana,08428-51030,01713-373714,01320-116033,OC.matlabnorthps@gmail.com.
+Chattogram Range,39,Inspector,Invest. North Motlob Thana,,01769-692877,01320-116034,
+Chattogram Range,40,Inspector,Operation Motlob Thana,,,01320-116035,
+Chattogram Range,41,Inspector,Reserved-1,,,01320-116036,
+Chattogram Range,42,Inspector,Reserved-2,,,01320-116037,
+Chattogram Range,43,,Duty officer,,01761-484112,01320-116038,
+Chattogram Range,44,,Reserved For North Motlob Thana (20),,,"01320-116039
+01320-116058",
+Chattogram Range,45,Inspector,OC Motlob South Thana,08428-51030,01713-373714,01320-116059,OC.matlabnorthps@gmail.com.
+Chattogram Range,46,Inspector,Invest. Motlob South Thana,,01769-692876,01320-116060,
+Chattogram Range,47,Inspector,Operation Motlob South Thana,,,01320-116061,
+Chattogram Range,48,Inspector,Reserved-1,,,01320-116062,
+Chattogram Range,49,Inspector,Reserved-2,,,01320-116063,
+Chattogram Range,50,,Duty officer,,01975-566005,01320-116064,
+Chattogram Range,51,,Reserved For Motlob South Thana (20),,,"01320-116065
+01320-116084",
+Chattogram Range,52,Inspector,OC Shahrashti Thana,0842-756010,01713-373716,01320-116085,OCshahrastips7@gmail.com.
+Chattogram Range,53,Inspector,Invest. Shahrashti Thana,,01769-692878,01320-116086,
+Chattogram Range,54,Inspector,Operation Shahrashti Thana,,,01320-116087,
+Chattogram Range,55,Inspector,Reserved-1,,,01320-116088,
+Chattogram Range,56,Inspector,Reserved-2,,,01320-116089,
+Chattogram Range,57,,Duty officer,,,01320-116090,
+Chattogram Range,58,,Reserved For Shahrashti Thana (20),,,"01320-116091
+01320-116110",
+Chattogram Range,59,Inspector,OC Kachua Thana,08425-56044,01713-373717,01320-116111,OC.kachuaps@gmail.com.
+Chattogram Range,60,Inspector,invest. Kachua Thana,,01769-692879,01320-116112,
+Chattogram Range,61,Inspector,Operation Kachua Thana,,,01320-116113,
+Chattogram Range,62,Inspector,Reserved-1,,,01320-116114,
+Chattogram Range,63,Inspector,Reserved-2,,,01320-116115,
+Chattogram Range,64,,Duty officer,,01975-566008,01320-116116,
+Chattogram Range,65,,Reserved For KachuaThana (20),,,"01320-116117
+01320-116136",
+Chattogram Range,66,Inspector,OC Faridganj Thana,08422-64012,01713-373718,01320-116137,OC.faridganjps@gmail.com.
+Chattogram Range,67,Inspector,invest. Faridganj Thana,,01769-692880,01320-116138,
+Chattogram Range,68,Inspector,Operation Faridganj Thana,,,01320-116139,
+Chattogram Range,69,Inspector,Reserved-1,,,01320-116140,
+Chattogram Range,70,Inspector,Reserved-2,,,01320-116141,
+Chattogram Range,71,,Duty officer,,01975-566003,01320-116142,
+Chattogram Range,72,,Reserved For Faridganj Thana (20),,,"01320-116143
+01320-116162",
+Chattogram Range,73,Inspector,OC Haimchar Thana,0842-352010,01713-373719,01320-116163,haimcharThana19@gmail.com.
+Chattogram Range,74,Inspector,invest. Haimchar Thana,,01769-692881,01320-116164,
+Chattogram Range,75,Inspector,Operation Haimchar Thana,,,01320-116165,
+Chattogram Range,76,Inspector,Reserved-1,,,01320-116166,
+Chattogram Range,77,Inspector,Reserved-2,,,01320-116167,
+Chattogram Range,78,,Duty officer,,01975-566002,01320-116168,
+Chattogram Range,79,,Reserved For Haimchar Thana (20),,,"01320-116169
+01320-116188",
+Chattogram Range,80,Inspector,DB-1,0841-63815,01713-373720,01320-116189,
+Chattogram Range,81,Inspector,DB-2,,,01320-116190,
+Chattogram Range,82,Inspector,DB-3,,,01320-116191,
+Chattogram Range,83,Inspector,DB-4,,,01320-116192,
+Chattogram Range,84,Inspector,DB-5,,,01320-116193,
+Chattogram Range,85,,Reserved For DB (10),,,"01320-116194
+01320-116203",
+Chattogram Range,86,Inspector,Court-1,0841-63037,01713-373723,01320-116204,
+Chattogram Range,87,Inspector,Court-2,,,01320-116205,
+Chattogram Range,88,Inspector,Court-3,,,01320-116206,
+Chattogram Range,89,Inspector,Court-4,,,01320-116207,
+Chattogram Range,90,Inspector,Court-5,,,01320-116208,
+Chattogram Range,91,,Reserved For Court(10),,,"01320-116209
+01320-116218",
+Chattogram Range,92,Inspector,TI-1,,,01320-116219,
+Chattogram Range,93,Inspector,TI-2,,,01320-116220,
+Chattogram Range,94,Inspector,TI-3,,,01320-116221,
+Chattogram Range,95,Inspector,TI-4,,,01320-116222,
+Chattogram Range,96,Inspector,TI-5,,,01320-116223,
+Chattogram Range,97,,Reserved For TI (10),,,"01320-116224
+01320-116233",
+Chattogram Range,98,Inspector,RI,01713-373722,,01320-116234,
+Chattogram Range,99,,Reserved For Police Line (15),,,"01320-116235
+01320-116249",
+Chattogram Range,100,,Reserved For District (648),,,"01320-116250
+01320-116897",
+Chattogram Range,101,Control Room,,,,01320-116898,
+Chattogram Range,102,Hot Line,,,,01320-116899,
+Chattogram Range,Unit/Office Name:  RRF Chattogram.,,,,,,
+Chattogram Range,SL/No,Designation,Post,Official Number,Current Number,New Number,E-mail
+Chattogram Range,,,,,,,
+Chattogram Range,1,SP,Commandant  SP,"031-2514074
+031-710876",01713373626,01320-116900,comrrfchittagong@police.gov.bd
+Chattogram Range,2,,Reserved For SP,,,01320-116901,
+Chattogram Range,3,,Reserved For Addl. SP (20),,,"01320-116902
+01320-116921",
+Chattogram Range,4,ASP,Reserved For ASP (20),,,"01320-116922
+01320-116941",
+Chattogram Range,5,Inspector,RI,,,01320-116942,
+Chattogram Range,6,,Reserved For Inspector (UB/TI/AB) (47),,,"01320-116943
+01320-116989",
+Chattogram Range,7,SI/Sergeant/TSI,Reserved (208),,,"01320-116990
+01320-117197",
+Chattogram Range,8,,,,,"01320-117200
+01320-117397",
+Chattogram Range,9,Control Room,,,,01320-117398,
+Chattogram Range,10,Hot Line,,,,01320-117399,
