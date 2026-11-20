@@ -84,7 +84,7 @@ jobs:
       - name: Overture layer (rebuilt from its pinned release; skipped with a warning if unavailable)
         if: steps.cf.outputs.skip == 'false'
         run: |
-          pip install duckdb==2.0.0     # the version the collector was tested with
+          pip install duckdb==2.0.0 requests     # duckdb: the version the collector was tested with; requests: release lookup
           if python3 data/sources/overture_places_raj_2026/fetch.py --all --release "$OVERTURE_RELEASE"; then
             python3 pipelines/build_seed.py > /dev/null
             git diff --stat --exit-code -- data/seed db/seed   # the committed seed must not change
@@ -161,7 +161,7 @@ jobs:
         run: |
           for path in /emergency / /rajshahi/rajshahi /p/rajshahi-college /map /data/map/tiles.json "/api/search?q=rajshahi"; do
             for i in $(seq 1 12); do
-              code=$(curl -s -o /dev/null -w '%{http_code}' "$SITE_URL$path")
+              code=$(curl -s -o /dev/null -w '%{http_code}' "$SITE_URL$path" || true)   # a new domain may not resolve yet: retry
               [ "$code" = "200" ] && { echo "$path → 200"; break; }
               [ $i -eq 12 ] && { echo "::error::$path → $code"; exit 1; }
               sleep 10
