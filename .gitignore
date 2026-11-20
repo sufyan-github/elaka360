@@ -4,6 +4,8 @@ dist/
 .next-*/
 .turbo/
 coverage/
+# the website's /coverage page is source, not a test-coverage report
+!apps/web/app/\[locale\]/coverage/
 *.log
 .env
 .env.*
