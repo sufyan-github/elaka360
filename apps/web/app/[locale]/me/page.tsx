@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { title: t('title'), robots: { index: false }, alternates: localeAlternates(locale, '/me') };
 }
 
-const TYPES = ['new_place', 'new_business', 'new_tourist_spot', 'area_info', 'photo', 'correction', 'report'] as const;
+const TYPES = ['new_place', 'new_business', 'new_tourist_spot', 'area_info', 'photo', 'correction', 'report', 'request', 'village_location'] as const;
 
 export default async function MePage({ params }: Props) {
   const locale = asLocale((await params).locale);
@@ -39,9 +39,12 @@ export default async function MePage({ params }: Props) {
   return (
     <div className="pt-6">
       <h1 className="text-2xl font-bold">{me.name}</h1>
-      <p className="text-sm text-muted">{me.phone ? digits(me.phone.replace('+88', ''), locale) : ''} · {t('memberSince', { date: formatDate(me.created_at, locale) })}</p>
+      <p className="text-sm text-muted">{me.phone ? digits(me.phone.replace('+88', ''), locale) : me.email ?? ''} · {t('memberSince', { date: formatDate(me.created_at, locale) })}</p>
       {me.permissions.length > 0 && (
         <p className="mt-2 text-sm">{t('staff')}</p>
+      )}
+      {me.permissions.includes('contributions.moderate') && (
+        <Link href="/moderate" className="mt-2 inline-block rounded-chip bg-primary px-3 py-2 text-sm font-semibold text-on-primary">{t('reviewQueue')}</Link>
       )}
 
       <div className="mt-4 grid grid-cols-3 gap-3">

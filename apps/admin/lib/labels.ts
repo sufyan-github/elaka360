@@ -34,6 +34,8 @@ export const CONTRIBUTION_TYPE_LABEL: Record<ContributionType, { bn: string; en:
   photo: { bn: 'ছবি', en: 'Photo' },
   correction: { bn: 'সংশোধন', en: 'Correction' },
   report: { bn: 'রিপোর্ট', en: 'Report' },
+  village_location: { bn: 'গ্রামের অবস্থান', en: 'Village location' },
+  request: { bn: 'তথ্য যোগের অনুরোধ', en: 'Request for missing information' },
 };
 export const NEW_PLACE_TYPES: ContributionType[] = ['new_place', 'new_business', 'new_tourist_spot'];
 

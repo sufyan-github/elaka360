@@ -6,9 +6,10 @@ import { clientIp, forward, problem, relay, sameOrigin, setSession } from '@/lib
 export async function POST(req: NextRequest) {
   if (!sameOrigin(req)) return problem(403, 'Forbidden', 'cross-site request');
   const body = await req.json().catch(() => null);
-  const res = await forward('/v1/auth/otp/verify', {
+  const email = typeof body?.email === 'string';
+  const res = await forward(email ? '/v1/auth/email/verify' : '/v1/auth/otp/verify', {
     method: 'POST', headers: { 'Content-Type': 'application/json', 'User-Agent': req.headers.get('user-agent') ?? '' },
-    body: JSON.stringify({ phone: body?.phone, code: body?.code, name: body?.name }), ip: clientIp(req),
+    body: JSON.stringify({ ...(email ? { email: body.email } : { phone: body?.phone }), code: body?.code, name: body?.name }), ip: clientIp(req),
   });
   if (!res.ok) return relay(res);
   const t = (await res.json()) as AuthTokens;

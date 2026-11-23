@@ -10,7 +10,7 @@ export const SOURCE_JSON_ES = `CASE WHEN es.id IS NULL THEN NULL ELSE json_build
 export const AREA_DETAIL_SQL = `
 SELECT ${AREA_SUMMARY_COLS}, a.bbs_code, a.website, a.lat::float8, a.lon::float8, a.area_km2::float8,
        a.area_basis, a.population_2022, a.population_basis, a.wards_count, a.established, a.notes,
-       a.verification_notes, to_char(a.last_reviewed_at, 'YYYY-MM-DD') AS last_reviewed_at,
+       a.verification_notes, to_char(a.last_reviewed_at, 'YYYY-MM-DD') AS last_reviewed_at, a.location_source, a.name_bn_source,
        ${SOURCE_JSON_S} AS source, ${SOURCE_JSON_ES} AS evidence_source
 FROM public_admin_areas a
 LEFT JOIN data_sources s ON s.id = COALESCE(a.population_source_id, a.data_source_id)
@@ -54,6 +54,16 @@ SELECT ${AREA_SUMMARY_COLS}, 'thana_ward' AS relation
 FROM admin_area_links l JOIN public_admin_areas a ON a.id = l.area_id
 WHERE l.linked_area_id = $1 AND l.relation = 'thana'
 ORDER BY relation, level, name_en`;
+
+/** Named roads in an area (db/migrations/0011; OpenStreetMap). $1 area id */
+export const AREA_ROADS_SQL = `
+SELECT r.name, r.name_bn, r.highway, r.ref, r.length_m
+FROM area_roads r JOIN public_admin_areas a ON a.id = r.area_id
+WHERE r.area_id = $1
+ORDER BY array_position(ARRAY['motorway','trunk','primary','secondary','tertiary','motorway_link','trunk_link','primary_link',
+           'secondary_link','tertiary_link','unclassified','residential','living_street']::text[], r.highway),
+         r.length_m DESC, r.name NULLS LAST, r.ref
+LIMIT 200`;
 
 export const PLACE_COUNTS_SQL = `
 SELECT c.key, count(*)::int AS n

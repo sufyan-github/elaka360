@@ -1,12 +1,15 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { PLACE_LEVELS } from '@elaka360/shared';
-import type { AdminArea, AdminAreaSummary, AdminLevel, AreaDetail, CoverageReport, CoverageRow, CoverageService, AreaStats, AreaTreeNode, LevelCounts, LocateResult, NationalStats } from '@elaka360/shared';
+import type { AdminArea, AdminAreaSummary, AdminLevel, AreaDetail, AreaRoad, CoverageReport, CoverageRow, CoverageService, AreaStats, AreaTreeNode, LevelCounts, LocateResult, NationalStats } from '@elaka360/shared';
 import { Db, INCLUDE_UNVERIFIED } from '../db/db.service';
 import * as Q from './geo.sql';
 
 export const INCLUSION_RULE = INCLUDE_UNVERIFIED
   ? 'All active records, including ones not yet verified (labelled by evidence level); `sourced` counts only records with official or secondary evidence.'
   : 'Only records that are production-eligible (official or secondary evidence with a named source).';
+
+/** Levels that roads are filed under (pipelines/roads.py). */
+const ROAD_LEVELS = new Set<AdminLevel>(['union', 'pourashava', 'ward', 'city_corporation']);
 
 export const COVERAGE_SERVICES: CoverageService[] = ['union_parishad', 'pharmacy', 'hospital', 'community_clinic', 'police', 'fire',
   'post_office', 'market', 'bank', 'transport', 'school'];
@@ -33,15 +36,16 @@ export class GeoService {
   async detailByPath(path: string): Promise<AreaDetail> {
     const area = await this.db.one<AdminArea>(Q.AREA_DETAIL_SQL, [path]);
     if (!area) throw new NotFoundException(`area not found: ${path}`);
-    const [breadcrumb, children, counts, links] = await Promise.all([
+    const [breadcrumb, children, counts, links, roads] = await Promise.all([
       this.db.many<AdminAreaSummary>(Q.BREADCRUMB_SQL, [area.id]),
       this.db.many<AdminAreaSummary>(Q.CHILDREN_SQL, [area.id, null]),
       this.counts(area.id),
       this.db.many<AreaDetail['links'][number]>(Q.AREA_LINKS_SQL, [area.id]),
+      ROAD_LEVELS.has(area.level) ? this.db.many<AreaRoad>(Q.AREA_ROADS_SQL, [area.id]) : Promise.resolve([]),
     ]);
     const place_scope = placeScope(area, breadcrumb);
     const places = await this.placeCounts(place_scope ?? area);
-    return { area, breadcrumb, children, ...counts, place_counts: places, links, place_scope };
+    return { area, breadcrumb, children, ...counts, place_counts: places, links, place_scope, roads };
   }
 
   async detailById(id: number): Promise<AreaDetail> {

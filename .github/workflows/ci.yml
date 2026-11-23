@@ -116,9 +116,11 @@ jobs:
         run: |
           node scripts/turso-sync.mjs --url http://127.0.0.1:8080
           node scripts/turso-sync.mjs --url http://127.0.0.1:8080 | grep -q "rows written: 0"    # a re-run writes nothing
-          (cd apps/edge-api && npx wrangler dev --port 8789 --ip 127.0.0.1 --var TURSO_DATABASE_URL:http://127.0.0.1:8080 > ../../edge-api.log 2>&1 &)
+          # MAIL_DEV=1: sign-in codes come back in the response (local only), so the account test can sign in
+          (cd apps/edge-api && npx wrangler dev --port 8789 --ip 127.0.0.1 --var TURSO_DATABASE_URL:http://127.0.0.1:8080 --var MAIL_DEV:1 > ../../edge-api.log 2>&1 &)
           for i in $(seq 1 60); do curl -sf -o /dev/null http://127.0.0.1:8789/health && break; sleep 1; done
           python3 scripts/edge-parity.py "$API_URL" http://127.0.0.1:8789
+          EDGE_URL=http://127.0.0.1:8789 LIBSQL_URL=http://127.0.0.1:8080 node --test scripts/edge-accounts.test.mjs
 
       - name: API smoke + integration tests (labelled visibility, the default)
         run: |

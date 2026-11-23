@@ -40,6 +40,28 @@
   "village": 104882,
   "links": 525,
   "unplaced": 448,
+  "located": {
+   "osm_ambiguous": 170,
+   "osm_outside": 778,
+   "osm_unmatched": 2156,
+   "osm_located": 2732,
+   "osm_bangla_name": 2134
+  },
+  "divisions": [
+   "barishal",
+   "chattogram",
+   "dhaka",
+   "khulna",
+   "mymensingh",
+   "rajshahi",
+   "rangpur",
+   "sylhet"
+  ]
+ },
+ "roads": {
+  "roads": 27696,
+  "outside": 5004,
+  "area_roads": 17743,
   "divisions": [
    "barishal",
    "chattogram",

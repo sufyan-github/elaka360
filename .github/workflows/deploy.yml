@@ -123,6 +123,17 @@ jobs:
         run: |
           if [ -z "$EDGE_SHARED_SECRET" ]; then echo "::warning::EDGE_SHARED_SECRET is not set: contact-form rate limits see Cloudflare's IPs"; exit 0; fi
           printf '%s' "$EDGE_SHARED_SECRET" | npx wrangler secret put EDGE_SHARED_SECRET
+      - name: API Worker secrets (email sign-in)
+        if: steps.cf.outputs.skip == 'false'
+        working-directory: apps/edge-api
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          AUTH_SECRET: ${{ secrets.AUTH_SECRET }}
+        run: |
+          # AUTH_SECRET salts stored codes and session tokens (falls back to EDGE_SHARED_SECRET); RESEND_API_KEY sends the codes
+          if [ -n "$AUTH_SECRET" ]; then printf '%s' "$AUTH_SECRET" | npx wrangler secret put AUTH_SECRET; fi
+          if [ -z "$RESEND_API_KEY" ]; then echo "::warning::RESEND_API_KEY is not set: email sign-in answers 503"; exit 0; fi
+          printf '%s' "$RESEND_API_KEY" | npx wrangler secret put RESEND_API_KEY
       - name: Wait for the API to serve this release
         if: steps.cf.outputs.skip == 'false'
         run: |
@@ -143,6 +154,7 @@ jobs:
         working-directory: apps/web
         env:
           NEXT_PUBLIC_SITE_URL: ${{ env.SITE_URL }}
+          NEXT_PUBLIC_SIGNIN_METHOD: email     # this deployment signs in by email code (apps/edge-api/src/accounts.ts)
         run: pnpm cf:build
       - name: Deploy the website
         if: steps.cf.outputs.skip == 'false'

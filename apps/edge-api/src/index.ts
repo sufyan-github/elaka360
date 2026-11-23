@@ -4,14 +4,17 @@
  * Responses are snapshots of the NestJS API (apps/api), written by apps/api/src/cli/export-edge.ts and loaded by
  * scripts/turso-sync.mjs, so this Worker mostly looks rows up: little CPU per request (free plan: 10 ms) and few rows
  * read (Turso free plan: 500 million a month). Search uses SQLite full-text tables (search_areas, search_places).
- * Sign-in, contributions and the admin API are not served here yet: they answer 503.
+ * Email sign-in, contributions and their moderation queue are served by accounts.ts (tables written by users, never
+ * touched by the sync). Reviews, saved places and the admin API are not served here yet: they answer 503.
  * The same code runs on a D1 binding (env.DB) when one is configured instead of TURSO_DATABASE_URL.
  */
 import { createClient, type Client, type InValue } from '@libsql/client/web';
 import { latinKey } from '@elaka360/shared';
 import { covers, distanceM, type Geometry } from './geo';
+import { HttpError, bad, notFound, sha256, textField } from './http';
+import { ACCOUNT_ROUTES, type AccountEnv } from './accounts';
 
-export interface Env {
+export interface Env extends AccountEnv {
   DB?: D1Database;
   TURSO_DATABASE_URL?: string;
   TURSO_AUTH_TOKEN?: string;
@@ -71,11 +74,6 @@ const CATEGORY_RE = /^[a-z_]{2,40}(\.[a-z_]{2,40})?$/;
 const IP_RE = /^[0-9a-fA-F:.]{2,45}$/;
 const LIST_CHUNK = 2000;
 
-class HttpError extends Error {
-  constructor(public status: number, public title: string, detail: string) { super(detail); }
-}
-const bad = (detail: string) => new HttpError(400, 'Bad Request', detail);
-const notFound = (detail: string) => new HttpError(404, 'Not Found', detail);
 
 /* ---------------------------------------------------------------- params (same rules as apps/api/src/common/params.ts) */
 
@@ -234,19 +232,6 @@ function visitorIp(req: Request, env: Env): string | null {
   const ip = req.headers.get('x-edge-client-ip');
   if (key && key.length >= 32 && sent === key && ip && IP_RE.test(ip)) return ip;   // from our website (service binding)
   return req.headers.get('cf-connecting-ip');
-}
-async function sha256(s: string) {
-  const d = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
-  return [...new Uint8Array(d)].map((b) => b.toString(16).padStart(2, '0')).join('').slice(0, 32);
-}
-function textField(b: Record<string, unknown>, key: string, o: { max: number; min?: number; required?: boolean }): string | null {
-  const v = b[key];
-  if (v === undefined || v === null || v === '') { if (o.required) throw bad(`${key} is required`); return null; }
-  if (typeof v !== 'string') throw bad(`${key} must be text`);
-  const s = v.normalize('NFC').trim();
-  if (o.min && s.length < o.min) throw bad(`${key} must be at least ${o.min} characters`);
-  if (s.length > o.max) throw bad(`${key} must be at most ${o.max} characters`);
-  return s;
 }
 async function contact(req: Request, env: Env) {
   const raw = await req.text();
@@ -463,7 +448,7 @@ const GET: [RegExp, Handler][] = [
   }],
 ];
 /** Features that need accounts or the database's write side: not on this deployment yet. */
-const UNAVAILABLE = /^\/v1\/(auth|me|contributions|admin|open-data|reviews)(\/|$)|^\/v1\/places\/[^/]+\/reviews$/;
+const UNAVAILABLE = /^\/v1\/(auth|me|contributions|admin|open-data|reviews|mod)(\/|$)|^\/v1\/places\/[^/]+\/reviews$/;
 
 function problem(status: number, title: string, detail: string, path: string, requestId: string, extra: Record<string, string> = {}) {
   return new Response(JSON.stringify({ type: 'about:blank', title, status, detail, instance: path, request_id: requestId }), {
@@ -479,17 +464,24 @@ export default {
     try {
       if (req.method === 'OPTIONS') return new Response(null, { status: 204, headers: { 'access-control-allow-origin': '*', 'access-control-allow-methods': 'GET', 'access-control-max-age': '86400' } });
       let body: unknown;
+      // accounts and contributions (accounts.ts): never cached
+      const acct = ACCOUNT_ROUTES.find(([method, re]) => method === req.method && re.test(path));
+      if (acct) {
+        const out = await acct[2]({ req, env, db: dbOf(env), ip: visitorIp(req, env), url, m: path.match(acct[1])! });
+        const created = req.method === 'POST' && path === '/v1/contributions';
+        return Response.json(out, { status: created ? 201 : 200, headers: { 'cache-control': 'no-store', 'x-request-id': requestId } });
+      }
       if (req.method === 'GET' || req.method === 'HEAD') {
         const route = GET.find(([re]) => re.test(path));
         if (!route) {
-          if (UNAVAILABLE.test(path)) throw new HttpError(503, 'Service Unavailable', 'This feature needs sign-in, which is not available yet.');
+          if (UNAVAILABLE.test(path)) throw new HttpError(503, 'Service Unavailable', 'This feature is not available on this deployment yet.');
           throw notFound(`no route for GET ${path}`);
         }
         body = await route[1](path.match(route[0]) as string[], url, req, env);
       } else if (req.method === 'POST' && path === '/v1/contact') {
         return Response.json(await contact(req, env), { status: 201, headers: { 'cache-control': 'no-store', 'x-request-id': requestId } });
       } else if (UNAVAILABLE.test(path)) {
-        throw new HttpError(503, 'Service Unavailable', 'Sign-in, reviews and contributions are not available yet.');
+        throw new HttpError(503, 'Service Unavailable', 'This feature is not available on this deployment yet.');
       } else {
         throw new HttpError(405, 'Method Not Allowed', `${req.method} ${path}`);
       }

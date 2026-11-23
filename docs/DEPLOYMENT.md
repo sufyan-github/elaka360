@@ -21,7 +21,7 @@ lists the data is about 2.7 GB (measured as SQLite) — one Turso database on th
 - **The API is a snapshot of the reference API.**
   - The NestJS API on PostgreSQL stays the source of truth. `apps/api/src/cli/export-edge.ts` runs its own services against a database loaded with the seed (and the Overture layer) and writes every public response: area pages, place pages, ordered lists, stats and the search tables.
   - The Worker only looks these up, so each request uses little CPU (the Workers free limit is 10 ms) and few rows (Turso free: 500 million reads a month).
-  - In CI, `scripts/edge-parity.py` compares 39 endpoints of the Worker with the NestJS API and fails on any difference; search, which is ranked by a different engine, gets its own checks.
+  - In CI, `scripts/edge-parity.py` compares 48 endpoints of the Worker with the NestJS API and fails on any difference; search, which is ranked by a different engine, gets its own checks.
 - **Turso writes: 10 million rows a month.** `scripts/turso-sync.mjs` writes only rows whose content hash changed and deletes rows that disappeared; `--budget` stops a run and the next run continues. The first full load is about 1.6 million rows; a release that changes nothing writes nothing.
 - **Search runs in the edge database** (SQLite FTS5 tables `search_areas`, `search_places`): word prefixes in Bangla and English plus the Banglish key; the rowid encodes the result order, so a query reads only the rows it returns. The website calls it through `/api/search` and `/api/suggest`.
 - **The map loads static pin tiles** (0.05°, `/data/map/tiles/<x>_<y>.json`, listed in `tiles.json`) for the visible area from zoom 12, so no file comes near the 25 MiB asset limit (the densest tile, central Dhaka, is about 8.5 MB). It refreshes them every 5 minutes.
@@ -56,6 +56,31 @@ After CI passes on `main`, or when started by hand:
   - In `apps/web`, run `API_URL=https://elaka360-api.abusufyan.online NEXT_PUBLIC_SITE_URL=https://elaka360.abusufyan.online pnpm cf:build && pnpm cf:deploy`.
 - **Local edge stack:** `pnpm edge:db` (libSQL server on port 8080), `pnpm edge:export`, `pnpm edge:sync`, then
   `pnpm --filter @elaka360/edge-api dev` (port 8789).
+
+### Email sign-in, contributions and moderation (edge)
+
+The API Worker serves accounts itself (`apps/edge-api/src/accounts.ts`, tables in `db/d1/schema.sql` that the data
+sync never touches): sign-in with a 6-digit code sent by email, contributions (new place, correction, report,
+**request for missing information**, **village location pin**) and a moderation queue at `/moderate` on the website.
+The website is built with `NEXT_PUBLIC_SIGNIN_METHOD=email` for this deployment.
+
+- **Resend** (you, once; free plan: 100 emails a day, 3,000 a month):
+  1. Create an account at resend.com, then **Domains → Add domain** `elaka360.abusufyan.online` (a subdomain keeps the main domain's email reputation separate).
+  2. Add the DNS records Resend shows (SPF and DKIM `TXT`, the `MX` for the bounce subdomain) in Cloudflare DNS, then **Verify**.
+  3. **API Keys → Create** with *Sending access* limited to that domain.
+  4. Save it: `gh secret set RESEND_API_KEY --repo sufyan-github/elaka360` (paste the key), and a salt for codes and
+     sessions: `openssl rand -hex 32 | gh secret set AUTH_SECRET --repo sufyan-github/elaka360`.
+  The sender is `MAIL_FROM` in `apps/edge-api/wrangler.jsonc` (`noreply@elaka360.abusufyan.online`).
+- **Limits:** 3 codes per address per 15 minutes, 10 per visitor IP per hour; a code is valid 10 minutes and allows 5
+  tries; sessions last 30 days. Codes and session tokens are stored only as salted hashes and never logged.
+- **First moderator:** sign up on the site, then
+  `turso db shell elaka360 "UPDATE users SET role = 'super_admin' WHERE email = 'you@example.com'"`.
+  Roles that may moderate: `moderator`, `data_admin`, `national_admin`, `super_admin`.
+- **Publishing approved village pins:** nothing goes live from the queue directly. Before a release:
+  `TURSO_DATABASE_URL=libsql://… TURSO_AUTH_TOKEN=$(turso db tokens create elaka360) node scripts/pull-contributions.mjs`
+  writes `data/sources/community_contributions_2026/village_locations.csv` (contribution id, area path, point, date:
+  no personal data), then `pnpm seed:build`, commit and merge. Pins are shown as community data.
+- **Requests for missing information** stay in the queue as to-do items for staff; approving one does not add data.
 
 ### Later: the full API (accounts, contributions, admin)
 

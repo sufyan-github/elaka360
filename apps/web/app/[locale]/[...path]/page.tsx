@@ -50,6 +50,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+/** OpenStreetMap highway classes → the road classes shown (Area.roadClass.*). */
+type RoadClass = 'national' | 'regional' | 'district' | 'local';
+const ROAD_CLASS: Record<string, RoadClass> = {
+  motorway: 'national', trunk: 'national', motorway_link: 'national', trunk_link: 'national', primary: 'national', primary_link: 'national',
+  secondary: 'regional', secondary_link: 'regional', tertiary: 'district', tertiary_link: 'district',
+  unclassified: 'local', residential: 'local', living_street: 'local',
+};
+
 const POP_BASIS = { adjusted: 'popAdjusted', enumerated: 'popEnumerated', census: 'popCensus', estimate: 'popEstimate' } as const;
 
 /** Level name for a count: "জেলা" in Bangla; "Districts" (or "District" for one) in English. */
@@ -65,7 +73,9 @@ export default async function AreaPage({ params }: Props) {
   const t = await getTranslations('Area');
   const d = await load(p.path);
   if (!d) notFound();
-  const { area, breadcrumb, children, descendant_counts, pending_counts, place_counts, links = [], place_scope: scope = null } = d;
+  const { area, breadcrumb, children, descendant_counts, pending_counts, place_counts, links = [], place_scope: scope = null, roads = [] } = d;
+  const point: [number, number] | undefined = area.lat !== null && area.lon !== null && area.location_source ? [area.lon, area.lat] : undefined;
+  const locSource = area.location_source?.startsWith('contribution:') ? 'contribution' : area.location_source?.startsWith('osm:') ? 'osm' : null;
   // places are filed by union, upazila, city corporation and above: other levels show their nearest such area's places
   const placeArea = scope ?? area;
   const [categories, places] = await Promise.all([api.categories(), api.places({ areaId: placeArea.id, limit: 12 })]);
@@ -128,6 +138,18 @@ export default async function AreaPage({ params }: Props) {
       )}
       {locale === 'bn' && !area.name_bn && <p className="mt-1 text-xs text-muted">{t('noBanglaName')}</p>}
 
+      <div className="mt-4 flex flex-wrap gap-2 text-sm">
+        {(area.level === 'village' || area.level === 'mouza') && area.lat === null && (
+          <Link href={`/contribute/new?type=village_location&area=${encodeURIComponent(area.path)}`} className="inline-flex items-center gap-1 rounded-chip bg-primary px-3 py-2 font-semibold text-on-primary">
+            <MapPin className="h-4 w-4" aria-hidden /> {t('pinVillage')}
+          </Link>
+        )}
+        <Link href={`/contribute/new?type=request&area=${encodeURIComponent(area.path)}`} className="inline-flex items-center gap-1 rounded-chip border border-line px-3 py-2 font-medium text-secondary">
+          {t('requestMissing')}
+        </Link>
+      </div>
+      {(area.level === 'village' || area.level === 'mouza') && area.lat === null && <p className="mt-1 text-xs text-muted">{t('noLocationYet')}</p>}
+
       {thanas.length > 0 && (
         <Section id="thana" title={t('thanaOf')}>
           <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
@@ -167,8 +189,24 @@ export default async function AreaPage({ params }: Props) {
       )}
 
       <Section title={t('map')} id="map" action={{ href: '/map', label: t('fullMap') }}>
-        <MapView {...mapFocus} areaId={area.id} className="h-72 md:h-96" />
+        {point ? <MapView point={point} linkDistricts={false} className="h-72 md:h-96" /> : <MapView {...mapFocus} areaId={area.id} className="h-72 md:h-96" />}
+        {locSource && <p className="mt-2 text-xs text-muted">{t(locSource === 'osm' ? 'locationFromOsm' : 'locationFromContributor')}</p>}
+        {area.name_bn_source?.startsWith('osm:') && <p className="mt-1 text-xs text-muted">{t('nameBnFromOsm')}</p>}
       </Section>
+
+      {roads.length > 0 && (
+        <Section title={`${t('roads')} (${formatNumber(roads.length, locale)})`} id="roads">
+          <ul className="divide-y divide-line rounded-card border border-line bg-surface text-sm">
+            {roads.map((r, i) => (
+              <li key={`${r.name ?? r.ref}-${r.highway}-${i}`} className="flex items-baseline justify-between gap-3 px-3 py-2">
+                <span>{(locale === 'bn' ? r.name_bn || r.name : r.name || r.name_bn) ?? r.ref}{r.ref && (r.name || r.name_bn) ? <span className="ml-1 font-en text-xs text-muted">{r.ref}</span> : null}</span>
+                <span className="shrink-0 text-xs text-muted">{t(`roadClass.${ROAD_CLASS[r.highway] ?? 'local'}`)} · {formatNumber(Math.max(0.1, Math.round(r.length_m / 100) / 10), locale)} {t('km')}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-2 text-xs text-muted">{t('roadsNote')}</p>
+        </Section>
+      )}
 
       <Section title={scope ? t('quickSearchIn', { area: titleOf(scope, locale) }) : t('quickSearch')} id="categories">
         {scope && <p className="mb-2 text-xs text-muted">{t('scopeNote', { area: titleOf(scope, locale) })}</p>}

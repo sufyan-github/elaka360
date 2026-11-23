@@ -12,7 +12,7 @@ const TABS = [
   { href: '/me', key: 'profile', Icon: User },
 ] as const;
 
-const NON_AREA = ['/search', '/saved', '/me', '/emergency', '/near-me', '/login', '/contribute', '/map', '/p/', '/c/', '/about', '/contact', '/privacy', '/terms', '/data-policy', '/coverage', '/guidelines', '/offline'];
+const NON_AREA = ['/search', '/saved', '/me', '/emergency', '/near-me', '/login', '/contribute', '/map', '/p/', '/c/', '/about', '/contact', '/privacy', '/terms', '/data-policy', '/coverage', '/moderate', '/guidelines', '/offline'];
 
 /** `pathname` is locale-less (next-intl strips /en), so the same rules apply in both languages. */
 function isActive(pathname: string, href: string) {

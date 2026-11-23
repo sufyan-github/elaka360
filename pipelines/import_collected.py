@@ -610,7 +610,8 @@ LAYER_KINDS = {"overture"}
 COMMUNITY_KINDS = {"osm", "overture", "org_branches", "wikidata"}    # non-government sources added Nov 2026
 # sources added in later batches get source ids after every earlier source, so existing ids never move
 SOURCE_BATCH = {**{k: 1 for k in COMMUNITY_KINDS},
-                **{k: 2 for k in ("local_services", "haat_bazaar", "shelters", "fuel_stations", "transport_tourism")}}
+                **{k: 2 for k in ("local_services", "haat_bazaar", "shelters", "fuel_stations", "transport_tourism")},
+                **{k: 3 for k in ("osm_localities", "community_contributions")}}   # village points, roads, approved pins
 # SEED_SKIP_KINDS=osm,overture builds without those source kinds (to compare against an earlier seed)
 SKIP_KINDS = {k for k in os.environ.get("SEED_SKIP_KINDS", "").split(",") if k}
 PERSONAL_MAIL_KINDS = {"dghs_hris"}     # registry mixes office mailboxes with staff gmail
