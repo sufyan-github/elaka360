@@ -27,4 +27,12 @@ BEGIN;
 \ir localities/barishal.sql
 \ir localities/sylhet.sql
 \ir localities/mymensingh.sql
+\ir roads/rajshahi.sql
+\ir roads/rangpur.sql
+\ir roads/dhaka.sql
+\ir roads/chattogram.sql
+\ir roads/khulna.sql
+\ir roads/barishal.sql
+\ir roads/sylhet.sql
+\ir roads/mymensingh.sql
 COMMIT;

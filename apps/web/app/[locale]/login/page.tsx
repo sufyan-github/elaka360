@@ -5,6 +5,9 @@ import { localePath } from '@/lib/links';
 import { localeAlternates } from '@/lib/meta';
 import { LoginForm } from './LoginForm';
 
+/** Same build-time switch as LoginForm (a server component cannot read a client module's constants). */
+const EMAIL = process.env.NEXT_PUBLIC_SIGNIN_METHOD === 'email';
+
 type Props = { params: Promise<{ locale: string }>; searchParams: Promise<{ next?: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -24,9 +27,9 @@ export default async function LoginPage({ params, searchParams }: Props) {
   return (
     <div className="mx-auto max-w-sm pt-8">
       <h1 className="text-2xl font-bold">{t('title')}</h1>
-      <p className="mt-1 text-sm text-muted">{t('intro')}</p>
+      <p className="mt-1 text-sm text-muted">{EMAIL ? t('introEmail') : t('intro')}</p>
       <LoginForm next={safeNext} />
-      <p className="mt-6 text-xs text-muted">{t('legal')}</p>
+      <p className="mt-6 text-xs text-muted">{EMAIL ? t('legalEmail') : t('legal')}</p>
     </div>
   );
 }

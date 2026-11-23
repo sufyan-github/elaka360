@@ -7,12 +7,18 @@ import { useLocale, useTranslations } from 'next-intl';
 import { digits } from '@/lib/locale';
 
 type Step = { kind: 'phone' } | { kind: 'code'; devCode?: string };
+/** Sign-in by email code (the Cloudflare deployment) or by SMS (the full API). Set at build time. */
+export const SIGNIN_METHOD: 'email' | 'phone' = process.env.NEXT_PUBLIC_SIGNIN_METHOD === 'email' ? 'email' : 'phone';
+const EMAIL = SIGNIN_METHOD === 'email';
 
 function messageKey(status: number, detail?: string) {
   if (status === 429) return 'error429';
   if (status === 503) return 'error503';
   if (status === 401) return detail?.includes('wrong') ? 'wrongCode' : 'expiredCode';
-  if (status === 400) return 'error400';
+  if (status === 400 && detail?.includes('wrong code')) return 'wrongCode';
+  if (status === 400 && (detail?.includes('expired') || detail?.includes('not requested'))) return 'expiredCode';
+  if (status === 400) return EMAIL ? 'error400Email' : 'error400';
+  if (status === 502 && EMAIL) return 'error502Email';
   return 'errorGeneric';
 }
 
@@ -36,7 +42,7 @@ export function LoginForm({ next }: { next: string }) {
   async function requestCode(e: React.FormEvent) {
     e.preventDefault();
     setBusy(true); setError(null);
-    const { res, json } = await post('/api/auth/otp', { phone });
+    const { res, json } = await post('/api/auth/otp', EMAIL ? { email: phone.trim() } : { phone });
     setBusy(false);
     if (!res.ok) return setError(t(messageKey(res.status, json.detail)));
     setStep({ kind: 'code', devCode: json.dev_code });
@@ -45,7 +51,7 @@ export function LoginForm({ next }: { next: string }) {
   async function verify(e: React.FormEvent) {
     e.preventDefault();
     setBusy(true); setError(null);
-    const { res, json } = await post('/api/auth/verify', { phone, code, name: name.trim() || undefined });
+    const { res, json } = await post('/api/auth/verify', { ...(EMAIL ? { email: phone.trim() } : { phone }), code, name: name.trim() || undefined });
     setBusy(false);
     if (!res.ok) return setError(t(messageKey(res.status, json.detail)));
     router.replace(next);
@@ -58,16 +64,19 @@ export function LoginForm({ next }: { next: string }) {
       {step.kind === 'phone' ? (
         <form onSubmit={requestCode} className="space-y-4">
           <label className="block text-sm font-medium">
-            {t('phone')}
-            <input value={phone} onChange={(e) => setPhone(e.target.value)} inputMode="tel" autoComplete="tel" required placeholder="01XXXXXXXXX" className={input} />
+            {EMAIL ? t('email') : t('phone')}
+            {EMAIL
+              ? <input value={phone} onChange={(e) => setPhone(e.target.value)} type="email" inputMode="email" autoComplete="email" required maxLength={254} placeholder="name@example.com" className={input} />
+              : <input value={phone} onChange={(e) => setPhone(e.target.value)} inputMode="tel" autoComplete="tel" required placeholder="01XXXXXXXXX" className={input} />}
           </label>
           <button disabled={busy} className="w-full rounded-chip bg-primary py-2.5 font-semibold text-on-primary disabled:opacity-60">{t('sendCode')}</button>
         </form>
       ) : (
         <form onSubmit={verify} className="space-y-4">
-          <p className="text-sm">{t('enterCode', { phone: digits(phone, locale) })}</p>
+          <p className="text-sm">{EMAIL ? t('enterCodeEmail', { email: phone.trim() }) : t('enterCode', { phone: digits(phone, locale) })}</p>
+          {EMAIL && <p className="text-xs text-muted">{t('checkSpam')}</p>}
           {step.devCode && (
-            <p className="rounded-chip bg-warning-tint p-2 text-xs text-warning">{t('devCode', { code: step.devCode })}</p>
+            <p className="rounded-chip bg-warning-tint p-2 text-xs text-warning">{t(EMAIL ? 'devCodeEmail' : 'devCode', { code: step.devCode })}</p>
           )}
           <label className="block text-sm font-medium">
             {t('code')}
@@ -78,7 +87,7 @@ export function LoginForm({ next }: { next: string }) {
             <input value={name} onChange={(e) => setName(e.target.value)} maxLength={80} autoComplete="name" className={input} />
           </label>
           <button disabled={busy} className="w-full rounded-chip bg-primary py-2.5 font-semibold text-on-primary disabled:opacity-60">{t('signIn')}</button>
-          <button type="button" onClick={() => { setStep({ kind: 'phone' }); setCode(''); }} className="w-full text-sm text-secondary underline">{t('changeNumber')}</button>
+          <button type="button" onClick={() => { setStep({ kind: 'phone' }); setCode(''); }} className="w-full text-sm text-secondary underline">{EMAIL ? t('changeEmail') : t('changeNumber')}</button>
         </form>
       )}
       {error && <p role="alert" className="mt-3 text-sm text-danger">{error}</p>}

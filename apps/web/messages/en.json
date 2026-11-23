@@ -149,7 +149,22 @@
     "thanaWards": "Wards in this thana",
     "quickSearchIn": "Quick search in {area}",
     "placesIn": "Places in {area}",
-    "scopeNote": "Places are filed by union, upazila or city corporation, so these are the places in {area}."
+    "scopeNote": "Places are filed by union, upazila or city corporation, so these are the places in {area}.",
+    "pinVillage": "Show this village on the map",
+    "requestMissing": "Something missing here? Ask to add it",
+    "noLocationYet": "The census gives this unit's name and population but no location. If you know where it is, pin it; staff check every pin before it is shown.",
+    "locationFromOsm": "Location from OpenStreetMap, matched to this census village by name inside its union: community data, not verified.",
+    "locationFromContributor": "Location pinned by a local contributor and approved by a moderator: community data, not officially verified.",
+    "nameBnFromOsm": "Bangla name from OpenStreetMap (community data); the census gives only the English spelling.",
+    "roads": "Roads",
+    "km": "km",
+    "roadsNote": "Named roads from OpenStreetMap (community data, not verified). Length is the part inside this area. A road missing or misnamed? Use “Ask to add it” above.",
+    "roadClass": {
+      "national": "National / highway",
+      "regional": "Regional",
+      "district": "District road",
+      "local": "Local road"
+    }
   },
   "Place": {
     "notFound": "Not found",
@@ -282,7 +297,16 @@
     "code": "6-digit code",
     "name": "Your name (first time, optional)",
     "signIn": "Sign in",
-    "changeNumber": "Change number / new code"
+    "changeNumber": "Change number / new code",
+    "email": "Email address",
+    "enterCodeEmail": "Enter the 6-digit code we sent to {email}.",
+    "checkSpam": "It can take a minute to arrive. Not there? Check the spam or promotions folder.",
+    "error400Email": "Enter a valid email address.",
+    "error502Email": "The email could not be sent. Please try again in a few minutes.",
+    "changeEmail": "Change email / new code",
+    "introEmail": "We will email you a 6-digit code. You need to sign in to add information, ask for missing information or pin a village.",
+    "legalEmail": "By signing in you accept our terms of use and privacy policy. We keep only your email address and display name; we never show your email to other people.",
+    "devCodeEmail": "Development server: code {code} (on the real server it is emailed)"
   },
   "Me": {
     "title": "My profile",
@@ -293,7 +317,9 @@
       "area_info": "Area information",
       "photo": "Photo",
       "correction": "Correction",
-      "report": "Report"
+      "report": "Report",
+      "request": "Request",
+      "village_location": "Village location"
     },
     "memberSince": "Member since {date}",
     "staff": "You have staff access — the admin panel runs at a separate address.",
@@ -307,7 +333,8 @@
     "emptyBody": "Add a place in your area or a correction to wrong information.",
     "myReviews": "My reviews",
     "noReviews": "You have not written any reviews yet.",
-    "account": "Account"
+    "account": "Account",
+    "reviewQueue": "Review submissions"
   },
   "Account": {
     "failed": "That could not be done. Please try again.",
@@ -346,6 +373,10 @@
       "report": {
         "title": "Report a problem",
         "body": "A place that has closed, a duplicate or offensive content."
+      },
+      "request": {
+        "title": "Ask for missing information",
+        "body": "A village, road, service or place that is not here yet? Tell us what is missing in your area."
       }
     },
     "howTitle": "How it works",
@@ -371,7 +402,9 @@
     "type": {
       "new_place": "New place",
       "correction": "Correct wrong information",
-      "report": "Report a problem"
+      "report": "Report a problem",
+      "request": "Request missing information",
+      "village_location": "Pin a village's location"
     },
     "targetPlace": "Place: {target}",
     "targetArea": "Area: {target}",
@@ -399,7 +432,29 @@
     "back": "Previous step",
     "saveDraft": "Keep as draft",
     "next": "Next step",
-    "submit": "Submit"
+    "submit": "Submit",
+    "subject": "What is missing?",
+    "subjects": {
+      "village": "A village or neighbourhood",
+      "road": "A road or path",
+      "service": "A service (school, clinic, pharmacy…)",
+      "place": "A place or landmark",
+      "boundary": "A boundary or area name",
+      "other": "Something else"
+    },
+    "missingName": "Its name (if you know it)",
+    "missingDetails": "Describe what should be added",
+    "missingHint": "Where it is, what it is called locally, and how you know. Staff check every request before anything is published.",
+    "villageIntro": "Show where {target} is on the map. Put the pin at the centre of the village (its main settlement or bazar).",
+    "landmark": "Nearby landmark or how to find it (optional)",
+    "villageLocationIntro": "Tap the map at the village's centre, or drag the pin. Roads, rivers and buildings on the map help you find it.",
+    "pickOnMap": "Map: tap to place the pin",
+    "mapFailed": "The map could not load on this device. Type the coordinates below, or use your current location.",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "useCoordinates": "Use these",
+    "typeCoordinates": "Or type the coordinates",
+    "coordinatesHint": "Tip: in Google Maps or OpenStreetMap, press and hold on the place to copy its coordinates (latitude first)."
   },
   "Offline": {
     "metaTitle": "Offline",
@@ -804,5 +859,27 @@
       "transport": "Bus, rail or launch",
       "school": "School / madrasa"
     }
+  },
+  "Moderate": {
+    "title": "Review submissions",
+    "intro": "Check each submission against its evidence or local knowledge. Approved items are added in the next data release, marked as community information; nothing is published from here directly.",
+    "signIn": "Sign in to review submissions",
+    "notAllowed": "Only moderators can review submissions.",
+    "status": {
+      "new": "New",
+      "needs_changes": "Needs changes",
+      "approved": "Approved",
+      "rejected": "Rejected"
+    },
+    "loadFailed": "The queue could not be loaded.",
+    "empty": "Nothing here.",
+    "point": "Point:",
+    "openMap": "open map",
+    "previousNote": "Earlier note: {note}",
+    "note": "Note to the contributor (required)",
+    "approve": "Approve",
+    "needsChanges": "Needs changes",
+    "reject": "Reject",
+    "failed": "Could not save the decision."
   }
 }

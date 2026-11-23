@@ -1,0 +1,826 @@
+﻿area_id,name,name_bn,highway,ref,length_m,osm_ids
+44189,,,primary,R464,3229,521910477
+44190,Sherpur-Sreebardi Road,,secondary,Z4607,201,323825075
+44190,,,secondary,Z4607,782,283603676
+44191,Sherpur - Jhinaigati Road,,primary,,3464,393192698
+44192,Nalitabari-Sherpur Road,,tertiary,,2424,221203039
+44194,Nalitabari-Sherpur Road,,tertiary,,5720,221201870 221203039
+44194,Pakuria Road,,unclassified,,7209,1260579025
+44194,Tilkandi Road,,unclassified,,1954,1260649102
+44195,Sherpur - Mymensingh Highway,,primary,R371,7731,160725373 218461523
+44195,,,secondary,Z4618,6131,232601253 441385198 1261398591 1262630633 1262630634 1262630636
+44195,Chakpathak Road,,unclassified,,824,1260687695 1261398606
+44195,Nagpara-Rajvollovpur Road,,unclassified,,848,1260687693
+44195,Palpara Road,,unclassified,,748,1261398603
+44195,Park Road,,unclassified,,74,1261398608
+44195,Police Line Road,,unclassified,,693,1261398605
+44195,Rajvollovpur Bypasss Road,,unclassified,,698,1260687694
+44195,SreeRampur Road,,unclassified,,805,1260561753 1260561754
+44195,Stadium Road,,unclassified,,193,1261398607
+44195,Tilkandi Road,,unclassified,,1675,1260649102
+44198,Sherpur - Mymensingh Highway,,primary,R371,4572,160725373
+44198,,,secondary,Z4610,1281,261870198
+44198,,,secondary,Z4618,2994,269467689 441385198
+44198,Pakuria Road,,unclassified,,655,1260579025
+44199,Jamalpur - Sherpur Hwy,,primary,R460,1320,232600542 1284133162
+44199,,,primary,R464,7175,521910477
+44206,Jhulgaon-Tengrakhali Road,,primary,,384,1052359973
+44206,Nalitabari - Bongaon Road,,secondary,Z4602,4218,232953445
+44206,টেংরাখালি-বড়মারি রোড,টেংরাখালি-বড়মারি রোড,secondary,Z4603,4446,393192700
+44207,,,secondary,Z2834,3346,256570534 256570561 256570684
+44207,,,trunk,N402,9087,256571029 311644399 1043801582
+44209,Nalitabari - Haluaghat Road,,secondary,Z3040,7039,717634571 1493250588 1493250589
+44210,Nalitabari - Haluaghat Road,,secondary,Z3040,1628,1493250588
+44211,,,trunk,N402,4774,358486466 450636681 450636682 1493250579
+44212,Nalitabari - Bongaon Road,,secondary,Z4602,4681,232953445 1424521875 1424521878 1424521879 1424521882 1424521884 1424521885 1424521886 1493250573 1493250574
+44212,,,secondary,Z4602,114,1424521883 1424705238
+44212,Nalitabari-Sherpur Road,,tertiary,,2282,235863900
+44212,,,trunk,N402,3403,256571029
+44213,Nalitabari - Bongaon Road,,secondary,Z4602,1947,232953445
+44213,Nalitabari-Sherpur Road,,secondary,,121,393192690
+44213,Nalitabari-Sherpur Road,,tertiary,,5348,221203039 235863900 393192689 393192691 393192692 393192693 393192694 450636680
+44215,,,secondary,Z2834,3945,323850379 1052366311 1225960748 1225960749
+44215,,,secondary,Z4616,5489,283601949 474169361 1052361864
+44216,,,secondary,Z2834,4701,1052366311
+44218,,,secondary,Z4607,1663,283592403
+44218,,,secondary,Z4616,4071,283601949
+44219,Shreebardi -Jalkata - Kochnipara Road,,residential,,2173,1105804342
+44219,,,secondary,Z4604,306,1054614987
+44219,,,secondary,Z4607,3977,283602382 1252975682 1252975683
+44220,,,primary,R464,389,221202549
+44220,,,secondary,Z4604,2140,1054614987
+44221,,,primary,R464,2573,221202549 521910477
+44222,,,secondary,Z4604,7345,1054614987 1054614988 1054614989
+44222,,,secondary,Z4607,319,283603010
+44223,,,secondary,Z4604,890,1054614988
+44223,,,secondary,Z4607,7908,283603010 1252975682
+44224,Sherpur - Jhinaigati Road,,primary,,866,393192698
+44225,Sherpur - Mymensingh Highway,,primary,R371,4857,160725373
+44225,,,secondary,Z4610,5175,261870198 469896404 700354387 1054604492 1054604493
+44226,,,secondary,Z4610,195,1054604490 1054604491
+44226,,,trunk,N402,4491,358484628 358485835 450636681
+44228,Sherpur - Mymensingh Highway,,primary,R371,7415,160725373 702033870
+44228,,,secondary,Z4610,3654,1054595621 1054595622 1054595623
+44228,,,secondary,Z4618,1695,270338741
+44228,,,secondary,Z4620,888,270340542
+44228,,,trunk,N402,965,358484628 700354384 700354385
+44229,,,secondary,Z4620,1775,270340542
+44230,,,secondary,Z4618,2543,270338741
+44230,←←←sailampur- narayonkhola  road,,tertiary,,1503,270337995
+44231,,,secondary,Z4618,2260,270338741
+44231,←←←sailampur- narayonkhola  road,,tertiary,,1503,270337995
+44232,Bepari Bari Rd,,residential,,593,1077566208
+44232,Madrasha Rd,,residential,,376,1077287517
+44232,,,secondary,Z4618,6374,269467410 270338741 465546848 1077565420
+44232,←←←sailampur- narayonkhola  road,,tertiary,,301,270337995
+44233,,,secondary,Z4618,5315,269467410 269467622
+44233,,,secondary,Z4620,4685,270340542 270341170
+44234,,,secondary,Z2834,9471,323850379 1475403067 1475403068 1475403069 1475403070 1475408604 1475408605
+44234,,,secondary,Z4616,2704,474169356 474169361 1052361865 1052361866
+44235,Shreebardi -Jalkata - Kochnipara Road,,residential,,217,1105804342
+44235,,,secondary,Z4616,4323,474169356
+44236,,,secondary,Z2834,5722,1225788372 1225788373 1475403069
+44237,টেংরাখালি-বড়মারি রোড,টেংরাখালি-বড়মারি রোড,secondary,Z4603,593,393192700
+44238,Sherpur - Jhinaigati Road,,secondary,Z4605,5302,323826646 1245988345 1245988346
+44238,,,secondary,Z4616,2017,474169356
+44240,Jhulgaon-Tengrakhali Road,,primary,,2900,393192697 393192699 1052359973
+44240,Sherpur - Jhinaigati Road,,primary,,4048,393192695 393192698 1052360510
+44240,Sherpur - Jhinaigati Road,,secondary,Z4605,298,1245988345
+44241,Dewkhula-Namakatlasen Road,,residential,,1864,439864477 439864855
+44241,Sharutia Road,,residential,,989,439867931
+44241,Fulbaria Road,,secondary,Z3035,3328,585902919
+44242,,,secondary,Z4014,315,229542338
+44242,Garobazar-Fulbaria Road,,tertiary,,2431,229541514 229541534 229541720 229541727
+44244,Fulbaria Road,,secondary,Z3035,1902,585902919
+44244,Muktagacha - Phulbaria Road,,secondary,Z4105,3116,1160684056
+44244,Garobazar-Fulbaria Road,,tertiary,,742,229540800
+44245,Fulbaria Road,,secondary,Z3035,951,585902919
+44245,Chankanda Road,,tertiary,,4284,229540622 465334282
+44246,Fulbaria Road,,secondary,Z3032,102,1066008614
+44246,,,secondary,Z3021,1900,233200735
+44246,,,secondary,Z3032,3489,233200273 233200293 233200294 1066008612
+44246,Garobazar-Fulbaria Road,,tertiary,,6639,229540800 229541500 229541514
+44247,Garobazar-Fulbaria Road,,tertiary,,4477,229541727 229541874
+44248,,,secondary,Z3037,3766,723263408 1066114560
+44249,,,secondary,Z3032,3112,233200273
+44250,Chankanda Road,,tertiary,,1668,229540622
+44251,,,secondary,Z3032,7938,233200273 1066005474 1066005475 1066007714 1066007715 1066007716
+44252,,,secondary,Z3032,1157,103601044 1066005474
+44253,Bashna Eidgah Road,বাসনা ঈদগাহ সড়ক,residential,,916,439869217
+44253,Bashna-Telegram Road,বাসনা  - তেলীগ্রম সড়ক,residential,,2720,439866304 1160684054
+44253,Foraji Bari Road,,residential,,660,439865618
+44253,Hutkhula Road,,residential,,980,439866034
+44253,Noyabila- Sharutia Road,,residential,,1845,439867749
+44253,Sharutia Road,,residential,,1730,439867931
+44253,Fulbaria Road,,secondary,Z3035,2377,585902919
+44253,Muktagacha - Phulbaria Road,,secondary,Z4105,1869,1160684056
+44255,Boilor-Fatemanagar Road,,residential,,1092,656802725
+44255,ঢাকা-ময়মনসিংহ মহাসড়ক,ঢাকা-ময়মনসিংহ মহাসড়ক,trunk,N3,15020,278474815 608079054
+44256,Boilor-Fatemanagar Road,,residential,,218,656802725
+44256,Fatemanagar Bazar- Ferry Ghat Road,,residential,,607,564647392
+44256,Mymensingh-Gafargaon Highway,,secondary,Z3033,2359,227906949
+44257,আহাম্মদাবাদ সড়ক,আহাম্মদাবাদ সড়ক,residential,,4108,156940330
+44257,Mymensingh-Gafargaon Highway,,secondary,Z3033,6741,227906949
+44258,ধুরধুরিয়া সড়ক,ধুরধুরিয়া সড়ক,tertiary,,1243,290584425
+44258,Dhaka-Mymensingh,,trunk,N3,3498,608079055 608079057
+44258,Dhaka-Mymensingh Highway,,trunk,N3,4186,278474811 278474813
+44258,বিশ্ববিদ্যালয় সড়ক,বিশ্ববিদ্যালয় সড়ক,unclassified,,222,656808835
+44259,Dhaka-Mymensingh,,trunk,N3,1372,608079057
+44259,Dhaka-Mymensingh Highway,,trunk,N3,1030,278474813
+44261,Mymensingh-Gafargaon Highway,,secondary,Z3033,6432,227906949 1090389966 1090389967 1090389968
+44262,,,secondary,Z3032,6683,103601044
+44262,Unmarked Road,,unclassified,,3376,732490675
+44263,Dhaka-Mymensingh,,trunk,N3,2458,608079055 608079056
+44263,Dhaka-Mymensingh Highway,,trunk,N3,2299,278474809 278474811
+44264,,,secondary,Z3032,1337,103601044
+44264,Dhaka-Mymensingh,,trunk,N3,4111,608079056 608079058 608079077
+44264,Dhaka-Mymensingh Highway,,trunk,N3,3669,278474809 278474810 278474814
+44265,আহাম্মদাবাদ সড়ক,আহাম্মদাবাদ সড়ক,residential,,5868,156940330
+44265,ধুরধুরিয়া সড়ক,ধুরধুরিয়া সড়ক,residential,,62,656808839
+44265,ধুরধুরিয়া সড়ক,ধুরধুরিয়া সড়ক,tertiary,,249,290584425
+44265,Dhaka-Mymensingh,,trunk,N3,54,608079053
+44265,Dhaka-Mymensingh Highway,,trunk,N3,54,278474812
+44265,ঢাকা-ময়মনসিংহ মহাসড়ক,ঢাকা-ময়মনসিংহ মহাসড়ক,trunk,N3,5209,278474815 608079054
+44266,,,secondary,Z3037,6196,276986959 723263408 736374855
+44266,Unmarked Road,,unclassified,,3069,732490675
+44267,,,secondary,Z3037,6366,276986959 439550116 465545584 766445197 766445198
+44268,Bhaluka-Goforgoan Road,,secondary,Z3031,1333,154078162
+44268,,,secondary,Z3037,1428,439550116
+44268,Dhaka-Mymensingh,,trunk,N3,4048,608079077
+44268,Dhaka-Mymensingh Highway,,trunk,N3,4322,278474814
+44269,Bhaluka-Goforgoan Road,,secondary,Z3031,2549,621564570
+44269,,,tertiary,Z3031,76,1053892905
+44270,Bhaluka - Shakhipur Road,,secondary,Z3030,11001,231312540
+44271,Bhaluka-Goforgoan Road,,secondary,Z3031,4476,154078162 621564569 621564570
+44272,Dhaka-Mymensingh,,trunk,N3,2955,608079063
+44272,Dhaka-Mymensingh Highway,,trunk,N3,3759,274830703
+44273,Bhaluka - Shakhipur Road,,secondary,Z3030,7207,231311664 231312540 1244835183 1244835184 1530436897
+44273,Dhaka-Mymensingh,,trunk,N3,3533,608079063 608079077
+44273,Dhaka-Mymensingh Highway,,trunk,N3,3665,274830703 278474814
+44275,Dhaka-Mymensingh,,trunk,N3,5909,608079063
+44275,Dhaka-Mymensingh Highway,,trunk,N3,5639,274830703
+44279,,,secondary,Z4101,4494,713816013 719450421
+44280,Mymensingh - Tangail Highway,,trunk,N401,5072,278928223 278928226 278928229 279416324 582810850 1559804521 1559804524 1559821873
+44281,Muktagacha - Phulbaria Road,,secondary,Z4105,3858,231235667
+44281,Mymensingh - Tangail Highway,,trunk,N401,3602,278928229
+44282,,,secondary,Z4101,5183,713816013
+44282,Mymensingh - Tangail Highway,,trunk,N401,1004,278928224 278928229
+44282,ময়মনসিংহ - টাঙ্গাইল মহাসড়ক,ময়মনসিংহ - টাঙ্গাইল মহাসড়ক,trunk,N401,2382,278921553
+44283,Mymensingh - Tangail Highway,,trunk,N401,63,278921558 278921559
+44283,ময়মনসিংহ - টাঙ্গাইল মহাসড়ক,ময়মনসিংহ - টাঙ্গাইল মহাসড়ক,trunk,N401,5737,278921553 278921561 278921562
+44284,ময়মনসিংহ - টাঙ্গাইল মহাসড়ক,ময়মনসিংহ - টাঙ্গাইল মহাসড়ক,trunk,N401,258,278921562
+44285,ময়মনসিংহ - টাঙ্গাইল মহাসড়ক,ময়মনসিংহ - টাঙ্গাইল মহাসড়ক,trunk,N401,893,278921553
+44286,Bashna Eidgah Road,বাসনা ঈদগাহ সড়ক,residential,,229,439869217
+44286,Bashna-Telegram Road,বাসনা  - তেলীগ্রম সড়ক,residential,,130,1160684054
+44286,Foraji Bari Road,,residential,,220,439865618
+44286,Joy Bangla Road,,residential,,441,439869594
+44286,Muktagacha - Phulbaria Road,,secondary,Z4105,2748,231235667 1160684056 1160684057
+44286,Namakatlasen- Kheruajani Road,,unclassified,,240,439969312
+44287,,,secondary,Z4101,4600,713816013 719450421
+44289,Dewkhula-Namakatlasen Road,,residential,,1102,439864855 439865335
+44289,Foraji Bari Road,,residential,,220,439865618
+44289,Hutkhula Road,,residential,,196,439866034
+44289,Joy Bangla Road,,residential,,1103,439869594
+44289,Fulbaria Road,,secondary,Z3035,2689,154854272 585902919 585902920 899790033 899790034
+44289,Mymensingh City Bypass,,trunk,N309,2422,101366078 583679238 648337747
+44289,Gohailkandi Rd,,unclassified,,1497,101366048
+44289,Namakatlasen- Kheruajani Road,,unclassified,,2156,439969312
+44290,Akua Morol (Dorga) Para Road,,residential,,442,571262240 739973648
+44290,Nasirabad College Road,,residential,,187,439861461
+44290,Nayapara Road,,residential,,260,101132602
+44290,Fulbaria Road,,secondary,Z3035,3643,154854272 1066008618 1066008619
+44290,Mymensingh City Bypass,,trunk,N309,4029,101366078
+44291,Jaynul Abedin Park Road,,residential,,377,101132615 1393880864
+44291,Mymensingh Park Road,,residential,,1084,410328855
+44291,সার্কিট হাউস রোড,সার্কিট হাউস রোড,residential,,147,1381334628
+44291,Abul Monshur Road,,tertiary,,189,101132600
+44291,Mymensingh - Tangail Highway,,trunk,N401,5386,101125536 279416324 1559804521 1559804523 1559821874
+44291,Mymensingh City Bypass,,trunk,,2661,583679237 583679238 1571863420
+44292,Mymensingh - Netrokona Highway,,primary,R370,3571,655300648 886435655 1414341235
+44292,Mymensingh - kishoreganj Highway,,primary,R360,5594,101357073 583413887
+44292,Sherpur - Mymensingh Highway,,primary,R371,1138,101357075 232598294 655300649 1414341234 1414341236
+44292,Sherpur/Netrokuna/Mymensingh Traffic Point,,primary,,118,151306257
+44292,Shomvuganj Road,,primary,R370,1729,101124069 1414341242
+44292,শেরপুর - ময়মনসিংহ মহাসড়ক,শেরপুর - ময়মনসিংহ মহাসড়ক,primary,R371,594,232598284
+44292,Chaatrapur Primary School Rd,,residential,,182,289971109
+44296,Jubilee Road,,primary,,694,367224413
+44296,Kristopur Road,,primary,R370,162,655300652 655300655
+44296,Mymenshingh ti sherpur hwy,,primary,,3674,436982565 655300650 655300651 655300653 1414341230 1414341233
+44296,Patgudam Road,,primary,R370,1052,277483409
+44296,Power Station Road,,primary,R372,1900,410340108 539767379 1488088800
+44296,,,primary,R372,12,1487213302
+44296,Shomvuganj Road,,primary,R370,2412,101124069 1414341238 1414341239 1414341240 1414341241 1414341242
+44296,শেরপুর - ময়মনসিংহ মহাসড়ক,শেরপুর - ময়মনসিংহ মহাসড়ক,primary,R371,2377,232598284
+44296,D.N Chakraborty Road,,residential,,98,646217986
+44296,Power House Road,,residential,,1348,410329634
+44296,Power Station Road,,residential,,618,1047416098
+44296,,,secondary,Z3033,208,1078125384
+44296,Boro Bazar Road,,tertiary,,329,101132581
+44296,J C Guha Road,,tertiary,,212,101124076
+44296,Moharaja Road,,tertiary,,120,367224557
+44296,Trunk Potti Road,,tertiary,,125,101132578
+44296,Minor Road,,unclassified,,1151,1322487044
+44297,Fulbaria Road,,secondary,Z3035,2766,154854272 899790033
+44297,Sutia Bridge,,tertiary,,94,582447209
+44298,Mymensingh-Gafargaon Highway,,secondary,Z3033,6067,227906949
+44298,Churkhai Bazar Road,,tertiary,N303,946,103494253 1559306390 1559306391
+44298,Dhaka-Mymensingh Highway,,trunk,N3,1497,656684086
+44298,ঢাকা-ময়মনসিংহ মহাসড়ক,ঢাকা-ময়মনসিংহ মহাসড়ক,trunk,N3,4592,278474815 608079054
+44300,,,secondary,Z2834,10014,723032670 723035007 1052899758 1244993797 1244993798 1244993799 1244993800 1493513194 1493513195 1493513205 1493513206 1493513207 1493513208 1493513232 1493513233 1493513234 1493513235
+44300,,,secondary,Z3708,340,1052596213
+44302,Haluaghat-Dhubaura Road,,secondary,Z3712,889,467565893
+44302,Tarakanda - Dhobaura Road,,secondary,Z3707,5460,711105772 723083316 723083317 723083319 1493250558 1493250559
+44302,,,secondary,Z3712,3872,540131993 540131995
+44302,Ghoshgaon Rd,,tertiary,,3733,467613243 721545773
+44304,Tarakanda - Dhobaura Road,,secondary,Z3707,2584,723083319 1225796302 1225796303
+44305,,,secondary,Z2834,6012,281310774 467564889 1244993794 1244993795 1244993799 1493250550 1493250551
+44305,Ghoshgaon Rd,,tertiary,,2955,467613243
+44306,Haluaghat-Dhubaura Road,,secondary,Z3712,5933,721545767 721545768 721545770 723032676 723032677 723032678 723032679 743199426 743199427
+44306,,,secondary,Z3712,1796,540131993 667039400
+44306,Haluaghat-Dhubaura Road,,tertiary,,263,353074262
+44307,Sherpur - Mymensingh Highway,,primary,R371,847,702033870
+44307,Goadanga road,,tertiary,,2168,270337882
+44307,←←←sailampur- narayonkhola  road,,tertiary,,1202,270337995
+44307,"dwarakpur,vaitkandi road→",,unclassified,,1851,465315401
+44308,Sherpur - Mymensingh Highway,,primary,R371,3952,702033870
+44309,Sherpur - Mymensingh Highway,,primary,R371,2823,702033870
+44309,Goadanga road,,tertiary,,619,270337882
+44309,"←R1      goadanga   charniamot , ramvadhrapur road",,tertiary,,2098,270337478
+44310,Sherpur - Mymensingh Highway,,primary,R371,2541,702033870
+44311,Phulpur - Haluaghat Road,,secondary,Z3711,3193,1225796320 1225796321
+44311,Girls School Road,গার্লস স্কুল রোড,unclassified,,2057,269259587
+44312,Sherpur - Mymensingh Highway,,primary,R371,498,218459086
+44312,Tarakanda - Dhobaraura Road,,secondary,,752,218461014
+44312,Dugachi,,tertiary,,505,218462035
+44313,Mymensingh - Netrokona Highway,,primary,R370,4524,133806467 886435655 1491241967 1491241968
+44313,Mymensingh - kishoreganj Highway,,primary,R360,294,101357073
+44313,Girls school road,,unclassified,,308,886435180 886435181
+44314,Dhakua School Road,,residential,,215,724088942
+44314,Tarakanda - Dhobaura Road,,secondary,,6972,160725370
+44314,Teukanda - Hogla Road,,tertiary,,1059,160725376
+44315,Sherpur - Mymensingh Highway,,primary,R371,5486,160725375 658336574 702033870 1563499137 1563499138 1563499139
+44319,Sherpur - Mymensingh Highway,,primary,R371,7281,160725375 218458873 218459086
+44319,Dugachi,,tertiary,,3624,218462035 218462041
+44320,Dhakua School Road,,residential,,1077,724088942
+44320,Tarakanda - Dhobaura Road,,secondary,,6507,160725370 1490981555 1490981556
+44320,Teukanda - Hogla Road,,tertiary,,2802,160725371 160725376 289190317
+44322,Sherpur - Mymensingh Highway,,primary,R371,498,218459086
+44322,শেরপুর - ময়মনসিংহ মহাসড়ক,শেরপুর - ময়মনসিংহ মহাসড়ক,primary,R371,8046,218459724 218460772 232598284 1491241926 1491241927 1492744927 1492744928 1492744929 1492744930 1492744931
+44322,Tarakanda - Dhobaraura Road,,secondary,,752,218461014
+44322,Dugachi,,tertiary,,505,218462035
+44323,Tarakanda - Dhobaraura Road,,secondary,,3385,218461014
+44323,Tarakanda - Dhobaura Road,,secondary,,2315,218460993 1490981555
+44325,Mymensingh - Netrokona Highway,,primary,R370,3501,886435655 1491241963 1491241964 1491241967
+44325,Girls school road,,unclassified,,540,886435181 886435182 886435183 886435184 886435185 886435186
+44327,Nalitabari - Haluaghat Road,,secondary,Z3040,3359,717634571
+44327,,,secondary,Z2834,6763,256570069
+44328,Nalitabari - Haluaghat Road,,secondary,Z3040,3359,717634571
+44328,Haluaghat Joyrumkura Rd,,unclassified,,554,721545758
+44328,Joyrumkura Rd,,unclassified,,2299,721545759
+44329,ফুলপুর - হালুয়াঘাট সড়ক,ফুলপুর - হালুয়াঘাট সড়ক,secondary,Z3711,1813,232954362 723033062 723033063 1493250576 1493250577
+44330,Haluaghat-Dhubaura Road,,secondary,Z3712,3006,723032681
+44330,Nalitabari - Haluaghat Road,,secondary,Z3040,2016,717634571
+44330,Phulpur - Gobrakara Road,,secondary,Z3711,4814,274798922
+44330,,,secondary,Z2834,3581,256570069
+44330,ফুলপুর - হালুয়াঘাট সড়ক,ফুলপুর - হালুয়াঘাট সড়ক,secondary,Z3711,2930,232954362
+44330,Girls School Road,,unclassified,,568,274800007 1230520232
+44330,Haluaghat Joyrumkura Rd,,unclassified,,1662,721545758
+44331,Haluaghat-Dhubaura Road,,secondary,Z3712,4389,723032679 723032680 723032681
+44331,,,secondary,Z2834,9878,256570069 281310720 281310774
+44334,ফুলপুর - হালুয়াঘাট সড়ক,ফুলপুর - হালুয়াঘাট সড়ক,secondary,Z3711,398,723033062 1493250577
+44335,Phulpur - Haluaghat Road,,secondary,Z3711,758,232954702
+44335,,,secondary,Z4619,512,221201347
+44335,ফুলপুর - হালুয়াঘাট সড়ক,ফুলপুর - হালুয়াঘাট সড়ক,secondary,Z3711,4236,723033062
+44336,,,secondary,Z4619,3073,221201347
+44337,Phulpur - Haluaghat Road,,secondary,Z3711,3789,232954702
+44337,,,secondary,Z4619,2560,221201347
+44338,Phulpur - Haluaghat Road,,secondary,Z3711,818,232954702 1225796321
+44340,,,secondary,Z3710,5698,337540354 566412463 711847148 711850074 987009542 987009543 987009544 1212758642 1212761578
+44341,Mymensingh - Netrokona Highway,,primary,R370,2344,133806467 1491241947 1491241948
+44341,Nurul Amin Khan Road,,tertiary,,1468,578593146
+44341,Nurul Amin Khan Road,,unclassified,,2768,1531255793
+44342,,,secondary,Z3710,4617,566412462 566412463 610618853 1052576061 1052576062
+44342,Bangabandhu Road,,tertiary,,97,1492986114
+44343,Khan Bari Road,,residential,,57,473499867
+44343,Nurul Amin Khan Road,,tertiary,,2056,578593146
+44343,Koltapar-Gouripur Rd,,unclassified,,1200,627205578
+44344,,,secondary,Z3710,985,337540354
+44345,Mymensingh - kishoreganj Highway,,primary,R360,5010,101357073 1492986130 1492986131
+44345,Koltapar-Gouripur Road,,tertiary,,1394,441383488
+44345,Koltapar-Gouripur Rd,,unclassified,,1440,627205578
+44345,Shahid Shamsul Sharak,শহীদ শামছু সড়ক,unclassified,,206,573273834
+44346,Mymensingh - kishoreganj Highway,,primary,R360,4704,101357073
+44346,Koltapar-Gouripur Road,,tertiary,,2439,441383488
+44347,Mymensingh-Gafargaon Highway,,secondary,Z3033,674,227906949
+44348,Mymensingh - Netrokona Highway,,primary,R370,1702,133806467
+44349,Soyani Rasulpur Molla Bari Road,,unclassified,,1841,829774562
+44349,Soyani Rasulpur to Khodaboxpur Road,,unclassified,,1746,829774563
+44350,Mymensingh-Gafargaon Highway,,secondary,Z3033,2759,1090389968
+44351,Mymensingh-Gafargaon Highway,,secondary,Z3033,613,1090389968
+44351,Gafargaon Bridge,,unclassified,,517,605479784
+44351,Goforgoan-Dewanganj Rd,,unclassified,,436,574660090
+44352,Gafargaon-Toke Road,,primary,R314,1060,1043705175
+44352,Bhaluka-Goforgoan Road,,secondary,Z3031,1364,227906282
+44352,Mymensingh-Gafargaon Highway,,secondary,Z3033,3065,1090389968
+44353,Bhaluka-Goforgoan Road,,secondary,Z3031,5871,227906282 469625510 469625511 469625512 621564570 621565347 621565348
+44353,,,tertiary,Z3031,138,1053892904 1053892905
+44354,"Kandi-West Gulabari, Road",,living_street,,843,1536136643 1536136644
+44354,"West Gulabari, Road",,living_street,,725,1535009684
+44354,Gafargaon-Toke Road,,primary,R314,1855,1043705175
+44354,,,primary,R314,2929,237200631
+44354,"Goyeshpur-Gafargaon, Rd",,residential,,1869,1136168642
+44354,Gafargaon-Toke Road,,tertiary,,1832,1055261495
+44355,"Kandi-West Gulabari, Road",,living_street,,1096,1536136643 1536136644 1536136645
+44355,"West Gulabari, Road",,living_street,,362,1535009684
+44355,"Goyeshpur-Gafargaon, Rd",,residential,,4671,1136168642
+44356,Gafargaon-Toke Road,,primary,R314,3976,1043705175
+44356,Kandipara - Lamkain Road,,residential,,504,632213114
+44356,Porshipara to School Road,,residential,,478,746310174
+44356,গফরগাঁও-হোসেনপুর সড়ক,গফরগাঁও-হোসেনপুর সড়ক,secondary,Z3042,3280,309904951
+44356,Kandipara Lamkain Road,,unclassified,,1546,630120954
+44357,Bhaluka-Goforgoan Road,,secondary,Z3031,655,227906282 621565348
+44358,"Kandi-West Gulabari, Road",,residential,,1611,1535007959
+44359,Usthe-Lamkain Rd Via Digrivumi,,residential,,1559,640476188
+44359,Hossainpur Bypass Road,,secondary,,176,560702433
+44359,Khurshid Mahal Road,,secondary,Z3033,2379,621874324 621874325 1044764893
+44359,,,secondary,Z3033,6450,621570913 1055265060
+44359,,,secondary,Z3042,2200,574781367 1055265059 1055265061
+44359,খুরশীদ মহল সেতু,খুরশীদ মহল সেতু,secondary,Z3604,675,309904953
+44359,গফরগাঁও-হোসেনপুর সড়ক,গফরগাঁও-হোসেনপুর সড়ক,secondary,Z3042,4214,309904951 309904952 1118302062
+44359,গফরগাঁও-হোসেনপুর সড়ক,গফরগাঁও-হোসেনপুর সড়ক,tertiary,,1630,1044764892
+44359,Khurshid Mahal Road,,unclassified,,463,621874326
+44359,গফরগাঁও-হোসেনপুর সড়ক,গফরগাঁও-হোসেনপুর সড়ক,unclassified,Z3042,1371,1118302061
+44360,Kandipara - Lamkain Road,,residential,,3776,632213114
+44360,Usthe-Lamkain Rd Via Digrivumi,,residential,,1818,640476188
+44360,Usthi Bazar Rd(উস্থী বাজার সড়ক),Usthi Bazar Rd(উস্থী বাজার সড়ক),residential,,1785,640476187 640478960 640478961
+44360,Gafargaon-Toke Road,,tertiary,,1832,1055261495
+44361,,,primary,R314,5592,237200631
+44361,Gafargaon-Toke Road,,secondary,Z3033,1358,605472664 621570912
+44361,,,secondary,Z3033,283,621570913
+44361,Gafargaon-Toke Road,,tertiary,,3053,1055261495
+44362,,,primary,R314,5614,237200631 465565701 1043705177 1043705178 1043705179
+44363,Gafargaon-Toke Road,,primary,R317,492,237011791
+44363,,,primary,R314,1864,237200631
+44363,Gafargaon-Toke Road,,secondary,Z3033,8140,605472664
+44363,,,secondary,Z3033,579,1073366751 1073366753
+44364,Mymensingh - kishoreganj Highway,,primary,R360,2389,232498599
+44364,Dangry Sarak,,residential,,258,467581250
+44364,Islampur Road,,residential,,639,561238670
+44364,kendua- Ishwarganj,,secondary,Z3610,1375,232498951 1492986118 1492986119
+44364,ঈশ্বরগঞ্জ রোড,ঈশ্বরগঞ্জ রোড,unclassified,,1727,467581247
+44365,,,secondary,Z3610,3498,281483610
+44365,kendua- Ishwarganj,,tertiary,,1715,281487178
+44366,,,secondary,Z3610,1259,281483610 577163083 577163086
+44366,kendua- Ishwarganj,,secondary,Z3610,1787,1492986118
+44366,kendua- Ishwarganj,,tertiary,,2283,281487178 577163077 1052371651
+44367,Kendua-Atharobari-Nandail Road,,secondary,Z3608,3936,576421585
+44367,,,secondary,Z3610,2720,281483610
+44367,,,tertiary,Z3610,881,1497662667
+44367,Atharabari TNT Road,,unclassified,,3142,329611575 329611598 329611599 329611600 329611601 329611605 329611692 621050948 1497845666 1497845667
+44368,উচাখিলা রোড,উচাখিলা রোড,unclassified,,5018,362273621
+44369,Mymensingh - kishoreganj Highway,,primary,R360,7466,232498599
+44369,Bazar Road,,residential,,71,662021771
+44369,Dangry Sarak,,residential,,774,467581250
+44369,Harua Bazar Road,,residential,,911,579374531
+44369,বাজার রোড,বাজার রোড,residential,,75,579444776
+44369,Atharobari-Laxmiganj Road,,unclassified,,2546,566164211 697814778
+44369,Borojora Road,,unclassified,,270,579444774
+44369,Jhalua-Dattagram Road,,unclassified,,256,579471073
+44369,Madrasa Road,,unclassified,,1896,579444789
+44369,Noshoti sarak,,unclassified,,1208,561589156
+44369,Ucakhila Road,ঊচাখিলা সড়ক,unclassified,,1505,467581251
+44369,bot tola road,,unclassified,,1537,588757803
+44369,চামটা-তারাটি রোড,চামটা-তারাটি রোড,unclassified,,796,697814780
+44369,জাটিয়া রোড,জাটিয়া রোড,unclassified,,3848,337747462 697814777
+44369,মাইজবাগ-তারাটি রোড,মাইজবাগ-তারাটি রোড,unclassified,,2029,697814779
+44370,Mymensingh - kishoreganj Highway,,primary,R360,2389,232498599
+44370,কানুরামপুর-মধুপুর সড়ক,কানুরামপুর-মধুপুর সড়ক,secondary,,2111,362270798
+44370,গফরগাঁও রোড,গফরগাঁও রোড,secondary,,735,470234859
+44370,Dewanganj-Modhupur Road,,unclassified,,266,574660093
+44370,Dhitpur Road,,unclassified,,1632,467581252
+44370,উচাখিলা রোড,উচাখিলা রোড,unclassified,,2823,362273621
+44371,Harua Bazar Road,,residential,,683,579374531
+44371,Atharobari-Laxmiganj Road,,unclassified,,2935,566164211
+44371,জাটিয়া রোড,জাটিয়া রোড,unclassified,,488,697814777
+44372,laxmiganj-ucakhila road,,unclassified,,67,574697948
+44372,ঈশ্বরগঞ্জ রোড,ঈশ্বরগঞ্জ রোড,unclassified,,2878,467581247
+44372,উচাখিলা রোড,উচাখিলা রোড,unclassified,,2763,362273621 574697950
+44374,Bhulsoma Road,,residential,,243,665558415
+44374,Dangry Sarak,,residential,,2323,467581250
+44374,Nashati Road,,residential,,1895,588757792
+44374,Dhitpur Road,,unclassified,,816,467581252
+44374,Noshoti sarak,,unclassified,,725,561589156
+44374,Ucakhila Road,ঊচাখিলা সড়ক,unclassified,,2509,467581251 588757811 665561787
+44374,ঈশ্বরগঞ্জ রোড,ঈশ্বরগঞ্জ রোড,unclassified,,3453,467581247
+44374,উচাখিলা রোড,উচাখিলা রোড,unclassified,,2204,574697950
+44375,Mymensingh-Gafargaon Highway,,secondary,Z3033,674,227906949
+44375,কানুরামপুর-মধুপুর সড়ক,কানুরামপুর-মধুপুর সড়ক,secondary,,603,362270798
+44375,গফরগাঁও রোড,গফরগাঁও রোড,secondary,,3675,470234859
+44375,Dewanganj-Modhupur Road,,unclassified,,4790,574660093
+44376,Mymensingh - Kishoreganj-Bhairav highway,,primary,R360,2332,232498460 232498487 232498497
+44376,Mymensingh - kishoreganj Highway,,primary,R360,597,232498599
+44376,Nandail - Hossainpur Road,,tertiary,,199,232498443
+44376,Jhalua-Dattagram Road,,unclassified,,2301,579471073
+44376,dewanganj road,,unclassified,,673,579760797
+44377,Mymensingh - Kishoreganj-Bhairav highway,,primary,R360,2699,232498497
+44377,Kendua-Atharobari-Nandail Road,,secondary,Z3608,4293,576421585
+44378,Mymensingh - Kishoreganj-Bhairav highway,,primary,R360,1521,232498497 579660038
+44378,Nandail Chourasta Circle,,primary,,155,576421584
+44378,,,primary,R360,54,576421583 656474860
+44378,Kendua-Atharobari-Nandail Road,,secondary,Z3608,716,576421585
+44378,Tarail-Nandail Chourasta Road,,secondary,Z3607,2904,257358430
+44378,,,secondary,Z3607,75,656474857 656474858
+44378,,,secondary,Z3608,24,656474855
+44379,Tarail-Nandail Chourasta Road,,secondary,Z3607,5517,257358430
+44380,Mymensingh - kishoreganj Highway,,primary,R360,4479,232498599
+44380,Kanurmpur-Modhupur Road,,secondary,,766,1100869415 1100869416
+44380,কানুরামপুর-মধুপুর সড়ক,কানুরামপুর-মধুপুর সড়ক,secondary,,1206,362270798
+44380,Mazar Bus Stand Road,,unclassified,,804,579648150
+44380,চামটা-তারাটি রোড,চামটা-তারাটি রোড,unclassified,,1856,697814780
+44381,dewanganj road,,unclassified,,6675,364213650 579760796 579760797
+44382,bakcanda bazar Road,,residential,,202,589270693
+44382,Nandail - Hossainpur Road,,tertiary,,4078,232498304 589270699
+44383,Mymensingh - Kishoreganj-Bhairav highway,,primary,R360,1687,232498497
+44383,Nandail - Hossainpur Road,,tertiary,,4002,232498304 232498443
+44383,dewanganj road,,unclassified,,2690,579760797
+44384,Mymensingh - Kishoreganj-Bhairav highway,,primary,R360,6740,232637512 579660037 579660038
+44385,Dewanganj Bridge,,unclassified,,542,574660085
+44385,Dewanganj-Modhupur Road,,unclassified,,3725,574660093
+44385,Goforgoan-Dewanganj Rd,,unclassified,,145,574660090
+44385,dewanganj road,,unclassified,,5866,364213650
+44385,hossainpur-dewanganj road,,unclassified,,890,574663432
+44386,Govindapur courasta -hazipur kacari Bazar Road,,residential,,1716,565675820
+44387,Jamalpur- Sharishabari Rd,,secondary,Z4025,1719,200709594
+44387,জামালপুর- সরিষাবাড়ী সড়ক,জামালপুর- সরিষাবাড়ী সড়ক,secondary,Z4025,4635,187924674 217107482 217107483
+44387,ঢাকা - জামালপুর মহাসড়ক,ঢাকা - জামালপুর মহাসড়ক,trunk,N4,2755,190885796
+44388,Jamalpur - Mymensingh,,primary,,3549,218259666
+44388,Rangamatia - Srirampur Road,,residential,,2754,1334102936
+44388,matir rasta,,residential,,314,1137979325
+44388,godashimla road,,tertiary,,3088,265933328
+44388,Fultoli Road,,unclassified,,404,1571750105
+44389,Jamalpur - Mymensingh,,primary,,3845,218259666
+44389,Fultoli Road,,unclassified,,135,1571750105
+44390,,,secondary,Z4101,332,719450421
+44391,,,secondary,Z4101,5638,719450421
+44392,,,secondary,Z4101,3317,719450421
+44392,,,secondary,Z4104,4981,233865064
+44395,Jamalpur - Mymensingh,,primary,,296,218259666
+44395,,,secondary,Z4104,293,233865064
+44397,godashimla road,,tertiary,,309,265933328
+44398,ঢাকা - জামালপুর মহাসড়ক,ঢাকা - জামালপুর মহাসড়ক,trunk,N4,4914,190885796 278916067 278916072
+44399,জামালপুর- সরিষাবাড়ী সড়ক,জামালপুর- সরিষাবাড়ী সড়ক,secondary,Z4025,4773,187924674
+44400,সরিষাবাড়ী - দিগপাইত সড়ক,সরিষাবাড়ী - দিগপাইত সড়ক,secondary,Z4023,929,187924903
+44400,Dhaka Jamalpur Highway,,trunk,N4,52,278916062
+44400,ঢাকা - জামালপুর মহাসড়ক,ঢাকা - জামালপুর মহাসড়ক,trunk,N4,4481,278916072 278916077
+44402,,,primary,Z4021,4594,218086294
+44402,Islampur- Jamalpur Road,,tertiary,,526,221225044
+44403,,,primary,Z4021,2953,218086294
+44405,Adipoit Road,,residential,,267,522866493
+44405,Station Road,,secondary,,232,218086598
+44405,Varsity Road,,tertiary,,799,265934849
+44406,Jamalpur-Melandah Rd,,primary,,4340,261556694 522862284
+44406,,,primary,Z4021,2953,218086294
+44406,Varsity Road,,tertiary,,266,265934849
+44407,Varsity Road,,tertiary,,1865,265934849
+44408,Jamalpur - Madarganj Rd,,primary,R461,334,218254159
+44408,Jamalpur- Madarganj Road,,primary,R461,5326,218251454 522826809
+44408,Jamalpur-Melandah Rd,,primary,,2791,261556695 522862284 522862285
+44409,Jamalpur - Madarganj Rd,,primary,R461,2342,218254159
+44409,,,primary,R461,3360,235864191 522825328 522835547
+44410,ইন্দ্রবাড়ী-কান্দারপাড়া রাস্তা,ইন্দ্রবাড়ী-কান্দারপাড়া রাস্তা,unclassified,,1026,522846747 790267682
+44411,ইন্দ্রবাড়ী-কান্দারপাড়া রাস্তা,ইন্দ্রবাড়ী-কান্দারপাড়া রাস্তা,unclassified,,633,790267682
+44411,ইন্দ্রবাড়ী-ঝাউগড়া রোড়,ইন্দ্রবাড়ী-ঝাউগড়া রোড়,unclassified,,562,274007370
+44411,ঝাউগড়া-পইরবাড়ি রোড়,ঝাউগড়া-পইরবাড়ি রোড়,unclassified,,2675,522848912
+44411,ঝাউগড়া-হাজিপুর রোড়,ঝাউগড়া-হাজিপুর রোড়,unclassified,,3478,274004022 522820394 522821727 559839558 559839569 559839572
+44411,মানকি-ঝাউগড়া রোড়,মানকি-ঝাউগড়া রোড়,unclassified,,1652,274002362 274005931
+44420,,,primary,Z4021,879,221319808
+44422,,,primary,R464,4441,221202549 521910476 521910477
+44422,Notun Morakandhi Road,,unclassified,,936,1412548547
+44423,,,primary,R464,717,521910477
+44425,,,primary,R464,6924,260468547 260468548 629588323
+44425,Bridge,,residential,,20,621753474
+44427,,,primary,R464,8473,629588323
+44427,,,secondary,Z4615,3741,1054633295
+44429,,,secondary,Z4614,5033,221233829 1054617371 1054619360 1054619361
+44430,,,secondary,Z4614,3599,221233829
+44431,,,secondary,Z4614,1303,221233829 1361262504
+44432,,,primary,Z4021,3545,221319808 522157529 522157533 522157536 522157540
+44433,Sarishabari - Satpoa Road,,tertiary,,1874,229875061 283112087
+44433,Malipara Rd,মালিপাড়া সড়ক,unclassified,,311,676767476
+44434,Tarakandi - Sarishabari Road,,secondary,,7588,178608331 466131052
+44434,Tarakandi Bhuapur Road,,secondary,,1400,169705291 185766733
+44434,Tarakandi Dhanbari Road,,secondary,,552,217381832
+44434,Tarakandi - Sarishabari Road,,tertiary,,4369,190884140
+44434,Boira Bridge,,unclassified,,287,555495598
+44434,Malipara Rd,মালিপাড়া সড়ক,unclassified,,3418,676767476
+44435,Doail Bridge,,secondary,,38,242931889
+44435,Tarakandi Dhanbari Road,,secondary,,6068,217381832
+44435,,,secondary,Z4018,1480,217381866
+44435,Nikhai Bridge,,tertiary,,99,185957964
+44436,Pingna Road,,secondary,,587,231211464
+44436,Tarakandi Bhuapur Road,,secondary,,3657,185766733 222895181
+44436,JFCL Jetty Rd,,tertiary,,1264,222766214
+44437,Jhawail Road,,secondary,Z4017,1654,231211937
+44437,Pingna Road,,secondary,,3226,231211464
+44437,Tarakandi Bhuapur Road,,secondary,Z4801,5858,187923320 222895181 1053808387
+44438,Jamalpur- Sharishabari Rd,,secondary,Z4025,121,634125338
+44438,,,secondary,Z4018,1850,217381866
+44438,জামালপুর- সরিষাবাড়ী সড়ক,জামালপুর- সরিষাবাড়ী সড়ক,secondary,Z4025,4091,187924674 187924788
+44438,সরিষাবাড়ী - দিগপাইত সড়ক,সরিষাবাড়ী - দিগপাইত সড়ক,secondary,Z4023,3098,187924903
+44438,Madargong Road,,tertiary,,2441,229876943
+44439,জামালপুর- সরিষাবাড়ী সড়ক,জামালপুর- সরিষাবাড়ী সড়ক,secondary,Z4025,1875,187924674 187924788
+44440,,,secondary,Z4018,2220,217381866
+44440,সরিষাবাড়ী - দিগপাইত সড়ক,সরিষাবাড়ী - দিগপাইত সড়ক,secondary,Z4023,4028,187924903
+44440,Dhaka Jamalpur Highway,,trunk,N4,46,278916069
+44440,ঢাকা - জামালপুর মহাসড়ক,ঢাকা - জামালপুর মহাসড়ক,trunk,N4,1427,278916077 278916081
+44442,Maderganj -Jamalpur Road,,primary,R461,1496,235864193
+44442,,,primary,R461,1954,522825327 522835546 522835547 902544768 902544769
+44442,Long R.C.C Bridge,,tertiary,,119,522096504
+44443,Maderganj -Jamalpur Road,,primary,R461,3590,235864193
+44444,,,primary,R463,744,518061122 518066971 1078262404 1078262405
+44447,Madargong Road,,tertiary,,271,229876943
+44448,,,primary,R464,4584,629633256 629633257
+44448,,,secondary,Z2834,6685,243878431 1052366311
+44449,,,primary,R464,2810,629588323 629633256 629633257
+44449,,,secondary,Z4615,9378,283434600 1054629998 1054629999 1054630000 1054633295
+44450,,,primary,R464,3199,629633256
+44450,,,secondary,Z4615,1011,283434600
+44451,,,secondary,Z4614,5028,283591625 1054616014 1054616015 1054617371
+44452,,,primary,R464,6975,221202549 629633256
+44452,,,secondary,Z4607,4324,283592403
+44452,,,secondary,Z4614,4386,263490518 283591625 1054616013
+44452,,,secondary,Z4615,3370,283434600
+44454,Bakshigonj-Dewangonj Link Road,,secondary,,500,1307422031
+44455,Mymensingh-Sunamganj Road,,primary,R370,1740,341765798
+44455,Model School-Upazila Road,,residential,,345,624464093
+44455,Thana Road,,residential,,68,624458260
+44455,Atpara-Barhatra Road,,tertiary,,515,464464691
+44455,Cinema Hall Road,,unclassified,,106,624464089
+44457,Mymensingh-Sunamganj Road,,primary,R370,348,341765798
+44457,Netrokona-Kalmakanda Road,,secondary,Z3703,3191,281364642 609101809 609110326 609110328 1487121591 1536409758
+44458,Mymensingh-Sunamganj Road,,primary,R370,5871,341765798 341765800 1063495721
+44458,College Road,,residential,,477,624464092
+44458,Model School-Upazila Road,,residential,,345,624464093
+44458,Atpara-Barhatra Road,,tertiary,,6772,464464691 623734325 1535999370 1535999371
+44458,Cinema Hall Road,,unclassified,,1912,624464089 624464091
+44459,Netrokona-Kalmakanda Road,,secondary,Z3703,3671,281317703 1455748482 1455748483 1455748484 1455748488 1455748489 1536409758
+44460,Mymensingh-Sunamganj Road,,primary,R370,2436,341765798
+44460,Netrokona - Mohanganj Road,,primary,R370,983,341763568 341763572
+44460,Netrokona-Kalmakanda Road,,secondary,Z3703,895,609135238
+44460,Atpara-Barhatra Road,,tertiary,,1839,623734325
+44461,Mymensingh-Sunamganj Road,,primary,R370,6252,437026093 1063495721 1063495722 1063496384 1063496385
+44461,Goruhatta Road,,unclassified,,215,437027908 437027910 437027911 437027912
+44462,Bugaikanda Road,,living_street,,334,366179133
+44462,Durgapur to Border Road,,secondary,,233,353075187
+44462,North Bhopanipur Road,,unclassified,,606,354173313
+44463,,,secondary,Z3704,7783,353044515 353044516 353044517 353044520 353044521 353044522 353044523 353044525 353044526 353044528 1490981543
+44463,,,secondary,Z3709,3361,133806461 342011763 342011764 353043849 353043850 353043851 353043853 353043855 353043866
+44463,Kainal - Buligaon Road,,unclassified,,741,353057769
+44464,Main Road,,secondary,Z3705,490,354030916
+44464,,,secondary,Z2834,39,1052596215
+44464,,,secondary,Z3705,7325,354142758 354142759 354142761 904024894 986998937
+44464,,,secondary,Z3708,4484,354142760 1052596213 1052596214 1258203593 1258203594 1491630969 1491630970 1491630972 1491630973
+44464,Dahumara Road,,unclassified,,1274,353847814
+44464,Khujura Road,,unclassified,,1037,353822483 901636258 901636259
+44465,Karamkhola Road,,residential,,1698,353814057
+44465,Dungapur Dhokhinpanan road,,unclassified,,229,353076266
+44466,Kainal Road,,living_street,,358,353043865
+44466,YMCA Road,,residential,,243,359466925 359562308
+44466,Sumessuri Bridge,,secondary,Z3704,110,353044519
+44466,,,secondary,Z3704,3682,353044518 353044523 353044524
+44466,,,secondary,Z3709,5874,133806461
+44466,Kainal - Buligaon Road,,unclassified,,3294,353043848 353057769
+44467,,,secondary,Z3709,4063,133806461 353043849 353043852 353043853 353043854 353043856 353043864
+44469,নেত্রকোনা সড়ক,নেত্রকোনা সড়ক,secondary,Z3706,4026,620781435 1492986141 1492986142
+44471,নেত্রকোনা-কেন্দুয়া সড়ক,নেত্রকোনা-কেন্দুয়া সড়ক,secondary,Z3706,300,340559816
+44472,Kendua-Atharobari-Nandail Road,,secondary,Z3608,1431,576421585
+44472,kendua- Ishwarganj,,tertiary,,3088,281487178
+44473,Sandikona-Raintritola Rd,,residential,,73,632251849
+44473,Kendua-Atharobari-Nandail Road,,secondary,Z3608,2432,576421585 621156670 621156671 621156672 1492913183 1492913184
+44473,কেন্দুয়া-আঠারোবাড়ি-নান্দাইল সড়ক,কেন্দুয়া-আঠারোবাড়ি-নান্দাইল সড়ক,secondary,Z3608,1801,621156669
+44473,kendua- Ishwarganj,,tertiary,,4476,281487178 621646728
+44473,কেন্দুয়া- ঈশ্বরগঞ্জ,কেন্দুয়া- ঈশ্বরগঞ্জ,tertiary,,1487,621646729
+44473,Bazar Rd,,unclassified,,312,627347152 627347153
+44474,কেন্দুয়া-আঠারোবাড়ি-নান্দাইল সড়ক,কেন্দুয়া-আঠারোবাড়ি-নান্দাইল সড়ক,secondary,Z3608,3902,621156669
+44474,Sener Bazar Road,,unclassified,,2494,621158137
+44475,নেত্রকোনা সড়ক,নেত্রকোনা সড়ক,secondary,Z3706,344,620781434 1492986141
+44475,নেত্রকোনা-কেন্দুয়া সড়ক,নেত্রকোনা-কেন্দুয়া সড়ক,secondary,Z3706,4195,340559816
+44476,নেত্রকোনা-কেন্দুয়া সড়ক,নেত্রকোনা-কেন্দুয়া সড়ক,secondary,Z3706,2397,340559816
+44476,কেন্দুয়া - মদন সড়ক,কেন্দুয়া - মদন সড়ক,tertiary,Z3608,170,621369652
+44476,গুগবাজার ব্রিজ,গুগবাজার ব্রিজ,tertiary,Z3608,40,596667112
+44477,পালড়া রাস্তা,পালড়া রাস্তা,residential,,282,596667118 621667950
+44477,Kendua - Madan Road,কেন্দুয়া - মদন সড়ক,tertiary,Z3608,1242,621369647 621369651 621369653 621369654 621369658
+44477,কেন্দুয়া - মদন সড়ক,কেন্দুয়া - মদন সড়ক,tertiary,Z3608,1398,621369648 621369649 621369650 621369652
+44477,কেন্দুয়া মদন সড়ক,কেন্দুয়া মদন সড়ক,tertiary,Z3608,1853,237375564
+44477,গুগবাজার ব্রিজ,গুগবাজার ব্রিজ,tertiary,Z3608,40,596667112
+44477,সাজিউড়া রোড,সাজিউড়া রোড,tertiary,,794,1187824386
+44477,জালালপুরের রাস্তা,জালালপুরের রাস্তা,unclassified,,1746,329004499
+44477,পালড়া ব্রিজ,পালড়া ব্রিজ,unclassified,,12,596667119
+44477,পালড়া রাস্তা,পালড়া রাস্তা,unclassified,,96,621667951
+44477,ব্রাহ্মনজাতের রাস্তা,ব্রাহ্মনজাতের রাস্তা,unclassified,,2542,329022053 428378440 596922946 601293187 621667961 1186664622 1186664623
+44477,মাঝ পাড়া ব্রিজ,মাঝ পাড়া ব্রিজ,unclassified,,20,596680150
+44478,তাড়াইল - কেন্দুয়া সড়ক,তাড়াইল - কেন্দুয়া সড়ক,tertiary,,4360,1492913197 1492913198 1492913199
+44478,সাজিউড়া রোড,সাজিউড়া রোড,tertiary,,2684,329344864 1187824386
+44478,ছিলিমপুর সড়ক,ছিলিমপুর সড়ক,unclassified,,2788,327008980
+44478,দুল্লি-বৈরাটি সড়ক,দুল্লি-বৈরাটি সড়ক,unclassified,,1356,327013249
+44480,দুল্লি-বৈরাটি সড়ক,দুল্লি-বৈরাটি সড়ক,unclassified,,452,327013249
+44481,তাড়াইল - কেন্দুয়া সড়ক,তাড়াইল - কেন্দুয়া সড়ক,tertiary,,4262,1186554757 1492913199 1492913200
+44481,সাজিউড়া রোড,সাজিউড়া রোড,tertiary,,1038,329344864
+44482,Bruzer Bazar-Notun Bazar Road,,residential,,774,700039673
+44482,Netrokona - Madan Road,,secondary,Z3701,3450,352895585
+44482,Netrokona to Madan Highway,,secondary,Z3701,1779,352895580 352895581 352895584
+44482,,,secondary,Z3713,1170,624046025
+44482,Netrokona-Atpara Road,,tertiary,,2163,688130210
+44484,Bruzer Bazar Road,,tertiary,,2420,409300770 688328337
+44485,Atpara College Road,,residential,,80,623722498
+44485,Atpara officers Quarter Road,,residential,,106,409300749
+44485,Bruzer Bazar-Notun Bazar Road,,residential,,1155,700039672 700039673
+44485,Bruzer Bazar-Notun Bazar Road,,secondary,Z3713,3091,337559544 700041583 700041584 1212766956
+44485,Netrokona - Madan Road,,secondary,Z3701,383,352895585
+44485,,,secondary,Z3713,1766,624046025 1531096755 1531096756
+44485,Bruzer Bazar Road,,tertiary,,954,409300770 688341596
+44485,Netrokona -Atpara Road,,tertiary,,1777,409300757 688313636 688313637
+44485,Netrokona-Atpara Road,,tertiary,,811,688130210
+44485,Telegati-Atpara Bruzer Bazar,,tertiary,,3422,530091189 688573605
+44486,Netrokona - Madan Road,,secondary,Z3701,4217,352895585
+44486,Madan-Telegati Road,,tertiary,,790,688823052
+44486,Telegati-Atpara Bruzer Bazar,,tertiary,,1556,530091189
+44486,Telegati-Rampur Road,তেলেগাতি-রাম্পুর সড়ক,tertiary,,3606,337653789
+44488,Fochika Road,ফচিকা রোড,residential,,109,625193634
+44488,Imdadpur - Madan Road,,tertiary,,2842,626087959 626087960 626087961 626087964 626087965 626091093
+44488,Madan-Telegati Road,,tertiary,,3956,338679799 623158097 623158098 688551498 688551500
+44488,Imdadpur - Madan Road,,unclassified,,38,626091091
+44489,Dirt Road,,unclassified,,693,541370027 1087979896
+44490,Kendua - Madan Road,,tertiary,Z3608,814,596667111
+44491,modan fakni Road,,unclassified,,1777,337503428
+44493,Madan-Kaliajuri Road,,secondary,Z3701,4025,281257159
+44493,বালই ব্রিজ,বালই ব্রিজ,secondary,Z3701,94,281257160
+44493,মদন-খালিয়াজুরি সড়ক,মদন-খালিয়াজুরি সড়ক,secondary,Z3701,341,710356307 710589243
+44493,Gobindasree-Prodomsree,,unclassified,,3233,734581783 734583456
+44494,মদন-খালিয়াজুরি সড়ক,মদন-খালিয়াজুরি সড়ক,secondary,Z3701,2725,341715500 710356307 710589243
+44494,modan fakni Road,,unclassified,,1523,337503428
+44494,থানা রোড,থানা রোড,unclassified,,2082,337565041
+44495,Netrokona - Madan Road,,secondary,Z3701,2280,621389843 624030854
+44495,Netrokona -Madan Road,,secondary,Z3701,229,621389844
+44495,Netrokona- Madan Road,,secondary,Z3701,56,624645524
+44495,Kendua - Madan Road,,tertiary,Z3608,2668,337508198 621369659
+44496,Netrokona - Madan Road,,secondary,Z3701,3277,624030853 624645525 688319139 688319151 795109571
+44496,Kendua - Madan Road,,tertiary,Z3608,4359,596667111 621369654 621369655 621369656 621369657 621369659
+44500,খালিয়াজুরী বাজার রোড,খালিয়াজুরী বাজার রোড,residential,,776,700360027 700360028
+44500,Madan-Kaliajuri Road,,secondary,Z3701,6519,700058696 700058698 1082477885
+44500,Krishnopur-Khaliajuri Road,,tertiary,,6969,723765536
+44500,Krishnopur-Khaliajuri Road,,unclassified,,3528,723765535 1535999405
+44501,Madan-Kaliajuri Road,,secondary,Z3701,8063,281257159 700058701 700058702 1082477885 1493574985 1536292703
+44503,সামপুর রোড,সামপুর রোড,residential,,1112,464465248
+44504,residental,,residential,,227,1094907023
+44504,কলমাকান্দা দুর্গাপুর সড়ক,কলমাকান্দা দুর্গাপুর সড়ক,tertiary,,3665,1491252143 1491252145
+44505,Netrokona-Kalmakanda Road,,secondary,Z3703,5440,1455748472 1455748473 1455748474 1455748475 1455748476 1455748477 1455748478 1455748479 1455748480 1455748481 1455748482
+44506,Stadium Road,,residential,,193,536051192
+44506,hospital road,,residential,,267,536447115
+44506,Netrokona-Kalmakanda Road,,secondary,Z3703,4696,1455748462 1455748463 1455748464 1455748465 1455748468 1455748469 1455748470 1455748471 1455748472
+44506,Netrokona-Kalmakanda Road,,tertiary,Z3703,304,284560362 1455748467
+44506,college road,,tertiary,,985,549589459 552810968
+44506,কলমাকান্দা দুর্গাপুর সড়ক,কলমাকান্দা দুর্গাপুর সড়ক,tertiary,,5120,284560521 1386571284 1386571285
+44510,কলমাকান্দা দুর্গাপুর সড়ক,কলমাকান্দা দুর্গাপুর সড়ক,tertiary,,3434,284560521 1491252143 1491252144 1491252145 1491252146
+44512,Mymensingh-Sunamganj Road,,primary,R370,1238,437026093
+44512,,,primary,R370,254,232597549 1046183989
+44518,,,secondary,Z3704,5546,1052578418
+44518,,,secondary,Z3707,290,160725365
+44520,,,secondary,Z3704,6866,353044514 1490981543 1490981544
+44521,Mymensing - Netrokona Road,,primary,R370,617,237365530
+44521,Mymensingh - Netrokona Highway,,primary,R370,2265,1491241947
+44522,,,secondary,Z3704,1188,1052578418
+44523,,,secondary,Z3710,1684,337540216 337540354 612499539 612499540 1212766017 1212766018 1212766019 1212766020
+44524,Tarakanda - Dhobaura Road,,secondary,,1439,160725370 723083318 1052584343 1225796302
+44524,,,secondary,Z3707,10866,160725357 160725365
+44524,Teukanda - Hogla Road,,tertiary,,2118,160725376
+44525,Mymensingh - Netrokona Highway,,primary,R370,6232,133806467 1491241947
+44525,,,secondary,Z3704,3137,1052578418 1097294959 1097294960
+44526,,,secondary,Z3709,3186,337534989 352906411 1052591120
+44527,,,secondary,Z3707,6083,160725365
+44528,,,secondary,Z3704,4664,353044514 1052578418 1052578419
+44528,,,secondary,Z3707,6208,160725365 609122490 609122491
+44529,Mymensing - Netrokona Road,,primary,R370,5866,237365530
+44529,Netrokona Bypass,,primary,R370,1272,1486695537 1486695539 1577844902
+44529,,,secondary,Z3710,1757,340125909
+44530,Mymensing - Netrokona Road,,primary,R370,309,237365530
+44530,Kendua- Netrokona Road,,secondary,Z3706,602,614990849
+44530,Netrokona to Madan Highway,,secondary,Z3701,5423,237365919 352895583 352895584
+44530,,,secondary,Z3706,4392,337543741 337549271 337549276 610744673
+44530,,,secondary,Z3710,3786,237372957 340125909 340125910
+44531,,,secondary,Z3710,4490,337540216 337542137 337571887 340125909 387162419 610773671 610773682
+44532,নেত্রকোনা রোড,নেত্রকোনা রোড,secondary,Z3706,3464,608030804 608030805
+44532,নেত্রকোনা সড়ক,নেত্রকোনা সড়ক,secondary,Z3706,1500,620781435
+44533,Netrokona to Madan Highway,,secondary,Z3701,271,352895584
+44535,Netrokona - Mohanganj Road,,primary,R370,3138,341763569
+44535,Rajur Bazar Road,,unclassified,,210,611134222 611134223 611134226
+44536,Netrokona - Mohanganj Road,,primary,R370,3824,341763569 341763572
+44536,Netrokona-Kalmakanda Road,,secondary,Z3703,2364,281364642 609135237 609135238 609141014 609141015
+44537,Mougati UP Road,,residential,,520,343607889
+44537,,,secondary,Z3709,3085,352906411
+44537,Chuchua Road,,tertiary,,1419,337560954
+44537,Hatkhola Road,,unclassified,,1358,337558301 337558303 337564973 343607887
+44537,Mougati UP Road,,unclassified,,2326,337530396 337533567 337565006
+44538,Mymensing - Netrokona Road,,primary,R370,617,237365530
+44538,Netrokona Bypass,,primary,R370,4434,1486695536 1486695539 1486695548
+44538,Netrokona - Purbadhola Road,,secondary,Z3707,2131,237382341 1486695554 1486695555
+44538,,,secondary,Z3707,4580,337527210 337550042 341807509 609122491
+44538,Hatkhola Road,,tertiary,,10,610449704
+44538,Mougati UP Road,,tertiary,,1866,337533570 610449705 1492357290
+44538,Mougati UP Road,,unclassified,,192,337533567
+44539,Mymensing -Sunamganj Road,,primary,R370,1892,604345806 604356789 604356790 1478602538
+44539,Netrokona - Mohanganj Road,,primary,R370,314,341763569
+44539,,,secondary,Z3709,3325,340129462 352906403 352906411 610728343 610728358 611719827 611719828 1101181511 1576740367 1576740368
+44539,Chuchua Road,,tertiary,,851,337560954
+44540,,,secondary,Z3709,588,337534989 342011763 467608846
+50012,Purohit Para Rd,,living_street,,133,645609761
+50012,Purohitpara DB Bypass Rd,,living_street,,125,645609760
+50012,Jubilee Road,,primary,,173,367224413
+50012,Kristopur Road,,primary,R370,162,655300652 655300655
+50012,,,primary,N3,51,1486530178 1488083617
+50012,Patgudam Circle,,primary,,56,655300654
+50012,Patgudam Road,,primary,R370,606,277483409 1078125386 1078125387
+50012,কাচারি সড়ক,কাচারি সড়ক,primary,,844,101124077 1486530180 1488083618 1488083619 1488084265
+50012,Aambagan Rd,,residential,,854,103494247
+50012,BAU Residential Area Road,,residential,,2838,584099513 584099514 584099515 584099516 584106630 584106639 584106640 584113470 584113474 605479788
+50012,Boundary Road,,residential,,403,154854253 852013816
+50012,Brammopolly Road,,residential,,286,101132592
+50012,Chaatrapur Primary School Rd,,residential,,858,289971106 289971109
+50012,Chan Miah Lane,,residential,,508,440548560 1559943214 1559943215
+50012,Charpara By Ln,,residential,,503,439853970 440549267
+50012,D.N Chakraborty Road,,residential,,98,646217986
+50012,Dengu Bepari Rd,,residential,,431,569597440
+50012,Doctor Bari ( Fulbaria road by-lane),,residential,,121,309160477
+50012,Golapjan Road,,residential,,316,101132629
+50012,Hamid Uddin Road,,residential,,607,101132621
+50012,Jaynul Abedin Park Road,,residential,,754,101132615 1393880864
+50012,K.C. Ray Road,,residential,,257,521360321 925327764
+50012,Kathgola Bazar Road,,residential,,513,410328856
+50012,Masjid road,,residential,,438,101132617
+50012,Mohammad Ali Rd,,residential,,545,101132623 646205009
+50012,Mymensingh Park Road,,residential,,217,410328855
+50012,Naha Road,,residential,,303,852013815
+50012,Nayapara Road,,residential,,670,101132602 1559920582 1559920583
+50012,Outer Stadium Road,,residential,,716,521360309 521360311 521360312 521360313
+50012,Palpara Road,,residential,,405,570842598
+50012,Peon Para Road,,residential,,379,646205004 646205037
+50012,Pocha Pukur Rd,,residential,,345,440574391 794245176
+50012,"Pondit Para Rd, Mymensingh",,residential,,258,101124078
+50012,Primary School Lane,,residential,,259,439853910
+50012,Purohit Para Rd,,residential,,267,564598622 645609763
+50012,Purohit Para Road,,residential,,569,101132598
+50012,Purohitpara - Shahora Bypass Rd,,residential,,139,440583844
+50012,R.K. Mission Road,,residential,,1011,473451593
+50012,Shehora Bara Bari Rd,,residential,,194,440581410
+50012,Shehora Road,,residential,,738,101132584
+50012,Shemachoron Roy Rd Bylane,,residential,,176,646204967
+50012,Zila School Road,,residential,,176,102379261
+50012,akua morolbari road,,residential,,228,439854758
+50012,krishtapur-baghmara alley,কৃষ্টপুর-বাঘমারা গলি,residential,,201,1128426510
+50012,"অর্কিড রোড, Mymensingh","অর্কিড রোড, Mymensingh",residential,,67,539338167
+50012,ব্রাহ্মপল্লী সড়ক,ব্রাহ্মপল্লী সড়ক,residential,,629,101132608
+50012,শান্তিনগর মসজিদ রাস্তা,শান্তিনগর মসজিদ রাস্তা,residential,,615,103494238
+50012,সার্কিট হাউস রোড,সার্কিট হাউস রোড,residential,,147,1381334628
+50012,CK Ghosh Road,,secondary,,513,367208819
+50012,Charpara Mor,,secondary,N3,48,569611271
+50012,"Charpara Rd, Mymensingh",,secondary,,371,277249459
+50012,"Eastern Bypass, Mymensingh",,secondary,N3,3091,103494222 656684089 1069129404 1069129405
+50012,Fulbaria Road,,secondary,Z3035,874,1066008618
+50012,Kristopur Road,,secondary,Z3033,1200,410329633
+50012,Mymensingh-Gafargaon Highway,,secondary,Z3033,4299,227906949 1078125383
+50012,,,secondary,N3,44,538965721
+50012,Shaheb Ali Road,সাহেব আলী রোড,secondary,N3,474,894575668
+50012,Shema Choron Roy Road,,secondary,N3,571,367208818 985445016 1320020162 1486530179 1486530181
+50012,,,secondary,Z3033,1946,441617899 615390023 1078125384
+50012,Zila School Road,,secondary,,283,793733984
+50012,ঢাকা-ময়মনসিংহ মহাসড়ক,ঢাকা-ময়মনসিংহ মহাসড়ক,secondary,N401,6762,538965720 581407453
+50012,সারদা ঘোষ রোড,সারদা ঘোষ রোড,secondary,N3,1233,278616339
+50012,Abul Monshur Road,,tertiary,,378,101132600
+50012,Alia Madrasa Bypass,,tertiary,,1498,655302198
+50012,Baghmara Road,,tertiary,,981,101132620
+50012,Choto Bazar Road,,tertiary,,361,277252093
+50012,College Road,,tertiary,,1280,101132626
+50012,Ganginar Par Road,,tertiary,,476,367224558
+50012,Gulki Bari Road,,tertiary,,417,101132605
+50012,J C Guha Road,,tertiary,,637,101124076
+50012,Krishtapur Rd,,tertiary,,744,101132611
+50012,Moharaja Road,,tertiary,,241,367224557
+50012,Station Road,,tertiary,,166,101132634 1135528975 1557483818 1557483819
+50012,Swadeshi Bazar Road,,tertiary,,87,646217956
+50012,Trunk Potti Road,,tertiary,,249,101132578
+50012,নতুন বাজার সড়ক,নতুন বাজার সড়ক,tertiary,,1423,103494229
+50012,Bypass Circle,,trunk,N3,165,538965697
+50012,Dhaka-Mymensingh Highway,,trunk,N3,4541,581407451 581407452
+50012,Mymensingh - Tangail Highway,,trunk,N401,4243,1559821874
+50012,Mymensingh City Bypass,,trunk,N309,976,101366078 581407449
+50012,,,trunk,N3,42,566660564
+50012,,,trunk,N309,58,581407450
+50012,Gohailkandi Rd,,unclassified,,600,101366048 1568117479 1568117480
+50012,Golapjan Road,,unclassified,,336,101132636
+50012,Golongda School Road,,unclassified,,739,583116433
+50012,Itakhola Road,,unclassified,,494,101132610
+50012,Ram Babu Road,,unclassified,N3,477,857994682
+50012,Swadeshi Bazar Road,,unclassified,,146,101132580
+50012,Zila School Road,,unclassified,,257,1320020163
+50012,মাসকান্দা হাইস্কুল রোড,মাসকান্দা হাইস্কুল রোড,unclassified,,897,103494233
+50012,শান্তিনগর রাস্তা,শান্তিনগর রাস্তা,unclassified,,650,794243149

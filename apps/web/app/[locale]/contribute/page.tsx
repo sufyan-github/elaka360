@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { FilePlus2, MessageSquareWarning, PencilLine, ShieldCheck } from 'lucide-react';
+import { FilePlus2, MessageSquareWarning, PencilLine, ShieldCheck, MapPinPlus } from 'lucide-react';
 import { asLocale } from '@/lib/locale';
 import { localeAlternates } from '@/lib/meta';
 import { Link } from '@/i18n/navigation';
@@ -18,6 +18,7 @@ const ACTIONS = [
   { type: 'new_place', Icon: FilePlus2 },
   { type: 'correction', Icon: PencilLine },
   { type: 'report', Icon: MessageSquareWarning },
+  { type: 'request', Icon: MapPinPlus },
 ] as const;
 
 export default async function ContributePage({ params }: Props) {

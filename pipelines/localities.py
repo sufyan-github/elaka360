@@ -34,7 +34,12 @@ PART = re.compile(r"\s*\(\s*part\s*\)?\s*", re.I)
 PART_NOTE = "BBS 2022 counts this unit in more than one union or ward; the population is for this part only."
 MAHALLA_NOTE = "Mahalla (urban neighbourhood) in BBS 2022."
 COLS = ["id", "level", "parent_id", "name_bn", "name_en", "slug", "path", "bbs_code", "population_2022", "population_basis",
-        "population_source", "verified", "production_eligible", "evidence_level", "evidence_source", "data_source", "notes"]
+        "population_source", "verified", "production_eligible", "evidence_level", "evidence_source", "data_source", "notes",
+        "lat", "lon", "location_source", "name_bn_source"]
+OSM_VILLAGES = os.path.join(SOURCES, "osm_localities_2026", "villages.csv")
+PINS = os.path.join(SOURCES, "community_contributions_2026", "village_locations.csv")
+CONTAINERS = ("ward", "union", "pourashava", "city_corporation")     # most specific first
+PLACE_RANK = {"village": 0, "hamlet": 1, "suburb": 2, "neighbourhood": 3, "quarter": 4, "isolated_dwelling": 5}
 
 
 def slugify(s):
@@ -166,11 +171,96 @@ def lit(v):
 
 
 SQL_COLS = ["id", "level", "parent_id", "name_bn", "name_en", "slug", "path", "bbs_code", "population_2022", "population_basis",
-            "population_source_id", "verified", "production_eligible", "data_source_id", "notes", "evidence_level", "evidence_source_id"]
+            "population_source_id", "verified", "production_eligible", "data_source_id", "notes", "evidence_level", "evidence_source_id",
+            "lat", "lon", "location_source", "name_bn_source"]
+
+
+def locate(areas, rows):
+    """Points (and Bangla names) for census villages, from approved contributor pins first, then OpenStreetMap places
+    matched by name inside the same union / pourashava / city ward. Never moves an area to another parent."""
+    from collected import PolygonIndex, en_similarity, en_key, romanize_bn
+    stats = Counter()
+    by_path = {a["path"]: a for a in areas}
+    # approved pins (scripts/pull-contributions.mjs): a moderator checked each one
+    if os.path.isfile(PINS):
+        for p in csv.DictReader(open(PINS, encoding="utf-8")):
+            a = by_path.get(p["area_path"])
+            if a and a["level"] in ("village", "mouza"):
+                a.update(lat=round(float(p["lat"]), 6), lon=round(float(p["lon"]), 6), location_source=f"contribution:{p['contribution_id']}")
+                stats["pinned"] += 1
+    if not os.path.isfile(OSM_VILLAGES):
+        return dict(stats)
+    polys = [r for r in rows if r.get("_boundary") and r["level"] in CONTAINERS]
+    if not polys:
+        stats["no_boundaries"] = 1
+        return dict(stats)
+    index = PolygonIndex([{"type": "Feature", "geometry": r["_boundary"], "properties": {"id": r["id"], "level": r["level"]}} for r in polys])
+    parent = {r["id"]: r.get("parent_id") for r in rows}
+    parent.update({a["id"]: a["parent_id"] for a in areas})
+    has_poly = {r["id"] for r in polys}
+    villages_in = defaultdict(list)          # container id -> census villages below it
+    for a in areas:
+        if a["level"] != "village":
+            continue
+        p = a["parent_id"]
+        while p is not None:
+            if p in has_poly:
+                villages_in[p].append(a)
+            p = parent.get(p)
+    level_rank = {lvl: i for i, lvl in enumerate(CONTAINERS)}
+    best = {}                                # village id -> (score, rank, osm row)
+    for o in csv.DictReader(open(OSM_VILLAGES, encoding="utf-8")):
+        lon, lat = float(o["lon"]), float(o["lat"])
+        hits = sorted(index.find(lon, lat), key=lambda f: level_rank[f["properties"]["level"]])
+        if not hits:
+            stats["osm_outside"] += 1
+            continue
+        names = [n for n in (o["name_en"], o["name"] if not o["name_bn"] or o["name"] != o["name_bn"] else "") if n]
+        loose = False
+        if not names and o["name_bn"]:
+            names, loose = [romanize_bn(o["name_bn"])], True      # matching only, never shown
+        scored = []
+        for v in villages_in.get(hits[0]["properties"]["id"], []):
+            k = en_key(v["name_en"])
+            sc = max(en_similarity(n, v["name_en"]) for n in names)
+            if len(k) <= 5 and max(en_key(n) for n in names) != k:
+                sc = min(sc, 0.8)                                  # short names: exact only (Paba is not Pabna)
+            scored.append((sc, v))
+        scored.sort(key=lambda x: -x[0])
+        need = 0.93 if loose else 0.9
+        if not scored or scored[0][0] < need:
+            stats["osm_unmatched"] += 1
+            continue
+        if len(scored) > 1 and scored[1][0] >= scored[0][0] - 0.03 and en_key(scored[1][1]["name_en"]) != en_key(scored[0][1]["name_en"]):
+            stats["osm_ambiguous"] += 1
+            continue
+        sc, v = scored[0]
+        # same-named census villages in one union (two "Uttar Para"s): not resolvable by name
+        if sum(1 for x in scored if en_key(x[1]["name_en"]) == en_key(v["name_en"])) > 1:
+            stats["osm_ambiguous"] += 1
+            continue
+        cand = (sc, -PLACE_RANK.get(o["place"], 9), o)
+        cur = best.get(v["id"])
+        if cur is None or cand[:2] > cur[:2]:
+            best[v["id"]] = cand
+    flat = {a["id"]: a for lst in villages_in.values() for a in lst}
+    for vid, (sc, _r, o) in best.items():
+        a = flat[vid]
+        src = f"osm:{o['osm_type']}/{o['osm_id']}"
+        if (a.get("location_source") or "").startswith("contribution:"):
+            stats["kept_pin"] += 1
+        else:
+            a.update(lat=round(float(o["lat"]), 6), lon=round(float(o["lon"]), 6), location_source=src)
+            stats["osm_located"] += 1
+        if not a["name_bn"] and o["name_bn"]:
+            a.update(name_bn=nfc(o["name_bn"]), name_bn_source=src)
+            stats["osm_bangla_name"] += 1
+    return dict(stats)
 
 
 def write_all(rows, src_ids):
     areas, links, unplaced = build(rows)
+    located = locate(areas, rows)
     for d in (CSV_DIR, SQL_DIR):
         shutil.rmtree(d, ignore_errors=True)
         os.makedirs(d)
@@ -193,7 +283,8 @@ def write_all(rows, src_ids):
                     a["id"], a["level"], a["parent_id"], a["name_bn"], a["name_en"], a["slug"], a["path"], a["bbs_code"],
                     a["population_2022"], a["population_basis"], src_ids.get(a["population_source"]), a["verified"],
                     a["production_eligible"], src_ids[a["data_source"]], a["notes"], a["evidence_level"],
-                    src_ids[a["evidence_source"]])) + ")" for a in items[i:i + 500])
+                    src_ids[a["evidence_source"]], a.get("lat"), a.get("lon"), a.get("location_source"),
+                    a.get("name_bn_source"))) + ")" for a in items[i:i + 500])
                 f.write(f"INSERT INTO admin_areas({','.join(SQL_COLS)}) VALUES\n{vals};\n")
             lk = sorted(links_by_div.get(div, []))
             if lk:
@@ -205,7 +296,7 @@ def write_all(rows, src_ids):
         for (div, lvl, c), n in sorted(unplaced.items()):
             w.writerow([div, lvl, c, n])
     counts = Counter(a["level"] for a in areas)
-    return dict(counts, links=len(links), unplaced=sum(unplaced.values()), divisions=sorted(by_div))
+    return dict(counts, links=len(links), unplaced=sum(unplaced.values()), located=located, divisions=sorted(by_div))
 
 
 def _load_built():
@@ -215,6 +306,16 @@ def _load_built():
         return v
     rows = [{k: val(k, v) for k, v in r.items()} for r in csv.DictReader(
         open(os.path.join(ROOT, "data", "seed", "geo", "admin_areas.csv"), encoding="utf-8-sig"))]
+    # boundaries for the location matching: from a loaded database when DATABASE_URL is set (build_seed.py has them in memory)
+    if os.environ.get("DATABASE_URL"):
+        import subprocess
+        out = subprocess.run(["psql", os.environ["DATABASE_URL"], "-At", "-c",
+                              "SELECT id, ST_AsGeoJSON(boundary::geometry, 6) FROM admin_areas WHERE boundary IS NOT NULL "
+                              "AND level IN ('ward','union','pourashava','city_corporation')"], capture_output=True, text=True, check=True).stdout
+        geo = {int(i): json.loads(g) for i, g in (l.split("|", 1) for l in out.splitlines() if l)}
+        for r in rows:
+            if r["id"] in geo:
+                r["_boundary"] = geo[r["id"]]
     src_ids = {r["key"]: int(r["id"]) for r in csv.DictReader(
         open(os.path.join(ROOT, "data", "seed", "reference", "data_sources.csv"), encoding="utf-8-sig"))}
     return rows, src_ids

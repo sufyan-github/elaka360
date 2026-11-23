@@ -1,0 +1,31 @@
+{
+ "highways": {
+  "living_street": 1841,
+  "motorway": 406,
+  "motorway_link": 4,
+  "primary": 3507,
+  "primary_link": 23,
+  "residential": 10087,
+  "secondary": 5115,
+  "secondary_link": 17,
+  "tertiary": 3665,
+  "tertiary_link": 5,
+  "trunk": 4361,
+  "trunk_link": 77,
+  "unclassified": 3592
+ },
+ "osm_timestamp": "2026-11-22T21:20:48Z",
+ "places": {
+  "hamlet": 128,
+  "isolated_dwelling": 6,
+  "neighbourhood": 407,
+  "quarter": 537,
+  "suburb": 521,
+  "village": 4310
+ },
+ "road": 32700,
+ "seconds": 26,
+ "village_area": 287,
+ "village_node": 5622,
+ "with_bangla_name": 4630
+}

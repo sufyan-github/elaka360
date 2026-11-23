@@ -47,3 +47,30 @@ CREATE TABLE IF NOT EXISTS contact_messages (
   id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT, subject TEXT NOT NULL, message TEXT NOT NULL, ip_hash TEXT,
   created_at TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')));
 CREATE INDEX IF NOT EXISTS contact_messages_ip ON contact_messages(ip_hash, created_at);
+
+-- accounts and contributions (apps/edge-api/src/accounts.ts): written by users, never touched by the sync
+CREATE TABLE IF NOT EXISTS users (
+  id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT NOT NULL UNIQUE, name TEXT NOT NULL DEFAULT '', role TEXT NOT NULL DEFAULT 'user',
+  home_area_id INTEGER, points INTEGER NOT NULL DEFAULT 0,
+  created_at TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')), last_login_at TEXT);
+CREATE TABLE IF NOT EXISTS email_codes (
+  id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT NOT NULL, code_hash TEXT NOT NULL, attempts INTEGER NOT NULL DEFAULT 0,
+  ip_hash TEXT, expires_at TEXT NOT NULL, created_at TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')));
+CREATE INDEX IF NOT EXISTS email_codes_email ON email_codes(email, created_at);
+CREATE INDEX IF NOT EXISTS email_codes_ip ON email_codes(ip_hash, created_at);
+CREATE TABLE IF NOT EXISTS sessions (
+  token_hash TEXT PRIMARY KEY, user_id INTEGER NOT NULL, expires_at TEXT NOT NULL,
+  created_at TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now'))) WITHOUT ROWID;
+CREATE INDEX IF NOT EXISTS sessions_user ON sessions(user_id);
+CREATE TABLE IF NOT EXISTS contributions (
+  id INTEGER PRIMARY KEY AUTOINCREMENT, user_id INTEGER NOT NULL, type TEXT NOT NULL, status TEXT NOT NULL,
+  target_area_id INTEGER, target_place_slug TEXT, payload TEXT NOT NULL, evidence TEXT NOT NULL DEFAULT '[]',
+  lat REAL, lon REAL, confirmed_accurate INTEGER NOT NULL DEFAULT 0, reviewer_note TEXT, reviewed_by INTEGER, reviewed_at TEXT,
+  created_at TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')),
+  updated_at TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')));
+CREATE INDEX IF NOT EXISTS contributions_user ON contributions(user_id, created_at);
+CREATE INDEX IF NOT EXISTS contributions_status ON contributions(status, id);
+CREATE TABLE IF NOT EXISTS contribution_events (
+  id INTEGER PRIMARY KEY AUTOINCREMENT, contribution_id INTEGER NOT NULL, from_status TEXT, to_status TEXT NOT NULL, note TEXT,
+  actor_id INTEGER, at TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now')));
+CREATE INDEX IF NOT EXISTS contribution_events_c ON contribution_events(contribution_id, id);

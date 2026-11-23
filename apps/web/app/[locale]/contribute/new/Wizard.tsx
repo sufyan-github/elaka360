@@ -5,22 +5,29 @@ import { useLocale, useTranslations } from 'next-intl';
 import { LocateFixed } from 'lucide-react';
 import { useRouter } from '@/i18n/navigation';
 import { digits } from '@/lib/locale';
+import type { Geometry } from 'geojson';
+import { PointPicker } from '@/components/map/PointPicker';
 
 type Cat = { key: string; name: string; subs: { key: string; name: string }[] };
-type Type = 'new_place' | 'correction' | 'report';
+export type Type = 'new_place' | 'correction' | 'report' | 'request' | 'village_location';
+const SUBJECTS = ['village', 'road', 'service', 'place', 'boundary', 'other'] as const;
 interface Draft {
   type: Type; name_bn: string; name_en: string; category_key: string; address: string; description: string; phone: string; website: string;
   field: string; current_value: string; proposed_value: string; note: string;
-  lat: number | null; lon: number | null; evidence: string; confirmed: boolean;
+  lat: number | null; lon: number | null; evidence: string; confirmed: boolean; subject: string;
 }
 
 const STEPS = ['stepType', 'stepDetails', 'stepLocation', 'stepSubmit'] as const;
 const DRAFT_KEY = 'e360-contribution-draft';
 const EMPTY: Draft = { type: 'new_place', name_bn: '', name_en: '', category_key: '', address: '', description: '', phone: '', website: '',
-  field: '', current_value: '', proposed_value: '', note: '', lat: null, lon: null, evidence: '', confirmed: false };
+  field: '', current_value: '', proposed_value: '', note: '', lat: null, lon: null, evidence: '', confirmed: false, subject: '' };
 
 /** Four-step wizard. The draft is kept in this browser (works offline) until it is submitted. */
-export function Wizard({ categories, initialType, targetPlace, targetArea }: { categories: Cat[]; initialType: Type; targetPlace?: string; targetArea?: string }) {
+export function Wizard({ categories, initialType, targetPlace, targetArea, targetName, bounds, outline }: {
+  categories: Cat[]; initialType: Type; targetPlace?: string; targetArea?: string; targetName?: string;
+  /** Map start for the location step (the union or upazila around the target). */
+  bounds?: [[number, number], [number, number]]; outline?: Geometry;
+}) {
   const t = useTranslations('Wizard');
   const locale = useLocale();
   const router = useRouter();
@@ -48,10 +55,15 @@ export function Wizard({ categories, initialType, targetPlace, targetArea }: { c
   const needsTarget = d.type !== 'new_place';
   const valid = [
     true,
-    d.type === 'new_place' ? d.name_bn.trim().length >= 2 && !!d.category_key : d.type === 'correction' ? d.proposed_value.trim().length > 0 : d.note.trim().length >= 5,
-    true,
+    d.type === 'new_place' ? d.name_bn.trim().length >= 2 && !!d.category_key
+      : d.type === 'correction' ? d.proposed_value.trim().length > 0
+      : d.type === 'request' ? !!d.subject && d.note.trim().length >= 10
+      : d.type === 'village_location' ? true
+      : d.note.trim().length >= 5,
+    d.type !== 'village_location' || d.lat !== null,
     d.confirmed,
   ];
+  const types: Type[] = initialType === 'village_location' ? ['village_location'] : ['new_place', 'correction', 'report', 'request'];
 
   function locate() {
     navigator.geolocation?.getCurrentPosition(
@@ -66,6 +78,8 @@ export function Wizard({ categories, initialType, targetPlace, targetArea }: { c
     const payload = d.type === 'new_place'
       ? { name_bn: d.name_bn, name_en: d.name_en || undefined, category_key: d.category_key, address: d.address || undefined,
           description: d.description || undefined, website: d.website || undefined, phones: d.phone ? [d.phone] : undefined }
+      : d.type === 'request' ? { subject: d.subject, name: d.name_bn || undefined, description: d.note }
+      : d.type === 'village_location' ? { note: d.note || undefined }
       : { field: d.field || undefined, current_value: d.current_value || undefined, proposed_value: d.proposed_value || undefined, note: d.note || undefined };
     const evidence = d.evidence.split(/\s+/).filter((u) => /^https?:\/\//.test(u)).slice(0, 5).map((url) => ({ url }));
     const res = await fetch('/api/u/contributions', {
@@ -101,13 +115,13 @@ export function Wizard({ categories, initialType, targetPlace, targetArea }: { c
         {step === 0 && (
           <fieldset className="space-y-2">
             <legend className="font-semibold">{t('typeQuestion')}</legend>
-            {(['new_place', 'correction', 'report'] as const).map((type) => (
+            {types.map((type) => (
               <label key={type} className="flex items-center gap-2 rounded-chip border border-line p-3">
                 <input type="radio" name="type" checked={d.type === type} onChange={() => set('type', type)} /> {t(`type.${type}`)}
               </label>
             ))}
             {needsTarget && (
-              <p className="text-sm text-muted">{targetPlace ? t('targetPlace', { target: targetPlace }) : targetArea ? t('targetArea', { target: targetArea }) : t('needsTarget')}</p>
+              <p className="text-sm text-muted">{targetPlace ? t('targetPlace', { target: targetPlace }) : targetArea ? t('targetArea', { target: targetName ?? targetArea }) : t('needsTarget')}</p>
             )}
           </fieldset>
         )}
@@ -133,7 +147,26 @@ export function Wizard({ categories, initialType, targetPlace, targetArea }: { c
             <label className={label}>{t('website')}<input value={d.website} onChange={(e) => set('website', e.target.value)} type="url" maxLength={300} className={input} /></label>
           </>
         )}
-        {step === 1 && d.type !== 'new_place' && (
+        {step === 1 && d.type === 'request' && (
+          <>
+            <label className={label}>{t('subject')}
+              <select value={d.subject} onChange={(e) => set('subject', e.target.value)} className={input}>
+                <option value="">{t('choose')}</option>
+                {SUBJECTS.map((k) => <option key={k} value={k}>{t(`subjects.${k}`)}</option>)}
+              </select>
+            </label>
+            <label className={label}>{t('missingName')}<input value={d.name_bn} onChange={(e) => set('name_bn', e.target.value)} maxLength={120} className={input} /></label>
+            <label className={label}>{t('missingDetails')} *<textarea value={d.note} onChange={(e) => set('note', e.target.value)} maxLength={1000} rows={4} className={input} />
+              <span className="text-xs text-muted">{t('missingHint')}</span></label>
+          </>
+        )}
+        {step === 1 && d.type === 'village_location' && (
+          <>
+            <p className="text-sm">{t('villageIntro', { target: targetName ?? targetArea ?? '' })}</p>
+            <label className={label}>{t('landmark')}<textarea value={d.note} onChange={(e) => set('note', e.target.value)} maxLength={500} rows={3} className={input} /></label>
+          </>
+        )}
+        {step === 1 && (d.type === 'correction' || d.type === 'report') && (
           <>
             <label className={label}>{t('field')}<input value={d.field} onChange={(e) => set('field', e.target.value)} placeholder={t('fieldPlaceholder')} maxLength={60} className={input} /></label>
             {d.type === 'correction' && (
@@ -148,7 +181,9 @@ export function Wizard({ categories, initialType, targetPlace, targetArea }: { c
 
         {step === 2 && (
           <div className="space-y-3 text-sm">
-            <p>{t('locationIntro')}</p>
+            <p>{d.type === 'village_location' ? t('villageLocationIntro') : t('locationIntro')}</p>
+            <PointPicker value={d.lat !== null && d.lon !== null ? { lat: d.lat, lon: d.lon } : null}
+              onChange={(p) => setD((x) => ({ ...x, lat: p.lat, lon: p.lon }))} bounds={bounds} outline={outline} />
             <button type="button" onClick={locate} className="inline-flex items-center gap-1 rounded-chip border border-line px-3 py-2 font-medium text-secondary">
               <LocateFixed className="h-4 w-4" aria-hidden /> {t('useLocation')}
             </button>

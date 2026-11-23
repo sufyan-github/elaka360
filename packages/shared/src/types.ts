@@ -40,6 +40,21 @@ export interface AdminArea extends AdminAreaSummary {
   evidence_source: DataSourceRef | null;
   verification_notes: string | null;
   last_reviewed_at: string | null;
+  /** Where lat/lon came from when not the area's own source: 'osm:node/123' (OpenStreetMap) or 'contribution:45'
+   *  (a contributor's pin approved by a moderator). Community data, never official. */
+  location_source: string | null;
+  /** Same for a Bangla name the area's own source does not give (census villages: OpenStreetMap). */
+  name_bn_source: string | null;
+}
+
+/** A named road in an area (OpenStreetMap, community data). Length is the part inside the area. */
+export interface AreaRoad {
+  name: string | null;
+  name_bn: string | null;
+  /** OpenStreetMap highway class: trunk, primary, secondary, tertiary, unclassified, residential… */
+  highway: string;
+  ref: string | null;
+  length_m: number;
 }
 
 export interface DataSourceRef {
@@ -69,6 +84,8 @@ export interface AreaDetail {
    * pourashava, thana, mouza, village) place_counts and place lists describe this nearest ancestor; null otherwise.
    */
   place_scope: AdminAreaSummary | null;
+  /** Named roads inside this area (unions, pourashavas, city wards and corporations), longest classes first. */
+  roads: AreaRoad[];
 }
 
 export interface AreaStats {
@@ -282,7 +299,11 @@ export interface Collection {
   created_at: string;
 }
 
-export type ContributionType = 'new_place' | 'new_business' | 'new_tourist_spot' | 'area_info' | 'photo' | 'correction' | 'report';
+export type ContributionType = 'new_place' | 'new_business' | 'new_tourist_spot' | 'area_info' | 'photo' | 'correction' | 'report'
+  /** A village's or mouza's location, pinned on the map (edge API). */
+  | 'village_location'
+  /** A request to add missing information for an area: a village, road, service, place or boundary (edge API). */
+  | 'request';
 export type ContributionStatus = 'draft' | 'new' | 'in_review' | 'needs_changes' | 'approved' | 'rejected';
 
 export interface ContributionEvidence {

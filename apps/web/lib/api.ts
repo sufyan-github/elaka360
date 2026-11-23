@@ -51,6 +51,8 @@ export const api = {
   areas: (level: string, parentId?: number, limit = 200) =>
     get<Paginated<AdminAreaSummary>>(`/v1/areas${qs({ level, parent_id: parentId, limit })}`),
   areaByPath: (path: string) => get<AreaDetail>(`/v1/areas/by-path${qs({ path })}`),
+  /** An area's boundary (GeoJSON Feature); 404 when the area has none. */
+  boundary: (id: number) => get<{ type: 'Feature'; geometry: import('geojson').Geometry }>(`/v1/areas/${id}/boundary`, 3600),
   categories: () => get<Category[]>('/v1/categories', 3600),
   places: (o: { areaId?: number; category?: string; q?: string; limit?: number; cursor?: string }) =>
     get<PlacePage>(`/v1/places${qs({ area_id: o.areaId, category: o.category, q: o.q, limit: o.limit, cursor: o.cursor })}`),

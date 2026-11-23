@@ -1,0 +1,26 @@
+{
+  "key": "OSM_LOCALITIES_2026",
+  "name": "OpenStreetMap contributors — villages, hamlets, neighbourhoods and named roads (Bangladesh extract)",
+  "organization": "OpenStreetMap Foundation",
+  "source_type": "community_dataset",
+  "trust_level": 1,
+  "urls": [
+    "https://download.geofabrik.de/asia/bangladesh.html",
+    "https://download.geofabrik.de/asia/bangladesh-latest.osm.pbf",
+    "https://www.openstreetmap.org/copyright"
+  ],
+  "accessed": "2026-11-23",
+  "publication_date": null,
+  "osm_data_timestamp": "2026-11-22T21:20:48Z",
+  "license": "ODbL-1.0",
+  "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "attribution": "© OpenStreetMap contributors",
+  "kind": "osm_localities",
+  "files": {
+    "villages.csv": "2b42e7cdb07b4d343a7e6f1ffd2495c794f58fa13bfb39fd54aec488b9d805c1",
+    "roads.csv": "5d6f89c26ccedb02596511f9731ec05b5487214bc09f7974dcc178bc03da9430",
+    "stats.json": "c16fe5bd902ff666225191a263a867d2af0e37c8f4e155481ace0e8085de5070",
+    "fetch.py": "1ec19be599a1c85b96394dff2e09650e89fbbd15a26eccbe48eea87d5fc5df2f"
+  },
+  "notes": "Geofabrik Bangladesh extract parsed locally with pyosmium. villages.csv: named place=village|hamlet|isolated_dwelling|neighbourhood|suburb|quarter (nodes; areas by centroid). roads.csv: named or numbered highways from motorway to residential, sampled every ~250 m. Community data: every row is unverified; ODbL share-alike applies to databases derived from it. The .pbf is not committed (fetch.py downloads it)."
+}

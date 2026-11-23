@@ -536,8 +536,9 @@ for name, stmts in boundaries_by_div.items():
         f.write(GEN + "".join(stmts))
 
 # city thanas, mouzas and villages / mahallas (BBS Census 2022, table C-01): files of their own, loaded after the areas
-import localities
+import localities, roads
 summary["localities"] = localities.write_all(rows, SRC_IDS)
+summary["roads"] = roads.write_all(rows, SRC_IDS)    # named roads per union / ward (OpenStreetMap, migration 0011)
 write_json(f"{OUT}/qa/counts_summary.json", summary)
 
 with open(SQL_OUT, "w", encoding="utf-8") as f:
@@ -551,6 +552,8 @@ with open(SQL_OUT, "w", encoding="utf-8") as f:
         f.write(f"\\ir boundaries/{name}.sql\n")
     for name in sorted(summary["localities"]["divisions"], key=DIV_ORDER.index):
         f.write(f"\\ir localities/{name}.sql\n")
+    for name in sorted(summary["roads"].get("divisions", []), key=DIV_ORDER.index):
+        f.write(f"\\ir roads/{name}.sql\n")
     f.write("COMMIT;\n")
 
 shutil.copy(f"{SRC_DIR}/LICENSE", f"{OUT}/geo/LICENSE-nuhil-bangladesh-geocode.txt")

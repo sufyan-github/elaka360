@@ -27,7 +27,8 @@ PARAMS = {
     "BOUNDARY_LEVELS_SQL": [],
     "BOUNDARY_SQL": ["20015"],
     "CHILD_BOUNDARIES_SQL": ["20015", "'{union,pourashava}'", "0.0001"],
-    "AREA_LINKS_SQL": ["80088"],                       # Boalia Thana (RCC): its wards
+    "AREA_LINKS_SQL": ["80088"],
+    "AREA_ROADS_SQL": ["40001"],                       # Boalia Thana (RCC): its wards
     "COVERAGE_PLACES_SQL": ["10002", "'district'"],
     "COVERAGE_NATIONAL_SQL": ["1", "'division'"],
     "COVERAGE_AREAS_SQL": ["10002", "'{district}'"],

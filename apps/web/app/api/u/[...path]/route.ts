@@ -10,6 +10,7 @@ const ALLOWED = [
   /^contributions(\/\d+(\/submit)?)?$/,
   /^places\/[a-z0-9-]{1,120}\/reviews$/,
   /^reviews\/\d+(\/report)?$/,
+  /^mod\/contributions(\/\d+\/decision)?$/,   // moderation queue (edge API; staff only, checked by the API)
 ];
 
 async function handle(req: NextRequest, { params }: { params: Promise<{ path: string[] }> }) {
