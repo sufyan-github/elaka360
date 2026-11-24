@@ -34,8 +34,6 @@ export interface D1Database { prepare(sql: string): D1PreparedStatement }
 
 /* ---------------------------------------------------------------- database: Turso (libSQL over HTTP) or D1 */
 
-let turso: { url: string; client: Client } | null = null;
-
 /** The D1-style interface over a libSQL client: rows come back as plain objects, whole numbers bind as integers. */
 function libsqlDatabase(client: Client): D1Database {
   const toArgs = (v: unknown[]): InValue[] => v.map((x) => (typeof x === 'number' && Number.isInteger(x) ? BigInt(x) : x) as InValue);
@@ -62,8 +60,11 @@ function dbOf(env: Env): D1Database {
   if (env.DB) return env.DB;
   const url = env.TURSO_DATABASE_URL;
   if (!url) throw new HttpError(503, 'Service Unavailable', 'database not configured');
-  if (turso?.url !== url) turso = { url, client: createClient({ url, authToken: env.TURSO_AUTH_TOKEN, intMode: 'number' }) };
-  return libsqlDatabase(turso.client);
+  // A new client for every request (creating one does no I/O). A client kept across requests shares its queue of 20
+  // queries; a query queued by one request is released by another request's promise, which Workers never delivers, so
+  // under load the request hangs, the runtime cancels it ("code had hung") and the site shows a 500 until the isolate
+  // is recycled.
+  return libsqlDatabase(createClient({ url, authToken: env.TURSO_AUTH_TOKEN, intMode: 'number' }));
 }
 
 const LEVEL_ORDER = ['country', 'division', 'district', 'upazila', 'city_corporation', 'pourashava', 'union', 'ward', 'mouza', 'village', 'thana'];
