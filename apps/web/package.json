@@ -9,7 +9,7 @@
     "typecheck": "tsc --noEmit",
     "test": "echo 'web: covered by e2e smoke in CI'",
     "lint": "eslint app components lib middleware.ts",
-    "cf:build": "opennextjs-cloudflare build",
+    "cf:build": "opennextjs-cloudflare build && node ../../scripts/patch-next-batcher.mjs",
     "cf:deploy": "opennextjs-cloudflare deploy",
     "cf:preview": "opennextjs-cloudflare preview"
   },
