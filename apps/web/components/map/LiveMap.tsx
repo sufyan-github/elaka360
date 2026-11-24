@@ -4,13 +4,13 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { useLocale, useTranslations } from 'next-intl';
 import type { GeoJSONSource, LngLatBounds, Map as MlMap, MapLayerMouseEvent, Popup } from 'maplibre-gl';
 import type { Feature, FeatureCollection, Geometry, Point } from 'geojson';
-import { LEVEL_LABEL, formatNumber, type AdminLevel, type EvidenceLevel, type Locale, type PlaceSummary } from '@elaka360/shared';
+import { LEVEL_LABEL, formatNumber, formatTime, type AdminLevel, type EvidenceLevel, type Locale, type PlaceSummary } from '@elaka360/shared';
 import { Link, useRouter } from '@/i18n/navigation';
 import { localePath } from '@/lib/links';
 import { areaLabel, evidenceText, localName } from '@/lib/locale';
 import 'maplibre-gl/dist/maplibre-gl.css';
+import { STYLE_URL, enableBanglaText, localDigits, localizeBasemap, transformRequest } from './basemap';
 
-const STYLE_URL = process.env.NEXT_PUBLIC_MAP_STYLE_URL ?? 'https://tiles.openfreemap.org/styles/positron';
 const CATEGORIES = ['education', 'health', 'government', 'emergency', 'tourism', 'religious', 'transport', 'finance', 'agriculture', 'business', 'other'];
 const REFRESH_MS = 300_000;     // re-check the published data every 5 minutes while the tab is visible
 /**
@@ -196,11 +196,13 @@ export function LiveMap({ scope, category, layers }: {
         const { default: maplibregl } = await import('maplibre-gl');
         if (cancelled || !el.current) return;
         const colors = tokenColors();
+        enableBanglaText(maplibregl);
         const map = new maplibregl.Map({
-          container: el.current, style: STYLE_URL, center: [88.6, 24.4], zoom: 8.5,
+          container: el.current, style: STYLE_URL, transformRequest, center: [88.6, 24.4], zoom: 8.5,
           attributionControl: { compact: true }, cooperativeGestures: true,
         });
         mapRef.current = map;
+        map.once('style.load', () => localizeBasemap(map, locale));
         map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
         map.addControl(new maplibregl.GeolocateControl({ trackUserLocation: true }), 'top-right');
         map.addControl(new maplibregl.ScaleControl({ unit: 'metric' }), 'bottom-left');
@@ -242,7 +244,7 @@ export function LiveMap({ scope, category, layers }: {
           map.addLayer({
             id: 'cluster-count', type: 'symbol', source: 'places', filter: ['has', 'point_count'],
             // the basemap only serves Noto Sans; the MapLibre default font 404s
-            layout: { 'text-field': ['get', 'point_count_abbreviated'], 'text-size': 12, 'text-font': ['Noto Sans Bold'] },
+            layout: { 'text-field': localDigits(['get', 'point_count_abbreviated'], locale) as never, 'text-size': 12, 'text-font': ['Noto Sans Bold'] },
             paint: { 'text-color': '#fff' },
           });
           map.addLayer({
@@ -413,7 +415,7 @@ export function LiveMap({ scope, category, layers }: {
   }, [selected, category]);
 
   const fmt = (n: number) => formatNumber(n, locale);
-  const time = updated?.toLocaleTimeString(locale === 'bn' ? 'bn-BD' : 'en-GB', { hour: '2-digit', minute: '2-digit' });
+  const time = updated ? formatTime(updated, locale) : undefined;
   const lvl = (l: AdminLevel) => LEVEL_LABEL[l]?.[locale === 'bn' ? 'bn' : 'en'] ?? l;
 
   return (

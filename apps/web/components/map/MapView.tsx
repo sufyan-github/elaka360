@@ -8,9 +8,8 @@ import { areaLabel, localName } from '@/lib/locale';
 import type { Map as MlMap, GeoJSONSource, LngLatBoundsLike } from 'maplibre-gl';
 import type { FeatureCollection, MultiPolygon } from 'geojson';
 import 'maplibre-gl/dist/maplibre-gl.css';
+import { STYLE_URL, enableBanglaText, localDigits, localizeBasemap, transformRequest } from './basemap';
 
-/** Default basemap: OpenFreeMap (free, no key). Override with NEXT_PUBLIC_MAP_STYLE_URL (e.g. self-hosted PMTiles style). */
-const STYLE_URL = process.env.NEXT_PUBLIC_MAP_STYLE_URL ?? 'https://tiles.openfreemap.org/styles/positron';
 const BD_BOUNDS: LngLatBoundsLike = [[88.0, 20.6], [92.7, 26.7]];
 
 const CATEGORIES = ['education', 'health', 'government', 'religious', 'emergency', 'tourism', 'business', 'transport', 'agriculture', 'finance', 'other'];
@@ -84,14 +83,17 @@ export function MapView({ districtIds, divisionId, areaId, category, className =
           (f) => (districtIds?.includes(f.properties.district_id) ?? false) || f.properties.division_id === divisionId,
         );
         const colors = tokenColors();
+        enableBanglaText(maplibregl);
         const map = new maplibregl.Map({
           container: el.current,
           style: STYLE_URL,
+          transformRequest,
           ...(point ? { center: point, zoom: 14 } : { bounds: bboxOf(focus) ?? BD_BOUNDS, fitBoundsOptions: { padding: 24 } }),
           attributionControl: { compact: true },
           cooperativeGestures: true,
         });
         mapRef.current = map;
+        map.once('style.load', () => localizeBasemap(map, locale));
         map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
         map.addControl(new maplibregl.GeolocateControl({ trackUserLocation: false }), 'top-right');
 
@@ -121,7 +123,7 @@ export function MapView({ districtIds, divisionId, areaId, category, className =
           map.addLayer({
             id: 'cluster-count', type: 'symbol', source: 'places', filter: ['has', 'point_count'],
             // the basemap only serves Noto Sans; the MapLibre default font 404s
-            layout: { 'text-field': ['get', 'point_count_abbreviated'], 'text-size': 12, 'text-font': ['Noto Sans Bold'] },
+            layout: { 'text-field': localDigits(['get', 'point_count_abbreviated'], locale) as never, 'text-size': 12, 'text-font': ['Noto Sans Bold'] },
             paint: { 'text-color': '#fff' },
           });
           map.addLayer({

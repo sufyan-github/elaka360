@@ -30,8 +30,8 @@ test('place page shows evidence, source and report link; unverified places are l
   await expect(page.getByText('বিশ্ববিদ্যালয়', { exact: true })).toBeVisible();     // Bangla subcategory, not a raw slug
   const footer = page.getByRole('complementary', { name: 'তথ্যের উৎস ও যাচাই' });
   await expect(footer).toContainText('UGC');                // confirmed by the UGC register …
-  await expect(footer).toContainText('বিস্তারিত তথ্য: Wikipedia');   // … details still credited to Wikipedia
-  await expect(page.getByRole('link', { name: /ভুল তথ্য জানান/ })).toBeVisible();
+  await expect(footer).toContainText('বিস্তারিত তথ্যের উৎস: Wikipedia');   // … details still credited to Wikipedia
+  await expect(page.getByRole('link', { name: /ভুল জানান/ })).toBeVisible();
   await page.goto('/p/shah-makhdum-mazar');
   await expect(page.getByRole('note')).toContainText('যাচাই করা হয়নি');
 });
@@ -57,7 +57,7 @@ test('emergency page lists only sourced hotlines and never the retired fire numb
 
 test('category list reports a true total', async ({ page }) => {
   await page.goto('/c/education');
-  await expect(page.getByRole('heading', { name: /মোট পাওয়া গেছে/ })).toBeVisible();
+  await expect(page.getByRole('heading', { name: /মোট .+পাওয়া গেছে/ })).toBeVisible();
 });
 
 test('protected pages redirect to sign-in', async ({ page }) => {

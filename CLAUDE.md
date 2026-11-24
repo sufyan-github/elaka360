@@ -4,6 +4,8 @@
   Packages: `@elaka360/shared` (types + Bangla formatting, compiled to CommonJS in `dist/`), `@elaka360/ui` (CSS tokens).
 - UI language is Bangla first. Store ASCII digits; format with `formatNumber/formatCompact/formatDate/toBnDigits`
   from `@elaka360/shared`. Never hard-code national counts — read `/v1/stats/national`.
+- Bangla copy follows `docs/BANGLA_STYLE.md` (natural প্রমিত চলিত বাংলা, fixed terminology, Bangla digits, `formatTime`).
+  New maps call `enableBanglaText`/`transformRequest`/`localizeBasemap` from `components/map/basemap.ts`.
 - Area URLs are `admin_areas.path` (e.g. `/rajshahi/rajshahi/paba`); place URLs are `/p/<slug>`.
 - API SQL lives in `*.sql.ts` constants (or `export const X_SQL` in controllers). When you add one, add sample params to
   `scripts/check_sql.py` so CI executes it against the seed.

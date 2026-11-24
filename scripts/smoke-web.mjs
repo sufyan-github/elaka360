@@ -4,7 +4,7 @@ const WEB = process.env.WEB_URL ?? 'http://localhost:3000';
 const pages = [
   ['/', 'বাংলাদেশের প্রতিটি এলাকার'],
   ['/explore', 'বাংলাদেশ ঘুরে দেখুন'],
-  ['/explore?level=district&division=10002', 'জেলাসমূহ'],
+  ['/explore?level=district&division=10002', 'জেলা ('],
   ['/rajshahi', 'রাজশাহী বিভাগ'],
   ['/rajshahi/rajshahi', 'রাজশাহী জেলা'],
   ['/rajshahi/rajshahi/paba', 'পবা উপজেলা'],

@@ -12,9 +12,10 @@ const MAP_ORIGIN = (() => {
 })();
 
 // Next.js injects inline bootstrap scripts, so script-src needs 'unsafe-inline' without a nonce setup.
+// 'wasm-unsafe-eval': the map's text shaper (public/maplibre/complex-text.js) runs HarfBuzz as WebAssembly.
 const CSP = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline'" + (process.env.NODE_ENV === 'development' ? " 'unsafe-eval'" : ''),
+  "script-src 'self' 'unsafe-inline' 'wasm-unsafe-eval'" + (process.env.NODE_ENV === 'development' ? " 'unsafe-eval'" : ''),
   "style-src 'self' 'unsafe-inline'",
   `img-src 'self' data: blob: ${MAP_ORIGIN}`,
   "font-src 'self' data:",
