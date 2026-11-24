@@ -3,16 +3,16 @@ import type { Locale } from './bangla';
 
 export const LEVEL_LABEL: Record<AdminLevel, { bn: string; en: string; plural_bn: string; plural_en: string }> = {
   country: { bn: 'দেশ', en: 'Country', plural_bn: 'দেশ', plural_en: 'Countries' },
-  division: { bn: 'বিভাগ', en: 'Division', plural_bn: 'বিভাগসমূহ', plural_en: 'Divisions' },
-  district: { bn: 'জেলা', en: 'District', plural_bn: 'জেলাসমূহ', plural_en: 'Districts' },
-  upazila: { bn: 'উপজেলা', en: 'Upazila', plural_bn: 'উপজেলাসমূহ', plural_en: 'Upazilas' },
+  division: { bn: 'বিভাগ', en: 'Division', plural_bn: 'বিভাগ', plural_en: 'Divisions' },
+  district: { bn: 'জেলা', en: 'District', plural_bn: 'জেলা', plural_en: 'Districts' },
+  upazila: { bn: 'উপজেলা', en: 'Upazila', plural_bn: 'উপজেলা', plural_en: 'Upazilas' },
   city_corporation: { bn: 'সিটি কর্পোরেশন', en: 'City corporation', plural_bn: 'সিটি কর্পোরেশন', plural_en: 'City corporations' },
-  pourashava: { bn: 'পৌরসভা', en: 'Pourashava', plural_bn: 'পৌরসভাসমূহ', plural_en: 'Pourashavas' },
-  union: { bn: 'ইউনিয়ন', en: 'Union', plural_bn: 'ইউনিয়নসমূহ', plural_en: 'Unions' },
-  ward: { bn: 'ওয়ার্ড', en: 'Ward', plural_bn: 'ওয়ার্ডসমূহ', plural_en: 'Wards' },
-  mouza: { bn: 'মৌজা', en: 'Mouza', plural_bn: 'মৌজাসমূহ', plural_en: 'Mouzas' },
-  village: { bn: 'গ্রাম', en: 'Village', plural_bn: 'গ্রামসমূহ', plural_en: 'Villages' },
-  thana: { bn: 'থানা', en: 'Thana', plural_bn: 'থানাসমূহ', plural_en: 'Thanas' },
+  pourashava: { bn: 'পৌরসভা', en: 'Pourashava', plural_bn: 'পৌরসভা', plural_en: 'Pourashavas' },
+  union: { bn: 'ইউনিয়ন', en: 'Union', plural_bn: 'ইউনিয়ন', plural_en: 'Unions' },
+  ward: { bn: 'ওয়ার্ড', en: 'Ward', plural_bn: 'ওয়ার্ড', plural_en: 'Wards' },
+  mouza: { bn: 'মৌজা', en: 'Mouza', plural_bn: 'মৌজা', plural_en: 'Mouzas' },
+  village: { bn: 'গ্রাম', en: 'Village', plural_bn: 'গ্রাম', plural_en: 'Villages' },
+  thana: { bn: 'থানা', en: 'Thana', plural_bn: 'থানা', plural_en: 'Thanas' },
 };
 
 /** The child level(s) shown on an area page, in display order. */
@@ -53,16 +53,16 @@ export const EVIDENCE_LABEL: Record<EvidenceLevel, { bn: string; en: string; hin
   },
   secondary: {
     bn: 'দ্বিতীয় উৎস থেকে নেওয়া', en: 'Secondary source',
-    hint_bn: 'নির্ভরযোগ্য দ্বিতীয় উৎস (যেমন উইকিপিডিয়া, সংবাদপত্র, আদমশুমারির সংকলন) থেকে নেওয়া; সরকারিভাবে যাচাই হয়নি।',
+    hint_bn: 'নির্ভরযোগ্য দ্বিতীয় উৎস (যেমন উইকিপিডিয়া, সংবাদপত্র, জনশুমারির সংকলন) থেকে নেওয়া; সরকারিভাবে যাচাই হয়নি।',
     hint_en: 'From a reliable secondary source (e.g. Wikipedia, newspapers, census compilations); not officially verified.',
   },
   community: {
     bn: 'কমিউনিটির তথ্য', en: 'Community data',
-    hint_bn: 'কমিউনিটি ডেটাসেট বা ব্যবহারকারীর দেওয়া তথ্য; যাচাই বাকি।',
+    hint_bn: 'কমিউনিটির ডেটাসেট বা ব্যবহারকারীর পাঠানো তথ্য; এখনো যাচাই হয়নি।',
     hint_en: 'From a community dataset or a user submission; not yet verified.',
   },
   unverified: {
-    bn: 'যাচাই বাকি', en: 'Not verified',
+    bn: 'যাচাই করা হয়নি', en: 'Not verified',
     hint_bn: 'এখনো কোনো উৎসের সঙ্গে মিলিয়ে দেখা হয়নি।',
     hint_en: 'Not yet checked against any source.',
   },
@@ -70,9 +70,9 @@ export const EVIDENCE_LABEL: Record<EvidenceLevel, { bn: string; en: string; hin
 
 export const CONTRIBUTION_STATUS_LABEL: Record<ContributionStatus, { bn: string; en: string }> = {
   draft: { bn: 'খসড়া', en: 'Draft' },
-  new: { bn: 'জমা দেওয়া হয়েছে', en: 'Submitted' },
-  in_review: { bn: 'পর্যালোচনায়', en: 'Under review' },
-  needs_changes: { bn: 'সংশোধন প্রয়োজন', en: 'Needs changes' },
+  new: { bn: 'জমা পড়েছে', en: 'Submitted' },
+  in_review: { bn: 'যাচাই চলছে', en: 'Under review' },
+  needs_changes: { bn: 'সংশোধন দরকার', en: 'Needs changes' },
   approved: { bn: 'অনুমোদিত', en: 'Approved' },
   rejected: { bn: 'বাতিল', en: 'Rejected' },
 };

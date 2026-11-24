@@ -99,3 +99,15 @@ export function formatDate(iso: string, locale: Locale = 'bn'): string {
   if (locale === 'bn') return `${toBnDigits(Number(d))} ${BN_MONTHS[monthIndex] ?? ''} ${toBnDigits(y ?? '')}`;
   return `${Number(d)} ${EN_MONTHS[monthIndex] ?? ''} ${y}`;
 }
+
+/**
+ * Clock time as people say it: 9:05 in the morning → "সকাল ৯:০৫", 15:40 → "বিকেল ৩:৪০" (12-hour, with the part of the
+ * day instead of AM/PM, which Bangla readers do not use); English: "09:05". Uses the device's local time.
+ */
+export function formatTime(d: Date, locale: Locale = 'bn'): string {
+  const h = d.getHours();
+  const m = String(d.getMinutes()).padStart(2, '0');
+  if (locale !== 'bn') return `${String(h).padStart(2, '0')}:${m}`;
+  const part = h < 4 ? 'রাত' : h < 6 ? 'ভোর' : h < 12 ? 'সকাল' : h < 15 ? 'দুপুর' : h < 18 ? 'বিকেল' : h < 20 ? 'সন্ধ্যা' : 'রাত';
+  return `${part} ${toBnDigits(h % 12 || 12)}:${toBnDigits(m)}`;
+}

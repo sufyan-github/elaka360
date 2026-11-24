@@ -1,12 +1,12 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useLocale, useTranslations } from 'next-intl';
 import type { Map as MlMap, Marker, LngLatBoundsLike } from 'maplibre-gl';
 import type { Geometry } from 'geojson';
 import 'maplibre-gl/dist/maplibre-gl.css';
+import { STYLE_URL, enableBanglaText, localizeBasemap, transformRequest } from './basemap';
 
-const STYLE_URL = process.env.NEXT_PUBLIC_MAP_STYLE_URL ?? 'https://tiles.openfreemap.org/styles/positron';
 const BD_BOUNDS: LngLatBoundsLike = [[88.0, 20.6], [92.7, 26.7]];
 
 export interface PointPickerProps {
@@ -22,6 +22,7 @@ export interface PointPickerProps {
 /** Tap the map (or drag the pin) to choose a point. The basemap shows roads, rivers and building outlines. */
 export function PointPicker({ value, onChange, bounds, outline, className = 'h-72' }: PointPickerProps) {
   const t = useTranslations('Wizard');
+  const locale = useLocale();
   const box = useRef<HTMLDivElement>(null);
   const map = useRef<MlMap | null>(null);
   const marker = useRef<Marker | null>(null);
@@ -35,12 +36,14 @@ export function PointPicker({ value, onChange, bounds, outline, className = 'h-7
       try {
         const maplibregl = (await import('maplibre-gl')).default;
         if (cancelled || !box.current) return;
+        enableBanglaText(maplibregl);
         const m = new maplibregl.Map({
-          container: box.current, style: STYLE_URL, attributionControl: { compact: true },
+          container: box.current, style: STYLE_URL, transformRequest, attributionControl: { compact: true },
           ...(value ? { center: [value.lon, value.lat] as [number, number], zoom: 15 } : { bounds: bounds ?? BD_BOUNDS, fitBoundsOptions: { padding: 16 } }),
         });
         m.on('error', (e) => { if (String((e as { error?: Error }).error?.message ?? '').toLowerCase().includes('webgl')) setFailed(true); });
         map.current = m;
+        m.once('style.load', () => localizeBasemap(m, locale));
         m.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
         m.addControl(new maplibregl.GeolocateControl({ trackUserLocation: false }), 'top-right');
         const color = getComputedStyle(document.documentElement).getPropertyValue('--e360-primary').trim() || '#075b3b';

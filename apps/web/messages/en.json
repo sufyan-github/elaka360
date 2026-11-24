@@ -617,7 +617,7 @@
   "Guidelines": {
     "title": "Contribution guidelines",
     "description": "Rules for giving information, photos and reviews on Elaka360 — what is accepted and what is rejected.",
-    "subtitleOther": "অবদানের নির্দেশিকা",
+    "subtitleOther": "তথ্য দেওয়ার নিয়মাবলি",
     "intro": "The information, photos and reviews you give help others. To keep the information reliable for everyone, please follow the rules below.",
     "rulesTitle": "Main rules",
     "rules": {
@@ -668,7 +668,7 @@
     "collected": {
       "phone": {
         "what": "Mobile phone number",
-        "why": "For signing in. A one-time code is sent to the number by SMS. An SMS provider will be used to send the code; it has not been finalised yet. To prevent abuse, the IP address at the time the code was requested is kept with the code record."
+        "why": "For signing in, where sign-in by mobile number is enabled. A one-time code is sent to the number by SMS. An SMS provider will be used to send the code; it has not been finalised yet. To prevent abuse, the IP address at the time the code was requested is kept with the code record."
       },
       "profile": {
         "what": "Display name and profile settings",
@@ -676,7 +676,7 @@
       },
       "session": {
         "what": "Sign-in sessions",
-        "why": "To keep you signed in, a session record is kept, together with your browser or app identifier (user agent). Signing out ends that session."
+        "why": "To keep you signed in, a session record is kept, in some cases together with your browser or app identifier (user agent). Signing out ends that session."
       },
       "contributions": {
         "what": "Contributions and reviews you submit",
@@ -689,6 +689,10 @@
       "contact": {
         "what": "Contact form messages",
         "why": "The subject, message and, if you give it, your email address — only to deal with and reply to your message."
+      },
+      "email": {
+        "what": "Email address",
+        "why": "For signing in. A one-time 6-digit code is sent to your email through our email provider (Resend). Your email address is never shown to other people. To prevent abuse, the IP address used to ask for a code is kept with the code record, as a one-way hash rather than the address itself."
       }
     },
     "browseFree": "You can browse the site without signing in; then none of the account information above is created.",

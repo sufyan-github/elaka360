@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { title: t('title'), description: t('description'), alternates: localeAlternates(locale, '/privacy') };
 }
 
-const COLLECTED = ['phone', 'profile', 'session', 'contributions', 'saved', 'contact'] as const;
+const COLLECTED = ['email', 'phone', 'profile', 'session', 'contributions', 'saved', 'contact'] as const;
 const NOT_STORED = ['nearMe', 'logs', 'cache', 'map'] as const;
 const linkCls = 'font-medium text-secondary underline';
 

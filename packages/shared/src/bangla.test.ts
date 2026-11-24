@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
   toBnDigits, fromBnDigits, groupIndian, formatNumber, formatCompact, formatCount,
-  formatArea, formatDistance, formatDate,
+  formatArea, formatDistance, formatDate, formatTime,
 } from './bangla';
 import { latinKey, aliasesFor } from './search';
 import { titleOf, nameOf } from './labels';
@@ -44,6 +44,15 @@ test('counts, area, distance, date', () => {
   assert.equal(formatDistance(2100), '২.১ কিমি');
   assert.equal(formatDate('2026-11-09'), '৯ নভেম্বর ২০২৬');
   assert.equal(formatDate('2026-03-15T10:00:00Z', 'en'), '15 Mar 2026');
+  const at = (h: number, m: number) => new Date(2026, 10, 24, h, m);
+  assert.equal(formatTime(at(9, 5)), 'সকাল ৯:০৫');
+  assert.equal(formatTime(at(12, 30)), 'দুপুর ১২:৩০');
+  assert.equal(formatTime(at(15, 40)), 'বিকেল ৩:৪০');
+  assert.equal(formatTime(at(19, 0)), 'সন্ধ্যা ৭:০০');
+  assert.equal(formatTime(at(23, 15)), 'রাত ১১:১৫');
+  assert.equal(formatTime(at(0, 10)), 'রাত ১২:১০');
+  assert.equal(formatTime(at(5, 0)), 'ভোর ৫:০০');
+  assert.equal(formatTime(at(9, 5), 'en'), '09:05');
 });
 
 test('search keys', () => {

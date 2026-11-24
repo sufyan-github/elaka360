@@ -71,18 +71,18 @@ async function sendCode(env: AccountEnv, to: string, code: string): Promise<'sen
     if (env.MAIL_DEV === '1') return 'dev';
     throw new HttpError(503, 'Service Unavailable', 'email sign-in is not configured');
   }
-  const text = `এলাকা৩৬০-এ প্রবেশের কোড: ${code}\nকোডটি ১০ মিনিট কার্যকর। কাউকে জানাবেন না।\n\n` +
+  const text = `Elaka360-এ সাইন ইনের কোড: ${code}\nকোডটি ১০ মিনিট পর্যন্ত কাজ করবে। কাউকে কোডটি জানাবেন না।\n\n` +
     `Your Elaka360 sign-in code: ${code}\nIt is valid for 10 minutes. Do not share it.\n\n` +
-    'If you did not ask for this code, you can ignore this email.';
+    'আপনি এই কোড না চাইলে ইমেইলটি উপেক্ষা করুন। If you did not ask for this code, you can ignore this email.';
   const html = `<div style="font-family:system-ui,sans-serif;font-size:15px;line-height:1.5">
-<p>এলাকা৩৬০-এ প্রবেশের কোড / Your Elaka360 sign-in code:</p>
+<p>Elaka360-এ সাইন ইনের কোড / Your Elaka360 sign-in code:</p>
 <p style="font-size:28px;font-weight:700;letter-spacing:4px">${code}</p>
-<p>কোডটি ১০ মিনিট কার্যকর। কাউকে জানাবেন না।<br>Valid for 10 minutes. Do not share it.</p>
-<p style="color:#666;font-size:13px">If you did not ask for this code, you can ignore this email.</p></div>`;
+<p>কোডটি ১০ মিনিট পর্যন্ত কাজ করবে। কাউকে কোডটি জানাবেন না।<br>Valid for 10 minutes. Do not share it.</p>
+<p style="color:#666;font-size:13px">আপনি এই কোড না চাইলে ইমেইলটি উপেক্ষা করুন।<br>If you did not ask for this code, you can ignore this email.</p></div>`;
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
-    body: JSON.stringify({ from: env.MAIL_FROM ?? 'Elaka360 <noreply@elaka360.abusufyan.online>', to: [to], subject: 'Elaka360 sign-in code', text, html }),
+    body: JSON.stringify({ from: env.MAIL_FROM ?? 'Elaka360 <noreply@elaka360.abusufyan.online>', to: [to], subject: 'Elaka360 সাইন ইন কোড / sign-in code', text, html }),
   });
   if (!res.ok) {
     // status only: the response may echo the address
